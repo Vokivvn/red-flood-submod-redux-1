@@ -1,0 +1,162 @@
+characters = {
+	MOL_cocea = {
+		name = "Nicolae Dumitru Cocea"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MOL/Portrait_MOL_Nicolae_Cocea.png"
+			}
+		}
+		country_leader = {
+			ideology = democratic_socialism
+			expire = "1965.1.1.1"
+		}
+	}
+	MOL_lupu = {
+		name = "Nicolae Lupu"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MOL/Portrait_MOL_Nicolae_Lupu.png"
+			}
+		}
+		country_leader = {
+			ideology = left_populism
+			desc = "POLITICS_LUPU_DESC"
+			expire = "1965.1.1.1"
+		}
+	}
+	MOL_crm_prog = {
+		name = "Constantin Radulescu-Motru"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MOL/Portrait_MOL_Constantin_Radulescu-Motru.png"
+			}
+		}
+	}
+	MOL_crm_des = {
+		name = "Constantin Radulescu-Motru"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MOL/Portrait_MOL_Constantin_Radulescu-Motru_despotic.png"
+			}
+		}
+	}
+	MOL_popescu = {
+		name = "Stelian Popescu"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MOL/Portrait_MOL_Stelian_Popescu.png"
+			}
+		}
+		country_leader = {
+			ideology = liberal_conservatism
+			desc = "POLITICS_POPESCU_DESC"
+			expire = "1965.1.1.1"
+		}
+	}
+	MOL_codreanu = {
+		name = "Corneliu Zelea Codreanu"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MOL/Portrait_MOL_Corneliu_Zelea_Codreanu.png" 
+			}
+		}
+		country_leader = {
+			ideology = reactionary_populism
+			desc = "POLITICS_CODREANU_DESC"
+			expire = "1965.1.1.1"
+		}
+	}
+	MOL_eliade = {
+		name = "Mircea Eliade"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MOL/Portrait_MOL_Mircea_Eliade.png"
+			}
+		}
+	}
+	MOL_callimachi = {
+		name = "Scarlat Callimachi"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MOL/Portrait_MOL_Scarlat_Callimachi.png"
+			}
+		}
+		country_leader = {
+			ideology = social_anarchism
+			desc = "POLITICS_CALLIMACHI_DESC"
+			expire = "1965.1.1.1"
+		}
+	}
+
+	MOL_teodor_cojocaru = {
+		name = "Teodor Cojocaru"
+		portraits = {
+			army = {
+				large = "gfx/leaders/MOL/Portrait_MOL_Teodosie_Cojocaru.png"
+			}
+		}
+		field_marshal = {
+			traits = {
+				career_officer
+				politically_connected
+			}
+			skill = 3
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	MOL_anatolie_popa = {
+		name = "Anatolie Popa"
+		portraits = {
+			army = {
+				large = "gfx/leaders/MOL/Portrait_MOL_Anatolie_Popa.png"
+			}
+		}
+		corps_commander = {
+			traits = {
+				inflexible_strategist
+				infantry_officer
+			}
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	MOL_gherman_pantea = {
+		name = "Gherman Pantea"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MOL/Portrait_MOL_Gherman_Pantea.png"
+			}
+		}
+		
+		country_leader = {
+			ideology = provisional_government
+			desc = "POLITICS_PANTEA_DESC"
+			expire = "1965.1.1.1"
+		}
+	}
+	MOL_iona_yakir = {
+		name = "Iona Yakir"
+		portraits = {
+			army = {
+				large = "gfx/leaders/MOL/Portrait_MOL_Iona_Yakir.png"
+			}
+		}
+		corps_commander = {
+			traits = {
+				politically_connected
+				career_officer
+			}
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+}

@@ -1,0 +1,20 @@
+state={
+	id = 1141
+	name = "STATE_1141"
+
+	history={
+		owner = KAV
+		buildings = {
+			infrastructure = 2
+
+		}
+		add_core_of = KAV
+	}
+
+	provinces={
+		6669 9702
+	}
+	manpower=12413
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

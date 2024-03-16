@@ -1,0 +1,30 @@
+state={
+	id=584
+	name="STATE_584"
+
+    resources={
+		oil=6
+	}
+
+	history={
+		owner = TUC
+		buildings = {
+			infrastructure = 1
+			arms_factory = 1
+
+		}
+		add_core_of = TUC
+		victory_points = {
+			12333 15
+		}	
+
+	}
+
+	provinces={
+		4599 10510 12491 7635 1493 7618
+		8099 12333
+	}
+	manpower=1064523
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

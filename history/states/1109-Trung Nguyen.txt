@@ -1,0 +1,27 @@
+state = {
+	id=1109
+	name="STATE_1109"
+
+	resources={
+		rubber=24.000
+	}
+
+	history={
+		add_core_of = DAI
+		owner = DAI
+		buildings = {
+			infrastructure = 1
+		}
+		victory_points = {
+			7271 1 #Dalat
+		}
+	}
+
+	provinces = {
+		4363 1400 1605 12150 7271 12176
+	}
+
+	manpower = 20000
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

@@ -1,0 +1,45 @@
+characters={
+	XSM_ma_hongkui={
+		name="Ma Hongkui"
+		portraits={
+			civilian={
+				large="gfx/leaders/XSM/Portrait_Ma_Hongkui.png"
+			}
+			army = {
+				large = "gfx/leaders/XSM/Portrait_Ma_Hongkui_General.png"
+			}
+		}
+		country_leader={
+			ideology=oligarchy
+			expire="1965.1.1.1"
+			id=-1
+		}
+		field_marshal = {
+			traits = { politically_connected trickster inspirational_leader }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 2	
+		}
+	}
+	XSM_ma_bufang = {
+		name="Ma Bufang"
+		portraits={
+			civilian={
+				large="gfx/leaders/XSM/Portrait_Ma_Bufang.png"
+			}
+			army = {
+				large = "gfx/leaders/XSM/Portrait_Ma_Bufang_General.png"
+			}
+		}
+		corps_commander = {
+			traits = { politically_connected  }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 3
+		}
+	}
+}

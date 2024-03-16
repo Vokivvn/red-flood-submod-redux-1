@@ -1,0 +1,1967 @@
+ISR_war_decisions = {
+	ISR_settlers = {
+		cost = 10
+		days_remove = 7
+		complete_effect = {
+			add_stability = -0.01
+			454 = {
+				add_manpower = 50000
+			}
+		}
+		visible = {
+			NOT = {
+				has_country_flag = ISR_independence_secured
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	ISR_fighters = {
+		cost = 20
+		days_remove = 14
+		complete_effect = {
+			add_stability = -0.05
+			add_war_support = 0.05
+			add_popularity = {
+				ideology = right_authoritarianism
+				popularity = 0.05
+			}
+			454 = {
+				add_manpower = 10000
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 750
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 50
+			}
+		}
+		visible = {
+			NOT = {
+				has_country_flag = ISR_independence_secured
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	ISR_settlers_2 = {
+		cost = 40
+		fire_only_once = yes
+		complete_effect = {
+			add_stability = -0.05
+			454 = {
+				add_manpower = 10000
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		visible = {
+			NOT = {
+				has_country_flag = ISR_independence_secured
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+
+ISR_einstein_decisions = {
+	#integrate the Arabs
+	ISR_einstein_integration_1 = {
+		cost = 0
+		custom_cost_text = ISR_integration_cost_arabs_text
+		custom_cost_trigger = {
+			has_political_power > 99
+			command_power > 24
+		}
+		complete_effect = {
+			hidden_effect = {
+				add_manpower = 20000
+				add_political_power = -100
+				add_command_power = -25
+			}
+			add_threat = -1
+		}
+		visible = {
+			has_completed_focus = ISR_promotearabintegration
+			has_full_control_of_state = 454
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	ISR_einstein_integration_2 = {
+		cost = 0
+		custom_cost_text = ISR_integration_cost_arabs_text
+		custom_cost_trigger = {
+			has_political_power > 99
+			command_power > 24
+		}
+		complete_effect = {
+			hidden_effect = {
+				add_manpower = 30000
+				add_political_power = -100
+				add_command_power = -25
+			}
+			add_threat = -1
+		}
+		visible = {
+			has_completed_focus = ISR_promotearabintegration
+			has_full_control_of_state = 1003
+			has_full_control_of_state = 1004
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+ISR_bengurion_decisions1 = {
+	#destroy bri'ish influence in Sinai and Egypt
+	ISR_gurion_sinai = {
+		cost = 50
+		days_remove = 15
+		visible = {
+			has_full_control_of_state = 1004
+			NOT = {
+				has_full_control_of_state = 453
+			}
+		}
+		remove_effect = {
+			start_border_war = {
+				change_state_after_war = no
+				attacker = {
+					state = 1004
+					num_provinces = 2
+					on_win = israel_border_conflict.4
+					on_lose = israel_border_conflict.2
+					on_cancel = israel_border_conflict.3
+				}	
+				defender = {
+					state = 453
+					num_provinces = 2
+					on_win = israel_border_conflict.2
+					on_lose = israel_border_conflict.4
+					on_cancel = israel_border_conflict.3
+				}
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	#ISR_gurion_suez = {
+	#	cost = 50
+	#	days_remove = 15
+	#	visible = {
+	#		has_full_control_of_state = 453
+	#		NOT = {
+	#			has_full_control_of_state = 800
+	#		}
+	#	}
+	#	remove_effect = {
+	#		start_border_war = {
+	#			change_state_after_war = no
+	#			attacker = {
+	#				state = 453
+	#				num_provinces = 3
+	#				on_win = israel_border_conflict.5
+	#				on_lose = israel_border_conflict.2
+	#				on_cancel = israel_border_conflict.3
+	#			}	
+	#			defender = {
+	#				state = 800
+	#				num_provinces = 2
+	#				on_win = israel_border_conflict.2
+	#				on_lose = israel_border_conflict.5
+	#				on_cancel = israel_border_conflict.3
+	#			}
+	#		}
+	#	}
+	#	fire_only_once = yes
+	#	ai_will_do = {
+	#		factor = 1
+	#	}
+	#}
+	#ISR_gurion_egypt = {
+	#	cost = 50
+	#	days_remove = 15
+	#	visible = {
+	#		has_full_control_of_state = 800
+	#		NOT = {
+	#			has_full_control_of_state = 446
+	#		}
+	#	}
+	#	remove_effect = {
+	#		start_border_war = {
+	#			change_state_after_war = no
+	#			attacker = {
+	#				state = 800
+	#				num_provinces = 2
+	#				on_win = israel_border_conflict.6
+	#				on_lose = israel_border_conflict.7
+	#				on_cancel = israel_border_conflict.3
+	#			}	
+	#			defender = {
+	#				state = 1120
+	#				num_provinces = 3
+	#				on_win = israel_border_conflict.7
+	#				on_lose = israel_border_conflict.6
+	#				on_cancel = israel_border_conflict.3
+	#			}
+	#		}
+	#	}
+	#	fire_only_once = yes
+	#	ai_will_do = {
+	#		factor = 1
+	#	}
+	#}
+	
+}
+ISR_jabotinsky_decisions1 = {
+	#settlements
+	ISR_jabo_settle_bank = {
+		cost = 0
+		days_remove = 30
+		custom_cost_text = ISR_zionism_cost_jordan_text
+		custom_cost_trigger = {
+			has_manpower > 9999
+			has_political_power > 24
+			command_power > 9
+		}
+		complete_effect = {
+			hidden_effect = {
+				add_political_power = -25
+				add_command_power = -10
+			}
+			add_state_core = 1003
+			1003 = {
+				add_manpower = 10000
+				set_state_name = ISR_decision_ISR_jabo_settle_bank_state_1003
+			}
+			set_province_name = { id = 7107 name = ISR_decision_ISR_jabo_settle_bank_province_7107 }
+			set_province_name = { id = 1086 name = ISR_decision_ISR_jabo_settle_bank_province_1086 }
+			454 = {
+				add_manpower = -10000
+			}
+			
+		}
+		visible = {
+			has_completed_focus = ISR_ourproperborders
+			has_completed_focus = ISR_bengurionascendstopower
+			has_full_control_of_state = 1003
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	ISR_jabo_settle_negev = {
+		cost = 0
+		days_remove = 30
+		custom_cost_text = ISR_zionism_cost_jordan_text
+		custom_cost_trigger = {
+			has_manpower > 9999
+			has_political_power > 24
+			command_power > 9
+		}
+		complete_effect = {
+			hidden_effect = {
+				add_political_power = -25
+				add_command_power = -10
+			}
+			add_state_core = 1004
+			1004 = {
+				add_manpower = 10000
+			}
+			454 = {
+				add_manpower = -10000
+			}
+		}
+		visible = {
+			has_completed_focus = ISR_ourproperborders
+			has_completed_focus = ISR_bengurionascendstopower
+			has_full_control_of_state = 1004
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	ISR_jabo_settle_golan = {
+		cost = 0
+		days_remove = 30
+		custom_cost_text = ISR_zionism_cost_jordan_text
+		custom_cost_trigger = {
+			has_manpower > 9999
+			has_political_power > 24
+			command_power > 9
+		}
+		complete_effect = {
+			hidden_effect = {
+				add_political_power = -25
+				add_command_power = -10
+			}
+			add_state_core = 1092
+			1092 = {
+				add_manpower = 10000
+			}
+			454 = {
+				add_manpower = -10000
+			}
+		}
+		visible = {
+			has_completed_focus = ISR_ourproperborders
+			has_completed_focus = ISR_bengurionascendstopower
+			has_full_control_of_state = 1092
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	ISR_jabo_settle_jordan = {
+		cost = 0
+		days_remove = 30
+		custom_cost_text = ISR_zionism_cost_jordan_text
+		custom_cost_trigger = {
+			has_manpower > 19999
+			has_political_power > 24
+			command_power > 9
+		}
+		complete_effect = {
+			hidden_effect = {
+				add_political_power = -25
+				add_command_power = -10
+			}
+			add_state_core = 455
+			add_state_core = 1089
+			455 = {
+				add_manpower = 10000
+				set_state_name = ISR_decision_ISR_jabo_settle_jordan_state_455
+			}
+			1089 = {
+				add_manpower = 10000
+				set_state_name = ISR_decision_ISR_jabo_settle_jordan_state_1089
+			}
+			set_province_name = { id = 4017 name = ISR_decision_ISR_jabo_settle_jordan_province_4017 }
+			set_province_name = { id = 7151 name = ISR_decision_ISR_jabo_settle_jordan_province_7151 }
+			set_province_name = { id = 7001 name = ISR_decision_ISR_jabo_settle_jordan_province_7001 }
+			454 = {
+				add_manpower = -20000
+			}
+		}
+		visible = {
+			has_completed_focus = ISR_ourproperborders
+			has_full_control_of_state = 455
+			has_full_control_of_state = 1089
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	ISR_jabo_settle_sinai = {
+		cost = 0
+		days_remove = 30
+		custom_cost_text = ISR_zionism_cost_jordan_text
+		custom_cost_trigger = {
+			has_manpower > 9999
+			has_political_power > 24
+			command_power > 9
+		}
+		complete_effect = {
+			hidden_effect = {
+				add_political_power = -25
+				add_command_power = -10
+			}
+			add_state_core = 453
+			453 = {
+				add_manpower = 10000
+			}
+			454 = {
+				add_manpower = -10000
+			}
+		}
+		visible = {
+			has_completed_focus = ISR_ourproperborders
+			has_full_control_of_state = 453
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+ISR_jabotinsky_decisions2 = {
+	#taking greater israel
+	#ISR_jabotinsky_sinai = {
+	#	cost = 50
+	#	days_remove = 15
+	#	visible = {
+	#		has_completed_focus = ISR_ourproperborders
+	#		has_full_control_of_state = 1004
+	#		NOT = {
+	#			has_full_control_of_state = 453
+	#		}
+	#	}
+	#	remove_effect = {
+	#		start_border_war = {
+	#			change_state_after_war = no
+	#			attacker = {
+	#				state = 1004
+	#				num_provinces = 2
+	#				on_win = israel_border_conflict.4
+	#				on_lose = israel_border_conflict.2
+	#				on_cancel = israel_border_conflict.3
+	#			}	
+	#			defender = {
+	#				state = 453
+	#				num_provinces = 2
+	#				on_win = israel_border_conflict.2
+	#				on_lose = israel_border_conflict.4
+	#				on_cancel = israel_border_conflict.3
+	#			}
+	#		}
+	#	}
+	#	fire_only_once = yes
+	#
+	#	ai_will_do = {
+	#		factor = 1
+	#	}
+	#}
+	ISR_jabotinsky_golan = {
+		cost = 50
+		days_remove = 15
+		visible = {
+			has_full_control_of_state = 454
+			NOT = {
+				has_full_control_of_state = 1092
+			}
+		}
+		remove_effect = {
+			start_border_war = {
+				change_state_after_war = no
+				attacker = {
+					state = 454
+					num_provinces = 2
+					on_win = israel_border_conflict.8
+					on_lose = israel_border_conflict.2
+					on_cancel = israel_border_conflict.3
+				}	
+				defender = {
+					state = 1092
+					num_provinces = 2
+					on_win = israel_border_conflict.2
+					on_lose = israel_border_conflict.8
+					on_cancel = israel_border_conflict.3
+				}
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	ISR_jabotinsky_jordan = {
+		cost = 50
+		days_remove = 15
+		visible = {
+			has_full_control_of_state = 1004
+			NOT = {
+				has_full_control_of_state = 455
+			}
+		}
+		remove_effect = {
+			start_border_war = {
+				change_state_after_war = no
+				attacker = {
+					state = 1004
+					num_provinces = 2
+					on_win = israel_border_conflict.9
+					on_lose = israel_border_conflict.2
+					on_cancel = israel_border_conflict.3
+				}	
+				defender = {
+					state = 455
+					num_provinces = 2
+					on_win = israel_border_conflict.2
+					on_lose = israel_border_conflict.9
+					on_cancel = israel_border_conflict.3
+				}
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+ISR_stern_decisions1 = {
+	ISR_stern_alawites = {
+		cost = 50
+		complete_effect = {
+			ISR = {
+				end_puppet = ALW
+				remove_from_faction = ALW
+				create_wargoal = {
+					type = annex_everything
+					target = ALW
+				}
+			}
+		}
+		visible = {
+			has_completed_focus = ISR_revengeonthehittites
+			has_war = no
+			ALW = {
+				AND = {
+					exists = yes
+					has_war = no
+					is_puppet = no
+					any_neighbor_country = {
+						OR = {
+							tag = ISR
+							is_in_faction_with = ISR
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	ISR_stern_lebanon = {
+		cost = 50
+		complete_effect = {
+			ISR = {
+				end_puppet = LEB
+				remove_from_faction = LEB
+				create_wargoal = {
+					type = annex_everything
+					target = LEB
+				}
+			}
+		}
+		visible = {
+			has_completed_focus = ISR_revengeonthehittites
+			has_war = no
+			LEB = {
+				AND = {
+					exists = yes
+					has_war = no
+					is_puppet = no
+					any_neighbor_country = {
+						OR = {
+							tag = ISR
+							is_in_faction_with = ISR
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	#euphrates to nile WGs
+	ISR_stern_syria = {
+		cost = 50
+		visible = {
+			has_completed_focus = ISR_revengeonthehittites
+			has_war = no
+			has_full_control_of_state = 1004
+			NOT = {
+				has_full_control_of_state = 455
+			}
+		}
+		available = {
+			OR = {
+				AND = {
+					SYR = {
+						exists = no
+					}
+					SNP = {
+						exists = yes
+					}
+				}
+				AND = {
+					SYR = {
+						exists = yes
+					}
+					SNP = {
+						exists = no
+					}
+				}
+			}
+		}
+		complete_effect = {
+			455 = {
+				owner = {
+					ISR = {
+						create_wargoal = {
+							type = take_claimed_state
+							target = PREV
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+#ISR_suez_category = {
+	#ISR_the_seizure = {
+	#	allowed = {
+	#		original_tag = ISR
+	#	}
+	#	activation = {
+	#		has_completed_focus = ISR_euphratestothenile
+	#		has_full_control_of_state = 453
+	#	}
+	#	available = {
+	#		ISR = {
+	#			owns_state = 800
+	#		}
+	#	}
+	#	fire_only_once = yes
+	#	is_good = yes
+	#	selectable_mission = no
+	#	days_mission_timeout = 90
+	#	timeout_effect = {
+	#		custom_effect_tooltip = "ISR_SEIZURE_TT"
+	#		hidden_effect = {
+	#			ATU = {
+	#				country_event = {
+	#					id = ISR.990
+	#				}
+	#			}
+	#		}
+	#	}
+	#}
+	#ISR_recon_at_suez = {
+	#	allowed = {
+	#		original_tag = ISR
+	#	}
+	#	fire_only_once = yes
+	#	cost = 20
+	#	days_remove = 10
+	#	remove_effect = {
+	#		custom_effect_tooltip = "ISR_SMALL_INCREASE_TT"
+	#		add_to_variable = {
+	#			var = SUEZSEIZURE
+	#			value = 10
+	#		}
+	#		subtract_from_variable = {
+	#			var = SUEZNONSEIZURE
+	#			value = 10
+	#		}
+	#	}
+	#}
+	#ISR_know_the_schedule = {
+	#	allowed = {
+	#		original_tag = ISR
+	#	}
+	#	fire_only_once = yes
+	#	cost = 15
+	#	days_remove = 5
+	#	remove_effect = {
+	#		custom_effect_tooltip = "ISR_SMALL_INCREASE_TT"
+	#		add_to_variable = {
+	#			var = SUEZSEIZURE
+	#			value = 10
+	#		}
+	#		subtract_from_variable = {
+	#			var = SUEZNONSEIZURE
+	#			value = 10
+	#		}
+	#	}
+	#}
+	#ISR_devising_plans = {
+	#	allowed = {
+	#		original_tag = ISR
+	#	}
+	#	fire_only_once = yes
+	#	cost = 35
+	#	days_remove = 17
+	#	remove_effect = {
+	#		custom_effect_tooltip = "ISR_MED_INCREASE_TT"
+	#		add_to_variable = {
+	#			var = SUEZSEIZURE
+	#			value = 20
+	#		}
+	#		subtract_from_variable = {
+	#			var = SUEZNONSEIZURE
+	#			value = 20
+	#		}
+	#	}
+	#}
+	#ISR_smuggling_supplies = {
+	#	allowed = {
+	#		original_tag = ISR
+	#	}
+	#	fire_only_once = yes
+	#	cost = 40
+	#	days_remove = 20
+	#	remove_effect = {
+	#		custom_effect_tooltip = "ISR_MED_INCREASE_TT"
+	#		add_to_variable = {
+	#			var = SUEZSEIZURE
+	#			value = 20
+	#		}
+	#		subtract_from_variable = {
+	#			var = SUEZNONSEIZURE
+	#			value = 20
+	#		}
+	#	}
+	#}
+	#ISR_train_detachment = {
+	#	allowed = {
+	#		original_tag = ISR
+	#	}
+	#	fire_only_once = yes
+	#	cost = 65
+	#	days_remove = 25
+	#	remove_effect = {
+	#		custom_effect_tooltip = "ISR_LARGE_INCREASE_TT"
+	#		add_to_variable = {
+	#			var = SUEZSEIZURE
+	#			value = 30
+	#		}
+	#		subtract_from_variable = {
+	#			var = SUEZNONSEIZURE
+	#			value = 30
+	#		}
+	#	}
+	#}
+	#ISR_war_games = {
+	#	allowed = {
+	#		original_tag = ISR
+	#	}
+	#	fire_only_once = yes
+	#	cost = 70
+	#	days_remove = 29
+	#	remove_effect = {
+	#		custom_effect_tooltip = "ISR_LARGE_INCREASE_TT"
+	#		add_to_variable = {
+	#			var = SUEZSEIZURE
+	#			value = 30
+	#		}
+	#		subtract_from_variable = {
+	#			var = SUEZNONSEIZURE
+	#			value = 30
+	#		}
+	#	}
+	#}
+#}
+ISR_stern_decisions2 = {
+	#coring
+	ISR_stern_cores_palestine = {
+		cost = 0
+		days_remove = 30
+		custom_cost_text = ISR_zionism_stern_cost_jordan_text
+		custom_cost_trigger = {
+			has_manpower > 19999
+			has_political_power > 99
+			command_power > 9
+		}
+		complete_effect = {
+			hidden_effect = {
+				add_manpower = -20000
+				add_political_power = -100
+				add_command_power = -10
+			}
+			1003 = {
+				add_manpower = 10000
+				set_state_name = ISR_decision_ISR_stern_cores_palestine_state_1003
+			}
+			set_province_name = { id = 7107 name = ISR_decision_ISR_stern_cores_palestine_province_7107 }
+			set_province_name = { id = 1086 name = ISR_decision_ISR_stern_cores_palestine_province_1086 }
+			1004 = {
+				add_manpower = 10000
+			}
+			454 = {
+				add_manpower = -20000
+			}
+			add_state_core = 1003
+			add_state_core = 1004
+		}
+		visible = {
+			has_completed_focus = ISR_asternruleinzion
+			has_full_control_of_state = 1003
+			has_full_control_of_state = 1004
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	ISR_stern_cores_jordan = {
+		cost = 0
+		days_remove = 30
+		custom_cost_text = ISR_zionism_stern_cost_jordan_text
+		custom_cost_trigger = {
+			has_manpower > 19999
+			has_political_power > 99
+			command_power > 9
+		}
+		complete_effect = {
+			hidden_effect = {
+				add_manpower = -20000
+				add_political_power = -100
+				add_command_power = -10
+			}
+			455 = {
+				add_manpower = 10000
+				set_state_name = ISR_decision_ISR_stern_cores_jordan_state_455
+			}
+			1089 = {
+				add_manpower = 10000
+				set_state_name = ISR_decision_ISR_stern_cores_jordan_state_1089
+			}
+			set_province_name = { id = 4017 name = ISR_decision_ISR_stern_cores_jordan_province_4017 }
+			set_province_name = { id = 7151 name = ISR_decision_ISR_stern_cores_jordan_province_7151 }
+			set_province_name = { id = 7001 name = ISR_decision_ISR_stern_cores_jordan_province_7001 }
+			454 = {
+				add_manpower = -20000
+			}
+			add_state_core = 455
+			add_state_core = 1089
+		}
+		visible = {
+			has_completed_focus = ISR_anewlevant
+			has_full_control_of_state = 455
+			has_full_control_of_state = 1089
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	ISR_stern_cores_lebanon = {
+		cost = 0
+		days_remove = 30
+		custom_cost_text = ISR_zionism_stern_cost_liban_text
+		custom_cost_trigger = {
+			has_manpower > 9999
+			has_political_power > 99
+			command_power > 9
+		}
+		complete_effect = {
+			hidden_effect = {
+				add_manpower = -10000
+				add_political_power = -100
+				add_command_power = -10
+			}
+			553 = {
+				add_compliance = 50
+				add_resistance = 10
+			}
+		}
+		visible = {
+			has_completed_focus = ISR_anewlevant
+			has_full_control_of_state = 553
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	ISR_stern_cores_alawites = {
+		cost = 0
+		days_remove = 30
+		custom_cost_text = ISR_zionism_stern_cost_alawites_text
+		custom_cost_trigger = {
+			has_manpower > 9999
+			has_political_power > 99
+			command_power > 9
+		}
+		complete_effect = {
+			hidden_effect = {
+				add_manpower = -10000
+				add_political_power = -100
+				add_command_power = -10
+			}
+			1086 = {
+				add_compliance = 50
+				add_resistance = 10
+			}
+		}
+		visible = {
+			has_completed_focus = ISR_anewlevant
+			has_full_control_of_state = 1086
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	ISR_stern_cores_syria = {
+		cost = 0
+		days_remove = 30
+		custom_cost_text = ISR_zionism_cost_syria_text
+		custom_cost_trigger = {
+			has_manpower > 69999
+			has_political_power > 399
+			command_power > 24
+		}
+		complete_effect = {
+			hidden_effect = {
+				add_manpower = -70000
+				add_political_power = -400
+				add_command_power = -25
+			}
+			554 = {
+				add_compliance = 50
+				add_resistance = 15
+			}
+			1052 = {
+				add_compliance = 50
+				add_resistance = 10
+			}
+			677 = {
+				add_compliance = 50
+				add_resistance = 15
+			}
+			1091 = {
+				add_compliance = 50
+				add_resistance = 5
+			}
+			454 = {
+				add_manpower = -2800
+			}
+			1092 = {
+				add_manpower = 2800
+				add_core_of = ISR
+			}
+			set_province_name = {
+				id = 4111
+				name = ISR_decision_ISR_stern_cores_syria_province_4111
+			}
+		}
+		visible = {
+			has_completed_focus = ISR_anewlevant
+			has_full_control_of_state = 554
+			has_full_control_of_state = 1052
+			has_full_control_of_state = 677
+			has_full_control_of_state = 1091
+			has_full_control_of_state = 1092
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+}
+ISR_stern_decisions3 = {
+	#diplomacy
+	ISR_stern_diplo_iran = {
+		cost = 50
+		days_remove = 30
+		visible = {
+			has_completed_focus = ISR_revivediplomacy
+			PER = {
+				exists = yes
+				is_puppet = no
+				has_government = despotism
+			}
+		}
+		remove_effect = {
+			add_opinion_modifier = {
+				target = PER
+				modifier = medium_increase
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			PER = {
+				add_opinion_modifier = {
+					target = ISR
+					modifier = medium_increase
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = infrastructure
+							size > 1
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			add_threat = -3
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	ISR_stern_diplo_kavkaz = {
+		cost = 50
+		days_remove = 30
+		visible = {
+			has_completed_focus = ISR_revivediplomacy
+			KAV = {
+				exists = yes
+				is_puppet = no
+				has_government = accelerationism
+			}
+		}
+		remove_effect = {
+			add_opinion_modifier = {
+				target = KAV
+				modifier = medium_increase
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			KAV = {
+				add_opinion_modifier = {
+					target = ISR
+					modifier = medium_increase
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = infrastructure
+							size > 1
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			add_threat = -3
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	ISR_stern_diplo_turkey = {
+		cost = 50
+		days_remove = 30
+		visible = {
+			has_completed_focus = ISR_revivediplomacy
+			TUR = {
+				exists = yes
+				is_puppet = no
+				has_government = accelerationism
+			}
+		}
+		remove_effect = {
+			add_opinion_modifier = {
+				target = TUR
+				modifier = medium_increase
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			TUR = {
+				add_opinion_modifier = {
+					target = ISR
+					modifier = medium_increase
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = infrastructure
+							size > 1
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			add_threat = -3
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	ISR_stern_diplo_fiume = {
+		cost = 50
+		days_remove = 30
+		visible = {
+			has_completed_focus = ISR_revivediplomacy
+			FIU = {
+				exists = yes
+				is_puppet = no
+				has_government = accelerationism
+			}
+		}
+		remove_effect = {
+			add_opinion_modifier = {
+				target = FIU
+				modifier = medium_increase
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			FIU = {
+				add_opinion_modifier = {
+					target = ISR
+					modifier = medium_increase
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = infrastructure
+							size > 1
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			add_threat = -3
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	ISR_stern_diplo_france = {
+		cost = 50
+		days_remove = 30
+		visible = {
+			has_completed_focus = ISR_revivediplomacy
+			FRA = {
+				exists = yes
+				is_puppet = no
+				has_government = accelerationism
+			}
+		}
+		remove_effect = {
+			add_opinion_modifier = {
+				target = FRA
+				modifier = medium_increase
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			FRA = {
+				add_opinion_modifier = {
+					target = ISR
+					modifier = medium_increase
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = infrastructure
+							size > 1
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			add_threat = -3
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	ISR_stern_diplo_spain = {
+		cost = 50
+		days_remove = 30
+		visible = {
+			has_completed_focus = ISR_revivediplomacy
+			SPA = {
+				exists = yes
+				is_puppet = no
+				has_government = accelerationism
+			}
+		}
+		remove_effect = {
+			add_opinion_modifier = {
+				target = SPA
+				modifier = medium_increase
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			SPA = {
+				add_opinion_modifier = {
+					target = ISR
+					modifier = medium_increase
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = infrastructure
+							size > 1
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			add_threat = -3
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	ISR_stern_diplo_RUS_mladorossi = {
+		cost = 50
+		days_remove = 30
+		visible = {
+			has_completed_focus = ISR_revivediplomacy
+			RUS = {
+				exists = yes
+				is_puppet = no
+				has_government = accelerationism
+			}
+		}
+		remove_effect = {
+			add_opinion_modifier = {
+				target = RUS
+				modifier = medium_increase
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			RUS = {
+				add_opinion_modifier = {
+					target = ISR
+					modifier = medium_increase
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = infrastructure
+							size > 1
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			add_threat = -3
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	ISR_stern_diplo_SRU_mladorossi = {
+		cost = 50
+		days_remove = 30
+		visible = {
+			has_completed_focus = ISR_revivediplomacy
+			SRU = {
+				exists = yes
+				is_puppet = no
+				has_government = despotism
+			}
+		}
+		remove_effect = {
+			add_opinion_modifier = {
+				target = SRU
+				modifier = medium_increase
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			SRU = {
+				add_opinion_modifier = {
+					target = ISR
+					modifier = medium_increase
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = infrastructure
+							size > 1
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			add_threat = -3
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	ISR_stern_diplo_solidarists = {
+		cost = 50
+		days_remove = 30
+		visible = {
+			has_completed_focus = ISR_revivediplomacy
+			SIB = {
+				exists = yes
+				is_puppet = no
+			}
+		}
+		remove_effect = {
+			add_opinion_modifier = {
+				target = SIB
+				modifier = medium_increase
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			SIB = {
+				add_opinion_modifier = {
+					target = ISR
+					modifier = medium_increase
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = infrastructure
+							size > 1
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			add_threat = -3
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	ISR_stern_diplo_liberia = {
+		cost = 50
+		days_remove = 30
+		visible = {
+			has_completed_focus = ISR_revivediplomacy
+			LIB = {
+				exists = yes
+				is_puppet = no
+				has_government = accelerationism
+			}
+		}
+		remove_effect = {
+			add_opinion_modifier = {
+				target = LIB
+				modifier = medium_increase
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			LIB = {
+				add_opinion_modifier = {
+					target = ISR
+					modifier = medium_increase
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = infrastructure
+							size > 1
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			add_threat = -3
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	ISR_stern_diplo_arditi = {
+		cost = 50
+		days_remove = 30
+		visible = {
+			has_completed_focus = ISR_revivediplomacy
+			ET2 = {
+				exists = yes
+				is_puppet = no
+				has_government = accelerationism
+			}
+		}
+		remove_effect = {
+			add_opinion_modifier = {
+				target = ET2
+				modifier = medium_increase
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			ET2 = {
+				add_opinion_modifier = {
+					target = ISR
+					modifier = medium_increase
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = infrastructure
+							size > 1
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			add_threat = -3
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	ISR_stern_diplo_prussia = {
+		cost = 50
+		days_remove = 30
+		visible = {
+			has_completed_focus = ISR_revivediplomacy
+			PRS = {
+				exists = yes
+				is_puppet = no
+			}
+		}
+		remove_effect = {
+			add_opinion_modifier = {
+				target = PRS
+				modifier = medium_increase
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			PRS = {
+				add_opinion_modifier = {
+					target = ISR
+					modifier = medium_increase
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = infrastructure
+							size > 1
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			add_threat = -3
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	ISR_stern_diplo_yugoslavia = {
+		cost = 50
+		days_remove = 30
+		visible = {
+			has_completed_focus = ISR_revivediplomacy
+			YUG = {
+				exists = yes
+				is_puppet = no
+				has_government = accelerationism
+			}
+		}
+		remove_effect = {
+			add_opinion_modifier = {
+				target = YUG
+				modifier = medium_increase
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			YUG = {
+				add_opinion_modifier = {
+					target = ISR
+					modifier = medium_increase
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = infrastructure
+							size > 1
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			add_threat = -3
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	ISR_stern_diplo_ukraine = {
+		cost = 50
+		days_remove = 30
+		visible = {
+			has_completed_focus = ISR_revivediplomacy
+			UKR = {
+				exists = yes
+				is_puppet = no
+				has_government = accelerationism
+			}
+		}
+		remove_effect = {
+			add_opinion_modifier = {
+				target = UKR
+				modifier = medium_increase
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			UKR = {
+				add_opinion_modifier = {
+					target = ISR
+					modifier = medium_increase
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = infrastructure
+							size > 1
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			add_threat = -3
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+ISR_stern_decisions4 = {
+	ISR_third_temple_1 = {
+		cost = 100
+		days_remove = 365
+		available = {
+			has_full_control_of_state = 1003
+		}
+		remove_effect = {
+			1003 = {
+				add_extra_state_shared_building_slots = 2
+				add_manpower = 250000
+				set_victory_points = {
+					province = 1086
+					value = 25
+				}
+				set_state_category = large_city
+			}
+			hidden_effect = {
+				news_event = {
+					id = news.108
+					days = 1
+				}
+				add_ideas = {
+					ISR_third_temple
+				}
+				set_capital = { state = 1003 }
+				set_country_flag = ISR_third_temple_under_construction
+			}
+		}
+		visible = {
+			has_completed_focus = ISR_thethirdtemple
+			has_full_control_of_state = 1003
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	ISR_third_temple_2 = {
+		cost = 2000
+		days_remove = 18000
+		available = {
+			has_full_control_of_state = 1003
+			has_country_flag = ISR_third_temple_under_construction
+		}
+		remove_effect = {
+			country_event = {
+				id = ISR.2000
+			}
+			set_capital = { state = 1003 }
+			set_victory_points = {
+				province = 1086
+				value = 200
+			}
+			swap_ideas = {
+				remove_idea = ISR_third_temple
+				add_idea = ISR_third_temple_2
+			}
+			add_named_threat = {
+				threat = 500
+				name = ISR_third_temple_world_tension
+			}
+		}
+		visible = {
+			has_full_control_of_state = 1003
+			has_country_flag = ISR_third_temple_under_construction
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+#ISR_return_lands_decisions = {
+#	ISR_return_egypt = {
+#		cost = 35
+#		days_remove = 35
+#		available = {
+#			has_full_control_of_state = 1120
+#			has_full_control_of_state = 1119
+#			has_full_control_of_state = 453
+#			has_full_control_of_state = 457
+#			has_full_control_of_state = 1121
+#			has_full_control_of_state = 452
+#			has_full_control_of_state = 456
+#			has_full_control_of_state = 447
+#			has_full_control_of_state = 452
+#			has_full_control_of_state = 446
+#		}
+#		remove_effect = {
+#			800 = {
+#				remove_core_of = EGY
+#				add_claim_by = EGY
+#			}
+#			443 = {
+#				remove_core_of = EGY
+#				add_claim_by = EGY
+#			}
+#			release_puppet = EGY
+#		}
+#		visible = {
+#			has_completed_focus = ISR_euphratestothenile
+#			EGY = {
+#				exists = no
+#			}
+#		}
+#		fire_only_once = yes
+#
+#		ai_will_do = {
+#			factor = 1
+#		}
+#	}
+#	ISR_return_iraq = {
+#		cost = 35
+#		days_remove = 35
+#		available = {
+#			has_full_control_of_state = 1123
+#			has_full_control_of_state = 1088
+#			has_full_control_of_state = 1087
+#			has_full_control_of_state = 291
+#		}
+#		remove_effect = {
+#			release_puppet = IRQ
+#		}
+#		visible = {
+#			has_completed_focus = ISR_euphratestothenile
+#			IRQ = {
+#				exists = no
+#			}
+#		}
+#		fire_only_once = yes
+#
+#		ai_will_do = {
+#			factor = 1
+#		}
+#	}
+#	ISR_return_arabia = {
+#		cost = 35
+#		days_remove = 35
+#		available = {
+#			has_full_control_of_state = 808
+#			has_full_control_of_state = 1122
+#			has_full_control_of_state = 679
+#			has_full_control_of_state = 292
+#			has_full_control_of_state = 1090
+#			has_full_control_of_state = 678
+#		}
+#		remove_effect = {
+#			release_puppet = SAU
+#		}
+#		visible = {
+#			has_completed_focus = ISR_euphratestothenile
+#			SAU = {
+#				exists = no
+#			}
+#		}
+#		fire_only_once = yes
+#
+#		ai_will_do = {
+#			factor = 1
+#		}
+#	}
+#}

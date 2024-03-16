@@ -1,0 +1,36 @@
+﻿###########################
+# Capitulation Events
+###########################
+
+add_namespace = capt
+
+### German Capitulation
+
+# Hidden event to remove German ideas and force them to surrender
+country_event = {
+	id = capt.11
+	immediate = { log = "[GetDateText]: [Root.GetName]: event capt.11" }
+
+	is_triggered_only = yes
+	hidden = yes
+
+	immediate = {
+		add_timed_idea = {
+			idea = GER_ready_to_surrender
+			days = 30
+		}
+	}
+}
+
+# Actual capitulation event (to prevent crashing)
+country_event = {
+	id = capt.22
+	immediate = { log = "[GetDateText]: [Root.GetName]: event capt.22" }
+
+	is_triggered_only = yes
+	hidden = yes
+
+	immediate = {
+		germany_capitulates = yes
+	}
+}

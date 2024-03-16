@@ -1,0 +1,38 @@
+
+state={
+	id=429
+	name="STATE_429"
+	manpower = 17355600
+	state_category = city
+
+	resources={
+		tungsten = 19 # was: 26
+		steel = 2
+	}
+
+	history={
+		owner = RSR
+		add_core_of = RSR
+		add_claim_by = HYD
+		add_claim_by = INC
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+			arms_factory = 2
+			air_base = 2
+			1349 = {
+				naval_base = 6
+			}
+		}
+		victory_points = {
+			1349 25
+		}
+		victory_points = {
+			4353 10
+		}
+	}
+
+	provinces={
+		1349 1405 4072 4353 4395 7013 7060  7119 7177 7232 7430 10019 10210 10270 12142 12182 12269
+	}
+}

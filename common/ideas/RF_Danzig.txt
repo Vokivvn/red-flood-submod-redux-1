@@ -1,0 +1,39 @@
+ideas = {
+	country = {
+		DAN_amber_baltic_sea = {
+			picture = DAN_amber_baltic_sea
+			allowed = {
+				original_tag = DAN
+			}
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				consumer_goods_expected_value = -0.2
+			}
+		}
+		DAN_marshals_gaze = {
+			picture = DAN_marshals_gaze
+			allowed = {
+				original_tag = DAN
+			}
+			modifier = {
+				custom_modifier_tooltip = DAN_marshals_gaze_tt
+				weekly_manpower = 100
+				political_power_factor = -0.1
+			}
+		}
+		DAN_ist_deutsch = {
+			picture = DAN_ist_deutsch
+			allowed = {
+				original_tag = DAN
+			}
+			modifier = {
+				 political_power_factor = -0.05
+			}
+			targeted_modifier = {
+				tag = PRS
+				defense_bonus_against = -0.1
+			}
+		}
+	
+	}
+}

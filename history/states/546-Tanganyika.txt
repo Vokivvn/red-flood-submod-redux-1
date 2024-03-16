@@ -1,0 +1,26 @@
+
+state={
+	id=546
+	name="STATE_546"
+	resources={
+		rubber=2.000
+	}
+
+	history={
+		owner = KEN
+		add_core_of = KEN
+		buildings = {
+			infrastructure = 2
+			
+		}
+		victory_points = { 10988 1 }
+	}
+
+	provinces={
+		2176 5180 8144 10988 
+	}
+	manpower=1139870
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=0.000
+}

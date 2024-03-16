@@ -1,0 +1,92 @@
+characters = {
+	PNJ_tara_singh = {
+		name = "Tara Singh"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/PNJ/Portrait_PNJ_Tara_Singh.png"
+			}
+		}
+		country_leader = {
+			ideology = oligarchy
+			expire = "1965.1.1.1"
+			traits = {
+				stout_defender	
+			}
+		}
+	}
+	PNJ_Sikander_Hayat_Khan = {
+		name = "Sikander Hayat Khan"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/PNJ/Portrait_PNJ_Sikander_Hayat_Khan.png"
+			}
+		}
+		country_leader = {
+			ideology = liberal_conservatism
+			expire = "1942.1.1.1"
+			traits = {
+					
+			}
+		}
+	}
+	PNJ_teja_singh_swatantar = {
+		name = "Teja Singh Swatantar"
+		
+	}
+	PNJ_sohan_singh_bhakna = {
+		name = "Sohan Singh Bhakna"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/PNJ/Portrait_Sohan_Bhakna.png"
+			}
+		}
+		country_leader = {
+			ideology = folk_socialism
+			expire = "1965.1.1.1"
+		}
+	}
+	PNJ_muhammad_ali_jinnah = {
+		name = "Muhammad Ali Jinnah"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/PNJ/Portrait_PNJ_Mohammad_Jinnah.png"
+			}
+		}
+		country_leader = {
+			ideology = national_liberalism
+			expire = "1965.1.1.1"
+		}
+	}
+	PNJ_udham_singh_nagoken = {
+		name = "Udham Singh Nagoken"
+		
+	}
+	PNJ_labh_singh_saini = {
+		name = "Labh Singh Saini"
+		
+	}
+	PNJ_Baba_Kharak_Singh = {
+		name = "Baba Kharak Singh"
+	}
+	PNJ_Bhimrao_Ramji_Ambedkar = {
+		name = "Bhimrao Ramji Ambedkar"
+	}
+	PNJ_Malik_Khizar_Hayat_Tiwana = {
+		name = "Malik Khizar Hayat Tiwana"
+	}
+	PNJ_Gopi_Chand_Bhargava = {
+		name = "Gopi Chand Bhargava"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/PNJ/Portrait_PNJ_Gopi_Chand_Bhargava.png"
+			}
+		}
+		country_leader = {
+			ideology = left_populism
+			expire = "1966.1.1.1"
+		}
+	}
+	PNJ_Sundar_Singh_Majithia = {
+		name = "Sundar Singh Majithia"
+	}
+}

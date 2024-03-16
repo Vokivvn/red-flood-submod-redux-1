@@ -1,0 +1,45 @@
+
+state={
+	id=714
+	name="STATE_714"
+
+	history={
+		owner = ZHR
+		add_core_of = ZHR
+		buildings = {
+			infrastructure = 2
+            arms_factory = 1
+			industrial_complex = 1
+			air_base = 3
+		}
+        victory_points={
+			7767 3
+		}
+		victory_points={
+			12618 3
+		}
+		victory_points={
+			7613 3
+		}
+		victory_points={
+			1545 3
+		}
+		victory_points={
+			4649 3
+		}
+		victory_points={
+			7582 10
+		}
+		victory_points={
+			7526 5
+		}
+	}
+
+	provinces={
+		1545 1588 1645 1693 1732 4506 4592 4649 7526 7582 7613 7767 7897 10368 10379 10698 12548 12618 
+	}
+	manpower= 3131008
+	buildings_max_level_factor=1.000
+	state_category=city
+	local_supplies=0.000
+}

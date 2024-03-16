@@ -1,0 +1,51 @@
+ROS_diplomatic_decisions = {
+	priority = 300
+	allowed = {
+		OR = {
+			original_tag = KCK
+			original_tag = DKB
+			original_tag = ORE
+			original_tag = SIB
+			original_tag = ARC
+			original_tag = PRI
+			original_tag = KAV
+			original_tag = ZHR
+			original_tag = ALT
+			original_tag = HAR
+			original_tag = FCR
+			original_tag = PSL
+			original_tag = RUS 
+			original_tag = SRU
+		}
+	}
+	visible = {
+		is_subject = no
+		tag = ROS
+	}
+}
+ROS_reunification_blues = {
+	priority = 400
+	allowed = {
+		OR = {
+			original_tag = KCK
+			original_tag = DKB
+			original_tag = SIB
+			original_tag = ARC
+			original_tag = PRI
+			original_tag = KAV
+			original_tag = ZHR
+			original_tag = ALT
+			original_tag = ORE
+			original_tag = HAR
+			original_tag = FCR
+			original_tag = PSL
+			original_tag = RUS 
+			original_tag = SRU
+		}
+	}
+	visible = {
+		is_subject = no
+		united_russia = yes
+		tag = ROS
+	}
+}

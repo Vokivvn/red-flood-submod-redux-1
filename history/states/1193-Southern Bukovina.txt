@@ -1,0 +1,19 @@
+state={
+	id=1193
+	name="STATE_1193"
+	history= {
+		owner = MOL
+		add_core_of = MOL
+		add_claim_by = ROM
+		buildings = {
+			infrastructure = 2
+		}
+	}
+	provinces={
+		6761 11689 
+	}
+	manpower=540325 #placeholder
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

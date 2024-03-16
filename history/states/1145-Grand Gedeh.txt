@@ -1,0 +1,23 @@
+state=
+{
+	id=1145
+	name="STATE_1145"
+	manpower = 150400
+	
+	state_category = pastoral
+	resources={
+		rubber=2
+	}	
+	
+
+	history= {
+		owner = LIB
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = LIB
+	}
+	provinces={
+		13423 8006 13421
+	}
+}

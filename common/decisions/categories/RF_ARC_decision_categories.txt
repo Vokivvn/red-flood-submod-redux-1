@@ -1,0 +1,12 @@
+ARC_diplomatic_decisions = {	
+	icon = GFX_Russian_uni_nationalist
+	picture = GFX_decision_category_russian_reuni
+	allowed = {
+		original_tag = ARC
+	}
+	priority = 200
+	visible = {
+		is_subject = no
+		has_completed_focus = ARC_yermaks_call
+	}
+}

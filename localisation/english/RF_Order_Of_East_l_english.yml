@@ -1,0 +1,35 @@
+﻿l_english:
+#COUNTRY NAME#
+
+#PARTIES#
+ORS_vanguard_socialism_party:0 "CPoI - L"
+ORS_popular_socialism_party:0 "CPoI - S"
+ORS_anarchism_party:0 "ASO"
+ORS_revisionist_socialism_party:0 "CSP"
+ORS_progressivism_party:0 "INC - S"
+ORS_liberalism_party:0 "INC - L"
+ORS_conservatism_party:0 "AIHGA (ABHM) Moderates"
+ORS_right_authoritarianism_party:0 "AIGHA (ABHM) Hardliners"
+ORS_despotism_party:0 "OTS(MW)"
+ORS_reactionism_party:0 "OTS(TW)"
+ORS_accelerationism_party:0 "OTS(RW)"
+
+ORS_vanguard_socialism_party_long:0 "Communist Party of India - Leninist"
+ORS_popular_socialism_party_long:0 "Communist Party of India - Spartakist"
+ORS_anarchism_party_long:0 "Anarchist Society of India"
+ORS_revisionist_socialism_party_long:0 "Congress Socialist Party"
+ORS_progressivism_party_long:0 "Indian National Congress - Socialist"
+ORS_liberalism_party_long:0 "India National Congress - Liberal"
+ORS_conservatism_party_long:0 "All-India Hindu Grand-Assembly - Moderates"
+ORS_right_authoritarianism_party_long:0 "All-India Hindu Grand-Assembly - Hardliners"
+ORS_despotism_party_long:0 "Theosophical Society (Order of the Star)"
+ORS_reactionism_party_long:0 "Theosophical Society (Order of the Star)"
+ORS_accelerationism_party_long:0 "Theosophical Society (Order of the Star)"
+#LEADER DESCRIPTIONS#
+
+#IDEAS#
+ORS_religious_fanaticism:0 "Idealistic Mysticism"
+ORS_inexperienced_administration:0 "Inexperienced Administration"
+#CUSTOM TOOLTIPS AND FLAGS#
+#DECISIONS (1.5 Update)#
+#FOCUSES#

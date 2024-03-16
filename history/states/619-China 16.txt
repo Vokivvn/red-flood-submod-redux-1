@@ -1,0 +1,24 @@
+
+state={
+	id=619
+	name="STATE_619"
+
+	history={
+		owner = SIK
+		add_core_of = SIK
+		buildings = {
+			infrastructure = 2
+
+		}
+		victory_points = {
+			2015 2
+		}
+	}
+
+	provinces={
+		1766 2015 5087 12119
+	}
+	manpower=1059152
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

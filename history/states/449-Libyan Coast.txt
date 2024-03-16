@@ -1,0 +1,23 @@
+
+state={
+	id=449
+	name="STATE_449" # El Agheila
+	manpower = 82441
+	
+	state_category = wasteland
+
+	history={
+	    set_demilitarized_zone = yes
+		owner = ITA
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = LBA
+		add_core_of = SOK
+		set_demilitarized_zone = yes
+	}
+
+	provinces={
+		1041 4047 4057 10046 10117 12088 
+	}
+}

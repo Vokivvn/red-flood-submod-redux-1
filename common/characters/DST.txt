@@ -1,0 +1,14 @@
+characters = {
+	DST_heber_jeddy_grant = {
+		name = "Heber Jeddy Grant"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/DST/Portrait_Heber_Jeddy_Grant.png"
+			}
+		}
+		country_leader = {
+			ideology = liberal_conservatism
+			expire = "1965.1.1.1"
+		}
+	}
+}

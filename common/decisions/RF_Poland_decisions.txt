@@ -1,0 +1,2113 @@
+POL_aftermath_of_prussia = {
+	POL_reaching_germans = {
+		fire_only_once = yes
+		icon = GFX_icon_prussia_eagle
+		ai_will_do = {
+			factor = 1000
+		}
+		available = {
+			PRS = { 
+				exists = no
+			}
+			owns_state = 763
+			owns_state = 5
+			OR = { 
+				has_completed_focus = POL_claim_slovakia
+				has_completed_focus = POL_expand_political_freedom
+			}
+		}
+		remove_effect = {
+			country_event = poland.102
+		}
+	}
+	POL_war_with_prussia = {
+		icon = GFX_icon_prussia_eagle
+		allowed = {
+			original_tag = POL
+			always = no
+		}
+		available = {
+			PRS = {
+				has_capitulated = yes
+			}
+		}
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 100
+		timeout_effect = {
+			custom_effect_tooltip = "Our invasion has failed!"
+			hidden_effect = {
+				white_peace = {
+					tag = SWE
+					message = POL_birkeneid_failure
+				}
+				set_truce = {
+					target = PRS
+					days = 720
+				}
+				set_truce = {
+					target = SWE
+					days = 720
+				}
+			}
+		}
+		complete_effect = {
+			add_stability = 0.3
+			custom_effect_tooltip = "Our invasion is a success!"
+			hidden_effect = {
+				white_peace = {
+					tag = SWE
+					message = POL_beats_birkeneid
+				}
+				annex_country = {
+						target = PRS
+					}
+				set_truce = {
+					target = SWE
+					days = 720
+				}
+			}
+		}
+	}
+}
+
+POL_russia_diplo={
+	POL_ally_baltics = {
+		icon = GFX_icon_poland
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 10000
+		}
+		visible = {
+			NOT = {
+				POL = {
+				has_completed_focus = POL_military_order
+				}
+			}
+			EST = {
+				is_subject = no
+				is_in_faction = no
+				exists = yes
+			}
+			LAT = {
+				is_subject = no
+				is_in_faction = no
+				exists = yes
+			}
+		}
+		remove_effect = {
+			EST = {
+				country_event = intermarium.3
+			}
+			LAT = {
+				country_event = intermarium.5
+			}
+		}
+	}
+	POL_return_lithuania = {
+		icon = GFX_icon_poland
+		fire_only_once = yes 
+		ai_will_do = {
+			factor = 10000
+		}
+		visible = {
+			NOT = {
+			LIT = {
+				is_in_faction_with = POL
+			}
+			}
+			LIT = {
+				has_war = no
+			}
+		}
+		remove_effect = {
+			add_to_faction = LIT
+		}
+	}
+	POL_peace_with_russia={
+		icon = GFX_icon_poland
+		fire_only_once = yes
+		days_remove = 21
+		ai_will_do = {
+			factor = 1000
+		}
+		visible = {
+			NOT = {
+				POL = {
+				has_completed_focus = POL_military_order
+				}
+			}
+			UKR = {
+				has_completed_focus = UKR_the_rise_of_the_banderites
+			}
+		}
+		available={
+			has_war = no 
+			united_russia = yes
+			UKR = {
+				is_subject_of = POL
+			}
+		}
+		remove_effect = {
+			declare_war_on = {
+				target = ROS 
+				type = annex_everything
+			}
+		}
+	}
+	POL_restore_estonia = {
+		icon = GFX_icon_poland
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 1000
+		}
+		visible = {
+			NOT = {
+				POL = {
+				has_completed_focus = POL_military_order
+				}
+			}
+			OR = {
+				POL = {
+					owns_state = 13
+				}
+				UKR = {
+					owns_state = 13
+				}
+				BLR = {
+					owns_state = 13
+				}
+				LIT = {
+					owns_state = 13
+				}
+			}
+		}
+		available={
+			OR = {
+				POL = {
+					owns_state = 13
+				}
+				UKR = {
+					owns_state = 13
+				}
+				BLR = {
+					owns_state = 13
+				}
+				LIT = {
+					owns_state = 13
+				}
+			}
+		}
+		remove_effect = {
+			EST = {
+				load_focus_tree = generic_focus
+				set_politics = { 
+					ruling_party = accelerationism
+					name = EST_accelerationism_inter_party
+					long_name = EST_accelerationism_inter_party_long
+				}
+				add_ideas = {
+					EST_milennium
+				}
+				set_cosmetic_tag = EST_intermarium
+				hidden_effect = {
+				add_state_core = 13
+				add_state_core = 191
+				transfer_state = 13
+				transfer_state = 191
+				}
+				set_country_flag = warschauer_vertrag
+				WP_add_member = yes
+			}
+			add_to_faction = EST
+		}
+	}
+	POL_restore_latvia = {
+		icon = GFX_icon_poland
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 1000
+		}
+		visible = {
+			NOT = {
+				POL = {
+				has_completed_focus = POL_military_order
+				}
+			}
+			OR = {
+				POL = {
+					owns_state = 1058
+				}
+				UKR = {
+					owns_state = 1058
+				}
+				BLR = {
+					owns_state = 1058
+				}
+				LIT = {
+					owns_state = 1058
+				}
+			}
+			
+		}
+		available={
+			OR = {
+				POL = {
+					owns_state = 1058
+				}
+				UKR = {
+					owns_state = 1058
+				}
+				BLR = {
+					owns_state = 1058
+				}
+				LIT = {
+					owns_state = 1058
+				}
+			}
+		}
+		remove_effect = {
+			LAT = {
+				load_focus_tree = generic_focus
+				set_politics = { 
+					ruling_party = accelerationism
+					name = LAT_accelerationism_inter_party
+					long_name = LAT_accelerationism_inter_party_long
+				}
+				promote_character = LAT_ernests_brastins 
+				set_cosmetic_tag = LAT_intermarium
+				hidden_effect = {
+					add_state_core = 190
+					add_state_core = 1058
+					add_state_core = 12 
+					add_state_core = 210
+					transfer_state = 190
+					transfer_state = 1058
+					transfer_state = 12 
+					transfer_state = 210
+				}
+				set_country_flag = warschauer_vertrag
+				WP_add_member = yes
+				add_ideas = LAT_tale
+			}
+			add_to_faction = LAT
+		}
+	}
+	POL_integrate_lands = {
+		icon = GFX_icon_poland
+		fire_only_once = yes 
+		ai_will_do = {
+			factor = 1000
+		}
+		visible = {
+			POL = {
+				has_completed_focus = POL_military_order
+			}
+			POL = {
+				owns_state = 13 
+				owns_state = 1058
+				owns_state = 227
+			}
+		}
+		remove_effect = {
+				add_state_core = 13
+				add_state_core = 191
+				add_state_core = 190
+				add_state_core = 1058
+				add_state_core = 12 
+				add_state_core = 210
+				add_state_core = 854 
+				add_state_core = 857 
+				add_state_core = 241
+				add_state_core = 853 
+				add_state_core = 259 
+				add_state_core = 221 
+				add_state_core = 225 
+				add_state_core = 200 
+				add_state_core = 196 
+				add_state_core = 137 
+				add_state_core = 227
+				add_state_core = 228
+		}
+	}
+	POL_russia_and_nevsk_1 = {
+		icon = GFX_icon_poland
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 1000
+		}
+		visible = {
+			POL = {
+				owns_state = 219
+				has_completed_focus = POL_military_order
+			}
+		}
+		available={
+			POL = {
+				owns_state = 219
+			}
+		}
+		remove_effect = {
+			country_event = { id = TER.1 days = 10 }		
+			hidden_effect = {
+			STA = {
+				transfer_state = 195
+				add_state_core = 195
+				set_country_flag = warschauer_vertrag
+				WP_add_member = yes
+			}
+			AQT = {
+				transfer_state = 401
+				add_state_core = 401
+				set_country_flag = warschauer_vertrag
+				WP_add_member = yes
+			}
+			TER={
+				load_focus_tree = generic_focus
+				add_state_core = 722
+				add_state_core = 213
+				add_state_core = 147
+				add_state_core = 215
+				add_state_core = 216
+				transfer_state = 722
+				transfer_state = 213
+				transfer_state = 147
+				transfer_state = 215
+				transfer_state = 216
+				transfer_state = 242
+				transfer_state = 243
+				add_state_core = 242
+				add_state_core = 243
+				transfer_state = 220
+				transfer_state = 240
+				transfer_state = 859
+				transfer_state = 258
+				add_state_core = 220
+				add_state_core = 240
+				add_state_core = 859
+				add_state_core = 258
+				add_state_core=208
+				add_state_core=209
+				add_state_core=858
+				add_state_core=263
+				add_state_core=246
+				add_state_core=242
+				add_state_core=243
+				add_state_core=205
+				add_state_core=219
+				add_state_core=223
+				add_state_core=254
+				add_state_core=252
+				add_state_core=351
+				add_state_core=248
+				add_state_core=253
+				add_state_core=247
+				add_state_core=264
+				add_state_core=244
+				add_state_core=214
+				add_state_core=260
+				add_state_core=222
+				add_state_core=224
+				add_state_core=257
+				add_state_core=255
+				add_state_core=239
+				transfer_state=239
+				transfer_state=255
+				transfer_state=257
+				transfer_state=224
+				transfer_state=222
+				transfer_state=260
+				transfer_state=208
+				transfer_state=209
+				transfer_state=858
+				transfer_state=263
+				transfer_state=246
+				transfer_state=205
+				transfer_state=219
+				transfer_state=223
+				transfer_state=254
+				transfer_state=252
+				transfer_state=351
+				transfer_state=248
+				transfer_state=253
+				transfer_state=247
+				transfer_state=264
+				transfer_state=244
+				transfer_state=214
+				set_country_flag = warschauer_vertrag
+				WP_add_member = yes
+			}
+			POL = {
+					puppet = TER
+					puppet = STA
+				}
+				TER = {
+					set_politics = {
+						ruling_party = right_authoritarianism
+						last_election = "1933.10.25"
+						election_frequency = 48
+						elections_allowed = no
+					}
+					set_popularities = {
+						vanguard_socialism = 5
+						popular_socialism = 10
+						anarchism = 5
+						revisionist_socialism = 15
+						progressivism = 3
+						liberalism = 7
+						conservatism = 10
+						right_authoritarianism = 14
+						despotism = 12
+						reactionism = 4
+						accelerationism = 15
+					}
+				}
+				STA = {
+					set_politics = {
+						ruling_party = right_authoritarianism
+						last_election = "1933.10.25"
+						election_frequency = 48
+						elections_allowed = no
+					}
+					set_popularities = {
+						vanguard_socialism = 0
+						popular_socialism = 0
+						anarchism = 0
+						revisionist_socialism = 0
+						progressivism = 0
+						liberalism = 0
+						conservatism = 0
+						right_authoritarianism = 100
+						despotism = 0
+						reactionism = 0
+						accelerationism = 0
+					}
+				}
+			}
+			set_province_name = {
+				id = 3151
+				name = POL_decision_POL_russia_and_nevsk_1_province_3151
+			}
+			195 = {
+				set_state_name = POL_decision_POL_russia_and_nevsk_1_state_195
+			}
+			set_province_name = {
+				id = 11523
+				name = POL_decision_POL_russia_and_nevsk_1_province_11523
+			}
+			401 = {
+				set_state_name = POL_decision_POL_russia_and_nevsk_1_state_401
+			}
+			add_to_faction = TER 
+			add_to_faction = STA
+			add_to_faction = AQT
+		}
+	}
+	POL_organize_seu_1 = {
+		icon = GFX_icon_poland
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 1000
+		}
+		visible = {
+			TER = {
+				owns_state = 219
+			}
+			OR = {
+				POL = {
+					has_completed_focus = POL_military_order
+				}
+				UKR = {
+					NOT = {
+						OR = {
+							has_completed_focus = UKR_the_call_of_the_ancient
+							has_completed_focus = UKR_old_face_new_ways
+						}
+					}
+				}
+			}
+		}
+		available={
+			TER = {
+				owns_state = 219
+			}
+			OR = {
+				POL = {
+					has_completed_focus = POL_military_order
+				}
+				UKR = {
+					NOT = {
+						OR = {
+							has_completed_focus = UKR_the_call_of_the_ancient
+							has_completed_focus = UKR_old_face_new_ways
+						}
+					}
+				}
+			}
+		}
+		remove_effect = {
+			hidden_effect = {
+			MTR = {
+			add_state_core = 233
+			add_state_core = 1137
+			add_state_core = 1057
+			add_state_core = 232
+			add_state_core = 1053
+			transfer_state = 233
+			transfer_state = 1137
+			transfer_state = 1057
+			transfer_state = 232
+			transfer_state = 1053
+			add_ideas = POL_intermarium_observer
+			}
+			KLM = {
+			add_state_core = 407
+			add_state_core = 841
+			add_state_core = 237
+			add_state_core = 236
+			transfer_state = 407
+			transfer_state = 841
+			transfer_state = 236
+			transfer_state = 237
+			}
+			DON = {
+			promote_character = DON_Ivan
+			add_state_core = 217
+			add_state_core = 238
+			add_state_core = 855
+			add_state_core = 235
+			add_state_core = 234
+			add_state_core = 218
+			add_state_core = 245
+			add_state_core = 1055
+			add_state_core = 265
+			transfer_state = 234
+			transfer_state = 218
+			transfer_state = 245
+			transfer_state = 1055
+			transfer_state = 217
+			transfer_state = 235
+			transfer_state = 238
+			transfer_state = 855
+			transfer_state = 265
+			}
+			}
+			UKR = {
+				puppet = DON
+			}
+			DON = {
+				set_politics = {
+					ruling_party = despotism
+					last_election = "1933.10.25"
+					election_frequency = 48
+					elections_allowed = no
+				}
+				set_popularities = {
+					vanguard_socialism = 0
+					popular_socialism = 0
+					anarchism = 0
+					revisionist_socialism = 0
+					progressivism = 0
+					liberalism = 5
+					conservatism = 5
+					right_authoritarianism = 20
+					despotism = 60
+					reactionism = 0
+					accelerationism = 10
+				}
+			}
+			add_to_faction = KLM
+		}
+	}
+	POL_restore_finland = {
+		icon = GFX_icon_poland
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 1000
+		}
+		visible = {
+			OR = {
+				POL = {
+				owns_state = 111
+			}
+			UKR = {
+				owns_state = 111
+			}
+			BLR = {
+				owns_state = 111
+			}
+			LIT = {
+				owns_state = 111
+			}
+			}
+		}
+		available={
+			OR = {
+				POL = {
+				owns_state = 111
+			}
+			UKR = {
+				owns_state = 111
+			}
+			BLR = {
+				owns_state = 111
+			}
+			LIT = {
+				owns_state = 111
+			}
+			}
+		}
+		remove_effect = {
+			FIN = {
+				load_focus_tree = generic_focus
+				drop_cosmetic_tag = yes
+				set_politics = { 
+					ruling_party = progressivism
+				}
+				hidden_effect = {
+				add_state_core = 111
+				add_state_core = 149
+				add_state_core = 146
+				add_state_core = 856
+				add_state_core = 148
+				add_state_core = 150
+				transfer_state = 111
+				transfer_state = 149
+				transfer_state = 146
+				transfer_state = 856
+				transfer_state = 148
+				transfer_state = 150
+				}
+			}
+			add_to_faction = FIN
+		}
+	}
+	POL_finnish_karelia = {
+		icon = GFX_icon_poland
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 1000
+		}
+		visible = {
+			TER = {
+				owns_state = 213
+			}
+			POL = {
+				is_in_faction_with = FIN
+			}
+		}
+		available={
+			TER = {
+				owns_state = 213
+			}
+			POL = {
+				is_in_faction_with = FIN
+			}
+		}
+		remove_effect = {
+			FIN = {
+				add_state_core = 722
+				add_state_core = 213
+				add_state_core = 147
+				add_state_core = 215
+				add_state_core = 216
+				transfer_state = 722
+				transfer_state = 213
+				transfer_state = 147
+				transfer_state = 215
+				transfer_state = 216
+			}
+		}
+	}
+	POL_give_ukraine_east = {
+		icon = GFX_icon_poland
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 1000
+		}
+		visible = {
+			POL = {
+				is_in_faction_with = UKR
+				NOT = {
+					has_completed_focus = POL_military_order
+				}
+			}
+			OR = {
+				POL = {
+					owns_state = 853
+				}
+				UKR = {
+					owns_state = 853
+				}
+				BLR = {
+					owns_state = 853
+				}
+				LIT = {
+					owns_state = 853
+				}
+			}
+		
+		}
+		available={
+			POL = {
+				is_in_faction_with = UKR
+			}
+			OR = {
+				POL = {
+					owns_state = 853
+				}
+				UKR = {
+					owns_state = 853
+				}
+				BLR = {
+					owns_state = 853
+				}
+				LIT = {
+					owns_state = 853
+				}
+			}
+		}
+		remove_effect = {
+			UKR = {
+				add_state_core = 854 
+				add_state_core = 853 
+				add_state_core = 259 
+				add_state_core = 221 
+				add_state_core = 225 
+				add_state_core = 200 
+				add_state_core = 196 
+				add_state_core = 137 
+				add_state_core = 227
+				add_state_core = 228
+				transfer_state = 854 
+				transfer_state = 853 
+				transfer_state = 259 
+				transfer_state = 221 
+				transfer_state = 225 
+				transfer_state = 200 
+				transfer_state = 196 
+				transfer_state = 137 
+				transfer_state = 227
+				transfer_state = 228
+			}
+		}
+	}
+	POL_knights_seu = {
+		icon = GFX_icon_poland
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 1000
+		}
+		visible = {
+			TER = {
+				owns_state = 219
+			}
+			UKR = {
+				has_completed_focus = UKR_the_call_of_the_ancient
+			}
+			POL = {
+				is_in_faction_with = UKR
+				NOT = {
+					POL = {
+					has_completed_focus = POL_military_order
+					}
+				}
+			}
+		}
+		available={
+			TER = {
+				owns_state = 219
+			}
+			UKR = {
+				has_completed_focus = UKR_the_call_of_the_ancient
+			}
+			POL = {
+				is_in_faction_with = UKR
+			}
+		}
+		remove_effect = {
+			UKR = {
+			add_state_core = 234
+			add_state_core = 218
+			add_state_core = 245
+			add_state_core = 265
+			add_state_core = 1055
+			add_state_core = 235
+			add_state_core = 1137
+			add_state_core = 233
+			add_state_core = 1053
+			add_state_core = 232
+			add_state_core = 1057
+			add_state_core = 237
+			add_state_core = 217
+			add_state_core = 841
+			add_state_core = 238
+			add_state_core = 855
+			add_state_core = 236
+			add_state_core = 407
+			add_state_core = 260
+			transfer_state = 260
+			transfer_state = 407
+			transfer_state = 234
+			transfer_state = 218
+			transfer_state = 245
+			transfer_state = 235
+			transfer_state = 265
+			transfer_state = 1055
+			transfer_state = 1137
+			transfer_state = 233
+			transfer_state = 1053
+			transfer_state = 232
+			transfer_state = 1057
+			transfer_state = 237
+			transfer_state = 217
+			transfer_state = 841
+			transfer_state = 238
+			transfer_state = 855
+			transfer_state = 236
+			}
+		}
+	}
+	POL_organize_seu = {
+		icon = GFX_icon_poland
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 1000
+		}
+		visible = {
+			TER = {
+				owns_state = 219
+			}
+			UKR = {
+				NOT = {
+					has_completed_focus = UKR_the_call_of_the_ancient
+				}
+				has_completed_focus = UKR_old_face_new_ways
+			}
+			POL = {
+				is_in_faction_with = UKR
+				NOT = {
+					POL = {
+					has_completed_focus = POL_military_order
+					}
+				}
+			}
+		}
+		available={
+			TER = {
+				owns_state = 219
+			}
+			UKR = {
+				NOT = {
+					has_completed_focus = UKR_the_call_of_the_ancient
+				}
+				has_completed_focus = UKR_old_face_new_ways
+			}
+			POL = {
+				is_in_faction_with = UKR
+				NOT = {
+					POL = {
+					has_completed_focus = POL_military_order
+					}
+				}
+			}
+		}
+		remove_effect = {
+			hidden_effect = {
+			UKR = {
+			add_state_core = 234
+			add_state_core = 218
+			add_state_core = 245
+			add_state_core = 1055
+			transfer_state = 234
+			transfer_state = 218
+			transfer_state = 245
+			transfer_state = 1055
+			}
+			MTR = {
+			add_state_core = 233
+			add_state_core = 1137
+			add_state_core = 1057
+			add_state_core = 232
+			add_state_core = 1053
+			transfer_state = 233
+			transfer_state = 1137
+			transfer_state = 1057
+			transfer_state = 232
+			transfer_state = 1053
+			add_ideas = POL_intermarium_observer
+			}
+			KLM = {
+			add_state_core = 407
+			add_state_core = 841
+			add_state_core = 237
+			add_state_core = 236
+			transfer_state = 407
+			transfer_state = 841
+			transfer_state = 236
+			transfer_state = 237
+			}
+			DON = {
+			promote_character = DON_Ivan
+			add_state_core = 217
+			add_state_core = 238
+			add_state_core = 855
+			add_state_core = 235
+			add_state_core = 265
+			transfer_state = 217
+			transfer_state = 235
+			transfer_state = 238
+			transfer_state = 855
+			transfer_state = 265
+			}
+			}
+			UKR = {
+				puppet = DON
+			}
+			DON = {
+				set_politics = {
+					ruling_party = despotism
+					last_election = "1933.10.25"
+					election_frequency = 48
+					elections_allowed = no
+				}
+				set_popularities = {
+					vanguard_socialism = 0
+					popular_socialism = 0
+					anarchism = 0
+					revisionist_socialism = 0
+					progressivism = 0
+					liberalism = 5
+					conservatism = 5
+					right_authoritarianism = 20
+					despotism = 60
+					reactionism = 0
+					accelerationism = 10
+				}
+			}
+			add_to_faction = KLM 
+		}
+	}
+	POL_idel_ural_and_komi = {
+		icon = GFX_icon_poland
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 1000
+		}
+		visible = {
+			OR = {
+				POL = {
+					owns_state = 249
+					owns_state = 397
+				}
+				UKR = {
+					owns_state = 249
+					owns_state = 397
+				}
+				BLR = {
+					owns_state = 249
+					owns_state = 397
+				}
+				LIT = {
+					owns_state = 249
+					owns_state = 397
+				}
+			}
+		}
+		available={
+			OR = {
+				POL = {
+					owns_state = 249
+					owns_state = 397
+				}
+				UKR = {
+					owns_state = 249
+					owns_state = 397
+				}
+				BLR = {
+					owns_state = 249
+					owns_state = 397
+				}
+				LIT = {
+					owns_state = 249
+					owns_state = 397
+				}
+			}
+		}
+		remove_effect = {
+			hidden_effect = {
+				ASK = {
+				load_focus_tree = generic_focus
+				add_state_core = 651
+				add_state_core = 398
+				add_state_core = 399
+				add_state_core = 249
+				add_state_core = 256
+				add_state_core = 250
+				add_state_core = 249
+				add_state_core = 251
+				add_state_core = 652
+				add_state_core = 582
+				add_state_core = 573
+				transfer_state = 651
+				transfer_state = 398
+				transfer_state = 399
+				transfer_state = 249
+				transfer_state = 256
+				transfer_state = 250
+				transfer_state = 249
+				transfer_state = 251
+				transfer_state = 652
+				transfer_state = 582
+				transfer_state = 573
+				set_country_flag = warschauer_vertrag
+				WP_add_member = yes
+				}
+				KUB = {
+				load_focus_tree = generic_focus
+				add_state_core = 262
+				add_state_core = 397
+				add_state_core = 581
+				add_state_core = 804
+				add_state_core = 400
+				transfer_state = 400
+				transfer_state = 262
+				transfer_state = 397
+				transfer_state = 581
+				transfer_state = 804
+				set_country_flag = warschauer_vertrag
+				WP_add_member = yes
+				}
+			}
+			add_to_faction = ASK
+			add_to_faction = KUB
+		}
+	}
+	POL_russia_and_nevsk = {
+		icon = GFX_icon_poland
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 1000
+		}
+		visible = {
+			POL = {
+				
+				NOT = {
+					has_completed_focus = POL_military_order
+				}
+			}
+			OR = {
+				POL = {
+					owns_state = 219
+				}
+				UKR = {
+					owns_state = 219
+				}
+				BLR = {
+					owns_state = 219
+				}
+				LIT = {
+					owns_state = 219
+				}
+			}
+		}
+		available={
+			OR = {
+				POL = {
+					owns_state = 219
+				}
+				UKR = {
+					owns_state = 219
+				}
+				BLR = {
+					owns_state = 219
+				}
+				LIT = {
+					owns_state = 219
+				}
+			}
+		}
+		remove_effect = {
+			country_event = { id = TER.1 days = 10 }
+			set_province_name = {
+				id = 3151
+				name = POL_decision_POL_russia_and_nevsk_3151
+			}
+			195 = {
+				set_state_name = POL_decision_POL_russia_and_nevsk_state_195
+			}
+			set_province_name = {
+				id = 11523
+				name = POL_decision_POL_russia_and_nevsk_11523
+			}
+			401 = {
+				set_state_name = POL_decision_POL_russia_and_nevsk_state_401
+			}
+			hidden_effect = {
+				AQT = {
+					add_state_core = 401
+					transfer_state = 401
+					set_country_flag = warschauer_vertrag
+					WP_add_member = yes
+				}
+				BLR = {
+					add_state_core = 224
+					add_state_core = 242
+					add_state_core = 243
+					add_state_core = 241
+					add_state_core = 857
+					add_state_core = 858
+					add_state_core = 1298
+					transfer_state = 224
+					transfer_state = 242
+					transfer_state = 243
+					transfer_state = 241
+					transfer_state = 857
+					transfer_state = 858
+					transfer_state = 1298
+				}
+				STA = {
+					add_state_core = 195
+					transfer_state = 195
+					set_country_flag = warschauer_vertrag
+					WP_add_member = yes
+				}
+				if = {
+					limit = {
+						UKR = {
+							OR = {
+								has_completed_focus = UKR_the_call_of_the_ancient
+								has_completed_focus = UKR_old_face_new_ways
+							}
+						}
+					}
+					UKR = {
+						add_state_core = 220
+						add_state_core = 240
+						add_state_core = 859
+						add_state_core = 258
+						add_state_core = 222
+						transfer_state = 220
+						transfer_state = 240
+						transfer_state = 859
+						transfer_state = 258
+						transfer_state = 222
+					}
+				}
+				else = {
+					TER = {
+						add_state_core = 220
+						add_state_core = 240
+						add_state_core = 859
+						add_state_core = 258
+						add_state_core = 222
+						transfer_state = 220
+						transfer_state = 240
+						transfer_state = 859
+						transfer_state = 258
+						transfer_state = 222
+					}
+				}
+				TER={
+					load_focus_tree = generic_focus
+					add_state_core = 722
+					add_state_core = 213
+					add_state_core = 147
+					add_state_core = 215
+					add_state_core = 216
+					transfer_state = 722
+					transfer_state = 213
+					transfer_state = 147
+					transfer_state = 215
+					transfer_state = 216
+					add_state_core=208
+					add_state_core=209
+					add_state_core=263
+					add_state_core=246
+					add_state_core=205
+					add_state_core=219
+					add_state_core=223
+					add_state_core=254
+					add_state_core=252
+					add_state_core=351
+					add_state_core=248
+					add_state_core=253
+					add_state_core=247
+					add_state_core=264
+					add_state_core=244
+					add_state_core=214
+					add_state_core=260
+					add_state_core=257
+					add_state_core=255
+					add_state_core=239
+					transfer_state=208
+					transfer_state=209
+					transfer_state=263
+					transfer_state=246
+					transfer_state=205
+					transfer_state=219
+					transfer_state=223
+					transfer_state=254
+					transfer_state=252
+					transfer_state=351
+					transfer_state=248
+					transfer_state=253
+					transfer_state=247
+					transfer_state=264
+					transfer_state=244
+					transfer_state=214
+					transfer_state=260
+					transfer_state=257
+					transfer_state=255
+					transfer_state=239
+					set_country_flag = warschauer_vertrag
+					WP_add_member = yes
+				}
+				POL = {
+					puppet = TER
+					puppet = STA
+				}
+				TER = {
+					set_politics = {
+						ruling_party = right_authoritarianism
+						last_election = "1933.10.25"
+						election_frequency = 48
+						elections_allowed = no
+					}
+					set_popularities = {
+						vanguard_socialism = 5
+						popular_socialism = 10
+						anarchism = 5
+						revisionist_socialism = 15
+						progressivism = 3
+						liberalism = 7
+						conservatism = 10
+						right_authoritarianism = 14
+						despotism = 12
+						reactionism = 4
+						accelerationism = 15
+					}
+				}
+				STA = {
+					set_politics = {
+						ruling_party = right_authoritarianism
+						last_election = "1933.10.25"
+						election_frequency = 48
+						elections_allowed = no
+					}
+					set_popularities = {
+						vanguard_socialism = 0
+						popular_socialism = 0
+						anarchism = 0
+						revisionist_socialism = 0
+						progressivism = 0
+						liberalism = 0
+						conservatism = 0
+						right_authoritarianism = 100
+						despotism = 0
+						reactionism = 0
+						accelerationism = 0
+					}
+				}
+			}
+			add_to_faction = TER
+			add_to_faction = STA
+			add_to_faction = AQT
+		}
+	}
+	POL_turkestan_and_grey_klin = {
+		icon = GFX_icon_poland
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 1000
+		}
+		visible = {
+			OR = {
+				POL = {
+					owns_state = 590
+				}
+				UKR = {
+					owns_state = 590
+				}
+				BLR = {
+					owns_state = 590
+				}
+				LIT = {
+					owns_state = 590
+				}
+			}
+		}
+		available={
+			OR = {
+				POL = {
+					owns_state = 590
+				}
+				UKR = {
+					owns_state = 590
+				}
+				BLR = {
+					owns_state = 590
+				}
+				LIT = {
+					owns_state = 590
+				}
+			}
+		}
+		remove_effect = {
+			add_to_faction = NUK
+			hidden_effect = {
+				NUK = {
+					add_state_core=571
+					add_state_core=590
+					add_state_core=588
+					add_state_core=583
+					add_state_core=732
+					add_state_core=572
+					transfer_state=571
+					transfer_state=590
+					transfer_state=588
+					transfer_state=583
+					transfer_state=732
+					transfer_state=572
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						POL = {
+							owns_state = 852
+						}
+					}
+				}
+				every_country = {
+					limit = {
+						owns_state = 852
+					}
+					hidden_effect = {
+						transfer_state=402
+						transfer_state=587
+						transfer_state=406
+						transfer_state=589
+						transfer_state=404
+						add_state_core=402
+						add_state_core=587
+						add_state_core=406
+						add_state_core=589
+						add_state_core=404
+					}
+				}
+			}
+			else = {
+				ORE={
+					load_focus_tree = generic_focus
+					remove_dynamic_modifier = { modifier = second_smuta }
+					set_politics = {
+						ruling_party = despotism
+						long_name = ORE_despotism_party1_long
+						name = ORE_despotism_party1
+					}
+					promote_character = TUK_zeki
+					set_cosmetic_tag = ORE_intermarium
+					add_ideas = {
+						ORE_half
+						POL_intermarium_observer
+					}
+					hidden_effect = {
+						remove_ideas = {
+							ORE_meritocracy
+							ORE_ideya_pravitelnitsa
+							ORE_ruling_class
+							ORE_mixed_economy
+							ORE_self_governance
+							ORE_mestorazvitiye
+							ORE_continuous_russification
+							ORE_eurasian_identity
+							ORE_mestorazvitiye1
+							ORE_corporative_industrialism
+							ORE_rasputins_rule
+							ORE_empires_good_men
+							ORE_rasputins_rule1
+							ORE_olga
+							ORE_saint_devil
+							ORE_forbidden_sorcery_idea
+							ORE_golden_heart
+							ORE_grandiose_courage
+							ORE_retvrn
+							ORE_smite_the_zhmey
+						}
+						every_state = {
+							limit = {
+								is_core_of = ORE
+							}
+							remove_core_of = ORE
+						}
+						transfer_state=402
+						transfer_state=587
+						transfer_state=406
+						transfer_state=589
+						transfer_state=404
+						add_state_core=405
+						add_state_core=1041
+						add_state_core=1042
+						add_state_core=585
+						add_state_core=1040
+						add_state_core=1039
+						add_state_core=849
+						add_state_core=1037
+						add_state_core=584
+						add_state_core=850
+						add_state_core=851
+						add_state_core=1038
+						add_state_core=840
+						add_state_core=742
+						add_state_core=587
+						add_state_core=402
+						add_state_core=852
+						add_state_core=1043
+						add_state_core=842
+						add_state_core=586
+						add_state_core=589
+						add_state_core=404
+						add_state_core=406
+						transfer_state=405
+						transfer_state=1041
+						transfer_state=1042
+						transfer_state=585
+						transfer_state=1040
+						transfer_state=1039
+						transfer_state=849
+						transfer_state=1037
+						transfer_state=584
+						transfer_state=850
+						transfer_state=851
+						transfer_state=1038
+						transfer_state=840
+						transfer_state=742
+						transfer_state=852
+						transfer_state=1043
+						transfer_state=842
+						transfer_state=586
+					}
+					set_capital = {
+						state = 405
+					}
+				}
+			}
+		}
+	}
+	POL_form_xinjiang = {
+ 	 	icon = GFX_icon_poland
+ 	 	fire_only_once = yes 
+ 	 	visible = {
+			OR = {
+				POL = {
+					owns_state = 617
+				}
+				UKR = {
+					owns_state = 617
+				}
+				BLR = {
+					owns_state = 617
+				}
+				LIT = {
+					owns_state = 617
+				}
+			}
+ 	 	}
+ 	 	ai_will_do = {
+ 	 	 	factor = 100
+ 	 	}
+ 	 	remove_effect = {
+			SIK = {
+ 	 	 	 	transfer_state = 794 
+ 	 	 	 	transfer_state = 287 
+ 	 	 	 	transfer_state = 617 
+ 	 	 	 	transfer_state = 760 
+ 	 	 	 	transfer_state = 759 
+ 	 	 	 	transfer_state = 935 
+ 	 	 	 	transfer_state = 843 
+ 	 	 	 	transfer_state = 619
+				transfer_state = 654
+				transfer_state = 898
+				transfer_state = 838
+				transfer_state = 961
+				add_state_core = 654
+				add_state_core = 898
+				add_state_core = 838
+				add_state_core = 961
+ 	 	 	 	add_state_core = 794 
+ 	 	 	 	add_state_core = 287 
+ 	 	 	 	add_state_core = 617 
+ 	 	 	 	add_state_core = 760 
+ 	 	 	 	add_state_core = 759 
+ 	 	 	 	add_state_core = 935 
+ 	 	 	 	add_state_core = 843 
+ 	 	 	 	add_state_core = 619
+ 	 	 	}
+ 	 	 	SIK = {
+ 	 	 	 	drop_cosmetic_tag = yes
+		 	 	set_cosmetic_tag = SIK_RUS
+ 	 	 	 	set_politics = {
+			 		ruling_party = despotism
+			 		elections_allowed = no
+			 	}
+ 	 	 	 	promote_character = SIK_sheng_shicai
+ 	 	 	}
+		}
+ 	}
+	POL_mongolia = {
+		icon = GFX_icon_poland
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 1000
+		}
+		visible = {
+			OR = {
+				POL = {
+					owns_state = 330
+				}
+				UKR = {
+					owns_state = 330
+				}
+				BLR = {
+					owns_state = 330
+				}
+				LIT = {
+					owns_state = 330
+				}
+			}
+			SIB = {
+				exists = yes
+			}
+		}
+		available={
+			OR = {
+				POL = {
+					owns_state = 330
+				}
+				UKR = {
+					owns_state = 330
+				}
+				BLR = {
+					owns_state = 330
+				}
+				LIT = {
+					owns_state = 330
+				}
+			}
+		}
+		remove_effect = {
+			MNO = {
+				load_focus_tree = generic_focus
+				set_politics = {
+				ruling_party = despotism
+					
+				}
+				promote_character = MNO_demchugdongrub
+				drop_cosmetic_tag = yes
+				set_cosmetic_tag = MNO_intermarium
+				add_ideas = { 
+					MNO_punishment 
+					POL_intermarium_observer
+				}
+				hidden_effect = {
+				add_state_core = 962
+				add_state_core = 915
+				add_state_core = 1149
+				add_state_core = 330
+				add_state_core = 1151
+				add_state_core = 1150
+				add_state_core = 914
+				add_state_core = 612
+				transfer_state = 962
+				transfer_state = 915
+				transfer_state = 1149
+				transfer_state = 330
+				transfer_state = 1151
+				transfer_state = 1150
+				transfer_state = 914
+				transfer_state = 612
+				}
+			}
+			ALT = {
+				load_focus_tree = generic_focus
+				drop_cosmetic_tag = yes
+				add_ideas = {
+					ALT_sich
+					POL_intermarium_observer
+				}
+				set_politics = {
+				ruling_party = conservatism
+					
+				}
+				promote_character = ALT_aleksandr_kaygorodov
+				set_cosmetic_tag = ALT_intermarium
+				hidden_effect = {
+					remove_dynamic_modifier = { modifier = second_smuta }
+					remove_ideas = {
+					ALT_prophecies
+					ALT_national_church
+					ALT_conservativesocialism
+					ALT_conservativesocialism_1
+					ALT_landreform
+					ALT_democracytradition
+					ALT_harmony_karakorum
+					ALT_destroy_superstition
+					ALT_socialist_synarchy
+					ALT_hyperborea
+					ALT_secret_priests
+					ALT_universal_rythm
+					ALT_shamanism
+					ALT_red_star_tantra
+					ALT_gold_science
+					ALT_gold_science_1
+					ALT_occult
+					ALT_soul_engineer
+					ALT_agartha_calling
+					ALT_OGPU
+					}
+				}
+				hidden_effect = {
+				add_state_core = 793
+				add_state_core = 618
+				add_state_core = 838
+				add_state_core = 654
+				add_state_core = 898
+				transfer_state = 793
+				transfer_state = 618
+				transfer_state = 838
+				transfer_state = 654
+				transfer_state = 898
+				}
+			}
+			TAN = {
+				drop_cosmetic_tag = yes
+				load_focus_tree = generic_focus
+				set_politics = {
+					ruling_party = revisionist_socialism
+					
+				}
+				add_ideas = {
+					TAN_theocracy
+					POL_intermarium_observer
+				}
+				hidden_effect = {
+					remove_dynamic_modifier = { modifier = second_smuta }
+					remove_ideas = {
+					TAN_religious_tensions
+					TAN_religious_tensions2
+					TAN_religious_tensions3
+					TAN_guerilla_army
+					TAN_guerilla_army2
+					TAN_guerilla_army3
+					TAN_eurasian_army
+					TAN_divided_tribes
+					TAN_divided_tribes2
+					TAN_industrial_dinosaur
+					TAN_industrial_dinosaur2
+					TAN_industrial_dinosaur3
+					TAN_welcome_all
+					TAN_synod
+					TAN_synod2
+					TAN_synod3
+					TAN_Barons_Men
+					TAN_Barons_Men2
+					TAN_Barons_Men3
+					TAN_Mahakala_Path
+					TAN_Mahakala_Path2
+					TAN_Uyighur_defectors
+					TAN_Propaganda
+					TAN_Mongol_Training
+					TAN_Russian_Banners
+					TAN_express
+					}
+				}
+				set_cosmetic_tag = TAN_intermarium
+				hidden_effect = {
+				every_state = {
+					limit = {
+						is_core_of = TAN
+					}
+					remove_core_of = TAN
+				}
+				add_state_core = 329
+				add_state_core = 961
+				transfer_state = 329 
+				transfer_state = 961
+				}
+			}
+		}
+	}
+	POL_siberia = {
+		icon = GFX_icon_poland
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 1000
+		}
+		visible = {
+			OR = {
+				POL = {
+					owns_state = 570
+				}
+				UKR = {
+					owns_state = 570
+				}
+				BLR = {
+					owns_state = 570
+				}
+				LIT = {
+					owns_state = 570
+				}
+			}
+		}
+		available={
+			OR = {
+				POL = {
+					owns_state = 570
+				}
+				UKR = {
+					owns_state = 570
+				}
+				BLR = {
+					owns_state = 570
+				}
+				LIT = {
+					owns_state = 570
+				}
+			}
+		}
+		remove_effect = {
+			SIB={
+				drop_cosmetic_tag = yes
+				load_focus_tree = generic_focus
+				set_politics = {
+				ruling_party = liberalism
+				
+				}
+				hidden_effect = {
+					remove_dynamic_modifier = { modifier = second_smuta }
+					remove_ideas = {
+					RUS_warlord_indifference
+					SIB_minorities_recognized
+					SIB_member_of_the_eu_1
+					SIB_member_of_the_eu_2
+					SIB_swiss
+					SIB_oldfrnc
+					SIB_transformation
+					SIB_russification_by_education
+					SIB_workethic
+					SIB_workethic1
+					SIB_workethic2
+					SIB_havenfordrozd
+					SIB_synchronization_army
+					SIB_synchronization_army_1
+					SIB_synchronization_army_2
+					SIB_russian_militarism
+					SIB_population_growth
+					SIB_society
+					SIB_meritocratic_leadership
+					SIB_society1
+					SIB_society2
+					SIB_solidaristcommissars
+					SIB_solidaristcommissars1
+					SIB_russian_progressivism
+					SIB_SVSNK
+					SIB_SVSNK1
+					SIB_syncretisation_people
+					SIB_solidarism_idea
+					SIB_headquarters
+					}
+				}
+				set_cosmetic_tag = SIB_uni_united_states_of_siberia
+				promote_character = SIB_pepelyayev
+				add_ideas = {
+					SIB_one
+					POL_intermarium_observer
+				}
+				hidden_effect = {
+				add_state_core=653
+				add_state_core=579
+				add_state_core=580
+				add_state_core=403
+				add_state_core=578
+				add_state_core=577
+				add_state_core=576
+				add_state_core = 1213
+				add_state_core = 564
+				add_state_core = 563
+				add_state_core=568
+				add_state_core=567
+				add_state_core=566
+				add_state_core=964
+				add_state_core=565
+				add_state_core=575
+				add_state_core=516
+				add_state_core=40
+				add_state_core=570
+				add_state_core=569
+				transfer_state=653
+				transfer_state=579
+				transfer_state=580
+				transfer_state=403
+				transfer_state=578
+				transfer_state=577
+				transfer_state=576
+				transfer_state = 1213
+				transfer_state = 564
+				transfer_state = 563
+				transfer_state=568
+				transfer_state=567
+				transfer_state=566
+				transfer_state=964
+				transfer_state=565
+				transfer_state=575
+				transfer_state=516
+				transfer_state=40
+				transfer_state=570
+				transfer_state=569
+				}
+			}
+			add_to_faction = SIB
+		}
+	}
+	POL_caucasus = {
+		icon = GFX_icon_poland
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 1000
+		}
+		visible = {
+			OR = {
+				POL = {
+					owns_state = 231
+				}
+				UKR = {
+					owns_state = 231
+				}
+				BLR = {
+					owns_state = 231
+				}
+				LIT = {
+					owns_state = 231
+				}
+			}
+		}
+		available={
+			OR = {
+				POL = {
+					owns_state = 231
+				}
+				UKR = {
+					owns_state = 231
+				}
+				BLR = {
+					owns_state = 231
+				}
+				LIT = {
+					owns_state = 231
+				}
+			}
+		}
+		remove_effect = {
+			add_to_faction = GEO
+			GEO = {
+				add_ideas = {
+					GEO_uuu
+				}
+				set_politics = {
+					ruling_party = accelerationism
+					
+				}
+			}
+			ARM = {
+				set_politics = {
+					ruling_party = reactionism
+					
+				}
+				add_ideas = {
+					ARM_nzdeh
+					POL_intermarium_observer
+				}
+			}
+			hidden_effect = {
+				GEO = {
+				load_focus_tree = generic_focus
+				add_state_core = 1056
+				add_state_core = 1138 
+				add_state_core = 1136 
+				add_state_core = 1141 
+				add_state_core = 231 
+				add_state_core = 1139 
+				transfer_state = 1056
+				transfer_state = 1138 
+				transfer_state = 1136 
+				transfer_state = 1141 
+				transfer_state = 231 
+				transfer_state = 1139 
+			}
+			ARM = {
+				load_focus_tree = generic_focus
+				add_state_core = 1140 
+				add_state_core = 890 
+				add_state_core = 891 
+				add_state_core = 230 
+				add_state_core = 1134 
+				add_state_core = 1133
+				add_state_core = 1135 
+				add_state_core = 353
+				add_state_core = 955
+				transfer_state = 955 
+				transfer_state = 1140 
+				transfer_state = 890 
+				transfer_state = 891 
+				transfer_state = 230 
+				transfer_state = 1134 
+				transfer_state = 1133
+				transfer_state = 1135 
+				transfer_state = 353
+			}
+			AZR={
+				load_focus_tree = generic_focus
+				add_state_core = 229 
+				add_state_core = 1054
+				add_state_core = 960
+				transfer_state = 229 
+				transfer_state = 1054
+				transfer_state = 960
+				add_ideas = POL_intermarium_observer
+			}
+			}
+		}
+	}
+	POL_zheltorus_and_yakutia = {
+		icon = GFX_icon_poland
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 1000
+		}
+		visible = {
+			OR = {
+				POL = {
+					owns_state = 978
+				}
+				UKR = {
+					owns_state = 978
+				}
+				BLR = {
+					owns_state = 978
+				}
+				LIT = {
+					owns_state = 978
+				}
+			}
+		}
+		available={
+			OR = {
+				POL = {
+					owns_state = 978
+				}
+				UKR = {
+					owns_state = 978
+				}
+				BLR = {
+					owns_state = 978
+				}
+				LIT = {
+					owns_state = 978
+				}
+			}
+		}
+		remove_effect = {
+			KCK={
+				load_focus_tree = generic_focus
+				drop_cosmetic_tag = yes
+				set_politics = {
+				ruling_party = revisionist_socialism
+				
+				}
+				set_cosmetic_tag = "KCK_ksenofontov"
+				hidden_effect = {
+					remove_dynamic_modifier = { modifier = second_smuta }
+					remove_ideas = {
+					RUS_warlord_indifference
+					KCK_czech_legion
+					KCK_vox_populi
+					KCK_vox_militum
+					KCK_vox_scholasticum
+					KCK_cold_comforts
+					KCK_kolyma_gold_prospectors
+					KCK_kolyma_gold_prospectors_1
+					KCK_vox_vozhd
+					KCK_remnants_of_the_pacific_fleet
+					KCK_remnants_of_the_pacific_fleet_2
+					KCK_fortification_efforts
+					KCK_coastal_guard_volunteers
+					KCK_remnants_of_the_pacific_fleet_3
+					KCK_represent_church
+					KCK_corporatist_republic
+					KCK_corporatist_republic_1
+					KCK_all_fair
+					KCK_one_goal
+					KCK_rome_iv_back_for_more
+					KCK_glory_to_slavia
+					KCK_greater_east_asian_co_prosperity_sphere
+					}
+					add_ideas = { 
+						KCK_dreamers
+						POL_intermarium_observer
+					}
+				}
+				hidden_effect = {
+				add_state_core=574
+				add_state_core=1036
+				add_state_core=644
+				add_state_core=562
+				add_state_core=637
+				transfer_state=574
+				transfer_state=1036
+				transfer_state=644
+				transfer_state=562
+				transfer_state=637
+				}
+			}
+			hidden_effect = {
+				TSY = {
+				add_state_core = 408
+				transfer_state = 408
+			}
+			URA = {
+				add_state_core = 761
+				add_state_core = 912
+				add_state_core = 714
+				add_state_core = 1202
+				add_state_core = 657
+				add_state_core = 561
+				add_state_core = 560
+				add_state_core = 409
+				add_state_core = 930
+				add_state_core = 810
+				add_state_core = 881
+				add_state_core = 978
+				add_state_core = 717
+				transfer_state = 761
+				transfer_state = 912
+				transfer_state = 714
+				transfer_state = 1202
+				transfer_state = 657
+				transfer_state = 561
+				transfer_state = 560
+				transfer_state = 409
+				transfer_state = 930
+				transfer_state = 810
+				transfer_state = 881
+				transfer_state = 978
+				transfer_state = 717
+				set_country_flag = warschauer_vertrag
+				WP_add_member = yes
+			}
+			}
+			add_to_faction=URA
+			add_to_faction=TSY
+		}
+	}
+}

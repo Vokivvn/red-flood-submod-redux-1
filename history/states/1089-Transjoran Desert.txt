@@ -1,0 +1,23 @@
+state={
+	id=1089
+	name="STATE_1089" #Transjordan Desert
+	manpower = 21000
+	
+	state_category = pastoral
+
+	history={
+		owner = SYR
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = SYR
+		add_claim_by = SNP
+		victory_points = {
+			7001 1
+		}
+	}
+
+	provinces={
+		4574 4591 7001 1544 4440
+	}
+}

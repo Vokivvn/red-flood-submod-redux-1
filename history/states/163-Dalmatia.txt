@@ -1,0 +1,29 @@
+state=
+{
+	id=163
+	name="STATE_163" #Zara
+	manpower = 707423
+
+	state_category = large_town
+
+	history={
+		owner = FIU
+		victory_points = {
+			3943 10
+		}
+		buildings = {
+			infrastructure = 3
+			3943 = {
+				naval_base = 1
+			}
+			industrial_complex = 2
+		}
+		add_core_of = ITA
+		add_core_of = FIU
+		add_core_of = YUG
+
+	}
+	provinces={
+		3943 11901 591 13619
+	}
+}

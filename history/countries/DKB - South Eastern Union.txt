@@ -1,0 +1,144 @@
+﻿capital = 234
+set_research_slots = 3
+set_convoys = 175
+set_stability = 0.5
+
+oob = "DKB"
+set_air_oob = "DKB_air"
+set_naval_oob = "DKB_naval"
+
+set_country_flag = is_russian_warlord
+
+add_ideas = {
+	RUS_warlord_indifference
+	limited_conscription
+	export_focus
+	civilian_economy
+}
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1
+	tech_recon = 1
+	tech_engineers = 1
+	tech_trucks =1
+	motorised_infantry = 1
+	gw_artillery = 1
+}
+if = {
+	limit = { NOT = { has_dlc = "No Step Back" } }
+	set_technology = {
+		gwtank = 1
+	}
+}
+if = {
+	limit = { has_dlc = "No Step Back" }
+	set_technology = {
+		gwtank_chassis = 1
+		engine_tech_1 = 1
+	}
+}
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	set_technology = {
+		early_submarine = 1
+		basic_submarine = 1
+		early_destroyer = 1
+		early_light_cruiser = 1
+		early_heavy_cruiser = 1
+		early_battleship = 1
+		early_battlecruiser = 1
+		transport = 1
+	}
+}
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		early_ship_hull_light = 1
+		basic_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		early_ship_hull_cruiser = 1
+		early_ship_hull_heavy = 1
+		basic_battery = 1
+		basic_light_battery = 1
+		basic_torpedo = 1
+		basic_depth_charges = 1
+		basic_light_battery = 1
+		mtg_transport = 1
+	}
+}
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+	set_technology = {
+		iw_small_airframe = 1
+		aa_lmg = 1
+		aa_cannon_1 = 1
+		early_bombs = 1
+		engines_1 = 1
+	}
+}
+if = {
+	limit = { NOT = { has_dlc = "By Blood Alone" } }
+	set_technology = {
+		early_fighter = 1
+		CAS1 = 1
+	}
+}
+
+set_politics = {
+	ruling_party = despotism
+	last_election = "1933.10.25"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	vanguard_socialism = 0
+	popular_socialism = 0
+	anarchism = 0
+	revisionist_socialism = 0
+	progressivism = 0
+	liberalism = 5
+	conservatism = 10
+	right_authoritarianism = 25
+	despotism = 30
+	reactionism = 10
+	accelerationism = 20
+}
+
+recruit_character = DKB_alexei_kaledin
+recruit_character = DKB_mikhail_grabbe
+recruit_character = DKB_mykola_ryabovil
+recruit_character = DKB_pavel_gorgulov
+recruit_character = DKB_pyotr_polovtsov
+recruit_character = DKB_pshemakho_kotsev
+recruit_character = DKB_andrey_shkuro
+recruit_character = DKB_vladimir_tolstov
+recruit_character = DKB_oka_gorogovikov
+recruit_character = DKB_aleksey_avtonomov
+recruit_character = DKB_sergei_toporkov_astrakhansky
+recruit_character = DKB_sergei_toporkov_tsaritsynsky
+recruit_character = DKB_pyotr_krasnov
+recruit_character = DKB_georgy_bicherakhov
+recruit_character = DKB_mykhail_sablin
+recruit_character = DKB_dmitriy_nenyukov
+recruit_character = DKB_luka_bych
+recruit_character = DKB_afrikan_bogayevsky
+recruit_character = DKB_fedir_shcherbyna
+recruit_character = DKB_fyodor_bekovich_cherkassky
+recruit_character = DKB_konstantin_chkheidze
+recruit_character = DKB_vasyl_ivanis
+recruit_character = DKB_pavel_kudinov
+recruit_character = DKB_galina_kuznetsova
+recruit_character = DKB_oleksandr_filimonov
+recruit_character = DKB_pyotr_popov
+recruit_character = DKB_bora_berduko
+recruit_character = DKB_mykola_bukretov
+recruit_character = DKB_svyatoslav_denisov
+recruit_character = DKB_vladimir_sidorin
+recruit_character = DKB_aleksandr_utin
+recruit_character = DKB_vasily_bibikov
+recruit_character = DKB_Anatol_Furst_von_Lieven

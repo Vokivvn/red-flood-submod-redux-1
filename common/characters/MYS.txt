@@ -1,0 +1,34 @@
+characters = {
+	MYS_maharaja_krishnaraja_wadiyar_IV = {
+		name = "Krishnaraja Wadiyar IV"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MYS/Portrait_Maharaja_Krishnaja_Wadiyar_IV.png"
+			}
+		}
+		country_leader = {
+			ideology = classical_liberalism
+			expire = "1965.1.1.1"
+			traits = { popular_figurehead }
+		}
+	}
+	MYS_collective_leadership = {
+		name = "Collective Leadership"
+		country_leader = {
+			ideology = social_anarchism
+			expire = "1965.1.1.1"
+		}
+	}
+	MYS_mirza_ismail = {
+		name = "Mirza Ismail"
+		
+	}
+	MYS_Erode_Venkatappa_Ramasamy = {
+		name = "Erode Venkatappa Ramasamy"
+		
+	}
+	MYS_Potti_Sreeramulu = {
+		name = "Potti Sreeramulu"
+		
+	}
+}

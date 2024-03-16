@@ -1,0 +1,42 @@
+﻿characters = {
+	TUR_Ali_Kemal = {
+		name = "Ali Kemal Pasha"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/TUR/Portrait_TUR_Ali_Kemal.png"
+			}
+		}
+		country_leader = {
+			ideology = classical_liberalism
+			expire = "1965.1.1.1"
+		}
+	}
+	TUR_Adivar = {
+		name = "Halide Edib"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/TUR/Portrait_TUR_Adivar_ProvGov.png"
+			}
+		}
+		country_leader = {
+			ideology = provisional_government
+			expire = "1965.1.1.1"
+		}
+	}
+	TUR_Sahabetti = {
+		name = "Cenap Şahabettin"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/TUR/Portrait_TUR_Sahabetti.png"
+			}
+		}
+	}
+	TUR_Rallis = {
+		name = "Ionnis Rallis"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/TUR/Portrait_TUR_Rallis.png"
+			}
+		}
+	}
+}

@@ -1,0 +1,81 @@
+﻿l_english:
+#COUNTRY NAME#
+MYS_vanguard_socialism:0 "Mysore Commune"
+MYS_vanguard_socialism_DEF:0 "Mysore Commune"
+MYS_vanguard_socialism_ADJ:0 "Mysore"
+
+MYS_popular_socialism:0 "Mysore Commune"
+MYS_popular_socialism_DEF:0 "Mysore Commune"
+MYS_popular_socialism_ADJ:0 "Mysore"
+
+MYS_anarchism:0 "Mysore Commune"
+MYS_anarchism_DEF:0 "Mysore Commune"
+MYS_anarchism_ADJ:0 "Mysore"
+
+MYS_revisionist_socialism:0 "Republic of Mysore"
+MYS_revisionist_socialism_DEF:0 "People's Republic of Mysore"
+MYS_revisionist_socialism_ADJ:0 "Mysore"
+
+MYS_progressivism:0 "Republic of Mysore"
+MYS_progressivism_DEF:0 "Republic of Mysore"
+MYS_progressivism_ADJ:0 "Mysore"
+
+MYS_placeholderism:0 "Mysore"
+MYS_placeholderism_DEF:0 "Mysore"
+MYS_placeholderism_ADJ:0 "Mysore"
+
+MYS_liberalism:0 "Kingdom of Mysore"
+MYS_liberalism_DEF:0 "Kingdom of Mysore"
+MYS_liberalism_ADJ:0 "Mysore"
+
+MYS_conservatism:0 "Republic of Mysore"
+MYS_conservatism_DEF:0 "Republic of Mysore"
+MYS_conservatism_ADJ:0 "Mysore"
+
+MYS_right_authoritarianism:0 "Republic of Mysore"
+MYS_right_authoritarianism_DEF:0 "Republic of Mysore"
+MYS_right_authoritarianism_ADJ:0 "Mysore"
+
+MYS_despotism:0 "Republic of Mysore"
+MYS_despotism_DEF:0 "Republic of Mysore"
+MYS_despotism_ADJ:0 "Mysore"
+
+MYS_reactionism:0 "Republic of Mysore"
+MYS_reactionism_DEF:0 "Republic of Mysore"
+MYS_reactionism_ADJ:0 "Mysore"
+
+MYS_accelerationism:0 "Union of Mysore"
+MYS_accelerationism_DEF:0 "Progress Union of Mysore"
+MYS_accelerationism_ADJ:0 "Mysore"
+#PARTIES#
+MYS_vanguard_socialism_party:0 "CPoI - L"
+MYS_popular_socialism_party:0 "CPoI - S"
+MYS_anarchism_party:0 "ANF"
+MYS_revisionist_socialism_party:0 "CSP"
+MYS_progressivism_party:0 "INC - S"
+MYS_liberalism_party:0 "Royal Council"
+MYS_conservatism_party:0 "AIHGA (AHBM) Moderates"
+MYS_right_authoritarianism_party:0 "AIHGA (ABHM) Hardliners"
+MYS_despotism_party:0 "NVO (RSS) Constitutionalists"
+MYS_reactionism_party:0 "NVO (RSS) Radicals"
+MYS_accelerationism_party:0 "UfP"
+
+MYS_vanguard_socialism_party_long:0 "Communist Party of India - Leninist"
+MYS_popular_socialism_party_long:0 "Communist Party of India - Spartakist"
+MYS_anarchism_party_long:0 "Anarchist National Federation"
+MYS_revisionist_socialism_party_long:0 "Congress Socialist Party"
+MYS_progressivism_party_long:0 "Indian National Congress - Socialist"
+MYS_liberalism_party_long:0 "Council of the Diwan"
+MYS_conservatism_party_long:0 "All-India Hindu Grand-Assembly - Moderates"
+MYS_right_authoritarianism_party_long:0 "All-India Hindu Grand-Assembly - Hardliners"
+MYS_despotism_party_long:0 "National Volunteer Organisation - Constitutionalists"
+MYS_reactionism_party_long:0 "National Volunteer Organisation - Radicals"
+MYS_accelerationism_party_long:0 "Union for Progress"
+#LEADER DESCRITIONS#
+#IDEAS#
+MYS_prospering_state:0 "Prosperous State"
+MYS_refugee_crisis:0 "Refugee Crisis"
+MYS_refuge_of_the_elites:0 "Refuge of the Princes"
+#CUSTOM TOOLTIPS AND FLAGS#
+#DECISIONS (1.5 Update)#
+#FOCUSES#

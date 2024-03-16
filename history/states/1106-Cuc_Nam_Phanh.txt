@@ -1,0 +1,24 @@
+state={
+	id = 1106
+	name = "STATE_1106"
+
+	history={
+		victory_points = {
+			4341 4
+		}
+		buildings = {
+			infrastructure = 1
+
+		}
+		add_core_of = DAI
+		owner = DAI
+		
+	}
+
+	provinces = {
+		4284 4341 7331
+	}
+	manpower =  607378 #Update from ECB estimate 
+	buildings_max_level_factor = 1.00
+	state_category = town
+}

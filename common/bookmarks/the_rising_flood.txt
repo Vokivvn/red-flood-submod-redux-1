@@ -1,0 +1,309 @@
+bookmarks = {
+	bookmark = {
+		name = "RISING_FLOOD_NAME"
+		desc = "RISING_FLOOD_DESC"
+		date = 1936.1.1.12
+		picture = "GFX_select_date_1936"
+		default_country = "GER"
+		default = yes
+
+		"RUS"={
+			history = "KOLCHAK_RUSSIAN_DESC"
+			ideology = liberalism
+			ideas = {
+				victor_in_the_velikaya_voyna
+				monopolized_industry
+				unstable_political_system
+			}
+			focuses = {
+				RUS_kolchak_continues
+				RUS_revise_policy
+				RUS_alt_black_bloc
+			}
+		}
+		"GER"={
+			history = "DEUTSCHE_RATEREPUBLIK_DESC"
+			ideology = popular_socialism
+			ideas = {
+				GER_spectre_communism
+				GER_democracy_of_proletariat
+				GER_backward_south
+			}
+			focuses = {
+				GER_foundthesrkmb
+				GER_kpdvictory
+				GER_spreadtherevolution
+			}
+		}
+		"FRA"={
+			history = "FRANCE_FUTURIST_DESC"
+			ideology = accelerationism
+			ideas = {
+				FRA_divided_nation
+				FRA_terre_futur
+				FRA_abolish_army
+			}
+			focuses = {
+				FRA_futurist_paradise
+				FRA_hurray_for_greenshirts
+				FRA_escadron_for_all
+			}
+		}
+		"ENG"={
+			history = "UNITED_KINGDOM_DESC"
+			ideology = conservatism
+			ideas = {
+				ENG_economic_catastrophe
+				ENG_divided_nation
+				ENG_imperial_eclipse
+			}
+			focuses = {
+				ENG_commonwealth_war_games
+				ENG_Snap_Election
+				ENG_Britain_At_War
+			}
+		}
+		"ITA"={
+			history = "ITALIAN_EMPIRE_DESC"
+			ideology = liberalism
+			ideas = {
+				ITA_bulwark_of_democracy
+				ITA_pudi_hegemony
+				ITA_the_libyan_war
+			}
+			focuses = {
+				ITA_christian_socialism
+				ITA_partido_radical
+				ITA_forgone_conclusion
+			}
+		}
+		"USA"={
+			history = "UNITED_STATES_DESC"
+			ideology = liberalism
+			ideas = {
+				USA_land_of_the_free
+				USA_great_depression
+				USA_organized_crime
+			}
+			focuses = {
+				USA_letthecampaignbegin
+				USA_take_out_al_capone
+				USA_enforce_monore_doctrine
+			}
+		}
+		"POL"={
+			history = "POL_GATHERING_STORM_DESC"
+			ideology = accelerationism
+			ideas = {
+				POL_heavy_hand_naczelnik
+				POL_explosive_mix
+				POL_dreamofzadruga
+			}
+			focuses = {
+				POL_expand_political_freedom
+				POL_national_collective
+				POL_cult_marshal
+			}
+		}
+		"AUS"={
+			minor = yes
+			history = "AUS_DESC_MENU"
+			ideology = conservatism
+			ideas = {
+			    AUS_red_threat
+				AUS_nationalist_rumblings
+				AUS_ongoing_federalization
+			}
+			focuses = {
+				AUS_empire_will_never_die
+				AUS_servus_antideutsche
+				AUS_economist_coup
+			}
+		}
+		"FIU"={
+			minor = yes
+			history = "FIU_DESC_MENU"
+			ideology = accelerationism
+			ideas = {
+				FIU_the_endeavour
+				FIU_the_slump
+				FIU_dead_sprint
+			}
+			focuses = {
+				FIU_Maintain_The_Experiments
+				FIU_Cultural_Rejuvenation
+				FIU_Strength_Through_Unity
+			}
+		}
+		"BRA"={
+			minor = yes
+			history = "BRA_DESC_MENU"
+			ideology = vanguard_socialism
+			ideas = {
+				BRA_oligarchic_madness
+				BRA_local_army
+				BRA_revolutionary_scars
+			}
+			focuses = {
+				BRA_german_ideal
+				BRA_morning_after
+				BRA_mission_love
+			}
+		}
+		"ARM"={
+			minor = yes
+			history = "ARM_DESC_MENU"
+			ideology = progressivism
+			ideas = {
+				ARM_thegreatbattle
+			}
+			focuses = {
+				ARM_speed
+				ARM_interdictturkishtrade
+				ARM_agressiveindustrialization
+			}
+		}
+		"BLR"={
+			minor = yes
+			history = "BLR_DESC_MENU"
+			ideology = despotism
+			ideas = {
+				BLR_free_press
+				BLR_socialist_black_market
+				BLR_reactionary_beacon
+			}
+			focuses = {
+				BLR_power_struggle
+				BLR_belarussian_democracy
+				BLR_manifesto
+			}
+		}
+		"UKR"={
+			minor = yes
+			history = "UKR_DESC_MENU"
+			ideology = progressivism
+			ideas = {
+				UKR_pure_ukrainian_race
+				UKR_power_and_beauty
+				UKR_cracked_eggs1
+			}
+			focuses = {
+				UKR_the_whirr_of_solar_machines
+				UKR_crusade_for_the_city_of_sun
+				UKR_under_the_lead_of_providnik
+			}
+		}
+		"YUG"={
+			minor = yes
+			history = "YUG_DESC_MENU"
+			ideology = accelerationism
+			ideas = {
+				YUG_cult_of_saints
+				YUG_techno_slavia
+				YUG_barbarian_might2
+			}
+			focuses = {
+				YUG_godandslavs
+				YUG_technoslavia
+				YUG_balkanhyperborea
+			}
+		}
+		"BUL"={
+			minor = yes
+			history = "BUL_DESC_MENU"
+			ideology = revisionist_socialism
+			ideas = {
+				BUL_watchful_eye
+				BUL_lucky_clover
+				BUL_worn_luck
+			}
+			focuses = {
+				BUL_last_skirmish
+				BUL_trees_and_beasts
+				BUL_united_in_brotherhood
+			}
+		}
+		"FIN"={
+			minor = yes
+			history = "FIN_DESC_MENU"
+			ideology = despotism
+			ideas = {
+				FIN_societyofthoth
+				FIN_monarchistsisu
+				FIN_absolutism
+			}
+			focuses = {
+				FIN_storm_in_central_russia
+				FIN_carve_out_a_land_just_for_finns
+				FIN_sail_to_our_ancestral_lands
+			}
+		}
+		"KAV"={
+			minor = yes
+			history = "KAV_DESC_MENU"
+			ideology = accelerationism
+			ideas = {
+				KAV_zaum
+				KAV_boyars
+				KAV_knights2
+			}
+			focuses = {
+				KAV_war_against_god
+				KAV_a_jump_beyond_the_mind
+				KAV_father_stalin
+			}
+		}
+		"DKB"={
+			minor = yes
+			history = "DKB_DESC_MENU"
+			ideology = despotism
+			ideas = {
+				DKB_ukrainian_education2
+				DKB_russification
+				DKB_slavic_scythian_supremacy
+			}
+			focuses = {
+				DKB_return_to_sich
+				DKB_our_russian_brothers
+				DKB_rebirth_of_great_scythia
+			}
+		}
+		"WRU"={
+			minor = yes
+			history = "WRU_DESC_MENU"
+			ideology = despotism
+			ideas = {
+				WRU_victorious_armies_of_avalov
+				WRU_neue_ostsiedlung_2
+				WRT_permanent_russian_colonization
+			}
+			focuses = {
+				WRU_retvrn_rights_to_german_aristocracy
+				WRU_invite_BORT
+				WRU_russophiles_in_gov
+			}
+		}
+		"ORE"={
+			minor = yes
+			history = "ORE_DESC_MENU"
+			ideology = despotism
+			ideas = {
+				ORE_continuous_russification
+				ORE_eurasian_identity
+				ORE_kirghiz_nation
+			}
+			focuses = {
+				Orenburg_eurasian_ideocracy
+				Orenburg_dutov_asserts_dominance
+				ORE_rasputins_conspiracy
+			}
+		}
+        "---"={
+			history = "OTHER_THE_RISING_FLOOD_DESC"
+		}
+		#This is a compulsory according to vanilla file
+		effect = {
+			randomize_weather = 22345
+		}
+	}
+}

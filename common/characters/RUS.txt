@@ -1,0 +1,1538 @@
+characters = {
+	RUS_alexander_kolchak = {
+		name = "Aleksandr Kolchak"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/RUS/Portrait_RUS_Alexander_Kolchak.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_KOLCHAK_DESC"
+			ideology = oligarchy
+			expire = "1965.1.1.1"
+		}
+	}
+	RUS_alexander_kolchak_desp = {
+		name = "Aleksandr Kolchak"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/RUS/Portrait_RUS_Alexander_Kolchak_despotic.png"
+			}
+		}
+		country_leader = {
+			ideology = military_dictatorship
+			expire = "1965.1.1.1"
+		}
+	}
+	RUS_vasily_shulgin = {
+		name = "Vasily Shulgin"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/RUS/Vasily_Shulgin.png"
+			}
+		}
+		country_leader = {
+			ideology = national_conservatism
+			expire = "1965.1.1.1"
+		}
+	}
+	RUS_drozd = {
+		name = "Mikhail Drozdovsky"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/SRU/Portrait_SRU_Mikhail_Drozdovsky.png"
+				small ="gfx/interface/ministers/RUS/RUS_Mikhail_Drozdovsky_carm.png"
+			}
+		}
+		country_leader = {
+			ideology = military_dictatorship
+			expire = "1965.1.1.1"
+		}
+		advisor = { 
+			idea_token = RUS_drozd_achi
+			slot = army_chief
+			cost = 80
+			available = { 
+				OR = { 
+					has_government = reactionism
+					has_government = despotism
+				}
+			}
+			traits = { 
+				carm_armoured_spearhead_doctrine
+			}
+		}
+	}
+	RUS_mikhail_diterikhs = {
+		name = "Mikhail Diterikhs"
+		portraits = { 
+			civilian = { 
+				large ="gfx/leaders/RUS/Portrait_RUS_Mikhail_Diterikhs.png"
+				small ="gfx/interface/ministers/RUS/RUS_Mikhail_Diterikhs.png"
+			}
+		}
+		country_leader = { 
+			ideology = religious_fundamentalism
+			expire = "1965.1.1.1"
+		}
+		advisor = { 
+			idea_token = RUS_mikhail_diterikhs_intel
+			slot = head_of_intel
+			cost = 80
+			available = { 
+				OR = { 
+					has_government = reactionism
+				}
+			}
+			traits = { 
+				int_dismal_enigma
+			}
+		}
+		advisor = { 
+			idea_token = RUS_mikhail_diterikhs_achi
+			slot = army_chief
+			cost = 80
+			available = { 
+				OR = { 
+					has_government = reactionism
+				}
+			}
+			traits = { 
+				carm_decisive_battle_doctrine
+			}
+		}
+	}
+	RUS_kazembek = {
+		name = "Aleksandr Kazem-Bek"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/RUS/Portrait_Russia_Alexandr_Kazembek.png"
+				small="gfx/interface/ministers/RUS/RUS_Aleksandr_L_Kazembek_hog_acc.png"
+			}
+		}
+		country_leader = {
+			ideology = revolutionary_nationalism
+			expire = "1965.1.1.1"
+		}
+		advisor= {
+			idea_token = RUS_kazembek
+			slot = head_of_government
+			cost = 100
+			available = {
+				OR = {
+					has_government = despotism
+				}
+			}
+			traits = {
+				hog_corporate_suit
+			}
+		}
+	}
+	RUS_alexander_kolchak_reac = {
+		name = "Aleksandr Kolchak"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/RUS/Portrait_RUS_Kolchak_Reac.png"
+			}
+		}
+		country_leader = {
+			ideology = aristocratic_reaction
+			expire = "1965.1.1.1"
+		}
+	}
+	RUS_vselovod_despot = {
+		name = "Vselovod"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/RUS/Vselovod_despot.png"
+			}
+		}
+	}
+	RUS_Shukeyvch = {
+		name = "Roman Shukeyvch"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/RUS/RUS_Shukevich.png"
+			}
+		}
+		country_leader = {
+			ideology = military_dictatorship
+			expire = "1965.1.1.1"
+		}
+	}
+	RUS_anastasia = {
+		name = "Anastasia"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/RUS/Portrait_Russia_Anastasia_Romanova.png"
+			}
+		}
+		country_leader = {
+			ideology = revolutionary_nationalism
+			expire = "1965.1.1.1"
+		}
+	}
+	RUS_vselovod_rwa = {
+		name = "Vselovod"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/RUS/Vselovod_right_auth.png"
+			}
+		}
+	}
+	RUS_vselovod_react = {
+		name = "Vselovod"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/RUS/Vselovod_react.png"
+			}
+		}
+	}
+	RUS_andrei_despot = {
+		name = "Andrei"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/RUS/Andrei_despot.png"
+			}
+		}
+	}
+	RUS_andrei_rwa = {
+		name = "Andrei"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/RUS/Andrei_right_auth.png"
+			}
+		}
+	}
+	RUS_andrei_react = {
+		name = "Andrei"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/RUS/Andrei_react.png"
+			}
+		}
+	}
+	RUS_sergei_despot = {
+		name = "Sergei"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/RUS/Sergei_despot.png"
+			}
+		}
+	}
+	RUS_sergei_rwa = {
+		name = "Sergei"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/RUS/Sergei_right_auth.png"
+			}
+		}
+	}
+	RUS_sergei_react = {
+		name = "Sergei"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/RUS/Sergei_react.png"
+			}
+		}
+	}
+	
+	###Ministers###
+	RUS_alexander_nechvolodov = {
+		name = "Alexander Nechvolodov"
+		portraits = { 
+			army = {
+				small = "gfx/interface/ministers/RUS/RUS_alexander_nechvolodov.png"
+			}
+		}
+		advisor= {
+			idea_token = RUS_alexander_nechvolodov_hog
+			slot = head_of_government
+			cost = 100
+			available = {
+				OR = {
+					has_government = right_authoritarianism
+					has_government = despotism
+				}
+					
+			}
+			traits = {
+				hog_political_protege
+			}
+		}
+		advisor= {
+			idea_token = RUS_alexander_nechvolodov_for
+			slot = foreign_minister
+			cost = 100
+			available = {
+				OR = {
+					has_government = right_authoritarianism
+					has_government = despotism
+				}
+			}
+			traits = {
+				for_ideological_crusader
+			}
+		}
+		
+	}
+	RUS_alexander_guchkov = {
+		name = "Alexander Guchkov"
+		portraits = {
+			civilian= {
+				small = "gfx/interface/ministers/RUS/RUS_alexander_guchkov.png"
+			}
+		}
+		advisor={
+			idea_token = RUS_alexander_guchkov
+			slot = head_of_government
+			cost = 80
+			available = {
+				OR = {
+					has_government = right_authoritarianism
+					has_government = despotism
+				}
+			}
+			traits = {
+				hog_backroom_backstabber
+			}
+		}
+	}
+	SRU_pyotr_balashov = {
+		name = "Pyotr Balashov"
+		portraits = { 
+			civilian = { 
+			   small = "gfx/interface/ministers/RUS/SRU_Pyotr_Balashov_hog.png"
+			}
+		}
+		advisor = {
+			idea_token = SRU_pyotr_balashov
+			slot = head_of_government
+			cost = 80
+			available = {
+				OR = {
+					has_government = despotism
+					has_government = reactionism
+				}
+			}
+			traits = {
+				hog_backroom_backstabber
+			}
+		}
+	}
+	RUS_nikolay_markov = {
+		name = "Nikolay Markov"
+		portraits = { 
+			civilian = { 
+				small = "gfx/interface/ministers/RUS/RUS_Nikolay_Markov_hog.png"
+			}
+		}
+		advisor = { 
+			idea_token = RUS_nikolay_markov
+			slot = head_of_government
+			cost = 80
+			available = { 
+				OR = { 
+					has_government = reactionism
+				}
+			}
+			traits = { 
+				hog_political_protege
+			}
+		}
+	}
+	RUS_vladimir_vostokov = {
+		name = "Vladimir Vostokov"
+		portraits = { 
+			civilian = { 
+				small ="gfx/interface/ministers/RUS/RUS_Vladimir_Vostokov_hog.png"
+			}
+		}
+		advisor = { 
+			idea_token = RUS_vladimir_vostokov
+			slot = head_of_government
+			cost = 80
+			available = { 
+				OR = { 
+					has_government = reactionism
+				}
+			}
+			traits = { 
+				hog_smiling_oilman
+			}
+		}
+	}
+	RUS_vladimir_kappel = {
+		name = "Vladimir Kappel"
+		portraits = { 
+			civilian = { 
+				large ="gfx/leaders/RUS/Vladimir_Kappel.png"
+				small ="gfx/interface/ministers/RUS/RUS_Vladimir_Kappel_hog.png"
+			}
+		}
+		advisor = { 
+			idea_token = RUS_vladimir_kappel_hog
+			slot = head_of_government
+			cost = 80
+			available = { 
+				OR = { 
+					has_government = right_authoritarianism
+				}
+			}
+			traits = { 
+				hog_flamboyant_tough_guy
+			}
+		}
+		advisor = { 
+			idea_token = RUS_vladimir_kappel_int
+			slot = head_of_intel
+			cost = 80
+			available = { 
+				OR = { 
+					has_government = right_authoritarianism
+				}
+			}
+			traits = { 
+				int_technical_specialist
+			}
+		}
+		corps_commander = {
+			traits = {
+				brilliant_strategist
+			}
+			skill = 4
+			attack_skill = 4
+			defense_skill = 4
+			planning_skill = 4
+			logistics_skill = 3
+		}
+	}
+	RUS_pavel_peorgievsky = {
+		name = "Pavel Peorgievsky"
+		portraits = { 
+			civilian = { 
+				small ="gfx/interface/ministers/RUS/RUS_Pavel_Georgievsky_for_aut.png"
+			}
+		}
+		advisor = { 
+			idea_token = RUS_pavel_georgievsky
+			slot = foreign_minister
+			cost = 80
+			available = { 
+				OR = { 
+					has_government = right_authoritarianism
+					has_government = despotism 
+				}
+			}
+			traits = { 
+				for_ideological_crusader
+			}
+		}
+	}
+	SRU_vasily_shulgin = {
+		name = "Vasily Shulgin"
+		portraits = { 
+			civilian = { 
+				small ="gfx/interface/ministers/RUS/SRU_Vasily_Shulgin_for.png"
+			}
+		}
+		advisor = { 
+			idea_token = SRU_vasily_shulgin
+			slot = foreign_minister
+			cost = 80
+			available = { 
+				OR = { 
+					has_government = right_authoritarianism
+					has_government = despotism 
+					has_government = reactionism
+				}
+			}
+			traits = { 
+				for_apologetic_clerk
+			}
+		}
+	}
+	SRU_sergei_taboritsky = {
+		name = "Sergei Taboritsky"
+		portraits = { 
+			civilian = { 
+				small ="gfx/interface/ministers/RUS/SRU_Sergei_Taboritsky_for.png"
+			}
+		}
+		advisor = { 
+			idea_token = SRU_sergei_taboritsky
+			slot = foreign_minister
+			cost = 80
+			available = { 
+				OR = { 
+					has_government = despotism 
+					has_government = reactionism
+				}
+			}
+			traits = { 
+				for_ideological_crusader
+			}
+		}
+	}
+	RUS_ivan_solonevich = {
+		name = "Ivan Solonevich"
+		portraits = { 
+			civilian = { 
+				small ="gfx/interface/ministers/RUS/RUS_Ivan_Solonevich_for.png"
+			}
+		}
+		advisor = { 
+			idea_token = RUS_ivan_solonevich
+			slot = foreign_minister
+			cost = 80
+			available = { 
+				OR = { 
+					has_government = reactionism
+				}
+			}
+			traits = { 
+				for_great_compromiser
+			}
+		}
+	}
+	RUS_kirill_elita_vilchkovsky = {
+		name = "Kirill Elita Vilchkovsky"
+		portraits = { 
+			civilian = { 
+				small ="gfx/interface/ministers/RUS/RUS_Kirill_Elita_Vilchkovsky_for.png"
+			}
+		}
+		advisor = { 
+			idea_token = RUS_kirill_elita_vilchkovsky
+			slot = foreign_minister
+			cost = 80
+			available = { 
+				OR = { 
+					has_government = despotism
+				}
+			}
+			traits = { 
+				for_biased_intellectual
+			}
+		}
+	}
+	RUS_mikhail_braykevich = {
+		name = "Mikhail Braykevich"
+		portraits = { 
+			civilian = { 
+				small ="gfx/interface/ministers/RUS/RUS_Mikhail_Braykevich_for.png"
+			}
+		}
+		advisor = { 
+			idea_token = RUS_kirill_elita_vilchkovsky
+			slot = foreign_minister
+			cost = 80
+			available = { 
+				OR = { 
+					has_government = despotism
+				}
+			}
+			traits = { 
+				for_the_cloak_n_dagger_schemer
+			}
+		}
+	}
+	SRU_pyotr_b_struve = {
+		name = "Pyotr B. Struve"
+		portraits = { 
+			civilian = { 
+				small ="gfx/interface/ministers/RUS/SRU_Pyotr_B_Struve_eco.png"
+			}
+		}
+		advisor = { 
+			idea_token = SRU_pyotr_b_struve
+			slot = economy_minister
+			cost = 80
+			available = { 
+				OR = { 
+					has_government = despotism
+					has_government = reactionism
+				}
+			}
+			traits = { 
+				eco_reformer
+			}
+		}
+	}
+	SRU_vladimir_zaleski = {
+		name = "Vladimir Zaleski"
+		portraits = { 
+			civilian = { 
+				small ="gfx/interface/ministers/RUS/RUS_Vladimir_Vostokov_hog.png"
+			}
+		}
+		advisor = { 
+			idea_token = SRU_vladimir_zaleski
+			slot = economy_minister
+			cost = 80
+			available = { 
+				OR = { 
+					has_government = despotism
+				}
+			}
+			traits = { 
+				eco_resource_industrialist
+			}
+		}
+	}
+	RUS_sergei_bulgakov = {
+		name = "Sergei Bulgakov"
+		portraits = { 
+			civilian = { 
+				small ="gfx/interface/ministers/RUS/RUS_Sergei_Bulgakov_eco.png"
+			}
+		}
+		advisor = { 
+			idea_token = RUS_sergei_bulgakov
+			slot = economy_minister
+			cost = 80
+			available = { 
+				OR = { 
+					has_government = despotism
+					has_government = right_authoritarianism
+				}
+			}
+			traits = { 
+				eco_railway_magnate
+			}
+		}
+	}
+	RUS_vladimir_krasinsky = {
+		name = "Vladimir Krasinky"
+		portraits = { 
+			civilian = { 
+				small ="gfx/interface/ministers/RUS/RUS_Vladimir_Krasinsky_eco.png"
+			}
+		}
+		advisor = { 
+			idea_token = RUS_vladimir_krasinsky
+			slot = economy_minister
+			cost = 80
+			available = { 
+				OR = { 
+					has_government = despotism
+				}
+			}
+			traits = { 
+				eco_administrative_genius
+			}
+		}
+	}
+	RUS_mikhail_a_taube = {
+	
+		name = "Mikhail A. Taube"
+		portraits = { 
+			civilian = { 
+				small ="gfx/interface/ministers/RUS/RUS_Mikhail_A_Taube_eco.png"
+			}
+		}
+		advisor = { 
+			idea_token = RUS_mikhail_a_taube
+			slot = economy_minister
+			cost = 80
+			available = { 
+				OR = { 
+					has_government = right_authoritarianism
+				}
+			}
+			traits = { 
+				eco_bank_president
+			}
+		}
+	}
+	RUS_nikolay_muratov = {
+		name = "Nikolay Muratov"
+		portraits = { 
+			civilian = { 
+				small ="gfx/interface/ministers/RUS/RUS_Nikolay_Muratov_sec.png"
+			}
+		}
+		advisor = { 
+			idea_token = RUS_nikolay_muratov
+			slot = security_minister
+			cost = 80
+			available = { 
+				OR = { 
+					has_government = right_authoritarianism
+					has_government = reactionism
+					has_government = despotism
+				}
+			}
+			traits = { 
+				sec_crime_fighter
+			}
+		}
+	}
+	RUS_nikolai_a_maklakov= {
+		name = "Nikolai A. Maklakov"
+		portraits = { 
+			civilian = { 
+				small ="gfx/interface/ministers/RUS/RUS_Nikolai_A_Maklakov_sec.png"
+			}
+		}
+		advisor = { 
+			idea_token = RUS_nikolai_a_maklakov
+			slot = security_minister
+			cost = 80
+			available = { 
+				OR = { 
+					has_government = despotism
+				}
+			}
+			traits = { 
+				sec_efficient_sociopath
+			}
+		}
+	}
+	RUS_pyotr_gendrikov = {
+		name = "Pyotr Gendrikov"
+		portraits = { 
+			civilian = { 
+				small ="gfx/interface/ministers/RUS/RUS_Pyotr_Gendrikov_sec.png"
+			}
+		}
+		advisor = { 
+			idea_token = RUS_pyotr_gendrikov
+			slot = security_minister
+			cost = 80
+			available = { 
+				OR = { 
+					has_government = despotism
+					has_government = reactionism
+				}
+			}
+			traits = { 
+				sec_man_of_the_people
+			}
+		}
+	}
+	RUS_georgy_graf = {
+		name = "Georgy Graf"
+		portraits = { 
+			civilian = { 
+				small ="gfx/interface/ministers/RUS/RUS_Georgy_Graf_sec.png"
+			}
+		}
+		advisor = { 
+			idea_token = RUS_georgy_graf
+			slot = security_minister
+			cost = 80
+			available = { 
+				OR = { 
+					has_government = despotism
+				}
+			}
+			traits = { 
+				sec_back_stabber
+			}
+		}
+	}
+	RUS_nikolay_astrov = {
+		name = "Nikolay Astrov"
+		portraits = { 
+			civilian = { 
+				small ="gfx/interface/ministers/RUS/RUS_Nikolay_Astrov_sec.png"
+			}
+		}
+		advisor = { 
+			idea_token = RUS_nikolay_astrov
+			slot = security_minister
+			cost = 80
+			available = { 
+				OR = { 
+					has_government = right_authoritarianism
+				}
+			}
+			traits = { 
+				sec_man_of_the_people
+			}
+		}
+	}
+	RUS_nikolay_batyushin = {
+		name = "Nikolay Batyushin"
+		portraits = { 
+			civilian = { 
+				small ="gfx/interface/ministers/RUS/RUS_Nikolay_Batyushin_int.png"
+			}
+		}
+		advisor = { 
+			idea_token = RUS_nikolay_batyushin
+			slot = head_of_intel
+			cost = 80
+			available = { 
+				OR = { 
+					has_government = right_authoritarianism
+					has_government = despotism
+					has_government = reactionism
+				}
+			}
+			traits = { 
+				int_dismal_enigma
+			}
+		}
+	}
+	RUS_vladimir_vitkovsky = {
+		name = "Vladimir Vitkovsky"
+		portraits = { 
+			civilian = { 
+				small ="gfx/interface/ministers/RUS/RUS_Vladimir_Vitkovsky_int.png"
+			}
+		}
+		advisor = { 
+			idea_token = RUS_vladimir_vitkovsky
+			slot = head_of_intel
+			cost = 80
+			available = { 
+				OR = { 
+					has_government = despotism
+				}
+			}
+			traits = { 
+				sec_efficient_sociopath
+			}
+		}
+	}
+	RUS_sergei_obolensky = {
+		name = "Sergei Obolensky"
+		portraits = { 
+			civilian = { 
+				small ="gfx/interface/ministers/RUS/RUS_Sergei_Obolensky_int.png"
+			}
+		}
+		advisor = { 
+			idea_token = RUS_sergei_obolensky
+			slot = head_of_intel
+			cost = 80
+			available = { 
+				OR = { 
+					has_government = despotism
+				}
+			}
+			traits = {
+				int_logistics_specialist
+			}
+		}
+	}
+	#Military Staff#
+	RUS_alexsandr_lukomsky = {
+		name = "Alexsandr Lukomsky"
+		portraits = { 
+			army = { 
+				large = "gfx/leaders/RUS/Aleksandr_Lukomsky.png"
+			}
+		}
+		corps_commander = {
+			traits = {
+				harsh_leader
+			}
+		skill = 1
+		attack_skill = 1
+		defense_skill = 2
+		planning_skill = 2
+		logistics_skill = 1
+		}
+	}
+	RUS_mikhail_kvetsinsky = {
+		name = "Mikhail Kvetsinsky"
+		portraits = { 
+			army = { 
+				large = "gfx/leaders/RUS/Mikhail_Kvetsinsky.png"
+			}
+		}
+		field_marshal = {
+			traits = {
+				cavalry_officer
+			}
+			skill = 3
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 2
+		}
+	}
+	RUS_mikhail_levitov = {
+		name = "Mikhail Levitov"
+		portraits = { 
+			army = { 
+				large = "gfx/leaders/RUS/Mikhail_Levitov.png"
+			}
+		}
+		field_marshal = {
+			traits = {
+				politically_connected
+			}
+			skill = 3
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 4
+		}
+	}
+	RUS_mitrofan_nazhenstev = {
+		name = "Mitrofan Nazhenstev"
+		portraits = { 
+			army = { 
+				large = "gfx/leaders/RUS/Mitrofan_Nazhentsev.png"
+			}
+		}
+		corps_commander = {
+			traits = {
+				harsh_leader
+			}
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 3
+			logistics_skill = 3
+		}
+	}
+	RUS_nikolay_timanovsky = {
+		name = "Nikolay Timanovsky"
+		portraits = { 
+			army = { 
+				large = "gfx/leaders/RUS/Nikolay_Timanovsky.png"
+			}
+		}
+		corps_commander = {
+			traits = {
+				inflexible_strategist
+			}
+			skill = 2
+			attack_skill = 1
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	RUS_anton_denikin = {
+		name = "Anton Denikin"
+		portraits = { 
+			army = { 
+				large = "gfx/leaders/RUS/Anton_Denikin.png"
+				small ="gfx/interface/ministers/RUS/RUS_Anton_Denikin.png"
+			}
+		}
+		field_marshal = {
+			traits = {  }
+			skill = 4
+			attack_skill = 4
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 2
+		}
+		advisor = { 
+			idea_token = RUS_anton_denikin_command
+			slot = high_command
+			cost = 80
+			traits = { 
+				army_infantry_2
+			}
+		}
+		advisor = { 
+			idea_token = RUS_anton_denikin
+			slot = army_chief
+			cost = 80
+			traits = { 
+				carm_static_defence_doctrine
+			}
+		}
+	}
+	RUS_yavgeny_miller = {
+		name = "Yavgeny Miller"
+		portraits = { 
+			army = { 
+				large = "gfx/leaders/RUS/Yevgeny_Miller.png"
+				small ="gfx/interface/ministers/RUS/RUS_Yavgeny_Miller_staff.png"
+			}
+		}
+		field_marshal = {
+			traits = { inflexible_strategist }
+			skill = 4
+			attack_skill = 3
+			defense_skill = 5
+			planning_skill = 2
+			logistics_skill = 2
+		}
+		advisor = { 
+			idea_token = RUS_yavgeny_miller_command
+			slot = high_command
+			cost = 80
+			traits = { 
+				army_cavalry_2
+			}
+		}
+		advisor = { 
+			idea_token = RUS_yavgeny_miller_cair
+			slot = air_chief
+			available = {
+				has_completed_focus = RUS_nationalaviationcommittee
+			}
+			cost = 80
+			traits = { 
+				cair_vertical_envelopment_doctrine
+			}
+		}
+	}
+	RUS_abram_dragomirov = {
+		name = "Abram Dragomirov"
+		portraits = { 
+			army = { 
+				large = "gfx/leaders/RUS/Abram_Dragomirov.png"
+				small ="gfx/interface/ministers/RUS/RUS_Abram_Dragomirov_staff.png"
+			}
+		}
+		field_marshal = {
+			traits = { cavalry_officer }
+			skill = 4
+			attack_skill = 3
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 4
+		}
+		advisor = { 
+			idea_token = RUS_abram_dragomirov
+			slot = high_command
+			cost = 80
+			traits = { 
+				army_commando_2
+			}
+		}
+	}
+	RUS_ivan_romanovsky = {
+		name = "Ivan Romanovsky"
+		portraits = { 
+			army = { 
+				small ="gfx/interface/ministers/RUS/RUS_Ivan_Romanovsky_staff.png"
+			}
+			civilian = {
+				large = "gfx/leaders/RUS/Portrait_RUS_Ivan_Romanovsky_despotic.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_Ivan_Romanovsky_DESC"
+			ideology = military_dictatorship
+			expire = "1965.1.1.1"
+		}
+		advisor = { 
+			idea_token = RUS_ivan_romanovsky_command
+			slot = high_command
+			cost = 80
+			traits = { 
+				army_CombinedArms_2
+			}
+		}
+	}
+	RUS_pavel_shatilov = {
+		name = "Pavel Shatilov"
+		portraits = { 
+			army = { 
+				large = "gfx/leaders/RUS/Pavel_Shatilov.png"
+				small ="gfx/interface/ministers/RUS/RUS_Pavel_Shatilov.png"
+			}
+		}
+		corps_commander = {
+			traits = { politically_connected }
+			skill = 3
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 3
+		}
+		advisor = { 
+			idea_token = RUS_pavel_shatilov_intel
+			slot = head_of_intel
+			cost = 80
+			available = { 
+				OR = { 
+					has_government = right_authoritarianism
+				}
+			}
+			traits = { 
+				int_logistics_specialist
+			}
+		}
+		advisor = { 
+			idea_token = RUS_pavel_shatilov
+			slot = high_command
+			cost = 80
+			traits = { 
+				army_regrouping_2	
+			}
+		}
+	}
+	RUS_nikolai_n_dukhonin = {
+		name = "Nikolai N. Dukhonin"
+		portraits = { 
+			army = { 
+				large = "gfx/leaders/RUS/Nikolay_Dukhonin.png"
+				small ="gfx/interface/ministers/RUS/RUS_Nikolai_N_Dukhonin_carm.png"
+			}
+		}
+		corps_commander = {
+			traits = { infantry_officer }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 4
+			planning_skill = 2
+			logistics_skill = 2
+		}
+		advisor = { 
+			idea_token = RUS_nikolai_n_dukhonin
+			slot = army_chief
+			cost = 80
+			traits = { 
+				carm_decisive_battle_doctrine 	
+			}
+		}
+	}
+	RUS_pyotr_wrangel = {
+		name = "Pyotr Wrangel"
+		portraits = { 
+			army = { 
+				large = "gfx/leaders/RUS/Pyotr_Wrangel.png"
+				small ="gfx/interface/ministers/RUS/RUS_Pyotr_N_Wrangel_carm.png"
+			}
+		}
+		field_marshal = {
+			traits = { cavalry_officer }
+			skill = 5
+			attack_skill = 4
+			defense_skill = 5
+			planning_skill = 4
+			logistics_skill = 4
+		}
+		advisor = { 
+			idea_token = RUS_pyotr_wrangel
+			slot = army_chief
+			cost = 80
+			traits = {
+				carm_decisive_battle_doctrine 	
+			}
+		}
+	}
+	RUS_sergei_markov= {
+		name = "Sergei Markov"
+		portraits = { 
+			army = { 
+				large = "gfx/leaders/RUS/Sergey_Markov.png"
+				small = "gfx/interface/ministers/RUS/RUS_Sergei_L_Markov_carm.png"
+			}
+		}
+		corps_commander = {
+			traits = {
+				brilliant_strategist
+			}
+			skill = 3
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 2
+		}
+		advisor = { 
+			idea_token = RUS_sergei_markov
+			slot = army_chief
+			cost = 80
+			traits = { 
+				carm_armoured_spearhead_doctrine
+			}
+		}
+	}
+	RUS_mikhail_berens = {
+		name = "Mikhail Berens"
+		portraits = { 
+			army = { 
+				small ="gfx/interface/ministers/RUS/RUS_Vladimir_Vitkovsky_int.png"
+			}
+		}
+		advisor = { 
+			idea_token = RUS_mikhail_berens
+			slot = navy_chief
+			cost = 80
+			traits = { 
+				cnav_power_projection_doctrine
+			}
+		}
+	}
+	RUS_nestor_monastyrev= {
+		name = "Nestor Monastyrev"
+		portraits = { 
+			navy = { 
+				large = "gfx/leaders/RUS/Portrait_Nestor_Monastyrev.png"
+				small = "gfx/interface/ministers/RUS/RUS_Nestor_A_Monastyrev_cnav.png"
+			}
+		}
+		navy_leader = {
+			traits = { }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			maneuvering_skill = 3
+			coordination_skill = 2
+		}
+		advisor = { 
+			idea_token = RUS_nestor_monastyrev
+			slot = navy_chief
+			cost = 80
+			traits = { 
+				cnav_open_seas_doctrine
+			}
+		}
+	}
+	RUS_ivan_bosrem = {
+		name = "Ivan Bostrem"
+		portraits = { 
+			army = { 
+				small ="gfx/interface/ministers/RUS/RUS_Ivan_F_Bosrem_cnav.png"
+			}
+		}
+		advisor = { 
+			idea_token = RUS_ivan_bosrem
+			slot = navy_chief
+			available = {
+				has_completed_focus = RUS_expandpetrogradnavalacademy
+			}
+			cost = 80
+			traits = {
+				cnav_indirect_approach_doctrine
+			}
+		}
+	}
+	RUS_mikhail_kedrov = {
+		name = "Mikhail Kedrov"
+		portraits = { 
+			army = { 
+				small ="gfx/interface/ministers/RUS/RUS_Mikhail_Kedrov_cnav.png"
+			}
+		}
+		advisor = { 
+			idea_token = RUS_mikhail_kedrov
+			slot = high_command
+			available = {
+				has_completed_focus = RUS_expandpetrogradnavalacademy
+			}
+			cost = 80
+			traits = { 
+				navy_screen_3
+			}
+		}
+	}
+	RUS_dimitri_nenyukov = {
+		name = "Dimitri Nenyukov"
+		portraits = { 
+			army = { 
+				small ="gfx/interface/ministers/RUS/RUS_Nikolay_Batyushin_int.png"
+			}
+		}
+		advisor = { 
+			idea_token = RUS_dimitri_nenyukov
+			slot = high_command
+			available = {
+				has_completed_focus = RUS_expandpetrogradnavalacademy
+			}
+			cost = 80
+			traits = { 
+				navy_capital_ship_2
+			}
+		}
+	}
+	RUS_nikolay_kolomeytsev = {
+		name = "Nikolay Kolomeytsev"
+		portraits = { 
+			navy = { 
+				large = "gfx/leaders/SRU/Portrait_KCK_Stark.png"
+			}
+		}
+		navy_leader = {
+			traits = { }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			maneuvering_skill = 3
+			coordination_skill = 2
+		}
+	}
+	
+	RUS_vasily_kanin = {
+		name = "Vasily Kanin"
+		portraits = { 
+			navy = { 
+				large = "gfx/leaders/RUS/Admiral_Kanin.png"
+				small ="gfx/interface/ministers/RUS/RUS_vasily_kanin.png"
+			}
+		}
+		navy_leader = {
+			traits = { old_guard_navy bold }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			maneuvering_skill = 3
+			coordination_skill = 2
+		}
+		advisor = { 
+			idea_token = RUS_vasily_kanin
+			slot = navy_chief
+			available = {
+				has_completed_focus = RUS_expandpetrogradnavalacademy
+			}
+			cost = 80
+			traits = { 
+				cnav_decisive_battle_doctrine
+			}
+		}
+	}
+	RUS_aleksandr_kutepov = {
+		name = "Aleksandr Kutepov"
+		portraits = { 
+			army = { 
+				small ="gfx/interface/ministers/RUS/RUS_Aleksandr_P_Kutepov_cair.png"
+			}
+		}
+		advisor = { 
+			idea_token = RUS_aleksandr_kutepov
+			slot = air_chief
+			available = {
+				has_completed_focus = RUS_nationalaviationcommittee
+			}
+			cost = 80
+			traits = {
+				cair_battlefield_support_doctrine
+			}
+		}
+	}
+	RUS_vyacheslav_tkachov = {
+		name = "Vyacheslav Tkachov"
+		portraits = { 
+			army = { 
+				small ="gfx/interface/ministers/RUS/RUS_vyacheslav_tkachov.png"
+			}
+		}
+		advisor = { 
+			idea_token = RUS_vyacheslav_tkachov
+			slot = high_command
+			available = {
+				has_completed_focus = RUS_nationalaviationcommittee
+			}
+			cost = 80
+			traits = { 
+				air_close_air_support_2
+			}
+		}
+	}
+	# SRU characters to be recruited after SW #
+	SRU_RUS_vladimir_maymayevsky={
+		name="Vladimir May-Mayevsky"
+		portraits={
+			civilian={
+				large="gfx/leaders/SRU/Vladimir_May_Mayevsky.png"
+			}
+		}
+		field_marshal={
+			visible = { has_country_flag = RUS_scw_over_bodge }
+			traits={ inflexible_strategist }
+			skill=3
+			attack_skill=3
+			defense_skill=2
+			planning_skill=3
+			logistics_skill=4
+			legacy_id=-1
+		}
+		country_leader={
+			ideology=military_dictatorship
+			traits={ popular_figurehead }
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	SRU_RUS_anton_turkul={
+		name="Anton Turkul"
+		portraits={
+			army={
+				large="gfx/leaders/SRU/Anton_Turkul.png"
+			}
+			civilian = { 
+			   small = "gfx/interface/ministers/RUS/SRU_anton_v_turkul.png"
+			}
+		}
+		field_marshal={
+			visible = { has_country_flag = RUS_scw_over_bodge }
+			traits={ infantry_officer }
+			skill=5
+			attack_skill=5
+			defense_skill=4
+			planning_skill=4
+			logistics_skill=4
+			legacy_id=-1
+		}
+		advisor = {
+			idea_token = SRU_anton_v_turkul_hog
+			slot = head_of_government
+			cost = 80
+			visible = { has_country_flag = RUS_scw_over_bodge }
+			available = {
+				OR = {
+					has_government = despotism
+					has_government = reactionism
+				}
+			}
+			traits = {
+			   hog_silent_workhorse
+			}
+		}
+		advisor = { 
+			idea_token = SRU_anton_v_turkul_command
+			slot = high_command
+			cost = 80
+			visible = { has_country_flag = RUS_scw_over_bodge }
+			traits = { 
+				air_air_combat_training_2
+			}
+		}
+	}
+	SRU_RUS_klavdiy_foss={
+		name="Klavdiy Foss"
+		portraits={
+			army={
+				large="gfx/leaders/SRU/Klavdiy_Foss.png"
+			}
+		}
+		field_marshal={
+			visible = { has_country_flag = RUS_scw_over_bodge }
+			traits={ cavalry_officer }
+			skill=4
+			attack_skill=4
+			defense_skill=3
+			planning_skill=3
+			logistics_skill=4
+			legacy_id=-1
+		}
+	}
+	SRU_RUS_vladimir_manshtein={
+		name="Vladimir Manshtein"
+		portraits={
+			army={
+				large="gfx/leaders/SRU/Vladimir_Manshtein.png"
+			}
+		}
+		corps_commander={
+			visible = { has_country_flag = RUS_scw_over_bodge }
+			traits={ harsh_leader }
+			skill=4
+			attack_skill=3
+			defense_skill=2
+			planning_skill=4
+			logistics_skill=4
+			legacy_id=-1
+		}
+	}
+	SRU_RUS_alexsandr_kutepov={
+		name="Alexsandr Kutepov"
+		portraits={
+			army={
+				large="gfx/leaders/SRU/Aleksandr_Kutepov.png"
+			}
+		}
+		corps_commander={
+			visible = { has_country_flag = RUS_scw_over_bodge }
+			traits={ infantry_officer }
+			skill=3
+			attack_skill=3
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=1
+			legacy_id=-1
+		}
+	}
+	SRU_RUS_fyodor_bredov={
+		name="Fyodor Bredov"
+		portraits={
+			army={
+				large="gfx/leaders/SRU/Fyodor_Bredov.png"
+			}
+		}
+		corps_commander={
+			visible = { has_country_flag = RUS_scw_over_bodge }
+			traits={ politically_connected }
+			skill=3
+			attack_skill=2
+			defense_skill=2
+			planning_skill=3
+			logistics_skill=3
+			legacy_id=-1
+		}
+	}
+	SRU_RUS_nikolay_nevadovsky={
+		name="Nikolay Nevadovsky"
+		portraits={
+			army={
+				large="gfx/leaders/SRU/Nikolay_Nevadovsky.png"
+			}
+		}
+		corps_commander={
+			visible = { has_country_flag = RUS_scw_over_bodge }
+			traits={ infantry_officer }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=3
+			logistics_skill=3
+			legacy_id=-1
+		}
+	}
+	SRU_RUS_mikhail_berens={
+		name="Mikhail Berens"
+		portraits={
+			navy={
+				large="gfx/leaders/Europe/Portrait_Generic_Europe_navy_1.png"
+			}
+		}
+		navy_leader={
+			visible = { has_country_flag = RUS_scw_over_bodge }
+			skill=3
+			attack_skill=2
+			defense_skill=2
+			maneuvering_skill=1
+			coordination_skill=1
+			legacy_id=-1
+		}
+	}
+	SRU_RUS_ivan_bostrem={
+		name="Ivan Bostrem"
+		portraits={
+			navy={
+				large="gfx/leaders/Europe/Portrait_Generic_Europe_navy_2.png"
+			}
+		}
+		navy_leader={
+			visible = { has_country_flag = RUS_scw_over_bodge }
+			skill=2
+			attack_skill=3
+			defense_skill=3
+			maneuvering_skill=1
+			coordination_skill=1
+			legacy_id=-1
+		}
+	}
+	SRU_RUS_mikhail_kedrov={
+		name="Mikhail Kedrov"
+		portraits={
+			navy={
+				large="gfx/leaders/Europe/Portrait_Generic_Europe_navy_3.png"
+			}
+		}
+		navy_leader={
+			visible = { has_country_flag = RUS_scw_over_bodge }
+			skill=3
+			attack_skill=1
+			defense_skill=3
+			maneuvering_skill=1
+			coordination_skill=1
+			legacy_id=-1
+		}
+	}
+}
+

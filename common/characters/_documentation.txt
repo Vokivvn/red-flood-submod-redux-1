@@ -1,0 +1,84 @@
+# Character database
+#
+# Historical characters are listed within the `characters` root property. E.g.
+# 
+#
+# ########  EXAMPLE OF SOME SAD SACK IN INDIA ########
+# characters = {
+#		ENG_winston_churchill = {
+#			name = ENG_winston_churchill
+#			portraits = {
+#				civilian = {
+#					large = "gfx/leaders/ENG/Portrait_Britain_Winston_Churchill.dds"
+#				}
+#				army = {
+#					small = "GFX_idea_ENG_winston_churchill"
+#				}
+#			}
+#			advisor = {
+#				slot = political_advisor
+#				idea_token = ENG_winston_churchill
+#				available  = {
+#					has_government  = neutrality 
+#					has_completed_focus  = ENG_the_kings_party 
+#					if  = {
+#						limit  = {
+#							has_dlc = "Man the Guns"
+#						}
+#						NOT = {
+#							has_autonomy_state  = autonomy_supervised_state
+#						}
+#					}
+#				}
+#				allowed  = {
+#					original_tag  = ENG
+#				}
+#				traits  = {
+#					royalist_bulldog 
+#				}
+#				ai_will_do  = {
+#					factor  = 1.000
+#				}
+#			}
+#
+#			country_leader = {
+#				ideology = conservatism
+#				traits = {
+#					british_bulldog
+#				}
+#				expire = "1965.1.1.1"
+#				id = -1
+#			}
+#		}
+#}
+#
+#
+#characters = {
+#	 = {
+#		name = ""
+#		portraits = {
+#			civilian = {
+#				large = ""
+#			}
+#		}
+#		country_leader = {
+#			ideology = 
+#			expire = "1965.1.1"
+#		}
+#		field_marshal = {
+#		
+#		}
+#		corps_commander = {
+#		
+#		}
+#		navy_leader = {
+#		
+#		}
+#	}
+#}
+#
+#recruit_character = 
+#
+#recruit_character = ENG_winston_churchill
+#
+# ALWAYS KEEP AT LEAST ONE EMPTY LINE UNDER "recruit_character"

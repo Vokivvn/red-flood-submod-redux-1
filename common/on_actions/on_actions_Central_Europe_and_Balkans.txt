@@ -1,0 +1,481 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			AUS = {
+				if = {
+					limit = {
+						has_game_rule = {
+							rule = AUS_ai_route
+							option = RANDOM
+						}
+					}
+					random_list = {
+						80 = { AUS = { set_country_flag = AUS_ai_path_1 } }
+						20 = { AUS = { set_country_flag = AUS_ai_path_2 } }
+					}
+				}
+			}
+		}
+	}
+	on_annex = {
+		effect = {
+			if = {
+				limit = {
+					FROM = { tag = YUG }
+					ROOT = { tag = BUL }
+				}
+				if = {
+					limit = {
+						ALB = {
+							has_government = right_authoritarianism
+						}
+					}
+					BUL = {
+						set_autonomy = {
+							target = ALB
+							autonomy_state = ayregion
+						}
+					}
+					ALB = {
+						set_cosmetic_tag = ALB_bulgar
+						set_politics = {
+							ruling_party = right_authoritarianism
+						}
+					}
+				}
+			}
+		}
+	}
+	on_war = {
+		effect = {
+			if = {
+				limit = {
+					ROOT = { tag = AUS }
+				}
+				if = {
+					limit = {
+						AND = {
+							AUS = {
+								has_war_with = GER
+							}
+							YUG = {
+								has_completed_focus = YUG_peacewithaustria
+							}
+						}
+					}
+					AUS = {
+						country_event = {
+							id = yugoslavia.20
+							days = 3
+						}
+					}
+				}
+			}
+		}
+	}
+	on_declare_war = {
+		effect = {
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							FROM = { original_tag = FIU }
+							tag = ITA
+						}
+						AND = {
+							FROM = { original_tag = ITA }
+							tag = FIU
+						}
+					}
+				}
+				hidden_effect = {
+					MNT = {
+						country_event = {
+							id = montenegro.1
+						}
+						if = {
+							limit = {
+								is_in_faction_with = ITA
+							}
+							leave_faction = yes
+						}
+					}
+					ITA = {
+						end_puppet = MNT
+						MNT = { drop_cosmetic_tag = yes }
+						annex_country = {
+							target = SAN
+						}
+					}
+					1072 = {
+						add_core_of = ITA
+						remove_core_of = SAN
+					}
+				}
+			}
+		}
+	}
+	on_capitulation_immediate = {
+		effect = {
+			if = {
+				limit = {
+					any_country = { has_country_flag = warschauer_vertrag }
+					ROOT = { has_country_flag = warschauer_vertrag }
+				}
+				if = {
+					limit = {
+						ROOT = { is_faction_leader = yes }
+					}
+					every_country = {
+						limit = { 
+							is_in_faction_with = ROOT
+							has_capitulated = no
+							NOT = { tag = ROOT }
+						}
+						ATU = { wp_lose_member = yes }
+					}
+				}
+				if = {
+					limit = { has_country_flag = wp_major }
+					ATU = { wp_lose_major = yes }
+				}
+				else = {
+					ATU = { wp_lose_member = yes }
+				}
+			}
+			if = {
+				limit = {
+					ROOT = { tag = GER }
+					FROM = { tag = AUS }
+					AUS = {
+						has_country_leader = {
+							character = AUS_adolf_hitler
+						}
+					}
+				}
+				AUS = {
+					white_peace = {
+						tag = GER
+						message = AUS_hitler_beat_germany
+					}
+					annex_country = {
+						target = GER
+					}
+				}
+			}
+			if = {
+				limit = {
+					ROOT = { tag = AUS }
+					FROM = { tag = GER }
+					NOT = {
+						AUS = {
+							is_in_faction_with = ROS
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_global_flag = YUG_intervene_AUS_GER_war
+					}
+					YUG = {
+						transfer_state = 102
+					}
+					clr_global_flag = YUG_intervene_AUS_GER_war
+				}
+				GER = {
+					white_peace = {
+						tag = AUS
+						message = GER_conquers_AUS
+					}
+					annex_country = {
+						target = AUS
+					}
+					annex_country = {
+						target = SWI
+					}
+				}
+			}
+			if = {
+				limit = {
+					ROOT = { tag = AUS }
+					FROM = { tag = YUG }
+					NOT = {
+						AUS = {
+							is_in_faction_with = ROS
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_global_flag = YUG_intervene_AUS_GER_war
+					}
+					GER = {
+						white_peace = {
+							tag = AUS
+							message = GER_conquers_AUS
+						}
+						annex_country = {
+							target = AUS
+						}
+						annex_country = {
+							target = SWI
+						}
+					}
+					YUG = {
+						transfer_state = 102
+					}
+					clr_global_flag = YUG_intervene_AUS_GER_war
+				}
+			}
+			if = {
+				limit = {
+					ROOT = { tag = MOL }
+					FROM = { tag = ROM }
+				}
+				ROM = {
+					white_peace = {
+						tag = MOL
+						message = ROM_WON_WAR_1
+					}
+					annex_country = {
+						target = MOL
+					}
+					country_event = {
+						id = romania.5
+						days = 10
+					}
+					
+				}
+			}
+			if = {
+				limit = {
+					ROOT = { tag = ROM }
+					FROM = { tag = MOL }
+				}
+				MOL = {
+					white_peace = {
+						tag = ROM
+						message = MOL_WON_WAR_1
+					}
+					annex_country = {
+						target = ROM
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_country_flag = MOL_eliadeia
+							}
+						}
+						set_cosmetic_tag = MOL_united
+					}
+					else = {
+						set_cosmetic_tag = MOL_united_eliade
+					}
+					country_event = {
+						id = romania.5
+						days = 10
+					}
+				}
+			}
+			if = {
+				limit = {
+					ROOT = { tag = TRS }
+					FROM = { tag = ROM }
+				}
+				ROM = {
+					white_peace = {
+						tag = TRS
+						message = ROM_WON_WAR_2
+					}
+					annex_country = {
+						target = TRS
+					}
+					country_event = {
+						id = romania.6
+					}
+					set_global_flag = united_romania
+				}
+			}
+			if = {
+				limit = {
+					ROOT = { tag = TRS }
+					FROM = { tag = MOL }
+				}
+				MOL = {
+					white_peace = {
+						tag = TRS
+						message = MOL_WON_WAR_2
+					}
+					annex_country = {
+						target = TRS
+					}
+					country_event = {
+						id = romania.6
+					}
+					set_global_flag = united_romania
+				}
+			}
+			if = {
+				limit = {
+					ROOT = { tag = MOL }
+					FROM = { tag = TRS }
+				}
+				TRS = {
+					white_peace = {
+						tag = MOL
+						message = TRS_WON_WAR_2
+					}
+					annex_country = {
+						target = MOL
+					}
+					country_event = {
+						id = romania.6
+					}
+					set_global_flag = united_romania
+				}
+			}
+			if = {
+				limit = {
+					ROOT = { tag = ROM }
+					FROM = { tag = TRS }
+				}
+				TRS = {
+					white_peace = {
+						tag = ROM
+						message = TRS_WON_WAR_1
+					}
+					annex_country = {
+						target = ROM
+					}
+					country_event = {
+						id = romania.6
+					}
+					set_global_flag = united_romania
+				}
+			}
+			if = {
+				limit = {
+					ROOT = { tag = BUL }
+					FROM = { tag = YUG }
+					BUL = {
+						has_cosmetic_tag = BUL_yugo_revolt
+					}
+				}
+				BUL = {
+					drop_cosmetic_tag = yes
+					clr_country_flag = BUL_yugoslav_mechanic_begins
+					clear_variable = BUL_yugoslav_influence
+					clear_variable = YUG.YUG_yugoslav_influence
+				}
+				YUG = {
+					white_peace = {
+						tag = BUL
+						message = THRACIAN_REVOLT_YUG_WIN_tt
+					}
+					add_research_slot = 1
+					annex_country = {
+						target = BUL
+					}
+				}
+			}
+			if = {
+				limit = {
+					ROOT = { tag = YUG }
+					FROM = { tag = BUL }
+					BUL = {
+						has_cosmetic_tag = BUL_yugo_revolt
+					}
+				}
+				BUL = {
+					drop_cosmetic_tag = yes
+					set_cosmetic_tag = BUL_yugo_free
+					white_peace = {
+						tag = YUG
+						message = THRACIAN_REVOLT_BUL_WIN_tt
+					}
+					add_research_slot = 1
+					annex_country = {
+						target = YUG
+					}
+					if = {
+						limit = {
+							has_idea = BUL_watchful_eye2
+						}
+						remove_ideas = {
+							BUL_watchful_eye2
+						}
+					}
+					else_if = {
+						limit = {
+							has_idea = BUL_watchful_eye3
+						}
+						remove_ideas = {
+							BUL_watchful_eye3
+						}
+					}
+					if = {
+						limit = {
+							ALB = { is_subject_of = YUG }
+						}
+						set_autonomy = {
+							target = ALB
+							autonomous_state  = ayregion
+						}
+						ALB = {
+							set_politics = { ruling_party = right_authoritarianism }
+							set_cosmetic_tag = ALB_bulgar
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					ROOT = { tag = UKR }
+					FROM = { tag = POL }
+					POL = {
+						NOT = {
+							has_government = despotism
+						}
+					}
+					UKR = {
+						has_country_leader = {
+							character = UKR_batko_nash
+							ruling_only = yes
+						}
+					}
+				}
+				POL = {
+					white_peace = {
+						tag = UKR
+						message = BANDERA_LOST_AGAINST_POLAKKKS
+					}
+					puppet = UKR
+
+				}
+				UKR = {
+					drop_cosmetic_tag = yes
+					remove_ideas = {
+						UKR_we_were_born_in_a_great_hour3
+						UKR_attack_bonus
+						UKR_under_the_flag3
+						UKR_from_the_fires_of_war3
+					}
+					set_cosmetic_tag = UKR_bandera_fail
+					load_focus_tree = generic_focus
+					add_country_leader_role = {
+						character = UKR_petro_bolbochan
+						promote_leader = yes
+						country_leader = {
+							ideology = left_populism
+							expire = "1965.1.1.1"
+						}
+					}
+					set_politics = {
+						ruling_party = progressivism
+						elections_allowed = no
+					}
+				}
+			}
+		}
+	}
+}

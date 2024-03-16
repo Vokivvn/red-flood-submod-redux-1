@@ -1,0 +1,118 @@
+characters = {
+	MLG_VVS = {
+		name = "C.C.R.M."
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MLG/Portrait_MLG_VVS.tga"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_CCRM_DESC"
+			ideology = folk_socialism
+			expire = "1965.1.1.1"
+		}
+	}
+	MLG_jean_ralaimongo = {
+		name = "Jean Ralaimongo"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MLG/portrait_MLG_Ralaimongo.tga" #placeholder, do not worry
+			}
+		}
+		country_leader = {
+			#desc = "POLITICS_CCRM_DESC"
+			ideology = social_nationalism
+			expire = "1965.1.1.1"
+		}
+		advisor = {
+			slot = head_of_government
+			cost = 1
+			allowed = {
+				original_tag = MLG
+			}
+			idea_token = MLG_jean_ralaimongo_hog
+		}
+	}
+	MLG_paul_dussac = {
+		name = "Paul Dussac"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MLG/portrait_MLG_Paul_Dussac.tga" #placeholder, do not worry
+			}
+		}
+		country_leader = {
+			#desc = "POLITICS_CCRM_DESC"
+			ideology = folk_socialism
+			expire = "1965.1.1.1"
+		}
+		advisor = {
+			slot = foreign_minister
+			cost = 1
+			allowed = {
+				original_tag = MLG
+			}
+			traits = {
+			
+			}
+			idea_token = MLG_paul_dussac_for
+		}
+	}
+	MLG_joseph_raseta = {
+		name = "Joseph Raseta"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MLG/portrait_MLG_joseph_raseta.tga" #placeholder, do not worry
+			}
+		}
+		country_leader = {
+			#desc = "POLITICS_CCRM_DESC"
+			ideology = national_vanguardism
+			expire = "1965.1.1.1"
+		}
+		advisor = {
+			slot = economy_minister
+			cost = 1
+			allowed = {
+				original_tag = MLG
+			}
+			idea_token = MLG_joseph_raseta_eco
+		}
+	}
+	MLG_joseph_ravoahangy = {
+		name = "Joseph Ravoahangy-Andrianavalona"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MLG/portrait_MLG_Joseph_Ravoahangy.tga" #placeholder, do not worry
+			}
+		}
+		country_leader = {
+			#desc = "POLITICS_CCRM_DESC"
+			ideology = democratic_socialism
+			expire = "1965.1.1.1"
+		}
+		advisor = {
+			slot = security_minister
+			cost = 1
+			allowed = {
+				original_tag = MLG
+			}
+			idea_token = MLG_joseph_ravoahangy_sec
+		}
+	}
+	MLG_monja_jaona = {
+		name = "Monja Jaona"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MLG/portrait_MLG_joseph_raseta.tga" #placeholder, do not worry
+			}
+		}
+		advisor = {
+			slot = head_of_intel
+			cost = 1
+			allowed = {
+				original_tag = MLG
+			}
+			idea_token = MLG_monja_jaona_int
+		}
+	}
+}

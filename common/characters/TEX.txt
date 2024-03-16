@@ -1,0 +1,28 @@
+characters = {
+	TEX_pappy = {
+		name = "Pappy O'Daniel"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/TEX/TEX_O_Daniel.png"
+			}
+		}
+		country_leader = {
+			ideology = national_conservatism
+			expire = "1965.1.1.1"
+			id=-1
+		}
+	}
+	TEX_Shivers = {
+		name = "Allan Shivers"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/TEX/TEX_Shivers.png"
+			}
+		}
+		country_leader = {
+			ideology = national_rejuvenatism
+			expire = "1965.1.1.1"
+			id=-1
+		}
+	}
+}

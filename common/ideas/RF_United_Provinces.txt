@@ -1,0 +1,641 @@
+ideas = {
+	country = {
+		UPI_brutal_putdowns = {
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = -0.15
+				conscription = -0.005
+			}
+			picture = UPI_brutal_putdowns
+		}
+		UPI_shadow_gallipoli = {
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				army_org_factor = -0.1
+			}
+			picture = UPI_shadow_gallipoli
+		}
+		UPI_alone_unsupplied_cutoff = {
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				industrial_capacity_factory = -0.25
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					instant = yes reliability = -0.05 
+				}
+			}
+			picture = UPI_alone_unsupplied_cutoff
+		}
+
+		#Democratic Ideas
+
+		UPI_civil_obedience = {
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				political_power_gain = 0.1
+				stability_factor = -0.05
+			}
+			picture = UPI_civil_obedience
+		}
+		UPI_freedom_assembly = {
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				political_power_gain = -0.1
+				stability_factor = 0.05
+			}
+			picture = UPI_freedom_assembly
+		}
+		UPI_unificationcomitee = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				non_core_manpower = 0.05
+				resistance_target = -0.1
+			}
+			picture = generic_idea_RF_idea_dossier
+		}
+		UPI_indian_guard = {
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				defence = 0.1
+				planning_speed = 0.1
+			}
+			picture = UPI_indian_guard
+		}
+		UPI_indianimprovementassociation = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				research_speed_factor = 0.05
+			 	industrial_capacity_factory = 0.05
+			}
+			picture = generic_idea_RF_idea_theorist
+		}
+		UPI_chaos_idea = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = -1
+				war_support_factor = -0.5
+				political_power_gain = -2
+				training_time_factor = 3
+				industrial_capacity_factory = -1
+				research_speed_factor = -1
+				army_org_factor = -0.9
+			}
+			picture = generic_idea_RF_idea_star_flame
+		}
+
+		#Doomer Ideas
+
+		UPI_harsh_repressions = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = -0.1
+				monthly_population = -0.05
+				political_power_factor = 0.08
+				stability_weekly = 0.01
+			}
+			picture = generic_idea_RF_idea_1911
+		}
+		UPI_repressions = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = -0.05
+				monthly_population = -0.03
+				political_power_factor = 0.05
+				stability_weekly = 0.01
+			}
+			picture = UPI_brutal_putdowns
+		}
+		UPI_chamicalweapons = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				army_attack_factor = 0.1
+				monthly_population = -0.05
+			}
+			picture = generic_idea_RF_idea_gas
+		}
+		UPI_chamicalweapons1 = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				army_attack_factor = 0.15
+				monthly_population = -0.15
+				air_strategic_bomber_bombing_factor = 0.09
+				air_close_air_support_attack_factor = 0.02
+			}
+			picture = generic_idea_RF_idea_gas
+		}
+		UPI_chamicalweapons2 = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				army_attack_factor = 0.2
+				monthly_population = -0.3
+				attrition = 0.3
+				air_strategic_bomber_bombing_factor = 0.1
+				air_close_air_support_attack_factor = 0.05
+				stability_factor = -0.15
+			}
+			picture = generic_idea_RF_idea_gas
+		}
+		UPI_newstrategy = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				army_morale_factor = 0.1
+				planning_speed = 0.15
+			}
+			picture = generic_idea_RF_idea_king
+		}
+		UPI_expandedconscription = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				conscription = 0.05
+				training_time_factor = 0.05
+			}
+			picture = generic_idea_RF_idea_soldier
+		}
+		UPI_expandedconscription1 = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				conscription = 0.03
+				training_time_factor = 0.05
+				army_attack_factor = 0.05
+				stability_factor = -0.03
+			}
+			picture = generic_idea_RF_idea_soldier
+		}
+		UPI_siegeofluckow = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				out_of_supply_factor = 0.5
+			 	consumer_goods_expected_value = 0.08
+				industrial_capacity_factory = -0.2
+			}
+			picture = generic_idea_RF_idea_castle
+		}
+		UPI_siegeofluckow1 = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				out_of_supply_factor = 0.9
+			 	consumer_goods_expected_value = 0.04
+				industrial_capacity_factory = -0.1
+			}
+			picture = generic_idea_RF_idea_castle
+		}
+		UPI_martiallaw = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				industrial_capacity_factory = -0.1
+				resistance_target = -0.1
+				monthly_population = -0.05
+			}
+			picture = generic_idea_RF_idea_crossed_swords 
+		}
+		UPI_martiallaw1 = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				industrial_capacity_factory = -0.2
+				resistance_target = -0.2
+				monthly_population = -0.15
+			}
+			picture = generic_idea_RF_idea_crossed_swords
+		}
+
+		#Imperial Ideas
+
+		UPI_new_british_india = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				political_power_factor = 0.05
+			}
+			picture = generic_idea_RF_idea_lion_head
+		}
+		UPI_new_british_india1 = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				political_power_factor = 0.1
+			}
+			picture = generic_idea_RF_idea_lion_head
+		}
+		UPI_new_british_india2 = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				political_power_factor = 0.2
+				stability_factor = -0.1
+				monthly_population = -0.05
+			}
+			picture = generic_idea_RF_idea_lion_head
+		}
+		UPI_new_british_india3 = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				political_power_factor = -0.3
+				stability_factor = -0.1
+				stability_weekly = -0.02
+				monthly_population = -0.05
+			}
+			picture = generic_idea_RF_idea_lion_head
+		}
+		UPI_forced_labour = {
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				industrial_capacity_factory = -0.15
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					instant = yes reliability = -0.1
+				}
+			}
+			picture = UPI_forced_labour
+		}
+		UPI_forced_labour_1 = {
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				industrial_capacity_factory = -0.1
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					instant = yes reliability = -0.15
+				}
+			}
+			picture = UPI_forced_labour
+		}
+		UPI_production_quotas = {
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			equipment_bonus = {
+				infantry_equipment = {
+					instant = yes reliability = -0.12
+				}
+			}
+			picture = UPI_production_quotas
+		}
+		UPI_reunion_fervour = {
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				industrial_capacity_factory = 0.05
+			}
+			picture = UPI_reunion_fervour
+		}
+		UPI_british_tigers = {
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				conscription = 0.02
+			}
+			picture = UPI_british_tigers
+		}
+		UPI_british_tigers1 = {
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				conscription = 0.03
+			}
+			picture = UPI_british_tigers
+		}
+		UPI_new_indian = {
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				conscription = 0.03
+				MONTHLY_POPULATION = 0.15
+			}
+			picture = UPI_new_indian
+		}
+		UPI_censorship = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				encryption = 75
+				stability_factor = 0.07
+			}
+			picture = UPI_civil_obedience
+		}
+
+		UPI_punished_army = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				attrition = 0.2
+				army_morale_factor = -0.1
+				army_attack_factor = -0.1
+			}
+			picture = generic_idea_RF_idea_skull_metal
+		}
+		UPI_punished_police = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				despotism_drift = -0.03
+				political_power_factor = -0.2
+				root_out_resistance_effectiveness_factor = -0.1
+			}
+			picture = generic_idea_RF_idea_cuffs
+		}
+		UPI_labor_camps = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				monthly_population = -0.1
+				industrial_capacity_factory = 0.1
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					instant = yes reliability = -0.15
+				}
+			}
+			picture = generic_idea_RF_idea_digging
+		}
+		UPI_racial_segregation = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				consumer_goods_expected_value = -0.07
+				conscription = -0.005
+				political_power_factor = 0.05
+				compliance_gain = -0.2
+				production_speed_buildings_factor = -0.1
+			}
+			picture = generic_idea_RF_idea_reading
+		}
+		UPI_crackdowns = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				encryption = 100
+				stability_factor = 0.12
+				revisionist_socialism_drift = -0.1
+				popular_socialism_drift = -0.1
+			}
+			picture = generic_idea_RF_idea_truncheon
+		}
+		UPI_terror = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				encryption = 100
+				stability_factor = 0.05
+				revisionist_socialism_drift = -0.1
+				popular_socialism_drift = -0.1
+				resistance_target = -0.1
+				monthly_population = -0.05
+			}
+			picture = generic_idea_RF_idea_red_skull
+		}
+		UPI_brutal_putdowns1 = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = -0.2
+				conscription = -0.005
+				political_power_factor = 0.05
+				monthly_population = -0.03
+			}
+			picture = UPI_brutal_putdowns
+		}
+		UPI_terror1 = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				encryption = 100
+				stability_factor = 0.05
+				revisionist_socialism_drift = -0.1
+				popular_socialism_drift = -0.1
+				resistance_target = -0.1
+				monthly_population = -0.05
+				drift_defence_factor = 2
+			}
+			picture = generic_idea_RF_idea_red_skull
+		}
+		UPI_defend_defend = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				army_defence_factor = 0.25
+			 	army_speed_factor = 0.05
+			}
+			picture = generic_idea_RF_idea_grenade
+		}
+		UPI_defend_defend1 = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				army_defence_factor = 0.35
+				army_speed_factor = 0.05
+				attrition = -0.2
+			}
+			picture = generic_idea_RF_idea_grenade
+		}
+		UPI_attack_attack = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				army_attack_factor = 0.2
+				army_speed_factor = 0.05
+			}
+			picture = generic_idea_RF_idea_rifle
+		}
+		UPI_attack_attack1 = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				army_attack_factor = 0.3
+				army_speed_factor = 0.05
+				army_core_attack_factor = 0.05
+				enemy_army_bonus_air_superiority_factor = -0.05
+			}
+			picture = generic_idea_RF_idea_rifle
+		}
+
+		#Kali ideas
+
+		UPI_holy_flames = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				production_speed_buildings_factor = -0.15
+			}
+			picture = generic_idea_RF_idea_fire_rose
+		}
+		UPI_holy_flames1 = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				production_speed_buildings_factor = -0.35
+				research_speed_factor = -0.1
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					instant = yes soft_attack = 0.05
+				}
+			}
+			picture = generic_idea_RF_idea_fire_rose
+		}
+		UPI_holy_flames2 = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				production_speed_buildings_factor = -0.35
+				no_supply_grace = 24
+				monthly_population = -0.05
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					instant = yes build_cost_ic = -0.3
+				}
+				infantry_equipment = {
+					instant = yes soft_attack = 0.05
+				}
+			}
+			picture = generic_idea_RF_idea_fire_rose
+		}
+		UPI_warrior_priests_idea = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				army_org_factor = 0.1
+			}
+			picture = generic_idea_RF_idea_palantir
+		}
+		UPI_marches = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				army_speed_factor = 0.1
+				army_morale_factor = -0.05
+			}
+			picture = generic_idea_RF_idea_light_foot
+		}
+		UPI_chemical_weapons_kali = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+			 	attrition = 0.1
+			 	army_attack_factor = 0.1
+			}
+			picture = generic_idea_RF_idea_gas
+		}
+		UPI_endless_legions = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				conscription = 0.3
+				industrial_capacity_factory = -0.1
+				industrial_capacity_dockyard = -0.1
+				production_speed_buildings_factor = -0.1
+				training_time_factor = 0.1
+				army_morale_factor = -0.05
+			}
+			picture = GFX_idea_BRA_wave_soldiers
+		}
+		UPI_divine_mission_idea = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				political_power_factor = 0.1
+				industrial_capacity_factory = 0.1
+			}
+			picture = GFX_idea_Compulsory_education
+		}
+		UPI_end_of_time_idea = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				training_time_factor = -0.15
+			}
+			picture = generic_idea_RF_idea_moon
+		}
+		UPI_end_of_space_idea = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				army_speed_factor = 0.1
+			}
+			picture = GFX_idea_BRA_blackhole_newworld
+		}
+		UPI_divine_mission_idea1 = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				political_power_factor = 0.1
+				industrial_capacity_factory = 0.1
+				training_time_factor = -0.1
+				army_speed_factor = 0.1
+				army_attack_factor = 0.1
+			}
+			picture = GFX_idea_Compulsory_education
+		}
+		UPI_mitahara_idea = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				consumer_goods_expected_value = -0.15
+			}
+			picture = generic_idea_RF_idea_grain
+		}
+		UPI_human_sacrifice_idea = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = -0.15
+				monthly_population = -0.05
+			}
+			picture = GFX_idea_ELS_violent_history
+		}
+		UPI_himsa_idea = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				army_attack_factor = 0.05
+				stability_factor = -0.05
+				research_speed_factor = -0.1
+			}
+			picture = generic_idea_RF_idea_crossed_swords
+		}
+		UPI_warrior_godess_idea = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				conscription_factor = 0.2
+				training_time_factor = -0.05
+			}
+			picture = generic_idea_RF_idea_palantir
+		}
+		UPI_warrior_godess_idea1 = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				conscription_factor = 0.2
+				training_time_factor = -0.05
+				drift_defence_factor = 0.5
+			}
+			picture = generic_idea_RF_idea_palantir
+		}
+		UPI_godess_of_blood_idea = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				war_support_factor = 0.1
+			}
+			picture = GFX_idea_JAP_hull_breaking
+		}
+		UPI_godess_of_blood_idea1 = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				war_support_factor = 0.1
+				planning_speed = 0.1
+				conscription_factor = 0.05
+			}
+			picture = GFX_idea_JAP_hull_breaking
+		}
+		UPI_godess_of_blood_idea2 = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				war_support_factor = 0.1
+				planning_speed = 0.1
+				conscription_factor = 0.05
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					instant = yes breakthrough = 0.1
+				}
+			}
+			picture = GFX_idea_JAP_hull_breaking
+		}
+		UPI_annihilation_of_evil = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				reactionism_drift = 0.1
+				monthly_population = -3
+			}
+			picture = GFX_idea_WRT_enemies_purged
+		}
+	}
+
+	hidden_ideas = {
+		UPI_wargoal_block = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				justify_war_goal_time = 10
+			}
+		}
+	}
+
+}

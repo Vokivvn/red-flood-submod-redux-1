@@ -1,0 +1,100 @@
+characters = {
+	POR_josé_mendes_cabecadas = {
+		name = "José Mendes Cabeçadas"
+		country_leader = {
+			ideology = national_conservatism
+			expire = "1965.1.1.1"
+		}
+	}
+	POR_antónio_maria_da_silva = {
+		name = "António Maria da Silva"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/POR/Portrait_antonio.png"
+			}
+		}
+		country_leader = {
+			ideology = progressive_democracy
+			expire = "1965.1.1.1"
+		}
+	}
+	POR_antonio_pereira_da_rosa = {
+		name = "Antonio Pereira da Rosa"
+		country_leader = {
+			ideology = classical_liberalism
+			expire = "1965.1.1.1"
+		}
+	}
+	POR_augusto_manuel_farinha_beirao = {
+		name = "Augusto Manuel Farinha Beirão"
+		country_leader = {
+			ideology = national_rejuvenatism
+			expire = "1965.1.1.1"
+		}
+	}
+	POR_bento_antónio_goncalves = {
+		name = "Bento António Gonçalves"
+		country_leader = {
+			ideology = leninism
+			expire = "1965.1.1.1"
+		}
+	}
+	POR_josé_domingues_dos_santos = {
+		name = "José Domingues dos Santos"
+		country_leader = {
+			ideology = spartakism
+			expire = "1965.1.1.1"
+		}
+	}
+	POR_manuel_joaquim_de_sousa = {
+		name = "Manuel Joaquim de Sousa"
+		country_leader = {
+			ideology = social_anarchism
+			expire = "1965.1.1.1"
+		}
+	}
+	POR_amílcar_ramada_curto = {
+		name = "Amílcar Ramada Curto"
+		country_leader = {
+			ideology = democratic_socialism
+			expire = "1965.1.1.1"
+		}
+	}
+	POR_antónio_de_oliveira_salazar = {
+		name = "António de Oliveira Salazar"
+		country_leader = {
+			ideology = constitutional_dictatorship
+			expire = "1965.1.1.1"
+		}
+	}
+	POR_alfredo_augusto_lopes_pimenta = {
+		name = "Alfredo Augusto Lopes Pimenta"
+		country_leader = {
+			ideology = absolute_monarchy
+			expire = "1965.1.1.1"
+		}
+	}
+	POR_francisco = {
+		name = "Francisco José"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/POR/Portrait_POR_Francisco_Jose.png"
+			}
+		}
+		country_leader = {
+			ideology = reactionary_populism
+			expire = "1965.1.1.1"
+		}
+	}
+	POR_josé_vicente_de_freitas = {
+		name = "José Vicente de Freitas"
+		corps_commander = {
+			traits = {  }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 3
+		}
+	}
+}

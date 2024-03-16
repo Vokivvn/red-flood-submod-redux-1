@@ -1,0 +1,268 @@
+characters = {
+	
+	SPA_ramón_gómez_de_la_serna = {
+		name = "Ramón Gómez de la Serna"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SPA/Portrait_SPA_Ramon_Gomez_Serna.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_DE_LA_SERNA_DESC"
+			ideology = national_rejuvenatism
+			expire = "1965.1.1.1"
+		}
+	}
+	SPA_salvador_dali_base = {
+		name = "Salvador Dalí"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SPA/SPA_Dali.png"
+			}
+		}
+	}
+	SPA_salvador_dali_surrealist = {
+		name = "Salvador Dalí"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SPA/SPA_Dali_L.png"
+			}
+		}
+	}
+	SPA_salvador_dali_monarchist = {
+		name = "Salvador Dalí"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SPA/SPA_Dali_R.png"
+			}
+		}
+	}
+	SPA_ernesto_gimenez_caballero = {
+		name = "Erensto Giménez Caballero"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SPA/SPA_gece.png"
+			}
+		}
+	}
+	SPA_ruiz_de_alda = {
+		name = "Julio Ruiz de Alda"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SPA/SPA_Ruiz.png"
+			}
+		}
+	}
+	SPA_agustin_de_foxa = {
+		name = "Agustín de Foxá"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SPA/SPA_Foxa.png"
+			}
+		}
+	}
+	SPA_dionisio_ridruejo = {
+		name = "Dionisio Ridruejo"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SPA/SPA_Dionisio.png"
+			}
+		}
+	}
+	SPA_ramiro_ledesma_ramos = {
+		name = "Ramiro Ledesma Ramos"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SPA/SPA_Portrait_Ledesma.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_LEDESMA_RAMOS_DESC"
+			ideology = national_syndicalism
+			expire = "1965.1.1.1"
+		}
+	}
+	SPA_josé_antonio_primo_de_rivera = {
+		name = "José Antonio Primo de Rivera"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SPA/Portrait_SPA_Jose_Antonio.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_PRIMO_DE_RIVERA_DESC"
+			ideology = revolutionary_nationalism
+			expire = "1965.1.1.1"
+		}
+	}
+	SPA_emilo_mola = {
+		name = "Emilo Mola"
+		portraits = {
+			army = {
+				large = "gfx/leaders/SPA/SPA_emilo_mola.png"
+			}
+		}
+		field_marshal = {
+			traits = { brilliant_strategist fast_planner }
+			skill = 4
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 5
+			logistics_skill = 4
+			legacy_id = -1
+		}
+	}
+	SPA_jose_sanjurjo = {
+		name = "Jose Sanjurjo"
+		portraits = {
+			army = {
+				large = "gfx/leaders/SPA/SPA_Jose_Sanjurjo.png"
+			}
+		}
+		field_marshal = {
+			traits = { brilliant_strategist fast_planner }
+			skill = 4
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 4
+			logistics_skill = 3
+			legacy_id = -1
+		}
+	}
+	SPA_josé_enrique_varela = {
+		name = "José Enrique Varela"
+		portraits = {
+			army = {
+				large = "gfx/leaders/SPA/SPA_GENERAL_Jose_Enrique_Varela.png"
+			}
+		}
+		corps_commander = {
+			traits = { trait_reckless media_personality armor_officer war_hero trickster }
+			skill = 3
+			attack_skill = 4
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 3
+			legacy_id = 111
+		}
+	}
+	SPA_gonzalo_queipo = {
+		name = "Gonzalo Queipo"
+		portraits = {
+			army = {
+				large = "gfx/leaders/SPA/SPA_Gonzalo_Queipo.png"
+			}
+		}
+		corps_commander = {
+			traits = { war_hero infantry_leader }
+			skill = 2
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 1
+			legacy_id = -1
+		}
+	}
+	SPA_jose_moscardo = {
+		name = "Jose Moscardo"
+		portraits = {
+			army = {
+				large = "gfx/leaders/SPA/SPA_José_Moscardó.png"
+			}
+		}
+		corps_commander = {
+			traits = { war_hero infantry_leader }
+			skill = 2
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 1
+			legacy_id = -1
+		}
+	}
+	SPA_juan_yague = {
+		name = "Juan Yague"
+		portraits = {
+			army = {
+				large = "gfx/leaders/SPA/SPA_Juan_Yague.png"
+			}
+		}
+		corps_commander = {
+			traits = { war_hero infantry_leader }
+			skill = 2
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 1
+			legacy_id = -1
+		}
+	}
+	SPA_miguel_cabanellas_ferrer = {
+		name = "Miguel Cabanellas Ferrer"
+		portraits = {
+			army = {
+				large = "gfx/leaders/SPA/SPA_Miguel_Cabanellas_Ferrer.png"
+			}
+		}
+		corps_commander = {
+			traits = { war_hero infantry_leader }
+			skill = 2
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 1
+			legacy_id = -1
+		}
+	}
+	SPA_mohammed_ben_mizzian = {
+		name = "Mohammed ben Mizzian"
+		portraits = {
+			army = {
+				large = "gfx/leaders/SPA/SPA_Mohammed_ben_Mizzian.png"
+			}
+		}
+		corps_commander = {
+			traits = { war_hero infantry_leader }
+			skill = 2
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 1
+			legacy_id = -1
+		}
+	}
+	SPA_manuel_fal_conde = {
+		name = "Manuel Fal Conde"
+		portraits = {
+			army = {
+				large = "gfx/leaders/SPA/SPA_Manuel_Fal_Conde.png"
+			}
+		}
+		corps_commander = {
+			traits = { war_hero infantry_leader }
+			skill = 2
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 1
+			legacy_id = -1
+		}
+	}
+	SPA_agustín_aznar_gerner = {
+		name = "Agustín Aznar Gerner"
+		portraits = {
+			army = {
+				large = "gfx/leaders/SPA/SPA_Agustín_Aznar_Gerner.png"
+			}
+		}
+		corps_commander = {
+			traits = { war_hero infantry_leader }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 4
+			planning_skill = 2
+			logistics_skill = 2
+			legacy_id = -1
+		}
+	}
+}

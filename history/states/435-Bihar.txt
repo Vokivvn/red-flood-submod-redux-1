@@ -1,0 +1,31 @@
+
+state={
+	id=435
+	name="STATE_435"
+	manpower = 22426500
+
+	state_category = large_city
+
+	history={
+		owner = BIH
+		add_core_of = BIH
+		victory_points = {
+			4516 20
+		}
+		victory_points = {
+			4571 5
+		}
+		victory_points = {
+			7537 3
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+		}
+
+	}
+
+	provinces={
+		1541 1569 1656 4459 4516 4544 4571 7475 7537 10361 10878
+	}
+}

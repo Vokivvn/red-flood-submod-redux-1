@@ -1,0 +1,33 @@
+state={
+	id=673
+	name="STATE_673"
+	manpower = 420300
+	resources={
+		rubber=30 # was: 52
+	}
+
+	state_category = rural
+
+	history= {
+		owner = DEI
+		victory_points = { #Palopo
+			10464 1
+		}
+		victory_points = { #Kolaka
+			12444 1
+		}
+		add_core_of = DEI
+		buildings = {
+			infrastructure = 2
+			10464 = {
+				naval_base = 1
+			}
+			12444 = {
+				naval_base = 1
+			}
+		}
+	}
+	provinces={
+		1561 7336 10450 10464 12330 12444 13570
+	}
+}

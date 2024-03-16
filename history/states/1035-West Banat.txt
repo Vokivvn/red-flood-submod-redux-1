@@ -1,0 +1,23 @@
+state={
+	id=1035
+	name="STATE_1035"
+	manpower = 160406
+
+	state_category = town
+
+	history={
+		victory_points = {
+			11787 1
+		}
+		owner = HUN
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = HUN
+		add_core_of = YUG
+	}
+
+	provinces={
+		6643 11787
+	}
+}

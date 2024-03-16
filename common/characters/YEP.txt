@@ -1,0 +1,57 @@
+characters={
+	YEP_sir_arthur_evans={
+		name="Sir Arthur Evans"
+		portraits={
+			civilian={
+				large="gfx/leaders/YEP/Portrait_Sir_Arthur_Evans.png"
+			}
+		}
+		country_leader={
+			desc="POLITICS_ARTHUR_EVANS_DESC"
+			ideology=constitutional_dictatorship
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	YEP_bernard_freyberg={
+		name="Bernard Freyberg"
+		portraits={
+			civilian={
+				large="gfx/leaders/NZL/Portrait_NZL_bernard_freyberg.png"
+			}
+		}
+		corps_commander={
+			traits={ career_officer infantry_leader }
+			skill=3
+			attack_skill=4
+			defense_skill=2
+			planning_skill=3
+			logistics_skill=4
+			legacy_id=-1
+		}
+		country_leader={
+			
+			ideology=oligarchy
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	YEP_edmund_allenby={
+		name="Edmund Allenby"
+		portraits={
+			army={
+				large="gfx/leaders/Europe/Portrait_Generic_Europe_army_1.png"
+			}
+		}
+		field_marshal={
+			traits={ old_guard }
+			skill=4
+			attack_skill=3
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=3
+			legacy_id=-1
+		}
+	}
+	
+}

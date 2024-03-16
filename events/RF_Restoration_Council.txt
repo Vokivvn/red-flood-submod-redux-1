@@ -1,0 +1,85 @@
+add_namespace = PSL
+
+
+country_event = {
+	id = PSL.1
+	title = PSL.1.t
+	desc = PSL.1.desc
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = PSL.1.a
+		ai_chance = {
+			factor = 50
+		}
+		set_country_flag = PSL_nat_boldyrev
+	}
+	option = {
+		name = PSL.1.b
+		ai_chance = {
+			factor = 50
+		}
+		set_country_flag = PSL_dem_boldyrev
+	}
+}
+
+country_event = {
+	id = PSL.2
+	title = PSL.2.t
+	desc = PSL.2.desc
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = PSL.2.a
+		ai_chance = {
+			factor = 50
+		}
+		OLN = {
+			country_event = {
+				id = PSL.3
+				days = 2
+			}
+			
+		}
+	}
+}
+
+country_event = {
+	id = PSL.3
+	title = PSL.3.t
+	desc = PSL.3.desc
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = PSL.3.a
+		ai_chance = {
+			factor = 50
+		}
+		declare_war_on = {
+			target = PSL
+			type = annex_everything
+		}
+	}
+	option = {
+		name = PSL.3.b
+		ai_chance = {
+			factor = 50
+		}
+		PSL = {
+			annex_country = {
+				target = OLN
+				transfer_troops = yes
+			}
+		}
+	}
+	
+}

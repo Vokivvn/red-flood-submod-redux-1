@@ -1,0 +1,84 @@
+UKR_sabotage_the_moskkkals = {
+	picture = decision_generic_prepare_civil_war
+	allowed = {
+		original_tag = UKR
+	}
+	available={
+		has_war=yes
+	}
+	priority = 100
+	visible = {
+		OR={
+		has_completed_focus = UKR_towards_the_total_liberation
+		has_completed_focus = UKR_nothing_can_hide_from_fanaticism
+		}
+		is_subject = no
+	}
+}
+
+UKR_from_vistula_to_pacific = {
+	icon = GFX_STE_ukrainian_decision_icon
+	picture = decision_generic_prepare_civil_war
+	allowed = {
+		original_tag = UKR
+	}
+	priority = 200
+	visible = {
+		has_completed_focus = UKR_a_revenge_for_eight_hundred_years
+		is_subject = no
+	}
+}
+UKR_the_5_years_plan = {
+	icon = GFX_KAV_join_league_solar
+	picture = decision_generic_prepare_civil_war
+	allowed = {
+		original_tag = UKR
+	}
+	priority = 200
+	visible = {
+		has_completed_focus = UKR_total_reconstruction_of_ukraine
+		is_subject = no
+	}
+}
+UKR_diplomatic_decisions = {
+	icon = GFX_KAV_join_league_solar
+	picture = decision_generic_prepare_civil_war
+	allowed = {
+		original_tag = UKR
+	}
+	priority = 200
+	visible = {
+		is_subject = no
+		NOT = {
+			has_completed_focus = UKR_the_rise_of_the_banderites
+		}
+	}
+}
+UKR_securing_our_utopia = {
+	icon = GFX_KAV_join_league_solar
+	picture = decision_generic_prepare_civil_war
+	allowed = {
+		original_tag = UKR
+	}
+	priority = 200
+	visible = {
+		has_completed_focus = UKR_social_rebirth_of_our_motherland
+		is_subject = no
+		has_war = no
+	}
+}
+
+UKR_worker_englightenment = {
+	icon = GFX_KAV_join_league_solar
+	picture = decision_generic_prepare_civil_war
+	allowed = {
+		original_tag = UKR
+	}
+	priority = 200
+	visible = {
+		has_completed_focus = UKR_enlightenment_of_the_workers
+		is_subject = no
+	}
+}
+
+

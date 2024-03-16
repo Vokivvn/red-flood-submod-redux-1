@@ -1,0 +1,256 @@
+ideas = {
+	country = {
+		POL_warschauer_vertrag = {
+			removal_cost = -1
+			picture = GER_warschauer_vertrag
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				trade_opinion_factor = 0.10
+			}
+			targeted_modifier = {
+				tag = PRS
+				attack_bonus_against = 0.1
+			}
+		}
+		POL_heavy_hand_naczelnik = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				accelerationism_drift = 0.02
+				stability_factor = 0.2
+				political_power_factor = 0.2
+			}
+		}
+		POL_heavy_hand_naczelnik_2 = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = 0.1
+			}
+		}
+		POL_explosive_mix = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				accelerationism_drift = 0.02
+				reactionism_drift = 0.02
+				progressivism_drift = 0.02
+				popular_socialism_drift = 0.02
+				despotism_drift = 0.02
+				vanguard_socialism_drift = 0.02
+				anarchism_drift = 0.02
+				revisionist_socialism_drift = 0.02
+			}
+		}
+		POL_placeholder = {
+			cancel = { has_country_flag = remove_idea }
+			picture = POL_placeholder
+		}
+		POL_lowerstate = {
+			picture = POL_spending
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				consumer_goods_expected_value = -0.15
+			}
+		}
+		POL_spending = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				political_power_cost = 0.50
+				production_speed_infrastructure_factor = 0.20
+				production_speed_industrial_complex_factor = 0.20
+				production_speed_dockyard_factor = 0.20
+			}
+			picture = POL_spending
+		}
+		POL_christiancharity = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				consumer_goods_expected_value = 0.10
+				stability_factor = 0.10
+				surrender_limit = 0.05
+			}
+			picture = POL_christiancharity
+		}
+		POL_ubi = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				consumer_goods_expected_value = 0.05
+				industrial_capacity_factory	= 0.30
+				local_resources_factor = 0.20
+				production_factory_efficiency_gain_factor = 0.30
+				production_speed_air_base_factor = 0.25
+				research_speed_factor = 0.20
+			}
+			picture = POL_ubi
+		}
+		POL_politicalinterest = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				progressivism_drift = 0.05
+				liberalism_drift = 0.05
+				conservatism_drift = 0.05
+				revisionist_socialism_drift = 0.05
+			}
+			picture = POL_politicalinterest
+		}
+		POL_newdemocracy = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_weekly = 0.05
+			}
+			picture = POL_newdemocracy
+		}
+		POL_huzarzy_smierci = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = 0.10
+				political_power_gain = 0.05
+				root_out_resistance_effectiveness_factor = 0.50
+			}
+			picture = POL_huzarzy_smierci
+		}
+		POL_cult_marshal = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				accelerationism_drift = 0.05
+				army_org_factor = 0.05
+			}
+			picture = POL_cultmarshal
+		}
+		POL_zermatic = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				consumer_goods_expected_value = 0.05
+				production_factory_efficiency_gain_factor = 0.05
+				army_attack_factor = 0.025
+				conscription = 0.01
+			}
+			picture = POL_zermatic_spiritualism
+		}
+		POL_neweraneweconomy = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				accelerationism_drift = 0.05
+				production_speed_infrastructure_factor = 0.20
+				production_speed_industrial_complex_factor = 0.20
+				research_speed_factor = 0.15
+				consumer_goods_expected_value = -0.05
+			}
+			picture = POL_neweraneweconomy
+		}
+		POL_dreamofzadruga = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				consumer_goods_expected_value = -0.05
+				production_speed_arms_factory_factor = 0.05
+				production_speed_industrial_complex_factor = 0.05
+			}
+			picture = POL_dreamofzadruga
+		}
+		POL_selfmanagement = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				industry_repair_factor = 0.10
+				production_speed_buildings_factor = 0.1
+			}
+			picture = POL_selfmanagement
+		}
+		POL_masteryovermatter = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				production_speed_industrial_complex_factor = 0.10
+				conversion_cost_civ_to_mil_factor = 0.15
+				industry_air_damage_factor = 0.20
+				production_speed_anti_air_building_factor = 0.10
+				research_speed_factor = 0.1
+			}
+			picture = POL_masteryovermatter
+		}
+		POL_forfreedom = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				ai_focus_aggressive_factor = 0.30
+				drift_defence_factor = 0.20
+				guarantee_cost = -1
+				guarantee_tension = -0.5
+			}
+			picture = POL_forfreedom
+		}
+		POL_ukremigration = {
+			cancel = { has_country_flag = remove_idea }
+			picture = POL_eastandwest
+			modifier = {
+				consumer_goods_expected_value = 0.1
+				monthly_population = -0.05
+			}
+		}
+		POL_eastandwest = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				army_defence_factor	= 0.05
+			}
+			picture = POL_eastandwest
+		}
+		POL_prometheus = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				send_volunteer_size	= 4
+			}
+			picture = POL_prometheus
+		}
+		POL_sharingresponsibilities = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				production_speed_fuel_silo_factor = 0.1
+				production_speed_arms_factory_factor = 0.25
+				production_speed_infrastructure_factor = 0.15
+			}
+			picture = POL_sharingresponsibilities
+		}
+		POL_cult_zymierski = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				surrender_limit = 0.07
+				army_defence_factor = 0.1
+			}
+			picture = POL_cult_zymierski
+		}
+		POL_unitedinspirit = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				research_speed_factor = 0.1
+			}
+			picture = POL_unitedinspirit
+		}
+		POL_absolutedevotion = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				army_attack_factor = 0.1
+				conscription = 0.02
+				despotism_drift = 0.15
+			}
+			picture = POL_absolutedevotion
+		}
+		POL_polishadministrators = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				resistance_target = -0.1
+			}
+			picture = POL_polishadministrators
+		}
+		POL_partisantweaponry = {
+			cancel = { has_country_flag = remove_idea }
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.1 instant = yes
+				}
+			}
+			picture = POL_partisantweaponry
+		}
+		POL_likestorks = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				air_agility_factor = 0.2
+			}
+			picture = POL_likestorks
+		}
+	}
+}

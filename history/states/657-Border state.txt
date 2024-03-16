@@ -1,0 +1,36 @@
+
+state={
+	id=657
+	name="STATE_657"
+	resources={
+		steel=24.000
+	}
+
+	history={
+		owner = ZHR
+		add_core_of = ZHR
+		buildings = {
+			infrastructure = 2
+			air_base = 2
+            arms_factory = 1
+			industrial_complex = 2
+		}
+		victory_points = {
+			7763 3 
+		}
+        victory_points = {
+			7672 3
+		}
+		victory_points = {
+			4725 3
+		}
+	}
+
+	provinces={
+		1739 1802 4246 4725 4731 4779 4805 4829 4847 7616 7672 7754 7801 10655 10722 12261 12591 12654 12678 
+	}
+	manpower= 1508380
+	buildings_max_level_factor=1.000
+	state_category=large_town
+	local_supplies=0.000
+}

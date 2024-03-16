@@ -1,0 +1,14 @@
+characters = {
+	NBE_pierre_ryckmans = {
+		name = "Pierre Ryckmans"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/NBE/Portrait_NBE_Pierre_Ryckmans.png"
+			}
+		}
+		country_leader = {
+			ideology = military_dictatorship
+			expire = "1965.1.1.1"
+		}
+	}
+}

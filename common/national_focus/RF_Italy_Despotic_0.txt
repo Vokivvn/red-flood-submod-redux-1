@@ -1,0 +1,109 @@
+focus_tree = {
+	id = ITA_natrej_starter
+	country = {
+		factor = 0
+		modifier = {
+			add = 9
+			tag = ITA
+		}
+	}
+	continuous_focus_position = { x = 50 y = 2300 }
+	default = no
+	focus = {
+		id = ITA_sigh_relief
+		icon = GFX_focus_ITA_sigh_relief
+		x = 2
+		y = 0
+
+		cost = 3
+		completion_reward = {
+			add_stability = 0.05
+			hidden_effect = {
+				add_to_array = {
+					array = ITA_euro_capitals
+					value = 126.id
+				}
+				add_to_array = {
+					array = ITA_euro_capitals
+					value = 112.id
+				}
+				add_to_array = {
+					array = ITA_euro_capitals
+					value = 41.id
+				}
+				add_to_array = {
+					array = ITA_euro_capitals
+					value = 16.id
+				}
+				add_to_array = {
+					array = ITA_euro_capitals
+					value = 7.id
+				}
+				add_to_array = {
+					array = ITA_euro_capitals
+					value = 64.id
+				}
+				add_to_array = {
+					array = ITA_euro_capitals
+					value = 4.id
+				}
+				add_to_array = {
+					array = ITA_euro_capitals
+					value = 10.id
+				}
+				add_to_array = {
+					array = ITA_euro_capitals
+					value = 763.id
+				}
+				add_to_array = {
+					array = ITA_euro_capitals
+					value = 110.id
+				}
+				add_to_array = {
+					array = ITA_euro_capitals
+					value = 141.id
+				}
+				add_to_array = {
+					array = ITA_euro_capitals
+					value = 107.id
+				}
+				add_to_array = {
+					array = ITA_euro_capitals
+					value = 47.id
+				}
+				add_to_array = {
+					array = ITA_euro_capitals
+					value = 976.id
+				}
+				add_to_array = {
+					array = ITA_euro_capitals
+					value = 202.id
+				}
+				add_to_array = {
+					array = ITA_euro_capitals
+					value = 195.id
+				}
+				add_to_array = {
+					array = ITA_euro_capitals
+					value = 219.id
+				}
+			}
+		}
+	}
+	focus = {
+		id = ITA_christian_socialist_italy
+		icon = GFX_focus_ITA_christian_socialist_italy
+		x = 2
+		y = 1
+
+		cost = 2
+		prerequisite = {
+			focus = ITA_sigh_relief
+		}
+		completion_reward = {
+			country_event = {
+				id = italy.21
+			}
+		}
+	}
+}

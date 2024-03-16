@@ -1,0 +1,20 @@
+state={
+	id = 1139
+	name = "STATE_1139"
+
+	history={
+		owner = KAV
+		buildings = {
+			infrastructure = 2
+            industrial_complex = 1
+		}
+		add_core_of = KAV
+	}
+
+	provinces={
+		4534 4605 6436 12309
+	}
+	manpower=1009413
+	buildings_max_level_factor=1.000
+	state_category=large_town
+}

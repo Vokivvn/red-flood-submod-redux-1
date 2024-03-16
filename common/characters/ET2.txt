@@ -1,0 +1,14 @@
+characters = {
+	ET2_mondelli_selassie = {
+		name = "Mondelli Selassie"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/ET2/Portrait_Mondelli_Selassie.png"
+			}
+		}
+		country_leader = {
+			ideology = futurism
+			expire = "1965.1.1.1"
+		}
+	}
+}

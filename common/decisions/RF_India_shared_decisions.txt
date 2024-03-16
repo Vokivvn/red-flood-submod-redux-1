@@ -1,0 +1,160 @@
+RAJ_fending_off_britain_white = {
+	RAJ_britain_white_white_peace = {
+		cost = 30
+		days_remove = 30
+		visible = {
+			ROOT = {
+				has_defensive_war_with = ENG
+			}
+		}
+		available = {
+			ENG = {
+                NOT = {
+                    OR = {
+                        controls_state = 431
+                        controls_state = 439
+                        controls_state = 429
+                        controls_state = 428
+                        controls_state = 438
+                        controls_state = 430
+                        controls_state = 427
+                        controls_state = 1158
+                        controls_state = 425
+                        controls_state = 423
+                        controls_state = 936
+                    }
+                }
+				casualties > 100000
+			}
+            MAD = {
+                NOT = {
+                    OR = {
+                        controls_state = 431
+                        controls_state = 439
+                        controls_state = 429
+                        controls_state = 428
+                        controls_state = 438
+                        controls_state = 430
+                        controls_state = 427
+                        controls_state = 1158
+                        controls_state = 425
+                        controls_state = 423
+                        controls_state = 936
+                    }
+                }
+				casualties > 100000
+			}
+		}
+		remove_effect  = {
+			ENG = {
+				white_peace = {
+					tag = ROOT
+					message = India_britain_white_peace1
+				}
+				set_truce = {
+					target = ROOT
+					days = 365
+				}
+			}
+			every_country = {
+				limit = {
+					is_in_faction_with = ENG
+				}
+				white_peace = {
+					tag = ROOT
+				}
+				set_truce = {
+					target = ROOT
+					days = 365
+				}
+			}
+			ROOT = {
+				if = {
+					limit = {
+						MYS = {
+							exists = yes
+							is_in_faction_with = ENG
+						}
+					}
+					annex_country = {
+						target = MYS
+					}
+				}
+				if = {
+					limit = {
+						TRA = {
+							exists = yes
+							is_in_faction_with = ENG
+						}
+					}
+					annex_country = {
+						target = TRA
+					}
+				}
+				if = {
+					limit = {
+						HYD = {
+							exists = yes
+							is_in_faction_with = ENG
+						}
+					}
+					annex_country = {
+						target = HYD
+					}
+				}
+				if = {
+					limit = {
+						MAD = {
+							exists = yes
+							is_in_faction_with = ENG
+						}
+					}
+					annex_country = {
+						target = MAD
+					}
+				}
+				every_state = {
+					limit = {
+						is_core_of = MAD
+						NOT = {
+							is_core_of = ROOT
+						}
+					}
+					add_core_of = ROOT
+				}
+				every_state = {
+					limit = {
+						is_core_of = MYS
+						NOT = {
+							is_core_of = ROOT
+						}
+					}
+					add_core_of = ROOT
+				}
+				every_state = {
+					limit = {
+						is_core_of = HYD
+						NOT = {
+							is_core_of = ROOT
+						}
+					}
+					add_core_of = ROOT
+				}
+				every_state = {
+					limit = {
+						is_core_of = TRA
+						NOT = {
+							is_core_of = ROOT
+						}
+					}
+					add_core_of = ROOT
+				}
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

@@ -1,0 +1,9 @@
+GRE_megali = {
+	allowed = {
+		tag = GRE
+	}
+	visible = {
+		is_subject = no
+	}
+	priority = 100
+}

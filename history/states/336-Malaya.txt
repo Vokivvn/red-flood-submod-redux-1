@@ -1,0 +1,30 @@
+
+state={
+	id=336
+	name="STATE_336"
+	manpower = 202960
+
+	state_category = pastoral
+
+	resources={
+		tungsten=189
+	}
+
+	history={
+		owner = MAL
+		victory_points = {
+			7399 1
+		}
+		victory_points = {
+			13538 1
+		}
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = MAL
+	}
+
+	provinces={
+		1392 4384 7399 12255 12271 13538 13539 13540
+	}
+}

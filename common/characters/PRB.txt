@@ -1,0 +1,14 @@
+characters = {
+	PRB_alvaro_pereira_de_carvalho = {
+		name = "Álvaro Pereira de Carvalho"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/PRB/Portrait_PRB_APC.png"
+			}
+		}
+		country_leader = {
+			ideology = oligarchy
+			expire = "1965.1.1.1"
+		}
+	}
+}

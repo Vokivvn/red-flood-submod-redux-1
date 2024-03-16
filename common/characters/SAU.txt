@@ -1,0 +1,14 @@
+characters = {
+	SAU_ibn_saud = {
+		name = "Abdulaziz Al Saud"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/SAU/ibn_saud.png"
+			}
+		}
+		country_leader = {
+			ideology = absolute_monarchy
+			expire = "1965.1.1.1"
+		}
+	}
+}

@@ -1,0 +1,21 @@
+
+state={
+	id=955
+	name="STATE_955"
+	manpower = 51829
+
+	state_category = rural
+	history={
+		owner = ARM
+		buildings = {
+			infrastructure = 1
+		}
+		add_claim_by = PER
+		add_claim_by = ARM
+		add_core_of = AZR
+	}
+
+	provinces={
+		1636
+	}
+}

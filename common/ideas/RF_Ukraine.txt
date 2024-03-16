@@ -1,0 +1,883 @@
+ideas = {
+	country = {
+		UKR_szlachta = {
+			picture = ukr_against
+			removal_cost = -1 
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				industrial_capacity_factory = 0.05
+			}
+		}
+		UKR_for_the_ukrainian_race = {
+			picture = ukr_race
+			removal_cost = -1 
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				consumer_goods_expected_value = -0.05
+				despotism_drift = 0.03 
+			}
+		}
+		UKR_spirit = {
+			picture = ukr_spirit
+			removal_cost = -1 
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				war_support_factor = 0.075
+			}
+			targeted_modifier = {
+			    tag = POL
+			    defense_bonus_against = 0.05
+			}
+		}
+		UKR_attack_bonus = {
+			picture = ukr_attack_bonus
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			targeted_modifier = {
+				tag = ROS
+				attack_bonus_against = 0.02
+				defense_bonus_against = 0.02
+			}
+		}
+		UKR_limiting_army_power = {
+			picture = ukr_purged
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				max_command_power = -30
+				weekly_manpower = -50
+			}
+		}
+		UKR_social_conservative_reforms = {
+			picture = ukr_reformed
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				consumer_goods_expected_value = 0.05
+				stability_factor = 0.05
+			}
+		}
+		##Knights##
+		UKR_pure_ukrainian_race = {
+			picture = ukr_race
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				accelerationism_drift = 0.02
+				political_power_factor = 0.1
+				consumer_goods_expected_value = 0.15
+			}
+		}
+		UKR_pure_ukrainian_race1 = {
+			picture = ukr_race
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				accelerationism_drift = 0.03
+				political_power_factor = 0.1
+				consumer_goods_expected_value = 0.1
+				production_speed_buildings_factor = 0.05
+			}
+		}		
+		UKR_pure_ukrainian_race2 = {
+			picture = ukr_race
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				accelerationism_drift = 0.04
+				political_power_factor = 0.1
+				consumer_goods_expected_value = 0.05
+				production_speed_buildings_factor = 0.15
+			}
+		}			
+		UKR_pure_ukrainian_race3 = {
+			picture = ukr_race
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				accelerationism_drift = 0.05
+				political_power_factor = 0.1
+				production_speed_buildings_factor = 0.15
+				production_factory_start_efficiency_factor = 0.05
+			}
+		}						
+		UKR_ancient_ukrainian_history = {
+			picture = ukr_ancient
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = -0.15
+				industrial_capacity_factory = 0.05
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
+			}
+		}
+		UKR_ancient_ukrainian_history1 = {
+			picture = ukr_ancient
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = -0.10
+				industrial_capacity_factory = 0.10
+				army_core_attack_factor = 0.10
+				army_core_defence_factor = 0.10
+			}
+		}						
+		UKR_ancient_ukrainian_history2 = {
+			picture = ukr_ancient
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = -0.10
+				industrial_capacity_factory = 0.10
+				army_core_attack_factor = 0.10
+				army_core_defence_factor = 0.10
+				research_speed_factor = 0.08
+			}
+		}
+		UKR_ancient_ukrainian_history3 = {
+			picture = ukr_ancient
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = -0.10
+				industrial_capacity_factory = 0.10
+				army_core_attack_factor = 0.10
+				army_core_defence_factor = 0.10
+				research_speed_factor = 0.08
+				army_morale_factor = 0.10
+			}
+		}		
+		UKR_righteous_quest = {
+			picture = ukr_quest
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				land_doctrine_cost_factor = -0.05
+				production_factory_efficiency_gain_factor = 0.05
+				army_org_factor = 0.05
+			}
+		}
+		UKR_righteous_quest1 = {
+			picture = ukr_quest
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				land_doctrine_cost_factor = -0.10
+				production_factory_efficiency_gain_factor = 0.10
+				army_org_factor = 0.10
+			}
+		}				
+		UKR_righteous_quest2 = {
+			picture = ukr_quest
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				land_doctrine_cost_factor = -0.10
+				production_factory_efficiency_gain_factor = 0.10
+				army_org_factor = 0.10
+				research_speed_factor = 0.08
+				production_factory_max_efficiency_factor = 0.05
+			}
+		}				
+		UKR_righteous_quest3 = {
+			picture = ukr_quest
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				land_doctrine_cost_factor = -0.10
+				production_factory_efficiency_gain_factor = 0.15
+				research_speed_factor = 0.08
+				production_factory_max_efficiency_factor = 0.05
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+			}
+		}
+		UKR_righteous_quest4 = {
+			picture = ukr_quest
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				land_doctrine_cost_factor = -0.10
+				production_factory_efficiency_gain_factor = 0.15
+				research_speed_factor = 0.08
+				production_factory_max_efficiency_factor = 0.05
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				winter_attrition = -0.1
+			}
+		}				
+		##Vynnychenko
+		UKR_power_and_beauty = {
+			picture = ukr_power_and_beauty
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				army_org_factor = -0.15
+				war_support_factor = -0.25
+				consumer_goods_expected_value = -0.15
+			}
+		}
+		UKR_power_and_beauty1 = {
+			picture = ukr_power_and_beauty
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				army_org_factor = -0.10
+				war_support_factor = -0.20
+				consumer_goods_expected_value = -0.15
+				land_doctrine_cost_factor = -0.10
+			}
+		}
+		UKR_power_and_beauty2 = {
+			picture = ukr_power_and_beauty
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				army_org_factor = -0.05
+				war_support_factor = -0.15
+				consumer_goods_expected_value = -0.15
+				land_doctrine_cost_factor = -0.10
+				political_power_gain = 0.10
+				army_core_attack_factor = 0.10
+				army_core_defence_factor = 0.10
+			}
+		}
+		UKR_power_and_beauty3 = {
+			picture = ukr_power_and_beauty
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				army_org_factor = -0.01
+				war_support_factor = -0.10
+				consumer_goods_expected_value = -0.15
+				land_doctrine_cost_factor = -0.10
+				political_power_gain = 0.10
+				production_factory_efficiency_gain_factor = 0.05
+				production_factory_max_efficiency_factor = 0.05
+				production_factory_start_efficiency_factor = 0.05
+				army_core_attack_factor = 0.10
+				army_core_defence_factor = 0.10
+				production_speed_buildings_factor = 0.10
+			}
+		}
+		UKR_power_and_beauty4 = {
+			picture = ukr_power_and_beauty
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				army_org_factor = 0.05
+				war_support_factor = -0.10
+				consumer_goods_expected_value = -0.15
+				land_doctrine_cost_factor = -0.10
+				political_power_gain = 0.10
+				production_factory_efficiency_gain_factor = 0.05
+				production_factory_max_efficiency_factor = 0.05
+				production_factory_start_efficiency_factor = 0.05
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
+				production_speed_buildings_factor = -0.05
+				industry_free_repair_factor = 0.05
+				training_time_factor = 0.05
+				max_planning_factor = -0.20
+			}
+		}
+		UKR_orchestra_of_mens = {
+			picture = ukr_power
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				monthly_population = 0.1
+				weekly_manpower = 500
+				max_fuel = 20
+			}
+		}
+		UKR_young_blood = {
+			picture = ukr_young_blood
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				research_speed_factor = 0.01
+			}
+		}	
+		UKR_young_blood1 = {
+			picture = ukr_young_blood
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				research_speed_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.05
+				production_factory_max_efficiency_factor = 0.05
+				production_factory_start_efficiency_factor = 0.05 
+			}
+		}
+		UKR_young_blood2 = {
+			picture = ukr_young_blood
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				research_speed_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.05
+				production_factory_max_efficiency_factor = 0.05
+				production_factory_start_efficiency_factor = 0.05
+				production_speed_fuel_silo_factor = 0.10
+				production_speed_rocket_site_factor = 0.10
+				production_speed_nuclear_reactor_factor = 0.10
+			}
+		}
+		UKR_young_blood3 = {
+			picture = ukr_young_blood
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				research_speed_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.05
+				production_factory_max_efficiency_factor = 0.05
+				production_factory_start_efficiency_factor = 0.05
+				production_speed_fuel_silo_factor = 0.10
+				production_speed_rocket_site_factor = 0.10
+				production_speed_nuclear_reactor_factor = 0.10
+				production_lack_of_resource_penalty_factor = -0.1
+				license_infantry_eq_production_speed_factor = -0.15
+				license_artillery_eq_production_speed_factor = -0.15
+			}
+		}
+		UKR_young_blood4 = {
+			picture = ukr_young_blood
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				research_speed_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.05
+				production_factory_max_efficiency_factor = 0.05
+				production_factory_start_efficiency_factor = 0.05
+				production_speed_fuel_silo_factor = 0.10
+				production_speed_rocket_site_factor = 0.10
+				production_speed_nuclear_reactor_factor = 0.10
+				production_lack_of_resource_penalty_factor = -0.10
+				license_infantry_eq_production_speed_factor = -0.15
+				license_artillery_eq_production_speed_factor = -0.15
+			}
+		}
+		UKR_singing_society = {
+			picture = ukr_singing_society
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				industrial_capacity_factory = 0.01
+				line_change_production_efficiency_factor = 0.02	
+			}
+		}
+		UKR_singing_society1 = {
+			picture = ukr_singing_society
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				industrial_capacity_factory = 0.05
+				line_change_production_efficiency_factor = 0.05
+				army_morale_factor = 0.02
+				local_resources_factor = 0.10
+			}
+		}				
+		UKR_singing_society2 = {
+			picture = ukr_singing_society
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				industrial_capacity_factory = 0.1
+				line_change_production_efficiency_factor = 0.10
+				army_morale_factor = 0.02
+				local_resources_factor = 0.10
+				political_power_gain = 0.10
+				stability_weekly = 0.002
+				progressivism_drift = 0.02
+				revisionist_socialism_drift = 0.02
+				popular_socialism_drift = 0.02
+			}
+		}
+		UKR_singing_society3 = {
+			picture = ukr_singing_society
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				industrial_capacity_factory = 0.1
+				line_change_production_efficiency_factor = 0.10
+				army_morale_factor = 0.10
+				local_resources_factor = 0.10
+				political_power_gain = 0.10
+				stability_weekly = 0.002
+				progressivism_drift = 0.02
+				revisionist_socialism_drift = 0.02
+				popular_socialism_drift = 0.02
+				conversion_cost_civ_to_mil_factor = -0.05
+				conversion_cost_mil_to_civ_factor = -0.05
+				enemy_justify_war_goal_time = 0.25
+			}
+		}					
+		UKR_singing_society4 = {
+			picture = ukr_singing_society
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				industrial_capacity_factory = 0.1
+				line_change_production_efficiency_factor = 0.10
+				army_morale_factor = 0.10
+				local_resources_factor = 0.10
+				political_power_gain = 0.10
+				stability_weekly = 0.002
+				progressivism_drift = 0.02
+				revisionist_socialism_drift = 0.02
+				popular_socialism_drift = 0.02
+				conversion_cost_civ_to_mil_factor = -0.05
+				conversion_cost_mil_to_civ_factor = -0.05
+				enemy_justify_war_goal_time = 0.25
+				
+			}
+		}	
+		UKR_singing_society5 = {
+			picture = ukr_singing_society
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				industrial_capacity_factory = 0.15
+				line_change_production_efficiency_factor = 0.10
+				army_morale_factor = 0.10
+				local_resources_factor = 0.10
+				political_power_gain = 0.10
+				stability_weekly = 0.002
+				progressivism_drift = 0.02
+				revisionist_socialism_drift = 0.02
+				popular_socialism_drift = 0.02
+				conversion_cost_civ_to_mil_factor = -0.05
+				conversion_cost_mil_to_civ_factor = -0.05
+				army_core_defence_factor = 0.10
+				army_core_attack_factor = 0.10
+				enemy_justify_war_goal_time = 0.25
+				local_non_core_manpower = 0.1
+				consumer_goods_expected_value = -0.10
+				production_speed_bunker_factor = 0.1
+			}
+		}
+		##Kaganovich
+		UKR_cracked_eggs = {
+			picture = ukr_eggs
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				army_org_factor = -0.10
+				army_morale_factor =-0.10
+			}
+		}	
+		UKR_cracked_eggs1 = {
+			picture = ukr_eggs
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				army_org_factor = -0.10
+				army_morale_factor =-0.10
+				political_power_factor = 0.10
+				stability_weekly = 0.005
+				progressivism_drift = -0.02
+				liberalism_drift = -0.02
+				conservatism_drift = -0.02
+				despotism_drift = -0.02
+				reactionism_drift = -0.02
+			}
+		}
+		UKR_cracked_eggs2 = {
+			picture = ukr_eggs
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				army_org_factor = -0.10
+				army_morale_factor =-0.10
+				political_power_factor = 0.10
+				stability_weekly = 0.005
+				weekly_manpower = 500
+				progressivism_drift = -0.02
+				liberalism_drift = -0.02
+				conservatism_drift = -0.02
+				despotism_drift = -0.02
+				reactionism_drift = -0.02
+			}
+		}
+		UKR_cracked_eggs3 = {
+			picture = ukr_eggs
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				army_org_factor = 0.01
+				army_morale_factor = 0.01
+				political_power_factor = 0.10
+				stability_weekly = 0.005
+				weekly_manpower = 500
+				progressivism_drift = -0.07
+				liberalism_drift = -0.07
+				conservatism_drift = -0.02
+				despotism_drift = -0.02
+				reactionism_drift = -0.02
+				vanguard_socialism_drift = 0.05
+				research_speed_factor = 0.12
+			}
+		}
+		UKR_cracked_eggs4 = {
+			picture = ukr_eggs
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				industrial_capacity_factory = 0.1
+				army_artillery_attack_factor = 0.01
+				army_infantry_defence_factor = 0.01
+			}
+		}
+		UKR_cracked_eggs5 = {
+			picture = ukr_eggs
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				army_org_factor = 0.10
+				army_morale_factor = 0.10
+				political_power_factor = 0.10
+				stability_weekly = 0.005
+				weekly_manpower = 500
+				progressivism_drift = -0.07
+				liberalism_drift = -0.07
+				conservatism_drift = -0.02
+				despotism_drift = -0.02
+				reactionism_drift = -0.02
+				vanguard_socialism_drift = 0.05
+				research_speed_factor = 0.12
+				industrial_capacity_factory = 0.1
+				army_artillery_attack_factor = 0.01
+				army_infantry_defence_factor = 0.01
+				experience_gain_army = 0.05
+				command_power_gain = 0.5
+				max_planning_factor = 0.15
+			}
+		}
+		UKR_sweet_smell_of_regime = {
+			picture = ukr_aroma
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				min_export = 0.1
+				consumer_goods_expected_value = -0.05
+				production_speed_buildings_factor = 0.05
+			}
+		}
+		UKR_sweet_smell_of_regime1 = {
+			picture = ukr_aroma
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				min_export = 0.2
+				consumer_goods_expected_value = -0.1
+				production_speed_buildings_factor = 0.10
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+				line_change_production_efficiency_factor = 0.1
+				production_factory_start_efficiency_factor = 0.1
+			}
+		}
+		UKR_red_meat = {
+			picture = ukr_meat
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				vanguard_socialism_drift = 0.005
+				industrial_capacity_factory = 0.10
+				production_lack_of_resource_penalty_factor = -0.10
+			}
+		}
+		UKR_red_meat1 = {
+			picture = ukr_meat
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				vanguard_socialism_drift = 0.005
+				industrial_capacity_factory = 0.10
+				production_lack_of_resource_penalty_factor = -0.1
+				monthly_population = 0.1
+			}
+		}
+		UKR_opening_close_market = {
+			picture = ukr_meat
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			targeted_modifier = {
+				tag = POL
+				extra_trade_to_target_factor = 0.10
+			}
+			targeted_modifier = {
+				tag = BLR
+				extra_trade_to_target_factor = 0.10
+			}
+			targeted_modifier = {
+				tag = MOL
+				extra_trade_to_target_factor = 0.10
+			}
+		}
+		#bandera
+		UKR_we_were_born_in_a_great_hour = {
+			picture = ukr_wewereborn
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				despotism_drift = 0.01
+				political_power_gain = 0.75
+				army_org_factor = 0.1
+				weekly_manpower = 500
+			}
+		}
+		UKR_we_were_born_in_a_great_hour2 = {
+			picture = ukr_wewereborn
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				despotism_drift = 0.02
+				political_power_gain = 1
+				army_org_factor = 0.1
+				weekly_manpower = 500
+				industrial_capacity_factory = 0.1
+			}
+		}	
+		UKR_we_were_born_in_a_great_hour3 = {
+			picture = ukr_wewereborn
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				despotism_drift = 0.03
+				political_power_gain = 1
+				army_org_factor = 0.1
+				weekly_manpower = 500
+				planning_speed = 0.1
+				industrial_capacity_factory = 0.1
+				winter_attrition = -0.1
+			}
+		}
+		UKR_from_the_fires_of_war = {
+			picture = ukr_fromthefires
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				industrial_capacity_factory = 0.1
+				despotism_drift = 0.01
+				political_power_gain = 0.75
+				production_speed_buildings_factor = 0.1
+				}
+			}
+		UKR_from_the_fires_of_war2 = {
+			picture = ukr_fromthefires
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				industrial_capacity_factory = 0.1
+				despotism_drift = 0.01
+				political_power_gain = 0.75
+				production_speed_buildings_factor = 0.1
+				consumer_goods_expected_value = -0.1
+				training_time_factor = -0.15
+				army_morale_factor = 0.1
+			}
+		}	
+		UKR_from_the_fires_of_war3 = {
+			picture = ukr_fromthefires
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				industrial_capacity_factory = 0.1
+				despotism_drift = 0.01
+				political_power_gain = 0.75
+				production_speed_buildings_factor = 0.1
+				consumer_goods_expected_value = -0.1
+				training_time_factor = -0.3
+				army_morale_factor = 0.1
+				experience_gain_army = 0.05
+				command_power_gain = 0.05
+			}
+		}
+		UKR_under_the_flag = {
+			picture = ukr_undertheflag
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_weekly = 0.0015
+				despotism_drift = 0.03
+				army_core_attack_factor = 0.15
+			}
+		}
+		UKR_under_the_flag2 = {
+			picture = ukr_undertheflag
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_weekly = 0.002
+				despotism_drift = 0.03
+				army_core_attack_factor = 0.15
+			}
+		}
+		UKR_under_the_flag3 = {
+			picture = ukr_undertheflag
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_weekly = 0.0025
+				despotism_drift = 0.03
+				army_core_attack_factor = 0.15
+				army_speed_factor = 0.1
+				breakthrough_factor = 0.1
+			}
+		}		
+	}
+
+	industrial_concern = {
+		Kyiv_Polytechnic_Institute = {
+			allowed = {
+				original_tag = UKR
+			}
+			traits = {
+				electronics_manufacturer
+			}
+			modifier = {
+				production_speed_radar_station_factor = 0.1
+				production_speed_industrial_complex_factor = 0.05
+			}
+			research_bonus = {
+				electronics = 0.1
+			}
+		}
+		The_Odesa_Consortium = {
+			allowed = {
+				original_tag = UKR
+			}
+			traits = {
+				industrial_manufacturer
+			}
+			modifier = {
+				production_speed_arms_factory_factor = 0.1
+			}
+			research_bonus = {
+				industry = 0.1
+			}
+		}
+	}
+
+	materiel_manufacturer = {
+		designer = yes
+		Kyiv_Arsenal_Factory = {
+			allowed = {
+				original_tag = UKR
+			}
+			traits = {
+				artillery_producer_offense_0
+			}
+			research_bonus = {
+				artillery = 0.1
+			}
+		}
+		Fort_Rifle_Factory = {
+			allowed = {
+				original_tag = UKR
+			}
+			traits = {
+				infantry_equipment_producer_offense_2
+			}
+			research_bonus = {
+				infantry_weapons = 0.1
+			}
+		}
+	}
+
+	tank_manufacturer = {
+		designer = yes
+		Fastiv_Design_Bureau = {
+			allowed = {
+				original_tag = UKR
+			}
+			traits = {
+				small_tank_producer_mass_1
+			}
+			research_bonus = {
+				armor = 0.1
+			}
+		}
+		Berdychiv_Motorcar_Factory = {
+			allowed = {
+				original_tag = UKR
+			}
+			traits = {
+				motorised_equipment_producer_defense_1
+			}
+			research_bonus = {
+				motorized_equipment = 0.1
+			}
+		}
+	}
+
+	naval_manufacturer = {
+		designer = yes
+		Mykolaiv_Shipyards = {
+			allowed = {
+				original_tag = UKR
+			}
+			traits = {
+				capital_ship_producer_defense_1
+			}
+			research_bonus = {
+				dd_tech = 0.1
+				ss_tech = 0.1
+				bb_tech = 0.1
+			}
+		}
+	}
+
+
+	#### Air ####
+	aircraft_manufacturer = {
+		designer = yes
+		Kyiv_Aeronautics_Club = {
+			allowed = {
+				original_tag = UKR
+			}
+			traits = {
+				fighter_producer_offense_1
+			}
+			research_bonus = {
+				light_fighter = 0.1
+			}
+		}
+		Cherkasy_Aircraft_Bureau = {
+			allowed = {
+				original_tag = UKR
+			}
+			traits = {
+				bomber_producer_offense_1
+			}
+			research_bonus = {
+				tactical_bomber = 0.1
+			}
+		}
+		Antonov_Design_Bureau = {
+			allowed = {
+				original_tag = UKR
+			}
+			traits = {
+				bomber_producer_offense_1
+			}
+			research_bonus = {
+				cat_heavy_fighter = 0.2
+			}
+		}
+		Baltic_Black_Sea_Naval_Aeronautics_Society = {
+			allowed = {
+				original_tag = UKR
+			}
+			traits = {
+				nav_cas_producer_offense_2
+			}
+			research_bonus = {
+				naval_bomber = 0.2
+			}
+		}
+	}
+}

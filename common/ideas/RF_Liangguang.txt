@@ -1,0 +1,28 @@
+ideas = {
+	country = {
+		GDP_kmt_nra_rule = {
+			removal_cost = -1
+			picture = GDP_NRA_rule_idea
+			allowed = {
+				original_tag = GDP
+				has_government = despotism
+			}
+			modifier = {
+				political_power_gain = -0.1
+				war_support_factor = 0.05
+				max_command_power = 25
+			}
+		}
+		GDP_whampoa_military_academy = {
+
+			picture = chi_whampoa_military_academy		
+			removal_cost = -1
+			
+			modifier = {
+				experience_gain_army = 0.03
+				army_leader_cost_factor = -0.25
+				army_leader_start_planning_level = 1
+			}
+		}
+	}
+}

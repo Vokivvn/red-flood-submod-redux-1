@@ -1,0 +1,55 @@
+characters={
+	WAF_andrew_cohen={
+		name="Andrew Cohen"
+		portraits={
+			civilian={
+				large="gfx/leaders/WAF/Portrait_Cohen.png"
+			}
+		}
+		country_leader={
+			desc="POLITICS_ANDREW_COHEN_DESC"
+			ideology=social_conservatism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	WAF_edward_akufoaddo={
+		name="Edward Akufo-Addo"
+		portraits={
+			civilian={
+				large="gfx/leaders/WAF/Portrait_AkufoAddo.png"
+			}
+		}
+		country_leader={
+			ideology=anocracy
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	WAF_emile_derlin_zinsou={
+		name="Émile Derlin Zinsou"
+		portraits={
+			civilian={
+				large="gfx/leaders/WAF/Portrait_Derlin.png"
+			}
+		}
+		country_leader={
+			ideology=social_liberalism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	WAF_krobo_edusei={
+		name="Krobo Edusei"
+		portraits={
+			civilian={
+				large="gfx/leaders/WAF/Portrait_Krobo_Edusei.png"
+			}
+		}
+		country_leader={
+			ideology=progressive_democracy
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+}

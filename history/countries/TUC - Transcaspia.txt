@@ -1,0 +1,73 @@
+﻿capital = 584
+
+oob = "TUC"
+
+set_research_slots = 3
+
+#set_country_flag = is_russian_warlord
+
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1
+	tech_recon = 1
+	tech_engineers = 1
+	tech_trucks =1
+	motorised_infantry = 1
+	gw_artillery = 1
+}
+
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+	set_technology = {
+		iw_small_airframe = 1
+		aa_lmg = 1
+		engines_1 = 1
+	}
+}
+if = {
+	limit = { NOT = { has_dlc = "By Blood Alone" } }
+	set_technology = {
+		early_fighter = 1
+	}
+}
+
+set_politics = {
+	ruling_party = right_authoritarianism
+	last_election = "1933.10.25"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	vanguard_socialism = 4
+	popular_socialism = 3
+	anarchism = 0
+	revisionist_socialism = 0
+	anarchism = 0
+	revisionist_socialism = 0
+	progressivism = 0
+	liberalism = 2
+	conservatism = 3
+	right_authoritarianism = 68
+	despotism = 7
+	reactionism = 13
+	accelerationism = 0
+}
+
+#country_event = { id = transcaspia.1 days = 250 }
+
+recruit_character = TUC_wilfred_malleson
+
+add_ideas = {
+	limited_conscription
+	limited_exports
+	civilian_economy
+	TUC_great_game
+	TUC_raj
+	TUC_oil
+	TUC_hiddenbuff
+}
+
+set_stability = 0.5

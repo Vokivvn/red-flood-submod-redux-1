@@ -1,0 +1,30 @@
+ideas = {
+	#################
+	# Country ideas #
+	#################
+	country = {
+		BNG_bangistan_project = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				army_morale_factor = 0.05
+				consumer_goods_expected_value = -0.05
+			}
+			picture = generic_idea_RF_idea_building
+		}
+		BNG_the_eastern_league = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				political_power_factor = 0.05
+				liberalism_drift = 0.01
+				conservatism_drift = 0.01
+				progressivism_drift = 0.01
+				right_authoritarianism_drift = 0.01
+			}
+			picture = generic_idea_RF_idea_revolution
+		}
+	}
+	###########
+	#MINISTERS#
+	###########
+}

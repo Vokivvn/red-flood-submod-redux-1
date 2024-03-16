@@ -1,0 +1,62 @@
+﻿l_english:
+
+#COUNTRY NAME#
+
+FJN_united_guomindang_costag:0 "Nanjing Nationalist Government"
+FJN_united_guomindang_costag_DEF:0 "National Government of the Republic of China"
+FJN_united_guomindang_costag_ADJ:0 "Chinese"
+
+FJN_left_guomindang_costag:0 "Nanjing People's Government"
+FJN_left_guomindang_costag_DEF:0 "People's Revolutionary Government of the Republic of China"
+FJN_left_guomindang_costag_ADJ:0 "Chinese"
+
+FJN_united_CHI:0 "Republic of China"
+FJN_united_CHI_DEF:0 "Republic of China"
+FJN_united_CHI_ADJ:0 "Chinese"
+
+FJN_left_CHI:0 "Chinese Revolutionary Republic"
+FJN_left_CHI_DEF:0 "Chinese People's Revolutionary Republic"
+FJN_left_CHI_ADJ:0 "Chinese"
+#PARTIES#
+FJN_vanguard_socialism_party:0 "CPC - R"
+FJN_popular_socialism_party:0 "CPC - L"
+FJN_anarchism_party:0 "CAM"
+FJN_revisionist_socialism_party:0 "GMD - MinSheng"
+FJN_progressivism_party:0 "GMD - MinQuan"
+FJN_placeholderism_party:0 "GMD - Moderates"
+FJN_liberalism_party:0 "GMD - Moderates"
+FJN_conservatism_party:0 "GMD - MinZu"
+FJN_right_authoritarianism_party:0 "GMD - FEC"
+FJN_despotism_party:0 "NRA"
+FJN_reactionism_party:0 "GMD - SSS"
+FJN_accelerationism_party:0 "YCP"
+FJN_vanguard_socialism_party_long:0 "Communist Party of China - Rightist"
+FJN_popular_socialism_party_long:0 "Communist Party of China - Leftist"
+FJN_anarchism_party_long:0 "Chinese Anarchist Movement"
+FJN_revisionist_socialism_party_long:0 "Guomindang - MinSheng Faction"
+FJN_progressivism_party_long:0 "Guomindang - MinQuan Faction"
+FJN_placeholderism_party_long:0 "Guomindang - Moderate Faction"
+FJN_liberalism_party_long:0 "Guomindang - Moderate Faction"
+FJN_conservatism_party_long:0 "Guomindang - MinZu Faction"
+FJN_right_authoritarianism_party_long:0 "Guomindang - Fujian Executive Committee"
+FJN_despotism_party_long:0 "Military Junta of NRA"
+FJN_reactionism_party_long:0 "Guomindang - Senior Statesman Society"
+FJN_accelerationism_party_long:0 "Young China Party - Fujian"
+#LEADER DESCRIPTIONS#
+POLITICS_SA_ZHEN_BING_DESC:0 "Sa Zhenbing is the people's Admiral, an old-guard officer with a strong track record of working to improve the lot of the people. His governorship of Fujian led him to being invited to be the leader of the provisional people's government in Fujian. As he ages and the new wave of Guomindang revolutionaries come to the fore, his leadership is facing challenge, not least from the influential Wang Jingwei. The divide in the Guomindang has caused great damage, but the party holds firm in the face of Japanese aggression. Fujian will have to find a way past Zhen-bing's rule if it survives."
+POLITICS_GUANGNAI_DESC:0 "Jiang Guangnai"
+POLITICS_MINGSHU_DESC:0 "Chen Mingshu"
+POLITICS_JINGWEI_DESC:0 "Wang Jingwei's rise to prominence is long overdue, after several attempts and opportunities he has come at last to stand as the great unifier of the squabbling factions of the Guomindang and finally complete the work of his predecessors. His record however is chequered, he will have to overcome infighting of his own ranks and the scepticism of the MinZu, the Communists, Young China Party and more besides. If he has the strength and can ammass the allies needed, he may yet be the one to achieve Sun Yat-Sen's dream."
+POLITICS_BOJUN_DESC:0 ""
+
+#IDEAS#
+FJN_jiaoren_faction:0 "Jiaoren Loyalist Faction"
+FJN_jiaoren_faction_desc:0 ""
+FJN_rival_government:0 "Rival Government"
+FJN_rival_government_desc:0 ""
+FJN_socialist_policies:0 "Testing Socialist Policies"
+FJN_socialist_policies_desc:0 ""
+#CUSTOM TOOLTIPS AND FLAGS#
+FJN_jingwei_bby:0 "Wang Jingwei United the Party"
+#DECISIONS (1.5 Update)#
+#FOCUSES#

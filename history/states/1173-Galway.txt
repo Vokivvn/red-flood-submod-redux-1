@@ -1,0 +1,30 @@
+state={
+	id=1173
+	name="STATE_1173"
+	manpower = 285100
+	
+	state_category = "town"
+
+	history = {
+		owner = IRE
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 1
+			dockyard = 1		
+			air_base = 4
+			3396 = {
+				naval_base = 2
+			}
+		}
+		add_core_of = IRE
+		add_core_of = NIR
+		victory_points = {
+			3396 1
+		}
+	}
+
+	provinces = {
+    	3396 9369
+    }
+}

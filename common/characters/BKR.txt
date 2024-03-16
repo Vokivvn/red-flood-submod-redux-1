@@ -1,0 +1,15 @@
+characters = {
+	BKR_enver = {
+		name = "Emir Enver" 
+		portraits = {
+			civilian = {
+				large="gfx/leaders/BKR/Portrait_Enver.png"
+			}
+		}
+		country_leader = {
+			ideology = personalist_dictatorship
+			expire = "1965.1.1.1"
+			id=-1
+		}
+	}
+}

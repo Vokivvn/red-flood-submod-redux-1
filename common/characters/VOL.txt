@@ -1,0 +1,17 @@
+characters={
+	VOL_nicolaas_havenga={
+		name="Nicolaas Havenga"
+		portraits={
+			civilian={
+				large="gfx/leaders/VOL/Portrait_Nicolaas_Havenga.png"
+			}
+		}
+		country_leader={
+			desc="politics_Nicolaas_Havenga_desc"
+			ideology=anocracy
+			expire="1957.3.14.1"
+			id=-1
+		}
+	}
+	
+}

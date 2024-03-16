@@ -1,0 +1,27 @@
+ideas = {
+	country = {
+		GUA_socialist_democracy = {
+			picture = generic_idea_RF_idea_revolution
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				political_power_gain = 0.1
+				stability_factor = 0.10
+				vanguard_socialism_drift = 0.01
+				popular_socialism_drift = 0.01
+				progressivism_drift = 0.01
+				anarchism_drift = 0.01
+				revisionist_socialism_drift = 0.01
+			}
+		}
+		GUA_la_conspiracion = {
+			picture = generic_idea_RF_idea_briefcase
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				political_power_cost = 0.25
+				consumer_goods_expected_value = 0.05
+				war_support_factor = -0.15
+				army_org_factor = -0.2
+			}
+		}
+	}
+}

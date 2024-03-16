@@ -1,0 +1,173 @@
+characters = {
+	SWI_fed_council_lib = {
+		name = "Swiss Federal Council"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/SWI/Portrait_SWI_Federal_council_lib.png"
+			}
+		}
+		country_leader = {
+			ideology = classical_liberalism
+			expire = "1965.1.1.1"
+		}
+	}
+	SWI_fed_council_con = {
+		name = "Swiss Federal Council"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/SWI/Portrait_SWI_Federal_council_con.png"
+			}
+		}
+		country_leader = {
+			ideology = national_conservatism
+			expire = "1965.1.1.1"
+		}
+	}
+	SWI_fed_council_oli = {
+		name = "Swiss Federal Council"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/SWI/Portrait_SWI_Federal_council_rwauth.png"
+			}
+		}
+		country_leader = {
+			ideology = oligarchy
+			expire = "1965.1.1.1"
+		}
+	}
+	SWI_fed_council_dic = {
+		name = "Emil Sonderegger"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/SWI/Portrait_SWI_Emil_Sonderegger.png"
+			}
+			army = {
+				large = "gfx/leaders/SWI/Portrait_SWI_Emil_Sonderegger_General.png"
+			}
+		}
+		country_leader = {
+			ideology = constitutional_dictatorship
+			expire = "1965.1.1.1"
+		}
+		field_marshal = {
+			traits = { unyielding_defender }
+			skill = 4
+			attack_skill = 3
+			defense_skill = 5
+			logistics_skill = 5
+			planning_skill = 4
+		}
+	}
+	SWI_hans_sonderegger = {
+		name = "Hans Konrad Sonderegger"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SWI/SWI_hans_sonderegger_revsoc.png"
+			}
+		}
+		country_leader = {
+			ideology = democratic_socialism
+			expire = "1965.1.1.1"
+		}
+	}
+	SWI_fed_council_reac = {
+		name = "Swiss Federal Council"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/SWI/Portrait_SWI_Federal_council_reac.png"
+			}
+		}
+		country_leader = {
+			ideology = reactionary_populism
+			expire = "1965.1.1.1"
+		}
+	}
+	SWI_fed_council_techno = {
+		name = "Swiss Federal Council"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/SWI/Portrait_SWI_Federal_council_accel.png"
+			}
+		}
+		country_leader = {
+			ideology = technocracy
+			expire = "1965.1.1.1"
+		}
+	}
+	SWI_fed_council_anarch = {
+		name = "Hans Sonderegger"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/SWI/SWI_hans_sonderegger_anarchist.png"
+			}
+		}
+		country_leader = {
+			ideology = social_anarchism
+			expire = "1965.1.1.1"
+		}
+	}
+	SWI_fed_council_lenin = {
+		name = "Swiss Federal Council"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/SWI/Portrait_SWI_Federal_council_vansoc.png"
+			}
+		}
+		country_leader = {
+			ideology = leninism
+			expire = "1965.1.1.1"
+		}
+	}
+	SWI_fed_council_prog = {
+		name = "Swiss Federal Council"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/SWI/Portrait_SWI_Federal_council_socdem.png"
+			}
+		}
+		country_leader = {
+			ideology = progressive_democracy
+			expire = "1965.1.1.1"
+		}
+	}
+	SWI_fed_council_syndie = {
+		name = "Swiss Federal Council"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/SWI/Portrait_SWI_Federal_council_libmarx.png"
+			}
+		}
+		country_leader = {
+			ideology = syndicalism
+			expire = "1965.1.1.1"
+		}
+	}
+	SWI_fed_council_dsa = {
+		name = "Swiss Federal Council"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/SWI/Portrait_SWI_Federal_council_revsoc.png"
+			}
+		}
+		country_leader = {
+			ideology = democratic_socialism
+			expire = "1965.1.1.1"
+		}
+	}
+	SWI_Henri_Guisan = {
+		name = "Henri Guisan"
+		portraits = {
+			army = {
+				large="gfx/leaders/SWI/Portrait_SWI_Henri_Guisan.png"
+			}
+		}
+		corps_commander = {
+			traits = { fast_planner brilliant_strategist unyielding_defender}
+			skill = 5
+			attack_skill = 3
+			defense_skill = 6
+			planning_skill = 4
+			logistics_skill = 5
+		}
+	}
+}

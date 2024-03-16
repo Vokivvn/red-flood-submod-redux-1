@@ -1,0 +1,21 @@
+units = {
+	fleet = {
+		name = "1st Yellow Sea Fleet"			
+		naval_base = 4098  
+		task_force = {
+			name = "Coastal Defence Task Force"
+			location = 9998  
+			ship = { name = "Yamashiro" definition = destroyer start_experience_factor = 0.5 equipment = { ship_hull_light_1 = {amount = 1 creator = "JAP" owner = MAN version_name = "Mutsuki Class"} } }
+			ship = { name = "Hai Lung" definition = destroyer start_experience_factor = 0.5 equipment = { ship_hull_light_1 = {amount = 1 creator = "JAP" owner = MAN version_name = "Mutsuki Class"} } }
+			ship = { name = "Hai Feng" definition = destroyer start_experience_factor = 0.5 equipment = { ship_hull_light_1 = {amount = 1 creator = "JAP" owner = MAN version_name = "Mutsuki Class"} } }
+			ship = { name = "Li Sui" definition = destroyer start_experience_factor = 0.5 equipment = { ship_hull_light_1 = {amount = 1 creator = "JAP" owner = MAN version_name = "Mutsuki Class"} } }
+			ship = { name = "Lin Chi" definition = destroyer start_experience_factor = 0.5 equipment = { ship_hull_light_1 = {amount = 1 creator = "JAP" owner = MAN version_name = "Mutsuki Class"} } }
+
+			ship = { name = "Sendai" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_1 = {amount = 1 creator = "JAP" owner = MAN version_name = "Tenryu Class"} } }
+			ship = { name = "Jintsu" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_1 = {amount = 1 creator = "JAP" owner = MAN version_name = "Tenryu Class"} } }
+			ship = { name = "Nagara" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_1 = {amount = 1 creator = "JAP" owner = MAN version_name = "Kuma/Nagara Class"} } }
+			ship = { name = "Kuan Ning" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_1 = {amount = 1 creator = "JAP" owner = MAN version_name = "Kuma/Nagara Class"} } }
+			ship = { name = "Kuan Ching" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_1 = {amount = 1 creator = "JAP" owner = MAN version_name = "Kuma/Nagara Class"} } }
+		}
+	}
+}

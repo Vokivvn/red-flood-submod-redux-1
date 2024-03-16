@@ -1,0 +1,72 @@
+
+state={
+	id=653
+	name="STATE_653" # Sverdlovsk
+	manpower = 4479139
+	
+	state_category = city
+
+	history={
+		owner = SIB
+		victory_points = {
+			1821 20
+		}
+		victory_points = {
+			12567 10
+		}
+		victory_points = {
+			4824 10
+		}
+		victory_points = {
+			4659 10
+		}
+		victory_points = {
+			10600 5
+		}
+		victory_points = {
+			1812 5
+		}
+		victory_points = {
+			4817 5
+		}
+		victory_points = {
+			12672 5
+		}
+		victory_points = {
+			10716 5
+		}
+		victory_points = {
+			12679 5
+		}
+		victory_points = {
+			1685 5
+		}
+		victory_points = {
+			7757 5
+		}
+		victory_points = {
+			4700 3
+		}
+		victory_points = {
+			1797 3
+		}
+		victory_points = {
+			1860 3
+		}
+		victory_points = {
+			10537 5
+		}
+		buildings = {
+			infrastructure = 3
+			arms_factory = 1
+			industrial_complex = 1
+			air_base = 6
+
+		}
+		add_core_of = SIB
+	}
+
+	provinces={
+		307 1387 1543 1704 1750 1771 1808 1821 1841 1880 4754 4813 4824 7228 7778 9553 10133 10189 10648 10716 10720 12102 12567 12696 1659 4710 4846 7733 10542 10604 12106 12630 12700
+	}
+}

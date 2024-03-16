@@ -1,0 +1,10 @@
+################################
+#tank_manufacturer##############
+################################
+WRT_WRT_russo_balt_organization = {
+	include = generic_motorized_mechanized_organization
+	icon = GFX_idea_WRT_russo_balt
+	allowed = {
+		original_tag = WRT 
+	}
+}

@@ -1,0 +1,269 @@
+#######################
+# Transbaikal - Baba #
+#######################
+
+ideas = {
+	country = {
+		MO2_border_raids = {
+			picture = generic_idea_RF_idea_cavalry
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = -0.25
+				consumer_goods_expected_value = -0.03
+			}
+		}
+		
+		MO2_wild_far_east = {
+			picture = MO2_wild_far_east
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				political_power_factor = -0.35
+				research_speed_factor = -0.25
+			}
+		}
+		
+		MO2_wild_far_east2 = {
+			picture = MO2_wild_far_east
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				political_power_factor = -0.2
+				research_speed_factor = -0.12
+			}
+		}
+		
+		MO2_wild_far_east3 = {
+			picture = MO2_wild_far_east
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				political_power_factor = -0.05
+				research_speed_factor = -0.05
+			}
+		}
+		
+		MO2_white_expats = {
+			picture = generic_idea_RF_idea_dossier
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				conscription_factor = 0.05
+			}
+		}
+		MO2_district_militias = {
+			picture = MO2_military_districts
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				conscription_factor = 0.02
+				stability_factor = 0.07
+			}
+		}
+		MO2_siberian_army = {
+			picture = generic_idea_RF_idea_soldier
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				army_org_factor = 0.05
+				army_core_attack_factor = 0.07
+				army_core_defence_factor = 0.07
+			}
+		}
+		MO2_education = {
+			picture = generic_idea_RF_idea_reading
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				research_speed_factor = 0.1
+				war_support_factor = -0.05
+				consumer_goods_expected_value = 0.06
+			}
+		}
+		MO2_ready_for_siberia = {
+			picture = generic_idea_RF_idea_resist
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				war_support_factor = 0.05
+				stability_factor = 0.05
+				production_speed_buildings_factor = 0.15
+			}
+		}
+		MO2_church = {
+			picture = generic_idea_RF_idea_orthodox
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = 0.1
+				political_power_factor = 0.2
+			}
+		}
+		MO2_cossack_nation_1 = {
+			picture = generic_idea_RF_idea_cavalry
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				cavalry_attack_factor = 0.1
+				cavalry_defence_factor = 0.05
+			}
+		}
+		MO2_cossack_nation_2 = {
+			picture = generic_idea_RF_idea_cavalry
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				enemy_justify_war_goal_time = 0.5
+			}
+		}
+		MO2_i_like_trains = {
+			picture = MO2_trans_siberian_railway
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				production_speed_rail_way_factor = 0.12
+			}
+		}
+		MO2_minorities_good = {
+			picture = generic_idea_RF_idea_agreement
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = 0.1
+				consumer_goods_expected_value = 0.05
+			}
+		}
+		MO2_minorities_bad = {
+			picture = generic_idea_RF_idea_cuffs
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = -0.1
+				consumer_goods_expected_value = -0.05
+			}
+		}
+		MO2_language = {
+			picture = generic_idea_RF_idea_quill
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				research_speed_factor = 0.05
+				political_power_factor = 0.05
+				stability_factor = -0.05
+			}
+		}
+		MO2_loyal_officers = {
+			picture = generic_idea_RF_idea_officer_hat
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				max_command_power = 25
+				command_power_gain = 0.25
+			}
+		}
+		MO2_discipline = {
+			picture = generic_idea_RF_idea_truncheon
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				army_org_factor = 0.1
+			}
+		}
+		MO2_wages = {
+			picture = generic_idea_RF_idea_gold
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
+			}
+		}
+		MO2_poverty = {
+			picture = generic_idea_RF_idea_empty_safe
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				consumer_goods_expected_value = 0.05
+			}
+		}
+		MO2_protection = {
+			picture = generic_idea_RF_idea_crossed_swords
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				
+			}
+		}
+		MO2_violent_economy = {
+			picture = generic_idea_RF_idea_death
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				monthly_population = -0.05
+				consumer_goods_expected_value = -0.05
+			}
+		}
+		MO2_railway_assoc = {
+			picture = MO2_trans_siberian_railway
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				mobilization_speed = 0.1
+				production_speed_rail_way_factor = 0.25
+			}
+		}
+		MO2_FE_trade_comp = {
+			picture = generic_idea_RF_idea_bull
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.07
+				local_resources_factor = 0.2
+			}
+		}
+		MO2_charge = {
+			picture = generic_idea_RF_idea_soldier2
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				cavalry_attack_factor = 0.07
+			}
+		}
+		MO2_winter_soldiers = {
+			picture = generic_idea_RF_idea_skull_flame
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				army_org_factor = 0.05
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+				winter_attrition_factor = -0.25
+				supply_consumption_factor = -0.1
+			}
+		}
+		MO2_terror = {
+			picture = generic_idea_RF_idea_star_flame
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				conscription_factor = 0.02
+				stability_factor = 0.07
+				root_out_resistance_effectiveness_factor = 0.2
+			}
+		}
+		MO2_agri = {
+			picture = generic_idea_RF_idea_grain
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.07
+				local_resources_factor = 0.2
+				monthly_population = 0.05
+				production_speed_arms_factory_factor = 0.1
+				industrial_capacity_factory = 0.05
+			}
+		}
+	}
+
+}

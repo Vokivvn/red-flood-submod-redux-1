@@ -1,0 +1,53 @@
+characters={
+	SLO_siroky = {
+		name = "Viliam Široky"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SLO/Portrait_SLO_Viliam_Siroky.png"
+			}
+		}
+	}
+	
+	SLO_antonin={
+		name="Antonín Janoušek"
+		portraits={
+			civilian={
+				large="gfx/leaders/SLO/Portrait_SLO_Antonin_Janousek.png"
+				}
+		}
+		country_leader={
+			ideology=leninism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	SLO_andrej_hlinka={
+		name="Andrej Hlinka"
+		portraits={
+			civilian={
+				large="gfx/leaders/SLO/Portrait_SLO_Andrej_Hlinka.png"
+			}
+		}
+		country_leader={
+			desc="POLITICS_HLINKA_DESC"
+			ideology=national_conservatism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	
+	SLO_Milan_Hodza = {
+		name = "Milan Hodža"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SLO/Portrait_SLO_Milan_Hodza.png"
+			}
+		}
+		country_leader={
+			ideology=social_liberalism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	
+}

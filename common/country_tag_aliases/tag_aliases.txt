@@ -1,0 +1,9 @@
+ROS={
+	global_event_target = russian_unification
+}
+INT={
+    targets = { POL LIT UKR BLR }
+}
+BAL={
+    targets = { WRU WRR WRT EST LAT }
+}

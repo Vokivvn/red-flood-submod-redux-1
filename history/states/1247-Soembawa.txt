@@ -1,0 +1,28 @@
+state={
+	id=1247
+	name="STATE_1247"
+	manpower=527600
+
+	state_category=pastoral
+
+	history={
+		owner = DEI
+		victory_points = { #Bima
+			12162 1
+		}
+		victory_points = { #Waingapoe
+			12234 1
+		}
+		add_core_of = DEI
+		buildings = {
+			infrastructure = 2
+			12234 = {
+				naval_base = 1
+			}
+		}
+	}
+
+	provinces={
+		10191 12162 12219 12234
+	}
+}

@@ -1,0 +1,24 @@
+
+state={
+	id=1219
+	name="STATE_1219" # Khulna
+	manpower = 3273300
+
+	state_category = large_town
+
+	history={
+		owner = BIH
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = BIH
+		add_core_of = BNG
+		victory_points = {
+			2843 2
+		}
+	}
+
+	provinces={
+		7124 2843 9935
+	}
+}

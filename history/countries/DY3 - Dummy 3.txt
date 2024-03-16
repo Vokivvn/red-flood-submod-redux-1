@@ -1,0 +1,8 @@
+﻿###############
+### WARNING ###
+###############
+# This tag exists to push our tags over the 300 crash range
+# It doesn't play normally at all, for example fuck you
+###############
+
+capital = 1

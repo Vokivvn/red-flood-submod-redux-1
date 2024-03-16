@@ -1,0 +1,14 @@
+characters = {
+	CUI_joão_ponce_de_arruda = {
+		name = "João Ponce de Arruda"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/CUI/Portrait_CUI_JPA.png"
+			}
+		}
+		country_leader = {
+			ideology = progressive_democracy
+			expire = "1965.1.1.1"
+		}
+	}
+}

@@ -1,0 +1,42 @@
+ideas = {
+	country = {
+        TRS_warschauer_vertrag = {
+			removal_cost = -1
+			picture = GER_warschauer_vertrag
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				trade_opinion_factor = 0.10
+			}
+			targeted_modifier = {
+				tag = PRS
+				attack_bonus_against = 0.1
+			}
+		}
+		TRS_hungarian_benefactors = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				extra_trade_to_overlord_factor = 0.2
+				cic_to_overlord_factor = 0.1
+				mic_to_overlord_factor = 0.1
+				autonomy_gain = -0.5
+			}
+		}
+		TRS_red_romanian_idea = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				conscription = 0.005
+				army_morale_factor = 0.1
+				production_speed_buildings_factor = 0.1
+			}
+		}
+		TRS_white_eagles = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				accelerationism_drift = 0.03
+				stability_factor = -0.1
+				custom_modifier_tooltip = TRS_VA_TT
+			}
+		}
+
+	}
+} 

@@ -1,0 +1,50 @@
+characters = {
+	TER_Kaminski = {
+		name = "Bronislav Kaminski"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/TER/Portrait_TER_Kaminsky.png"
+			}
+		}
+		country_leader = {
+			ideology = provisional_government
+			expire = "1965.1.1.1"
+		}
+	}
+    TER_provgov = {
+		name = "Provisional Russian Council"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/TER/Portrait_TER_Provgov.png"
+			}
+		}
+		country_leader = {
+			ideology = provisional_government
+			expire = "1965.1.1.1"
+		}
+	}
+    TER_Biskupsky = {
+		name = "Vasily Biskupsky"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/TER/Portrait_Vasily_Biskupsky.png"
+			}
+		}
+		country_leader = {
+			ideology = national_conservatism
+			expire = "1965.1.1.1"
+		}
+	}
+    TER_Mirobulov = {
+		name = "Yuri Mirolubov"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/TER/Portrait_TER_Mirobulov.png"
+			}
+		}
+		country_leader = {
+			ideology = zadrugism
+			expire = "1965.1.1.1"
+		}
+	}
+}

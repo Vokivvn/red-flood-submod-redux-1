@@ -1,0 +1,83 @@
+characters = {
+	DIN_muhammad_iqbal = {
+		name = "Muhammad Iqbal"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/DIN/Portrait_DIN_Muhammad_Iqbal.png"
+			}
+		}
+		country_leader = {
+			ideology = national_liberalism
+			traits = { humble }
+			expire = "1938.4.21"
+		}
+	}
+	DIN_sajjad_zaheer = {
+		name = "Sajjad Zaheer"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/DIN/Portrait_sajjad_zaheer.png"
+			}
+		}
+		country_leader = {
+			ideology = leninism
+			expire = "1973.1.1"
+		}
+	}
+	DIN_allah_bux_soomro = {
+		name = "Allah Bux Soomro"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/DIN/Portrait_allah_bux_soomro.png"
+			}
+		}
+		country_leader = {
+			ideology = national_conservatism
+			traits = { headstrong }
+			expire = "1943.1.1"
+		}
+	}
+	DIN_sayyid_hussain_ahmad_madani = {
+		name = "Sayyid Hussain Ahmad Madani"
+		country_leader = {
+			ideology = religious_fundamentalism
+			expire = "1965.1.1"
+		}
+	}
+	DIN_Liaquat_Ali_Khan = {
+		name = "Liaquat Ali Khan"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/DIN/Portrait_Liaquat_Ali_Khan.png"
+			}
+		}
+		country_leader = {
+			ideology = national_liberalism
+			expire = "1951.1.1"
+		}
+	}
+	DIN_Aga_Khan = {
+		name = "Aga Khan"
+	}
+	DIN_Feroz_Khan_Noon = {
+		name = "Feroz Khan Noon"
+	}
+	DIN_Ibrahim_Ismail_Chundrigar = {
+		name = "Ibrahim Ismail Chundrigar"
+	}
+	DIN_Malik_Ghulam_Muhammad = {
+		name = "Malik Ghulam Muhammad"
+	}
+	DIN_Chourdhry_Rahmat_Ali = {
+		name = "Choudhry Rahmat Ali"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/DIN/Portrait_Choudhry_Rahmat_Ali.png"
+			}
+		}
+		country_leader = {
+			ideology = national_democracy
+			expire = "1951.1.1"
+		}
+	}
+}

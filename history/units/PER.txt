@@ -1,0 +1,89 @@
+﻿division_template = {
+	name = "Dastebandi Sarbaze Piyade"			# Infantry Brigade
+
+	division_names_group = PER_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+}
+division_template = {
+	name = "Dastebandi Savareh"			# Dastebandi Savareh
+
+	division_names_group = PER_CAV_01
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+	}
+}
+
+
+units = {
+	######## LAND OOB ########
+	##### Royal Iranian Army #####
+	division = {
+		name = "Persian Cossack Brigade"
+		location = 7953
+		division_template = "Dastebandi Savareh"		
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+	division = {
+		name = "1st Dastebandi Savareh"
+		location = 2026
+		division_template = "Dastebandi Savareh"		
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+	division = {
+		name = "South Persia Rifles"
+		location = 10913
+		division_template = "Dastebandi Sarbaze Piyade"		
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+	division = {
+		name = "Imperial Gendarmerie"
+		location = 10837
+		division_template = "Dastebandi Sarbaze Piyade"		
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+	division = {
+		name = "Ashkhabad Division"
+		location = 5029
+		division_template = "Dastebandi Sarbaze Piyade"		
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+
+	######## No Naval OOB ########
+}
+
+
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "PER"
+		}
+		requested_factories = 1
+		progress = 0.31
+		efficiency = 100
+	}
+}

@@ -1,0 +1,110 @@
+################################
+#materiel_manufacturer##############
+################################
+JPR_rev_nambu_arms_organization = {
+	include = generic_infantry_equipment_organization
+	icon = GFX_idea_rev_nambu_arms
+	allowed = {
+		original_tag = JPR 
+	}
+}
+JPR_rev_tokyo_arsenal_organization = {
+	include = generic_support_equipment_organization
+	icon = GFX_idea_rev_tokyo_arsenal
+	allowed = {
+		original_tag = JPR 
+	}
+}
+JPR_rev_osaka_arsenal_organization = {
+	include = generic_support_equipment_organization
+	icon = GFX_idea_rev_osaka_arsenal
+	allowed = {
+		original_tag = JPR 
+	}
+}
+JPR_rev_osaka_arsenal_arty_organization = {
+	include = generic_artillery_offence_attack_organization
+	icon = GFX_idea_rev_osaka_arsenal_arty
+	allowed = {
+		original_tag = JPR 
+	}
+}
+JPR_rev_nissan_motor_organization = {
+	include = generic_motorized_mechanized_organization
+	icon = GFX_idea_rev_nissan_motor
+	allowed = {
+		original_tag = JPR 
+	}
+}
+################################
+#tank_manufacturer##############
+################################
+JPR_rev_ishikawajima_motor_works_organization = {
+	include = generic_mobile_tank_organization
+	icon = GFX_idea_rev_ishikawajima_motor_works
+	allowed = {
+		original_tag = JPR 
+	}
+}
+JPR_rev_hino_motors_organization = {
+	include = generic_medium_tank_organization
+	icon = GFX_idea_rev_hino_motors
+	allowed = {
+		original_tag = JPR 
+	}
+}
+################################
+#naval_manufacturer##############
+################################
+JPR_rev_maizura_organization = {
+	include = generic_black_sea_fleet_organization
+	icon = GFX_idea_rev_maizura
+	allowed = {
+		original_tag = JPR 
+	}
+}
+JPR_rev_kure_organization = {
+	include = generic_task_force_ship_organization
+	icon = GFX_idea_rev_kure
+	allowed = {
+		original_tag = JPR 
+	}
+}
+JPR_rev_osaka_iron_works_organization = {
+	include = generic_submarine_organization
+	icon = GFX_idea_rev_osaka_iron_works
+	allowed = {
+		original_tag = JPR 
+	}
+}
+################################
+#aircraft_manufacturer##############
+################################
+JPR_rev_yokosuka_air_organization = {
+	include = generic_range_focused_aircraft_organization
+	icon = GFX_idea_rev_yokosuka_air
+	allowed = {
+		original_tag = JPR 
+	}
+}
+JPR_rev_mitsubishi_organization = {
+	include = generic_multi_role_aircraft_organization
+	icon = GFX_idea_rev_mitsubishi
+	allowed = {
+		original_tag = JPR 
+	}
+}
+JPR_rev_nakajima_organization = {
+	include = generic_medium_aircraft_organization
+	icon = GFX_idea_rev_nakajima
+	allowed = {
+		original_tag = JPR 
+	}
+}
+JPR_rev_aichi_organization = {
+	include = generic_heavy_aircraft_organization
+	icon = GFX_idea_rev_aichi
+	allowed = {
+		original_tag = JPR 
+	}
+}

@@ -1,0 +1,31 @@
+
+state={
+	id=405
+	name="STATE_405"
+
+	history={
+		owner = TUK
+		victory_points = {
+			1459 25
+		}
+		victory_points = {
+			10148 5
+		}
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 2
+			arms_factory = 1
+			air_base = 1
+		}
+
+		add_core_of = TUK
+
+	}
+
+	provinces={
+		1459 4686 10148 10601 10660
+	}
+	manpower=1223820
+	buildings_max_level_factor=1.000
+	state_category=city
+}

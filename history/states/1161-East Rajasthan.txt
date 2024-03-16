@@ -1,0 +1,31 @@
+state={
+	id=1161
+	name="STATE_1161"
+	manpower = 10246000
+	
+	state_category = large_town
+	
+	resources={
+		
+	}
+
+	history={
+		owner = ARY
+		add_core_of = ARY
+		add_claim_by = INC
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 2
+		}
+		victory_points = {
+			4915 20
+		}
+		victory_points = {
+			7905 5
+		}
+	}
+
+	provinces={
+		1199 2054 2092 4915 4971 7080 7905 12743 12829
+	}
+}

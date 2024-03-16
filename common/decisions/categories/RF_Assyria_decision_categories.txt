@@ -1,0 +1,19 @@
+ASY_pansyrianism_category = {
+	priority = 100
+	allowed = {
+		original_tag = ASY
+	}
+	visible = {
+		has_completed_focus = ASY_pansyrianism
+	}
+}
+ASY_reashurisation_category = {
+	priority = 100
+	allowed = {
+		original_tag = ASY
+	}
+	visible = {
+		has_completed_focus = ASY_reashurisation
+	}
+}
+

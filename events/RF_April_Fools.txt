@@ -1,0 +1,1673 @@
+add_namespace = april_fools
+country_event = {
+	id = april_fools.1
+	title = april_fools.1.t
+	desc = april_fools.1.desc
+	#picture = GFX_report_event_fra_werewolfs
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = { #Himmler gaming
+		name = april_fools.1.a
+		hidden_effect = {
+			every_state = {
+				limit = {
+					is_core_of = GER
+				}
+				add_core_of = HIM
+				add_core_of = GOE
+			}
+			WLL = {
+				set_cosmetic_tag = WLL_LORRAINE
+				transfer_state = 8
+				transfer_state = 920
+				transfer_state = 956
+				transfer_state = 958
+			}
+			GOE = {
+				transfer_state = 58
+				transfer_state = 59
+				transfer_state = 60
+				transfer_state = 61
+				transfer_state = 62
+				transfer_state = 63
+				transfer_state = 64
+				transfer_state = 65
+				transfer_state = 66
+				transfer_state = 67
+				transfer_state = 68
+				load_oob = GOE_civil_war
+				every_neighbor_country = {
+					limit = {
+						NOT = { tag = HIM }
+					}
+					diplomatic_relation = {
+						country = PREV
+						relation = non_aggression_pact
+						active = yes
+					}
+				}
+			}
+			HIM = {
+				transfer_state = 28
+				transfer_state = 42
+				transfer_state = 50
+				transfer_state = 51
+				transfer_state = 52
+				transfer_state = 53
+				transfer_state = 54
+				transfer_state = 55
+				transfer_state = 56
+				transfer_state = 57
+				transfer_state = 844
+				transfer_state = 957
+				transfer_state = 959
+				load_oob = HIM_civil_war
+				declare_war_on = {
+					target = GOE
+					type = annex_everything
+				}
+				every_neighbor_country = {
+					limit = {
+						NOT = { tag = GOE }
+					}
+					diplomatic_relation = {
+						country = PREV
+						relation = non_aggression_pact
+						active = yes
+					}
+				}
+				change_tag_from = ROOT
+			}
+		}
+		ai_chance = { factor = 50 }
+	}
+	option = { #Goering gaming
+		name = april_fools.1.b
+		hidden_effect = {
+			every_state = {
+				limit = {
+					is_core_of = GER
+				}
+				add_core_of = HIM
+				add_core_of = GOE
+			}
+			WLL = {
+				set_cosmetic_tag = WLL_LORRAINE
+				transfer_state = 8
+				transfer_state = 920
+				transfer_state = 956
+				transfer_state = 958
+			}
+			GOE = {
+				transfer_state = 58
+				transfer_state = 59
+				transfer_state = 60
+				transfer_state = 61
+				transfer_state = 62
+				transfer_state = 63
+				transfer_state = 64
+				transfer_state = 65
+				transfer_state = 66
+				transfer_state = 67
+				transfer_state = 68
+				load_oob = GOE_civil_war
+				every_neighbor_country = {
+					limit = {
+						NOT = { tag = HIM }
+					}
+					diplomatic_relation = {
+						country = PREV
+						relation = non_aggression_pact
+						active = yes
+					}
+				}
+				change_tag_from = ROOT
+			}
+			HIM = {
+				transfer_state = 28
+				transfer_state = 42
+				transfer_state = 50
+				transfer_state = 51
+				transfer_state = 52
+				transfer_state = 53
+				transfer_state = 54
+				transfer_state = 55
+				transfer_state = 56
+				transfer_state = 57
+				transfer_state = 844
+				transfer_state = 957
+				transfer_state = 959
+				load_oob = HIM_civil_war
+				declare_war_on = {
+					target = GOE
+					type = annex_everything
+				}
+				every_neighbor_country = {
+					limit = {
+						NOT = { tag = GOE }
+					}
+					diplomatic_relation = {
+						country = PREV
+						relation = non_aggression_pact
+						active = yes
+					}
+				}
+			}
+		}
+		ai_chance = { factor = 50 }
+	}
+}
+
+country_event = {
+	id = april_fools.3
+	title = april_fools.3.title
+	desc = april_fools.3.desc
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = april_fools.3.a
+		ai_chance = { factor = 50 }
+		complete_national_focus = PUR_officially_sneeds
+	}
+	option = {	
+		name = april_fools.3.b
+		ai_chance = { factor = 25 }
+		complete_national_focus = PUR_the_chuck_restoration
+		set_politics = {
+			ruling_party = reactionism
+		}
+	}
+	option = {
+		name = april_fools.3.c
+		ai_chance = { factor = 25 }
+		complete_national_focus = PUR_city_slickers_coup
+		set_politics = {
+			ruling_party = accelerationism
+		}
+	}
+}
+
+country_event = {
+	id = april_fools.4
+	title = april_fools.4.t
+	desc = april_fools.4.desc
+	
+	is_triggered_only = no
+	fire_only_once = yes
+
+	trigger = {
+		tag = PRU
+		date > 1936.5.25
+		has_game_rule = {
+			rule = RF_april_fools_2021
+			option = yes
+		}
+	}
+	
+	option = {
+		name = april_fools.4.a
+		PRU = {
+			set_cosmetic_tag = PRU_great_runas
+			PRU_Ena = {
+				set_nationality = PRU
+				add_country_leader_role = {
+					promote_leader = yes
+					country_leader = { ideology = futurism }
+				}
+			}
+			set_party_name = {
+				ideology = accelerationism
+				name = PRU_great_runas_accelerationism_party
+				long_name = PRU_great_runas_accelerationism_party_long
+			}
+		}
+	}
+}
+
+country_event = {
+	id = april_fools.5
+	title = april_fools.5.t
+	desc = april_fools.5.desc
+	
+	is_triggered_only = no
+	fire_only_once = yes
+
+	trigger = {
+		tag = XIA
+		date > 1937.10.1
+		has_game_rule = {
+			rule = RF_april_fools_2021
+			option = yes
+		}
+	}
+	
+	option = {
+		name = april_fools.5.a
+		XIA = {
+			XIA_Chairman_Meow = {
+				set_nationality = XIA
+				add_country_leader_role = {
+					promote_leader = yes
+					country_leader = { ideology = folk_socialism }
+				}
+			}
+			set_cosmetic_tag = "XIA_PROC"
+			set_politics = {
+				ruling_party = popular_socialism
+			}
+		}
+	}
+}
+
+country_event = {
+	id = april_fools.6
+	title = april_fools.6.t
+	desc = april_fools.6.desc
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = april_fools.6.a
+		add_political_power = 15
+		ai_chance = {
+			base = 2
+		}
+	}
+	option = {
+		name = april_fools.6.b
+		retire_country_leader = yes
+		FRA_Fernand_Léger = {
+			set_nationality = FRA
+			add_country_leader_role = {
+				promote_leader = yes
+				country_leader = { ideology = futurism }
+			}
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+country_event = { #Max's first day in the office Part 1
+	id = april_fools.7
+	title = april_fools.7.t
+	desc = april_fools.7.desc
+	picture = GFX_USA_sam_and_max_office
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = april_fools.7.a
+		country_event = {
+			id = april_fools.15
+		}
+	}
+}
+
+country_event = { #USA demands cold ukraine
+	id = april_fools.8
+	title = april_fools.8.t
+	desc = april_fools.8.desc
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = april_fools.8.a
+		add_political_power = -50
+	}
+	option = {
+		name = april_fools.8.b
+		USA = {
+			transfer_state = 473
+			transfer_state = 470
+			transfer_state = 469
+			transfer_state = 471
+			transfer_state = 739
+			transfer_state = 740
+		}
+	}
+}
+country_event = { #Himmler buys chicken
+	id = april_fools.9
+	title = april_fools.9.t
+	desc = april_fools.9.desc
+	is_triggered_only = no
+	fire_only_once = yes
+
+	trigger = {
+		tag = GER
+		date > 1936.4.10
+		has_game_rule = {
+			rule = RF_april_fools_2021
+			option = yes
+		}
+	}
+
+	option = { #A lot
+		name = april_fools.9.a
+		country_event = {
+			id = april_fools.10
+			days = 4
+		}
+		ai_chance = { factor = 50 }
+	}
+	option = { #None
+		name = april_fools.9.b
+		add_stability = 0.01
+		ai_chance = { factor = 500 }
+	}
+}
+country_event = { #Himmler smokes that agarthan crack
+	id = april_fools.10
+	title = april_fools.10.t
+	desc = april_fools.10.desc
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = april_fools.10.a
+		country_event = {
+			id = april_fools.1
+			days = 17
+		}
+	}
+}
+country_event = { #Yeats time
+	id = april_fools.11
+	title = april_fools.11.t
+	desc = april_fools.11.desc
+	is_triggered_only = no
+	fire_only_once = yes
+
+	trigger = {
+		tag = IRE
+		date > 1936.1.2
+		has_game_rule = {
+			rule = RF_april_fools_2021
+			option = yes
+		}
+	}
+
+	option = {
+		name = april_fools.11.a
+		hidden_effect = {
+			set_country_flag = IRE_books
+			mark_focus_tree_layout_dirty = yes
+			remove_ideas = {
+				IRE_cold_civil_war
+				IRE_economic_catastrophe
+				IRE_black_and_tans
+			}
+		}
+		set_politics = {
+			ruling_party = accelerationism
+		}
+		set_party_name = {
+			ideology = accelerationism
+			long_name = IRE_accelerationism_af_party
+			name = IRE_accelerationism_af_party
+		}
+		IRE_William_Butler_Yeats = {
+			set_nationality = IRE
+			add_country_leader_role = {
+				promote_leader = yes
+				country_leader = { ideology = futurism }
+			}
+		}
+		trigger = {
+			IRE = { is_ai = no }
+		}
+	}
+	option = {
+		name = april_fools.11.a
+		trigger = {
+			IRE = { is_ai = yes }
+		}
+		load_focus_tree = {
+			tree = generic_focus
+		}
+	}
+}
+country_event = { #Yeats time
+	id = april_fools.12
+	title = april_fools.12.t
+	desc = april_fools.12.desc
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = april_fools.12.a
+		custom_effect_tooltip = "IRE_magic"
+	}
+}
+country_event = { #Ultimatum to Canada
+	id = april_fools.13
+	title = april_fools.13.t
+	desc = april_fools.13.desc
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = april_fools.13.a
+		USA = {
+			change_tag_from = CAN
+		}
+		USA = {
+			annex_country = {
+				target = CAN
+				transfer_troops = yes
+			}
+		}
+		ai_chance = {
+			base = 3
+		}
+	}
+	option = {
+		name = april_fools.13.b
+		USA = {
+			country_event = {
+				id = april_fools.14
+				days = 2
+			}
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+country_event = { #Canada Refuses
+	id = april_fools.14
+	title = april_fools.14.t
+	desc = april_fools.14.desc
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = april_fools.14.a
+		create_wargoal = {
+			type = annex_everything
+			target = CAN
+		}
+	}
+}
+country_event = { #Max's first day in the office Part 2
+	id = april_fools.15
+	title = april_fools.15.t
+	desc = april_fools.15.desc
+	picture = GFX_USA_max_office
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = april_fools.15.a
+	}
+}
+country_event = { #A Day In The Life
+	id = april_fools.16
+	title = april_fools.16.t
+	desc = april_fools.16.desc
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = april_fools.16.a
+	}
+}
+country_event = { #My Infraction Part 1
+	id = april_fools.17
+	title = april_fools.17.t
+	desc = april_fools.17.desc
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = april_fools.17.a
+		country_event = {
+			id = april_fools.18
+			days = 1
+		}
+	}
+}
+country_event = { #My Infraction Part 2
+	id = april_fools.18
+	title = april_fools.18.t
+	desc = april_fools.18.desc
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = april_fools.18.a
+		country_event = {
+			id = april_fools.19
+			days = 1
+		}
+	}
+}
+country_event = { #My Infraction Part 3
+	id = april_fools.19
+	title = april_fools.19.t
+	desc = april_fools.19.desc
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = april_fools.19.a
+		country_event = {
+			id = april_fools.20
+			days = 1
+		}
+	}
+}
+country_event = { #My Infraction Part 4
+	id = april_fools.20
+	title = april_fools.20.t
+	desc = april_fools.20.desc
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = april_fools.20.a
+		country_event = {
+			id = april_fools.21
+			days = 1
+		}
+	}
+}
+country_event = { #My Infraction Part 5
+	id = april_fools.21
+	title = april_fools.21.t
+	desc = april_fools.21.desc
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = april_fools.21.a
+	}
+}
+
+country_event = { #Lmao you just got Assaded
+	id = april_fools.30
+	title = april_fools.30.t
+	desc = april_fools.30.desc
+	
+	is_triggered_only = no
+	fire_only_once = yes
+
+	trigger = {
+		tag = SYR
+		date > 1937.7.16
+		has_game_rule = {
+			rule = RF_april_fools_2021
+			option = yes
+		}
+	}
+
+	option = {
+		name = april_fools.30.a
+		ENG = {
+			end_puppet = SYR
+		}
+		set_autonomy = {
+			target = SYR
+			autonomy_state = autonomy_free
+		}
+		SYR = {
+			set_politics = {
+				ruling_party = vanguard_socialism
+			}
+			leave_faction = yes
+			SYR_Bashar_al_Assad = {
+				set_nationality = SYR
+				add_country_leader_role = {
+					promote_leader = yes
+					country_leader = { ideology = national_vanguardism traits = { popular_figurehead } }
+				}
+			}
+		}
+	}
+}
+
+country_event = { #Dengist China
+	id = april_fools.31
+	title = april_fools.31.t
+	desc = april_fools.31.desc
+	
+	is_triggered_only = no
+	fire_only_once = yes
+
+	trigger = {
+		tag = SZC
+		date > 1936.9.13
+		has_game_rule = {
+			rule = RF_april_fools_2021
+			option = yes
+		}
+	}
+	
+	option = {
+		name = april_fools.31.a
+		SZC = {
+			set_politics = {
+				ruling_party = accelerationism
+			}
+			SZC_Deng_Xiaoping = {
+				set_nationality = SZC
+				add_country_leader_role = {
+					promote_leader = yes
+					country_leader = { ideology = national_rejuvenatism }
+				}
+			}
+		}
+	}
+}
+
+country_event = { #Pat i Mat coup
+	id = april_fools.32
+	title = april_fools.32.t
+	desc = april_fools.32.desc
+	
+	is_triggered_only = no
+	fire_only_once = yes
+
+	trigger = {
+		tag = SZC
+		date > 1936.8.12
+		has_game_rule = {
+			rule = RF_april_fools_2021
+			option = yes
+		}
+	}
+	
+	option = {
+		name = april_fools.32.a
+		CZE = {
+			CZE_Pat_Mat = {
+				set_nationality = CZE
+				add_country_leader_role = {
+					promote_leader = yes
+					country_leader = { ideology = oligarchy }
+				}
+			}
+		}
+	}
+}
+
+country_event = { #Sablins abortion
+	id = april_fools.33
+	title = april_fools.33.t
+	desc = april_fools.33.desc
+	picture = GFX_report_event_ZHR_abortedsablin
+	
+	is_triggered_only = no
+	fire_only_once = yes
+
+	trigger = {
+		tag = ZHR
+		date > 1938.11.01
+		has_game_rule = {
+			rule = RF_april_fools_2021
+			option = yes
+		}
+	}
+	
+	option = {
+		name = april_fools.33.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = { #Everything else
+	id = april_fools.50
+	title = april_fools.50.t
+	desc = april_fools.50.desc
+	
+	is_triggered_only = no
+	fire_only_once = yes
+
+	trigger = {
+		tag = ATU
+		date > 1936.1.1
+		has_game_rule = {
+			rule = RF_april_fools_2021
+			option = yes
+		}
+	}
+	
+	option = {
+		name = april_fools.50.a
+		MAG = {
+			MAG_Big_Man_Tyrone = {
+				set_nationality = MAG
+				add_country_leader_role = {
+					promote_leader = yes
+					country_leader = { ideology = folk_socialism }
+				}
+			}
+		}
+		JKR = {
+			JKR_Trixie = {
+				set_nationality = JKR
+				add_country_leader_role = {
+					promote_leader = yes
+					country_leader = { ideology = futurism }
+				}
+			}
+		}
+		CAL = {
+			CAL_Kanye_West = {
+				set_nationality = CAL
+				add_country_leader_role = {
+					promote_leader = yes
+					country_leader = { ideology = national_rejuvenatism }
+				}
+			}
+		}
+		FRA = {
+			retire_country_leader = yes
+			FRA_Antonin_Artaud_troll = {
+				set_nationality = FRA
+				add_country_leader_role = {
+					promote_leader = yes
+					country_leader = { ideology = futurism }
+				}
+			}
+		}
+		FIU = {
+			FIU_Filippo_Tomaso_Marinetti_socdem = {
+				set_nationality = FIU
+				add_country_leader_role = {
+					promote_leader = yes
+					country_leader = { ideology = progressive_democracy }
+				}
+			}
+			FIU_Guido_Keller_revsoc = {
+				set_nationality = FIU
+				add_country_leader_role = {
+					promote_leader = yes
+					country_leader = { ideology = religious_socialism }
+				}
+			}
+			FIU_Harukichi_Shimoi_desp = {
+				set_nationality = FIU
+				add_country_leader_role = {
+					promote_leader = yes
+					country_leader = { ideology = military_dictatorship }
+				}
+			}
+			FIU_Gabriele_D_Annunzio_rightauth = {
+				set_nationality = FIU
+				add_country_leader_role = {
+					promote_leader = yes
+					country_leader = { ideology = anocracy }
+				}
+			}
+			FIU_Mario_Carli_vansoc = {
+				set_nationality = FIU
+				add_country_leader_role = {
+					promote_leader = yes
+					country_leader = { ideology = national_vanguardism }
+				}
+			}
+			FIU_Alceste_De_Ambris_popsoc = {
+				set_nationality = FIU
+				add_country_leader_role = {
+					promote_leader = yes
+					country_leader = { ideology = syndicalism }
+				}
+			}
+			FIU_Renzo_Novatore_anarch = {
+				set_nationality = FIU
+				add_country_leader_role = {
+					promote_leader = yes
+					country_leader = { ideology = individualist_anarchism }
+				}
+			}
+			FIU_Giovanni_Papini_con = {
+				set_nationality = FIU
+				add_country_leader_role = {
+					promote_leader = yes
+					country_leader = { ideology = national_conservatism }
+				}
+			}
+			FIU_The_Tyrantslayer = {
+				set_nationality = FIU
+				add_country_leader_role = {
+					promote_leader = yes
+					country_leader = { ideology = social_liberalism }
+				}
+			}
+			FIU_Amogus_Augustus = {
+				set_nationality = FIU
+				add_country_leader_role = {
+					promote_leader = yes
+					country_leader = { ideology = esoteric_reactionism }
+				}
+			}
+			set_party_name = { 
+				ideology = anarchism
+				long_name = FIU_anarchism_party_af_long 
+				name = FIU_anarchism_party_af 
+			}
+			set_party_name = { 
+				ideology = vanguard_socialism
+				long_name = FIU_vanguard_socialism_party_af_long 
+				name = FIU_vanguard_socialism_party_af 
+			}
+			set_party_name = { 
+				ideology = popular_socialism
+				long_name = FIU_popular_socialism_party_af_long 
+				name = FIU_popular_socialism_party_af 
+			}
+			set_party_name = { 
+				ideology = revisionist_socialism
+				long_name = FIU_revisionist_socialism_party_af_long 
+				name = FIU_revisionist_socialism_party_af 
+			}
+			set_party_name = { 
+				ideology = progressivism
+				long_name = FIU_progressivism_party_af_long 
+				name = FIU_progressivism_party_af 
+			}
+			set_party_name = { 
+				ideology = conservatism
+				long_name = FIU_conservatism_party_af_long 
+				name = FIU_conservatism_party_af 
+			}
+			set_party_name = { 
+				ideology = right_authoritarianism
+				long_name = FIU_right_authoritarianism_party_af_long 
+				name = FIU_right_authoritarianism_party_af 
+			}
+			set_party_name = { 
+				ideology = despotism
+				long_name = FIU_despotism_party_af_long 
+				name = FIU_despotism_party_af 
+			}
+			set_party_name = { 
+				ideology = liberalism
+				long_name = FIU_liberalism_party_af_long 
+				name = FIU_liberalism_party_af 
+			}
+			set_party_name = { 
+				ideology = reactionism
+				long_name = FIU_reactionism_party_af_long 
+				name = FIU_reactionism_party_af 
+			}
+			set_party_name = { 
+				ideology = accelerationism
+				long_name = FIU_accelerationism_party_af_long 
+				name = FIU_accelerationism_party_af 
+			}
+		}
+		SPR = {
+			set_party_name = { 
+				ideology = anarchism
+				long_name = SPA_anarchism_party_af_long 
+				name = SPA_anarchism_party_af 
+			}
+			set_party_name = { 
+				ideology = vanguard_socialism
+				long_name = SPA_vanguard_socialism_party_af_long 
+				name = SPA_vanguard_socialism_party_af 
+			}
+			set_party_name = { 
+				ideology = popular_socialism
+				long_name = SPA_popular_socialism_party_af_long 
+				name = SPA_popular_socialism_party_af 
+			}
+			set_party_name = { 
+				ideology = revisionist_socialism
+				long_name = SPA_revisionist_socialism_party_af_long 
+				name = SPA_revisionist_socialism_party_af 
+			}
+			set_party_name = { 
+				ideology = progressivism
+				long_name = SPA_progressivism_party_af_long 
+				name = SPA_progressivism_party_af 
+			}
+			set_party_name = { 
+				ideology = conservatism
+				long_name = SPA_conservatism_party_af_long 
+				name = SPA_conservatism_party_af 
+			}
+			set_party_name = { 
+				ideology = right_authoritarianism
+				long_name = SPA_right_authoritarianism_party_af_long 
+				name = SPA_right_authoritarianism_party_af 
+			}
+			set_party_name = { 
+				ideology = despotism
+				long_name = SPA_despotism_party_af_long 
+				name = SPA_despotism_party_af 
+			}
+			set_party_name = { 
+				ideology = liberalism
+				long_name = SPA_liberalism_party_af_long 
+				name = SPA_liberalism_party_af 
+			}
+			set_party_name = { 
+				ideology = reactionism
+				long_name = SPA_reactionism_party_af_long 
+				name = SPA_reactionism_party_af 
+			}
+			set_party_name = { 
+				ideology = accelerationism
+				long_name = SPA_accelerationism_party_af_long 
+				name = SPA_accelerationism_party_af 
+			}
+		}
+		SPA = {
+			set_party_name = { 
+				ideology = anarchism
+				long_name = SPA_anarchism_party_af_long 
+				name = SPA_anarchism_party_af 
+			}
+			set_party_name = { 
+				ideology = vanguard_socialism
+				long_name = SPA_vanguard_socialism_party_af_long 
+				name = SPA_vanguard_socialism_party_af 
+			}
+			set_party_name = { 
+				ideology = popular_socialism
+				long_name = SPA_popular_socialism_party_af_long 
+				name = SPA_popular_socialism_party_af 
+			}
+			set_party_name = { 
+				ideology = revisionist_socialism
+				long_name = SPA_revisionist_socialism_party_af_long 
+				name = SPA_revisionist_socialism_party_af 
+			}
+			set_party_name = { 
+				ideology = progressivism
+				long_name = SPA_progressivism_party_af_long 
+				name = SPA_progressivism_party_af 
+			}
+			set_party_name = { 
+				ideology = conservatism
+				long_name = SPA_conservatism_party_af_long 
+				name = SPA_conservatism_party_af 
+			}
+			set_party_name = { 
+				ideology = right_authoritarianism
+				long_name = SPA_right_authoritarianism_party_af_long 
+				name = SPA_right_authoritarianism_party_af 
+			}
+			set_party_name = { 
+				ideology = despotism
+				long_name = SPA_despotism_party_af_long 
+				name = SPA_despotism_party_af 
+			}
+			set_party_name = { 
+				ideology = liberalism
+				long_name = SPA_liberalism_party_af_long 
+				name = SPA_liberalism_party_af 
+			}
+			set_party_name = { 
+				ideology = reactionism
+				long_name = SPA_reactionism_party_af_long 
+				name = SPA_reactionism_party_af 
+			}
+			set_party_name = { 
+				ideology = accelerationism
+				long_name = SPA_accelerationism_party_af_long 
+				name = SPA_accelerationism_party_af 
+			}
+		}
+		CNT = {
+			set_party_name = { 
+				ideology = anarchism
+				long_name = SPA_anarchism_party_af_long 
+				name = SPA_anarchism_party_af 
+			}
+			set_party_name = { 
+				ideology = vanguard_socialism
+				long_name = SPA_vanguard_socialism_party_af_long 
+				name = SPA_vanguard_socialism_party_af 
+			}
+			set_party_name = { 
+				ideology = popular_socialism
+				long_name = SPA_popular_socialism_party_af_long 
+				name = SPA_popular_socialism_party_af 
+			}
+			set_party_name = { 
+				ideology = revisionist_socialism
+				long_name = SPA_revisionist_socialism_party_af_long 
+				name = SPA_revisionist_socialism_party_af 
+			}
+			set_party_name = { 
+				ideology = progressivism
+				long_name = SPA_progressivism_party_af_long 
+				name = SPA_progressivism_party_af 
+			}
+			set_party_name = { 
+				ideology = conservatism
+				long_name = SPA_conservatism_party_af_long 
+				name = SPA_conservatism_party_af 
+			}
+			set_party_name = { 
+				ideology = right_authoritarianism
+				long_name = SPA_right_authoritarianism_party_af_long 
+				name = SPA_right_authoritarianism_party_af 
+			}
+			set_party_name = { 
+				ideology = despotism
+				long_name = SPA_despotism_party_af_long 
+				name = SPA_despotism_party_af 
+			}
+			set_party_name = { 
+				ideology = liberalism
+				long_name = SPA_liberalism_party_af_long 
+				name = SPA_liberalism_party_af 
+			}
+			set_party_name = { 
+				ideology = reactionism
+				long_name = SPA_reactionism_party_af_long 
+				name = SPA_reactionism_party_af 
+			}
+			set_party_name = { 
+				ideology = accelerationism
+				long_name = SPA_accelerationism_party_af_long 
+				name = SPA_accelerationism_party_af 
+			}
+		}
+		BET = {
+			set_cosmetic_tag = "BET_sigma_israel"
+		}
+		ITA = {
+			ITA_Biggus_Dickus = {
+				set_nationality = ITA
+				add_corps_commander_role = {
+					character = ITA_Biggus_Dickus
+					traits = { old_guard war_hero }
+					skill = 5
+					attack_skill = 5
+					defense_skill = 5
+					planning_skill = 5
+					logistics_skill = 5
+				}
+			}
+		}
+		PCN = {
+			PCN_Hyena = {
+				set_nationality = PCN
+				add_corps_commander_role = {
+					character = PCN_Hyena
+					traits = { media_personality infantry_leader }
+					skill = 5
+					attack_skill = 5
+					defense_skill = 4
+					planning_skill = 3
+					logistics_skill = 3
+				}
+			}
+		}
+		FRA = {
+			FRA_L_Imposteur = {
+				set_nationality = FRA
+				add_corps_commander_role = {
+					traits = { trickster brilliant_strategist }
+					skill = 4
+					attack_skill = 3
+					defense_skill = 2
+					planning_skill = 4
+					logistics_skill = 4
+				}
+			}
+		}
+		USA = {
+			set_party_name = { 
+				ideology = right_authoritarianism
+				long_name = USA_right_authoritarianism_party_max 
+				name = USA_right_authoritarianism_party_max 
+			}
+			set_party_name = { 
+				ideology = revisionist_socialism
+				long_name = USA_revisionist_socialism_party_makhno 
+				name = USA_revisionist_socialism_party_makhno 
+			}
+			USA_Max = {
+				set_nationality = USA
+				add_country_leader_role = {
+					promote_leader = yes
+					country_leader = { ideology = anocracy }
+				}
+			}
+			USA_Nestor_Makhno = {
+				set_nationality = USA
+				add_country_leader_role = {
+					promote_leader = yes
+					country_leader = { ideology = agrarian_socialism }
+				}
+			}
+		}
+	}
+}
+
+country_event = { #Goering-Himmler war cleanup
+	id = april_fools.34
+	title = april_fools.34.t
+	desc = april_fools.34.desc
+	is_triggered_only = no
+	fire_only_once = yes
+	
+	trigger = {
+		has_game_rule = {
+			rule = RF_april_fools_2021
+			option = yes
+		}
+		OR = {
+			AND = {
+				tag = GOE
+				GOE = { exists = yes }
+				HIM = { exists = no }
+			}
+			AND = {
+				tag = HIM
+				HIM = { exists = yes }
+				GOE = { exists = no }
+			}
+		}
+	}
+
+	option = {
+		name = april_fools.34.a
+		trigger = {
+			tag = GOE
+		}
+		GER = {
+			add_ideas = GER_goering_victory
+			set_politics = {
+				ruling_party = reactionism
+			}
+			set_cosmetic_tag = "GOE"
+			GOE_Hermann_Goring = {
+				set_nationality = GOE
+				add_country_leader_role = {
+					promote_leader = yes
+					country_leader = { ideology = reactionary_populism }
+				}
+			}
+			hidden_effect = {
+				country_event = {
+					id = april_fools.35
+					days = 1
+				}
+			}
+		}
+		GER = {
+			change_tag_from = GOE
+		}
+	}
+	option = {
+		name = april_fools.34.b
+		trigger = {
+			tag = HIM
+		}
+		GER = {
+			add_ideas = GER_himmler_victory
+			set_politics = {
+				ruling_party = reactionism
+			}
+			set_cosmetic_tag = "HIM"
+			HIM_Heinrich_Himmler = {
+				set_nationality = GER
+				add_country_leader_role = {
+					promote_leader = yes
+					country_leader = { ideology = esoteric_reactionism }
+				}
+			}
+			hidden_effect = {
+				country_event = {
+					id = april_fools.35
+					days = 1
+				}
+			}
+		}
+		GER = {
+			change_tag_from = HIM
+		}
+	}
+	option = {
+		name = april_fools.34.c
+		GER = {
+			hidden_effect = {
+				country_event = {
+					id = april_fools.35
+					days = 1
+				}
+			}
+		}
+		GER = {
+			change_tag_from = HIM
+		}
+	}
+}
+country_event = { #Goering-Himmler war cleanup part 2
+	id = april_fools.35
+	hidden = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		GER = {
+			annex_country = {
+				target = GOE
+				transfer_troops = yes
+			}
+			annex_country = {
+				target = HIM
+				transfer_troops = yes
+			}
+			set_capital = { state = 64 }
+		}
+	}
+}
+
+country_event = { #USA500
+	id = april_fools.36
+	title = april_fools.36.title
+	desc = april_fools.36.desc
+	is_triggered_only = no
+	fire_only_once = yes
+
+	trigger = {
+		tag = USA
+		date > 1936.5.1
+		has_game_rule = {
+			rule = RF_april_fools_2021
+			option = yes
+		}
+	}
+
+	option = {
+		name = april_fools.36.a
+		hidden_effect = {
+			country_event = {
+				id = april_fools.37
+			}
+		}
+	}
+}
+country_event = { #USA501
+	id = april_fools.37
+	title = april_fools.37.title
+	desc = april_fools.37.desc
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = april_fools.37.a
+		set_country_flag = USA_phew
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 10000
+				has_game_rule = {
+					rule = USA_ai_route
+					option = PROGRESSIVES
+				}
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = april_fools.38
+				days = 20
+			}
+		}
+	}
+	option = {
+		name = april_fools.37.b
+		set_country_flag = USA_ohno
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 10000
+				OR = {
+					has_game_rule = {
+						rule = USA_ai_route
+						option = ANARCHISTS
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = april_fools.38
+				days = 20
+			}
+		}
+	}
+}
+country_event = { #USA502
+	id = april_fools.38
+	title = april_fools.38.title
+	desc = april_fools.38.desc
+	picture = GFX_USA_sam_max_and_desoto
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = april_fools.38.a
+		hidden_effect = {
+			country_event = {
+				id = april_fools.39
+				days = 20
+			}
+		}
+	}
+}
+country_event = { #USA503
+	id = april_fools.39
+	title = april_fools.39.title
+	desc = april_fools.39.desc
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = april_fools.39.a
+	}
+}
+country_event = { #USA504
+	id = april_fools.40
+	title = april_fools.40.title
+	desc = april_fools.40.desc
+	is_triggered_only = no
+	fire_only_once = yes
+
+	trigger = {
+		tag = USA
+		date > 1936.10.1
+		has_game_rule = {
+			rule = RF_april_fools_2021
+			option = yes
+		}
+	}
+
+	option = {
+		name = april_fools.40.a
+		hidden_effect = {
+			country_event = {
+				id = april_fools.41
+				days = 30
+			}
+		}
+	}
+}
+country_event = { #USA505
+	id = april_fools.41
+	title = april_fools.41.t
+	desc = april_fools.41.desc
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = april_fools.41.a
+		USA = {
+			load_focus_tree = {
+				tree = USA_cutting
+				keep_completed = yes
+			}
+		}
+		set_politics = {
+			ruling_party = liberalism
+		}
+		hidden_effect = {
+			retire_country_leader = yes
+			USA_Andrew_Melon = {
+				set_nationality = USA
+				add_country_leader_role = {
+					promote_leader = yes
+					country_leader = { ideology = libertarian_capitalism }
+				}
+			}
+			every_country = {
+				limit = {
+					is_ai = no
+				}
+				news_event = {
+					id = news.16
+					days = 3
+				}
+			}
+		}
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 10000
+				has_game_rule = {
+					rule = USA_ai_route
+					option = REPUBLICANS
+				}
+			}
+		}
+	}
+	option = {
+		name = april_fools.41.b
+		load_focus_tree = {
+			tree = USA_max_path
+			keep_completed = yes
+		}
+		set_politics = {
+			ruling_party = right_authoritarianism
+		}
+		hidden_effect = {
+			set_cosmetic_tag = USA_max_flag
+			every_country = {
+				limit = {
+					is_ai = no
+				}
+				news_event = {
+					id = news.170
+					days = 3
+				}
+			}
+		}
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 10000
+				has_game_rule = {
+					rule = USA_ai_route
+					option = AMERICANS
+				}
+			}
+		}
+	}
+	option = {
+		name = april_fools.41.c
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 10000
+				OR = {
+					has_game_rule = {
+						rule = USA_ai_route
+						option = PROGRESSIVES
+					}
+					has_game_rule = {
+						rule = USA_ai_route
+						option = ANARCHISTS
+					}
+				}
+			}
+		}
+		load_focus_tree = {
+			tree = USA_Cox_path
+			keep_completed = yes
+		}
+		set_politics = {
+			ruling_party = progressivism
+		}
+		hidden_effect = {
+			every_country = {
+				limit = {
+					is_ai = no
+				}
+				news_event = {
+					id = news.18
+					days = 3
+				}
+			}
+		}
+	}
+	option = {
+		name = april_fools.41.d
+		load_focus_tree = {
+			tree = USA_technocrats
+			keep_completed = yes
+		}
+		set_politics = {
+			ruling_party = accelerationism
+		}
+		hidden_effect = {
+			every_country = {
+				limit = {
+					is_ai = no
+				}
+				news_event = {
+					id = news.19
+					days = 3
+				}
+			}
+		}
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 10000
+				has_game_rule = {
+					rule = USA_ai_route
+					option = TECHNOCRACTS
+				}
+			}
+		}
+	}
+}
+country_event = { #USA506
+	id = april_fools.42
+	title = april_fools.42.t
+	desc = april_fools.42.d
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = april_fools.42.a
+		set_politics = {
+			ruling_party = revisionist_socialism
+		}
+		USA = {
+			load_focus_tree = {
+				tree = USA_makhno_path
+				keep_completed = yes
+			}
+		}
+	}
+}
+country_event = { #USA507
+	id = april_fools.43
+	title = april_fools.43.title
+	desc = april_fools.43.desc
+	picture = GFX_report_event_johnny_got_his_gun
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = april_fools.43.a
+		PUR = {
+			transfer_state = 384
+			add_state_core = 384
+			transfer_state = 383
+			add_state_core = 383
+			load_oob = "PUR"
+			load_focus_tree = PUR_aprilfools	
+			PUR_Sneed = {
+				set_nationality = PUR
+				add_country_leader_role = {
+					promote_leader = yes
+					country_leader = { ideology = agrarian_socialism }
+				}
+			}
+			PUR_Chuck = {
+				set_nationality = PUR
+				add_country_leader_role = {
+					promote_leader = yes
+					country_leader = { ideology = esoteric_reactionism }
+				}
+			}
+			PUR_Homer_Simpson = {
+				set_nationality = PUR
+				add_country_leader_role = {
+					promote_leader = yes
+					country_leader = { ideology = futurism }
+				}
+			}
+		}
+	}
+	option = {
+		name = april_fools.43.b
+		PUR = {
+			inherit_technology = USA
+			transfer_state = 384
+			add_state_core = 384
+			transfer_state = 383
+			add_state_core = 383
+			load_oob = "PUR"
+			load_focus_tree = PUR_aprilfools
+			PUR_Sneed = {
+				set_nationality = PUR
+				add_country_leader_role = {
+					promote_leader = yes
+					country_leader = { ideology = agrarian_socialism }
+				}
+			}
+			PUR_Chuck = {
+				set_nationality = PUR
+				add_country_leader_role = {
+					promote_leader = yes
+					country_leader = { ideology = esoteric_reactionism }
+				}
+			}
+			PUR_Homer_Simpson = {
+				set_nationality = PUR
+				add_country_leader_role = {
+					promote_leader = yes
+					country_leader = { ideology = futurism }
+				}
+			}
+		}
+		PUR = {
+			change_tag_from = USA
+		}
+	}
+}
+
+country_event = {
+	id = april_fools.44
+	title = april_fools.44.t
+	desc = april_fools.44.desc
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = april_fools.44.a
+	}
+}

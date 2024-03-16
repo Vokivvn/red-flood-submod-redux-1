@@ -1,0 +1,66 @@
+﻿capital = 1155
+
+oob = "MAG"
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	gw_artillery = 1
+}
+
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+	set_technology = {
+		iw_small_airframe = 1
+		aa_lmg = 1
+		engines_1 = 1
+	}
+}
+if = {
+	limit = { NOT = { has_dlc = "By Blood Alone" } }
+	set_technology = {
+		early_fighter = 1
+	}
+}
+
+add_ideas = {
+	mag_jazz_kings_new_swing
+	mag_the_new_rising_sun
+	mag_footprint_of_colonials
+	mag_the_lighthouses_gaze
+	MAG_getfucked
+}
+
+set_convoys = 25
+set_stability = 0.15
+
+# Events
+#country_event = { id = mag.1 days = 30 }
+
+# Politics
+set_popularities = {
+	accelerationism = 42
+	reactionism = 16
+	despotism = 17
+	right_authoritarianism = 15
+	conservatism = 3
+	liberalism = 2
+	progressivism = 0
+	popular_socialism = 5
+	vanguard_socialism = 0
+	anarchism = 0
+}
+set_politics = {
+	ruling_party = accelerationism
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+recruit_character = MAG_razaf_I
+
+recruit_character = MAG_jean_joseph_rabearivelo
+recruit_character = MAG_jacques_rabemananjara
+recruit_character = MAG_samuel_rakotondrabe
+recruit_character = MAG_ravelojaona
+recruit_character = MAG_gabriel_ramanantsoa

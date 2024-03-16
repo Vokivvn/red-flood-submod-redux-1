@@ -1,0 +1,21 @@
+state={
+	id=1257
+	name="STATE_1257"
+	manpower = 1084800
+
+	state_category = rural
+
+	history= {
+		owner = DEI
+		victory_points = { #Parepare
+			1589 1
+		}
+		add_core_of = DEI
+		buildings = {
+			infrastructure = 2
+		}
+	}
+	provinces={
+		1589 13574 13575 13603
+	}
+}

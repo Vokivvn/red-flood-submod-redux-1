@@ -1,0 +1,13 @@
+DAN_GAR_01 = 
+{
+	name = "Polski Garnizon w Gdańsku"
+
+	for_countries = { DAN }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry"  }
+
+	fallback_name = "Polski Garnizon w Gdańsku"
+	
+}

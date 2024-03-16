@@ -1,0 +1,14 @@
+characters = {
+	FLO_brunon_bronisław_lechowski = {
+		name = "Brunon Bronisław Lechowski"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/FLO/Portrait_Bruno_Lechowski.png"
+			}
+		}
+		country_leader = {
+			ideology = social_liberalism
+			expire = "1965.1.1.1"
+		}
+	}
+}

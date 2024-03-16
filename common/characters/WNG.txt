@@ -1,0 +1,34 @@
+characters={
+	WNG_Meijer_Ranneft = {
+		name = "J.W. Meijer Ranneft"
+		portraits = {
+			civilian={
+				large="gfx/leaders/WNG/Portrait_WNG_Meijer_Ranneft.png"
+			}
+		}
+		country_leader = {
+			ideology = colonial_government
+			expire = "1965.1.1.1"
+		}
+	}
+	WNG_Stephanus_Simopyaref = {
+		name = "Stephanus Simopyaref"
+		portraits = {
+			civilian={
+				large="gfx/leaders/WNG/Portrait_WNG_Stephanus_Simopyaref.png"
+			}
+		}
+	}
+	WNG_Cedric_Dover = {
+		name = "Cedric Dover"
+		portraits = {
+			civilian={
+				large="gfx/leaders/WNG/Portrait_WNG_Cedric_Dover.png"
+			}
+		}
+		country_leader = {
+			ideology = technocracy
+			expire = "1965.1.1.1"
+		}
+	}
+}

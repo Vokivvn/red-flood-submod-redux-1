@@ -1,0 +1,91 @@
+characters = {
+	MO4_alexsey_grishin_almazov = {
+		name = "Alexsey Grishin-Almazov"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SIB/Portrait_SIB_Aleksey_Grishin_Almazov.png"
+			}
+		}
+		country_leader = {
+			ideology = military_dictatorship
+			expire = "1965.1.1.1"
+		}
+	}
+	MO4_aleksandr_gattenberger = {
+		name = "Aleksandr Gattenberger"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SIB/Portrait_SIB_Aleksandr_Gattenberger.png"
+			}
+		}
+		country_leader = {
+			ideology = social_liberalism
+			expire = "1965.1.1.1"
+		}
+	}
+	MO4_ivan_serebrennikov = {
+		name = "Ivan Serebrennikov"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SIB/Portrait_SIB_Ivan_Serebrennikov.png"
+			}
+		}
+		country_leader = {
+			ideology = national_conservatism
+			expire = "1965.1.1.1"
+		}
+	}
+	MO4_nikolay_anov = {
+		name = "Nikolay Anov"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SIB/Portrait_SIB_Nikolay_Anov.png"
+			}
+		}
+		country_leader = {
+			ideology = technocracy
+			expire = "1965.1.1.1"
+		}
+	}
+	MO4_yevgeniy_kolosov = {
+		name = "Yevgeniy Kolosov"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SIB/Portrait_SIB_Yevgeniy_Kolosov.png"
+			}
+			army = {
+				large = "gfx/leaders/SIB/Portrait_SIB_Yevgeniy_Kolosov_general.png"
+			}
+		}
+		
+		corps_commander = {
+			traits = { infantry_leader adaptable }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
+	MO4_nikolay_matveyev = {
+		name = "Nikolay Matveyev"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MO4/Portrait_MO4_Nikolay_Matveyev.png"
+			}
+		}
+		country_leader = {
+			ideology = state_socialism
+			expire = "1965.1.1.1"
+		}
+	}
+	MO4_victor_baydalakov = {
+		name = "Victor Baydalakov"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SIB/Portrait_SIB_Viktor_Baydalakov.png"
+			}
+		}
+		
+	}
+}

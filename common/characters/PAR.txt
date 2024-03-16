@@ -1,0 +1,14 @@
+characters = {
+	PAR_rafael_franco = {
+		name = "Rafael Franco"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/PAR/rafael_franco.png"
+			}
+		}
+		country_leader = {
+			ideology = personalist_dictatorship
+			expire = "1965.1.1.1"
+		}
+	}
+}

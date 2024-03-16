@@ -1,0 +1,25 @@
+ideas = {
+
+#################
+# Country ideas #
+#################
+
+	country = {
+		WAF_an_experiment = {
+			modifier = {
+				stability_factor = 0.20
+				war_support_factor = 0.15
+				custom_modifier_tooltip = WAF_an_experiment_tooltip
+			}
+			picture = generic_idea_RF_idea_poppy
+		}
+		WAF_language_division = {
+			modifier = {
+			research_speed_factor = -0.02
+			war_support_factor = -0.55
+			political_power_cost = 0.20
+			}
+			picture = generic_idea_RF_idea_book
+		}
+	}
+}

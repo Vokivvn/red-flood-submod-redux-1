@@ -1,0 +1,65 @@
+################################
+#materiel_manufacturer##############
+################################
+AUS_steyr_organization = {
+	include = generic_infantry_equipment_organization
+	icon = GFX_idea_generic_equipment_company
+	allowed = {
+		original_tag = AUS 
+	}
+}
+################################
+#aircraft_manufacturer##############
+################################
+AUS_aviatik_fighter_organization = {
+	include = generic_general_aircraft_organization
+	icon = GFX_idea_rf_generic_fighter_company
+	allowed = {
+		original_tag = AUS 
+	}
+}
+AUS_aviatik_bomber_organization = {
+	include = generic_general_aircraft_organization
+	icon = GFX_idea_generic_bomber_company
+	allowed = {
+		original_tag = AUS 
+	}
+}
+################################
+#tank_manufacturer##############
+################################
+AUS_ausporsche_organization = {
+	include = generic_tank_organization
+	icon = GFX_idea_AUS_porsche
+	allowed = {
+		original_tag = AUS 
+	}
+}
+AUS_rosenbauer_organization = {
+	include = generic_motorized_mechanized_organization
+	icon = GFX_idea_generic_truck_company
+	allowed = {
+		original_tag = AUS 
+	}
+}
+AUS_daimler_puch_mot_organization = {
+	include = generic_armored_car_organization
+	icon = GFX_idea_generic_truck_company
+	allowed = {
+		original_tag = AUS 
+	}
+}
+AUS_daimler_puch_lt_organization = {
+	include = generic_infantry_tank_organization
+	icon = GFX_idea_generic_light_tank_company
+	allowed = {
+		original_tag = AUS 
+	}
+}
+AUS_daimler_puch_mt_organization = {
+	include = generic_medium_tank_organization
+	icon = GFX_idea_generic_medium_tank_company
+	allowed = {
+		original_tag = AUS 
+	}
+}

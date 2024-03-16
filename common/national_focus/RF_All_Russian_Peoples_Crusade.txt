@@ -1,0 +1,792 @@
+focus_tree = {
+	id = ARC_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = ARC
+		}
+	}
+	continuous_focus_position = { x = 150 y = 2000 }
+
+    focus = {
+		id = ARC_crusade_for_the_east 
+		icon = GFX_goal_ARC_crusade_for_the_east
+		x = 15
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 30
+		}
+		completion_reward = {
+			add_manpower = 10000
+			add_political_power = 100
+		}
+	}
+    focus = {
+		id = ARC_arm_the_patriots 
+		icon = GFX_goal_ARC_arm_the_patriots
+		x = 15
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		available = { 
+		
+		}
+		bypass = { }  
+        prerequisite = {
+            focus = ARC_crusade_for_the_east
+        }      
+		ai_will_do = {
+			factor = 30
+		}
+		completion_reward = {
+			add_equipment_to_stockpile = {
+            type = infantry_equipment
+            amount = 2000
+            producer = RUS
+            }
+            country_event = ARC.1
+		}
+	}
+    focus = {
+		id = ARC_our_friends_the_nationals 
+		icon = GFX_goal_ARC_our_friends_the_nationals
+		x = 13
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		mutually_exclusive = { focus = ARC_our_partners_the_zaibatsu }
+		available = {
+			always = no
+		}
+		bypass = { }  
+        prerequisite = {
+            focus = ARC_arm_the_patriots
+        }      
+		ai_will_do = {
+			factor = 30
+		}
+		completion_reward = {
+			 add_popularity = {
+				ideology = reactionism
+				popularity = 0.2
+			}
+		}
+	}
+    focus = {
+		id = ARC_story_waiting_to_be_told 
+		icon = GFX_goal_ARC_story_waiting_to_be_told
+		x = 15
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		available = { 
+		
+		}
+		bypass = { }  
+        prerequisite = {
+            focus = ARC_arm_the_patriots
+        }      
+		ai_will_do = {
+			factor = 30
+		}
+		completion_reward = {
+			add_stability = 0.1 
+			add_war_support = 0.1
+		}
+	}
+    focus = {
+		id = ARC_our_partners_the_zaibatsu 
+		icon = GFX_goal_ARC_our_partners_the_zaibatsu
+		x = 17
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		available = {
+			always = no
+		}
+		bypass = { }  
+		mutually_exclusive = { focus = ARC_our_friends_the_nationals }
+        prerequisite = {
+            focus = ARC_arm_the_patriots
+        }      
+		ai_will_do = {
+			factor = 30
+		}
+		completion_reward = {
+			set_politics = {
+	         ruling_party = despotism
+             elections_allowed = no
+             }
+			  add_popularity = {
+				ideology = despotism
+				popularity = 0.5
+			}
+			#i think we should make it uhhhh look better?
+		}
+	}
+    focus = {
+		id = ARC_a_russian_remedy 
+		icon = GFX_goal_ARC_a_russian_remedy
+		x = 15
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		available = { 
+		
+		}
+		bypass = { }  
+        prerequisite = {
+            focus = ARC_story_waiting_to_be_told
+        }      
+		ai_will_do = {
+			factor = 30
+		}
+		completion_reward = {
+			every_state = {
+				limit = {
+					is_core_of = ZHR
+				}
+				add_core_of = ARC
+			}
+		}
+	}
+    focus = {
+		id = ARC_an_end_to_spiritual_humiliation 
+		icon = GFX_goal_ARC_an_end_to_spiritual_humiliation
+		x = 12
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		available = { 
+		
+		}
+		bypass = { }  
+        prerequisite = {
+            focus = ARC_a_russian_remedy
+        }      
+		ai_will_do = {
+			factor = 30
+		}
+		completion_reward = {
+			add_ideas = ARC_religious_revival2
+		}
+	}
+	focus = {
+		id = ARC_separating_gospel_from_lies
+		icon = GFX_goal_ARC_separating_gospel_from_lies
+		x = 12
+		y = 7
+		cost = 5
+		available_if_capitulated = yes
+		available = { 
+		
+		}
+		bypass = { }  
+        prerequisite = {
+            focus = ARC_an_end_to_spiritual_humiliation
+        }      
+		ai_will_do = {
+			factor = 30
+		}
+		completion_reward = { 
+			swap_ideas = {
+				remove_idea = ARC_religious_revival1
+				add_idea = ARC_religious_revival2
+			}
+		}
+	}
+    focus = {
+		id = ARC_give_purpose_to_labour 
+		icon = GFX_goal_ARC_give_purpose_to_labour
+		x = 18
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		available = { 
+		
+		}
+		bypass = { }  
+        prerequisite = {
+            focus = ARC_a_russian_remedy
+        }      
+		ai_will_do = {
+			factor = 30
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				} 
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+    focus = {
+		id = ARC_the_all_russian_union_man 
+		icon = GFX_goal_ARC_the_all_russian_union_man
+		x = 18
+		y = 7
+		cost = 5
+		available_if_capitulated = yes
+		available = { 
+		
+		}
+		bypass = { }  
+        prerequisite = {
+            focus = ARC_give_purpose_to_labour
+        }      
+		ai_will_do = {
+			factor = 30
+		}
+		completion_reward = {
+			add_ideas = ARC_all_russian_union_man
+			add_research_slot = 1
+		}
+	}
+    focus = {
+		id = ARC_to_the_boyars_came_dreaded_guests 
+		icon = GFX_goal_ARC_to_the_boyars_came_dreaded_guests
+		x = 15
+		y = 7
+		cost = 5
+		available_if_capitulated = yes
+		available = { 
+		
+		}
+		bypass = {
+			NOT = {
+				country_exists = PSL
+			}
+		} 
+        prerequisite = {
+            focus = ARC_a_russian_remedy
+        }      
+		ai_will_do = {
+			factor = 30
+		}
+		will_lead_to_war_with = PSL
+		completion_reward = { 
+			create_wargoal = {
+				type = annex_everything
+				target = PSL
+			}
+		}
+	}
+    focus = {
+		id = ARC_cut_through_the_mongoloids 
+		icon = GFX_goal_ARC_cut_through_the_mongoloids
+		x = 13
+		y = 8
+		cost = 5
+		available_if_capitulated = yes
+		available = { 
+		
+		}
+		bypass = {
+			NOT = {
+				country_exists = MNS
+			}
+		}
+        prerequisite = {
+            focus = ARC_to_the_boyars_came_dreaded_guests
+        }      
+		ai_will_do = {
+			factor = 30
+		}
+		will_lead_to_war_with = MNS
+		completion_reward = { 
+			create_wargoal = {
+				type = annex_everything
+				target = MNS
+			}
+		}
+	}
+    focus = {
+		id = ARC_end_the_hohol_vermin 
+		icon = GFX_goal_ARC_end_the_hohol_vermin
+		x = 15
+		y = 8
+		cost = 5
+		available_if_capitulated = yes
+		available = { 
+		
+		}
+		bypass = {
+			NOT = {
+				country_exists = GUK
+			}
+		} 
+        prerequisite = {
+            focus = ARC_to_the_boyars_came_dreaded_guests
+        }      
+		ai_will_do = {
+			factor = 30
+		}
+		will_lead_to_war_with = GUK
+		completion_reward = { 
+			create_wargoal = {
+				type = annex_everything
+				target = GUK
+			}
+		}
+	}
+    focus = {
+		id = ARC_bury_the_idolators 
+		icon = GFX_goal_ARC_bury_the_idolators
+		x = 17
+		y = 8
+		cost = 5
+		available_if_capitulated = yes
+		available = { 
+		
+		}
+		bypass = {
+			NOT = {
+				country_exists = FCR
+			}
+		}
+        prerequisite = {
+            focus = ARC_to_the_boyars_came_dreaded_guests
+        }      
+		ai_will_do = {
+			factor = 30
+		}
+		will_lead_to_war_with = FCR
+		completion_reward = { 
+			create_wargoal = {
+				type = annex_everything
+				target = FCR
+			}
+		}
+	}
+    focus = {
+		id = ARC_off_with_the_pitiful_hydra 
+		icon = GFX_goal_ARC_off_with_the_pitiful_hydra
+		x = 15
+		y = 9
+		cost = 5
+		available_if_capitulated = yes
+		available = { 
+		
+		}
+		bypass = {
+			NOT = {
+				country_exists = HAR
+			}
+		} 
+        prerequisite = {
+            focus = ARC_cut_through_the_mongoloids
+        }    
+        prerequisite = {
+            focus = ARC_end_the_hohol_vermin
+        } 
+        prerequisite = {
+            focus = ARC_bury_the_idolators
+        }   
+		ai_will_do = {
+			factor = 30
+		}
+		will_lead_to_war_with = HAR
+		completion_reward = { 
+			create_wargoal = {
+				type = annex_everything
+				target = HAR
+			}
+		}
+	}
+    focus = {
+		id = ARC_to_action_to_action 
+		icon = GFX_goal_ARC_to_action_to_action
+		x = 15
+		y = 10
+		cost = 5
+		available_if_capitulated = yes
+		available = { 
+		
+		}
+		bypass = {
+			NOT = {
+				country_exists = PRI
+			}
+		} 
+        prerequisite = {
+            focus = ARC_off_with_the_pitiful_hydra
+        }      
+		ai_will_do = {
+			factor = 30
+		}
+		will_lead_to_war_with = PRI
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = PRI
+			}
+		}
+	}
+    focus = {
+		id = ARC_a_saviour_most_merciful 
+		icon = GFX_goal_ARC_a_saviour_most_merciful
+		x = 11
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		available = { 
+		
+		}
+		bypass = { }  
+        prerequisite = {
+            focus = ARC_our_friends_the_nationals
+        }      
+		ai_will_do = {
+			factor = 30
+		}
+		completion_reward = {
+			add_stability = -0.1
+			add_war_support = 0.15
+		}
+	}
+    focus = {
+		id = ARC_everything_for_the_country 
+		icon = GFX_goal_ARC_everything_for_the_country
+		x = 9
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		available = { 
+		
+		}
+		bypass = { }  
+        prerequisite = {
+            focus = ARC_a_saviour_most_merciful
+        }      
+		ai_will_do = {
+			factor = 30
+		}
+		completion_reward = {
+			add_ideas = ARC_the_cells_system
+		}
+	}
+    focus = {
+		id = ARC_fight_for_your_soil 
+		icon = GFX_goal_ARC_fight_for_your_soil
+		x = 8
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		available = { 
+		
+		}
+		bypass = { }  
+        prerequisite = {
+            focus = ARC_everything_for_the_country
+        }      
+		ai_will_do = {
+			factor = 30
+		}
+		completion_reward = {
+			add_ideas = ARC_national_defense
+			swap_ideas = {
+				remove_idea = civilian_economy
+				add_idea = war_economy
+			}
+		}
+	}
+    focus = {
+		id = ARC_to_ressurect_a_race 
+		icon = GFX_goal_ARC_to_ressurect_a_race
+		x = 10
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		available = { 
+		
+		}
+		bypass = { }  
+        prerequisite = {
+            focus = ARC_everything_for_the_country
+        }      
+		ai_will_do = {
+			factor = 30
+		}
+		completion_reward = {
+			add_ideas = ARC_russian_resurrection
+		}
+	}
+    focus = {
+		id = ARC_renaissance 
+		icon = GFX_goal_ARC_renaissance
+		x = 9
+		y = 7
+		cost = 5
+		available_if_capitulated = yes
+		available = { 
+		
+		}
+		bypass = { }  
+        prerequisite = {
+            focus = ARC_fight_for_your_soil
+        } 
+        prerequisite = {
+            focus = ARC_to_ressurect_a_race
+        }      
+		ai_will_do = {
+			factor = 30
+		}
+		completion_reward = {
+			add_ideas = ARC_crown_and_cross
+		}
+	}
+    focus = {
+		id = ARC_all_heed_the_kapitan 
+		icon = GFX_goal_ARC_all_heed_the_kapitan
+		x = 10
+		y = 10
+		cost = 5
+		available_if_capitulated = yes
+		available = { 
+		
+		}
+		bypass = { }  
+        prerequisite = {
+            focus = ARC_renaissance
+        }      
+		ai_will_do = {
+			factor = 30
+		}
+		completion_reward = {
+			add_political_power = 75
+			add_ideas = ARC_oath_of_loyalty
+		}
+	}
+    focus = {
+		id = ARC_a_man_of_the_many 
+		icon = GFX_goal_ARC_a_man_of_the_many
+		x = 19
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		available = { 
+		
+		}
+		bypass = { }  
+        prerequisite = {
+            focus = ARC_our_partners_the_zaibatsu
+        }      
+		ai_will_do = {
+			factor = 30
+		}
+		completion_reward = {
+			add_ideas = ARC_a_father_to_his_men
+		}
+	}
+    focus = {
+		id = ARC_the_world_under_one_roof
+		icon = GFX_goal_ARC_the_world_under_one_roof
+		x = 21
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		available = { 
+		
+		}
+		bypass = { }  
+        prerequisite = {
+            focus = ARC_a_man_of_the_many
+        }      
+		ai_will_do = {
+			factor = 30
+		}
+		completion_reward = {
+			add_ideas = ARC_unity_government
+		}
+	}
+    focus = {
+		id = ARC_spirit_of_new_russia 
+		icon = GFX_goal_ARC_spirit_of_new_russia
+		x = 20
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		available = { 
+		
+		}
+		bypass = { }  
+        prerequisite = {
+            focus = ARC_the_world_under_one_roof
+        }      
+		ai_will_do = {
+			factor = 30
+		}
+		completion_reward = {
+			add_ideas = ARC_new_russia
+		}
+	}
+    focus = {
+		id = ARC_soul_of_old_rus 
+		icon = GFX_goal_ARC_soul_of_old_rus
+		x = 22
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		available = { 
+		
+		}
+		bypass = { }  
+        prerequisite = {
+            focus = ARC_the_world_under_one_roof
+        }      
+		ai_will_do = {
+			factor = 30
+		}
+		completion_reward = {
+			add_ideas = ARC_modern_boyars
+			swap_ideas = {
+				remove_idea = civilian_economy
+				add_idea = war_economy
+			}
+		}
+	}
+    focus = {
+		id = ARC_great_restoration 
+		icon = GFX_goal_ARC_great_restoration
+		x = 21
+		y = 7
+		cost = 5
+		available_if_capitulated = yes
+		available = { 
+		
+		}
+		bypass = { }  
+        prerequisite = {
+            focus = ARC_spirit_of_new_russia
+        }  
+        prerequisite = {
+            focus = ARC_soul_of_old_rus
+        }    
+		ai_will_do = {
+			factor = 30
+		}
+		completion_reward = {
+			add_ideas = ARC_great_social_justice
+		}
+	}
+    focus = {
+		id = ARC_heed_all_follow_one 
+		icon = GFX_goal_ARC_heed_all_follow_one
+		x = 20
+		y = 10
+		cost = 5
+		available_if_capitulated = yes
+		available = { 
+		
+		}
+		bypass = { }  
+        prerequisite = {
+            focus = ARC_great_restoration
+        }      
+		ai_will_do = {
+			factor = 30
+		}
+		completion_reward = { 
+			add_popularity = {
+				ideology = right_authoritarianism
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = despotism
+				popularity = 0.1
+			}
+			add_popularity = {
+				ideology = conservatism
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = reactionism
+				popularity = 0.1
+			}
+			add_stability = 0.05
+		}
+	}
+    focus = {
+		id = ARC_yermaks_call 
+		icon = GFX_goal_ARC_yermaks_call
+		x = 15
+		y = 11
+		cost = 5
+		available_if_capitulated = yes
+		available = { 
+			owns_state = 978
+			owns_state = 408 
+			owns_state = 560 
+			owns_state = 761
+			owns_state = 561
+		}
+		bypass = { }  
+        prerequisite = {
+            focus = ARC_to_action_to_action
+        }  
+      
+        prerequisite = {
+            focus = ARC_heed_all_follow_one
+			focus = ARC_all_heed_the_kapitan
+        }  
+		ai_will_do = {
+			factor = 30
+		}
+		completion_reward = {
+			unlock_decision_category_tooltip = ARC_diplomatic_decisions
+			set_capital = { state = 978 }
+		}
+	}
+    focus = {
+		id = ARC_march_of_the_immortals 
+		icon = GFX_goal_ARC_march_of_the_immortals
+		x = 15
+		y = 12
+		cost = 5
+		available_if_capitulated = yes
+		available = {
+			owns_state = 234
+			owns_state = 652
+			owns_state = 195
+			owns_state = 590
+			owns_state = 570
+			owns_state = 574
+		}
+		bypass = { }  
+        prerequisite = {
+            focus = ARC_yermaks_call
+        }      
+		ai_will_do = {
+			factor = 30
+		}
+		completion_reward = { 
+			add_war_support = 0.3
+			add_stability = 0.3
+			add_research_slot = 1
+			set_capital = { state = 219 }
+			clr_country_flag = is_russian_warlord
+			set_global_flag = united_russia
+			save_global_event_target_as = russian_unification
+			set_cosmetic_tag = ARC_Russia
+			news_event = news.358
+		}
+	}
+}

@@ -1,0 +1,54 @@
+characters = {
+	GCC_góis_monteiro = {
+		name = "Góis Monteiro"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/GCC/Portrait_Gois_Monteiro.png"
+			}
+		}
+		country_leader = {
+			ideology = oligarchy
+			expire = "1965.1.1.1"
+		}
+	}
+	GCC_estevão_leitão_de_carvalho = {
+		name = "Estevão Leitão de Carvalho"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/GCC/Portrait_Estevao_Leitao.png"
+			}
+		}
+		corps_commander = {
+			traits = {
+				#cautious
+				cavalry_officer
+				old_guard
+			}
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 3
+		}
+	}
+	GCC_juarez_távora = {
+		name = "Juarez Távora"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/GCC/Portrait_Juarez_Tavora.png"
+			}
+		}
+		corps_commander = {
+			traits = {
+				#reckless
+				cavalry_officer
+				career_officer
+			}
+			skill = 2
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+}

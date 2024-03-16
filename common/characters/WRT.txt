@@ -1,0 +1,486 @@
+characters={
+	WRT_jaan_anvelt={
+		name="Jaan Anvelt"
+		portraits={
+			civilian={
+				large="gfx/leaders/WRU/Portrait_WRU_Jaan_Anvelt.png"
+			}
+		}
+		country_leader={
+			
+			ideology=state_socialism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	WRT_georgiy_leykhtenbergskiy={
+		name="Georgiy Leykhtenbergskiy"
+		portraits={
+			civilian={
+				large="gfx/leaders/WRU/Portrait_WRU_Georgiy_Leykhtenbergskiy.png"
+			}
+		}
+		country_leader={
+			
+			ideology=religious_fundamentalism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	WRT_arnold_meri={
+		name="Arnold Meri"
+		portraits={
+			army={
+				large="gfx/leaders/WRU/Arnold_Meri.png"
+			}
+		}
+		corps_commander={
+			traits={ organizer }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=1
+			legacy_id=198
+		}
+	}
+	WRT_jānis_lācis={
+		name="Jānis Lācis"
+		portraits={
+			army={
+				large="gfx/leaders/WRU/Portrait_WRU_Janis_Lacis.png"
+			}
+		}
+		corps_commander={
+			traits={ infantry_leader }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=1
+			legacy_id=197
+		}
+	}
+	WRT_antanas_martusevičius={
+		name="Antanas Martusevičius"
+		portraits={
+			army={
+				large="gfx/leaders/WRU/Portrait_WRU_Antanas_Martusevičius.png"
+			}
+		}
+		corps_commander={
+			traits={ skilled_staffer }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=1
+			legacy_id=196
+		}
+	}
+	WRT_aleksandr_loktionov={
+		name="Aleksandr Loktionov"
+		portraits={
+			army={
+				large="gfx/leaders/WRU/Portrait_WRU_Aleksandr_Loktionov.png"
+			}
+		}
+		corps_commander={
+			traits={ trickster }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=1
+			legacy_id=195
+		}
+	}
+	
+	WRU_afinogen_argunov = {
+		name = WRU_afinogen_argunov
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/WRU/afinogen_argunov.dds"
+			}
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = WRU_afinogen_argunov
+			allowed = {
+				original_tag = WRU
+			}
+			traits = {
+				hog_silent_workhorse
+			}
+			visible = {
+				has_government = reactionism
+			}
+		}
+	}
+	WRU_janis_kalnberzins = {
+		name = WRU_janis_kalnberzins
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/WRU/janis_kalnberzins.dds"
+			}
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = WRU_janis_kalnberzins
+			allowed = {
+				original_tag = WRU
+			}
+			traits = {
+				hog_pragmatic_statesman
+			}
+			visible = {
+				has_government = vanguard_socialism
+			}
+		}
+	}
+
+	WRU_sergey_sokolov_kretchetov = {
+		name = WRU_sergey_sokolov_kretchetov
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/WRU/sergey_sokolov_kretchetov.dds"
+			}
+		}
+		advisor = {
+			slot = foreign_minister
+			idea_token = WRU_sergey_sokolov_kretchetov
+			allowed = {
+				original_tag = WRU
+			}
+			traits = {
+				for_ideological_crusader
+			}
+			visible = {
+				has_government = reactionism
+			}
+		}
+	}
+	WRU_nikolai_karotamm = {
+		name = WRU_nikolai_karotamm
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/WRU/nikolai_karotamm.dds"
+			}
+		}
+		advisor = {
+			slot = foreign_minister
+			idea_token = WRU_nikolai_karotamm
+			allowed = {
+				original_tag = WRU
+			}
+			traits = {
+				for_ideological_crusader
+			}
+			visible = {
+				has_government = vanguard_socialism
+			}
+		}
+	}
+
+	WRU_yury_tynyanov = {
+		name = WRU_yury_tynyanov
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/WRU/yury_tynyanov.dds"
+			}
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = WRU_yury_tynyanov
+			allowed = {
+				original_tag = WRU
+			}
+			traits = {
+				eco_mixed_economy
+			}
+			visible = {
+				has_government = reactionism
+			}
+		}
+	}
+	WRU_ivan_lebedev = {
+		name = WRU_ivan_lebedev
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/WRU/ivan_lebedev.dds"
+			}
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = WRU_ivan_lebedev
+			allowed = {
+				original_tag = WRU
+			}
+			traits = {
+				economy_minister
+				eco_military_entrepreneur
+			}
+			visible = {
+				has_government = vanguard_socialism
+			}
+		}
+	}
+
+	WRU_alexander_amfiteatrov = {
+		name = WRU_alexander_amfiteatrov
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/WRU/alexander_amfiteatrov.dds"
+			}
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = WRU_alexander_amfiteatrov
+			allowed = {
+				original_tag = WRU
+			}
+			traits = {
+				sec_compassionate_gentleman
+			}
+			visible = {
+				has_government = reactionism
+			}
+		}
+	}
+	WRU_viktor_kingissepp = {
+		name = WRU_viktor_kingissepp
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/WRU/viktor_kingissepp.dds"
+			}
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = WRU_viktor_kingissepp
+			allowed = {
+				original_tag = WRU
+			}
+			traits = {
+				sec_secret_police_chief
+			}
+			visible = {
+				has_government = vanguard_socialism
+			}
+		}
+	}
+
+	WRU_vladimir_burtsev = {
+		name = WRU_vladimir_burtsev
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/WRU/vladimir_burtsev.dds"
+			}
+		}
+		advisor = {
+			slot = head_of_intel
+			idea_token = WRU_vladimir_burtsev
+			allowed = {
+				original_tag = WRU
+			}
+			traits = {
+				int_political_specialist
+			}
+			visible = {
+				has_government = reactionism
+			}
+		}
+	}
+	WRU_augusts_kirhensteins = {
+		name = WRU_augusts_kirhensteins
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/WRU/augusts_kirhensteins.dds"
+			}
+		}
+		advisor = {
+			slot = head_of_intel
+			idea_token = WRU_augusts_kirhensteins
+			allowed = {
+				original_tag = WRU
+			}
+			traits = {
+				int_logistics_specialist
+			}
+			visible = {
+				has_government = vanguard_socialism
+			}
+		}
+	}
+
+	WRU_aleksandr_loktionov = {
+		name = WRU_cos_aleksandr_loktionov
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/WRU/aleksandr_loktionov.dds"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = WRU_cos_aleksandr_loktionov
+			allowed = {
+				original_tag = WRU
+			}
+			visible = {
+				has_government = vanguard_socialism
+			}
+			traits = {
+				army_logistics_2
+			}
+		}
+	}
+
+	WRU_gustav_jonson = {
+		name = WRU_carm_gustav_jonson
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/WRU/gustav_jonson.dds"
+			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = WRU_carm_gustav_jonson
+			allowed = {
+				original_tag = WRU
+			}
+			visible = {
+				has_government = vanguard_socialism
+			}
+			traits = {
+				carm_doctrine_of_autonomy
+			}
+		}
+	}
+	WRU_boris_kazanovich = {
+		name = WRU_carm_boris_kazanovich
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/WRU/boris_kazanovich.dds"
+			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = WRU_carm_boris_kazanovich
+			allowed = {
+				original_tag = WRU
+			}
+			visible = {
+				has_government = reactionism
+			}
+			traits = {
+				carm_decisive_battle_doctrine
+			}
+		}
+	}
+	WRU_viktor_bogolepov = {
+		name = WRU_cnav_viktor_bogolepov
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/WRU/viktor_bogolepov.dds"
+			}
+		}
+		advisor = {
+			slot = navy_chief
+			idea_token = WRU_cnav_viktor_bogolepov
+			allowed = {
+				original_tag = WRU
+			}
+			visible = {
+				has_government = vanguard_socialism
+			}
+			traits = {
+				cnav_indirect_approach_doctrine
+			}
+		}
+	}
+	WRT_aleksei_krylov = {
+		name = WRT_cnav_aleksei_krylov
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/WRU/aleksei_krylov.dds"
+			}
+		}
+		advisor = {
+			slot = navy_chief
+			idea_token = WRT_cnav_aleksei_krylov
+			allowed = {
+				original_tag = WRU
+			}
+			visible = {
+				has_government = reactionism
+			}
+			traits = {
+				cnav_open_seas_doctrine
+			}
+		}
+	}
+
+	WRU_horst_adomaitis = {
+		name = WRU_cair_horst_adomaitis
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/WRU/horst_adomaitis.dds"
+			}
+		}
+		advisor = {
+			slot = air_chief
+			idea_token = WRU_cair_horst_adomaitis
+			allowed = {
+				original_tag = WRU
+			}
+			visible = {
+				has_government = vanguard_socialism
+			}
+			traits = {
+				cair_carpet_bombing_doctrine
+			}
+		}
+	}
+	WRU_konstantin_kalinin = {
+		name = WRU_cair_konstantin_kalinin
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/WRU/konstantin_kalinin.dds"
+			}
+		}
+		advisor = {
+			slot = air_chief
+			idea_token = WRU_cair_konstantin_kalinin
+			allowed = {
+				original_tag = WRU
+			}
+			visible = {
+				has_government = reactionism
+			}
+			traits = {
+				cair_air_superiority_doctrine
+			}
+		}
+	}
+
+	WRU_janis_lacis = {
+		name = WRU_theo_janis_lacis
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/WRU/janis_lacis.dds"
+			}
+		}
+		advisor = {
+			slot = theorist
+			idea_token = WRU_theo_janis_lacis
+			allowed = {
+				original_tag = WRU
+			}
+			visible = {
+				has_government = vanguard_socialism
+			}
+			traits = {
+				superior_firepower_expert
+			}
+		}
+	}
+}

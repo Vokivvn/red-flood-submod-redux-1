@@ -1,0 +1,30 @@
+add_namespace = ALJ
+
+country_event = {
+	id = ALJ.2
+	title = ALJ.2.t
+	desc = ALJ.2.d
+	picture = GFX_report_event_airplane_factory
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = ALJ
+		ALJ = {
+			owns_state = 292
+			has_war = no
+		}
+	}
+
+	option = {
+		name = ALJ.2.a
+		ai_chance = { 
+			base = 3
+		}
+		set_cosmetic_tag = ALJ_arabia
+		add_state_core = 292
+		add_state_core = 808
+		add_state_core = 678
+		add_state_core = 1090
+	}
+}

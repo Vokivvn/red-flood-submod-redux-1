@@ -1,0 +1,11 @@
+﻿
+air_wings = {
+	807 = {
+		small_plane_cas_airframe_0 =  {
+			owner = "ALJ" 
+			amount = 35
+			creator = "ENG"
+			version_name = "Fairey Gordon"
+		}
+	}
+}

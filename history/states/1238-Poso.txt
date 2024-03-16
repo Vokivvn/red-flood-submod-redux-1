@@ -1,0 +1,24 @@
+state={
+	id=1238
+	name="STATE_1238"
+	manpower = 210600
+
+	state_category = rural
+
+	history= {
+		owner = DEI
+		victory_points = { #Poso
+			13568 1
+		}
+		victory_points = { #Loewoek
+			4493 1
+		}
+		add_core_of = DEI
+		buildings = {
+			infrastructure = 2
+		}
+	}
+	provinces={
+		13568 1518 4537 13569 1484 1505 4493
+	}
+}

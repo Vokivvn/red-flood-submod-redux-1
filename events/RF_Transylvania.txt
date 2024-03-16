@@ -1,0 +1,132 @@
+add_namespace = transylvania
+
+country_event = { #bye foris!
+	id = transylvania.1
+	title = transylvania.1.t
+	desc = transylvania.1.desc
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = transylvania.1.a
+		retire_character = TRS_hungaryman
+		add_country_leader_role = {
+			character = "TRS_woman"
+			country_leader = {
+				ideology = leninism
+				expire = "1965.1.1.1"
+				desc = "POLITICS_PAUKER_DESC"
+			}
+			promote_leader = yes
+		}
+		HUN = {
+			end_puppet = TRS
+		}
+		news_event = {
+			id = news.150
+			days = 1
+		}
+		country_event = {
+			id = transylvania.2
+			days = 10
+		}
+		remove_ideas = TRS_hungarian_benefactors
+		add_ideas = TRS_red_romanian_idea
+		hidden_effect = {
+			every_state = {
+				limit = {
+					OR = {
+						is_owned_by = ROM 
+						is_owned_by = MOL
+					}
+				}
+				add_core_of = TRS
+			}
+		}
+	}
+}
+
+country_event = { #fpsa elections
+	id = transylvania.2
+	title = transylvania.2.t
+	desc = transylvania.2.desc
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = transylvania.2.a
+		add_popularity = {
+			ideology = vanguard_socialism
+			popularity = 0.1
+		}
+		ai_chance = {
+			factor = 10
+		}
+		#no world event because literally why, how is this news
+	}
+	option = {
+		name = transylvania.2.b
+		add_popularity = {
+			ideology = revisionist_socialism
+			popularity = 0.1
+		}
+		set_politics = {
+			ruling_party = revisionist_socialism
+		}
+		news_event = {
+			id = news.151
+			days = 1
+		}
+		ai_chance = {
+			factor = 10
+		}
+		country_event = {
+			id = transylvania.3
+			days = 72
+		}
+	}
+}
+
+country_event = {
+	id = transylvania.3
+	title = transylvania.3.t
+	desc = transylvania.3.desc
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = transylvania.3.a
+		remove_ideas = TRS_white_eagles
+		ai_chance = {
+			factor = 10
+		}
+	}
+	option = {
+		name = transylvania.3.b
+		add_popularity = {
+			ideology = accelerationism
+			popularity = 0.2
+		}
+		set_politics = {
+			ruling_party = accelerationism
+		}
+		set_cosmetic_tag = TRS_independent
+		POL = {
+			diplomatic_relation = {
+    			country = TRS
+    			relation = military_access
+  				active = no
+			}
+		}
+		news_event = {
+			id = news.152
+			days = 1
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}
+}

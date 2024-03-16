@@ -1,0 +1,658 @@
+﻿capital = 126
+set_research_slots = 4
+set_convoys = 175
+set_stability = 0.4
+set_war_support = 0.3
+
+oob = "ENG"
+set_naval_oob = "ENG_naval"
+if = { limit = { has_dlc = "By Blood Alone" } set_air_oob = "ENG_air" }
+if = { limit = {  NOT = { has_dlc = "By Blood Alone" } }  set_air_oob = "ENG_air_legacy" }
+
+# Events
+country_event = { id = eng.1 days = 1 }
+country_event = { id = eng.2 days = 43 }
+country_event = { id = eng.3 days = 84 }
+country_event = { id = eng.5 days = 955 }
+country_event = { id = eng.15 days = 481 }
+country_event = { id = eng.20 days = 146 }
+country_event = { id = eng.21 days = 177 }
+country_event = { id = eng.29 days = 238 }
+country_event = { id = eng.30 days = 876 }
+country_event = { id = eng.34 days = 391 }
+country_event = { id = eng.35 days = 518 }
+country_event = { id = eng.36 days = 846 }
+country_event = { id = eng.37 days = 1029 }
+country_event = { id = eng.44 days = 300 }
+
+country_event = { id = uganda.1 days = 245 } #Uganda Revolt
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1
+	tech_engineers = 1
+	tech_recon = 1
+	tech_trucks =1
+	motorised_infantry = 1
+	gw_artillery = 1
+	interwar_antiair = 1
+	basic_train = 1
+	electronic_mechanical_engineering = 1
+	radio = 1
+	radio_detection = 1
+	fuel_silos = 1
+	fuel_refining = 1
+}
+#NSB
+if = {
+	limit = { NOT = { has_dlc = "No Step Back" } }
+	set_technology = {
+		gwtank = 1
+		basic_light_tank = 1
+		improved_light_tank = 1
+		basic_heavy_tank = 1
+	}
+}
+if = {
+	limit = { has_dlc = "No Step Back" }
+	set_technology = {
+		gwtank_chassis = 1
+		basic_light_tank_chassis = 1
+		improved_light_tank_chassis = 1
+		basic_heavy_tank_chassis = 1
+		engine_tech_1 = 1
+	}
+}
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	set_technology = {
+		early_submarine = 1
+		early_destroyer = 1
+		basic_destroyer = 1
+		early_light_cruiser = 1
+		early_heavy_cruiser = 1
+		early_battleship = 1
+		early_battlecruiser = 1
+		early_carrier = 1
+		transport = 1
+	}
+}
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		early_ship_hull_light = 1
+		basic_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		early_ship_hull_cruiser = 1
+		basic_ship_hull_cruiser = 1
+		early_ship_hull_heavy = 1
+		early_ship_hull_carrier = 1
+		basic_ship_hull_carrier = 1
+		basic_battery = 1
+		basic_light_battery = 1
+		basic_medium_battery = 1
+		basic_heavy_battery = 1
+		basic_torpedo = 1
+		improved_ship_torpedo_launcher = 1
+		sonar = 1
+		smoke_generator = 1
+		basic_depth_charges = 1
+		basic_light_battery = 1
+		basic_cruiser_armor_scheme = 1
+		basic_heavy_armor_scheme = 1
+		mtg_transport = 1
+		improved_dp_light_battery = 1
+		basic_fire_control_system = 1
+	}
+}
+
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+	set_technology = {
+		aa_lmg = 1
+		engines_1 = 1
+		engines_2 = 1
+		early_bombs = 1
+		aircraft_construction = 1
+		iw_small_airframe = 1
+		iw_medium_airframe = 1
+		iw_large_airframe = 1
+		basic_medium_airframe = 1
+		basic_small_airframe = 1
+	}
+}
+if = {
+	limit = { NOT = { has_dlc = "By Blood Alone" } }
+	set_technology = {
+		early_fighter = 1
+		cv_early_fighter = 1
+		cv_naval_bomber1 = 1
+		naval_bomber1 = 1
+		early_bomber = 1
+		CAS1 = 1
+	}
+}
+
+add_to_tech_sharing_group = anglo_technology
+
+give_guarantee = MAR
+
+create_faction = Little_Entente
+add_to_faction = ENG
+add_to_faction = CAN
+add_to_faction = SAF
+add_to_faction = WAS
+add_to_faction = WAF
+add_to_faction = NZL
+add_to_faction = AST
+add_to_faction = GRE
+add_to_faction = ITA
+add_to_faction = CAC
+add_to_faction = EGY
+add_to_faction = HOL
+add_to_faction = SUD
+add_to_faction = NIR
+add_to_faction = ALJ
+
+set_politics = {
+	ruling_party = conservatism
+	last_election = "1933.10.25"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	vanguard_socialism = 2
+	popular_socialism = 3
+	anarchism = 1
+	revisionist_socialism = 4
+	progressivism = 25
+	liberalism = 25
+	conservatism = 27
+	right_authoritarianism = 8
+	despotism = 0
+	reactionism = 1
+	accelerationism = 4
+}
+
+# DIPLOMACY
+set_autonomy = {
+	target = MAL
+	autonomous_state = autonomy_integrated_puppet
+}
+set_autonomy = {
+	target = CEY
+	autonomous_state = autonomy_integrated_puppet
+}
+CEY = {
+	set_politics = {
+		ruling_party = right_authoritarianism
+		last_election = "1933.10.25"
+		election_frequency = 48
+		elections_allowed = no
+	}
+	set_popularities = {
+		vanguard_socialism = 0
+		popular_socialism = 0
+		anarchism = 0
+		revisionist_socialism = 10
+		progressivism = 0
+		liberalism = 2
+		conservatism = 3
+		right_authoritarianism = 55
+		despotism = 0
+		reactionism = 30
+		accelerationism = 0
+	}
+}
+set_autonomy = {
+	target = IRQ
+	autonomous_state = autonomy_colony
+}
+set_autonomy = {
+	target = MAD
+	autonomous_state = autonomy_colony
+	freedom_level = 0.35
+}
+set_autonomy = {
+	target = CAN
+	autonomous_state = autonomy_dominion
+	freedom_level = 0.4
+}
+CAN = {
+	set_politics = {
+		ruling_party = conservatism
+		last_election = "1933.10.25"
+		election_frequency = 48
+		elections_allowed = yes
+	}
+	set_popularities = {
+		vanguard_socialism = 0
+		popular_socialism = 0
+		anarchism = 5
+		revisionist_socialism = 5
+		progressivism = 20
+		liberalism = 30
+		conservatism = 20
+		right_authoritarianism = 10
+		despotism = 0
+		reactionism = 5
+		accelerationism = 5
+	}
+}
+set_autonomy = {
+	target = SAF
+	autonomous_state = autonomy_dominion
+	freedom_level = 0.4
+}
+set_autonomy = {
+	target = AST
+	autonomous_state = autonomy_dominion
+	freedom_level = 0.2
+}
+AST = {
+	set_politics = {	
+		ruling_party = progressivism
+		last_election = "1933.10.25"
+		election_frequency = 48
+		elections_allowed = no
+	}
+	set_popularities = {
+		vanguard_socialism = 0
+		popular_socialism = 0
+		anarchism = 5
+		revisionist_socialism = 10
+		progressivism = 30
+		liberalism = 25
+		conservatism = 25
+		right_authoritarianism = 0
+		despotism = 0
+		reactionism = 0
+		accelerationism = 5
+	}
+}
+set_autonomy = {
+	target = NZL
+	autonomous_state = autonomy_dominion
+	freedom_level = 0.2
+}
+NZL = {
+	set_politics = {
+		ruling_party = progressivism
+		last_election = "1933.10.25"
+		election_frequency = 48
+		elections_allowed = no
+	}
+	set_popularities = {
+		vanguard_socialism = 0
+		popular_socialism = 10
+		anarchism = 0
+		revisionist_socialism = 5
+		progressivism = 45
+		liberalism = 0
+		conservatism = 30
+		right_authoritarianism = 5
+		despotism = 0
+		reactionism = 3
+		accelerationism = 2
+	}
+}
+
+set_autonomy = {
+	target = WAS
+	autonomous_state = autonomy_dominion
+	freedom_level = 0.1
+}
+WAS = {
+	set_politics = {
+		ruling_party = liberalism
+		last_election = "1933.10.25"
+		election_frequency = 48
+		elections_allowed = no
+	}
+	set_popularities = {
+		vanguard_socialism = 5
+		popular_socialism = 5
+		anarchism = 0
+		revisionist_socialism = 0
+		progressivism = 45
+		liberalism = 15
+		conservatism = 30
+		right_authoritarianism = 0
+		despotism = 0
+		reactionism = 0
+		accelerationism = 0
+	}
+}
+set_autonomy = {
+	target = WAF
+	autonomous_state = autonomy_colony
+	freedom_level = 0.1
+}
+WAF = {
+	set_popularities = {
+		vanguard_socialism = 0
+		popular_socialism = 10
+		anarchism = 0
+		revisionist_socialism = 0
+		progressivism = 5
+		liberalism = 15
+		conservatism = 20
+		right_authoritarianism = 5
+		despotism = 20
+		reactionism = 15
+		accelerationism = 10
+	}
+
+	set_politics = {
+		ruling_party = conservatism
+		last_election = "1936.1.1"
+		election_frequency = 48
+		elections_allowed = no
+	}
+}
+set_autonomy = {
+	target = EGY
+	autonomous_state = autonomy_dominion
+	freedom_level = 0.1
+}
+set_autonomy = {
+	target = SUD
+	autonomous_state = autonomy_dominion
+	freedom_level = 0.1
+}
+set_autonomy = {
+	target = KEN
+	autonomous_state = autonomy_colony
+	freedom_level = 0.1
+}
+set_autonomy = {
+	target = CAC
+	autonomous_state = autonomy_colony
+	freedom_level = 0.1
+}
+set_autonomy = {
+	target = ADN
+	autonomous_state = autonomy_colony
+	freedom_level = 0.1
+}
+set_autonomy = {
+	target = OMA
+	autonomous_state = autonomy_colony
+}
+set_autonomy = {
+	target = NIR
+	autonomous_state = autonomy_puppet
+}
+set_autonomy = {
+	target = TUC
+	autonomous_state = autonomy_colony
+}
+NIR = {
+	set_politics = {
+		ruling_party = conservatism
+		last_election = "1933.10.25"
+		election_frequency = 48
+		elections_allowed = no
+	}
+	set_popularities = {
+		vanguard_socialism = 1
+		popular_socialism = 3
+		anarchism = 0
+		revisionist_socialism = 2
+		progressivism = 4
+		liberalism = 5
+		conservatism = 68
+		right_authoritarianism = 8
+		despotism = 0
+		reactionism = 0
+		accelerationism = 9
+	}
+}
+set_autonomy = {
+	target = NGA
+	autonomous_state = autonomy_colony
+}
+
+recruit_character = ENG_william_slim
+recruit_character = ENG_alan_cunningham
+recruit_character = ENG_richar_oconnor
+recruit_character = ENG_neil_ritchie
+recruit_character = ENG_claude_auchinleck
+recruit_character = ENG_bernard_montgomery
+recruit_character = ENG_alan_brooke
+recruit_character = ENG_archibald_ramsay
+recruit_character = ENG_charles_maxwell_knight
+recruit_character = ENG_john_hargrave
+recruit_character = ENG_fenner_brockway
+recruit_character = ENG_tom_wintringham
+recruit_character = ENG_arthur_horner
+recruit_character = ENG_jessica_mitford
+recruit_character = ENG_diana_mitford
+recruit_character = ENG_christopher_addison
+recruit_character = ENG_herbert_morrison
+recruit_character = ENG_austen_chamberlain
+recruit_character = ENG_william_platt
+recruit_character = ENG_george_giffard
+recruit_character = ENG_harold_alexander
+recruit_character = ENG_jackie_smyth
+recruit_character = ENG_thomas_jacomb_hutton
+recruit_character = ENG_arthur_percival
+recruit_character = ENG_merton_beckwith_smith
+recruit_character = ENG_henry_pownall
+recruit_character = ENG_john_vereker_lord_gort
+recruit_character = ENG_henry_wilson
+recruit_character = ENG_william_gott
+recruit_character = ENG_jock_campbell
+recruit_character = ENG_oliver_leese
+recruit_character = ENG_miles_dempsey
+recruit_character = ENG_brian_horrocks
+recruit_character = ENG_archibald_wavell
+recruit_character = ENG_james_fownes_somerville
+recruit_character = ENG_henry_harwood
+recruit_character = ENG_andrew_cunningham
+recruit_character = ENG_bruce_fraser
+recruit_character = ENG_john_tovey
+recruit_character = ENG_bernard_rawlings
+recruit_character = ENG_john_cunningham
+recruit_character = ENG_charles_forbes
+recruit_character = ENG_algernon_willis
+recruit_character = ENG_arthur_power
+recruit_character = ENG_mark_sykes
+recruit_character = ENG_john_anderson
+recruit_character = ENG_leopold_amery
+recruit_character = ENG_nancy_astor
+recruit_character = ENG_herbert_samuel
+recruit_character = ENG_clement_davis
+recruit_character = ENG_goronwy_owen
+recruit_character = ENG_clement_attlee
+recruit_character = ENG_aneurin_bevan
+recruit_character = ENG_Nancy_Mitford
+recruit_character = ENG_ernest_bevin
+recruit_character = ENG_arthur_greenwood
+recruit_character = ENG_edmund_ironside
+recruit_character = ENG_lord_david_mitford
+recruit_character = ENG_rotha_lintorn_orman
+recruit_character = ENG_edward_wood
+recruit_character = ENG_neville_chamberlain
+recruit_character = ENG_anthony_eden
+recruit_character = ENG_john_simon
+recruit_character = ENG_robert_cecil
+recruit_character = EMG_rufus_isaac
+recruit_character = ENG_walter_ruciman
+recruit_character = ENG_stafford_cripps
+recruit_character = ENG_emanuel_shinwell
+recruit_character = ENG_malcolm_macdonald
+recruit_character = ENG_AK_chesterton
+recruit_character = ENG_john_amery
+recruit_character = ENG_harry_dobson
+recruit_character = ENG_rajani_dutt
+recruit_character = ENG_alfred_robert_grindlay
+recruit_character = ENG_kingsley_wood
+recruit_character = ENG_robert_horne
+recruit_character = ENG_archibald_sinclair
+recruit_character = ENG_reginald_mckenna
+recruit_character = ENG_frank_hodges
+recruit_character = ENG_john_keynes
+recruit_character = ENG_oliver_bullied
+recruit_character = ENG_stephen_owen_davis
+recruit_character = ENG_john_strachey
+recruit_character = ENG_william_aitken
+recruit_character = ENG_arthur_harris
+recruit_character = ENG_cecil_dudgeon
+recruit_character = ENG_william_gallacher
+recruit_character = ENG_stanley_baldwin
+recruit_character = ENG_arthur_boscawen
+recruit_character = ENG_esmond_harmsworth
+recruit_character = ENG_herbert_asquith
+recruit_character = ENG_robert_hutchinson
+recruit_character = ENG_wilfred_owen
+recruit_character = ENG_hamilton_fyfe
+recruit_character = ENG_james_ede
+recruit_character = ENG_richard_tawney
+recruit_character = ENG_stewart_menzies
+recruit_character = ENG_william_joyce
+recruit_character = ENG_mary_sophia_allen
+recruit_character = ENG_harry_pollitt
+recruit_character = ENG_thomas_nicholas
+recruit_character = ENG_vernon_kell
+recruit_character = ENG_hugh_sinclair
+recruit_character = ENG_david_petrie
+recruit_character = ENG_percy_sillitoe
+recruit_character = ENG_guy_liddell
+recruit_character = ENG_joan_miller
+recruit_character = ENG_archibald_montgomery_massingberd
+recruit_character = ENG_john_dill
+recruit_character = ENG_bertram_ramsay
+recruit_character = ENG_charles_lambe
+recruit_character = ENG_tom_phillips
+recruit_character = ENG_charles_portal
+recruit_character = ENG_hugh_dowding
+recruit_character = ENG_sholto_douglas
+recruit_character = ENG_cyril_newall
+
+
+add_ideas = {
+	ENG_edward_viii
+	ENG_economic_catastrophe
+	ENG_divided_nation
+	ENG_imperial_eclipse
+	ENG_shadow_of_the_somme
+}
+
+activate_advisor = ENG_austen_chamberlain_hog
+activate_advisor = ENG_mark_sykes_for
+activate_advisor = ENG_john_anderson_eco
+activate_advisor = ENG_arthur_boscawen_sec
+activate_advisor = ENG_vernon_kell_int
+
+if = {
+	limit = {
+		has_dlc = "La Resistance"
+	}
+	create_operative_leader = {
+		name = "Nancy Wake"
+		GFX = GFX_portrait_nancy_wake
+		traits = { operative_escape_artist }
+		bypass_recruitment = no
+		available_to_spy_master = yes
+		female = yes
+		nationalities = { ENG }
+	}
+
+	create_operative_leader = {
+		name = "Diana Rowden"
+		GFX = GFX_portrait_diana_rowden
+		traits = { }
+		bypass_recruitment = no
+		available_to_spy_master = yes
+		female = yes
+		nationalities = { ENG }
+	}
+}
+
+	create_equipment_variant = {
+		name = "Hawker Fury" #also covers Gloster Gauntlet, Hawker Demon
+		type = small_plane_airframe_0
+		modules = {
+			fixed_main_weapon_slot = light_mg_2x
+			engine_type_slot = engine_1_1x
+			special_type_slot_1 = empty
+		}
+		obsolete = yes
+	}
+
+	create_equipment_variant = {
+		name = "Hawker Nimrod" 
+		type = cv_small_plane_airframe_0
+		modules = {
+			fixed_main_weapon_slot = light_mg_2x
+			engine_type_slot = engine_1_1x
+			special_type_slot_1 = empty
+		}
+		obsolete = yes
+	}
+
+	create_equipment_variant = {
+		name = "Gloster Gladiator" 
+		type = small_plane_airframe_0
+		modules = {
+			fixed_main_weapon_slot = light_mg_4x
+			engine_type_slot = engine_1_1x
+			special_type_slot_1 = empty
+		}
+	}
+
+	create_equipment_variant = {
+		name = "Fairey Gordon" 
+		type = small_plane_cas_airframe_0
+		modules = {
+			fixed_main_weapon_slot = bomb_locks
+			engine_type_slot = engine_1_1x
+			special_type_slot_1 = empty
+		}
+		obsolete = yes
+		icon = "GFX_ENG_CAS1_medium"
+	}
+	create_equipment_variant = {
+		name = "Vickers Vildebeest" 
+		type = small_plane_naval_bomber_airframe_0
+		modules = {
+			fixed_main_weapon_slot = torpedo_mounting
+			engine_type_slot = engine_1_1x
+			special_type_slot_1 = empty
+		}
+		icon = "GFX_ENG_naval_bomber1_medium" #TODO GABRIEL: change if art in before release
+	}
+	create_equipment_variant = {
+		name = "Blackburn Shark" 
+		type = cv_small_plane_naval_bomber_airframe_0
+		modules = {
+			fixed_main_weapon_slot = torpedo_mounting
+			engine_type_slot = engine_1_1x
+			special_type_slot_1 = empty
+		}
+		icon = "GFX_ENG_naval_bomber1_medium"
+	}
+	create_equipment_variant = {
+		name = "Handley Page Heyford" 
+		type = medium_plane_airframe_0
+		modules = {
+			fixed_main_weapon_slot = medium_bomb_bay
+			engine_type_slot = engine_1_2x
+			special_type_slot_1 = empty
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Bristol Blenheim" 
+		type = medium_plane_airframe_1
+		modules = {
+			fixed_main_weapon_slot = medium_bomb_bay
+			engine_type_slot = engine_2_2x
+			special_type_slot_1 = lmg_defense_turret
+		}
+		icon = "GFX_ENG_heavy_fighter1_medium"
+	}

@@ -1,0 +1,232 @@
+﻿capital = 2
+set_research_slots = 4
+set_convoys = 250
+set_stability = 0.65
+
+oob = "ITA"
+set_naval_oob = "ITA_naval"
+if = { limit = { has_dlc = "By Blood Alone" } set_air_oob = "ITA_air" }
+if = { limit = {  NOT = { has_dlc = "By Blood Alone" } }  set_air_oob = "ITA_air_legacy" }
+
+country_event = { id = italy.136 days = 730 }
+
+give_guarantee = AUS
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1
+	tech_recon = 1
+	tech_engineers = 1
+	tech_mountaineers = 1
+	basic_machine_tools = 1
+	tech_trucks =1
+	motorised_infantry = 1
+	gw_artillery = 1
+	interwar_antiair = 1
+	fuel_silos = 1
+	fuel_refining = 1
+	basic_train = 1
+}
+
+if = {
+	limit = { has_dlc = "La Resistance" }
+	set_technology = {
+		armored_car1 = 1 #Fiat AB611 entered service in 1933
+	}
+}
+if = {
+	limit = { NOT = { has_dlc = "No Step Back" } }
+	set_technology = {
+		gwtank = 1
+		basic_light_tank = 1
+	}
+}
+if = {
+	limit = { has_dlc = "No Step Back" }
+	set_technology = {
+		gwtank_chassis = 1
+		basic_light_tank_chassis = 1
+	}
+}
+if = {
+	limit = { has_dlc = "Battle for the Bosporus" }
+	set_technology = { camelry = 1 }
+}
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+		set_technology = {
+		early_submarine = 1
+		early_destroyer = 1
+		early_light_cruiser = 1
+		early_heavy_cruiser = 1
+		early_battleship = 1
+		basic_battleship = 1
+		early_battlecruiser = 1
+		transport = 1
+	}
+}
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		basic_depth_charges = 1
+		basic_torpedo = 1
+		basic_battery = 1
+		basic_cruiser_armor_scheme = 1
+		basic_heavy_battery = 1
+		basic_medium_battery = 1
+		basic_light_battery = 1
+		basic_heavy_armor_scheme = 1
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		early_ship_hull_light = 1
+		basic_ship_hull_light = 1
+		early_ship_hull_cruiser = 1
+		basic_ship_hull_cruiser = 1
+		early_ship_hull_heavy = 1
+		basic_ship_hull_heavy = 1
+		mtg_transport = 1
+		coastal_defense_ships = 1
+		improved_airplane_launcher = 1
+	}
+}
+
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+	set_technology = {
+		aa_lmg = 1
+		early_bombs = 1
+		aircraft_construction = 1
+		engines_1 = 1
+		engines_2 = 1
+		iw_small_airframe = 1
+		iw_medium_airframe = 1
+		basic_small_airframe = 1
+		basic_medium_airframe = 1
+	}
+}
+if = {
+	limit = { NOT = { has_dlc = "By Blood Alone" } }
+	set_technology = {
+		early_fighter = 1
+		early_bomber = 1
+		naval_bomber1 = 1
+		CAS1 = 1
+	}
+}
+
+
+set_politics = {
+	ruling_party = liberalism
+	last_election = "1935.10.25"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	vanguard_socialism = 0
+	popular_socialism = 5
+	anarchism = 2
+	revisionist_socialism = 0
+	progressivism = 6
+	liberalism = 40
+	conservatism = 40
+	right_authoritarianism = 0
+	despotism = 3
+	reactionism = 4
+	accelerationism = 0
+}
+
+give_guarantee = MAR
+
+set_autonomy = {
+	target = MNT
+	autonomous_state = autonomy_integrated_puppet
+}
+
+recruit_character = ITA_luigi_sturzo
+recruit_character = ITA_italo_balbo
+recruit_character = ITA_ivanoe_bonomi
+#recruit_character = ITA_edmondo_rossoni
+recruit_character = ITA_michele_bianchi
+recruit_character = ITA_junio_valerio_borghese
+recruit_character = ITA_amadeo_bordiga
+recruit_character = ITA_camillo_berneri
+recruit_character = ITA_giacomo_balla
+recruit_character = ITA_pietro_badoglio
+recruit_character = ITA_ugo_cavallero
+recruit_character = ITA_giovanni_messe
+recruit_character = ITA_sebastiano_visconti_prasca
+recruit_character = ITA_ubaldo_soddu
+recruit_character = ITA_rodolfo_graziani
+recruit_character = ITA_dardano_fenulli
+recruit_character = ITA_francesco_de_martini
+recruit_character = ITA_ettore_troilo
+recruit_character = ITA_randolfo_pacciardi
+recruit_character = ITA_inigo_campioni
+recruit_character = ITA_alberto_da_zara
+recruit_character = ITA_giuseppe_fioravanzo
+recruit_character = ITA_carlo_bergamini
+recruit_character = ITA_angelo_iachino
+recruit_character = ITA_Francesco_Nitti
+recruit_character = ITA_Carlo_Sforza
+recruit_character = ITA_Pietro_Torretta
+recruit_character = ITA_Giuseppe_Bastanini
+recruit_character = ITA_Ugo_La_Malfa
+recruit_character = ITA_Alberto_Beneduce
+recruit_character = ITA_Luigi_Facta
+recruit_character = ITA_Giacomo_Acerbo
+recruit_character = ITA_Bruno_Visentini
+recruit_character = ITA_Vittorio_Orlando
+recruit_character = ITA_Alcide_De_Gasperi
+recruit_character = ITA_Alessandro_Pavolini
+recruit_character = ITA_Ferruccio_Parri
+recruit_character = ITA_Emilio_de_Bono
+recruit_character = ITA_Emilio_Lussu
+recruit_character = ITA_Fernando_Tambroni
+recruit_character = ITA_gaetano_crocco
+recruit_character = ITA_renato_sandalli
+recruit_character = ITA_amedeo_mecozzi
+recruit_character = ITA_enrico_caviglia
+recruit_character = ITA_sabato_martelli_castaldi
+recruit_character = ITA_raffaele_de_courten
+recruit_character = ITA_francesco_pricolo
+recruit_character = ITA_paolo_berardi
+recruit_character = ITA_vittorio_ambrosio
+recruit_character = ITA_giuseppe_castellano
+recruit_character = ITA_luigi_sansonetti
+recruit_character = ITA_rino_corso_fougier
+recruit_character = ITA_pietro_piacentini
+recruit_character = ITA_carlo_rosselli
+recruit_character = ITA_berto_ricci
+recruit_character = ITA_lelio_basso
+
+
+add_ideas = {
+	ITA_bulwark_of_democracy
+	ITA_pudi_hegemony
+	ITA_victor_emmanuel
+	ITA_the_slump
+	ITA_overburdened_administration
+	ITA_ineffective_military
+	ITA_the_libyan_war
+	ITA_lagging_south
+	limited_conscription
+	free_trade
+	civilian_economy
+}
+if = {
+	limit = {
+		is_ai = yes
+	}
+	add_ideas = legitimately_just_die
+}
+activate_advisor = ITA_hog_Ivanoe_Bonomi
+activate_advisor = ITA_for_Carlo_Sforza
+activate_advisor = ITA_eco_Alberto_Beneduce
+activate_advisor = ITA_sec_Vittorio_Orlando
+
+
+

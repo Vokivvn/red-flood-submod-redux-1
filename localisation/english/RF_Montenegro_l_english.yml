@@ -1,0 +1,84 @@
+﻿l_english:
+#COUNTRY NAME#
+
+MNT_anarchism:0 "Free Territory of the Black Mountain"
+MNT_anarchism_DEF:0 "the Free Territory of the Black Mountain"
+MNT_anarchism_ADJ:0 "Montenegrin"
+MNT_vanguard_socialism:0 "Montenegrin Socialist Republic"
+MNT_vanguard_socialism_DEF:0 "the Montenegrin Socialist Republic"
+MNT_vanguard_socialism_ADJ:0 "Montenegrin"
+MNT_popular_socialism:0 "Montenegrin Socialist Republic"
+MNT_popular_socialism_DEF:0 "the Montenegrin Socialist Republic"
+MNT_popular_socialism_ADJ:0 "Montenegrin"
+MNT_revisionist_socialism:0 "Montenegrin People's Republic"
+MNT_revisionist_socialism_DEF:0 "the Montenegrin People's Republic"
+MNT_revisionist_socialism_ADJ:0 "Montenegrin"
+MNT_progressivism:0 "Republic of Montenegro"
+MNT_progressivism_DEF:0 "the Republic of Montenegro"
+MNT_progressivism_ADJ:0 "Montenegrin"
+MNT_liberalism:0 "Republic of Montenegro"
+MNT_liberalism_DEF:0 "the Republic of Montenegro"
+MNT_liberalism_ADJ:0 "Montenegrin"
+MNT_conservatism:0 "Kingdom of Montenegro"
+MNT_conservatism_DEF:0 "the Kingdom of Montenegro"
+MNT_conservatism_ADJ:0 "Montenegrin"
+MNT_right_authoritarianism:0 "Kingdom of Montenegro"
+MNT_right_authoritarianism_DEF:0 "the Kingdom of Montenegro"
+MNT_right_authoritarianism_ADJ:0 "Montenegrin"
+MNT_despotism:0 "Kingdom of Montenegro"
+MNT_despotism_DEF:0 "the Kingdom of Montenegro"
+MNT_despotism_ADJ:0 "Montenegrin"
+MNT_reactionism:0 "Kingdom of Montenegro"
+MNT_reactionism_DEF:0 "the Kingdom of Montenegro"
+MNT_reactionism_ADJ:0 "Montenegrin"
+MNT_accelerationism:0 "Slavic State of Montenegro"
+MNT_accelerationism_DEF:0 "the Slavic State of Montenegro"
+MNT_accelerationism_ADJ:0 "Montenegrin"
+
+#PARTIES#
+MNT_vanguard_socialism_party:0 "KPCG"
+MNT_vanguard_socialism_party_long:0 "Komunistička Partija Crne Gore"
+MNT_popular_socialism_party:0 "RDCG"
+MNT_popular_socialism_party_long:0 "Radnički Savez Crne Gore"
+MNT_anarchism_party:0 "SZCG"
+MNT_anarchism_party_long:0 "Savez Zadruga Crne Gore"
+MNT_revisionist_socialism_party:0 "RSP"
+MNT_revisionist_socialism_party_long:0 "Radnička Seljačka Partija"
+MNT_progressivism_party:0 "RSDP"
+MNT_progressivism_party_long:0 "Ranička Socijal Demokratksa Partija"
+MNT_liberalism_party:0 "NS"
+MNT_liberalism_party_long:0 "Narodna Stranka"
+MNT_conservatism_party:0 "NS"
+MNT_conservatism_party_long:0 "Narodna Stranka"
+MNT_right_authoritarianism_party:0 "PNS"
+MNT_right_authoritarianism_party_long:0 "Prava Narodna Stranka"
+MNT_despotism_party:0 "PNS"
+MNT_despotism_party_long:0 "Prava Narodna Stranka"
+MNT_reactionism_party:0 "NSCG"
+MNT_reactionism_party_long:0 "Nacionalna Stranka Crne Gore"
+MNT_accelerationism_party:0 "Bjelozenitisti"
+MNT_accelerationism_party_long:0 "Bjelozenitisti"
+
+#DECISIONS#
+
+
+#EVENTS#
+montenegro.1.t:0 "Montenegro Breaks Free"
+montenegro.1.desc:0 "You are getting annexed lololol"
+montenegro.1.a:0 "can't wait to play yugoslavia"
+
+montenegro.2.t:0 "You must leave"
+montenegro.2.desc:0 "Due to the changes in how the mod plays out, you are getting instantly annexed as soon as the Fiume-Italy war breaks out. We might change that later to a war, but it's not important. What is important is that we don't want you to lose 2-3 years of your in-game time just to get annexed. Therefore, you're being tagswitched to somewhere."
+montenegro.2.a:0 "Sure, sure, I'll go across the border."
+montenegro.2.b:0 "I heard Gajda is in Yakutia."
+#LEADER DESCRITIONS#
+MNT_DESC_MENU:0 ""
+POLITICS_DANILO_DESC:0 "Danilo I of the Petrović-Njegoš Dynasty, the Second King of Montenegro, and the Nation's safekeeper from Yugoslavia.\n\nDanilo's reign has been a time of the so-called \"Yugoslav Scare\", which began during his father's reign, after the Podgorica Assembly, which voted for abolition of the dynasty and unconditional entry into the new, plurinational, state. The Kingdom, however, was restored after the successful Christmas Rebellion, which led to the current status quo. Able to secure his reign with major Italian support and strong hands of loyalists in the military, commonly called \"the Greens\", he intends on keeping the pan-Slavic state at bay and turn the Kingdom into the \"Pearl of the Adriatic\", able to prosper. He, himself, doesn't mind the Italian control, but instead is afraid of what will happen when it vanishes - and he fears it might happen soon."
+#IDEAS#
+MNT_yugoslavian_refugees:0 "Yugoslav Refugees"
+MNT_yugoslavian_refugees_desc:0 "Those, who fled Yugoslavia after the SJNK took charge, have found themselves mostly migrating to Montenegro, in hopes of returning when the situation at home resembles the pre-coup status quo. This not only led to our small military becoming strained, but the Kingdom has grown less stable."
+
+#CUSTOM TOOLTIPS AND FLAGS#
+
+
+#FOCUSES#

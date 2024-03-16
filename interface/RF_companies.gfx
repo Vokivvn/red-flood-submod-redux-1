@@ -1,0 +1,70 @@
+spriteTypes = {
+
+	# THIS IS ALL TO CONFUSING FOR ME, FIND A GIANT LINE BELOW AND ADD YOUR IDEA GFX THERE FOLLOWING THE PATTERN + ALPHABETICAL ORDER ON THE COUNTRIES PLEASE
+	#GENERICOS
+
+	spriteType = {
+		name = "GFX_idea_rf_generic_industrial_company"
+		texturefile = "gfx/interface/companies/generic/generic_industry_company.png"
+	}
+	spriteType = {
+		name = "GFX_idea_rf_generic_rail_company"
+		texturefile = "gfx/interface/companies/generic/generic_rail_company.png"
+	}
+	spriteType = {
+		name = "GFX_idea_generic_synth_company"
+		texturefile = "gfx/interface/companies/generic/generic_synth_company.png"
+	}
+	spriteType = {
+		name = "GFX_idea_generic_electronic_company"
+		texturefile = "gfx/interface/companies/generic/generic_electronic_company.png"
+	}
+	spriteType = {
+		name = "GFX_idea_generic_equipment_company"
+		texturefile = "gfx/interface/companies/generic/generic_equipment_company.png"
+	}
+	spriteType = {
+		name = "GFX_idea_generic_arty_company"
+		texturefile = "gfx/interface/companies/generic/generic_artillery_company.png"
+	}
+	spriteType = {
+		name = "GFX_idea_rf_generic_fighter_company"
+		texturefile = "gfx/interface/companies/generic/generic_fighter_company.png"
+	}
+	spriteType = {
+		name = "GFX_idea_generic_bomber_company"
+		texturefile = "gfx/interface/companies/generic/generic_bomber_company.png"
+	}
+	spriteType = {
+		name = "GFX_idea_generic_cas_company"
+		texturefile = "gfx/interface/companies/generic/generic_cas_company.png"
+	}
+	spriteType = {
+		name = "GFX_idea_generic_capital_ship_company"
+		texturefile = "gfx/interface/companies/generic/generic_capital_ship_company.png"
+	}
+	spriteType = {
+		name = "GFX_idea_generic_cruiser_company"
+		texturefile = "gfx/interface/companies/generic/generic_cruiser_company.png"
+	}
+	spriteType = {
+		name = "GFX_idea_generic_screen_company"
+		texturefile = "gfx/interface/companies/generic/generic_screen_company.png"
+	}
+	spriteType = {
+		name = "GFX_idea_generic_truck_company"
+		texturefile = "gfx/interface/companies/generic/generic_truck_company.png"
+	}
+	spriteType = {
+		name = "GFX_idea_generic_light_tank_company"
+		texturefile = "gfx/interface/companies/generic/generic_light_tank_company.png"
+	}
+	spriteType = {
+		name = "GFX_idea_generic_medium_tank_company"
+		texturefile = "gfx/interface/companies/generic/generic_medium_tank_company.png"
+	}
+	spriteType = {
+		name = "GFX_idea_generic_heavy_tank_company"
+		texturefile = "gfx/interface/companies/generic/generic_heavy_tank_company.png"
+	}
+}

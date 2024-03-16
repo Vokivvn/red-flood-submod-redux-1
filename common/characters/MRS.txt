@@ -1,0 +1,23 @@
+characters = {
+	MRS_andrew = {
+		name = "Andrew I"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MRS/Portrait_MRS_Andrew_I.png"
+			}
+		}
+		country_leader = {
+			ideology = absolute_monarchy
+			desc = "POLITICS_FISHER_DESC"
+			expire = "1965.1.1.1"
+		}
+		field_marshal={
+			traits={ politically_connected naval_invader }
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+		}
+	}
+} 

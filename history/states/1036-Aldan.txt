@@ -1,0 +1,28 @@
+
+state={
+	id=1036
+	name="STATE_1036" # Yakutsk
+	manpower = 307866
+
+	state_category = town
+	
+	resources={
+		steel= 24
+	}
+
+	history={
+		owner = KCK
+		add_core_of = KCK
+		victory_points = {
+			1748 1
+		}
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 1
+		}
+	}
+
+	provinces={
+		12650 7772 7746 4752 10667 10608 12694 1748 7844 
+	}
+}

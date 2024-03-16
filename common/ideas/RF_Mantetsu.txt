@@ -1,0 +1,384 @@
+#####################
+#	Mantetsu - Baba	#
+#####################
+
+ideas = {
+	country = {
+		MAN_corporate_playground = {
+			picture = Corporate_playground_national_spirit
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.1
+				production_factory_max_efficiency_factor = -0.1
+				consumer_goods_expected_value = -0.07
+				stability_factor = -0.12
+			}
+		}
+		MAN_manchurian_guerillas = {
+			picture = manchurian_guerillas_national_spirit
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				political_power_gain = -0.2
+				army_org_factor = -0.04
+				army_core_attack_factor = -0.08
+				army_core_defence_factor = -0.08
+			}
+		}
+		MAN_kwantung_abuses = {
+			picture = kwantung_abuses_national_spirit
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = -0.1
+				political_power_gain = -0.05
+				research_speed_factor = 0.05
+				production_speed_buildings_factor = 0.15
+				industrial_capacity_factory = 0.15
+				
+			}
+		}
+		MAN_harbin_refugees = {
+			picture = Manchurian_refugees_national_spirit
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = -0.05
+				MONTHLY_POPULATION = 0.1
+				conscription_factor = 0.01
+			}
+		}
+		MAN_imperial_base = {
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+			
+			}
+		}
+		MAN_families = {
+			picture = jap_zaibatsu_ally
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				consumer_goods_expected_value = -0.03
+				political_power_gain = 0.1
+				production_speed_industrial_complex_factor = 0.1
+			}
+		}
+		MAN_new_blood = {
+			picture = generic_idea_RF_idea_rifle
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				conscription_factor = 0.05
+				training_time_army_factor = -0.1
+			}
+		}
+		MAN_odysseus = {
+			picture = generic_coastal_navy
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				navy_max_range_factor = 0.15
+				navy_fuel_consumption_factor = -0.05
+			}
+		}
+		MAN_reach = {
+			picture = generic_idea_RF_idea_air_tech
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				air_range_factor = 0.15
+				air_fuel_consumption_factor = -0.05
+			}
+		}
+		MAN_fighters = {
+			picture = generic_idea_RF_idea_gear
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			equipment_bonus = {
+				fighter_equipment_0 = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+				fighter_equipment_1 = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+				fighter_equipment_2 = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+				fighter_equipment_3 = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+			}
+		}
+		MAN_profesh = {
+			picture = generic_idea_RF_idea_soldier2
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				army_org_factor = 0.1
+				army_org_regain = 0.05
+			}
+		}
+		MAN_spirits = {
+			picture = generic_idea_RF_idea_bomb1
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				air_strategic_bomber_bombing_factor = 0.05
+				air_strategic_bomber_night_penalty = -0.05
+			}
+		}
+		MAN_bones = {
+			picture = air_war_plans_division_focus
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				air_close_air_support_attack_factor = 0.05
+				air_strategic_bomber_attack_factor = 0.05
+			}
+		}
+		MAN_tanks = {
+			picture = generic_idea_RF_idea_tankette
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				army_armor_attack_factor = 0.1
+				army_armor_defence_factor = 0.1
+			}
+		}
+		MAN_com_off = {
+			picture = generic_idea_RF_idea_officer_hat
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				experience_gain_army_factor = -0.1
+				training_time_army_factor = 0.1
+				promote_cost_factor = -0.5
+			}
+		}
+		MAN_jldg = {
+			picture = generic_idea_RF_idea_speeches
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				army_morale_factor = 0.1
+				planning_speed = 0.1
+				army_org_regain = 0.05
+			}
+		}
+		MAN_crews = {
+			picture = generic_idea_RF_idea_light_foot
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				air_mission_efficiency = 0.2
+			}
+		}
+		MAN_no_mtg_mines = {
+			picture = generic_sea_focused_navy
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				screening_efficiency = 0.1
+			}
+		}
+		MAN_foreign_exp = {
+			picture = generic_idea_RF_idea_agreement
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				license_air_purchase_cost = -0.15
+			}
+		}
+		MAN_born_leaders = {
+			picture = generic_idea_RF_idea_theorist
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				political_power_gain = 0.25
+				experience_loss_factor = -0.1
+			}
+		}
+		MAN_kenpetai = {
+			picture = generic_idea_RF_idea_cuffs
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				boost_resistance_factor = 0.2
+			}
+		}
+		MAN_civil_admin = {
+			picture = generic_neutrality_drift_bonus
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				political_power_gain = 0.25
+				right_authoritarianism_drift = 0.04
+			}
+		}
+		MAN_marshal_model = {
+			picture = generic_idea_RF_idea_king
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				political_power_gain = -0.25
+				despotism_drift = 0.04
+			}
+		}
+		MAN_corporatocracy = {
+			picture = generic_idea_RF_idea_briefcase
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				accelerationism_drift = 0.04
+				drift_defence_factor = 0.1
+				research_speed_factor = 0.03
+			}
+		}
+		MAN_racial = {
+			picture = generic_idea_RF_idea_crossed_swords
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				non_core_manpower = 0.25
+				stability_factor = 0.1
+				surrender_limit = -0.1
+			}
+		}
+		MAN_chinese_officers = {
+			picture = generic_idea_RF_idea_soldier
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				promote_cost_factor = -0.25
+				army_morale_factor = 0.1
+			}
+		}
+		MAN_buildfaster = {
+			picture = generic_idea_RF_idea_digging
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				production_speed_buildings_factor = 0.1
+			}
+		}
+		MAN_business = {
+			picture = generic_idea_RF_idea_bull
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				consumer_goods_expected_value = -0.03
+			}
+		}
+		MAN_agri_inv = {
+			picture = generic_idea_RF_idea_grain
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				monthly_population = 0.03
+				production_factory_efficiency_gain_factor = -0.05
+				conscription_factor = 0.01
+				stability_factor = 0.03
+			}
+		}
+		japs_b_gone = {
+			picture = generic_idea_RF_idea_truncheon
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				monthly_population = -0.03
+				stability_factor = -0.03
+				conscription_factor = -0.03
+			}
+		}
+		MAN_schools = {
+			picture = generic_idea_RF_idea_book
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				research_speed_factor = 0.03
+			}
+		}
+		MAN_three_month = {
+			picture = generic_idea_RF_idea_skull_flame
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			targeted_modifier = {
+				tag = BYJ
+				attack_bonus_against = 0.1
+				defense_bonus_against = -0.2
+			}
+		}
+		MAN_loyal_home = {
+			picture = jap_militarism_showa
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				despotism_drift = 0.04
+				stability_factor = -0.1
+			}
+		}
+		MAN_conscription = {
+			picture = chi_army_corruption3
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				conscription_factor = 0.03
+			}
+		}
+		MAN_corporate_restraint = {
+			picture = jap_zaibatsu_control
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.15
+				production_factory_max_efficiency_factor = 0.05
+				consumer_goods_expected_value = 0.03
+				stability_factor = 0.06
+			}
+		}
+		MAN_education_board = {
+			picture = jap_supremacy_of_will
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				research_speed_factor = 0.06
+			}
+		}
+		MAN_meritocracy = {
+			picture = generic_idea_RF_idea_up
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				research_speed_factor = 0.1
+				stability_factor = 0.02
+				political_power_gain = 0.04
+			}
+		}
+		MAN_yasuhito = {
+			picture = GFX_idea_JAP_yasuhito
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				army_org_factor = 0.10
+				justify_war_goal_time = -0.25
+				political_power_gain = -0.1
+			}
+		}
+		MAN_nobuhito = {
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = 0.10
+				justify_war_goal_time = 0.25
+				political_power_gain = 0.1
+			}
+		}
+	}
+}

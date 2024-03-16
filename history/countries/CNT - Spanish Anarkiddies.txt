@@ -1,0 +1,72 @@
+﻿capital = 165
+
+set_stability = 0.46
+set_war_support = 0.84
+
+set_research_slots = 2 
+
+set_convoys = 22
+
+add_ideas = {
+	limited_conscription
+	limited_exports
+	partial_economic_mobilisation
+}
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1		
+	tech_recon = 1
+	tech_engineers = 1
+	tech_trucks =1
+	motorised_infantry = 1
+}
+
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+	set_technology = {
+		iw_small_airframe = 1
+		aa_lmg = 1
+		aa_cannon_1 = 1
+		early_bombs = 1
+		engines_1 = 1
+	}
+}
+if = {
+	limit = { NOT = { has_dlc = "By Blood Alone" } }
+	set_technology = {
+		early_fighter = 1
+		CAS1 = 1
+	}
+}
+
+set_politics = {
+	ruling_party = anarchism
+	last_election = "1933.10.25"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	vanguard_socialism = 5
+	popular_socialism = 19
+	anarchism = 64
+	revisionist_socialism = 9
+	progressivism = 2
+	liberalism = 1
+	conservatism = 0
+	right_authoritarianism = 0
+	despotism = 0
+	reactionism = 0
+	accelerationism = 0
+}
+
+recruit_character = CNT_buenaventura_durruti
+recruit_character = CNT_abraham_guillen
+recruit_character = CNT_angel_pestana
+recruit_character = CNT_luys_santa_marina
+recruit_character = CNT_antonio_cordón_garcía
+recruit_character = CNT_cipriano_mera
+recruit_character = CNT_enrique_lister
+recruit_character = CNT_juan_modesto
+recruit_character = CNT_valentín_gonzález

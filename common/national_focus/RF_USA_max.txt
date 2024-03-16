@@ -1,0 +1,1179 @@
+focus_tree = {
+	id = USA_max_path
+
+	country = {
+		factor = 0
+		modifier = {
+			add = 5
+			tag = USA
+		}
+	}
+	continuous_focus_position = { x = 2300 y = 1100 }
+	default = no
+	shared_focus = USA_hunt_bonnie_and_clyde
+	shared_focus = USA_second_vinson_act
+	shared_focus = USA_billy_mitchels_air
+	shared_focus = USA_reviewmilitaryspending
+
+	focus = {
+		id = USA_max_presidency
+		icon = GFX_Focus_USA_max_presidency
+		x = 8
+		y = 0
+		cost = 5
+		available = {
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_political_power = 100
+			add_popularity = {
+				popularity = 0.1
+				ideology = right_authoritarianism
+			}
+			hidden_effect = {
+				add_ideas = {
+					USA_max_hog
+					USA_sam_for
+					USA_darla_gugenheek_eco
+					USA_agent_superball_sec
+				}
+			}
+		}
+	}
+	focus = {
+		id = USA_commissioners_calling
+		icon = GFX_Focus_USA_commissioners_calling
+		relative_position_id = USA_max_presidency
+		x = 0
+		y = 1
+		cost = 5
+		prerequisite = {
+			focus = USA_max_presidency
+		} 
+		available = {
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_political_power = 50
+			country_event = {
+				id = april_fools.7
+			}
+		}
+	}
+
+	focus = {
+		id = USA_one_day_plan
+		icon = GFX_Focus_USA_one_day_plan
+		relative_position_id = USA_commissioners_calling
+		x = -2
+		y = 1
+		cost = 5
+		prerequisite = {
+			focus = USA_commissioners_calling
+		} 
+		available = {
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_ideas = USA_one_day_plan_idea
+		}
+	}
+	focus = {
+		id = USA_make_them_build_roads
+		icon = GFX_Focus_USA_make_them_build_roads
+		relative_position_id = USA_one_day_plan
+		x = -1
+		y = 1
+		cost = 5
+		prerequisite = {
+			focus = USA_one_day_plan
+		} 
+		available = {
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = USA_one_day_plan_idea
+				add_idea = USA_one_day_plan_idea1
+			}
+		}
+	}
+	focus = {
+		id = USA_west_dakotan_industry
+		icon = GFX_Focus_USA_west_dakotan_industry
+		relative_position_id = USA_one_day_plan
+		x = 1
+		y = 1
+		cost = 5
+		prerequisite = {
+			focus = USA_one_day_plan
+		} 
+		available = {
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			389 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			390 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = USA_antidepressants_for_the_economy
+		icon = GFX_Focus_USA_antidepressants_for_the_economy
+		relative_position_id = USA_one_day_plan
+		x = 0
+		y = 2
+		cost = 5
+		prerequisite = {
+			focus = USA_make_them_build_roads
+		}
+		prerequisite = {
+			focus = USA_west_dakotan_industry
+		} 
+		available = {
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = USA_great_depression
+				add_idea = USA_great_depression_1
+			}
+		}
+	}
+	focus = {
+		id = USA_end_the_dustbowl_max
+		icon = GFX_Focus_USA_end_the_dustbowl_max
+		relative_position_id = USA_antidepressants_for_the_economy
+		x = 0
+		y = 1
+		cost = 5
+		prerequisite = {
+			focus = USA_antidepressants_for_the_economy
+		}
+		available = {
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			remove_ideas = USA_dustbowl
+		}
+	}
+
+	focus = {
+		id = USA_step_1_abolish_voting_rights
+		icon = GFX_Focus_USA_step_1_abolish_voting_rights
+		relative_position_id = USA_commissioners_calling
+		x = 2
+		y = 1
+		cost = 5
+		prerequisite = {
+			focus = USA_commissioners_calling
+		} 
+		available = {
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = USA_land_of_the_free
+				add_idea = USA_one_rabbit_one_law
+			}
+			set_party_name = {
+				ideology = despotism
+				name = USA_despotism_party_dynamic
+				long_name = USA_despotism_party_dynamic_long
+			}
+			create_country_leader = {
+				name = "Max"
+				#desc = ""
+				picture = "Portrait_USA_Max_despotic.png"
+				expire = "1965.1.1"
+				ideology = constitutional_dictatorship
+				traits = {
+				}
+			}
+			hidden_effect = {
+				set_politics = {
+					ruling_party = despotism
+					elections_allowed = no
+				}
+				add_popularity = {
+					popularity = -0.1
+					ideology = right_authoritarianism
+				}
+				add_popularity = {
+					ideology = despotism
+					popularity = 0.15
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = USA_crush_the_skinbodies
+		icon = GFX_Focus_USA_crush_the_skinbodies
+		relative_position_id = USA_step_1_abolish_voting_rights
+		x = -1
+		y = 1
+		cost = 5
+		prerequisite = {
+			focus = USA_step_1_abolish_voting_rights
+		} 
+		available = {
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			remove_ideas = USA_klan_civil_war
+			add_stability = 0.1
+		}
+	}
+	focus = {
+		id = USA_put_police_to_a_good_use
+		icon = GFX_Focus_USA_put_police_to_a_good_use
+		relative_position_id = USA_step_1_abolish_voting_rights
+		x = 1
+		y = 1
+		cost = 5
+		prerequisite = {
+			focus = USA_step_1_abolish_voting_rights
+		} 
+		available = {
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_popularity = {
+				ideology = liberalism
+				popularity = -0.1
+			}
+			add_popularity = {
+				ideology = conservatism
+				popularity = -0.1
+			}
+			add_popularity = {
+				ideology = progressivism
+				popularity = -0.1
+			}
+			add_popularity = {
+				ideology = accelerationism
+				popularity = -0.1
+			}
+			add_manpower = -512
+			add_stability = -0.1
+		}
+	}
+	focus = {
+		id = USA_portraits_in_every_household
+		icon = GFX_Focus_USA_portraits_in_every_household
+		relative_position_id = USA_step_1_abolish_voting_rights
+		x = 0
+		y = 2
+		cost = 5
+		prerequisite = {
+			focus = USA_crush_the_skinbodies
+		}
+		prerequisite = {
+			focus = USA_put_police_to_a_good_use
+		} 
+		available = {
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_popularity = {
+				ideology = despotism
+				popularity = 0.25
+			}
+		}
+	}
+	focus = {
+		id = USA_all_hail_max
+		icon = GFX_Focus_USA_all_hail_max
+		relative_position_id = USA_portraits_in_every_household
+		x = 0
+		y = 1
+		cost = 5
+		prerequisite = {
+			focus = USA_portraits_in_every_household
+		}
+		available = {
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_popularity = {
+				ideology = despotism
+				popularity = 0.15
+			}
+			remove_ideas = USA_disjointed_government
+			swap_ideas = {
+				remove_idea = USA_one_rabbit_one_law
+				add_idea = USA_white_furry_iron_fist
+			}
+		}
+	}
+
+	focus = {
+		id = USA_freelance_police_state
+		icon = GFX_Focus_USA_freelance_police_state
+		relative_position_id = USA_commissioners_calling
+		x = 0
+		y = 5
+		cost = 5
+		prerequisite = {
+			focus = USA_end_the_dustbowl_max
+		}
+		prerequisite = {
+			focus = USA_all_hail_max
+		}
+		available = {
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			remove_ideas = USA_great_depression_1
+			add_stability = 0.1
+			add_war_support = 0.1
+		}
+	}
+
+	focus = {
+		id = USA_massive_military_expansion
+		icon = GFX_Focus_USA_massive_military_expansion
+		relative_position_id = USA_freelance_police_state
+		x = -2
+		y = 1
+		cost = 5
+		prerequisite = {
+			focus = USA_freelance_police_state
+		}
+		available = {
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			remove_ideas = USA_under_budget_military
+		}
+	}
+	focus = {
+		id = USA_build_robots
+		icon = GFX_Focus_USA_build_robots
+		relative_position_id = USA_massive_military_expansion
+		x = -2
+		y = 1
+		cost = 5
+		prerequisite = {
+			focus = USA_massive_military_expansion
+		}
+		available = {
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_ideas = USA_robot_production_lines
+		}
+	}
+	focus = {
+		id = USA_fire_the_guy_who_made_those_robots
+		icon = GFX_Focus_USA_fire_the_guy_who_made_those_robots
+		relative_position_id = USA_build_robots
+		x = 0
+		y = 1
+		cost = 5
+		prerequisite = {
+			focus = USA_build_robots
+		}
+		available = {
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			remove_ideas = USA_robot_production_lines
+			add_manpower = -20
+		}
+	}
+	focus = {
+		id = USA_order_six_million_elves
+		icon = GFX_Focus_USA_order_six_million_elves
+		relative_position_id = USA_fire_the_guy_who_made_those_robots
+		x = 0
+		y = 1
+		cost = 5
+		prerequisite = {
+			focus = USA_fire_the_guy_who_made_those_robots
+		}
+		available = {
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_political_power = -200
+			add_manpower = 6000000
+			add_ideas = USA_elf_production_lines
+		}
+	}
+	focus = {
+		id = USA_biological_weapons_from_bosco
+		icon = GFX_Focus_USA_biological_weapons_from_bosco
+		relative_position_id = USA_massive_military_expansion
+		x = 0
+		y = 1
+		cost = 5
+		prerequisite = {
+			focus = USA_massive_military_expansion
+		}
+		available = {
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_political_power = -75
+			add_ideas = {
+				USA_boscos_inconvenience
+				USA_biological_weapons
+			}
+		}
+	}
+	focus = {
+		id = USA_b_tads_missle_defence_system
+		icon = GFX_Focus_USA_b_tads_missle_defence_system
+		relative_position_id = USA_biological_weapons_from_bosco
+		x = 0
+		y = 1
+		cost = 5
+		prerequisite = {
+			focus = USA_biological_weapons_from_bosco
+		}
+		available = {
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			389 = {
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}
+			357 = {
+				add_building_construction = {
+					type = anti_air_building
+					level = 3
+					instant_build = yes
+				}
+			}
+			1048 = {
+				add_building_construction = {
+					type = anti_air_building
+					level = 3
+					instant_build = yes
+				}
+			}
+			358 = {
+				add_building_construction = {
+					type = anti_air_building
+					level = 3
+					instant_build = yes
+				}
+			}
+			359 = {
+				add_building_construction = {
+					type = anti_air_building
+					level = 3
+					instant_build = yes
+				}
+			}
+			360 = {
+				add_building_construction = {
+					type = anti_air_building
+					level = 3
+					instant_build = yes
+				}
+			}
+			361 = {
+				add_building_construction = {
+					type = anti_air_building
+					level = 3
+					instant_build = yes
+				}
+			}
+			358 = {
+				add_building_construction = {
+					type = anti_air_building
+					level = 3
+					instant_build = yes
+				}
+			}
+			add_ideas = USA_b_tads
+		}
+	}
+	focus = {
+		id = USA_protection_against_extraterrestial_threats
+		icon = GFX_Focus_USA_protection_against_extraterrestial_threats
+		relative_position_id = USA_b_tads_missle_defence_system
+		x = 0
+		y = 1
+		cost = 5
+		prerequisite = {
+			focus = USA_b_tads_missle_defence_system
+		}
+		available = {
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			386 = {
+				add_building_construction = {
+					type = air_base
+					level = 5
+					instant_build = yes
+				}
+			}
+			371 = {
+				add_building_construction = {
+					type = air_base
+					level = 5
+					instant_build = yes
+				}
+			}
+			393 = {
+				add_building_construction = {
+					type = air_base
+					level = 5
+					instant_build = yes
+				}
+			}
+			swap_ideas = {
+				remove_idea = USA_b_tads
+				add_idea = USA_b_tads1
+			}
+		}
+	}
+
+	focus = {
+		id = USA_coup_in_ottawa
+		icon = GFX_Focus_USA_coup_in_ottawa
+		relative_position_id = USA_freelance_police_state
+		x = 2
+		y = 1
+		cost = 5
+		prerequisite = {
+			focus = USA_freelance_police_state
+		}
+		available = {
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			ENG = {
+				end_puppet = CAN
+			}
+			set_autonomy = {
+			    target = CAN
+			    autonomy_state = autonomy_free
+			}
+			CAN = {
+				create_country_leader = {
+					name = "Sybil I"
+					#desc = ""
+					picture = "gfx/leaders/USA/Portrait_Sybil.png"
+					expire = "1965.1.1"
+					ideology = absolute_monarchy
+					traits = {
+					}
+				}
+				add_popularity = {
+					ideology = despotism
+					popularity = 0.25
+				}
+				set_party_name = {
+					ideology = despotism
+					name = CAN_despotism_party_dynamic
+					long_name = CAN_despotism_party_dynamic_long
+				}
+				set_politics = {
+					ruling_party = despotism
+					elections_allowed = no
+				}
+				leave_faction = yes
+			}
+		}
+	}
+	focus = {
+		id = USA_chemical_weapons_from_churchill
+		icon = GFX_Focus_USA_chemical_weapons_from_churchill
+		relative_position_id = USA_coup_in_ottawa
+		x = 0
+		y = 1
+		cost = 5
+		prerequisite = {
+			focus = USA_coup_in_ottawa
+		}
+		available = {
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_political_power = -75
+			add_ideas = USA_chemical_weapons
+		}
+	}
+	focus = {
+		id = USA_invite_french_advisors
+		icon = GFX_Focus_USA_invite_french_advisors
+		relative_position_id = USA_chemical_weapons_from_churchill
+		x = 0
+		y = 1
+		cost = 5
+		prerequisite = {
+			focus = USA_chemical_weapons_from_churchill
+		}
+		available = {
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_ideas = USA_french_military_advisors
+		}
+	}
+	focus = {
+		id = USA_steal_german_scientists
+		icon = GFX_Focus_USA_steal_german_scientists
+		relative_position_id = USA_invite_french_advisors
+		x = 0
+		y = 1
+		cost = 5
+		prerequisite = {
+			focus = USA_invite_french_advisors
+		}
+		available = {
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_research_slot = 1
+			add_ideas = USA_german_science
+		}
+	}
+
+	focus = {
+		id = USA_make_fun_of_goebbels_grin
+		icon = GFX_Focus_USA_make_fun_of_goebbels_grin
+		relative_position_id = USA_coup_in_ottawa
+		x = 2
+		y = 1
+		cost = 1
+		prerequisite = {
+			focus = USA_coup_in_ottawa
+		}
+		available = {
+		}
+		bypass = {
+			GER = { NOT = { has_government = vanguard_socialism } }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			GER = { add_opinion_modifier = { target = USA modifier = large_decrease } }
+			hidden_effect = {
+				GER = {
+					if = {
+						limit = {
+							has_completed_focus = GER_1848_commence_again
+						}
+						retire_country_leader = yes
+						create_country_leader = {
+							name = "Paul Joseph Goebbels"
+							desc = "POLITICS_Goebbels_DESC"
+							picture = "Portrait_GER_Joseph_Goebbels_alt.png"
+							expire = "1965.1.1"
+							ideology = national_vanguardism
+							traits = {
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = USA_mock_nittis_weight
+		icon = GFX_Focus_USA_mock_nittis_weight
+		relative_position_id = USA_make_fun_of_goebbels_grin
+		x = 0
+		y = 1
+		cost = 1
+		prerequisite = {
+			focus = USA_make_fun_of_goebbels_grin
+		}
+		available = {
+		}
+		bypass = {
+			ITA = { NOT = { has_government = liberalism } }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			ITA = { add_opinion_modifier = { target = USA modifier = large_decrease } }
+		}
+	}
+	focus = {
+		id = USA_sabotage_russian_railways
+		icon = GFX_Focus_USA_sabotage_russian_railways
+		relative_position_id = USA_mock_nittis_weight
+		x = 0
+		y = 1
+		cost = 1
+		prerequisite = {
+			focus = USA_mock_nittis_weight
+		}
+		available = {
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			if = {
+				limit = {
+					RUS = { exists = yes }
+				}
+				RUS = {
+					random_owned_controlled_state = {
+						limit = {
+							infrastructure > 3
+						}
+						remove_building = {
+							type = infrastructure
+							level = 3
+						}
+					}
+					random_owned_controlled_state = {
+						limit = {
+							infrastructure > 3
+						}
+						remove_building = {
+							type = infrastructure
+							level = 3
+						}
+					}
+					random_owned_controlled_state = {
+						limit = {
+							infrastructure > 3
+						}
+						remove_building = {
+							type = infrastructure
+							level = 3
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					SRU = { exists = yes }
+				}
+				SRU = {
+					random_owned_controlled_state = {
+						limit = {
+							infrastructure > 3
+						}
+						remove_building = {
+							type = infrastructure
+							level = 3
+						}
+					}
+					random_owned_controlled_state = {
+						limit = {
+							infrastructure > 3
+						}
+						remove_building = {
+							type = infrastructure
+							level = 3
+						}
+					}
+					random_owned_controlled_state = {
+						limit = {
+							infrastructure > 3
+						}
+						remove_building = {
+							type = infrastructure
+							level = 3
+						}
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = USA_sell_usa_to_canada
+		icon = GFX_Focus_USA_sell_usa_to_canada
+		relative_position_id = USA_freelance_police_state
+		x = 1
+		y = 5
+		cost = 5
+		prerequisite = {
+			focus = USA_order_six_million_elves
+		}
+		prerequisite = {
+			focus = USA_protection_against_extraterrestial_threats
+		}
+		prerequisite = {
+			focus = USA_steal_german_scientists
+		}
+		prerequisite = {
+			focus = USA_sabotage_russian_railways
+		}
+		mutually_exclusive = {
+			focus = USA_cut_the_strings_to_the_puppet
+		}
+		available = {
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			CAN = {
+				puppet = USA
+			}
+		}
+	}
+	focus = {
+		id = USA_cut_the_strings_to_the_puppet
+		icon = GFX_Focus_USA_cut_the_strings_to_the_puppet
+		relative_position_id = USA_freelance_police_state
+		x = -1
+		y = 5
+		cost = 5
+		prerequisite = {
+			focus = USA_order_six_million_elves
+		}
+		prerequisite = {
+			focus = USA_protection_against_extraterrestial_threats
+		}
+		prerequisite = {
+			focus = USA_steal_german_scientists
+		}
+		prerequisite = {
+			focus = USA_sabotage_russian_railways
+		}
+		mutually_exclusive = {
+			focus = USA_sell_usa_to_canada
+		}
+		available = {
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			hidden_effect = {
+				add_state_claim = 739
+				add_state_claim = 740
+				add_state_claim = 473
+				add_state_claim = 471
+				add_state_claim = 472
+				add_state_claim = 470
+				add_state_claim = 469
+				add_state_claim = 683
+				add_state_claim = 467
+				add_state_claim = 682
+				add_state_claim = 276
+				add_state_claim = 823
+				add_state_claim = 466
+				add_state_claim = 806
+				add_state_claim = 919
+				add_state_claim = 468
+				add_state_claim = 465
+				add_state_claim = 464
+				add_state_claim = 805
+				add_state_claim = 331
+				add_state_claim = 332
+			}
+			CAN = {
+				country_event = {
+					id = april_fools.13
+					days = 3
+				}
+			}
+			custom_effect_tooltip = "Adds claims on Canada"
+		}
+	}
+	focus = {
+		id = USA_from_attu_to_panama
+		icon = GFX_Focus_USA_from_attu_to_panama
+		relative_position_id = USA_cut_the_strings_to_the_puppet
+		x = 0
+		y = 1
+		cost = 5
+		prerequisite = {
+			focus = USA_cut_the_strings_to_the_puppet
+		}
+		available = {
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			annex_country = {
+				target = NIC
+				transfer_troops = yes
+			}
+			annex_country = {
+				target = PAN
+				transfer_troops = yes
+			}
+			create_wargoal = {
+				target = COS
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = HON
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = GUA
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = MEX
+				type = annex_everything
+			}
+			custom_effect_tooltip = "Adds claims on Central America"
+			hidden_effect = {
+				add_state_claim = 484
+				add_state_claim = 483
+				add_state_claim = 482
+				add_state_claim = 480
+				add_state_claim = 481
+				add_state_claim = 479
+				add_state_claim = 478
+				add_state_claim = 485
+				add_state_claim = 277
+				add_state_claim = 477
+				add_state_claim = 476
+				add_state_claim = 475
+				add_state_claim = 474
+				add_state_claim = 313
+				add_state_claim = 311
+				add_state_claim = 312
+				add_state_claim = 314
+				add_state_claim = 317
+				add_state_claim = 316
+				add_state_claim = 304
+			}
+		}
+	}
+	focus = {
+		id = USA_establish_north_american_maximalitat
+		icon = GFX_Focus_USA_establish_north_american_maximalitat
+		relative_position_id = USA_from_attu_to_panama
+		x = 0
+		y = 1
+		cost = 5
+		prerequisite = {
+			focus = USA_from_attu_to_panama
+		}
+		available = {
+			USA = { is_subject = no }
+			owns_state = 276
+			owns_state = 473
+			owns_state = 277
+			owns_state = 316
+			owns_state = 312
+			owns_state = 313
+			owns_state = 361
+			owns_state = 378
+			owns_state = 386
+			owns_state = 375
+			owns_state = 366
+			owns_state = 357
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			set_cosmetic_tag = USA_maximalitat
+			add_stability = 0.1
+			add_war_support = 0.1
+			add_political_power = 100
+			hidden_effect = {
+				random_country = {
+					limit = {
+						is_ai = no
+					}
+					country_event = {
+						id = news.335
+						days = 1
+					}
+				}
+			}
+		}
+	}
+}

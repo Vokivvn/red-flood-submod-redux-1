@@ -1,0 +1,63 @@
+﻿capital = 779
+
+oob = "WAF"
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	gw_artillery = 1
+}
+
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+	set_technology = {
+		iw_small_airframe = 1
+		aa_lmg = 1
+		engines_1 = 1
+	}
+}
+if = {
+	limit = { NOT = { has_dlc = "By Blood Alone" } }
+	set_technology = {
+		early_fighter = 1
+	}
+}
+
+add_ideas = {
+	WAF_an_experiment
+	WAF_language_division
+}
+set_convoys = 25
+
+# Events
+country_event = { id = waf.1 days = 14 }
+
+# Politics
+set_popularities = {
+	vanguard_socialism = 0
+	popular_socialism = 10
+	anarchism = 0
+	revisionist_socialism = 0
+	progressivism = 5
+	liberalism = 15
+	conservatism = 20
+	right_authoritarianism = 5
+	despotism = 20
+	reactionism = 15
+	accelerationism = 10
+}
+set_politics = {
+	ruling_party = conservatism
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+recruit_character = WAF_andrew_cohen
+recruit_character = WAF_edward_akufoaddo
+recruit_character = WAF_emile_derlin_zinsou
+recruit_character = WAF_krobo_edusei
+
+
+
+

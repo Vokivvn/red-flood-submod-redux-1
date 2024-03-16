@@ -1,0 +1,23 @@
+state={
+	id=844
+	name="STATE_844"
+	manpower=1203187
+	buildings_max_level_factor=1.000
+	state_category = city
+
+	history={
+		owner = GER
+		victory_points = { 587 25 }
+		victory_points = { 9522 5 }
+		victory_points = { 11494 5 }
+		buildings = {
+			infrastructure = 4
+		}
+		add_core_of = GER
+		add_claim_by = PRS
+	}
+
+	provinces={
+		3547 3444 9522 587 11494 11470 11435 10788
+	}
+}

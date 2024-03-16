@@ -1,0 +1,218 @@
+﻿capital = 16
+set_research_slots = 4
+set_convoys = 154
+
+oob = "FRA"
+set_naval_oob = "FRA_naval"
+if = { limit = { has_dlc = "By Blood Alone" } set_air_oob = "FRA_air" }
+if = { limit = {  NOT = { has_dlc = "By Blood Alone" } }  set_air_oob = "FRA_air_legacy" }
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_recon = 1
+	tech_support = 1
+	tech_engineers = 1
+	tech_mountaineers = 1
+	marines = 1
+	tech_trucks =1
+	motorised_infantry = 1
+	gw_artillery = 1
+	basic_machine_tools = 1
+	electronic_mechanical_engineering = 1
+	interwar_antiair = 1
+	interwar_antitank = 1
+	synth_oil_experiments = 1
+	basic_machine_tools = 1
+	fuel_silos = 1
+	fuel_refining = 1
+	basic_train = 1
+}
+#NSB
+if = {
+	limit = { NOT = { has_dlc = "No Step Back" } }
+	set_technology = {
+		gwtank = 1
+		basic_light_tank = 1
+		improved_light_tank = 1
+	}
+}
+if = {
+	limit = { has_dlc = "No Step Back" }
+	set_technology = {
+		gwtank_chassis = 1
+		basic_light_tank_chassis = 1
+		improved_light_tank_chassis = 1
+		engine_tech_1 = 1
+	}
+}
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+		set_technology = {
+		early_submarine = 1
+		basic_submarine = 1
+		early_destroyer = 1
+		basic_destroyer = 1
+		early_light_cruiser = 1
+		basic_light_cruiser = 1
+		early_heavy_cruiser = 1
+		basic_heavy_cruiser = 1
+		early_battleship = 1
+		early_battlecruiser = 1
+		basic_battlecruiser = 1
+		early_carrier = 1
+		transport = 1
+	}
+}
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		early_ship_hull_light = 1
+		basic_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		early_ship_hull_cruiser = 1
+		early_ship_hull_heavy = 1
+		basic_ship_hull_heavy = 1
+		early_ship_hull_carrier = 1
+		basic_battery = 1
+		basic_heavy_battery = 1
+		basic_light_battery = 1
+		basic_medium_battery = 1
+		basic_torpedo = 1
+		basic_depth_charges = 1
+		basic_heavy_armor_scheme = 1
+		basic_cruiser_armor_scheme = 1
+		mtg_transport = 1
+		basic_dp_light_battery = 1
+		cruiser_submarines = 1
+	}
+}
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+	set_technology = {
+		aa_lmg = 1
+		aa_cannon_1 = 1
+		engines_1 = 1
+		engines_2 = 1
+		early_bombs = 1
+		aircraft_construction = 1
+		iw_small_airframe = 1
+		iw_medium_airframe = 1
+		iw_large_airframe = 1
+	}
+}
+if = {
+	limit = { NOT = { has_dlc = "By Blood Alone" } }
+	set_technology = {
+		early_fighter = 1
+		naval_bomber1 = 1
+		cv_early_fighter = 1
+		cv_naval_bomber1 = 1
+		early_bomber = 1
+		tactical_bomber1 = 1
+		CAS1 = 1
+	}
+}
+
+set_politics = {
+	ruling_party = accelerationism
+	last_election = "1933.10.25"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	vanguard_socialism = 1
+	popular_socialism = 9
+	anarchism = 5
+	revisionist_socialism = 7
+	progressivism = 6
+	liberalism = 2
+	conservatism = 2
+	right_authoritarianism = 8
+	despotism = 11
+	reactionism = 2
+	accelerationism = 47
+}
+
+create_faction = LEAGUE_SOLAR
+add_to_faction = FIU
+add_to_faction = IRE
+
+# Events
+country_event = { id = france.5 days = 1 }
+country_event = { id = france.8 days = 120 }
+country_event = { id = france.45 days = 64 }
+
+add_ideas = {
+	FRA_divided_nation
+	FRA_terre_futur
+	FRA_abolish_army
+}
+
+set_autonomy = {
+	target = CYN
+	autonomous_state = autonomy_dominion
+}
+set_autonomy = {
+	target = SEN
+	autonomous_state = autonomy_dominion
+}
+
+recruit_character = FRA_edgar_puaud
+recruit_character = FRA_paul_chack
+recruit_character = FRA_antonin_artaud
+recruit_character = FRA_antonin_artaud_acephale
+recruit_character = FRA_antonin_artaud_escadron
+recruit_character = FRA_antonin_artaud_druidist
+recruit_character = FRA_marcus_jakob
+recruit_character = FRA_jacques_doriot
+recruit_character = FRA_benoit_frachon
+recruit_character = FRA_leon_blum
+recruit_character = FRA_camille_chautemps
+recruit_character = FRA_francois_de_la_rocque
+recruit_character = FRA_joseph_darnand
+recruit_character = FRA_pierre_taittinger
+recruit_character = FRA_georges_valois
+recruit_character = FRA_marcel_bucard
+recruit_character = FRA_euguene_deloncle
+recruit_character = FRA_celestin_laine
+recruit_character = FRA_jean_filiol
+recruit_character = FRA_xavier_vallat
+recruit_character = FRA_charles_nogues
+recruit_character = FRA_raymond_callemin
+#recruit_character = FRA_georges_bosquet
+recruit_character = FRA_georges_bataille
+recruit_character = FRA_marc_augier
+recruit_character = FRA_charles_nungesser
+recruit_character = FRA_abel_bonnard
+recruit_character = FRA_fernand_brinon
+recruit_character = FRA_hubert_lagardelle
+recruit_character = FRA_jacques_arthuys
+recruit_character = FRA_eugene_schueller
+recruit_character = FRA_marcel_deat
+recruit_character = FRA_adrien_marquet
+recruit_character = FRA_henri_berbe
+recruit_character = FRA_olier_mordrel
+recruit_character = FRA_andre_grisoni
+recruit_character = FRA_marius_metge
+recruit_character = FRA_pierre_pucheu
+recruit_character = FRA_jean_boissel
+recruit_character = FRA_paul_marion
+recruit_character = FRA_francois_coli
+recruit_character = FRA_edouard_carouy
+recruit_character = FRA_francois_darlan
+recruit_character = FRA_Phillipe_Leclerc
+recruit_character = FRA_Alphonse_Georges
+recruit_character = FRA_Philippe_Kieffer
+recruit_character = FRA_Emile_Muselier
+recruit_character = FRA_Martial_Henri_Valin
+recruit_character = FRA_Alphonse_Juin
+recruit_character = FRA_Francois_Sevez
+recruit_character = FRA_Jean_Touzet_du_Vigier
+recruit_character = FRA_Lionel_de_Marmier
+recruit_character = FRA_Joseph_Vuillemin
+recruit_character = FRA_henri_capet
+

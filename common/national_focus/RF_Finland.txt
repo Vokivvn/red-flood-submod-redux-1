@@ -1,0 +1,1476 @@
+focus_tree = {
+	id = FIN
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = FIN
+		}
+	}
+	continuous_focus_position = { x = 50 y = 1200 }
+
+	#Focus for Russian Overlordship
+	focus = {
+		id = FIN_russian_overlordship
+		icon = GFX_FIN_russian_overlordship-26517
+		x = 17
+		y = 0
+		cost = 2
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10000
+		}
+		completion_reward = {
+			add_political_power = 50
+			add_war_support = -0.01
+		}
+	}
+
+	#Focus for Continue Russification
+	focus = {
+		id = FIN_continue_russification
+		icon = GFX_FIN_continue_russification-26518
+		x = 15
+		y = 1
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = FIN_russian_overlordship }
+		ai_will_do = {
+			factor = 10000
+		}
+		completion_reward = {
+			add_stability = -0.03
+			add_timed_idea = {
+				idea = FIN_russification
+				days = 156
+			}
+		}
+	}
+
+	#Focus for Promote Russian Settlement
+	focus = {
+		id = FIN_promote_russian_settlement
+		icon = GFX_FIN_promote_russian_settlement-26520
+		x = 19
+		y = 1
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = FIN_russian_overlordship }
+		ai_will_do = {
+			factor = 10000
+		}
+		completion_reward = {
+			add_stability = 0.05
+			add_manpower = -4323
+			add_war_support = 0.05
+		}
+	}
+
+	#Focus for Storm in Central Russia
+	focus = {
+		id = FIN_storm_in_central_russia
+		icon = GFX_FIN_storm_in_central_russia-26521
+		x = 17
+		y = 2
+		cost = 2
+		available_if_capitulated = yes
+		available = { has_country_flag = FIN_storm }
+		prerequisite = { 
+			focus = FIN_continue_russification 
+		}
+		prerequisite = { 
+			focus = FIN_promote_russian_settlement 
+		}
+		ai_will_do = {
+			factor = 10000
+		}
+		completion_reward = {
+			drop_cosmetic_tag = yes
+			RUS = {
+				end_puppet = FIN
+			}
+			country_event = {
+				id = fin.2
+				days = 1
+			}
+		}
+	}
+
+	################## Democratic Path ##################
+
+	#Focus for Democratic Coup
+	focus = {
+		id = FIN_democratic_coup
+		icon = GFX_FIN_democratic_coup-26540
+		x = 4
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FIN_storm_in_central_russia }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			always = no
+		}
+		completion_reward = {
+			remove_ideas = RUS_warlord_indifference
+			add_popularity = {
+				ideology = liberalism
+				popularity = 0.30
+				}
+				add_popularity = {
+				ideology = progressivism
+				popularity = 0.20
+				}
+				add_popularity = {
+				ideology = conservatism
+				popularity = 0.20
+				}
+		}
+	}
+
+	#Focus for Elections of the new Government
+	focus = {
+		id = FIN_elections_of_the_new_government
+		icon = GFX_FIN_elections_of_the_new_government-26543
+		x = 4
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FIN_democratic_coup }
+		ai_will_do = {
+			factor = 10000
+		}
+		completion_reward = {
+			country_event = {
+				id = fin.88
+				days = 1
+			}
+			hidden_effect = {
+				remove_ideas = {
+					FIN_senate_hog
+					FIN_senate_for
+					FIN_senate_eco
+					FIN_senate_int
+					FIN_senate_ntl
+				}
+				add_ideas = {
+					FIN_ragnarfuruhjelm
+					FIN_ristoheikki
+					FIN_heikkiritavuori
+					FIN_ernsttandefelt
+					FIN_anttitulenheimo
+				}
+			}
+		}
+	}
+
+	#Focus for Open up in a Moderate Pace
+	focus = {
+		id = FIN_open_up_in_a_moderate_pace
+		icon = GFX_FIN_open_up_in_a_moderate_pace-26544
+		x = 0
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FIN_elections_of_the_new_government }
+		ai_will_do = {
+			factor = 1000
+		}
+		completion_reward = {
+			add_stability = 0.15
+			add_political_power = 100
+		}
+	}
+
+	#Focus for Expand Finnish Trading Company
+	focus = {
+		id = FIN_expand_finnish_trading_company
+		icon = GFX_FIN_expand_finnish_trading_company-26953
+		x = 0
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FIN_open_up_in_a_moderate_pace }
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			add_ideas = FIN_tradingcompany
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1 
+				add_building_construction = { 
+					type = industrial_complex 
+					level = 1 
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Focus for Slowly Reverse Russification
+	focus = {
+		id = FIN_slowly_reverse_russification
+		icon = GFX_FIN_slowly_reverse_russification-26545
+		x = 2
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FIN_elections_of_the_new_government }
+		ai_will_do = {
+			factor = 1000
+		}
+		completion_reward = {
+			set_province_name = {
+				id = 11105
+				name = FIN_NF_FIN_slowly_reverse_russification_province_11105
+			}
+			add_stability = 0.10
+		}
+	}
+
+	#Focus for Finns in High Positions
+	focus = {
+		id = FIN_finns_in_high_positions
+		icon = GFX_FIN_finns_in_high_positions-26952
+		x = 2
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FIN_slowly_reverse_russification }
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			add_political_power = 100
+			add_war_support = 0.07
+			add_research_slot = 1
+		}
+	}
+
+	#Focus for Start Army Separation
+	focus = {
+		id = FIN_start_army_separation
+		icon = GFX_FIN_start_army_separation-26949
+		x = 6
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FIN_elections_of_the_new_government }
+		ai_will_do = {
+			factor = 1000
+		}
+		completion_reward = {
+			add_timed_idea = {
+				idea = FIN_separationofarmy
+				days = 100
+			}
+			add_stability = 0.20
+			add_political_power = 100
+			add_war_support = -0.10
+		}
+	}
+
+	#Focus for Military Complex owned by Finns
+	focus = {
+		id = FIN_military_complex_owned_by_finns
+		icon = GFX_FIN_military_complex_owned_by_finns-26951
+		x = 6
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FIN_start_army_separation }
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1 
+				add_building_construction = { 
+					type = arms_factory 
+					level = 1 
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1 
+				add_building_construction = { 
+					type = arms_factory 
+					level = 1 
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Focus for Begin Liberalisation
+	focus = {
+		id = FIN_begin_liberalisation
+		icon = GFX_FIN_begin_liberalisation-26950
+		x = 8
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FIN_elections_of_the_new_government }
+		ai_will_do = {
+			factor = 1000
+		}
+		completion_reward = {
+			add_ideas = free_trade
+		}
+	}
+
+	#Focus for Tax Foreign Nobility
+	focus = {
+		id = FIN_tax_foreign_nobility
+		icon = GFX_FIN_tax_foreign_nobility-26954
+		x = 8
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FIN_begin_liberalisation }
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			add_stability = -0.05
+			add_political_power = 100
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1 
+				add_building_construction = { 
+					type = industrial_complex 
+					level = 1 
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Focus for We are part of Russia... For now
+	focus = {
+		id = FIN_we_are_part_of_russia_for_now
+		icon = GFX_FIN_we_are_part_of_russia_for_now-26955
+		x = 4
+		y = 7
+		cost = 5
+		available_if_capitulated = no
+		available = {
+			OR = {
+				RUS = {
+					has_war = no
+				}
+				SRU = {
+					has_war = no
+				}
+			}
+		}
+		prerequisite = { 
+			focus = FIN_military_complex_owned_by_finns 
+		}
+		prerequisite = { 
+			focus = FIN_tax_foreign_nobility 
+		}
+		prerequisite = { 
+			focus = FIN_finns_in_high_positions 
+		}
+		prerequisite = { 
+			focus = FIN_expand_finnish_trading_company 
+		}
+		ai_will_do = {
+			factor = 10000
+		}
+		completion_reward = {
+			country_event = {
+				id = fin.10
+				days = 10
+			}
+			add_stability = 0.1
+			set_cosmetic_tag = FIN_RUS
+			if = {
+				limit = {
+					RUS = { exists = yes }
+				}
+				RUS={
+					puppet = FIN
+				}
+				set_autonomy = {
+					target = FIN
+					autonomy_state = autonomy
+				}
+			}
+			else_if = {
+				limit = {
+					SRU = { exists = yes }
+				}
+				SRU={
+					puppet = FIN
+				}
+				set_autonomy = {
+					target = FIN
+					autonomy_state = autonomy
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {has_government = liberalism}
+					set_politics = {
+						ruling_party = liberalism
+						elections_allowed = no
+					}
+				}else_if = {
+					limit = {has_government = conservatism}
+					set_politics = {
+						ruling_party = conservatism
+						elections_allowed = no
+					}
+				}else_if = {
+					limit = {has_government = progressivism}
+					set_politics = {
+						ruling_party = progressivism
+						elections_allowed = no
+					}
+				}
+			}
+		}
+	}
+
+	################## Kekkonen Path ##################
+
+	#Focus for Seyn's Execution
+	focus = {
+		id = FIN_seyns_execution
+		icon = GFX_FIN_seyns_execution-26522
+		x = 28
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FIN_storm_in_central_russia }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			always = no
+		}
+		completion_reward = {
+			remove_ideas = RUS_warlord_indifference
+			set_province_name = {
+				id = 11105
+				name = FIN_NF_FIN_seyns_execution_province_11105
+			}
+			set_province_name = {
+				id = 3083
+				name = FIN_NF_FIN_seyns_execution_province_3083
+			}
+			set_province_name = {
+				id = 3137
+				name = FIN_NF_FIN_seyns_execution_province_3137
+			}
+			set_province_name = {
+				id = 9206
+				name = FIN_NF_FIN_seyns_execution_province_9206
+			}
+			set_province_name = {
+				id = 3122
+				name = FIN_NF_FIN_seyns_execution_province_3122
+			}
+			add_stability = -0.15
+			add_political_power = 100
+			add_popularity = {
+				ideology = vanguard_socialism
+				popularity = 0.10
+			}
+			add_popularity = {
+				ideology = reactionism
+				popularity = 0.10
+			}
+			add_popularity = {
+				ideology = right_authoritarianism
+				popularity = 0.10
+			}
+			add_popularity = {
+				ideology = accelerationism
+				popularity = 0.10
+			}
+			#hidden_effect = {
+			#	remove_ideas = {
+			#		FIN_senate_hog
+			#		FIN_senate_for
+			#		FIN_senate_eco
+			#		FIN_senate_int
+			#		FIN_senate_ntl
+			#	}
+			#}
+		}
+	}
+
+	#Focus for Karelian Academic Society
+	focus = {
+		id = FIN_karelian_academic_society
+		icon = GFX_FIN_karelian_academic_society-26974
+		x = 13
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		available = { 
+			has_country_leader = {
+ 				character = FIN_urho_kekkonen
+			}
+		 }
+		prerequisite = { focus = FIN_seyns_execution }
+		ai_will_do = {
+			factor = 10000
+		}
+		completion_reward = {
+			set_party_name = {
+				ideology = despotism
+				name = FIN_despotism_kekkonen_party
+				long_name = FIN_despotism_kekkonen_party_long
+			}
+		}
+	}
+
+	#Focus for Limitless Militarisation
+	focus = {
+		id = FIN_limitless_militarisation
+		icon = GFX_FIN_limitless_militarisation-26975
+		x = 10
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FIN_karelian_academic_society }
+		ai_will_do = {
+			factor = 10000
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = { type = arms_factory level = 2 instant_build = yes }
+			}
+			random_owned_controlled_state = { 
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = { type = arms_factory level = 2 instant_build = yes }
+			}
+			random_owned_controlled_state = { 
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = { type = arms_factory level = 2 instant_build = yes }
+			}
+			random_owned_controlled_state = { 
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = { type = arms_factory level = 2 instant_build = yes }
+			}
+			add_stability = -0.20
+		}
+	}
+
+	#Focus for Sons of Iku-Turso
+	focus = {
+		id = FIN_sons_of_ikuturso
+		icon = GFX_FIN_sons_of_ikuturso-26978
+		x = 10
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FIN_limitless_militarisation }
+		ai_will_do = {
+			factor = 1000
+		}
+		completion_reward = {
+			add_ideas = FIN_ikuturso
+		}
+	}
+
+	#Focus for Suojelijan Kuoleman Henki
+	focus = {
+		id = FIN_suojelijan_kuoleman_henki
+		icon = GFX_FIN_suojelijan_kuoleman_henki-26979
+		x = 10
+		y = 7
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FIN_sons_of_ikuturso }
+		ai_will_do = {
+			factor = 1000
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = FIN_ikuturso
+				add_idea = FIN_suojel
+			}
+		}
+	}
+
+	#Focus for Finno-Ugric Supremacy
+	focus = {
+		id = FIN_finnougric_supremacy
+		icon = GFX_FIN_finnougric_supremacy-26976
+		x = 13
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FIN_karelian_academic_society }
+		ai_will_do = {
+			factor = 10000
+		}
+		completion_reward = {
+			add_manpower = 43232
+			add_ideas = FIN_finnougric
+		}
+	}
+
+	#Focus for Empower the Vihan Veljet
+	focus = {
+		id = FIN_empower_the_vihan_veljet
+		icon = GFX_FIN_empower_the_vihan_veljet-26981
+		x = 13
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FIN_finnougric_supremacy }
+		ai_will_do = {
+			factor = 1000
+		}
+		completion_reward = {
+			add_ideas = FIN_vihanveljet
+		}
+	}
+
+	#Focus for Our enemies will Never receive Forgiveness
+	focus = {
+		id = FIN_our_enemies_will_never_receive_forgiveness
+		icon = GFX_FIN_our_enemies_will_never_receive_forgiveness-26995
+		x = 13
+		y = 7
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FIN_empower_the_vihan_veljet }
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			add_ideas = FIN_ruthless
+		}
+	}
+
+	#Focus for Päällikkö Kekkonen
+	focus = {
+		id = FIN_pllikk_kekkonen
+		icon = GFX_FIN_pllikk_kekkonen-26977
+		x = 16
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FIN_karelian_academic_society }
+		ai_will_do = {
+			factor = 10000
+		}
+		completion_reward = {
+			add_country_leader_trait = FIN_paallikko
+		}
+	}
+
+	#Focus for And his loyal People
+	focus = {
+		id = FIN_and_his_loyal_people
+		icon = GFX_FIN_and_his_loyal_people-26996
+		x = 16
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FIN_pllikk_kekkonen }
+		ai_will_do = {
+			factor = 1000
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = despotism
+				popularity = 0.10
+			}
+		}
+	}
+
+	#Focus for All praise Kekkonen, all praise the Saviour
+	focus = {
+		id = FIN_all_praise_kekkonen_all_praise_the_saviour
+		icon = GFX_FIN_all_praise_kekkonen_all_praise_the_saviour-26997
+		x = 16
+		y = 7
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FIN_and_his_loyal_people }
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = despotism
+				popularity = 0.15
+			}
+		}
+	}
+
+	#Focus for Carve out a Land just for Finns
+	focus = {
+		id = FIN_carve_out_a_land_just_for_finns
+		icon = GFX_FIN_carve_out_a_land_just_for_finns-26998
+		x = 13
+		y = 8
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = FIN_suojelijan_kuoleman_henki 
+		}
+		prerequisite = { 
+			focus = FIN_our_enemies_will_never_receive_forgiveness 
+		}
+		available = {
+			is_subject = no
+			is_in_faction = no
+		}
+		will_lead_to_war_with = WRU
+		will_lead_to_war_with = RUS
+		will_lead_to_war_with = SRU
+		will_lead_to_war_with = WRR
+		will_lead_to_war_with = WRT
+		will_lead_to_war_with = EST
+		prerequisite = { 
+			focus = FIN_all_praise_kekkonen_all_praise_the_saviour 
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					WRU = {
+						exists = yes
+					}
+				}
+				create_wargoal = {
+					type = take_state_focus
+					target = WRU
+				}
+			}
+			if = {
+				limit = {
+					WRT = {
+						exists = yes 
+					}
+				}
+				create_wargoal = {
+					type = take_state_focus
+					target = WRT
+				}
+			}
+			if = {
+				limit = {
+					WRR = {
+						exists = yes
+					}
+				}
+				create_wargoal = {
+					type = take_state_focus
+					target = WRR
+				}
+			}
+			if = {
+				limit = {
+					EST = {
+						exists = yes
+					}
+				}
+				create_wargoal = {
+					type = take_state_focus
+					target = EST
+				}
+			}
+			if = {
+				limit = {
+					RUS = {
+						exists = yes
+					}
+				}
+				create_wargoal = {
+					type = take_state_focus
+					target = RUS
+				}
+			}
+			if = {
+				limit = {
+					SRU = {
+						exists = yes
+					}
+				}
+				create_wargoal = {
+					type = take_state_focus
+					target = SRU
+				}
+			}
+			hidden_effect = {
+				add_state_claim = 13
+				add_state_claim = 191
+				add_state_claim = 208
+				add_state_claim = 195
+				add_state_claim = 244
+				add_state_claim = 264
+				add_state_claim = 216
+				add_state_claim = 215
+				add_state_claim = 147
+				add_state_claim = 213
+				add_state_claim = 722
+				add_state_claim = 214
+				add_state_claim = 351
+				add_state_claim = 400
+				add_state_claim = 398
+				add_state_claim = 397
+				add_state_claim = 262
+				add_state_claim = 399
+			}
+			custom_effect_tooltip = "FIN_CARVE_TOOLTIP"
+		}
+	}
+
+	################## Monarchist Path ##################
+
+	#Focus for Prepare the Crown
+	focus = {
+		id = FIN_prepare_the_crown
+		icon = GFX_FIN_prepare_the_crown-27006
+		x = 23
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		available = { 
+			has_country_leader = {
+ 				character = FIN_Ilmari_I
+			}
+		}
+		prerequisite = { focus = FIN_seyns_execution }
+		ai_will_do = {
+			factor = 10000
+		}
+		completion_reward = {
+			set_cosmetic_tag = FIN_kingdom
+			add_stability = 0.07
+			add_popularity = {
+				popularity = 0.10
+				ideology = despotism
+			}
+			country_event = {
+				id = fin.9191
+				days = 2
+			}
+			hidden_effect = {
+				country_event = {
+					id = fin.8
+					days = 10
+				}
+			}
+		}
+	}
+
+	#Focus for Rally up the Monarchists
+	focus = {
+		id = FIN_rally_up_the_monarchists
+		icon = GFX_FIN_rally_up_the_monarchists-26963
+		x = 21
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		available = { has_country_flag = FIN_kinglives }
+		prerequisite = { focus = FIN_prepare_the_crown }
+		ai_will_do = {
+			factor = 1000
+		}
+		completion_reward = {
+			add_ideas = FIN_monarchistrally
+		}
+	}
+
+	#Focus for Supreme Reaction
+	focus = {
+		id = FIN_supreme_reaction
+		icon = GFX_FIN_supreme_reaction-26965
+		x = 21
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FIN_rally_up_the_monarchists }
+		ai_will_do = {
+			factor = 1000
+		}
+		completion_reward = {
+			add_ideas = FIN_supremereaction
+		}
+	}
+
+	#Focus for German Glory
+	focus = {
+		id = FIN_german_glory
+		icon = GFX_FIN_german_glory-26964
+		x = 25
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		available = { has_country_flag = FIN_kinglives }
+		prerequisite = { focus = FIN_prepare_the_crown }
+		ai_will_do = {
+			factor = 1000
+		}
+		completion_reward = {
+			add_ideas = FIN_germanglory
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
+			}
+		}
+	}
+
+	#Focus for And Finnish Power
+	focus = {
+		id = FIN_and_finnish_power
+		icon = GFX_FIN_and_finnish_power-26966
+		x = 25
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FIN_german_glory }
+		ai_will_do = {
+			factor = 1000
+		}
+		completion_reward = {
+			add_ideas = FIN_monarchistsisu
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = { type = arms_factory level = 2 instant_build = yes }
+			}
+		}
+	}
+
+	#Focus for Question of Nations
+	focus = {
+		id = FIN_question_of_nations
+		icon = GFX_FIN_question_of_nations-26967
+		x = 19
+		y = 7
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FIN_supreme_reaction }
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			country_event = {
+				id = fin.13
+				days = 1
+			}
+		}
+	}
+
+	#Focus for Question of Borders
+	focus = {
+		id = FIN_question_of_borders
+		icon = GFX_FIN_question_of_borders-26970
+		x = 27
+		y = 7
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FIN_and_finnish_power }
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			country_event = {
+				id = fin.14
+				days = 1
+			}
+		}
+	}
+
+	#Focus for Question of Power
+	focus = {
+		id = FIN_question_of_power
+		icon = GFX_FIN_question_of_power-26969
+		x = 23
+		y = 7
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = FIN_supreme_reaction 
+			focus = FIN_and_finnish_power 
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			country_event = {
+			id = fin.432
+			days = 1
+			}
+		}
+	}
+
+	#Focus for Alliance of Force
+	focus = {
+		id = FIN_alliance_of_force
+		icon = GFX_FIN_alliance_of_force-26971
+		x = 21
+		y = 8
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = FIN_question_of_power 
+		}
+		prerequisite = { 
+			focus = FIN_question_of_nations 
+		}
+		available = {
+			has_country_flag = FIN_englishallies
+		}
+		mutually_exclusive = { focus = FIN_alliance_of_brotherhood }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			is_subject = no
+		}
+		completion_reward = {
+			give_military_access = ENG
+		}
+	}
+
+	#Focus for Alliance of Brotherhood
+	focus = {
+		id = FIN_alliance_of_brotherhood
+		icon = GFX_FIN_alliance_of_brotherhood-26972
+		x = 25
+		y = 8
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = FIN_question_of_power 
+		}
+		prerequisite = { 
+			focus = FIN_question_of_borders 
+		}
+		available = {
+			has_country_flag = FIN_prussianallies
+		}
+		mutually_exclusive = { focus = FIN_alliance_of_force }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			is_subject = no
+		}
+		completion_reward = {
+			give_military_access = PRS
+		}
+	}
+
+	#Focus for King Ilmari Ascended
+	focus = {
+		id = FIN_king_ilmari_ascended
+		icon = GFX_FIN_king_ilmari_ascended-30154
+		x = 23
+		y = 9
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = FIN_alliance_of_force 
+			focus = FIN_alliance_of_brotherhood 
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = despotism
+				popularity = 0.30
+			}
+			add_stability = 0.20
+			add_war_support = 0.20
+		}
+	}
+
+	################## Egyptian Path ##################
+
+	#Focus for Dreams of Old Fatherland
+	focus = {
+		id = FIN_dreams_of_old_fatherland
+		icon = GFX_FIN_dreams_of_old_fatherland-26524
+		x = 36
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		available = { has_government = reactionism }
+		prerequisite = { focus = FIN_seyns_execution }
+		ai_will_do = {
+			factor = 10000
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = reactionism
+				popularity = 0.10
+			}
+			add_stability = 0.15
+			add_political_power = 100
+		}
+	}
+
+	#Focus for Restore broken Connections
+	focus = {
+		id = FIN_restore_broken_connections
+		icon = GFX_FIN_restore_broken_connections-26525
+		x = 34
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FIN_dreams_of_old_fatherland }
+		ai_will_do = {
+			factor = 10000
+		}
+		completion_reward = {
+			country_event = {
+				id = fin.11
+				days = 5
+			}
+			hidden_effect = {
+				EGY = {
+					country_event = {
+						id = fin.11
+						days = 5
+					}
+				}
+			}
+			add_ideas = FIN_nationalmyth
+		}
+	}
+
+	#Focus for Great Pyramids of Helsinki
+	focus = {
+		id = FIN_great_pyramids_of_helsinki
+		icon = GFX_FIN_great_pyramids_of_helsinki-26527
+		x = 32
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FIN_restore_broken_connections }
+		ai_will_do = {
+			factor = 1000
+		}
+		completion_reward = {
+			111 = { add_extra_state_shared_building_slots =  4 add_building_construction = { type = infrastructure level = 4 instant_build = yes } }
+			add_stability = 0.05
+		}
+	}
+
+	#Focus for Rebirth of Mummification Traditions
+	focus = {
+		id = FIN_rebirth_of_mummification_traditions
+		icon = GFX_FIN_rebirth_of_mummification_traditions-26531
+		x = 30
+		y = 7
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FIN_great_pyramids_of_helsinki }
+		ai_will_do = {
+			factor = 1000
+		}
+		completion_reward = {
+			add_stability = 0.05
+			add_war_support = 0.05
+			add_popularity = {
+				ideology = reactionism
+				popularity = 0.07
+			}
+		}
+	}
+
+	#Focus for Society of Thoth
+	focus = {
+		id = FIN_society_of_thoth
+		icon = GFX_FIN_society_of_thoth-26529
+		x = 34
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FIN_restore_broken_connections }
+		ai_will_do = {
+			factor = 1000
+		}
+		completion_reward = {
+			add_research_slot = 1
+			add_ideas = FIN_societyofthoth			
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
+			}
+		}
+	}
+
+	#Focus for Finnish Hieroglyphy
+	focus = {
+		id = FIN_finnish_hieroglyphy
+		icon = GFX_FIN_finnish_hieroglyphy-26532
+		x = 33
+		y = 7
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FIN_society_of_thoth }
+		ai_will_do = {
+			factor = 1000
+		}
+		completion_reward = {
+			add_stability = -0.1
+			add_war_support = 0.07
+			add_popularity = {
+				ideology = reactionism
+				popularity = 0.07
+			}
+		}
+	}
+
+	#Focus for Pharaoh of Finland
+	focus = {
+		id = FIN_pharaoh_of_finland
+		icon = GFX_FIN_pharaoh_of_finland-26526
+		x = 38
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FIN_dreams_of_old_fatherland }
+		ai_will_do = {
+			factor = 1000
+		}
+		available = {
+			is_subject = no
+		}
+		completion_reward = {
+			hidden_effect = {
+				kill_country_leader = yes
+				promote_character = FIN_sihathor_wahneferhotep_ankhkhaf
+			}
+			custom_effect_tooltip = "ASPA_EGYPT_TOOLTIP"
+			add_country_leader_trait = FIN_pharaoh
+			add_stability = 0.1
+			set_cosmetic_tag = FIN_EGY
+		}
+	}
+
+	#Focus for Baltic-Nubian Mercenaries
+	focus = {
+		id = FIN_balticnubian_mercenaries
+		icon = GFX_FIN_balticnubian_mercenaries-26533
+		x = 38
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FIN_pharaoh_of_finland }
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			country_event = {
+				id = fin.100
+				days = 1
+			}
+		}
+	}
+
+	#Focus for Modern Carriage of Amun-Ra
+	focus = {
+		id = FIN_modern_carriage_of_amunra
+		icon = GFX_FIN_modern_carriage_of_amunra-26535
+		x = 39
+		y = 7
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FIN_balticnubian_mercenaries }
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {		
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = { type = arms_factory level = 2 instant_build = yes }
+			}
+			add_tech_bonus = {
+				name = armor_bonus
+				bonus = 1.0
+				uses = 2
+				category = armor
+			}
+		}
+	}
+
+	#Focus for Allies from Beyond Uat-Ur
+	focus = {
+		id = FIN_allies_from_beyond_uatur
+		icon = GFX_FIN_allies_from_beyond_uatur-26534
+		x = 41
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FIN_pharaoh_of_finland }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			is_subject = no
+		}
+		completion_reward = {
+			give_military_access = FRA
+		}
+	}
+
+	#Focus for Unification of Lands of Set
+	focus = {
+		id = FIN_unification_of_lands_of_set
+		icon = GFX_FIN_unification_of_lands_of_set-26537
+		x = 42
+		y = 7
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FIN_allies_from_beyond_uatur }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			is_subject = no
+			is_in_faction = no
+		}
+		will_lead_to_war_with = WRU
+		will_lead_to_war_with = EST
+		will_lead_to_war_with = WRT
+		will_lead_to_war_with = WRR
+		will_lead_to_war_with = RUS
+		will_lead_to_war_with = SRU
+		completion_reward = {
+			if = {
+				limit = {
+					WRU = {
+						exists = yes
+					}
+				}
+				create_wargoal = {
+					type = take_state_focus
+					target = WRU
+				}
+			}
+			if = {
+				limit = {
+					WRT = {
+						exists = yes 
+					}
+				}
+				create_wargoal = {
+					type = take_state_focus
+					target = WRT
+				}
+			}
+			if = {
+				limit = {
+					WRR = {
+						exists = yes
+					}
+				}
+				create_wargoal = {
+					type = take_state_focus
+					target = WRR
+				}
+			}
+			if = {
+				limit = {
+					EST = {
+						exists = yes
+					}
+				}
+				create_wargoal = {
+					type = take_state_focus
+					target = EST
+				}
+			}
+			if = {
+				limit = {
+					RUS = {
+						exists = yes
+					}
+				}
+				create_wargoal = {
+					type = take_state_focus
+					target = RUS
+				}
+			}
+			if = {
+				limit = {
+					SRU = {
+						exists = yes
+					}
+				}
+				create_wargoal = {
+					type = take_state_focus
+					target = SRU
+				}
+			}
+			hidden_effect = {
+				add_state_claim = 13
+				add_state_claim = 191
+				add_state_claim = 208
+				add_state_claim = 195
+				add_state_claim = 244
+				add_state_claim = 264
+				add_state_claim = 216
+				add_state_claim = 215
+				add_state_claim = 147
+				add_state_claim = 213
+				add_state_claim = 722
+				add_state_claim = 214
+				add_state_claim = 351
+				add_state_claim = 400
+				add_state_claim = 398
+				add_state_claim = 397
+				add_state_claim = 262
+				add_state_claim = 399
+			}
+			custom_effect_tooltip = "FIN_LANDS_SET_TOOLTIP"
+		}
+	}
+
+	#Focus for Sail to our Ancestral Lands
+	focus = {
+		id = FIN_sail_to_our_ancestral_lands
+		icon = GFX_FIN_sail_to_our_ancestral_lands-26539
+		x = 36
+		y = 8
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = FIN_rebirth_of_mummification_traditions 
+		}
+		prerequisite = { 
+			focus = FIN_finnish_hieroglyphy 
+		}
+		prerequisite = { 
+			focus = FIN_modern_carriage_of_amunra 
+		}
+		prerequisite = { 
+			focus = FIN_unification_of_lands_of_set 
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			is_subject = no
+			owns_state = 213
+		}
+		completion_reward = {
+			country_event = {
+				id = fin.999
+				days = 1
+			}
+			set_cosmetic_tag = FIN_EGY_FINAL
+		}
+	}
+		#End of focuses 
+}

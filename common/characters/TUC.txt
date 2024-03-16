@@ -1,0 +1,29 @@
+characters={
+	TUC_wilfred_malleson={
+		name="Wilfred Malleson"
+		portraits={
+			army={
+				large="gfx/leaders/TUC/Portrait_Wilfred_Malleson_General.png"
+				small = "gfx/interface/ministers/TUC/TUC_Wilfred_Malleson.png"
+			}
+			civilian={
+				large="gfx/leaders/TUC/Portrait_Wilfred_Malleson.png"
+				small = "gfx/interface/ministers/TUC/TUC_Wilfred_Malleson.png"
+			}
+		}
+		country_leader={
+			ideology=colonial_government
+			expire="1965.1.1.1"
+		}
+		corps_commander = {
+			traits = {
+				inflexible_strategist
+			}
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
+}

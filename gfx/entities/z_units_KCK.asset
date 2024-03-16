@@ -1,0 +1,179 @@
+
+# Infantry
+
+
+	entity = {
+		clone = "RUS_infantry_entity"
+		name = "KCK_infantry_entity"
+		pdxmesh = "KCK_infantry_rifle_mesh"
+	}
+	
+	entity = {
+		clone = "RUS_infantry_2_entity"
+		name = "KCK_infantry_2_entity"
+		pdxmesh = "KCK_infantry_mg_mesh"
+	}
+	
+	entity = {
+		clone = "KCK_infantry_2_entity"
+		name = "KCK_infantry_3_entity"
+	}
+
+
+# Cavalry
+
+
+	entity = {
+		clone = "RUS_infantry_rider_entity"
+		name = "KCK_infantry_rider_entity"
+		pdxmesh = "KCK_infantry_rifle_mesh"
+	}
+
+	entity = {
+		clone = "RUS_infantry_mg_rider_entity"
+		name = "KCK_infantry_mg_rider_entity"
+		pdxmesh = "KCK_infantry_mg_mesh"
+	}
+	
+	entity = {
+		clone = "RUS_cavalry_rifle_combined_entity"
+		name = "KCK_cavalry_rifle_combined_entity"
+		
+		attach = { 	name = "infantry_unit"		Saddle_Node = "KCK_infantry_rider_entity" }
+	}
+
+	entity = {
+		clone = "RUS_cavalry_mg_combined_entity"
+		name = "KCK_cavalry_mg_combined_entity"
+		
+		attach = { 	name = "infantry_unit"		Saddle_Node = "KCK_infantry_mg_rider_entity" }
+	}
+
+	entity = {
+		clone = "RUS_cavalry_entity"
+		name = "KCK_cavalry_entity"
+
+		attach = { 	name = "infantry"		infantry = "KCK_infantry_rider_entity" }
+		attach = { 	name = "cavalry"		cavalry = "KCK_cavalry_rifle_combined_entity" }
+	}
+	
+	entity = {
+		clone = "RUS_cavalry_2_entity"
+		name = "KCK_cavalry_2_entity"
+		
+		attach = { 	name = "infantry"		infantry = "KCK_infantry_mg_rider_entity" }
+		attach = { 	name = "cavalry"		cavalry = "KCK_cavalry_mg_combined_entity" }
+	}
+
+
+# Cars
+
+
+	entity = {
+		clone = "motorized_entity"
+		name = "KCK_motorized_entity"
+		
+		attach = { name = "infantry" 	infantry = "KCK_infantry_entity" }
+	}
+
+	entity = {
+		clone = "motorized_entity"
+		name = "KCK_mechanized_entity"
+
+		attach = { name = "vehicle" 	vehicle = "RUS_mechanized_entity" }
+		attach = { name = "infantry" 	infantry = "KCK_infantry_entity" }
+	}
+	
+	entity = {
+		clone = "artillery_entity"
+		name = "KCK_artillery_entity"
+		
+		attach = { name = infantry		infantry = "KCK_infantry_entity" }
+	}
+	
+	entity = {
+		clone = "anti_tank_entity"
+		name = "KCK_anti_tank_entity"
+	
+		attach = { name = infantry			infantry = "KCK_infantry_entity" }
+	}
+	
+
+# Bycicles
+
+	
+	entity = {
+		clone = "JAP_bicycle_entity"
+		name = "KCK_bicycle_entity"
+		
+		attach = { 	name = "infantry"		infantry = "KCK_bicycle_rider_rifle_entity" }	
+		attach = { 	name = "combined"		combined = "KCK_bicycle_rifle_combined_entity" }
+	}
+	
+	entity = {
+		clone = "JAP_bicycle_rifle_combined_entity"
+		name = "KCK_bicycle_rifle_combined_entity"
+		
+		attach = { 	name = "rider"	bike_center = "KCK_bicycle_rider_rifle_entity" }
+	}
+
+	entity = {
+		clone = "JAP_bicycle_rider_rifle_entity"
+		name = "KCK_bicycle_rider_rifle_entity"
+		pdxmesh = "KCK_infantry_rifle_mesh"	
+		
+		attach = { 	name = "rifle1"	Right_Hand_node = "GER_infantry_weapon_rifle_right_entity" }	
+		attach = { 	name = "rifle2"	Left_Hand_node = "GER_infantry_weapon_rifle_left_entity" }
+		attach = { 	name = "rifle4"	Root_node_2 = "GER_infantry_weapon_rifle_right_entity" }
+	}
+	
+	entity = {
+		clone = "JAP_bicycle_2_entity"
+		name = "KCK_bicycle_2_entity"
+		
+		attach = { 	name = "infantry"		infantry = "KCK_bicycle_rider_mg_entity" }	
+		attach = { 	name = "combined"		combined = "KCK_bicycle_mg_combined_entity" }
+	}
+	
+	entity = {
+		clone = "JAP_bicycle_mg_combined_entity"
+		name = "KCK_bicycle_mg_combined_entity"
+		
+		attach = { 	name = "rider"	bike_center = "KCK_bicycle_rider_mg_entity" }
+	}
+
+	entity = {
+		clone = "JAP_bicycle_rider_mg_entity"
+		name = "KCK_bicycle_rider_mg_entity"
+		pdxmesh = "KCK_infantry_mg_mesh"	
+		
+		attach = { 	name = "rifle1"	Right_Hand_node = "GER_infantry_weapon_mg_right_entity" }	
+		attach = { 	name = "rifle2"	Left_Hand_node = "GER_infantry_weapon_mg_left_entity" }
+	}
+
+entity = {
+	clone = "RUS_light_armor_entity"
+	name = "KCK_light_armor_entity"
+	
+}
+
+entity = {
+	clone = "RUS_medium_armor_entity"
+	name = "KCK_medium_armor_entity"
+	pdxmesh = "RUS_tank_medium_mesh"
+	
+}
+
+entity = {
+	clone = "RUS_heavy_armor_entity"
+	name = "KCK_heavy_armor_entity"
+	pdxmesh = "RUS_tank_heavy_mesh"
+	
+	}
+
+	
+}
+
+#
+
+

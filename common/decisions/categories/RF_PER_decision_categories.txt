@@ -1,0 +1,192 @@
+PER_mos_empire = {
+	allowed = {
+		original_tag = PER
+	}
+	priority = 100
+	visible = {
+		has_completed_focus = PER_take_back_what_was_lost
+	}
+}
+PER_mos_empire2 = {
+	allowed = {
+		original_tag = PER
+	}
+	priority = 100
+	visible = {
+		has_completed_focus = PER_unite_the_middle_east
+	}
+}
+PER_mos_empire3 = {
+	allowed = {
+		original_tag = PER
+	}
+	priority = 100
+	visible = {
+		has_completed_focus = PER_unite_the_middle_east
+	}
+}
+PER_mos_empire4 = {
+	allowed = {
+		original_tag = PER
+	}
+	priority = 100
+	visible = {
+		has_completed_focus = PER_strike_back_at_the_empire
+	}
+}
+#
+PER_APOC_decisions1 = {
+	allowed = {
+		original_tag = PER
+	}
+	priority = 100
+	visible = {
+		has_completed_focus = PER_liberate_baku_oil_fields
+	}
+}
+PER_APOC_decisions0 = {
+	allowed = {
+		original_tag = PER
+	}
+	priority = 100
+	visible = {
+		has_completed_focus = PER_what_we_need_is_oil
+	}
+}
+PER_APOC_decisions2euro = {
+	allowed = {
+		original_tag = PER
+	}
+	priority = 100
+	visible = {
+		has_completed_focus = PER_in_europe
+	}
+}
+PER_APOC_decisions3americas = {
+	allowed = {
+		original_tag = PER
+	}
+	priority = 100
+	visible = {
+		has_completed_focus = PER_in_the_americas
+	}
+}
+PER_APOC_decisions4asia = {
+	allowed = {
+		original_tag = PER
+	}
+	priority = 100
+	visible = {
+		has_completed_focus = PER_in_asia
+	}
+}
+PER_APOC_northern_exploration = {
+	allowed = {
+		original_tag = PER
+	}
+	priority = 100
+	visible = {
+		has_completed_focus = PER_start_exploration_in_the_north
+	}
+}
+#
+PER_RPR_eskandari_decisions = {
+	allowed = {
+		original_tag = RPR
+	}
+	priority = 100
+	visible = {
+		has_completed_focus = RPR_pursue_persification_policies
+	}
+}
+PER_RPR_tudeh_expansion_decisions = {
+	allowed = {
+		original_tag = RPR
+	}
+	priority = 100
+	visible = {
+		has_completed_focus = RPR_restore_the_old_borders
+	}
+}
+PER_RPR_tudeh_liberation_decisions = {
+	allowed = {
+		original_tag = RPR
+	}
+	priority = 100
+	visible = {
+		has_completed_focus = RPR_liberation_not_imperialism
+	}
+}
+#
+PER_RPR_jangle_decisions = {
+	allowed = {
+		original_tag = RPR
+	}
+	priority = 100
+	visible = {
+		has_completed_focus = RPR_nationalists_socialists_persians
+	}
+}
+PER_RPR_jangle_expansion_decisions = {
+	allowed = {
+		original_tag = RPR
+	}
+	priority = 100
+	visible = {
+		has_completed_focus = RPR_iran_reborn_from_agony
+	}
+}
+PER_starting_mechanic = {
+	allowed = {
+		original_tag = PER
+	}
+	priority = 100000
+	visible = {
+		has_country_flag = PER_starting_mechanic_flag
+	}
+}
+PER_fire_on_the_world_scw = {
+	allowed = {
+		original_tag = PER
+	}
+	priority = 100001
+	visible = {
+	has_country_flag = PER_fire_on_the_world
+	}
+}
+PER_fire_on_the_world_fiume_italy = {
+	allowed = {
+		original_tag = PER
+	}
+	priority = 100002
+	visible = {
+	has_country_flag = PER_fire_on_the_world
+	}
+}
+PER_fire_on_the_world_franco_german_war = {
+	allowed = {
+		original_tag = PER
+	}
+	priority = 100002
+	visible = {
+	has_country_flag = PER_fire_on_the_world
+	}
+}
+PER_fire_on_the_world_zhr_reconquest = {
+	allowed = {
+		original_tag = PER
+	}
+	priority = 100003
+	visible = {
+	has_country_flag = PER_fire_on_the_world
+	}
+}
+RPR_class_struggle = {
+	allowed = {
+		original_tag = RPR
+	}
+	priority = 100004
+	visible = {
+		has_country_flag = RPR_class_conflict_mechanic_flag
+	}
+}

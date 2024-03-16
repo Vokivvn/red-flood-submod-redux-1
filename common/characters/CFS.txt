@@ -1,0 +1,14 @@
+characters = {
+	CFS_Paul_Panda_Farnana = {
+		name = "Paul Panda Farnana"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/CFS/Portrait_CFS_Paul_Panda_Farnana.png"
+			}
+		}
+		country_leader = {
+			ideology = classical_liberalism
+			expire = "1965.1.1.1"
+		}
+	}
+}

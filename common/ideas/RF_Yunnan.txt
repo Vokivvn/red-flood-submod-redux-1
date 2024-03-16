@@ -1,0 +1,15 @@
+ideas = {
+	country = {
+		YUN_ethno_linguistic_nightmare = {
+			removal_cost = -1
+			picture = generic_idea_RF_idea_monkey_skull
+			allowed = {
+				original_tag = YUN
+			}
+			modifier = {
+				political_power_gain = -0.25
+				stability_factor = -0.1
+			}
+		}
+	}
+}

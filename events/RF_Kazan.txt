@@ -1,0 +1,261 @@
+################################
+#		Orenburg - Baba		   #
+################################
+
+add_namespace = ore
+
+country_event = {
+	id = ore.1
+	title = ore.1.t
+	desc = ore.1.d
+	picture = GFX_spy
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = ore.1.a
+	}
+}
+country_event = {  
+	id = ore.2
+	title = ore.2.t
+	desc = ore.2.d
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = ore.2.a
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 1000
+				OR = {
+					has_game_rule = {
+						rule = ORE_ai_route
+						option = ORE_DUTOV_KOLCHAK
+					}
+				}
+			}
+		}
+		custom_effect_tooltip = "ORE_DUTOV_WILL_SURVIVE"
+		country_event = {
+			id = ore.6
+		}
+	}
+	option = {
+		name = ore.2.b
+		ai_chance = {
+			factor = 90
+			modifier = {
+				factor = 1000
+				OR = {
+					has_game_rule = {
+						rule = ORE_ai_route
+						option = ORE_EUR
+					}
+					has_game_rule = {
+						rule = ORE_ai_route
+						option = ORE_RASPUTIN
+					}
+				}
+			}
+		}
+		custom_effect_tooltip = "ORE_DUTOV_RIPBOZO"
+		country_event = {
+			id = ore.7
+		}
+	}
+}
+country_event = {  
+	id = ore.3
+	title = ore.3.t
+	desc = ore.3.d
+	picture = GFX_officers
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = ore.3.a
+	}
+}
+country_event = {
+	id = ore.4
+	title = ore.4.t
+	desc = ore.4.d
+	picture = GFX_coup
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = ore.4.b
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 1000
+				has_game_rule = {
+					rule = ORE_ai_route
+					option = ORE_EUR
+				}
+			}
+		}
+		set_country_flag = ORE_eurasianists
+		complete_national_focus = Orenburg_eurasian_ideocracy
+	}
+
+	option = {
+		name = ore.4.c
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 1000
+				has_game_rule = {
+					rule = ORE_ai_route
+					option = ORE_RASPUTIN
+				}
+			}
+		}
+		set_country_flag = ORE_rasputin_conspiracy
+		complete_national_focus = ORE_rasputins_conspiracy
+	}
+	
+}
+country_event = {
+	id = ore.5
+	title = ore.5.t
+	desc = ore.5.d
+	picture = GFX_address_the_troops
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+	name = ore.5.a
+	ai_chance = {
+	factor = 40
+	}
+	}
+}
+country_event = {
+	id = ore.6
+	title = ore.6.t
+	desc = ore.6.d
+	picture = GFX_address_the_troops
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = ore.6.a
+		ai_chance = {
+			factor = 40
+		}
+		set_country_flag = ORE_dutovlives
+	}
+}
+country_event = {
+	id = ore.7
+	title = ore.7.t
+	desc = ore.7.d
+	picture = GFX_address_the_troops
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = ore.7.a
+		ai_chance = {
+			factor = 60
+		}
+		kill_country_leader = yes
+		set_country_flag = ORE_dutovdies
+		country_event = {
+			days = 1
+			id = ore.4
+		}
+	}
+}
+country_event = {
+	id = ore.8
+	title = ore.8.t
+	desc = ore.8.desc
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = ore.8.a
+		add_ideas = ORE_olga
+	}
+}
+
+country_event = {
+	id = ore.9
+	title = ore.9.t
+	desc = ore.9.desc
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = ore.9.a
+	}
+}
+
+country_event = {
+	id = ore.10
+	title = ore.10.t
+	desc = ore.10.desc
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = ore.10.a
+	}
+}
+
+country_event = {
+	id = ore.11
+	title = ore.11.t
+	desc = ore.11.desc
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = ore.11.a
+	}
+}
+
+country_event = {
+	id = ore.12
+	title = ore.12.t
+	desc = ore.12.d
+	picture = GFX_address_the_troops
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = ore.12.a
+		ai_chance = {
+			factor = 100
+		}
+		ORE = {
+			every_unit_leader = {
+				set_nationality = DKB
+			}
+		}
+		DKB = { 
+			
+			annex_country = {
+				target = ORE
+				transfer_troops = yes
+			}
+			every_state = {
+				limit = {
+					is_owned_by = ORE
+				}
+				add_core_of = DKB
+			}
+			change_tag_from = ORE
+		}
+	}
+	option = {
+		name = ore.12.b
+		ai_chance = {
+			factor = 0
+		}
+	}
+}

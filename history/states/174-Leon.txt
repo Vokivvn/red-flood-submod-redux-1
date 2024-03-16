@@ -1,0 +1,30 @@
+
+state={
+	id=174
+	name="STATE_174"
+	manpower = 640724
+	
+	state_category = rural
+
+	history={
+		owner = SPR
+        victory_points = {
+		726 5
+		}
+		victory_points = {
+			6907 1
+		}
+		buildings = {
+			infrastructure = 3
+			arms_factory = 1
+			industrial_complex = 1
+
+		}
+		add_core_of = SPR
+	}
+
+	provinces={
+		726 918 920 3725 3727 3918 3920 6746 6907 9699 11843
+		10749 5035
+	}
+}

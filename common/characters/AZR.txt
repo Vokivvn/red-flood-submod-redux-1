@@ -1,0 +1,14 @@
+characters = {
+	AZR_mammad_amin_rasulzadeh = {
+		name = "Mammad Amin Rasulzade"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/AZR/Portrait_Mammad_Amin_Rasulzadeh.png"
+			}
+		}
+		country_leader = {
+			ideology = national_liberalism
+			expire = "1965.1.1.1"
+		}
+	}
+}

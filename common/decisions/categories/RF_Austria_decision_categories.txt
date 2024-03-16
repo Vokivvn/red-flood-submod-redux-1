@@ -1,0 +1,19 @@
+AUS_karl_empire_restoration = {
+	allowed = {
+		original_tag = AUS
+	}
+	visible = {
+		has_completed_focus = AUS_carolingian_kaisertum
+	}
+	priority = 100
+}
+
+AUS_mises_fopo = {
+	allowed = {
+		original_tag = AUS
+	}
+	visible = {
+		has_completed_focus = AUS_open_for_business
+	}
+	priority = 100
+}

@@ -1,0 +1,108 @@
+﻿###########################
+# Turkish Events
+###########################
+
+add_namespace = turkey
+
+country_event = {
+	id = turkey.1
+	title = turkey.1.t
+	desc = turkey.1.d
+	picture = GFX_news_event_chinese_soldiers_march
+	
+	fire_only_once = yes
+	trigger = {
+		tag = TUR
+		TUR = {
+			controls_province = 11829
+			exists = yes
+		}
+		
+	}
+	option = {
+		name = turkey.1.a
+		if = {
+			limit = {
+				MAR = {
+					owns_state = 976
+				}
+			}
+			annex_country = {
+				target = MAR
+			}
+		}
+		hidden_effect = {
+			TUR_Adivar = {
+				remove_country_leader_role = {
+					ideology = provisional_government
+				}
+				add_country_leader_role = {
+					character = TUR_Adivar
+					promote_leader = yes
+					country_leader = {
+						ideology = national_rejuvenatism
+						expire = "1965.1.1"
+					}
+				}
+				set_portraits = {
+					character = TUR_Adivar
+					civilian = {
+						large = "GFX_Portrait_TUR_Adivar_Natrej"
+					}
+				}
+			}
+			TUR = {
+				set_politics = {
+					ruling_party = accelerationism
+				}
+				add_popularity = {
+					ideology = accelerationism
+					popularity = 0.15
+				}
+				add_popularity = {
+					ideology = right_authoritarianism
+					popularity = -0.15
+				}
+				drop_cosmetic_tag = yes
+			}
+		}
+		news_event = {
+			id = news.233
+		}
+	}
+}
+
+country_event = {
+	id = turkey.999
+	title = turkey.999.t
+	desc = turkey.999.d
+	picture = GFX_news_event_chinese_soldiers_march
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = turkey.999.a
+		declare_war_on = { 
+			type = annex_everything
+			target = MAR 
+		}
+		declare_war_on = { 
+			type = annex_everything
+			target = KUR
+		}
+		set_politics = {
+			ruling_party = right_authoritarianism
+		}
+		add_popularity = {
+			ideology = right_authoritarianism
+			popularity = 0.3
+		}
+		news_event = {
+			id = news.4
+		}
+		set_cosmetic_tag = TUR_rebellion
+		set_global_flag = TUR_civil_war_started
+	}
+}
+
+

@@ -1,0 +1,14 @@
+characters = {
+	PHX_john_hunt_udall = {
+		name = "John Hunt Udall"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/PHX/Portrait_John_Hunt_Udall.png"
+			}
+		}
+		country_leader = {
+			ideology = provisional_government
+			expire = "1965.1.1.1"
+		}
+	}
+}

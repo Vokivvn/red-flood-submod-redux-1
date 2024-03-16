@@ -1,0 +1,29 @@
+
+state={
+	id=176
+	name="STATE_176"
+	manpower = 601391
+	
+	state_category = city
+
+	history={
+		owner = SPR
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+		}
+		victory_points = {
+			885 3 
+		}
+		victory_points = {
+			11825 3 
+		}
+		
+		add_core_of = SPR
+	}
+
+	provinces={
+		903 3820 4024 6936 9700 9800 9827 9846 9872 11684 11809 11825
+		8077
+	}
+}

@@ -1,0 +1,30 @@
+state={
+	id=1162
+	name="STATE_1162"
+	manpower = 2950200
+	
+	state_category = city
+	resources={
+
+	}
+
+	history={
+		owner = INC
+		add_core_of = INC
+		add_claim_by = RSR
+		victory_points = {
+			4187 10
+		}
+		victory_points = {
+			11952 5
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+		}
+	}
+
+	provinces={
+		4187 7150 7165 11952
+	}
+}

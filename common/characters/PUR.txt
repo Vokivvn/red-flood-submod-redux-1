@@ -1,0 +1,14 @@
+characters = {
+	PUR_fritz_julius_kuhn = {
+		name = "Fritz Julius Kuhn"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/PUR/Portrait_PUR_Fritz_Kuhn.png"
+			}
+		}
+		country_leader = {
+			ideology = social_republicanism
+			expire = "1965.1.1.1"
+		}
+	}
+}

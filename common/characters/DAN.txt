@@ -1,0 +1,137 @@
+characters = {
+	DAN_Julius_Gehl_demsoc = {
+		name = "Julius Gehl"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/DAN/RS_Julius_Gehl.png"
+			}
+		}
+		country_leader = {
+			ideology = democratic_socialism
+			expire = "1965.1.1.1"
+		}
+	}
+	DAN_Julius_Gehl_vansoc = {
+		name = "Julius Gehl"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/DAN/VS_Julius_Gehl.png"
+			}
+		}
+		country_leader = {
+			ideology = state_socialism
+			expire = "1965.1.1.1"
+		}
+	}
+	DAN_Julius_Gehl_popsoc = {
+		name = "Julius Gehl"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/DAN/PS_Julius_Gehl.png"
+			}
+		}
+		country_leader = {
+			ideology = spartakism
+			expire = "1965.1.1.1"
+		}
+	}
+	DAN_Julius_Gehl_prog = {
+		name = "Julius Gehl"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/DAN/Prog_Julius_Gehl.png"
+			}
+		}
+		country_leader = {
+			ideology = liberal_socialism
+			expire = "1965.1.1.1"
+		}
+	}
+	DAN_Julius_Gehl_anar = {
+		name = "Julius Gehl"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/DAN/Anar_Julius_Gehl.png"
+			}
+		}
+		country_leader = {
+			ideology = social_anarchism
+			expire = "1965.1.1.1"
+		}
+	}
+	DAN_Arthur_Greisser_despotism = {
+		name = "Arthur Greisser"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/DAN/D_Arthur_Greisser.png"
+			}
+		}
+		country_leader = {
+			ideology = revolutionary_nationalism
+			expire = "1965.1.1.1"
+		}
+	}
+	DAN_Arthur_Greisser_reactionism = {
+		name = "Arthur Greisser"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/DAN/R_Arthur_Greisser.png"
+			}
+		}
+		country_leader = {
+			ideology = reactionary_populism
+			expire = "1965.1.1.1"
+		}
+	}
+	DAN_dreszer_rwa = {
+		name = "Gustaw Orlicz-Dreszer"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/DAN/RW_Gustaw_Orlicz_Dreszer.png"
+			}
+
+		}
+		country_leader = {
+			ideology = provisional_government
+			expire = "1965.1.1.1"
+		}
+	}
+	DAN_dreszer_rwa2 = {
+		name = "Gustaw Orlicz-Dreszer"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/DAN/RW_Gustaw_Orlicz_Dreszer.png"
+			}
+
+		}
+	}
+	DAN_dreszer_acc = {
+		name = "Gustaw Orlicz-Dreszer"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/DAN/Acc_Gustaw_Orlicz_Dreszer.png"
+			}
+
+		}
+		country_leader = {
+			ideology = fiumanism
+			expire = "1965.1.1.1"
+		}
+	}
+	DAN_dreszer_military = {
+		name = "Gustaw Orlicz-Dreszer"
+		portraits = {
+			army = {
+				large = "gfx/leaders/DAN/General_Gustaw_Orlicz_Dreszer.png"
+			}
+		}
+		corps_commander = {
+			traits = { infantry_officer }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+}

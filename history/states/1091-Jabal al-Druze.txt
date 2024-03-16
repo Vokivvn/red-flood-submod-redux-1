@@ -1,0 +1,20 @@
+state={
+	id=1091
+	name="STATE_1091" #Jabal al-Druze
+	manpower = 57797
+	
+	state_category = rural
+
+	history={
+		owner = SYR
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = SYR	
+		add_claim_by = SNP
+	}
+
+	provinces={
+		1956
+	}
+}

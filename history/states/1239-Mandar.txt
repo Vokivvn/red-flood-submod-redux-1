@@ -1,0 +1,30 @@
+state={
+	id=1239
+	name="STATE_1239"
+	manpower = 264300
+
+	state_category = rural
+
+	history= {
+		owner = DEI
+		victory_points = { #Mamoedjoe
+			7598 1
+		}
+		victory_points = { #Madjene
+			13573 1
+		}
+		add_core_of = DEI
+		buildings = {
+			infrastructure = 2
+			7598 = {
+				naval_base = 1
+			}
+			13573 = {
+				naval_base = 1
+			}
+		}
+	}
+	provinces={
+		13573 7598 4308 13567
+	}
+}

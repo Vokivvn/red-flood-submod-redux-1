@@ -1,0 +1,260 @@
+﻿division_template = {
+	name = "Brigada Legionario"
+	is_locked = yes
+	division_names_group = SPAN_INF_01
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+}
+
+units = {
+	division = {
+		name = "1a Brigada Legionario"
+		location = 6812
+		division_template = "Brigada Legionario"
+	}
+	division = {
+		name = "1a Brigada Legionario"
+		location = 6812
+		division_template = "Brigada Legionario"
+	}
+	division = {
+		name = "1a Brigada Legionario"
+		location = 6812
+		division_template = "Brigada Legionario"
+	}
+	division = {
+		name = "1a Brigada Legionario"
+		location = 6812
+		division_template = "Brigada Legionario"
+	}
+	division = {
+		name = "1a Brigada Legionario"
+		location = 6812
+		division_template = "Brigada Legionario"
+	}
+	division = {
+		name = "1a Brigada Legionario"
+		location = 6836
+		division_template = "Brigada Legionario"
+	}
+	division = {
+		name = "1a Brigada Legionario"
+		location = 6836
+		division_template = "Brigada Legionario"
+	}
+	division = {
+		name = "1a Brigada Legionario"
+		location = 6836
+		division_template = "Brigada Legionario"
+	}
+	division = {
+		name = "1a Brigada Legionario"
+		location = 6836
+		division_template = "Brigada Legionario"
+	}
+	division = {
+		name = "1a Brigada Legionario"
+		location = 6836
+		division_template = "Brigada Legionario"
+	}
+	division = {
+		name = "1a Brigada Legionario"
+		location = 9824
+		division_template = "Brigada Legionario"
+	}
+	division = {
+		name = "1a Brigada Legionario"
+		location = 9824
+		division_template = "Brigada Legionario"
+	}
+	division = {
+		name = "1a Brigada Legionario"
+		location = 9824
+		division_template = "Brigada Legionario"
+	}
+	division = {
+		name = "1a Brigada Legionario"
+		location = 9824
+		division_template = "Brigada Legionario"
+	}
+	division = {
+		name = "1a Brigada Legionario"
+		location = 9824
+		division_template = "Brigada Legionario"
+	}division = {
+		name = "1a Brigada Legionario"
+		location = 9764
+		division_template = "Brigada Legionario"
+	}
+	division = {
+		name = "1a Brigada Legionario"
+		location = 9764
+		division_template = "Brigada Legionario"
+	}
+	division = {
+		name = "1a Brigada Legionario"
+		location = 9764
+		division_template = "Brigada Legionario"
+	}
+	division = {
+		name = "1a Brigada Legionario"
+		location = 9764
+		division_template = "Brigada Legionario"
+	}
+	division = {
+		name = "1a Brigada Legionario"
+		location = 9764
+		division_template = "Brigada Legionario"
+	}
+	division = {
+		name = "2a Brigada Legionario"
+		location = 7153
+		division_template = "Brigada Legionario"
+	}
+	division = {
+		name = "2a Brigada Legionario"
+		location = 10009
+		division_template = "Brigada Legionario"
+	}
+	division = {
+		name = "2a Brigada Legionario"
+		location = 7068
+		division_template = "Brigada Legionario"
+	}
+	division = {
+		name = "2a Brigada Legionario"
+		location = 1176
+		division_template = "Brigada Legionario"
+	}
+	division = {
+		name = "2a Brigada Legionario"
+		location = 7196
+		division_template = "Brigada Legionario"
+	}
+	division = {
+		name = "2a Brigada Legionario"
+		location = 9979
+		division_template = "Brigada Legionario"
+	}
+	division = {
+		name = "2a Brigada Legionario"
+		location = 9979
+		division_template = "Brigada Legionario"
+	}
+	division = {
+		name = "2a Brigada Legionario"
+		location = 747
+		division_template = "Brigada Legionario"
+	}
+	division = {
+		name = "2a Brigada Legionario"
+		location = 747
+		division_template = "Brigada Legionario"
+	}
+	division = {
+		name = "2a Brigada Legionario"
+		location = 747
+		division_template = "Brigada Legionario"
+	}
+	division = {
+		name = "2a Brigada Legionario"
+		location = 747
+		division_template = "Brigada Legionario"
+	}
+	division = {
+		name = "2a Brigada Legionario"
+		location = 4065
+		division_template = "Brigada Legionario"
+	}
+	division = {
+		name = "2a Brigada Legionario"
+		location = 12038
+		division_template = "Brigada Legionario"
+	}
+	division = {
+		name = "2a Brigada Legionario"
+		location = 12038
+		division_template = "Brigada Legionario"
+	}
+	division = {
+		name = "2a Brigada Legionario"
+		location = 12038
+		division_template = "Brigada Legionario"
+	}
+	division = {
+		name = "2a Brigada Legionario"
+		location = 12038
+		division_template = "Brigada Legionario"
+	}
+	division = {
+		name = "2a Brigada Legionario"
+		location = 9813
+		division_template = "Brigada Legionario"
+	}
+	division = {
+		name = "2a Brigada Legionario"
+		location = 9813
+		division_template = "Brigada Legionario"
+	}
+	division = {
+		name = "2a Brigada Legionario"
+		location = 6966
+		division_template = "Brigada Legionario"
+	}
+	division = {
+		name = "2a Brigada Legionario"
+		location = 6966
+		division_template = "Brigada Legionario"
+	}
+	division = {
+		name = "2a Brigada Legionario"
+		location = 6966
+		division_template = "Brigada Legionario"
+	}
+	division = {
+		name = "2a Brigada Legionario"
+		location = 6966
+		division_template = "Brigada Legionario"
+	}
+	division = {
+		name = "2a Brigada Legionario"
+		location = 6966
+		division_template = "Brigada Legionario"
+	}
+	division = {
+		name = "2a Brigada Legionario"
+		location = 11707
+		division_template = "Brigada Legionario"
+	}
+	division = {
+		name = "2a Brigada Legionario"
+		location = 11707
+		division_template = "Brigada Legionario"
+	}
+	division = {
+		name = "2a Brigada Legionario"
+		location = 3729
+		division_template = "Brigada Legionario"
+	}
+	division = {
+		name = "2a Brigada Legionario"
+		location = 3729
+		division_template = "Brigada Legionario"
+	}
+	division = {
+		name = "2a Brigada Legionario"
+		location = 11688
+		division_template = "Brigada Legionario"
+	}
+	division = {
+		name = "2a Brigada Legionario"
+		location = 11688
+		division_template = "Brigada Legionario"
+	}
+}

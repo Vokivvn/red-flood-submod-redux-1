@@ -1,0 +1,227 @@
+instant_effect = {
+	create_equipment_variant = {
+		name = "Br. 19" #
+		type = small_plane_cas_airframe_0
+		modules = {
+			fixed_main_weapon_slot = bomb_locks
+			engine_type_slot = engine_1_1x
+			special_type_slot_1 = lmg_defense_turret
+		}
+		icon = "GFX_FRA_CAS1_medium"
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "NiD 62" #
+		type = small_plane_airframe_0
+		modules = {
+			fixed_main_weapon_slot = light_mg_2x
+			engine_type_slot = engine_1_1x
+			special_type_slot_1 = empty
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "D.500" #
+		type = small_plane_airframe_0
+		modules = {
+			fixed_main_weapon_slot = light_mg_4x
+			engine_type_slot = engine_1_1x
+			special_type_slot_1 = empty
+		}
+		icon = "GFX_FRA_light_plane_2_medium"
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "D.371" #
+		type = cv_small_plane_airframe_0
+		modules = {
+			fixed_main_weapon_slot = light_mg_4x
+			engine_type_slot = engine_1_1x
+			special_type_slot_1 = empty
+		}
+		icon = "GFX_FRA_light_plane_2_medium"
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "PL.7" #
+		type = cv_small_plane_naval_bomber_airframe_0
+		modules = {
+			fixed_main_weapon_slot = torpedo_mounting
+			engine_type_slot = engine_1_1x
+			special_type_slot_1 = lmg_defense_turret
+		}
+		icon = "GFX_FRA_naval_bomber1_medium"
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "D.510" #also covers D.501
+		type = small_plane_airframe_0
+		modules = {
+			fixed_main_weapon_slot = light_mg_2x
+			fixed_auxiliary_weapon_slot_1 = aircraft_cannon_1_1x
+			engine_type_slot = engine_2_1x
+			special_type_slot_1 = empty
+		}
+		icon = "GFX_FRA_light_plane_2_medium"
+	}
+	create_equipment_variant = {
+		name = "Latécoère 296" #
+		type = small_plane_naval_bomber_airframe_0
+		modules = {
+			fixed_main_weapon_slot = torpedo_mounting
+			engine_type_slot = engine_1_1x
+			special_type_slot_1 = floats
+		}
+		icon = "GFX_FRA_naval_bomber1_medium"
+	}
+	create_equipment_variant = {
+		name = "Amiot 143" #
+		type = medium_plane_airframe_0
+		modules = {
+			fixed_main_weapon_slot = medium_bomb_bay
+			fixed_auxiliary_weapon_slot_1 = bomb_locks
+			engine_type_slot = engine_2_2x
+			special_type_slot_1 = lmg_defense_turret
+		}
+		icon = "GFX_FRA_early_bomber_medium"
+	}
+	create_equipment_variant = {
+		name = "F.222" #
+		type = large_plane_airframe_0
+		modules = {
+			fixed_main_weapon_slot = large_bomb_bay
+			fixed_auxiliary_weapon_slot_1 = empty
+			engine_type_slot = engine_2_4x
+			special_type_slot_1 = lmg_defense_turret
+		}
+		icon = "GFX_FRA_strategic_bomber1_medium"
+	}
+	create_equipment_variant = {
+		name = "M.B. 200" #
+		type = medium_plane_airframe_0
+		modules = {
+			fixed_main_weapon_slot = medium_bomb_bay
+			fixed_auxiliary_weapon_slot_1 = empty
+			engine_type_slot = engine_1_2x
+			special_type_slot_1 = lmg_defense_turret
+		}
+		obsolete = yes
+	}
+}
+
+air_wings = {
+	# Z.d'Op. Aériennes Nord -- Lille
+	29 = { 
+		# Groupement de Chasse 21 
+		# Groupement de Chasse 23
+		small_plane_airframe_0 = {
+			owner = "FRA" 
+			amount = 96
+			version_name = "D.500"
+		}
+		small_plane_airframe_0 = {
+			owner = "FRA" 
+			amount = 96
+			version_name = "D.510"
+		}
+		# Groupement de Bombardment 6
+		# Groupement de Bombardment 9
+		large_plane_airframe_0 =  {
+			owner = "FRA" 
+			amount = 60
+			version_name = "F.222"
+		}
+	}
+
+	# Z.d'Op. Aériennes Est -- Reims
+	18 = {
+		# Groupement de Chasse 22
+		small_plane_airframe_0 = {
+			owner = "FRA" 
+			amount = 96
+			version_name = "D.510"
+		}
+	}
+
+	# Z.d'Op. Aériennes du Alps -- Marseille
+	21 = {
+		# Groupement de Chasse d'Alps
+		small_plane_airframe_0 = {
+			owner = "FRA" 
+			amount = 96
+			version_name = "NiD 62"
+		}
+		# Groupement de Bombardment 1
+		# Groupement de Bombardment 6
+		# Groupement de Bombardment 9
+		medium_plane_airframe_0 =  {
+			owner = "FRA" 
+			amount = 90
+			version_name = "Amiot 143"
+		}
+		# Groupement de Bombardment d'Assault 19
+		large_plane_airframe_0 =  {
+			owner = "FRA" 
+			amount = 24
+			version_name = "F.222"
+		}
+	}
+
+	# Z.d'Op. Aériennes Africain -- Tunis
+	458 = {
+		# Groupement de Chasse du Nord-Africain
+		small_plane_airframe_0 = {
+			owner = "FRA" 
+			amount = 48
+			version_name = "NiD 62"
+		}
+		# Groupement de Bombardment du Nord-Africain
+		medium_plane_airframe_0 =  {
+			owner = "FRA" 
+			amount = 30
+			version_name = "Amiot 143"
+		}
+	}
+
+	# Aeronautique Navale -- Cherbourg
+	15 = {
+		# Flotille F1
+		small_plane_naval_bomber_airframe_0 = {
+			owner = "FRA" 
+			amount = 24
+			version_name = "Latécoère 296"
+		}
+	}
+	"Béarn" = {
+		cv_small_plane_airframe_0 =  { owner = "FRA" amount = 10 version_name = "D.371"}
+		cv_small_plane_airframe_0 =  { owner = "FRA" amount = 10 version_name = "D.371"}
+		cv_small_plane_naval_bomber_airframe_0 =  { owner = "FRA" amount = 10 version_name = "PL.7"}
+		cv_small_plane_naval_bomber_airframe_0 =  { owner = "FRA" amount = 10 version_name = "PL.7"}			
+	}
+}
+
+instant_effect = {
+	if = {
+		limit = { NOT = { has_dlc = "By Blood Alone" } }
+		add_equipment_to_stockpile = {
+			type = fighter_equipment_0
+			amount = 350
+		}
+		add_equipment_to_stockpile = {
+			type = fighter_equipment_1 
+			amount = 150
+		}
+		add_equipment_to_stockpile = {
+			type = cv_fighter_equipment_0 
+			amount = 50
+		}
+		add_equipment_to_stockpile = {
+			type = CAS_equipment_1
+			amount = 150
+		}
+		add_equipment_to_stockpile = {
+			type = nav_bomber_equipment_1
+			amount = 100
+		}
+	}
+}

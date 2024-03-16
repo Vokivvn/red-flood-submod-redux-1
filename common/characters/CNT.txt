@@ -1,0 +1,124 @@
+characters = {
+	CNT_buenaventura_durruti = {
+		name = "Buenaventura Durruti"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/CNT/CNT_Buenaventura.png"
+			}
+			army = {
+				large="gfx/leaders/CNT/CNT_Buenaventura_General.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_DURRUTI_DESC"
+			ideology = stratocratic_anarchism
+			expire = "1965.1.1.1"
+		}
+		field_marshal = {
+			traits = { trait_reckless media_personality }
+			skill = 5
+			attack_skill = 4
+			defense_skill = 6
+			planning_skill = 4
+			logistics_skill = 4
+		}
+	}
+	CNT_abraham_guillen = {
+		name = "Abraham Guillén"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/CNT/Portrait_CNT_Guillen.png"
+			}
+		}
+	}
+	CNT_angel_pestana = {
+		name = "Ángel Pestaña"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/CNT/Portrait_CNT_Pestana.png"
+			}
+		}
+	}
+	CNT_luys_santa_marina = {
+		name = "Luys Santa Marina"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/CNT/Portrait_CNT_Santa.png"
+			}
+		}
+	}
+	CNT_antonio_cordón_garcía = {
+		name = "Antonio Cordón García"
+		portraits = {
+		}
+		corps_commander = {
+			traits = { trickster trait_reckless brilliant_strategist trait_engineer }
+			skill = 3
+			attack_skill = 4
+			defense_skill = 4
+			planning_skill = 4
+			logistics_skill = 4
+		}
+	}
+	CNT_cipriano_mera = {
+		name = "Cipriano Mera"
+		portraits = {
+			army = {
+				large="gfx/leaders/CNT/CNT_Cipriano_Mera.png"
+			}
+		}
+		corps_commander = {
+			traits = { old_guard }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 4
+			logistics_skill = 4
+		}
+	}
+	CNT_enrique_lister = {
+		name = "Enrique Lister"
+		portraits = {
+		    army = {
+				large="gfx/leaders/CNT/CNT_Juan_Garcia_Oliver.png"
+			}
+		}
+		corps_commander = {
+			traits = { }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 4
+			logistics_skill = 4
+		}
+	}
+	CNT_juan_modesto = {
+		name = "Juan Modesto"
+		portraits = {
+		    army = {
+				large="gfx/leaders/CNT/CNT_Antonio_Ortiz.png"
+			}
+		}
+		corps_commander = {
+			traits = { }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 4
+		}
+	}
+	CNT_valentín_gonzález = {
+		name = "Valentín González"
+		portraits = {
+		}
+		corps_commander = {
+			traits = { }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 4
+		}
+	}
+}

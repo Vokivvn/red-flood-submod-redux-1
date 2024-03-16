@@ -1,0 +1,25 @@
+state={
+	id=1121
+	name="STATE_1121" # Aswan
+	manpower = 2370500
+
+	state_category = rural
+
+	history = {
+		owner = EGY #EGY
+		buildings = {
+			infrastructure = 2
+		}
+		victory_points = {
+			1064 3 #aswan
+		}
+		victory_points = {
+			7030 3 #amarna
+		}
+		add_core_of = EGY
+
+	}
+	provinces={
+		7030 10028 1151 12071 1064 11999 10844
+	}
+}

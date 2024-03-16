@@ -1,0 +1,35 @@
+﻿l_english:
+#COUNTRY NAME#
+
+#PARTIES#
+TRA_vanguard_socialism_party:0 "CPoI - L"
+TRA_popular_socialism_party:0 "CPoI - S"
+TRA_anarchism_party:0 "TSF"
+TRA_revisionist_socialism_party:0 "SILF/JP"
+TRA_progressivism_party:0 "INC - S"
+TRA_liberalism_party:0 "Royal Council"
+TRA_conservatism_party:0 "Royal Council"
+TRA_right_authoritarianism_party:0 "Royal Council"
+TRA_despotism_party:0 "Royal Army"
+TRA_reactionism_party:0 "NVO (RSS) Radicals"
+TRA_accelerationism_party:0 "AIR"
+
+TRA_vanguard_socialism_party_long:0 "Communist Party of India - Leninist"
+TRA_popular_socialism_party_long:0 "Communist Party of India - Spartakist"
+TRA_anarchism_party_long:0 "Travancore Syndicalist Faction"
+TRA_revisionist_socialism_party_long:0 "South Indian Liberal Federation/Justice Party"
+TRA_progressivism_party_long:0 "Indian National Congress - Socialist"
+TRA_liberalism_party_long:0 "Council of the Diwan - Liberal"
+TRA_conservatism_party_long:0 "Council of the Diwan - Conservative"
+TRA_right_authoritarianism_party_long:0 "Council of the Diwan - Protectionist"
+TRA_despotism_party_long:0 "Royal Army of Cochin Loyalists"
+TRA_reactionism_party_long:0 "National Volunteer Organsation - Radicals"
+TRA_accelerationism_party_long:0 "Association for Indian Renewal"
+#LEADER DESCRITIONS#
+
+#IDEAS#
+TRA_political_agitation:0 "Left-Wing Political Agitation"
+TRA_feudal_economy:0 "Unindustrial Economy"
+#CUSTOM TOOLTIPS AND FLAGS#
+#DECISIONS (1.5 Update)#
+#FOCUSES#

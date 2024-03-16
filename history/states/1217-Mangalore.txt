@@ -1,0 +1,30 @@
+
+state={
+	id=1217
+	name="STATE_1217" # Mangalore
+	manpower = 2038200
+
+	state_category = town
+
+	resources={
+	
+	}
+
+	history={
+	owner = MAD
+	add_core_of = MAD
+		victory_points = {
+			10190 3
+		}
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			air_base = 1
+		}
+
+	}
+
+	provinces={
+		7244 7391 7447 10190 13552
+	}
+}

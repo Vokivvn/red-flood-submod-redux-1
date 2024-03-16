@@ -1,0 +1,233 @@
+characters={
+	WRR_alfred_rosenberg={
+		name="Alfred Rosenberg"
+		portraits={
+			civilian={
+				large="gfx/leaders/WRU/Portrait_WRU_Alfred_Rosenberg.png"
+				small = "gfx/interface/ministers/WRR/WRU_alfred_rosenberg.tga"
+			}
+		}
+		country_leader={
+			
+			ideology=reactionary_populism
+			expire="1965.1.1.1"
+			id=-1
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = WRU_alfred_rosenberg_hog
+			allowed = {
+				original_tag = WRR
+			}
+			traits = {
+				hog_backroom_backstabber
+			}
+			available = {
+			}
+		}
+	}
+	WRR_alexander_von_salza={
+		name="Alexander von Salza"
+		portraits={
+			army={
+				large="gfx/leaders/EST/Portrait_EST_Alexander_von_Salza.png"
+			}
+		}
+		navy_leader={
+			traits={ blockade_runner }
+			skill=2
+			attack_skill=3
+			defense_skill=2
+			maneuvering_skill=1
+			coordination_skill=1
+			legacy_id=-1
+		}
+	}
+	
+	WRU_max_erwin_von_scheubner_richter = {
+		name = WRU_max_erwin_von_scheubner_richter_hog
+		portraits={
+			army={
+				small="gfx/interface/ministers/WRU/max_erwin_von_scheubner_richter.dds"
+			}
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = WRU_max_erwin_von_scheubner_richter_hog
+			allowed = {
+				original_tag = WRR
+			}
+			traits = {
+				hog_flamboyant_tough_guy
+			}
+			available = {
+			}
+		}
+	}
+
+	WRU_margarate_von_wrangell = {
+		name = WRU_margarete_von_wrangell_for
+		portraits={
+			army={
+				small="gfx/interface/ministers/WRU/margarate_von_wrangell.dds"
+			}
+		}
+		advisor = {
+			slot = foreign_minister
+			idea_token = WRU_margarete_von_wrangell_for
+			allowed = {
+				original_tag = WRR
+			}
+			traits = {
+				for_biased_intellectual
+			}
+			available = {
+			}
+		}
+	}
+
+	WRU_leonid_andrussow = {
+		name = WRU_leonid_andrussow
+		portraits={
+			army={
+				small="gfx/interface/ministers/WRU/leonid_andrussow.dds"
+			}
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = WRU_leonid_andrussow
+			allowed = {
+				original_tag = WRR
+			}
+			traits = {
+				eco_industrial_chemist
+			}
+			available = {
+			}
+		}
+	}
+
+	WRU_adrian_von_folkersam = {
+		name = WRU_adrian_von_folkersam
+		portraits={
+			army={
+				small="gfx/interface/ministers/WRU/adrian_von_folkersam.dds"
+			}
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = WRU_adrian_von_folkersam
+			allowed = {
+				original_tag = WRR
+			}
+			traits = {
+				sec_prince_of_terror
+			}
+		}
+		advisor = {
+			slot = theorist
+			idea_token = WRU_theo_adrian_von_folkersam
+			allowed = {
+				tag = WRR
+			}
+			traits = {
+				mobile_warfare_expert
+			}
+		}
+	}
+
+	WRU_wessel_freytag_von_loringhoven = {
+		name = WRU_wessel_freytag_von_loringhoven
+		portraits={
+			army={
+				small="gfx/interface/ministers/WRU/wessel_freytag_von_loringhoven.dds"
+			}
+		}
+		advisor = {
+			slot = head_of_intel
+			idea_token = WRU_wessel_freytag_von_loringhoven
+			allowed = {
+				original_tag = WRR
+			}
+			traits = {
+				int_dismal_enigma
+			}
+		}
+		advisor = { 
+			slot = army_chief
+			idea_token = WRU_wessel_freytag_von_loringhoven
+			allowed = {
+				tag = WRR
+			}
+			traits = {
+				carm_commando_doctrine
+			}
+		}
+	}
+
+	WRU_alexander_von_salza = {
+		name = WRU_cnav_alexander_von_salza
+		portraits={
+			army={
+				small="gfx/interface/ministers/WRU/alexander_von_salza.dds"
+			}
+		}
+		advisor = {
+			slot = navy_chief
+			idea_token = WRU_cnav_alexander_von_salza
+			allowed = {
+				tag = WRR
+			}
+			traits = {
+				cnav_open_seas_doctrine
+			}
+		}
+	}
+	WRR_paul_von_rennenkampff={
+		name="Paul von Rennenkampff"
+		portraits={
+			army={
+				large="gfx/leaders/WRU/Portrait_WRU_Paul_von_Rennenkampff.png"
+				small = "gfx/interface/ministers/WRU/paul_von_rennenkampf.dds"
+			}
+		}
+		corps_commander={
+			traits={ infantry_officer }
+			skill=3
+			attack_skill=1
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+		advisor = {
+			slot = high_command
+			idea_token = WRR_paul_von_rennenkampff
+			allowed = {
+				original_tag = WRR
+			}
+			traits = {
+				army_regrouping_2
+			}
+		}
+	}
+	WRR_horst_adomaitis = {
+		name = WRR_cair_horst_adomaitis
+		portraits={
+			army={
+				small="gfx/interface/ministers/WRU/horst_adomaitis.dds"
+			}
+		}
+		advisor = {
+			slot = air_chief
+			idea_token = WRR_cair_horst_adomaitis
+			allowed = {
+				tag = WRR
+			}
+			traits = {
+				cair_air_superiority_doctrine
+			}
+		}
+	}
+
+}

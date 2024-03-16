@@ -1,0 +1,40 @@
+
+state={
+	id=571
+	name="STATE_571" # Omsk
+	manpower = 1629649
+
+	state_category = town
+	history={
+		owner = ORE
+		buildings = {
+			infrastructure = 2
+			arms_factory = 1
+			air_base = 5
+			industrial_complex = 1
+		}
+		victory_points = {
+			10696 25
+		}
+		victory_points = {
+			7800 5
+		}
+		victory_points={
+			1775 5
+		}
+		victory_points={
+			1662 5
+		}
+		victory_points={
+			12106 5
+		}
+		victory_points={
+			10633 5
+		}
+		add_core_of = ORE
+	}
+
+	provinces={
+		1294 1309 1391 1418 1662 1694 1709 1775 1800 4780 4850 7741 7800 7874 10568 10696 12185 12521 12546 12619 
+	}
+}

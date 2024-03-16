@@ -1,0 +1,33 @@
+
+state={
+	id=1153
+	name="STATE_1153"
+	manpower = 183387
+		resources={
+		steel= 2
+	}
+	
+	state_category = rural
+	
+	history={
+		owner = MLG
+		add_core_of = MLG
+		add_core_of = MAG
+		victory_points = {
+			13478 2
+		}
+		buildings = {
+			infrastructure = 2
+			13478 = {
+				naval_base = 1
+			}
+		}
+		MAG = {
+			set_province_controller = 12956
+		}
+	}
+
+	provinces={
+		7985 12956 8180 12082 13479 13478
+	}
+}

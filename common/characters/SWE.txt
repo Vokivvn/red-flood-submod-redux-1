@@ -1,0 +1,109 @@
+characters={
+	SWE_Gustav_V ={
+		name="Gustav V"
+		portraits={
+			civilian={
+				large="gfx/leaders/SWE/Portrait_SWE_Gustav_V.png"
+			}
+		}
+		country_leader={
+			ideology=social_conservatism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+
+	#Military Staff#
+	SWE_folke_hogberg = {
+		name = "Folke Högberg"
+		portraits = { 
+			army = { 
+				large = "gfx/leaders/SWE/SWE_Folke_Hogberg.png"
+			}
+		}
+		corps_commander = {
+			traits = {
+				commando
+			}
+			skill = 3
+			attack_skill = 1
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 3
+		}
+	}
+	SWE_erik_af_edholm = {
+		name = "Erik af Edholm"
+		portraits = { 
+			army = { 
+				large = "gfx/leaders/SWE/Portrait_Sweeden_Erik_Edholm.png"
+			}
+		}
+		field_marshal = {
+			traits = {
+				old_guard
+				brilliant_strategist
+			}
+			skill = 4
+			attack_skill = 4
+			defense_skill = 1
+			planning_skill = 4
+			logistics_skill = 4
+		}
+	}
+	SWE_ernest_linder = {
+		name = "Ernest Linder"
+		portraits = { 
+			army = { 
+				large = "gfx/leaders/SWE/Portrait_Sweeden_Ernest_Linder.png"
+			}
+		}
+		corps_commander = {
+			traits = {
+				cavalry_leader
+			}
+			skill = 4
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 1
+		}
+	}
+	SWE_carl_august_ehrensvard = {
+		name = "Carl August Ehrensvärd"
+		portraits = { 
+			army = { 
+				large = "gfx/leaders/SWE/Portrait_Sweeden_Carl_August_Ehrensvärd.png"
+			}
+		}
+		corps_commander = {
+			traits = {
+				cavalry_leader
+			}
+			skill = 2
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 1
+		}
+	}
+	SWE_claes_lindstrom = {
+		name = "Claes Lindström"
+		portraits = { 
+			navy = { 
+				large = "gfx/leaders/SWE/Portrait_Europe_Generic_navy_2.png"
+			}
+		}
+		navy_leader = {
+			traits = {
+				battleship_adherent
+				blockade_runner
+			}
+			skill = 4
+			attack_skill = 3
+			defense_skill = 4
+			maneuvering_skill = 3
+			coordination_skill = 3
+		}
+	}
+}

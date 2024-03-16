@@ -1,0 +1,25 @@
+state={
+	id=1158
+	name="STATE_1158"
+	manpower = 5115000
+
+	state_category = city
+
+	history={
+		owner = PNJ
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 1
+		}
+		add_core_of = PNJ
+		add_claim_by = DIN
+		victory_points = {
+			12005 10
+		}
+	}
+
+	provinces={
+		10066 10772 12005 12822
+	}
+}

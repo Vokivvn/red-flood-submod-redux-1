@@ -1,0 +1,81 @@
+is_british_colonial_claim = {
+	OR = {
+		state = 938 #Calais
+	
+		#Middle East
+		state = 656 #Kuwait
+		state = 765 #Qatar
+		state = 658 #Abu Dhabi
+		#Africa
+		state = 701 #Gambia
+		state = 700 #Sierra Leone
+		# Canada
+		state = 332
+		state = 331
+		#Central America
+		state = 311 #Belize
+		
+		#Islands
+		state = 696 #Bermuda
+		state = 703 #Ascension
+		state = 704 #Saint Helena
+		state = 720 #South Georgia
+		state = 299 #Falkland
+		state = 690 #Northern Bahamas
+		state = 693 #Southern Bahamas
+		state = 689 #Jamaica
+		state = 308 #Leeward Islands
+		state = 692 #Windward Islands
+		state = 691 #Trinidad
+		state = 1192 #Guayana Esequiba
+		state = 687 #British Guyana
+		state = 709 #Seychelles
+		state = 707 #Mauritius
+		state = 281 #Maldieves
+		state = 710 #Diego Garcia
+		state = 733 #Andaman
+		state = 712 #Cocos Islands
+		state = 711 #Christmas Island
+		state = 831 #Singapore
+		state = 326 #Hong Kong
+		state = 734 #Nendo
+		state = 636 #Fiji
+		state = 643 #Ellice Islands
+		state = 639 #Gilbert Islands
+		state = 725 #Nauru
+		state = 641 #Tahiti
+		state = 270 #Pitcairn Island
+	}
+}
+
+is_italian_colonial_claim = {
+	OR = {
+		state = 164 #Dodecanese
+		
+		region = 225 #Tripoli
+		region = 273 #Danakil
+		region = 17 #Ethiopian Highlands
+		state = 1018 #Haraghe
+		state = 559 #Somalia
+	}
+}
+
+is_japanese_colonial_claim = {
+	OR = {
+		state = 983 #Haifong
+		state = 286 #Saigon
+		state = 875 #Hoansa Shoto
+		
+		state = 877 #Jinglian
+		state = 728 #Guangzhouwan
+		state = 591 #Kainan Shoto
+		
+		state = 743 # Qingdao
+		state = 839 #Weihaiwei
+		state = 797 #Shanghai
+		state = 862 #Ningbo
+		state = 927 #Fuzhou
+		state = 928 #Amoy
+		state = 745 #Dalian
+	}
+}

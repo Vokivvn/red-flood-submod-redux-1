@@ -1,0 +1,29 @@
+
+state={
+	id=1082
+	name="STATE_1082"
+	manpower = 4123100
+
+	state_category = rural
+
+	resources={
+		aluminium = 2
+	}
+
+	history={
+		owner = RSR
+		add_core_of = RSR
+		victory_points = {
+			12854 1
+		}
+		buildings = {
+			infrastructure = 2
+			arms_factory = 1
+		}
+
+	}
+
+	provinces={
+		4953 10801 12854
+	}
+}

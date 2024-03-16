@@ -1,0 +1,101 @@
+add_namespace = neu
+
+#debug
+country_event = {
+	 id = neu.999
+	 title = neu.999.t
+	 desc = neu.999.desc
+	 picture = GFX_report_event_NEU_deutsch_brazilien
+	 fire_only_once = yes
+	 is_triggered_only = yes
+
+	option = {
+		name = neu.999.a
+		promote_character = NEU_Hans_Hënnin_fon_Khossel
+	}
+	option = {
+		name = neu.999.b
+		promote_character = NEU_Ekon_Alprect_Lemke
+	}
+}
+country_event = {
+	 id = neu.1000
+	 title = neu.1000.t
+	 desc = neu.1000.desc
+	 picture = GFX_report_event_NEU_deutsch_brazilien
+	 fire_only_once = yes
+	 is_triggered_only = yes
+
+	option = {
+		name = neu.1000.a
+		annex_country = {
+			target = FLO
+			transfer_troops = yes
+		}
+		annex_country = {
+			target = MOG
+			transfer_troops = yes
+		}
+		annex_country = {
+			target = BRR
+			transfer_troops = yes
+		}
+		annex_country = {
+			target = SAP
+			transfer_troops = yes
+		}
+		annex_country = {
+			target = BCQ
+			transfer_troops = yes
+		}
+		NEU = {
+			set_cosmetic_tag = NEU_XTAAT
+		}
+		puppet = ACQ
+		ACQ = {
+			set_cosmetic_tag = NEU_ELDORADO
+			promote_character = NEU_Kustaf_Pucholts
+			set_party_name = { 
+				ideology = reactionism 
+				long_name = NEU_ELDORADO_r_reactionism_party_long
+				name = NEU_ELDORADO_r_reactionism_party
+			}
+		}
+	}
+	option = {
+		name = neu.1000.b
+		annex_country = {
+			target = FLO
+			transfer_troops = yes
+		}
+		annex_country = {
+			target = MOG
+			transfer_troops = yes
+		}
+		annex_country = {
+			target = BRR
+			transfer_troops = yes
+		}
+		annex_country = {
+			target = SAP
+			transfer_troops = yes
+		}
+		annex_country = {
+			target = BCQ
+			transfer_troops = yes
+		}
+		puppet = ACQ
+		NEU = {
+			set_cosmetic_tag = NEU_REICH
+		}
+		ACQ = {
+			set_cosmetic_tag = NEU_HANAU
+			promote_character = NEU_Arthur_Kooler
+			set_party_name = { 
+				ideology = reactionism 
+				long_name = NEU_HANAU_r_reactionism_party_long
+				name = NEU_HANAU_r_reactionism_party 
+			}
+		}
+	}
+}

@@ -1,0 +1,14 @@
+characters = {
+	ARG_agustin_pedro_justo = {
+		name = "Agustín Pedro Justo"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ARG/Portrait_ARG_Agustin_Pedro_Justo.png"
+			}
+		}
+		country_leader = {
+			ideology = oligarchy
+			expire = "1965.1.1.1"
+		}
+	}
+}

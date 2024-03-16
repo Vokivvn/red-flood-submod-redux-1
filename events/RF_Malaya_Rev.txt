@@ -1,0 +1,75 @@
+add_namespace = rml
+
+country_event = {
+	id = rml.1 #Chinese Question
+	title = rml.1.t
+	desc = rml.1.desc
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = rml.1.a
+		hidden_effect = {
+			news_event = {
+				id = news.315
+			}
+		}
+		add_popularity = {
+			ideology = vanguard_socialism
+			popularity = 0.1
+		}
+	}
+	option = {
+		name = rml.1.b
+		hidden_effect = {
+			RML = {
+				country_event = {
+					id = rml.2
+					days = 35
+				}
+			}
+		}
+	}
+}
+country_event = {
+	id = rml.2 #Malay Coup
+	title = rml.2.t
+	desc = rml.2.desc
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = rml.2.a
+		RML = {
+			set_politics = {
+				ruling_party = reactionism
+				elections_allowed = no
+			}
+			add_popularity = {
+				ideology = reactionism
+				popularity = 0.2
+			}
+		}
+		news_event = {
+			id = news.270
+		}
+	}
+	option = {
+		name = rml.2.b
+		RML = {
+			set_politics = {
+				ruling_party = popular_socialism
+				elections_allowed = no
+			}
+			add_popularity = {
+				ideology = popular_socialism
+				popularity = 0.2
+			}
+		}
+		news_event = {
+			id = news.271
+		}
+	}
+}

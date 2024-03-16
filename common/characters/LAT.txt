@@ -1,0 +1,78 @@
+characters = {
+	LAT_herberts_cukurs = {
+		name = "Herberts Cukurs"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/LAT/Portrait_LAT_Herberts_Cukurs.png"
+			}
+		}
+		country_leader = {
+			ideology = national_rejuvenatism
+			expire = "1965.1.1.1"
+		}
+	}
+	LAT_ernests_brastins = {
+		name = "Ernests Brastiņš"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/LAT/Portrait_LAT_Ernests_Brastins.png"
+			}
+		}
+		country_leader = {
+			ideology = zadrugism
+			expire = "1965.1.1.1"
+		}
+	}
+	LAT_viktors_arajs = {
+		name = "Viktors Arājs"
+		portraits = {
+		}
+		corps_commander = {
+			traits = { trait_reckless }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	LAT_zanis_bahs = {
+		name = "Žanis Bahs"
+		portraits = {
+		}
+		corps_commander = {
+			traits = { commando }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	LAT_ludvigs_bolsteins = {
+		name = "Ludvigs Bolšteins"
+		portraits = {
+		}
+		corps_commander = {
+			traits = { inflexible_strategist }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 3
+			logistics_skill = 1
+		}
+	}
+	LAT_teodors_spade = {
+		name = "Teodors Spāde"
+		portraits = {
+		}
+		navy_leader = {
+			traits = { fleet_protector }
+			skill = 2
+			attack_skill = 3
+			defense_skill = 2
+			maneuvering_skill = 1
+			coordination_skill = 2
+		}
+	}
+}

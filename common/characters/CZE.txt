@@ -1,0 +1,247 @@
+characters = {
+	CZE_j_k_v_roman_I = {
+		name = "Roman"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/CZE/Portrait_CZE_Roman_I_Romanov.png"
+			}
+		}
+		country_leader = {
+			ideology = anocracy
+			expire = "1965.1.1.1"
+		}
+	}
+	
+	CZE_bohuslav_vrbenský = {
+		name = "Bohuslav Vrbenský"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/CZE/Portrait_CZE_Bohuslav_Vrbensky.png"
+			}
+		}
+		country_leader = {
+			ideology = syndicalism
+			expire = "1965.1.1.1"
+		}
+	}
+	CZE_josef_patejdl = {
+		name = "Josef Patejdl"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/CZE/Portrait_CZE_Josef_Patejdl.png"
+			}
+		}
+		country_leader = {
+			ideology = social_nationalism
+			expire = "1965.1.1.1"
+		}
+	}
+	CZE_jan_šrámek = {
+		name = "Jan Šrámek"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/CZE/Portrait_CZE_Jan_Sramek.png"
+			}
+		}
+		country_leader = {
+			ideology = social_conservatism
+			expire = "1965.1.1.1"
+		}
+	}
+	CZE_kare_schwarzenber = {
+		name = "Karel Schwarzenberg"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/CZE/Portrait_CZE_Karel_Schwarzenberg.png"
+			}
+		}
+		country_leader = {
+			ideology = reactionary_populism
+			expire = "1965.1.1.1"
+		}
+	}
+	CZE_ladislav_kobsinek = {
+		name = "Ladislav Kobsinek"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/CZE/Portrait_CZE_Ladislav_Kobsinek.png"
+			}
+		}
+		country_leader = {
+			ideology = revolutionary_nationalism
+			expire = "1965.1.1.1"
+		}
+	}
+	CZE_vaclav_bolen = {
+		name = "Václav Bolen"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/CZE/Portrait_CZE_Vaclav_Bolen.png"
+			}
+		}
+		country_leader = {
+			ideology = state_socialism
+			expire = "1965.1.1.1"
+		}
+	}
+	CZE_toyen = {
+		name = "Toyen"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/CZE/Portrait_CZE_Toyen.png"
+			}
+		}
+		country_leader = {
+			ideology = surrealism
+			expire = "1965.1.1.1"
+		}
+	}
+	CZE_jaroslav_hasek = {
+		name = "Jaroslav Hašek"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/CZE/Portrait_CZE_Jaroslav_Hasek.png"
+			}
+		}
+		country_leader = {
+			ideology = social_anarchism
+			expire = "1965.1.1.1"
+		}
+	}
+	CZE_jiří_stříbrný= {
+		name = "Jiří Stříbrný"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/CZE/Portrait_CZE_Jiri_Stribrny.png"
+			}
+		}
+		country_leader = {
+			ideology = nationalist_socialism
+			expire = "1965.1.1.1"
+		}
+	}
+	CZE_Karel_Englis = {
+		name = "Karel Engliš"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/CZE/Portrait_CZE_Karel_Englis.png"
+			}
+		}
+		country_leader = {
+			ideology = libertarian_capitalism
+			expire = "1965.1.1.1"
+		}
+	}
+	CZE_josef_snejdarek = {
+		name = "Josef Snejdarek"
+		portraits = {
+			army = {
+				large="gfx/leaders/CZE/Portrait_CZE_Josef Snejdarek.png"
+			}
+		}
+		field_marshal = {
+			traits = { panzer_leader }
+			skill = 3
+			attack_skill = 4
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 3
+		}
+	}
+	CZE_richard_tesarik = {
+		name = "Richard Tesarik"
+		portraits = {
+			army = {
+				large="gfx/leaders/CZE/Portrait_CZE_Richard_Tesarik.png"
+			}
+		}
+		corps_commander = {
+			traits = { panzer_leader }
+			skill = 3
+			attack_skill = 4
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 3
+		}
+	}
+	CZE_vojtěch_luža = {
+		name = "Vojtěch Luža"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/CZE/Portrait_CZE_Vojtěch_Luža.png"
+			}
+		}
+		corps_commander = {
+			traits = { war_hero infantry_officer}
+			skill = 4
+			attack_skill = 3
+			defense_skill = 4
+			planning_skill = 4
+			logistics_skill = 3
+		}
+	}
+	CZE_josef_votruba = {
+		name = "Josef Votruba"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/CZE/Portrait_CZE_Josef_Votruba.png"
+			}
+		}
+		corps_commander = {
+			traits = { career_officer cavalry_leader}
+			skill = 3
+			attack_skill = 2
+			defense_skill = 4
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	CZE_ludvík_svoboda = {
+		name = "Ludvík Svoboda"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/CZE/Portrait_CZE_Ludvík_Svoboda.png"
+			}
+		}
+		corps_commander = {
+			traits = { war_hero infantry_leader}
+			skill = 3
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	CZE_ján_golian = {
+		name = "Ján Golian"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/CZE/Portrait_CZE_Ján_Golian.png"
+			}
+		}
+		corps_commander = {
+			traits = { trickster commando}
+			skill = 2
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 1
+		}
+	}
+	CZE_václav_morávek = {
+		name = "Václav Morávek"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/CZE/Portrait_CZE_Václav_Morávek.png"
+			}
+		}
+		corps_commander = {
+			traits = { commando }
+			skill = 1
+			attack_skill = 5
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
+}

@@ -1,0 +1,92 @@
+characters = {
+	BYJ_yan_xishan = {
+		name = "Yan Xishan"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/BYJ/Portrait_Yan_Xishan.png"
+			}
+			army={
+				large ="gfx/leaders/BYJ/Portrait_Yan_Xishan_g.png"
+			}
+		}
+		country_leader = {
+			ideology = anocracy
+			expire = "1965.1.1.1"
+			desc = POLITICS_YISHAN_DESC
+		}
+		corps_commander={
+			traits = { }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	BYJ_fu_zuoyi = {
+		name = "Fu Zuoyi"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/BYJ/Fu_Zuoyi.png"
+			}
+		}
+		country_leader = {
+			ideology = military_dictatorship
+			expire = "1965.1.1.1"
+			desc = POLITICS_ZUOYI_DESC
+		}
+	}
+	BYJ_liang_shiy = {
+		name = "Liang Shiyi"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/BYJ/Liang_Shiyi.png"
+			}
+		}
+		country_leader = {
+			ideology = classical_liberalism
+			expire = "1965.1.1.1"
+		}
+	}
+	BYJ_yan_yangchu = {
+		name = "Yan Yangchu"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/BYJ/Yan_Yangchu.png"
+			}
+		}
+		country_leader = {
+			ideology = progressive_democracy
+			expire = "1965.1.1.1"
+		}
+	}
+	BYJ_zuo_shunsheng = {
+		name = "Zuo Shunsheng"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/BYJ/Portrait_Zuo_Shunsheng.png"
+			}
+		}
+		country_leader = {
+			ideology = national_rejuvenatism
+			expire = "1965.1.1.1"
+			desc = POLITICS_SHUNSHENG_DESC
+		}
+	}
+	BYJ_jing_yuexia = {
+		name = "Jing Yuexia"
+		portraits = {
+			army = {
+				large ="gfx/leaders/BYJ/Portrait_Jing_Yuexia.png"
+			}
+		} 
+		corps_commander = {
+			traits = { }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 1
+		}
+	}
+}

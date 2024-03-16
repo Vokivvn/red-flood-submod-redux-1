@@ -1,0 +1,246 @@
+add_namespace = prussia
+
+##Event: Ludendorff dies lol
+country_event = {
+	id = prussia.1
+	title = prussia.1.title
+	desc = prussia.1.desc
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = prussia.1.a
+        kill_ideology_leader = despotism
+		set_politics = {
+			ruling_party = right_authoritarianism
+		}
+		country_event = {
+			id = prussia.2
+			days = 20
+		}
+		add_popularity = {
+			ideology = despotism
+			popularity = -0.10
+		}
+		swap_ideas = {
+			remove_idea = PRS_calm_before_the_storm
+			add_idea = PRS_the_storm
+		}
+		news_event = {
+			id = news.181
+		}
+	}
+}
+country_event = {
+	id = prussia.2
+	title = prussia.2.title
+	desc = prussia.2.desc
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = prussia.2.a
+		ai_chance = {
+			base = 40
+		}
+        country_event = {
+			id = prussia.4
+			days = 20
+		}
+		swap_ideas = {
+			remove_idea = PRS_the_storm
+			add_idea = PRS_prussian_spring
+		}
+		news_event = {
+			id = news.182
+		}
+	}
+	option = {
+		name = prussia.2.a
+		ai_chance = {
+			base = 60
+		}
+        country_event = {
+			id = prussia.3
+			days = 20
+		}
+		swap_ideas = {
+			remove_idea = PRS_the_storm
+			add_idea = PRS_patriots_in_power
+		}
+		news_event = {
+			id = news.183
+		}
+	}
+}
+country_event = {
+	id = prussia.3
+	title = prussia.3.title
+	desc = prussia.3.desc
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = prussia.3.a
+		ai_chance = {
+			base = 55
+		}
+        kill_ideology_leader = right_authoritarianism
+		add_popularity = {
+			ideology = right_authoritarianism
+			popularity = 0.20
+		}
+		set_party_name = { 
+			ideology = right_authoritarianism 
+			long_name = "Gesellschaft des Geheimen Deutschlands"
+			name = "GGD"
+		}
+		news_event = {
+			id = news.187
+		}
+	}
+	option = {
+		name = prussia.3.a
+		ai_chance = {
+			base = 30
+		}
+        set_politics = {
+			ruling_party = despotism
+		}
+		add_popularity = {
+			ideology = despotism
+			popularity = 0.20
+		}
+		set_party_name = { 
+			ideology = despotism 
+			long_name = "Bund für Deutsche Gotterkenntnis"
+			name = "BDG"
+		}
+		news_event = {
+			id = news.188
+		}
+	}
+	option = {
+		name = prussia.3.a
+		ai_chance = {
+			base = 15
+		}
+        set_politics = {
+			ruling_party = reactionism
+		}
+		add_popularity = {
+			ideology = reactionism
+			popularity = 0.20
+		}
+		news_event = {
+			id = news.189
+		}
+	}
+}
+country_event = {
+	id = prussia.4
+	title = prussia.4.title
+	desc = prussia.4.desc
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = prussia.4.a
+		ai_chance = {
+			base = 35
+		}
+		set_politics = {
+			ruling_party = liberalism
+		}
+		add_popularity = {
+			ideology = liberalism
+			popularity = 0.20
+		}
+		news_event = {
+			id = news.185
+		}
+	}
+	option = {
+		name = prussia.4.b
+		ai_chance = {
+			base = 40
+		}
+		set_politics = {
+			ruling_party = conservatism
+		}
+		add_popularity = {
+			ideology = conservatism
+			popularity = 0.20
+		}
+		news_event = {
+			id = news.186
+		}
+	}
+	option = {
+		name = prussia.4.c
+		ai_chance = {
+			base = 25
+		}
+		set_politics = {
+			ruling_party = progressivism
+		}
+		add_popularity = {
+			ideology = progressivism
+			popularity = 0.20
+		}
+		news_event = {
+			id = news.184
+		}
+	}
+}
+
+country_event = {
+	id = prussia.5
+	title = prussia.5.t
+	desc = prussia.5.desc
+	#picture = 
+	fire_only_once = yes
+
+	trigger = {
+		TAG = PRS
+		PRS = {
+			controls_state = 188
+			num_of_controlled_states > 0
+            num_of_controlled_states < 2
+		}
+		LIT = {
+			exists = yes
+		}
+	}
+	
+	option = { 
+		name = prussia.5.a
+		LIT = {
+			country_event = prussia.6
+		}
+    }
+}
+
+country_event = {
+	id = prussia.6
+	title = prussia.6.t
+	desc = prussia.6.desc
+	#picture = 
+	
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = { 
+		name = prussia.6.a
+		transfer_state = 188
+    }
+}

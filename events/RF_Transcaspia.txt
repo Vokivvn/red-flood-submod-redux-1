@@ -1,0 +1,149 @@
+add_namespace = transcaspia
+
+country_event = {
+	id = transcaspia.1
+	title = transcaspia.1.t
+	desc = transcaspia.1.desc
+	picture = GFX_GER_march_action
+	fire_only_once = yes
+	
+	trigger = {
+		tag = TUC
+		PER = {
+			has_war = yes
+		}
+	}
+	
+	option = { #Removes transcaspia from the commonwealth and KHW declares war on TUC
+		name = transcaspia.1.a
+		ENG = {
+			end_puppet = TUC
+		}
+		TUC = {
+			leave_faction = yes	
+			separate_peace_all_wars = yes #this is so TUC doesn't stay at war with UGD
+		}
+		hidden_effect = {
+			KHW = {
+				country_event = {
+					id = khiva.1
+					days = 17
+				}
+			}
+			TUK = {
+				end_puppet = KHW
+				country_event = {
+					id = tuk.1
+					days = 7
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = transcaspia.2
+	title = transcaspia.2.t
+	desc = transcaspia.2.desc
+	picture = GFX_GER_march_action
+	fire_only_once = yes
+
+	trigger = {
+		tag = TUC
+		owns_state = 849
+	}
+	
+	option = { #transcaspia cores on khiva
+		name = transcaspia.2.a
+		add_state_core = 849
+		add_state_core = 1039
+		hidden_effect = {
+			BKR = {
+				country_event = {
+					id = bkr.1
+					days = 15
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = transcaspia.3
+	title = transcaspia.3.t
+	desc = transcaspia.3.desc
+	picture = GFX_GER_march_action
+	fire_only_once = yes
+
+	trigger = {
+		tag = TUC
+		owns_state = 1038
+	}
+	
+	option = { #transcaspia cores on bukhara
+		name = transcaspia.3.a
+		add_state_core = 851
+		add_state_core = 1038
+		add_state_core = 840 
+		add_state_core = 742
+		hidden_effect = {
+			country_event = {
+				id = transcaspia.4
+				days = 30
+			}
+		}
+	}
+}
+
+country_event = {
+	id = transcaspia.4
+	title = transcaspia.4.t
+	desc = transcaspia.4.desc
+	picture = GFX_GER_march_action
+	fire_only_once = yes
+
+	trigger = {
+		 tag = TUC
+		 owns_state = 1038
+	}
+	
+	option = { #war on turkestan
+		name = transcaspia.4.a
+		declare_war_on = {
+			target = TUK
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = TRK
+			type = annex_everything
+		}
+	}
+}
+
+country_event = {
+	id = transcaspia.5
+	title = transcaspia.5.t
+	desc = transcaspia.5.desc
+	picture = GFX_GER_march_action
+	fire_only_once = yes
+
+	trigger = {
+		tag = TUC
+		 owns_state = 405
+	}
+	
+	option = { #cores on turkestan
+		name = transcaspia.5.a
+		add_state_core = 405
+		add_state_core = 1040 
+		add_state_core = 585
+		add_state_core = 1042
+		add_state_core = 1041
+		add_state_core = 852
+		add_state_core = 1043
+		add_state_core = 586
+		add_state_core = 842
+		remove_ideas = TUC_hiddenbuff
+		set_cosmetic_tag = TUC_uni
+	}
+}

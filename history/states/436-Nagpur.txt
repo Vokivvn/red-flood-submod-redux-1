@@ -1,0 +1,28 @@
+
+state={
+	id=436
+	name="STATE_436"
+	manpower = 3443100
+
+	state_category = town
+
+	resources={
+		chromium=4 # was: 6
+	}
+
+	history={
+		owner = RSR
+		add_core_of = RSR
+		victory_points = {
+			13551 6
+		}
+		buildings = {
+			infrastructure = 2
+		}
+
+	}
+
+	provinces={
+		4557 10171 13551
+	}
+}

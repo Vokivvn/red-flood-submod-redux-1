@@ -1,0 +1,281 @@
+characters = {
+	MOG_mitsuyo_maeda = {
+		name = "Mitsuyo Maeda"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MOG/Portrait_Mitsuyo_Maeda.png"
+			}
+		}
+		country_leader = {
+			ideology = social_conservatism
+			expire = "1965.1.1.1"
+		}
+	}
+	MOG_junji_kikawa = {
+		name = "Junji Kikawa"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MOG/Portrait_Junji_Kikawa.png"
+			}
+			army = {
+				large = "gfx/leaders/MOG/Portrait_Junji_Kikawa_General.png"
+				small = "gfx/interface/ministers/MOG/MOG_junji_kikawa_hog.tga"
+			}
+		}
+		country_leader = {
+			ideology = constitutional_dictatorship
+			expire = "1965.1.1.1"
+		}
+		field_marshal = {
+			traits = { offensive_doctrine politically_connected }
+			skill = 3
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 3
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = MOG_junji_kikawa_hog
+			allowed = {
+				original_tag = MOG
+			}
+			traits = {
+				head_of_government
+				hog_local_tyrant
+			}
+			available = {
+				has_government = despotism
+			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = MOG_junji_army
+			allowed = {
+				original_tag = MOG
+			}
+			traits = {
+				army_chief
+				cos_school_of_mass_combat
+			}
+		}
+	}
+	MOG_domingos_nakamura = {
+		name = MOG_domingos_nakamura_hog
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/MOG/MOG_domingos_nakamura_hog.tga"
+			}
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = MOG_domingos_nakamura_hog
+			allowed = {
+				original_tag = MOG
+			}
+			traits = {
+				head_of_government
+				hog_spiritual_leader
+			}
+			available = {
+				has_government = conservatism
+			}
+		}
+	}
+
+	MOG_tomoke = {
+		name = MOG_tomoke_eco
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/MOG/MOG_tomoke_eco.tga"
+			}
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = MOG_tomoke_eco
+			allowed = {
+				original_tag = MOG	
+			}
+			traits = {
+				economy_minister
+				eco_balanced_budget_economy
+			}
+			available = {
+				has_government = conservatism
+			}
+		}
+	}
+	MOG_shobei = {
+		name = MOG_shobei_eco
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/MOG/MOG_shobei_eco.tga"
+			}
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = MOG_shobei_eco
+			allowed = { 
+				original_tag = MOG	
+			}
+			traits = {
+				economy_minister
+				eco_construction_magnate
+			}
+			available = {
+				has_government = despotism
+			}
+		}
+	}
+
+	MOG_joao_sussumu = {
+		name = MOG_joao_sussumu_fore
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/MOG/MOG_joao_sussumu_fore.tga"
+			}
+		}
+		advisor = {
+			slot = foreign_minister
+			idea_token = MOG_joao_sussumu_fore
+			allowed = {
+				original_tag = MOG
+			}
+			traits = {
+				foreign_minister
+				for_the_cloak_n_dagger_schemer
+			}
+			available = {
+				has_government = despotism
+			}
+		}
+	}
+	MOG_yukishigue = {
+		name = MOG_yukishigue_fore
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/MOG/MOG_yukishigue_fore.tga"
+			}
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = MOG_yukishigue_fore
+			allowed = { 
+				original_tag = MOG
+			}
+			traits = {
+				foreign_minister
+				for_biased_intellectual
+			}
+			available = {
+				has_government = conservatism
+			}
+		}
+	}
+
+	MOG_masanobu = {
+		name = MOG_masanobu_inter
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/MOG/MOG_masanobu_inter.tga"
+			}
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = MOG_masanobu_inter
+			allowed = { 
+				original_tag = MOG
+			}
+			traits = {
+				security_minister
+				sec_efficient_sociopath
+			}
+			available = {
+				has_government = despotism
+			}
+		}
+	}
+	MOG_ioshifumi = {
+		name = MOG_ioshifumi_inter
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/MOG/MOG_ioshifumi_inter.tga"
+			}
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = MOG_ioshifumi_inter
+			allowed = { 
+				original_tag = MOG
+			}
+			traits = {
+				security_minister
+				sec_health_and_safety
+			}
+			available = {
+				has_government = conservatism
+			}
+		}
+	}
+
+	MOG_toyama = {
+		name = MOG_toyama_int
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/MOG/MOG_toyama_int.tga"
+			}
+		}
+		advisor = {
+			slot = head_of_intel
+			idea_token = MOG_toyama_int
+			allowed = { 
+				original_tag = MOG
+			}
+			traits = {
+				head_of_intel
+				int_dismal_enigma
+			}
+			available = {
+				has_government = despotism
+			}
+		}
+	}
+	MOG_michitaro = {
+		name = MOG_michitaro_int
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/MOG/MOG_michitaro_int.tga"
+			}
+		}
+		advisor = {
+			slot = head_of_intel
+			idea_token = MOG_michitaro_int
+			allowed = { 
+				original_tag = MOG
+			}
+			traits = {
+				head_of_intel
+				int_logistics_specialist
+			}
+			available = {
+				has_government = conservatism
+			}
+		}
+	}
+	MOG_tomessada_matsuzaki = {
+		name = "Tomessada Matsuzaki"
+		portraits = {
+			army = {
+				large = "gfx/leaders/MOG/Portrait_Tomessada_Matsuzaki.png"
+			}
+		}
+		corps_commander = {
+			traits = { }
+			skill = 2
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+}

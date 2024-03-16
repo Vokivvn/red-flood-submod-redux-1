@@ -1,0 +1,24 @@
+state={
+	id=717
+	name="STATE_717"
+	manpower=1116803
+
+	state_category = rural
+
+	history={
+		owner = ZHR
+		buildings = {
+			infrastructure = 2
+
+		}
+		victory_points = {
+			9766 5
+		}
+		add_core_of = ZHR
+	}
+
+	provinces={
+		783 973 3944 6964 9766 9897 9928 11893 6806  
+	}
+	buildings_max_level_factor=1.000
+}

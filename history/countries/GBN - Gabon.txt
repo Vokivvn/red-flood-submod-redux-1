@@ -1,0 +1,31 @@
+﻿capital = 297
+
+set_research_slots = 2
+set_technology = {
+	infantry_weapons = 1
+}
+
+set_politics = {
+	ruling_party = right_authoritarianism
+	last_election = "1888.6.15"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_cosmetic_tag = GBN_joint_condominium
+
+set_popularities = {
+	anarchism = 7
+	vanguard_socialism = 0
+	popular_socialism = 3
+	revisionist_socialism = 0
+	progressivism = 11
+	liberalism = 4
+	conservatism = 0
+	right_authoritarianism = 56
+	despotism = 12
+	reactionism = 0
+	accelerationism = 7
+}
+
+recruit_character = GBN_Mariano_Alonso

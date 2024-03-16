@@ -1,0 +1,234 @@
+bookmarks = {
+	bookmark = {
+		name = "SETTING_SUN_NAME"
+		desc = "SETTING_SUN_DESC"
+		date = 1936.1.1.12
+		picture = "GFX_select_date_1939"
+		default_country = "JAP"
+		default = yes
+		"ZHR"={
+			history = "ZHR_SETTING_SUN_DESC"
+			ideology = progressivism
+			ideas = {
+				ZHR_japanese_influence
+				ZHR_permanent_revolution
+				ZHR_We
+			}
+			focuses = {
+				ZHR_we
+				ZHR_soberuptheworkers
+				ZHR_atlasshruggednomore
+			}
+		}
+		"JAP"={
+			history = "JAP_SETTING_SUN_DESC"
+			ideology = despotism
+			ideas = {
+				JAP_sunset_crash
+				JAP_economic_miracle
+				JAP_colonial_management
+			}
+			focuses = {
+				JAP_eigen_restoration
+				JAP_rising_sun
+				JAP_kokutaiseitai
+			}
+		}
+		"MAN"={
+			history = "MAN_SETTING_SUN_DESC"
+			ideology = right_authoritarianism
+			ideas = {
+				MAN_corporate_playground
+				MAN_fighters
+				MAN_kenpetai
+			}
+			focuses = {
+				MAN_corporate_review
+				MAN_freedom
+			}
+		}
+		"KOR"={
+			history = "KOR_SETTING_SUN_DESC"
+			ideology = despotism
+			ideas = {
+				KOR_jap_colony
+				KOR_nationalists_divided
+				KOR_republicanism
+			}
+			focuses = {
+				IKR_making_the_best_of_the_worst
+				IKR_status_of_cultural_preservation
+				IKR_amend_the_japanese_migration_policy
+			}
+		}
+		"UPI"={
+			history = "UPI_DESC_MENU"
+			ideology = despotism
+			ideas = {
+				UPI_brutal_putdowns
+				UPI_shadow_gallipoli
+				UPI_alone_unsupplied_cutoff
+			}
+			focuses = {
+				UPI_old_british_values
+				UPI_churchill_contemplation
+				UPI_new_declarations
+			}
+		}
+		"PER"={
+			history = "PER_SETTING_SUN_DESC"
+			ideology = right_authoritarianism
+			ideas = {
+				RPR_marxist_islam_idea
+				PER_OILgarchy
+				PER_SAVAK
+			}
+			focuses = {
+				PER_a_new_shah_for_a_new_age
+				PER_found_oil
+				RPR_the_capital_of_the_middle_east
+			}
+		}
+		"ISR"={
+			history = "ISR_DESC_MENU"
+			ideology = right_authoritarianism
+			ideas = {
+				ISR_mainstreamhebrew_idea
+				ISR_urbanisation
+				ISR_martyrs_of_zion
+			}
+			focuses = {
+				ISR_the18principlesofthelehi
+				ISR_einsteinsnuclearprogram
+				ISR_thelawofreturn
+			}
+		}
+		"ASY"={
+			minor = yes
+			history = "ASY_DESC_MENU"
+			ideology = despotism
+			ideas = {
+				ASY_assyria_exultant
+				ASY_new_asyrian4
+				ASY_red_flag_waves
+			}
+			focuses = {
+				ASY_primacy_of_shimun_line
+				ASY_civilisation_coming_home
+				ASY_program_of_marx_engels
+			}
+		}
+		"MON"={
+			minor = yes
+			history = "MON_SETTING_SUN_DESC"
+			ideology = right_authoritarianism
+			ideas = {
+				MON_recordcorrected 
+				MON_nomadshock 
+				MON_acespades 
+			}
+			focuses = {
+				Mongolia_opposethemadbaron
+				Mongolia_chineseempire
+				Mongolia_nomadshocktroops
+			}
+		}
+		"TAN"={
+			minor = yes
+			history = "TAN_SETTING_SUN_DESC"
+			ideology = reactionism
+			ideas = {
+				TAN_eurasian_army
+				TAN_industrial_dinosaur
+				TAN_Uyighur_defectors
+			}
+			focuses = {
+				TAN_mongolbrutality
+				TAN_hirerussianrefugees
+				TAN_ungernexpress
+			}
+		}
+		"MO2"={
+			minor = yes
+			history = "MO2_SETTING_SUN_DESC"
+			ideology = despotism
+			ideas = {
+				MO2_border_raids
+				MO2_wild_far_east
+				MO2_white_expats
+			}
+			focuses = {
+				Transbaikal_thetrial
+				Transbaikal_expandtherailway
+				Transbaikal_theminorities
+			}
+		}
+		"ALT"={
+			minor = yes
+			history = "ALT_DESC_MENU"
+			ideology = right_authoritarianism
+			ideas = {
+				ALT_national_church
+				ALT_hyperborea
+				ALT_soul_engineer
+			}
+			focuses = {
+                ALT_gurkhin_prevails
+				ALT_the_red_merlin
+				ALT_agartha_calling
+			}
+		}
+		"KCK"={
+			minor = yes
+			history = "KCK_DESC_MENU"
+			ideology = despotism
+			ideas = {
+				KCK_kolyma_gold_prospectors_1
+				KCK_remnants_of_the_pacific_fleet_3
+				KCK_coastal_guard_volunteers
+			}
+			focuses = {
+				KCK_the_siberian_opportunity
+				KCK_spring_of_yakutia
+				KCK_news_from_central_russia
+			}
+		}
+		"SIB"={
+			minor = yes
+			history = "SIB_DESC_MENU"
+			ideology = despotism
+			ideas = {
+				SIB_welfarestate
+				SIB_society1
+				SIB_russification_by_education
+			}
+			focuses = {
+				SIB_compromise_with_autonomists
+				SIB_vanguard_of_national_revolution
+				SIB_unyielding_dictatorship
+			}
+		}
+		"TRK"={
+			minor = yes
+			history = "TRK_DESC_MENU"
+			ideology = despotism
+			ideas = {
+				TRK_peasants
+				TRK_nobility
+				TRK_endless_raids
+			}
+			focuses = {
+				TRK_realm_of_seven_rivers
+				TRK_lawless_frontier
+				TRK_sinkhole
+			}
+		}
+        "---"={
+			history = "OTHER_THE_SETTING_SUN_DESC"
+		}
+		#This is a compulsory according to vanilla file
+		effect = {
+			randomize_weather = 22345
+		}
+	}
+}

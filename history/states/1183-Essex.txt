@@ -1,0 +1,26 @@
+state={
+	id=1183
+	name="STATE_1183"
+	manpower = 743174
+	
+	state_category = city
+
+	history={
+		owner = ENG
+		buildings = {
+			infrastructure = 3
+			dockyard = 2
+			11374 = {
+				naval_base = 10
+			}
+		}
+		victory_points = {
+			221 2
+		}
+		add_core_of = ENG
+	}
+
+	provinces={
+		221 11374
+	}
+}

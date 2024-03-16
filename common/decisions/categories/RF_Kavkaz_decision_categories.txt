@@ -1,0 +1,47 @@
+KAV_diplomatic_decisions = {
+	icon = GFX_Russian_uni_socialist
+	allowed = {
+		original_tag = KAV
+	}
+	priority = 200
+	picture = GFX_decision_category_russian_reuni
+	visible = {
+		is_subject = no
+	}
+}
+KAV_something_greater = {
+	icon = GFX_Russian_uni_socialist
+	allowed = {
+		original_tag = KAV
+	}
+	priority = 190
+	visible = {
+		has_completed_focus = KAV_forward_to_utopia
+		is_subject = no
+	}
+}
+KAV_transformation_stalin = {
+	icon = GFX_Russian_uni_socialist
+	allowed = {
+		original_tag = KAV
+	}
+	priority = 180
+	visible = {
+		has_completed_focus = KAV_father_stalin
+		is_subject = no
+	}
+}
+KAV_rainbow_war_plans = {
+	icon = GFX_KAV_rainbow_plans
+	allowed = {
+		original_tag = KAV
+	}
+	priority = 180
+	visible = {
+		has_completed_focus = KAV_reminder_from_the_accountant
+		has_country_flag = total_polish_death
+		is_subject = no
+	}
+}
+
+

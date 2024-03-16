@@ -1,0 +1,324 @@
+ideas = {
+	
+	country = {
+		BRR_democracy = {
+			picture = BRR_democracy_enshrined
+			modifier = {
+				army_org_factor = 0.05
+				progressivism_drift = 0.01
+				liberalism_drift = 0.01
+				conservatism_drift = 0.01
+			}
+		}
+
+		BRR_civilianeconomy = {
+			picture = BRR_economy_ensured
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.05
+				production_speed_industrial_complex_factor = 0.10
+				production_speed_infrastructure_factor = 0.20
+				production_speed_naval_base_factor = 0.30
+			}
+		}
+	
+		BRR_1889 = {
+			picture = BRR_ideal_1889
+			modifier = {
+				industrial_capacity_factory	= 0.10
+				production_speed_buildings_factor = 0.05
+			}
+		}
+			
+		BRR_o_jeitinho = {
+			picture = BRR_jatheiro_brasilero
+			modifier = {
+				consumer_goods_expected_value = 0.05
+				stability_weekly = 0.01
+				surrender_limit = 0.03
+			}
+		}
+	
+		BRR_slash_regulations = {
+			picture = BRR_regulations_slashed
+			modifier = {
+				consumer_goods_expected_value = -0.05
+				production_factory_start_efficiency_factor = 0.10
+				production_factory_efficiency_gain_factor = 0.10
+			}
+		}
+	
+		BRR_political_army = {
+			picture = BRR_army_is_political
+			modifier = {
+				army_attack_factor = 0.10
+				army_core_defence_factor = 0.10
+				army_morale_factor = 0.10
+			}
+		}
+		
+		BRR_embezzlement = {
+			picture = BRR_embezz
+			modifier = {
+				consumer_goods_expected_value = -0.05
+			}
+		}
+		
+		BRR_anti_corruption = {
+			picture = BRR_no_corruption
+			modifier = {
+				consumer_goods_expected_value = -0.05
+			}
+		}
+		
+		BRR_protect_farmers = {
+			picture = BRR_farmers_protected
+			modifier = {
+				consumer_goods_expected_value = -0.05
+			}
+		}
+		
+		BRR_officers_purged = {
+			picture = BRA_deep_scars
+			modifier = {
+				army_morale_factor = -0.20
+				army_infantry_attack_factor = -0.15
+				army_attack_factor = -0.10
+			}
+		}
+		
+		BRR_communist_insurgency = {
+			picture = BRA_collectives
+			modifier = {
+				army_morale_factor = -0.20
+				army_infantry_attack_factor = -0.15
+				army_attack_factor = -0.10
+				attrition = 0.25
+				heat_attrition_factor = 0.15
+				out_of_supply_factor = -0.20
+				encryption_factor = -0.25
+			}
+		}
+		
+		BRR_communist_insurgency_1 = {
+			picture = BRA_collectives
+			modifier = {
+				army_morale_factor = -0.01
+				army_infantry_attack_factor = -0.01
+				army_attack_factor = -0.01
+				attrition = 0.05
+				heat_attrition_factor = 0.01
+				out_of_supply_factor = -0.05
+				encryption_factor = -0.05
+			}
+		}
+
+		BRR_neutralindependentstable = {
+			picture = BRR_cherished_neutrality
+			modifier = {
+				political_power_gain = 0.10
+				war_support_factor = -0.10
+			}
+		}
+		
+		BRR_SUS = {
+			picture = BRR_sustem
+			modifier = {
+				stability_weekly = 0.01
+				consumer_goods_expected_value = 0.10
+				experience_loss_factor = -0.10
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					casualty_trickleback = 0.40
+				}
+			}
+		}
+		
+		BRR_ANDR = {
+			picture = BRR_communists_camps
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.05
+				production_speed_buildings_factor = 0.10
+			}
+		}
+		
+		BRR_autonomism = {
+			picture = BRR_state_autonomies
+			modifier = {
+				army_org_factor = 0.5
+				attrition = -0.05
+			}
+		}
+		
+		BRR_cosmetic_labor_laws = {
+			picture = BRR_paper_labour
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.10
+			}
+		}
+		BRR_politicalcomissars = {
+			picture = BRR_commissars
+			modifier = {
+				root_out_resistance_effectiveness_factor = 0.25
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
+				reactionism_drift = 0.05
+			}
+		}
+
+		BRR_distributism = {
+			picture = BRR_brazilian_distributism
+			modifier = {
+				reactionism_drift = 0.05
+				consumer_goods_expected_value = 0.05
+				production_factory_efficiency_gain_factor = 0.10
+			}
+		}
+		
+		BRR_independence = {
+			picture = BRR_independance_enshrined
+			modifier = {
+				reactionism_drift = 0.01
+				training_time_army_factor = -0.10
+				encryption_factor = 0.5
+			}
+		}
+
+		BRR_primitiveexpression = {
+			picture = BRR_expressions_primitives
+			modifier = {
+				accelerationism_drift = 0.05
+				army_morale_factor = 0.15
+				research_speed_factor = 0.03
+				local_resources_factor = 0.6
+			}
+		}
+
+		BRR_minorities = {
+			picture = BRR_minorities_protected
+			modifier = {
+				conscription = 0.025
+			}
+		}
+		
+		BRR_chaoticmind = {
+			picture = BRR_mind_chaos
+			modifier = {
+				accelerationism_drift = 0.10
+				stability_factor = 0.15
+				war_support_factor = 0.15
+				attrition = -0.25
+				army_speed_factor = 0.15
+			}
+		}
+
+		BRR_migrations = {
+			picture = BRR_europeans_migrations
+			modifier = {
+				monthly_population = 1.5
+				stability_factor = -0.15
+			}
+		}
+	
+		BRR_irrationalism = {
+			picture = BRR_ratio
+			modifier = {
+				research_speed_factor = -0.05
+				stability_factor = 0.1
+			}
+		}
+		
+		BRR_anti_lusotropicalism = {
+			picture = BRR_anti_luso
+			modifier = {
+				encryption_factor = 0.8
+				decryption_factor = 0.4
+				army_leader_start_logistics_level = 3
+			}
+		}
+	
+		BRR_full_locomotives_idea = {
+			picture = KAV_innovation
+			modifier = {
+				encryption_factor = 0.8
+				decryption_factor = 0.4
+			}
+		}
+
+		BRR_creativeerror = {
+			picture = BRR_creative_errors
+			modifier = {
+				research_speed_factor = -0.03
+				accelerationism_drift = -0.01
+			}
+		}
+		
+		BRR_agreatmixture = {
+			picture = BRR_great_mixture
+			modifier = {
+				decryption_factor = 0.5
+			}
+		}
+
+		BRR_collectivedream = {
+			picture = BRR_dreams
+			modifier = {
+				surrender_limit = 0.15
+				stability_weekly = 0.01
+				production_factory_efficiency_gain_factor = 0.07
+				production_factory_start_efficiency_factor = 0.05
+				production_speed_buildings_factor = 0.05
+				research_speed_factor = -0.03
+				accelerationism_drift = -0.01
+				#accelerationism_drift = 0.10
+				stability_factor = 0.20
+				war_support_factor = 0.20
+				attrition = -0.30
+				army_speed_factor = 0.20
+			}
+		}
+		
+		BRR_statecatholicism = {
+			picture = BRR_catholicism
+			modifier = {
+				political_power_gain = 0.10
+			}
+		}
+		
+		BRR_upper_class = {
+			picture = BRR_upper_protected
+			modifier = {
+				encryption_factor = 0.2
+				production_speed_buildings_factor = 0.10
+			}
+		}
+		
+		BRR_super_democracy = {
+			picture = BRR_Democracy_improved
+			modifier = {
+				progressivism_drift = 0.01
+				liberalism_drift = 0.01
+				conservatism_drift = 0.01
+			}
+		}
+		
+		BRR_vargascult = {
+			picture = BRR_cult_of_vargas
+			modifier = {
+				progressivism_drift = 0.05
+				war_support_factor = 0.05
+			}
+		}
+		
+		BRR_vargascult_1 = {
+			picture = BRR_cult_of_vargas
+			modifier = {
+				progressivism_drift = 0.10
+				war_support_factor = 0.15
+				army_core_attack_factor = 0.10
+			}
+		}
+		
+	}
+	
+}

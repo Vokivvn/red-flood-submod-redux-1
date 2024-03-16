@@ -1,0 +1,71 @@
+characters = {
+	MAL_Edward_Gent = {
+		name = "Edward Gent"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MAL/Portrait_MAL_Edward_Gent.png"
+			}
+		}
+		country_leader = {
+			ideology = colonial_government
+			expire = "1965.1.1.1"
+		}
+	}
+	MAL_Onn_Jaafar = {
+		name = "Onn bin Jaafar"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MAL/Portrait_MAL_Onn_Jaafar.png"
+			}
+		}
+		country_leader = {
+			ideology = social_conservatism
+			expire = "1965.1.1.1"
+		}
+	}
+	MAL_Zaaba = {
+		name = "Zainal Abidin bin Ahmad"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MAL/Portrait_MAL_Zaaba.png"
+			}
+		}
+		country_leader = {
+			ideology = libertarian_capitalism
+			expire = "1965.1.1.1"
+		}
+	}
+
+	MAL_launcelot_kiggell = {
+		name = "Launcelot Kiggell"
+		portraits = {
+			army = {
+				large = "gfx/leaders/MAL/Portrait_MAL_Launcelot_Kiggell.png"
+			}
+		}
+		field_marshal = {
+			traits = { old_guard inflexible_strategist}
+			skill = 3
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 4
+			logistics_skill = 4
+		}
+	}
+	MAL_herbert_lawerence = {
+		name = "Herbert Lawerence"
+		portraits = {
+			army = {
+				large = "gfx/leaders/MAL/Portrait_MAL_Herbert_Lawerence.png"
+			}
+		}
+		corps_commander = {
+			traits = { old_guard infantry_leader}
+			skill = 2
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 3
+		}
+	}
+}

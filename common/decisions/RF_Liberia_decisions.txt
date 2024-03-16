@@ -1,0 +1,234 @@
+### FOREIGN POLICY ###
+
+LIB_foreign_policy = {
+	LIB_attack_guinea = {
+		icon = generic_prepare_civil_war
+		cost = 50
+		fire_only_once = yes
+
+		days_remove = 14
+		remove_effect  = {
+			declare_war_on = {
+				target = GUN
+    			type = annex_everything
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	LIB_attack_british = {
+		icon = generic_prepare_civil_war
+		cost = 50
+		fire_only_once = yes
+
+		days_remove = 14
+		remove_effect  = {
+			declare_war_on = {
+				target = ENG
+    			type = annex_everything
+			}
+			declare_war_on = {
+				target = WAF
+    			type = annex_everything
+			}
+			declare_war_on = {
+				target = NGA
+    			type = annex_everything
+			}
+			hidden_effect = {
+				set_global_flag = LIB_wa_war
+			}
+		}
+		available = {
+			owns_state = 780
+			OR = {
+				GER = {
+					has_war_with = FRA
+				}
+				date > 1940.01.01
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	LIB_attack_sahel = {
+		icon = generic_prepare_civil_war
+		cost = 50
+		fire_only_once = yes
+
+		days_remove = 14
+		remove_effect  = {
+			declare_war_on = {
+				target = MLI
+    			type = annex_everything
+			}
+			declare_war_on = {
+				target = UPV
+    			type = annex_everything
+			}
+			declare_war_on = {
+				target = TUA
+    			type = annex_everything
+			}
+		}
+		available = {
+			AND = {
+				owns_state = 274
+				owns_state = 776
+				owns_state = 777
+				owns_state = 779
+				owns_state = 558
+				owns_state = 992
+				owns_state = 1017
+				owns_state = 700
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	LIB_integration_guinea = {
+		cost = 50
+		fire_only_once = yes
+
+		days_remove = 56
+		remove_effect  = {
+			add_state_core = 780
+		}
+		visible = {
+			owns_state = 780
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	LIB_peace_wa = {
+		allowed = { tag = LIB }
+		activation = {
+			has_global_flag = LIB_wa_war
+			LIB = {
+				controls_state = 274
+				controls_state = 776
+				controls_state = 777
+				controls_state = 779
+				controls_state = 558
+				controls_state = 992
+				controls_state = 1017
+				controls_state = 700
+			}
+		}
+		available = {
+			NOT = {
+				LIB = {
+					controls_state = 274
+					controls_state = 776
+					controls_state = 777
+					controls_state = 779
+					controls_state = 558
+					controls_state = 992
+					controls_state = 1017
+					controls_state = 700
+				}
+			}
+		}
+		is_good = yes
+		days_mission_timeout = 90
+		timeout_effect = {
+			hidden_effect = {
+				clr_global_flag = LIB_wa_war
+				set_global_flag = LIB_wa_win
+				every_state = {
+					limit = {
+						OR = {
+							state = 274
+							state = 776
+							state = 777
+							state = 779
+							state = 558
+							state = 992
+							state = 1017
+							state = 700
+						}
+					}
+					transfer_state_to = LIB
+				}
+				if = {
+					limit = {
+						has_government = accelerationism
+					}
+					set_cosmetic_tag = LIB_garvey_uni
+				}
+				if = {
+					limit = {
+						has_government = popular_socialism
+					}
+					set_cosmetic_tag = LIB_padmore_uni
+				}
+			}
+			every_enemy_country = {
+				limit = {
+					is_in_faction_with = ENG
+				}
+				white_peace = {
+					tag = LIB
+				}
+			}
+		}
+	}
+	LIB_integration_british_wa = {
+		cost = 100
+		fire_only_once = yes
+
+		days_remove = 56
+		remove_effect  = {
+			add_state_core = 274
+			add_state_core = 776
+			add_state_core = 777
+			add_state_core = 779
+			add_state_core = 558
+			add_state_core = 992
+			add_state_core = 1017
+			add_state_core = 700
+		}
+		visible = {
+			owns_state = 274
+			owns_state = 776
+			owns_state = 777
+			owns_state = 779
+			owns_state = 558
+			owns_state = 992
+			owns_state = 1017
+			owns_state = 700
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	LIB_integration_sahel = {
+		cost = 100
+		fire_only_once = yes
+
+		days_remove = 56
+		remove_effect  = {
+			add_state_core = 556
+			add_state_core = 778
+			add_state_core = 940
+			add_state_core = 939
+			add_state_core = 781
+			add_state_core = 977
+		}
+		visible = {
+			owns_state = 556
+			owns_state = 778
+			owns_state = 940
+			owns_state = 939
+			owns_state = 781
+			owns_state = 977
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

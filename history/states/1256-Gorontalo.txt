@@ -1,0 +1,24 @@
+state={
+	id=1256
+	name="STATE_1256"
+	manpower = 222700
+
+	state_category = rural
+
+	history= {
+		owner = DEI
+		victory_points = { #Gorontalo
+			13604 3
+		}
+		add_core_of = DEI
+		buildings = {
+			infrastructure = 2
+			13604 = {
+				naval_base = 1
+			}
+		}
+	}
+	provinces={
+		4262 1289 10169 13604
+	}
+}

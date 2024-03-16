@@ -1,0 +1,27 @@
+BUL_yugoslav_mechanic = {
+	icon = generic_political_actions
+	picture = GFX_decision_cat_picture_YUG_uni
+	allowed = {
+		tag = BUL
+	}
+	visible = {
+		has_cosmetic_tag = BUL_yugo
+	}
+	visible_when_empty = yes
+	priority = 1000
+}
+BUL_foreign_policy = {
+	allowed = {
+		tag = BUL
+	}
+	visible = {
+		OR = {
+			has_completed_focus = BUL_folk_king_wheat_throne
+			has_completed_focus = BUL_day_of_liberation
+			has_completed_focus = BUL_anarchism_in_practice
+			has_completed_focus = BUL_haemimontus_invicta
+			has_completed_focus = BUL_solar_temple_over_earth
+		}
+	}
+	priority = 100
+}

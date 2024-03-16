@@ -1,0 +1,115 @@
+﻿capital = 249
+set_research_slots = 3
+set_stability = 0.6
+
+set_country_flag = is_russian_warlord
+
+oob = "ORE"
+set_air_oob = "ORE_air"
+
+add_ideas = {
+	RUS_warlord_indifference
+	volunteer_only
+	export_focus
+	civilian_economy
+}
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1
+	tech_recon = 1
+	tech_engineers = 1
+	tech_trucks =1
+	motorised_infantry = 1
+	gw_artillery = 1
+}
+if = {
+	limit = { NOT = { has_dlc = "No Step Back" } }
+	set_technology = {
+		gwtank = 1
+	}
+}
+if = {
+	limit = { has_dlc = "No Step Back" }
+	set_technology = {
+		gwtank_chassis = 1
+		engine_tech_1 = 1
+	}
+}
+
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+	set_technology = {
+		iw_small_airframe = 1
+		aa_lmg = 1
+		aa_cannon_1 = 1
+		early_bombs = 1
+		engines_1 = 1
+	}
+}
+if = {
+	limit = { NOT = { has_dlc = "By Blood Alone" } }
+	set_technology = {
+		early_fighter = 1
+		CAS1 = 1
+	}
+}
+
+set_politics = {
+	ruling_party = despotism
+	last_election = "1933.10.25"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	vanguard_socialism = 0
+	popular_socialism = 0
+	anarchism = 0
+	revisionist_socialism = 5
+	progressivism = 5
+	liberalism = 5
+	conservatism = 10
+	right_authoritarianism = 10
+	despotism = 60
+	reactionism = 5
+	accelerationism = 0
+}
+
+set_cosmetic_tag = "ORE_subject"
+
+recruit_character = ORE_aleksandr_dutov
+recruit_character = ORE_zhakhansha_dosmukhamedov
+recruit_character = ORE_nikolay_trubetskoy
+recruit_character = ORE_aleksandr_kravtsov
+recruit_character = ORE_gavriil_yenborisov
+recruit_character = ORE_ivan_akulinin
+recruit_character = ORE_ivan_shivtsov
+recruit_character = ORE_matvei_martynov
+recruit_character = ORE_Khalel_Dosmuchamedov
+recruit_character = ORE_Pyotr_Savickij
+recruit_character = ORE_Baktigerey_Kulmanov
+recruit_character = ORE_Georges_Florovsky
+recruit_character = ORE_Nurgali_Ipmagambetov
+recruit_character = ORE_Sergei_Efron
+recruit_character = ORE_Otynshy_Alzhanov
+recruit_character = ORE_Anton_Kartashev
+recruit_character = ORE_Karash_Gumar
+recruit_character = ORE_Pyotr_Suvchinsky
+recruit_character = ORE_Caspian_Coastal_Patrol
+recruit_character = ORE_Aral_Coastal_Patrol
+recruit_character = ORE_Bakhtyuras_Besikbayev
+recruit_character = ORE_alexandr_vagin
+
+recruit_character = ORE_rasputin
+recruit_character = ORE_george_gurdjieff
+recruit_character = ORE_tryi_akemchi
+recruit_character = ORE_maria_rasputin
+recruit_character = ORE_dulustaan_michilovich_bobutov
+recruit_character = ORE_praskovya_rasputin
+recruit_character = ORE_Ivan_Zaytsev
+recruit_character = ORE_vasily_flug
+recruit_character = ORE_nurken_abdirov
+recruit_character = ORE_Nikolay_Ragozin
+
+recruit_character = TUK_zeki

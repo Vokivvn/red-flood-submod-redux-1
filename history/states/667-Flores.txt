@@ -1,0 +1,31 @@
+state={
+	id=667
+	name="STATE_667"
+	resources={
+		rubber=12 # was: 16
+	}
+	manpower=761200
+
+	state_category=pastoral
+
+	history={
+		owner = DEI
+		victory_points = { #Maoemere
+			7321 1
+		}
+		victory_points = { #Endeh
+			4301 1
+		}
+		add_core_of = DEI
+		buildings = {
+			infrastructure = 2
+			4301 = {
+				naval_base = 1
+			}
+		}
+	}
+
+	provinces={
+		1298 4301 7321 10175 12151
+	}
+}

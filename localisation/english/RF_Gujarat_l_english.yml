@@ -1,0 +1,37 @@
+﻿l_english:
+
+#PARTIES#
+INC_vanguard_socialism_party:0 "CPoI - L"
+INC_popular_socialism_party:0 "CPoI - S"
+INC_anarchism_party:0 "HSRA"
+INC_revisionist_socialism_party:0 "CSP"
+INC_progressivism_party:0 "INC - S"
+INC_liberalism_party:0 "INC - L"
+INC_conservatism_party:0 "AIHGA (ABHM) Moderates"
+INC_right_authoritarianism_party:0 "AIHGA (ABHM) Hardliners"
+INC_despotism_party:0 "NVO (RSS) Constitutionalists"
+INC_reactionism_party:0 "NVO (RSS) Radicals"
+INC_accelerationism_party:0 "AIR"
+
+INC_vanguard_socialism_party_long:0 "Communist Party of India - Leninist"
+INC_popular_socialism_party_long:0 "Communist Party of India - Spartakist"
+INC_anarchism_party_long:0 "Hindustan Socialist Republican Association"
+INC_revisionist_socialism_party_long:0 "Congress Socialist Party"
+INC_progressivism_party_long:0 "Indian National Congress - Socialist"
+INC_liberalism_party_long:0 "Indian National Congress - Liberal"
+INC_conservatism_party_long:0 "All-India Hindu Grand-Assembly - Moderates"
+INC_right_authoritarianism_party_long:0 "All-India Hindu Grand-Assembly - Hardliners"
+INC_despotism_party_long:0 "National Volunteer Organisation - Constitutionalists"
+INC_reactionism_party_long:0 "National Volunteer Organisation - Radicals"
+INC_accelerationism_party_long:0 "Association for Indian Renewal"
+#LEADER DESCRITIONS#
+
+#IDEAS#
+INC_cut_off_congress:0 "Cut-off Congress"
+INC_cut_off_congress_desc:0 "The Indian National Congress is headquartered in Calcutta, West Bengal and is run by Subhas Bose and his Left-Wing allies. Gujarat, for it's part, was and is a centre of INC influence owing to the fame of the late Gujarat-born Mahatma Gandhi. When the Raj fell, Gujarat was a stronghold for the INC and has remained such in the face of imminent threat from the Bombay Socialist Revolutionaries. "
+
+INC_congress_schism:0 "Congress Schism"
+INC_congress_schism_desc:0 "The Gujarat Congress is run largely separately from Calcutta, which suits its members well, as many are in loud opposition to the leadership of Subhas Bose. These opposition voices fear he is too close to the Congress Socialist Party, and accomodating of the Bombay Socialist Revolutionaries that threaten Gujarat's existence."
+#CUSTOM TOOLTIPS AND FLAGS#
+#DECISIONS (1.5 Update)#
+#FOCUSES#

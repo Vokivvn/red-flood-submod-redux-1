@@ -1,0 +1,662 @@
+on_actions = {
+	on_puppet = {
+		effect = {
+			if = {
+				limit = {
+					tag = DAI
+				}
+				drop_cosmetic_tag = yes
+			}
+			if = {
+				limit = {
+					tag = SMC
+				}
+				drop_cosmetic_tag = yes
+			}
+			if = {
+				limit = {
+					tag = VIN
+				}
+				drop_cosmetic_tag = yes
+			}
+		}
+	}
+	on_release_as_puppet = {
+		effect = {
+			if = {
+				limit = {
+					tag = DAI
+				}
+				drop_cosmetic_tag = yes
+			}
+			if = {
+				limit = {
+					tag = SMC
+				}
+				drop_cosmetic_tag = yes
+			}
+			if = {
+				limit = {
+					tag = VIN
+				}
+				drop_cosmetic_tag = yes
+			}
+		}
+	}
+	on_capitulation_immediate = {
+		effect = {
+			#JAP_intervene_libwar
+			if = {
+				limit = {
+					ROOT = { tag = VIN }
+					FROM = { tag = JAP }
+					has_global_flag = DAI_libwar
+				}
+				if = {
+					limit = {
+						NOT = {
+							country_exists = DAI
+						}
+					}
+					every_state = {
+						limit = {
+							is_owned_by = VIN
+						}
+						transfer_state_to = DAI
+					}
+					every_state = {
+						limit = {
+							is_core_of = VIN
+						}
+						add_core_of = DAI
+					}
+				}
+				if = {
+					limit = {
+						country_exists = DAI
+					}
+					DAI = {
+						annex_country = {
+							target = VIN
+						}
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							country_exists = SMC
+						}
+					}
+					clr_global_flag = DAI_libwar
+					set_global_flag = DAI_libwar_DAI_win
+					news_event = {
+						id = news.171
+					}
+					DAI = {
+						set_cosmetic_tag = DAI_Imperial
+						country_event = {
+							id = dainam.4
+							days = 105
+						}
+						annex_country = {
+							target = MRS
+						}
+						remove_ideas = DAI_libwar_imperial
+					}
+					every_state = {
+						limit = {
+							is_core_of = MRS
+						}
+						remove_core_of = MRS
+					}
+				}
+				every_state = {
+					limit = {
+						is_core_of = VIN
+					}
+					remove_core_of = VIN
+				}
+			}
+			if = {
+				limit = {
+					ROOT = { tag = SMC }
+					FROM = { tag = JAP }
+					has_global_flag = DAI_libwar
+				}
+				if = {
+					limit = {
+						NOT = {
+							country_exists = DAI
+						}
+					}
+					every_state = {
+						limit = {
+							is_owned_by = SMC
+						}
+						transfer_state_to = DAI
+					}
+					every_state = {
+						limit = {
+							is_core_of = SMC
+						}
+						add_core_of = DAI
+					}
+				}
+				if = {
+					limit = {
+						country_exists = DAI
+					}
+					DAI = {
+						annex_country = {
+							target = SMC
+						}
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							country_exists = VIN
+						}
+					}
+					clr_global_flag = DAI_libwar
+					set_global_flag = DAI_libwar_DAI_win
+					news_event = {
+						id = news.171
+					}
+					DAI = {
+						set_cosmetic_tag = DAI_Imperial
+						country_event = {
+							id = dainam.4
+							days = 105
+						}
+						annex_country = {
+							target = MRS
+						}
+						remove_ideas = DAI_libwar_imperial
+					}
+					every_state = {
+						limit = {
+							is_core_of = MRS
+						}
+						remove_core_of = MRS
+					}
+				}
+				every_state = {
+					limit = {
+						is_core_of = SMC
+					}
+					remove_core_of = SMC
+				}
+			}
+			#DAI_libwar
+			if = {
+				limit = {
+					ROOT = { tag = VIN }
+					FROM = { tag = DAI }
+					has_global_flag = DAI_libwar
+				}
+				if = {
+					limit = {
+						NOT = {
+							country_exists = SMC
+						}
+					}
+					clr_global_flag = DAI_libwar
+					set_global_flag = DAI_libwar_DAI_win
+					news_event = {
+						id = news.171
+					}
+					DAI = {
+						set_cosmetic_tag = DAI_Imperial
+						country_event = {
+							id = dainam.4
+							days = 105
+						}
+						annex_country = {
+							target = MRS
+						}
+						remove_ideas = DAI_libwar_imperial
+					}
+					every_state = {
+						limit = {
+							is_core_of = MRS
+						}
+						remove_core_of = MRS
+					}
+				}
+				every_state = {
+					limit = {
+						is_core_of = VIN
+					}
+					remove_core_of = VIN
+				}
+				DAI = {
+					white_peace = {
+						tag = VIN
+						message = DAI_LIBWAR_DAI_KILL_VIN_tt
+					}
+					annex_country = {
+						target = VIN
+					}
+				}
+			}
+			if = {
+				limit = {
+					ROOT = { tag = SMC }
+					FROM = { tag = DAI }
+					has_global_flag = DAI_libwar
+				}
+				if = {
+					limit = {
+						NOT = {
+							country_exists = VIN
+						}
+					}
+					clr_global_flag = DAI_libwar
+					set_global_flag = DAI_libwar_DAI_win
+					news_event = {
+						id = news.171
+					}
+					DAI = {
+						set_cosmetic_tag = DAI_Imperial
+						country_event = {
+							id = dainam.4
+							days = 105
+						}
+						annex_country = {
+							target = MRS
+						}
+						remove_ideas = DAI_libwar_imperial
+					}
+					every_state = {
+						limit = {
+							is_core_of = MRS
+						}
+						remove_core_of = MRS
+					}
+				}
+				every_state = {
+					limit = {
+						is_core_of = SMC
+					}
+					remove_core_of = SMC
+				}
+				DAI = {
+					white_peace = {
+						tag = SMC
+						message = DAI_LIBWAR_DAI_KILL_SMC_tt
+					}
+					annex_country = {
+						target = SMC
+					}
+				}
+			}
+			#VIN_and_SMC_vs_DAI_libwar
+			if = {
+				limit = {
+					ROOT = { tag = DAI }
+					FROM = { tag = VIN }
+					has_global_flag = DAI_libwar
+				}
+				if = {
+					limit = {
+						NOT = {
+							country_exists = SMC
+						}
+					}
+					clr_global_flag = DAI_libwar
+					set_global_flag = DAI_libwar_VIN_win
+					news_event = {
+						id = news.172
+					}
+					VIN = {
+						set_cosmetic_tag = VIN_ELF
+						country_event = {
+							id = viet.1
+							days = 105
+						}
+						white_peace = {
+							tag = DAI
+							message = DAI_LIBWAR_VIN_KILL_DAI_tt
+						}
+						annex_country = {
+							target = DAI
+						}
+						annex_country = {
+							target = MRS
+						}
+						remove_ideas = DAI_libwar
+					}
+					every_state = {
+						limit = {
+							is_core_of = MRS
+						}
+						remove_core_of = MRS
+					}
+				}
+				if = {
+					limit = {
+						country_exists = SMC
+					}
+					VIN = {
+						white_peace = {
+							tag = DAI
+							message = DAI_LIBWAR_DAI_DEAD_tt
+						}
+						annex_country = {
+							target = DAI
+						}
+						country_event = {
+							id = dainam.3
+							days = 14
+						}
+						set_capital = { state = 816 }
+					}
+					every_state = {
+						limit = {
+							OR = {
+								state = 286
+								state = 1108
+								state = 817
+							}
+						}
+						transfer_state_to = SMC
+					}
+					SMC = {
+						set_capital = { state = 286 }
+					}
+					every_state = {
+						limit = {
+							OR = {
+								state = 822
+							}
+						}
+						set_demilitarized_zone = yes
+					}
+				}
+				every_state = {
+					limit = {
+						is_core_of = DAI
+					}
+					remove_core_of = DAI
+				}
+			}
+			if = {
+				limit = {
+					ROOT = { tag = DAI }
+					FROM = { tag = SMC }
+					has_global_flag = DAI_libwar
+				}
+				if = {
+					limit = {
+						NOT = {
+							country_exists = VIN
+						}
+					}
+					clr_global_flag = DAI_libwar
+					set_global_flag = DAI_libwar_SMC_win
+					news_event = {
+						id = news.213
+					}
+					SMC = {
+						set_cosmetic_tag = SMC_INVF
+						country_event = {
+							id = annam.1
+							days = 105
+						}
+						white_peace = {
+							tag = DAI
+							message = DAI_LIBWAR_SMC_KILL_DAI_tt
+						}
+						annex_country = {
+							target = DAI
+						}
+						annex_country = {
+							target = MRS
+						}
+						remove_ideas = DAI_libwar
+					}
+					every_state = {
+						limit = {
+							is_core_of = MRS
+						}
+						remove_core_of = MRS
+					}
+				}
+				if = {
+					limit = {
+						country_exists = VIN
+					}
+					SMC = {
+						white_peace = {
+							tag = DAI
+							message = DAI_LIBWAR_DAI_DEAD_tt
+						}
+						annex_country = {
+							target = DAI
+						}
+						country_event = {
+							id = dainam.3
+							days = 14
+						}
+						set_capital = { state = 286 }
+					}
+					every_state = {
+						limit = {
+							OR = {
+								state = 877
+								state = 728
+								state = 591
+								state = 875
+								state = 983
+								state = 818
+							}
+						}
+						transfer_state_to = VIN
+					}
+					VIN = {
+						set_capital = { state = 816 }
+					}
+					every_state = {
+						limit = {
+							OR = {
+								state = 822
+							}
+						}
+						set_demilitarized_zone = yes
+					}
+				}
+				every_state = {
+					limit = {
+						is_core_of = DAI
+					}
+					remove_core_of = DAI
+				}
+			}
+			#VIN_vs_SMC_libwar
+			if = {
+				limit = {
+					ROOT = { tag = SMC }
+					FROM = { tag = VIN }
+					has_global_flag = DAI_libwar
+				}
+				clr_global_flag = DAI_libwar
+				set_global_flag = DAI_libwar_VIN_win
+				news_event = {
+					id = news.172
+				}
+				every_state = {
+					limit = {
+						is_core_of = SMC
+					}
+					remove_core_of = SMC
+				}
+				every_state = {
+					limit = {
+						is_core_of = MRS
+					}
+					remove_core_of = MRS
+				}
+				VIN = {
+					white_peace = {
+						tag = SMC
+						message = DAI_LIBWAR_VIN_KILL_SMC_tt
+					}
+					annex_country = {
+						target = SMC
+					}
+					annex_country = {
+						target = MRS
+					}
+					set_cosmetic_tag = VIN_ELF
+					country_event = {
+						id = viet.1
+						days = 105
+					}
+					remove_ideas = DAI_libwar
+					set_capital = { state = 816 }
+				}
+			}
+			if = {
+				limit = {
+					ROOT = { tag = VIN }
+					FROM = { tag = SMC }
+					has_global_flag = DAI_libwar
+				}
+				clr_global_flag = DAI_libwar
+				set_global_flag = DAI_libwar_SMC_win
+				news_event = {
+					id = news.213
+				}
+				every_state = {
+					limit = {
+						is_core_of = VIN
+					}
+					remove_core_of = VIN
+				}
+				every_state = {
+					limit = {
+						is_core_of = MRS
+					}
+					remove_core_of = MRS
+				}
+				SMC = {
+					white_peace = {
+						tag = VIN
+						message = DAI_LIBWAR_SMC_KILL_VIN_tt
+					}
+					annex_country = {
+						target = VIN
+					}
+					annex_country = {
+						target = MRS
+					}
+					set_cosmetic_tag = SMC_INVF
+					country_event = {
+						id = annam.1
+						days = 105
+					}
+					remove_ideas = DAI_libwar
+					set_capital = { state = 286 }
+				}
+			}
+			#MAL_civil_war
+			if = {
+				limit = {
+					ROOT = { tag = RML }
+					FROM = { tag = MAL }
+					has_global_flag = MAL_civil_war
+				}
+				clr_global_flag = MAL_civil_war
+				set_global_flag = MAL_uk_win
+				news_event = {
+					id = news.269
+				}
+				every_state = {
+					limit = {
+						is_core_of = RML
+					}
+					remove_core_of = RML
+				}
+				MAL = {
+					white_peace = {
+						tag = RML
+						message = MAL_REVOLT_MAL_WIN_tt
+					}
+					annex_country = {
+						target = RML
+					}
+				}
+				ENG = {
+					set_autonomy = {
+						target = MAL
+						autonomous_state = autonomy_colony
+					}
+				}
+				MAL = {
+					set_politics = {
+						ruling_party = right_authoritarianism
+						last_election = "1933.10.25"
+						election_frequency = 48
+						elections_allowed = no
+					}
+					add_popularity = {
+						ideology = conservatism
+						popularity = 0.1
+					}
+					add_popularity = {
+						ideology = liberalism
+						popularity = 0.1
+					}
+					add_popularity = {
+						ideology = right_authoritarianism
+						popularity = -0.1
+					}
+					country_event = {
+						id = mal.4
+						days = 105
+					}
+				}
+			}
+			#DEI_uprising
+			if = {
+				limit = {
+					ROOT = { tag = INA }
+					FROM = { tag = DEI }
+					has_global_flag = DEI_uprising
+				}
+				clr_global_flag = DEI_uprising
+				set_global_flag = DEI_hol_win
+				every_state = {
+					limit = {
+						is_core_of = INA
+					}
+					remove_core_of = INA
+				}
+				DEI = {
+					white_peace = {
+						tag = INA
+						message = DEI_REVOLT_DEI_WIN_tt
+					}
+					annex_country = {
+						target = INA
+					}
+				}
+				HOL = {
+					set_autonomy = {
+						target = DEI
+						autonomous_state = autonomy_puppet
+					}
+				}
+				DEI = {
+					set_politics = {
+						ruling_party = right_authoritarianism
+						last_election = "1933.10.25"
+						election_frequency = 48
+						elections_allowed = no
+					}
+				}
+			}
+		}
+	}
+}

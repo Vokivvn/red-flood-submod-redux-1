@@ -1,0 +1,158 @@
+
+# Infantry
+
+
+	entity = {
+		clone = "RAJ_infantry_entity"
+		name = "HYD_infantry_entity"
+		pdxmesh = "HYD_infantry_rifle_mesh"
+	}
+	
+	entity = {
+		clone = "RAJ_infantry_2_entity"
+		name = "HYD_infantry_2_entity"
+		pdxmesh = "HYD_infantry_mg_mesh"
+	}
+	
+	entity = {
+		clone = "HYD_infantry_2_entity"
+		name = "HYD_infantry_3_entity"
+	}
+
+
+# Cavalry
+
+
+	entity = {
+		clone = "RAJ_infantry_rider_entity"
+		name = "HYD_infantry_rider_entity"
+		pdxmesh = "HYD_infantry_rifle_mesh"
+	}
+
+	entity = {
+		clone = "RAJ_infantry_mg_rider_entity"
+		name = "HYD_infantry_mg_rider_entity"
+		pdxmesh = "HYD_infantry_mg_mesh"
+	}
+	
+	entity = {
+		clone = "RAJ_cavalry_rifle_combined_entity"
+		name = "HYD_cavalry_rifle_combined_entity"
+		
+		attach = { 	name = "infantry_unit"		Saddle_Node = "HYD_infantry_rider_entity" }
+	}
+
+	entity = {
+		clone = "RAJ_cavalry_mg_combined_entity"
+		name = "HYD_cavalry_mg_combined_entity"
+		
+		attach = { 	name = "infantry_unit"		Saddle_Node = "HYD_infantry_mg_rider_entity" }
+	}
+
+	entity = {
+		clone = "RAJ_cavalry_entity"
+		name = "HYD_cavalry_entity"
+
+		attach = { 	name = "infantry"		infantry = "HYD_infantry_rider_entity" }
+		attach = { 	name = "cavalry"		cavalry = "HYD_cavalry_rifle_combined_entity" }
+	}
+	
+	entity = {
+		clone = "RAJ_cavalry_2_entity"
+		name = "HYD_cavalry_2_entity"
+		
+		attach = { 	name = "infantry"		infantry = "HYD_infantry_mg_rider_entity" }
+		attach = { 	name = "cavalry"		cavalry = "HYD_cavalry_mg_combined_entity" }
+	}
+
+
+# Cars
+
+
+	entity = {
+		clone = "motorized_entity"
+		name = "HYD_motorized_entity"
+		
+		attach = { name = "infantry" 	infantry = "HYD_infantry_entity" }
+	}
+
+	entity = {
+		clone = "motorized_entity"
+		name = "HYD_mechanized_entity"
+
+		attach = { name = "vehicle" 	vehicle = "RAJ_mechanized_entity" }
+		attach = { name = "infantry" 	infantry = "HYD_infantry_entity" }
+	}
+	
+	entity = {
+		clone = "artillery_entity"
+		name = "HYD_artillery_entity"
+		
+		attach = { name = infantry		infantry = "HYD_infantry_entity" }
+	}
+	
+	entity = {
+		clone = "anti_tank_entity"
+		name = "HYD_anti_tank_entity"
+	
+		attach = { name = infantry			infantry = "HYD_infantry_entity" }
+	}
+	
+
+# Bycicles
+
+	
+	entity = {
+		clone = "JAP_bicycle_entity"
+		name = "HYD_bicycle_entity"
+		
+		attach = { 	name = "infantry"		infantry = "HYD_bicycle_rider_rifle_entity" }	
+		attach = { 	name = "combined"		combined = "HYD_bicycle_rifle_combined_entity" }
+	}
+	
+	entity = {
+		clone = "JAP_bicycle_rifle_combined_entity"
+		name = "HYD_bicycle_rifle_combined_entity"
+		
+		attach = { 	name = "rider"	bike_center = "HYD_bicycle_rider_rifle_entity" }
+	}
+
+	entity = {
+		clone = "JAP_bicycle_rider_rifle_entity"
+		name = "HYD_bicycle_rider_rifle_entity"
+		pdxmesh = "HYD_infantry_rifle_mesh"	
+		
+		attach = { 	name = "rifle1"	Right_Hand_node = "GER_infantry_weapon_rifle_right_entity" }	
+		attach = { 	name = "rifle2"	Left_Hand_node = "GER_infantry_weapon_rifle_left_entity" }
+		attach = { 	name = "rifle4"	Root_node_2 = "GER_infantry_weapon_rifle_right_entity" }
+	}
+	
+	entity = {
+		clone = "JAP_bicycle_2_entity"
+		name = "HYD_bicycle_2_entity"
+		
+		attach = { 	name = "infantry"		infantry = "HYD_bicycle_rider_mg_entity" }	
+		attach = { 	name = "combined"		combined = "HYD_bicycle_mg_combined_entity" }
+	}
+	
+	entity = {
+		clone = "JAP_bicycle_mg_combined_entity"
+		name = "HYD_bicycle_mg_combined_entity"
+		
+		attach = { 	name = "rider"	bike_center = "HYD_bicycle_rider_mg_entity" }
+	}
+
+	entity = {
+		clone = "JAP_bicycle_rider_mg_entity"
+		name = "HYD_bicycle_rider_mg_entity"
+		pdxmesh = "HYD_infantry_mg_mesh"	
+		
+		attach = { 	name = "rifle1"	Right_Hand_node = "GER_infantry_weapon_mg_right_entity" }	
+		attach = { 	name = "rifle2"	Left_Hand_node = "GER_infantry_weapon_mg_left_entity" }
+	}
+	
+}
+
+#
+
+

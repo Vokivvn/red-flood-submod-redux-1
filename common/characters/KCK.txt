@@ -1,0 +1,524 @@
+characters = {
+	KCK_georgiy_stark = {
+		name = "Georgiy Stark"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/KCK/Portrait_KCK_Stark.png"
+				small = "gfx/interface/ministers/KCK/Georgiy_Stark.png"
+			}
+			navy = {
+				large = "gfx/leaders/KCK/Portrait_KCK_Stark_Admiral.png"
+				small = "gfx/interface/ministers/KCK/Georgiy_Stark.png"
+			}
+		}
+		country_leader = {
+			ideology = military_dictatorship
+			expire = "1965.1.1.1"
+		}
+		navy_leader = {
+			traits = { ironside old_guard_navy career_officer }
+			skill = 3
+			attack_skill = 4
+			defense_skill = 2
+			maneuvering_skill = 2
+			coordination_skill = 2
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = KCK_georgiy_stark_hog
+			allowed = {
+				original_tag = KCK
+			}
+			available = {
+				has_country_leader = {
+					character = KCK_georgiy_stark
+				}
+			}
+			traits = {
+				hog_respected_war_hero
+			}
+		}
+		advisor = {
+			slot = navy_chief
+			idea_token = KCK_georgiy_stark_cnav
+			allowed = {
+				original_tag = KCK
+			}
+			traits = { 
+				cnav_open_seas_doctrine 
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = KCK_georgiy_stark_hc
+			allowed = {
+				original_tag = KCK
+			}
+			traits = { 
+				navy_capital_ship_2
+			}
+		}
+	}
+	KCK_Serafim = {
+		name = "Serafim Kulachikov"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/KCK/Portrait_KCK_Serafim_Kulachikov.png"
+			}
+		}
+		country_leader = {
+			ideology = utopian_socialism
+			expire = "1965.1.1.1"
+		}
+	}
+	KCK_pavel_ksenofontov_socdem = {
+		name = "Pavel Ksenofontov"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/KCK/Portrait_KCK_Pavel_Ksenofontov_SocDem.png"
+				small = "gfx/interface/ministers/KCK/KCK_pavel_ksenofontov.tga"
+			}
+			army = {
+				large = "gfx/leaders/KCK/Portrait_KCK_Pavel_Ksenofontov.png"
+				small = "gfx/interface/ministers/KCK/KCK_pavel_ksenofontov.tga"
+			}
+		}
+		country_leader = {
+			ideology = left_populism
+			expire = "1965.1.1.1"
+		}
+		corps_commander = {
+			traits = { politically_connected }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = KCK_pavel_ksenofontov_carm
+			allowed = {
+				original_tag = KCK
+			}
+			traits = {
+				carm_doctrine_of_autonomy
+			}
+		}
+	}
+	KCK_Gajda = {
+		name = "Radola Gajda"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/KCK/Portrait_KCK_Radola_Gajda.png"
+				small = "gfx/interface/ministers/KCK/Radola_Gajda.png"
+			}
+			army = {
+		        large = "gfx/leaders/KCK/Portrait_KCK_Radola_Gajda_General.png"
+		    }
+		}
+		country_leader = {
+			ideology = revolutionary_nationalism
+		}
+		field_marshal={
+			traits={ politically_connected trait_reckless }
+			skill=3
+			attack_skill=3
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=3
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = KCK_radola_gajda
+			allowed = {
+				original_tag = KCK
+			}
+			available = {
+				has_country_leader = {
+					character = KCK_Gajda
+				}
+			}
+			traits = {
+				hog_flamboyant_tough_guy
+			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = KCK_radola_gajda_carm
+			allowed = {
+				original_tag = KCK
+			}
+			traits = {
+				carm_elastic_defence_doctrine
+			}
+		}		
+		advisor = {
+			slot = theorist
+			idea_token = KCK_Gajda_the
+			allowed = {
+				original_tag = KCK
+			}
+			traits = { 
+				military_theorist 
+			}
+		}
+	}
+
+	KCK_josef_jiri = {
+		name = "Josef Jiří Švec"
+		portraits = {
+			army = {
+				large = "gfx/leaders/KCK/Svec.png"
+				small = "gfx/interface/ministers/KCK/Josef_Jiri.png"
+			}
+		}
+		corps_commander = {
+			traits = { war_hero }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+		}
+		advisor = {
+			slot = high_command
+			idea_token = KCK_josef_jiri_hc
+			allowed = {
+				original_tag = KCK
+			}
+			traits = {
+				army_regrouping_1
+			}
+		}
+	}
+
+	KCK_josef_kopta = {
+		name = "Josef Kopta"
+		portraits = {
+			army = {
+				large = "gfx/leaders/KCK/Kopta.png"
+				small = "gfx/interface/ministers/KCK/Josef_Kopta.png"
+			}
+		}
+		advisor = {
+			slot = head_of_intel
+			idea_token = KCK_josef_kopta_int
+			allowed = {
+				original_tag = KCK
+			}
+			available = {
+				has_government = despotism
+			}
+			traits = { 
+				int_logistics_specialist
+			}
+		}
+		corps_commander = {
+			traits = { media_personality }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 3
+			logistics_skill = 1
+		}
+	}
+
+	KCK_eduard_kadlec = {
+		name = "Eduard Kadlec"
+		portraits = {
+			army = {
+				large = "gfx/leaders/KCK/Kadlec.png"
+				small = "gfx/interface/ministers/KCK/Eduard_Kadlec.png"
+			}
+		}
+		corps_commander = {
+			traits = { trait_cautious }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 2
+		}
+		advisor = {
+			slot = high_command
+			idea_token = KCK_eduard_kadlec_hc
+			allowed = {
+				original_tag = KCK
+			}
+			traits = {
+				army_artillery_1
+			}
+		}
+	}
+
+	KCK_vojtech_vladimir = {
+		name = "Vojtěch Vladimír Klecanda"
+		portraits = {
+			army = {
+				large = "gfx/leaders/KCK/Vojtech.png"
+				small = "gfx/interface/ministers/KCK/Vojtech_Vladimir.png"
+			}
+		}
+		corps_commander = {
+			traits = { infantry_officer }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 3
+		}
+		advisor = {
+			slot = high_command
+			idea_token = KCK_vojtech_vladimir_hc
+			allowed = {
+				original_tag = KCK
+			}
+			traits = {
+				army_logistics_2
+			}
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = KCK_vojtech_vladimir_eco
+			allowed = {
+				original_tag = KCK
+			}
+			available = {
+				has_government = despotism
+			}
+			traits = {
+			    eco_resource_industrialist
+			}
+		}
+	}
+
+
+	KCK_isidor_barakhov = {
+		name = KCK_isidor_barakhov
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/KCK/KCK_isidor_barakhov.tga"
+			}
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = KCK_isidor_barakhov
+			allowed = {
+				original_tag = KCK
+			}
+			available = {
+				has_completed_focus = KCK_spring_of_yakutia
+			}
+			traits = {
+				hog_pragmatic_statesman
+			}
+		}
+	}
+
+	KCK_eduard_tomson = {
+		name = KCK_eduard_tomson
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/KCK/KCK_eduard_tomson.tga"
+			}
+		}
+		advisor = {
+			slot = foreign_minister
+			idea_token = KCK_eduard_tomson
+			allowed = {
+				original_tag = KCK
+			}
+			available = {
+				has_government = despotism
+			}
+			traits = {
+				for_general_staffer
+			}
+		}
+		advisor = {
+			slot = air_chief
+			idea_token = KCK_eduard_tomson_cair
+			allowed = {
+				original_tag = KCK
+			}
+			traits = {
+				cair_carpet_bombing_doctrine
+			}
+		}
+		advisor = {
+			slot = theorist
+			idea_token = KCK_eduard_tomson_the
+			allowed = {
+				original_tag = KCK
+			}
+			traits = { victory_through_airpower }
+		}
+	}
+	KCK_maksim_ammosov = {
+		name = "Maksim Kirovich Ammosov"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/KCK/KCK_maksim_ammosov.tga"
+			}
+		}
+		advisor = {
+			slot = foreign_minister
+			idea_token = KCK_maksim_ammosov
+			allowed = {
+				original_tag = KCK
+			}
+			available = {
+				has_completed_focus = KCK_spring_of_yakutia
+			}
+			traits = {
+				for_biased_intellectual
+			}
+		}
+	}
+
+	KCK_ivan_vinokurov = {
+		name = KCK_ivan_vinokurov
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/KCK/ivan_vinokurov.png"
+			}
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = KCK_ivan_vinokurov
+			allowed = {
+				original_tag = KCK
+			}
+			available = {
+				has_completed_focus = KCK_spring_of_yakutia
+			}
+			traits = { 
+			    eco_keynesian_economy
+			}
+		}
+	}
+
+	KCK_ivan_orlov = {
+		name = KCK_ivan_orlov
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/KCK/KCK_ivan_orlov.tga"
+			}
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = KCK_ivan_orlov
+			allowed = {
+				original_tag = KCK
+			}
+			available = {
+				has_government = despotism
+			}
+			traits = { 
+				sec_prince_of_terror
+			}
+		}
+		advisor = {
+			slot = air_chief
+			idea_token = KCK_ivan_orlov_cair
+			allowed = {
+				original_tag = KCK
+			}
+			traits = {
+				cair_air_superiority_doctrine
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = KCK_ivan_orlov_hc
+			allowed = {
+				original_tag = KCK
+			}
+			traits = {
+				air_air_superiority_2
+			}
+		}
+	}
+	KCK_mikhail_artemyev = {
+		name = "Mikhail Konstantinovich Artemiev"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/KCK/KCK_mikhail_artemyev.tga"
+			}
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = KCK_mikhail_artemyev
+			allowed = {
+				original_tag = KCK
+			}
+			available = {
+				has_completed_focus = KCK_spring_of_yakutia
+			}
+			traits = { 
+				sec_man_of_the_people
+			}
+		}
+	}
+
+	KCK_nikolay_neustroev = {
+		name = KCK_nikolay_neustroev
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/KCK/KCK_nikolay_neustroev.tga"
+			}
+		}
+		advisor = {
+			slot = head_of_intel
+			idea_token = KCK_nikolay_neustroev
+			allowed = {
+				original_tag = KCK
+			}
+			available = {
+				has_completed_focus = KCK_spring_of_yakutia
+			}
+			traits = { 
+				int_political_specialist
+			}
+		}
+	}
+
+	KCK_Grigory_Verzhbitsky = {
+		name = "Grigory Verzhbitsky"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/KCK/Grigory_Verzhbitsky.png"
+			}
+		}
+		advisor = {
+			slot = navy_chief
+			idea_token = KCK_Grigory_Verzhbitsky_cnav
+			allowed = {
+				original_tag = KCK
+			}
+			traits = {
+				cnav_indirect_approach_doctrine
+			}
+		}
+	}
+	
+	KCK_Vasily_Bezuar = {
+		name = "Vasily Bezuar"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/KCK/Vasily_Bezuar.png"
+			}
+		}
+		advisor = {
+			slot = navy_chief
+			idea_token = KCK_Vasily_Bezuar_cnav
+			allowed = {
+				original_tag = KCK
+			}
+			traits = {
+				cnav_power_projection_doctrine
+			}
+		}
+	}
+}

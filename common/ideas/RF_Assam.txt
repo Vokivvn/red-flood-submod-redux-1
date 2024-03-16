@@ -1,0 +1,18 @@
+ideas = {
+	#################
+	# Country ideas #
+	#################
+		country = {
+			ASM_province_in_limbo = {
+				modifier = {
+					political_power_factor = -0.2
+					progressivism_drift = 0.03
+					liberalism_drift = 0.03
+				}
+				picture = generic_idea_RF_idea_duel
+			}
+		}
+	###########
+	#MINISTERS#
+	###########
+}

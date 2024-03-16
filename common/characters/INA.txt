@@ -1,0 +1,58 @@
+characters={
+	INA_Ernest_Douwes_Dekker_Poly = {
+		name = "Ernest Douwes Dekker"
+		portraits = {
+			civilian={
+				large="gfx/leaders/INA/Portrait_INA_Ernest_Douwes_Dekker_Poly.png"
+			}
+		}
+		country_leader = {
+			ideology = provisional_government
+			expire = "1965.1.1.1"
+		}
+	}
+	INA_Ernest_Douwes_Dekker_Acc = {
+		name = "Ernest Douwes Dekker"
+		portraits = {
+			civilian={
+				large="gfx/leaders/INA/Portrait_INA_Ernest_Douwes_Dekker_Acc.png"
+			}
+		}
+		country_leader = {
+			ideology = national_rejuvenatism
+			expire = "1965.1.1.1"
+		}
+	}
+	INA_Mohammad_Hatta = {
+		name = "Mohammad Hatta"
+		portraits = {
+			civilian={
+				large="gfx/leaders/INA/Portrait_INA_Mohammad_Hatta.png"
+			}
+		}
+		country_leader = {
+			ideology = liberal_socialism
+			expire = "1965.1.1.1"
+		}
+	}
+	INA_Kartosuwiryo = {
+		name = "S.M. Kartosoewirjo"
+		portraits = {
+			civilian={
+				large="gfx/leaders/INA/Portrait_INA_Kartosuwiryo.png"
+			}
+		}
+		country_leader = {
+			ideology = religious_fundamentalism
+			expire = "1965.1.1.1"
+		}
+	}
+	INA_Dewantara = {
+		name = "Ki Hadjar Dewantara"
+		portraits = {
+			civilian={
+				large="gfx/leaders/INA/Portrait_INA_Dewantara.png"
+			}
+		}
+	}
+}

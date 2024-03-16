@@ -1,0 +1,37 @@
+﻿l_english:
+#COUNTRY NAME#
+
+
+#PARTIES#
+TUK_accelerationism_party:0 "QLJ"
+TUK_accelerationism_party_long:0 "Qizil Lolalar Jamiyati"
+TUK_anarchism_party:0 "Anarxistlar"
+TUK_anarchism_party_long:0 "Anarxistik O'zini O'zi himoya Qilish Otryadlari"
+TUK_vanguard_socialism_party:0 "TIDSP"
+TUK_vanguard_socialism_party_long:0 "Turon Ishchi-Dehqon Sotsialistik Partiyasi"
+TUK_popular_socialism_party:0 "IKP"
+TUK_popular_socialism_party_long:0 "Islom Kommunistik Partiyasi"
+TUK_revisionist_socialism_party:0 "YT"
+TUK_revisionist_socialism_party_long:0 "Yosh Turkistonliklar"
+TUK_progressivism_party:0 "SI"
+TUK_progressivism_party_long:0 "Shuroi Islomiya"
+TUK_liberalism_party:0 "SI"
+TUK_liberalism_party_long:0 "Shuroi Islomiya"
+TUK_conservatism_party:0 "Shuroi Ulamo"
+TUK_conservatism_party_long:0 "Shuroi Ulamo"
+TUK_right_authoritarianism_party:0 "AK"
+TUK_right_authoritarianism_party_long:0 "Amirlar Kengashi"
+TUK_despotism_party:0 "AK"
+TUK_despotism_party_long:0 "Amirlar Kengashi"
+TUK_reactionism_party:0 "TQK"
+TUK_reactionism_party_long:0 "Turkmaniston Qurbashilar Kengashi"
+
+#LEADER DESCRITIONS#
+#IDEAS#
+TUK_ulema:0 "Tawaghit of the Dunes"
+TUK_ulema_desc:0 "The mullahs cry, the imams shout, the ulema casts us down for daring to break from the faith. They claim we worship the idols of democracy, that western ideals are poisoning the well, severing the ties between Allah and His people. Every reform we attempt, every step forward, we are pushed back by the holy men. They paint it as a choice all Turkestanis must make: Islam or Liberalism. Thus for our crimes of liberty, we must be thrown down and made to repent, for what good Muslim would let a Yahud rule over him?"
+TUK_birth:0 "Birth of a Republic"
+TUK_birth_desc:0 "The dying gasp of Stolypin was the mewling cry of freedom for the national prisoners trapped inside the rotting corpse of the Russian Empire. As his bloody corpse fell to the floor, so too did the oppressed people rise, their bodies covered in embryonic fluid. Among those who were given life that day stood the first republic in the Ummah, a glistening gem amongst the dusty wastes: Turkestan.\n\nYet our birth was not without pains, and our liberal foundation rests upon shaky grounds. There are those who push back, those who clamor for the old ways. But under the old ways, those dissenting voices would be silenced, and their bodies added to the pile of men like Stolypin. Those who decry our liberalism should be thankful then, as it is the only thing standing between their throats and our blades."
+#CUSTOM TOOLTIPS AND FLAGS#
+#DECISIONS (1.5 Update)#
+#FOCUSES#

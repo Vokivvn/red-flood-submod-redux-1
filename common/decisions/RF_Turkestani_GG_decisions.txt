@@ -1,0 +1,357 @@
+TRK_raiding_decisions = {
+	TRK_invade_xinjiang = {
+		days_remove = 14
+		ai_will_do = {
+			factor = 10
+		}
+		icon = GFX_cossacks_icon
+		fire_only_once = yes
+		visible = { 
+				is_neighbor_of = SIK
+				has_completed_focus = TRK_diplomacy
+		}
+		available = {
+			has_war = no
+		}
+		remove_effect={
+			declare_war_on = {
+				type = annex_everything
+				target = SIK
+			}
+			add_state_core = 794
+		}
+	}
+	raid_xinjiang = {
+		cost = 25
+		days_remove = 30
+		ai_will_do = {
+			factor = 10
+		}
+		icon = GFX_cossacks_icon
+		visible = {
+			NOT = {
+				has_country_flag = TRK_raided_xinjiang
+			}
+			has_completed_focus = TRK_riches
+			has_war = no 
+			is_neighbor_of = SIK
+		}
+		available = {
+			is_neighbor_of = SIK
+		}
+		complete_effect = {
+			set_country_flag = {
+				flag = TRK_raided_xinjiang
+				days = 150
+				value = 1
+			}
+		}
+		remove_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 1000
+				producer = SIK
+			}
+			SIK = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = -1000
+					producer = SIK
+				}
+			}
+		}
+	}
+	raid_afghanistan = {
+		cost = 25
+		ai_will_do = {
+			factor = 10
+		}
+		days_remove = 30
+		icon = GFX_cossacks_icon
+		visible = {
+			NOT = {
+				has_country_flag = TRK_raided_afghanistan
+			}
+			has_completed_focus = TRK_riches
+			has_war = no 
+			is_neighbor_of = AFG
+		}
+		available = {
+			is_neighbor_of = AFG
+		}
+		complete_effect = {
+			set_country_flag = {
+				flag = TRK_raided_afghanistan
+				days = 150
+				value = 1
+			}
+		}
+		remove_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 1000
+				producer = AFG
+			}
+			AFG = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = -1000
+					producer = AFG
+				}
+			}
+		}
+	}
+	raid_punjab = {
+		cost = 25
+		ai_will_do = {
+			factor = 10
+		}
+		days_remove = 30
+		icon = GFX_cossacks_icon
+		visible = {
+			NOT = {
+				has_country_flag = TRK_raided_punjab
+			}
+			has_completed_focus = TRK_riches
+			has_war = no 
+			is_neighbor_of = PNJ
+		}
+		available = {
+			is_neighbor_of = PNJ
+		}
+		complete_effect = {
+			set_country_flag = {
+				flag = TRK_raided_punjab
+				days = 150
+				value = 1
+			}
+		}
+		remove_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 1000
+				producer = PNJ
+			}
+			PNJ = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = -1000
+					producer = PNJ
+				}
+			}
+		}
+	}
+	raid_kashmir = {
+		cost = 25
+		ai_will_do = {
+			factor = 10
+		}
+		days_remove = 30
+		icon = GFX_cossacks_icon
+		visible = {
+			NOT = {
+				has_country_flag = TRK_raided_kashmir
+			}
+			has_completed_focus = TRK_riches
+			has_war = no 
+			is_neighbor_of = KSM
+		}
+		available = {
+			is_neighbor_of = KSM
+		}
+		complete_effect = {
+			set_country_flag = {
+				flag = TRK_raided_kashmir
+				days = 150
+				value = 1
+			}
+		}
+		remove_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 500
+				producer = KSM
+			}
+			KSM = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = -500
+					producer = KSM
+				}
+			}
+		}
+	}
+	raid_dinia= {
+		cost = 25
+		ai_will_do = {
+			factor = 10
+		}
+		days_remove = 30
+		icon = GFX_cossacks_icon
+		visible = {
+			NOT = {
+				has_country_flag = TRK_raided_dinia
+			}
+			has_completed_focus = TRK_riches
+			has_war = no 
+			is_neighbor_of = DIN
+		}
+		available = {
+			is_neighbor_of = DIN
+		}
+		complete_effect = {
+			set_country_flag = {
+				flag = TRK_raided_dinia
+				days = 150
+				value = 1
+			}
+		}
+		remove_effect = {
+			add_equipment_to_stockpile = {
+			   type = infantry_equipment
+			   amount = 1000
+			   producer = DIN
+			}
+			DIN = {
+				add_equipment_to_stockpile = {
+			   type = infantry_equipment
+			   amount = -1000
+			   producer = DIN
+			}
+			}
+		}
+	}
+	raid_ningxia = {
+		cost = 25
+		ai_will_do = {
+			factor = 10
+		}
+		days_remove = 30
+		icon = GFX_cossacks_icon
+		visible = {
+			NOT = {
+				has_country_flag = TRK_raided_ningxia
+			}
+			has_completed_focus = TRK_riches
+			has_war = no 
+			is_neighbor_of = XSM
+		}
+		available = {
+			is_neighbor_of = XSM
+		}
+		complete_effect = {
+			set_country_flag = {
+				flag = TRK_raided_ningxia
+				days = 150
+				value = 1
+			}
+		}
+		remove_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 1000
+				producer = XSM
+			}
+			XSM = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = -1000
+					producer = XSM
+				}
+			}
+		}
+	}
+	raid_tibet = {
+		cost = 25
+		ai_will_do = {
+			factor = 10
+		}
+		days_remove = 30
+		icon = GFX_cossacks_icon
+		visible = {
+			NOT = {
+				has_country_flag = TRK_raided_tibet
+			}
+			has_completed_focus = TRK_riches
+			has_war = no 
+			is_neighbor_of = TIB
+		}
+		available = {
+			is_neighbor_of = TIB
+		}
+		complete_effect = {
+			set_country_flag = {
+				flag = TRK_raided_tibet
+				days = 150
+				value = 1
+			}
+		}
+		remove_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 1000
+				producer = TIB
+			}
+			TIB = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = -1000
+					producer = TIB
+				}
+			}
+		}
+	}
+	raid_persia = {
+		cost = 25
+		days_remove = 30
+		ai_will_do = {
+			factor = 10
+		}
+		icon = GFX_cossacks_icon
+		visible = {
+			NOT = {
+				has_country_flag = TRK_raided_persia
+			}
+			has_completed_focus = TRK_riches
+			has_war = no 
+			OR = {
+				is_neighbor_of = PER
+				is_neighbor_of = RPR
+			}
+		}
+		available = {
+			OR = {
+				is_neighbor_of = PER
+				is_neighbor_of = RPR
+			}
+		}
+		complete_effect = {
+			set_country_flag = {
+				flag = TRK_raided_persia
+				days = 150
+				value = 1
+			}
+		}
+		remove_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 1000
+				producer = PER
+			}
+			RPR = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = -1000
+					producer = PER
+				}
+			}
+			PER = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = -1000
+					producer = PER
+				}
+			}
+		}
+	}
+}

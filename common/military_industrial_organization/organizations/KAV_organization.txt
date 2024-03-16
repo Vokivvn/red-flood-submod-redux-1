@@ -1,0 +1,40 @@
+################################
+#materiel_manufacturer##############
+################################
+KAV_georgian_syndicate_organization = {
+	include = generic_infantry_equipment_organization
+	icon = GFX_idea_georgian_syndicate
+	allowed = {
+		original_tag = KAV 
+	}
+}
+################################
+#tank_manufacturer##############
+################################
+KAV_locomotive_union_organization = {
+	include = generic_mobile_tank_organization
+	icon = GFX_idea_locomotive_union
+	allowed = {
+		original_tag = KAV 
+	}
+}
+################################
+#naval_manufacturer##############
+################################
+KAV_batumi_dockyards_organization = {
+	include = generic_black_sea_fleet_organization
+	icon = GFX_idea_batumi_dockyards
+	allowed = {
+		original_tag = KAV 
+	}
+}
+################################
+#aircraft_manufacturer##############
+################################
+KAV_tiblisi_aircraft_organization = {
+	include = generic_high_agility_fighter_aircraft_organization
+	icon = GFX_idea_tiblisi_aircraft
+	allowed = {
+		original_tag = KAV 
+	}
+}

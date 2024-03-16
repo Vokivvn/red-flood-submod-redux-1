@@ -1,0 +1,465 @@
+
+# Infantry
+
+
+	entity = {
+		clone = "RAJ_infantry_entity"
+		name = "UPI_infantry_entity"
+		pdxmesh = "UPI_infantry_rifle_mesh"
+	}
+	
+	entity = {
+		clone = "RAJ_infantry_2_entity"
+		name = "UPI_infantry_2_entity"
+		pdxmesh = "UPI_infantry_mg_mesh"
+	}
+	
+	entity = {
+		clone = "UPI_infantry_2_entity"
+		name = "UPI_infantry_3_entity"
+	}
+
+
+# Cavalry
+
+
+	entity = {
+		clone = "RAJ_infantry_rider_entity"
+		name = "UPI_infantry_rider_entity"
+		pdxmesh = "UPI_infantry_rifle_mesh"
+	}
+
+	entity = {
+		clone = "RAJ_infantry_mg_rider_entity"
+		name = "UPI_infantry_mg_rider_entity"
+		pdxmesh = "UPI_infantry_mg_mesh"
+	}
+	
+	entity = {
+		clone = "RAJ_cavalry_rifle_combined_entity"
+		name = "UPI_cavalry_rifle_combined_entity"
+		
+		attach = { 	name = "infantry_unit"		Saddle_Node = "UPI_infantry_rider_entity" }
+	}
+
+	entity = {
+		clone = "RAJ_cavalry_mg_combined_entity"
+		name = "UPI_cavalry_mg_combined_entity"
+		
+		attach = { 	name = "infantry_unit"		Saddle_Node = "UPI_infantry_mg_rider_entity" }
+	}
+
+	entity = {
+		clone = "RAJ_cavalry_entity"
+		name = "UPI_cavalry_entity"
+
+		attach = { 	name = "infantry"		infantry = "UPI_infantry_rider_entity" }
+		attach = { 	name = "cavalry"		cavalry = "UPI_cavalry_rifle_combined_entity" }
+	}
+	
+	entity = {
+		clone = "RAJ_cavalry_2_entity"
+		name = "UPI_cavalry_2_entity"
+		
+		attach = { 	name = "infantry"		infantry = "UPI_infantry_mg_rider_entity" }
+		attach = { 	name = "cavalry"		cavalry = "UPI_cavalry_mg_combined_entity" }
+	}
+
+
+# Cars
+
+
+	entity = {
+		clone = "motorized_entity"
+		name = "UPI_motorized_entity"
+		
+		attach = { name = "infantry" 	infantry = "UPI_infantry_entity" }
+	}
+
+	entity = {
+		clone = "motorized_entity"
+		name = "UPI_mechanized_entity"
+
+		attach = { name = "vehicle" 	vehicle = "RAJ_mechanized_entity" }
+		attach = { name = "infantry" 	infantry = "UPI_infantry_entity" }
+	}
+	
+	entity = {
+		clone = "artillery_entity"
+		name = "UPI_artillery_entity"
+		
+		attach = { name = infantry		infantry = "UPI_infantry_entity" }
+	}
+	
+	entity = {
+		clone = "anti_tank_entity"
+		name = "UPI_anti_tank_entity"
+	
+		attach = { name = infantry			infantry = "UPI_infantry_entity" }
+	}
+	
+
+# Bycicles
+
+	
+	entity = {
+		clone = "JAP_bicycle_entity"
+		name = "UPI_bicycle_entity"
+		
+		attach = { 	name = "infantry"		infantry = "UPI_bicycle_rider_rifle_entity" }	
+		attach = { 	name = "combined"		combined = "UPI_bicycle_rifle_combined_entity" }
+	}
+	
+	entity = {
+		clone = "JAP_bicycle_rifle_combined_entity"
+		name = "UPI_bicycle_rifle_combined_entity"
+		
+		attach = { 	name = "rider"	bike_center = "UPI_bicycle_rider_rifle_entity" }
+	}
+
+	entity = {
+		clone = "JAP_bicycle_rider_rifle_entity"
+		name = "UPI_bicycle_rider_rifle_entity"
+		pdxmesh = "UPI_infantry_rifle_mesh"	
+		
+		attach = { 	name = "rifle1"	Right_Hand_node = "GER_infantry_weapon_rifle_right_entity" }	
+		attach = { 	name = "rifle2"	Left_Hand_node = "GER_infantry_weapon_rifle_left_entity" }
+		attach = { 	name = "rifle4"	Root_node_2 = "GER_infantry_weapon_rifle_right_entity" }
+	}
+	
+	entity = {
+		clone = "JAP_bicycle_2_entity"
+		name = "UPI_bicycle_2_entity"
+		
+		attach = { 	name = "infantry"		infantry = "UPI_bicycle_rider_mg_entity" }	
+		attach = { 	name = "combined"		combined = "UPI_bicycle_mg_combined_entity" }
+	}
+	
+	entity = {
+		clone = "JAP_bicycle_mg_combined_entity"
+		name = "UPI_bicycle_mg_combined_entity"
+		
+		attach = { 	name = "rider"	bike_center = "UPI_bicycle_rider_mg_entity" }
+	}
+
+	entity = {
+		clone = "JAP_bicycle_rider_mg_entity"
+		name = "UPI_bicycle_rider_mg_entity"
+		pdxmesh = "UPI_infantry_mg_mesh"	
+		
+		attach = { 	name = "rifle1"	Right_Hand_node = "GER_infantry_weapon_mg_right_entity" }	
+		attach = { 	name = "rifle2"	Left_Hand_node = "GER_infantry_weapon_mg_left_entity" }
+	}
+
+
+# Infantry
+
+
+	entity = {
+		clone = "RAJ_infantry_entity"
+		name = "UPI_reactionism_infantry_entity"
+		pdxmesh = "UPI_REALM_OF_AVATAR_infantry_rifle_mesh"
+	}
+	
+	entity = {
+		clone = "RAJ_infantry_2_entity"
+		name = "UPI_reactionism_infantry_2_entity"
+		pdxmesh = "UPI_REALM_OF_AVATAR_infantry_mg_mesh"
+	}
+	
+	entity = {
+		clone = "UPI_reactionism_infantry_2_entity"
+		name = "UPI_reactionism_infantry_3_entity"
+	}
+
+
+# Cavalry
+
+
+	entity = {
+		clone = "RAJ_infantry_rider_entity"
+		name = "UPI_reactionism_infantry_rider_entity"
+		pdxmesh = "UPI_REALM_OF_AVATAR_infantry_rifle_mesh"
+	}
+
+	entity = {
+		clone = "RAJ_infantry_mg_rider_entity"
+		name = "UPI_reactionism_infantry_mg_rider_entity"
+		pdxmesh = "UPI_REALM_OF_AVATAR_infantry_mg_mesh"
+	}
+	
+	entity = {
+		clone = "RAJ_cavalry_rifle_combined_entity"
+		name = "UPI_reactionism_cavalry_rifle_combined_entity"
+		
+		attach = { 	name = "infantry_unit"		Saddle_Node = "UPI_REALM_OF_AVATAR_infantry_rider_entity" }
+	}
+
+	entity = {
+		clone = "RAJ_cavalry_mg_combined_entity"
+		name = "UPI_reactionism_cavalry_mg_combined_entity"
+		
+		attach = { 	name = "infantry_unit"		Saddle_Node = "UPI_REALM_OF_AVATAR_infantry_mg_rider_entity" }
+	}
+
+	entity = {
+		clone = "RAJ_cavalry_entity"
+		name = "UPI_reactionism_cavalry_entity"
+
+		attach = { 	name = "infantry"		infantry = "UPI_REALM_OF_AVATAR_infantry_rider_entity" }
+		attach = { 	name = "cavalry"		cavalry = "UPI_REALM_OF_AVATAR_cavalry_rifle_combined_entity" }
+	}
+	
+	entity = {
+		clone = "RAJ_cavalry_2_entity"
+		name = "UPI_reactionism_cavalry_2_entity"
+		
+		attach = { 	name = "infantry"		infantry = "UPI_REALM_OF_AVATAR_infantry_mg_rider_entity" }
+		attach = { 	name = "cavalry"		cavalry = "UPI_REALM_OF_AVATAR_cavalry_mg_combined_entity" }
+	}
+
+
+# Cars
+
+
+	entity = {
+		clone = "motorized_entity"
+		name = "UPI_reactionism_motorized_entity"
+		
+		attach = { name = "infantry" 	infantry = "UPI_REALM_OF_AVATAR_infantry_entity" }
+	}
+
+	entity = {
+		clone = "motorized_entity"
+		name = "UPI_reactionism_mechanized_entity"
+
+		attach = { name = "vehicle" 	vehicle = "RAJ_mechanized_entity" }
+		attach = { name = "infantry" 	infantry = "UPI_REALM_OF_AVATAR_infantry_entity" }
+	}
+	
+	entity = {
+		clone = "artillery_entity"
+		name = "UPI_reactionism_artillery_entity"
+		
+		attach = { name = infantry		infantry = "UPI_REALM_OF_AVATAR_infantry_entity" }
+	}
+	
+	entity = {
+		clone = "anti_tank_entity"
+		name = "UPI_reactionism_anti_tank_entity"
+	
+		attach = { name = infantry			infantry = "UPI_REALM_OF_AVATAR_infantry_entity" }
+	}
+	
+
+# Bycicles
+
+	
+	entity = {
+		clone = "JAP_bicycle_entity"
+		name = "UPI_reactionism_bicycle_entity"
+		
+		attach = { 	name = "infantry"		infantry = "UPI_REALM_OF_AVATAR_bicycle_rider_rifle_entity" }	
+		attach = { 	name = "combined"		combined = "UPI_REALM_OF_AVATAR_bicycle_rifle_combined_entity" }
+	}
+	
+	entity = {
+		clone = "JAP_bicycle_rifle_combined_entity"
+		name = "UPI_reactionism_bicycle_rifle_combined_entity"
+		
+		attach = { 	name = "rider"	bike_center = "UPI_REALM_OF_AVATAR_bicycle_rider_rifle_entity" }
+	}
+
+	entity = {
+		clone = "JAP_bicycle_rider_rifle_entity"
+		name = "UPI_reactionism_bicycle_rider_rifle_entity"
+		pdxmesh = "UPI_REALM_OF_AVATAR_infantry_rifle_mesh"	
+		
+		attach = { 	name = "rifle1"	Right_Hand_node = "GER_infantry_weapon_rifle_right_entity" }	
+		attach = { 	name = "rifle2"	Left_Hand_node = "GER_infantry_weapon_rifle_left_entity" }
+		attach = { 	name = "rifle4"	Root_node_2 = "GER_infantry_weapon_rifle_right_entity" }
+	}
+	
+	entity = {
+		clone = "JAP_bicycle_2_entity"
+		name = "UPI_reactionism_bicycle_2_entity"
+		
+		attach = { 	name = "infantry"		infantry = "UPI_REALM_OF_AVATAR_bicycle_rider_mg_entity" }	
+		attach = { 	name = "combined"		combined = "UPI_REALM_OF_AVATAR_bicycle_mg_combined_entity" }
+	}
+	
+	entity = {
+		clone = "JAP_bicycle_mg_combined_entity"
+		name = "UPI_reactionism_bicycle_mg_combined_entity"
+		
+		attach = { 	name = "rider"	bike_center = "UPI_REALM_OF_AVATAR_bicycle_rider_mg_entity" }
+	}
+
+	entity = {
+		clone = "JAP_bicycle_rider_mg_entity"
+		name = "UPI_reactionism_bicycle_rider_mg_entity"
+		pdxmesh = "UPI_REALM_OF_AVATAR_infantry_mg_mesh"	
+		
+		attach = { 	name = "rifle1"	Right_Hand_node = "GER_infantry_weapon_mg_right_entity" }	
+		attach = { 	name = "rifle2"	Left_Hand_node = "GER_infantry_weapon_mg_left_entity" }
+	}
+	
+
+# Infantry
+
+
+	entity = {
+		clone = "RAJ_infantry_entity"
+		name = "UPI_REALM_OF_AVATAR_infantry_entity"
+		pdxmesh = "UPI_REALM_OF_AVATAR_infantry_rifle_mesh"
+	}
+	
+	entity = {
+		clone = "RAJ_infantry_2_entity"
+		name = "UPI_REALM_OF_AVATAR_infantry_2_entity"
+		pdxmesh = "UPI_REALM_OF_AVATAR_infantry_mg_mesh"
+	}
+	
+	entity = {
+		clone = "UPI_REALM_OF_AVATAR_infantry_2_entity"
+		name = "UPI_REALM_OF_AVATAR_infantry_3_entity"
+	}
+
+
+# Cavalry
+
+
+	entity = {
+		clone = "RAJ_infantry_rider_entity"
+		name = "UPI_REALM_OF_AVATAR_infantry_rider_entity"
+		pdxmesh = "UPI_REALM_OF_AVATAR_infantry_rifle_mesh"
+	}
+
+	entity = {
+		clone = "RAJ_infantry_mg_rider_entity"
+		name = "UPI_REALM_OF_AVATAR_infantry_mg_rider_entity"
+		pdxmesh = "UPI_REALM_OF_AVATAR_infantry_mg_mesh"
+	}
+	
+	entity = {
+		clone = "RAJ_cavalry_rifle_combined_entity"
+		name = "UPI_REALM_OF_AVATAR_cavalry_rifle_combined_entity"
+		
+		attach = { 	name = "infantry_unit"		Saddle_Node = "UPI_REALM_OF_AVATAR_infantry_rider_entity" }
+	}
+
+	entity = {
+		clone = "RAJ_cavalry_mg_combined_entity"
+		name = "UPI_REALM_OF_AVATAR_cavalry_mg_combined_entity"
+		
+		attach = { 	name = "infantry_unit"		Saddle_Node = "UPI_REALM_OF_AVATAR_infantry_mg_rider_entity" }
+	}
+
+	entity = {
+		clone = "RAJ_cavalry_entity"
+		name = "UPI_REALM_OF_AVATAR_cavalry_entity"
+
+		attach = { 	name = "infantry"		infantry = "UPI_REALM_OF_AVATAR_infantry_rider_entity" }
+		attach = { 	name = "cavalry"		cavalry = "UPI_REALM_OF_AVATAR_cavalry_rifle_combined_entity" }
+	}
+	
+	entity = {
+		clone = "RAJ_cavalry_2_entity"
+		name = "UPI_REALM_OF_AVATAR_cavalry_2_entity"
+		
+		attach = { 	name = "infantry"		infantry = "UPI_REALM_OF_AVATAR_infantry_mg_rider_entity" }
+		attach = { 	name = "cavalry"		cavalry = "UPI_REALM_OF_AVATAR_cavalry_mg_combined_entity" }
+	}
+
+
+# Cars
+
+
+	entity = {
+		clone = "motorized_entity"
+		name = "UPI_REALM_OF_AVATAR_motorized_entity"
+		
+		attach = { name = "infantry" 	infantry = "UPI_REALM_OF_AVATAR_infantry_entity" }
+	}
+
+	entity = {
+		clone = "motorized_entity"
+		name = "UPI_REALM_OF_AVATAR_mechanized_entity"
+
+		attach = { name = "vehicle" 	vehicle = "RAJ_mechanized_entity" }
+		attach = { name = "infantry" 	infantry = "UPI_REALM_OF_AVATAR_infantry_entity" }
+	}
+	
+	entity = {
+		clone = "artillery_entity"
+		name = "UPI_REALM_OF_AVATAR_artillery_entity"
+		
+		attach = { name = infantry		infantry = "UPI_REALM_OF_AVATAR_infantry_entity" }
+	}
+	
+	entity = {
+		clone = "anti_tank_entity"
+		name = "UPI_REALM_OF_AVATAR_anti_tank_entity"
+	
+		attach = { name = infantry			infantry = "UPI_REALM_OF_AVATAR_infantry_entity" }
+	}
+	
+
+# Bycicles
+
+	
+	entity = {
+		clone = "JAP_bicycle_entity"
+		name = "UPI_REALM_OF_AVATAR_bicycle_entity"
+		
+		attach = { 	name = "infantry"		infantry = "UPI_REALM_OF_AVATAR_bicycle_rider_rifle_entity" }	
+		attach = { 	name = "combined"		combined = "UPI_REALM_OF_AVATAR_bicycle_rifle_combined_entity" }
+	}
+	
+	entity = {
+		clone = "JAP_bicycle_rifle_combined_entity"
+		name = "UPI_REALM_OF_AVATAR_bicycle_rifle_combined_entity"
+		
+		attach = { 	name = "rider"	bike_center = "UPI_REALM_OF_AVATAR_bicycle_rider_rifle_entity" }
+	}
+
+	entity = {
+		clone = "JAP_bicycle_rider_rifle_entity"
+		name = "UPI_REALM_OF_AVATAR_bicycle_rider_rifle_entity"
+		pdxmesh = "UPI_REALM_OF_AVATAR_infantry_rifle_mesh"	
+		
+		attach = { 	name = "rifle1"	Right_Hand_node = "GER_infantry_weapon_rifle_right_entity" }	
+		attach = { 	name = "rifle2"	Left_Hand_node = "GER_infantry_weapon_rifle_left_entity" }
+		attach = { 	name = "rifle4"	Root_node_2 = "GER_infantry_weapon_rifle_right_entity" }
+	}
+	
+	entity = {
+		clone = "JAP_bicycle_2_entity"
+		name = "UPI_REALM_OF_AVATAR_bicycle_2_entity"
+		
+		attach = { 	name = "infantry"		infantry = "UPI_REALM_OF_AVATAR_bicycle_rider_mg_entity" }	
+		attach = { 	name = "combined"		combined = "UPI_REALM_OF_AVATAR_bicycle_mg_combined_entity" }
+	}
+	
+	entity = {
+		clone = "JAP_bicycle_mg_combined_entity"
+		name = "UPI_REALM_OF_AVATAR_bicycle_mg_combined_entity"
+		
+		attach = { 	name = "rider"	bike_center = "UPI_REALM_OF_AVATAR_bicycle_rider_mg_entity" }
+	}
+
+	entity = {
+		clone = "JAP_bicycle_rider_mg_entity"
+		name = "UPI_REALM_OF_AVATAR_bicycle_rider_mg_entity"
+		pdxmesh = "UPI_REALM_OF_AVATAR_infantry_mg_mesh"	
+		
+		attach = { 	name = "rifle1"	Right_Hand_node = "GER_infantry_weapon_mg_right_entity" }	
+		attach = { 	name = "rifle2"	Left_Hand_node = "GER_infantry_weapon_mg_left_entity" }
+	}
+	
+	
+}
+
+#
+
+

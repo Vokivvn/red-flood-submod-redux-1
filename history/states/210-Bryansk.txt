@@ -1,0 +1,28 @@
+
+state={
+	id=210
+	name="STATE_210" # Dvinsk
+	manpower = 375500
+
+	state_category = town
+
+	history={
+		owner = WRU
+		victory_points = {
+			310 10
+		}
+		victory_points = {
+			222 5
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+		}
+		add_core_of = WRU
+		add_core_of = LAT
+	}
+
+	provinces={
+	310 341 7482 6459 9275 222 319 11222	
+	}
+}

@@ -1,0 +1,14 @@
+characters = {
+	OKL_benton_mackaye = {
+		name = "Benton Mackaye"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/OKL/Portrait_Benton_Mackaye.png"
+			}
+		}
+		country_leader = {
+			ideology = technocracy
+			expire = "1965.1.1.1"
+		}
+	}
+}

@@ -1,0 +1,279 @@
+FIU_add_popularity_keller = {
+	if = {
+		limit = {
+			check_variable = {
+				var = FIU_marinetti_popularity
+				value = 0
+				compare = equals
+			}
+		}
+		add_to_variable = {
+			var = FIU_shimoi_popularity
+			value = -1
+		}
+	}
+	if = {
+		limit = {
+			check_variable = {
+				var = FIU_shimoi_popularity
+				value = 0
+				compare = equals
+			}
+		}
+		add_to_variable = {
+			var = FIU_marinetti_popularity
+			value = -1
+		}
+	}
+	if = {
+		limit = {
+			check_variable = {
+				var = FIU_marinetti_popularity
+				value = 0
+				compare = greater_than
+			}
+		}
+		add_to_variable = {
+			var = FIU_marinetti_popularity
+			value = -1
+		}
+	}
+	if = {
+		limit = {
+			check_variable = {
+				var = FIU_shimoi_popularity
+				value = 0
+				compare = greater_than
+			}
+		}
+		add_to_variable = {
+			var = FIU_shimoi_popularity
+			value = -1
+		}
+	}
+	if = {
+		limit = {
+			check_variable = {
+				var = FIU_keller_popularity
+				value = 98
+				compare = less_than_or_equals
+			}
+		}
+		add_to_variable = {
+			var = FIU_keller_popularity
+			value = 2
+		}
+	}
+	if = {
+		limit = {
+			check_variable = {
+				var = FIU_keller_popularity
+				value = 99
+				compare = equals
+			}
+		}
+		add_to_variable = {
+			var = FIU_keller_popularity
+			value = 1
+		}
+	}
+	if = {
+		limit = {
+			check_variable = {
+				var = FIU_keller_popularity
+				value = 100
+				compare = equals
+			}
+		}
+		add_to_variable = {
+			var = FIU_keller_popularity
+			value = 0
+		}
+	}
+}
+FIU_add_popularity_marinetti = {
+	if = {
+		limit = {
+			check_variable = {
+				var = FIU_keller_popularity
+				value = 0
+				compare = equals
+			}
+		}
+		add_to_variable = {
+			var = FIU_shimoi_popularity
+			value = -1
+		}
+	}
+	if = {
+		limit = {
+			check_variable = {
+				var = FIU_shimoi_popularity
+				value = 0
+				compare = equals
+			}
+		}
+		add_to_variable = {
+			var = FIU_keller_popularity
+			value = -1
+		}
+	}
+	if = {
+		limit = {
+			check_variable = {
+				var = FIU_keller_popularity
+				value = 0
+				compare = greater_than
+			}
+		}
+		add_to_variable = {
+			var = FIU_keller_popularity
+			value = -1
+		}
+	}
+	if = {
+		limit = {
+			check_variable = {
+				var = FIU_shimoi_popularity
+				value = 0
+				compare = greater_than
+			}
+		}
+		add_to_variable = {
+			var = FIU_shimoi_popularity
+			value = -1
+		}
+	}
+	if = {
+		limit = {
+			check_variable = {
+				var = FIU_marinetti_popularity
+				value = 98
+				compare = less_than_or_equals
+			}
+		}
+		add_to_variable = {
+			var = FIU_marinetti_popularity
+			value = 2
+		}
+	}
+	if = {
+		limit = {
+			check_variable = {
+				var = FIU_marinetti_popularity
+				value = 99
+				compare = equals
+			}
+		}
+		add_to_variable = {
+			var = FIU_marinetti_popularity
+			value = 1
+		}
+	}
+	if = {
+		limit = {
+			check_variable = {
+				var = FIU_marinetti_popularity
+				value = 100
+				compare = equals
+			}
+		}
+		add_to_variable = {
+			var = FIU_marinetti_popularity
+			value = 0
+		}
+	}
+}
+FIU_add_popularity_shimoi = {
+	if = {
+		limit = {
+			check_variable = {
+				var = FIU_marinetti_popularity
+				value = 0
+				compare = equals
+			}
+		}
+		add_to_variable = {
+			var = FIU_keller_popularity
+			value = -1
+		}
+	}
+	if = {
+		limit = {
+			check_variable = {
+				var = FIU_keller_popularity
+				value = 0
+				compare = equals
+			}
+		}
+		add_to_variable = {
+			var = FIU_marinetti_popularity
+			value = -1
+		}
+	}
+	if = {
+		limit = {
+			check_variable = {
+				var = FIU_marinetti_popularity
+				value = 0
+				compare = greater_than
+			}
+		}
+		add_to_variable = {
+			var = FIU_marinetti_popularity
+			value = -1
+		}
+	}
+	if = {
+		limit = {
+			check_variable = {
+				var = FIU_keller_popularity
+				value = 0
+				compare = greater_than
+			}
+		}
+		add_to_variable = {
+			var = FIU_keller_popularity
+			value = -1
+		}
+	}
+	if = {
+		limit = {
+			check_variable = {
+				var = FIU_shimoi_popularity
+				value = 98
+				compare = less_than_or_equals
+			}
+		}
+		add_to_variable = {
+			var = FIU_shimoi_popularity
+			value = 2
+		}
+	}
+	if = {
+		limit = {
+			check_variable = {
+				var = FIU_shimoi_popularity
+				value = 99
+				compare = equals
+			}
+		}
+		add_to_variable = {
+			var = FIU_shimoi_popularity
+			value = 1
+		}
+	}
+	if = {
+		limit = {
+			check_variable = {
+				var = FIU_shimoi_popularity
+				value = 100
+				compare = equals
+			}
+		}
+		add_to_variable = {
+			var = FIU_shimoi_popularity
+			value = 0
+		}
+	}
+}

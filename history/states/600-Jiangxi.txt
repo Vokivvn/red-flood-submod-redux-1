@@ -1,0 +1,22 @@
+state = {
+	id = 600
+	name = "STATE_600"
+	manpower = 2910400
+	state_category = town
+
+	history = {
+		owner = KMT
+		add_core_of = KMT
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+		victory_points = {
+			3992 15
+		}
+	}
+
+	provinces = {
+		1066 1153 3992 4038 4083 4185 7007 7054 9984 11961 13141
+	}
+}

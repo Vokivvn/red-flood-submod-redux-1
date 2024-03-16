@@ -1,0 +1,34 @@
+ideas = {
+
+#################
+# Country ideas #
+#################
+
+	country = {
+		POR_vices_of_heliogabalus = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+			  
+			}
+			picture = POR_bacchus
+		}
+		POR_sidonist_underground = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				
+			}
+			picture = POR_sidon
+		}
+		POR_volta_ao_campo = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+					
+			}
+			picture = POR_retorno
+		}
+	}
+###########
+#MINISTERS#
+###########
+
+}

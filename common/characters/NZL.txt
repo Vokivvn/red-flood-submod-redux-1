@@ -1,0 +1,62 @@
+characters = {
+	NZL_harry_holland = {
+		name = "Harry Holland"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/NZL/Portrait_NZL_Harry_Holland.png"
+			}
+		}
+		country_leader = {
+			ideology = progressive_democracy
+			expire = "1965.1.1.1"
+		}
+	}
+	NZL_alexander_godley = {
+		name = "Alexander Godley"
+		portraits = {
+			army = {
+				large = "gfx/leaders/NZL/Portrait_NZL_alexander_godley.png"
+			}
+		}
+		field_marshal = {
+			traits = { old_guard inflexible_strategist}
+			skill = 4
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 3
+		}
+	}
+	NZL_william_george_stevens = {
+		name = "William George Stevens"
+		portraits = {
+			army = {
+				large = "gfx/leaders/NZL/Portrait_NZL_william_george_stevens.png"
+			}
+		}
+		corps_commander = {
+			traits = {  trickster }
+			skill = 2
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 3
+		}
+	}
+	NZL_leslie_wilton_andrew = {
+		name = "Leslie Wilton Andrew"
+		portraits = {
+			army = {
+				large = "gfx/leaders/NZL/Portrait_NZL_leslie_wilton_andrew.png"
+			}
+		}
+		corps_commander = {
+			traits = { career_officer commando }
+			skill = 2
+			attack_skill = 4
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 3
+		}
+	}
+}

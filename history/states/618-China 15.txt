@@ -1,0 +1,27 @@
+state={
+	id=618
+	name="STATE_618"
+	resources={
+		oil=1
+	}
+
+	history={
+	owner = ALT
+	add_core_of = SIK
+	add_core_of = ALT
+		victory_points = {
+			4823 1
+		}
+		buildings = {
+			infrastructure = 2
+		}
+
+	}
+
+	provinces={
+		4714 4823 4849 7693 7737 12737 1844 12590
+	}
+	manpower=378136
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

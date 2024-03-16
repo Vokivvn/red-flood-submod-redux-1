@@ -1,0 +1,15 @@
+characters = {
+
+	TUN_mohamed_al_hammi = {
+		name = "Mohamed Ali el-Hammi"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/TUN/TUN_mohamad_ali_hammi.png"
+			}
+		}
+		country_leader = {
+			ideology = syndicalism
+			expire = "1965.1.1.1"
+		}
+	}
+}

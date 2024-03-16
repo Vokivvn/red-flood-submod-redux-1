@@ -1,0 +1,22 @@
+state={
+	id=834
+	name="STATE_834"
+	manpower = 5813900
+
+	state_category = large_town
+
+	history={
+		owner = DEI
+		victory_points = { #Madioen
+			10491 3
+		}
+		add_core_of = DEI
+		buildings = {
+			infrastructure = 3
+		}
+	}
+
+	provinces={
+		1209 4608 10491 13565
+	}
+}

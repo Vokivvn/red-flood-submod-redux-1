@@ -1,0 +1,299 @@
+ideas = {
+	country = {
+		ORE_kazakh_republic = {
+			picture = ORE_Kazakh_Republic
+			allowed = {
+				original_tag = ORE
+			}
+			modifier = {
+				conscription_factor = 0.1
+				political_power_factor = 0.05
+			}
+		}
+		ORE_kirghiz_nation = {
+			picture = ORE_Kirghiz_Republic
+			allowed = {
+				original_tag = ORE
+			}
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				non_core_manpower = 0.15
+			}
+		}
+		ORE_authentic_education = {
+			picture = ORE_Authentic_Education
+			allowed = {
+				original_tag = ORE
+			}
+			modifier = {
+				research_speed_factor = 0.05
+			}
+		}
+		ORE_centralised_republic = {
+			picture = ORE_Centralized_Republic
+			allowed = {
+				original_tag = ORE
+			}
+			modifier = {
+				conservatism_drift = 0.06
+				political_power_factor = 0.1
+				conversion_cost_civ_to_mil_factor = -0.1
+				conversion_cost_mil_to_civ_factor = -0.1
+			}
+		}
+		ORE_centralised_republic1 = {
+			picture = ORE_Centralized_Republic
+			allowed = {
+				original_tag = ORE
+			}
+			modifier = {
+				conservatism_drift = 0.06
+				political_power_factor = 0.1
+				conversion_cost_civ_to_mil_factor = -0.1
+				conversion_cost_mil_to_civ_factor = -0.1
+				production_speed_buildings_factor = 0.1
+			}
+		}
+		ORE_meritocracy = {
+			picture = ORE_Meritocracy
+			allowed = {
+				original_tag = ORE
+			}
+			modifier = {
+				special_forces_cap = 0.1
+				command_power_gain = 0.1
+			}
+		}
+		ORE_ideya_pravitelnitsa = {
+			picture = ORE_Ideya_Pravitel_nitsa
+			allowed = {
+				original_tag = ORE
+			}
+			modifier = {
+				industrial_capacity_factory = 0.1
+			}
+		}
+		ORE_ruling_class = {
+			picture = ORE_Ruling_Class
+			allowed = {
+				original_tag = ORE
+			}
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				accelerationism_drift = 0.05
+			}
+		}
+		ORE_mixed_economy = {
+			picture = ORE_Mixed_Economy
+			allowed = {
+				original_tag = ORE
+			}
+			modifier = {
+				research_speed_factor = 0.05
+				production_speed_buildings_factor = 0.1
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.1 instant = yes
+					reliability = 0.05
+				}
+			}
+		}
+		ORE_self_governance = {
+			picture = ORE_Peoples_Self_Governance
+			allowed = {
+				original_tag = ORE
+			}
+			modifier = {
+				consumer_goods_expected_value = -0.05
+			}
+		}
+		ORE_mestorazvitiye = {
+			picture = ORE_Mestorazvitiye
+			allowed = {
+				original_tag = ORE
+			}
+			modifier = {
+				army_attack_factor = 0.05
+				political_power_factor = 0.05
+			}
+		}
+		ORE_continuous_russification = {
+			picture = ORE_Continuous_Russification
+			allowed = {
+				original_tag = ORE
+			}
+			modifier = {
+				resistance_target = -0.1
+				drift_defence_factor = 0.3
+			}
+		}
+
+		ORE_eurasian_identity = {
+			picture = ORE_Eurasian_Identity
+			allowed = {
+				original_tag = ORE
+			}
+			modifier = {
+				conversion_cost_civ_to_mil_factor = -0.1
+				conversion_cost_mil_to_civ_factor = -0.1
+				political_power_factor = 0.1
+				resistance_target = -0.2
+				non_core_manpower = 0.15
+			}
+		}
+		ORE_mestorazvitiye1 = {
+			picture = ORE_Mestorazvitiye
+			allowed = {
+				original_tag = ORE
+			}
+			modifier = {
+				army_attack_factor = 0.075
+				political_power_factor = 0.05
+				justify_war_goal_time = -0.2
+			}
+		}
+		ORE_corporative_industrialism = {
+			picture = ORE_corporative_industrialism
+			allowed = {
+				original_tag = ORE
+			}
+			modifier = {
+				production_factory_max_efficiency_factor = 0.1
+				despotism_drift = 0.04
+			}
+			equipment_bonus = {
+				artillery_equipment = {
+					build_cost_ic = -0.1 instant = yes
+				}
+			}
+		}
+		ORE_rasputins_rule = {
+			picture = ORE_rasputinsrule
+			allowed = {
+				original_tag = ORE
+			}
+			modifier = {
+				reactionism_drift = 0.02
+				stability_factor = -0.05
+			}
+		}
+		ORE_empires_good_men = {
+			picture = ORE_goodmen
+			allowed = {
+				original_tag = ORE
+			}
+			modifier = {
+				conscription_factor = 0.1
+				consumer_goods_expected_value = -0.05
+			}
+		}
+		ORE_rasputins_rule1 = {
+			picture = ORE_rasputinsrule
+			allowed = {
+				original_tag = ORE
+			}
+			modifier = {
+				reactionism_drift = 0.03
+				compliance_gain = 0.015
+			}
+
+		}
+		ORE_olga = {
+			picture = ORE_olgaI
+			allowed = {
+				original_tag = ORE
+			}
+			modifier = {
+				political_power_factor = 0.1
+			}
+		}
+		ORE_saint_devil = {
+			picture = ORE_saintdevils
+			allowed = {
+				original_tag = ORE
+			}
+			modifier = {
+				
+				reactionism_drift = 0.1
+				hidden_modifier = {
+				accelerationism_acceptance = -10000
+				reactionism_acceptance = -10000
+				anarchism_acceptance = -10000
+				vanguard_socialism_acceptance = -10000
+				popular_socialism_acceptance = -10000
+				revisionist_socialism_acceptance = -10000
+				progressivism_acceptance = -10000
+				liberalism_acceptance = -10000
+				conservatism_acceptance = -10000
+				right_authoritarianism_acceptance = -10000
+				despotism_acceptance = -10000
+			}
+				custom_modifier_tooltip = "ORE_SAINT_DEVIL_TT"
+			}
+			
+		}
+		ORE_forbidden_sorcery_idea = {
+			picture = ORE_forbiddensorcery
+			allowed = {
+				original_tag = ORE
+			}
+			modifier = {
+				research_speed_factor = 0.05
+				stability_factor = -0.05
+			}
+		}
+		ORE_golden_heart = {
+			picture = ORE_goldheart
+			allowed = {
+				original_tag = ORE
+			}
+			modifier = {
+				conscription = 0.01
+				production_speed_buildings_factor = 0.1
+				consumer_goods_expected_value = -0.05
+				global_building_slots = 0.2
+			}
+		}
+		ORE_grandiose_courage = {
+			picture = ORE_courage
+			allowed = {
+				original_tag = ORE
+			}
+			modifier = {
+				conscription_factor = 0.1
+				offence = 0.1
+				defence = 0.1
+				army_morale_factor = 0.1
+				army_speed_factor = 0.1
+				army_org_factor = 0.1
+			}
+		}
+		ORE_retvrn = {
+			picture = ORE_greatreturn
+			allowed = {
+				original_tag = ORE
+			}
+			modifier = {
+				reactionism_drift = 0.05
+				political_power_factor = 0.1
+				resistance_target = -0.05
+				compliance_gain = 0.015
+			}
+		}
+		ORE_smite_the_zhmey = {
+			picture = ORE_smitezhmey
+			allowed = {
+				original_tag = ORE
+			}
+			modifier = {
+				conscription_factor = 0.15
+				offence = 0.15
+				defence = 0.15
+				army_morale_factor = 0.125
+				army_speed_factor = 0.125
+				army_org_factor = 0.125
+			}
+		}
+	}
+}

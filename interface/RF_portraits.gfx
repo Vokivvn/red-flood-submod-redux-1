@@ -1,0 +1,73 @@
+spriteTypes = {
+	#Temporary portrait sprites file until we can merge this one with one from the dual portraits system
+	#For use with changing leader portraits while in game, which requires sprites 
+
+
+	#OTTOMANS/TURKEY
+	spriteType = {
+		name = "GFX_Portrait_TUR_Adivar_Natrej"
+		textureFile = "gfx/leaders/TUR/Portrait_TUR_Adivar_Accel.png"
+	}
+	spriteType = {
+		name = "GFX_Portrait_MAR_Abdulmecid_II"
+		textureFile = "gfx/leaders/MAR/Portrait_MAR_Abdulmecid_II.png"
+	}
+
+	#SYRIA
+	spriteType = {
+		name = "GFX_Portrait_SNP_Saadeh_Accel"
+		textureFile = "gfx/leaders/SYR/Portrait_SYR_Anton_Saadeh_Acc.png"
+	}
+
+	#IMPERIAL AUTHORITY - TAN
+	spriteType = {
+		name = "GFX_Portrait_TAN_mahakala"
+		textureFile = "gfx/leaders/TAN/Portrait_TAN_Mahakala.png"
+	}
+	spriteType = {
+		name = "GFX_Portrait_TAN_mahakala_general"
+		textureFile = "gfx/leaders/TAN/Portrait_TAN_Mahakala_general.png"
+	}
+
+	#KAVKAZ
+	spriteType = {
+		name = "GFX_portrait_stalin_postuni"
+		texturefile = "gfx/leaders/KAV/Portrait_Stalin_post_uni.png"
+	}
+
+	#GABON/BIAFRA
+	spriteType = {
+		name = "GFX_portrait_mariano_alonso_despotic"
+		texturefile = "gfx/leaders/GBN/Portrait_GBN_Mariano_Alonso.png"
+	}
+
+	#bulgARYA
+	spriteType = {
+		name = "GFX_Portrait_BUL_Gypsy_King"
+		texturefile = "gfx/leaders/BUL/Portrait_BUL_Nayden_Shaytanov_Crown.png"
+	}
+
+	#PUPPET POLAND
+	spriteType = {
+		name = "GFX_portrait_Portrait_POL_Roman_Rybarski_lib"
+		texturefile = "gfx/leaders/POL/Portrait_POL_Roman_Rybarski_lib.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_Portrait_POL_Roman_Rybarski_con"
+		texturefile = "gfx/leaders/POL/Portrait_POL_Roman_Rybarski_con.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_Portrait_POL_Roman_Rybarski_despot"
+		texturefile = "gfx/leaders/POL/Portrait_POL_Roman_Rybarski_despot.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_Portrait_POL_Stanislaw_Mikolajczyk_con"
+		texturefile = "gfx/leaders/POL/Portrait_POL_Stanislaw_Mikolajczyk_con.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_Portrait_POL_Stanislaw_Mikolajczyk_prog"
+		texturefile = "gfx/leaders/POL/Portrait_POL_Stanislaw_Mikolajczyk_prog.png"
+	}
+	
+
+}	## Keep This Little Bracket At The Bottom ##

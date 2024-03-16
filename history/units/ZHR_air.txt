@@ -1,0 +1,11 @@
+air_wings = {
+	881 = {
+		# 1st Squadron
+		small_plane_airframe_0 =  {
+			owner = "ZHR" 
+			creator = "RUS"
+			amount = 70
+			version_name = "I-15"
+		}
+	}
+}

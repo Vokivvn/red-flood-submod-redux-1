@@ -1,0 +1,15 @@
+characters = {
+	LOU_william_s_burroughs = {
+		name = "William S. Burroughs"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/LOU/Portrait_William_S_Burroughs.png"
+			}
+		}
+		country_leader = {
+			ideology = surrealism
+			expire = "1965.1.1.1"
+			traits = { hedonist }
+		}
+	}
+}

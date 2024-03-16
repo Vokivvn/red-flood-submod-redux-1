@@ -1,0 +1,27 @@
+
+state={
+	id=83
+	name="STATE_83"
+	manpower = 632900
+	
+	state_category = town
+
+	history={
+		owner = TRS
+		buildings = {
+			infrastructure = 2
+			arms_factory = 1
+			industrial_complex = 1
+		}
+		victory_points = {
+			9640 1 
+		}
+		add_claim_by = ROM
+		add_claim_by = MOL
+		add_core_of = TRS
+	}
+
+	provinces={
+		696  9640 
+	}
+}

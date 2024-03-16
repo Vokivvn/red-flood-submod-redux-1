@@ -1,0 +1,239 @@
+ideas = {
+
+#################
+# Country ideas #
+#################
+
+	country = {
+		UPV_naive_politics = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = -0.10
+				progressivism_drift = 0.01
+				conservatism_drift = 0.01
+				liberalism_drift = 0.01
+				right_authoritarianism_drift = 0.01
+				revisionist_socialism_drift = 0.01
+			}
+			picture = generic_idea_RF_idea_theorist
+		}
+		UPV_christian_government = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				reactionism_drift = 0.01
+				war_support_factor = -0.05
+			}
+			picture = generic_idea_RF_idea_christ
+		}
+		UPV_widespread_illiteracy = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				research_speed_factor = -0.15
+				stability_factor = -0.15
+				political_power_cost = 0.10
+				military_leader_cost_factor = 0.5
+			}
+			picture = UPV_no_reading
+		}
+		UPV_lack_of_electricity = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				research_speed_factor = -0.15
+				stability_factor = -0.05
+				base_fuel_gain = -50
+				consumer_goods_expected_value = 0.2
+				global_building_slots = -1
+				army_org_factor = -0.1
+				land_night_attack = -0.2
+			}
+			picture = UPV_no_electricity
+		}
+		UPV_no_healthcare = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				acclimatization_cold_climate_gain_factor = -0.5
+				acclimatization_hot_climate_gain_factor = -0.3
+				army_attack_factor = -0.1
+				heat_attrition_factor = 0.2
+				pocket_penalty = -0.1
+				org_loss_when_moving = 0.2
+				supply_consumption_factor = 0.2
+				stability_factor = -0.10
+				consumer_goods_expected_value = 0.1
+				army_org_factor = -0.05
+			}
+			picture = GFX_idea_UPV_no_healthcare
+		}
+		UPV_25_literacy = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				research_speed_factor = -0.07
+				stability_factor = -0.05
+				political_power_cost = 0.03
+				military_leader_cost_factor = 0.2
+			}
+			picture = HUN_treaty_of_triannon
+		}
+		UPV_25_electricity = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				research_speed_factor = -0.05
+				base_fuel_gain = -10
+				consumer_goods_expected_value = 0.1
+				army_org_factor = -0.05
+				land_night_attack = -0.15
+			}
+			picture = ROM_king_carol_emptied_accounts
+		}
+		UPV_25_healthcare = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				acclimatization_cold_climate_gain_factor = -0.3
+				acclimatization_hot_climate_gain_factor = -0.1
+				army_attack_factor = -0.05
+				heat_attrition_factor = 0.1
+				pocket_penalty = -0.05
+				org_loss_when_moving = 0.1
+				supply_consumption_factor = 0.1
+				stability_factor = -0.05
+				consumer_goods_expected_value = 0.07
+				army_org_factor = -0.03
+			}
+			picture = generic_research_bonus
+		}
+		UPV_50_literacy = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				research_speed_factor = -0.03
+				political_power_cost = -0.01
+				military_leader_cost_factor = -0.1
+			}
+			picture = HUN_treaty_of_triannon
+		}
+		UPV_50_electricity = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				research_speed_factor = 0.01
+				base_fuel_gain = 15
+				army_org_factor = 0.02
+				land_night_attack = 0.02
+			}
+			picture = ROM_king_carol_emptied_accounts
+		}
+		UPV_50_healthcare = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				acclimatization_cold_climate_gain_factor = -0.1
+				acclimatization_hot_climate_gain_factor = 0.1
+				army_attack_factor = 0.05
+				heat_attrition_factor = -0.1
+				pocket_penalty = 0.01
+				org_loss_when_moving = -0.05
+				supply_consumption_factor = 0.1
+				consumer_goods_expected_value = 0.03
+				army_org_factor = 0.01
+			}
+			picture = generic_research_bonus
+		}
+		UPV_75_plus_literacy = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				research_speed_factor = 0.03
+				political_power_cost = -0.10
+				military_leader_cost_factor = -0.2
+				stability_factor = 0.04
+			}
+			picture = HUN_treaty_of_triannon
+		}
+		UPV_75_plus_electricity = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				research_speed_factor = 0.04
+				base_fuel_gain = 40
+				army_org_factor = 0.04
+				land_night_attack = 0.03
+				global_building_slots = 2
+			}
+			picture = ROM_king_carol_emptied_accounts
+		}
+		UPV_75_plus_healthcare = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				acclimatization_cold_climate_gain_factor = 0.1
+				acclimatization_hot_climate_gain_factor = 0.3
+				army_attack_factor = 0.07
+				heat_attrition_factor = -0.2
+				pocket_penalty = 0.02
+				org_loss_when_moving = -0.12
+				supply_consumption_factor = 0.1
+				stability_factor = 0.10
+				army_org_factor = 0.01
+			}
+			picture = generic_research_bonus
+		}
+		UPV_west_african_franc = {
+			
+		}
+		UPV_cgoodsfocus = {
+		
+		}
+		UPV_briishgoods = {
+		
+		}
+		UPV_anglophone_experiments = {
+		
+		}
+		UPV_briishgoodsdependent = {
+		
+		}
+		UPV_defanged_futurism = {
+		
+		}
+		UPV_literacycampaign = {
+		
+		}
+		UPV_francophilia = {
+		
+		}
+		UPV_socialmobility = {
+		
+		}
+		UPV_Well_Fed_Soldiers = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				army_org_factor = 0.1
+			}
+			picture = ZHR_soldierscouncils
+		}
+		UPV_No_Mercy_for_Our_Enemies = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				army_artillery_attack_factor  = 0.1
+				air_cas_efficiency = 0.1
+			}
+			picture = ZHR_soldierscouncils
+		}
+		UPV_Willing_Fighters = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				army_attack_factor  = 0.1
+				army_defence_factor = 0.1
+				air_superiority_efficiency = 0.1
+			}
+			picture = ZHR_soldierscouncils
+		}
+		UPV_Successful_Democratic_Experiment = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = 0.2
+				progressivism_drift = 0.03
+				conservatism_drift = 0.03
+				liberalism_drift = 0.03
+				right_authoritarianism_drift = 0.03
+				revisionist_socialism_drift = 0.03
+			}
+			picture = ZHR_soldierscouncils
+		}
+	}
+	
+}

@@ -1,0 +1,152 @@
+﻿capital = 266
+set_research_slots = 3 
+set_convoys = 50
+set_stability = 0.3
+
+set_variable = { RPR_urbanite_influence = 0 }
+clamp_variable = {
+	var = RPR_urbanite_influence
+	min = 0
+	max = 1
+}
+set_variable = { RPR_farmer_influence = 0 }
+clamp_variable = {
+	var = RPR_farmer_influence
+	min = 0
+	max = 1
+}
+set_variable = { RPR_industrialist_influence = 0 }
+clamp_variable = {
+	var = RPR_industrialist_influence
+	min = 0
+	max = 1
+}
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1		
+	tech_recon = 1
+	tech_engineers = 1
+	tech_trucks =1
+	motorised_infantry = 1
+	fuel_silos = 1
+}
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	set_technology = {
+		early_submarine = 1
+		early_destroyer = 1
+		early_light_cruiser = 1
+		early_heavy_cruiser = 1
+		early_battleship = 1
+		early_battlecruiser = 1
+		early_carrier = 1
+	}
+}
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		early_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		early_ship_hull_cruiser = 1
+		early_ship_hull_heavy = 1
+		early_ship_hull_carrier = 1
+		basic_battery = 1
+		basic_light_battery = 1
+		basic_medium_battery = 1
+		basic_heavy_battery = 1
+		basic_torpedo = 1
+		sonar = 1
+		smoke_generator = 1
+		basic_depth_charges = 1
+		basic_light_battery = 1
+		basic_cruiser_armor_scheme = 1
+		basic_heavy_armor_scheme = 1
+		basic_fire_control_system = 1
+	}
+}
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+	set_technology = {
+		iw_small_airframe = 1
+		aa_lmg = 1
+		aa_cannon_1 = 1
+		early_bombs = 1
+		engines_1 = 1
+	}
+}
+if = {
+	limit = { NOT = { has_dlc = "By Blood Alone" } }
+	set_technology = {
+		early_fighter = 1
+		CAS1 = 1
+	}
+}
+set_politics = {
+	ruling_party = popular_socialism
+	last_election = "1933.10.25"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	vanguard_socialism = 10
+	popular_socialism = 50
+	anarchism = 0
+	revisionist_socialism = 5
+	progressivism = 5
+	liberalism = 0
+	conservatism = 10
+	right_authoritarianism = 5
+	despotism = 5
+	reactionism = 10
+	accelerationism = 0
+}
+
+#leaders
+recruit_character = RPR_reza_shah_pahlavi
+recruit_character = RPR_mohammad_mosaddegh
+recruit_character = RPR_ahmad_qavam
+recruit_character = RPR_john_cadman
+recruit_character = RPR_mohammed_reza_pahlavi
+recruit_character = RPR_Sayyed_Zia_Tabatabai
+recruit_character = RPR_reza_radmanesh
+recruit_character = RPR_Mirza_Kuchik_Khan
+recruit_character = RPR_abol_ghasem_kashani
+
+#white
+#recruit_character = PER_Eric_Carlberg
+#recruit_character = PER_Anders_Anden
+#recruit_character = PER_Per_Glimstedt
+#recruit_character = PER_Arthur_Sullivan
+#recruit_character = PER_John_Le_Rougetel
+#recruit_character = PER_Neville_Gass
+#recruit_character = PER_Edgar_Myles
+#recruit_character = PER_Thomas_Riversdale
+#recruit_character = PER_Edgar_Ludlow_Hewitt_coaf
+#recruit_character = PER_Boris_Moller
+#recruit_character = PER_William_Fraser
+#recruit_character = PER_amanullah_jahabani
+#recruit_character = PER_hasan_arfa
+#recruit_character = PER_Hassan_Pakravan
+#recruit_character = PER_Gholamali_Bayandor
+#recruit_character = PER_Rudolf_Burmester
+#recruit_character = PER_Effat_Tejaratchi_coaf
+#recruit_character = PER_fazlollah_zahedi
+#recruit_character = PER_Amanullah_Jahanbani
+#recruit_character = PER_Hossein_Ala
+
+#red
+recruit_character = RPR_Mohammad_Bahrami
+recruit_character = RPR_Iraj_Eskandari
+recruit_character = RPR_Jafar_Pishevari
+recruit_character = RPR_Ehsanollah_Khan
+recruit_character = RPR_haydar_khan_amooghli
+recruit_character = RPR_Alexei_Dombrowski
+recruit_character = RPR_Soleiman_Eskandari
+recruit_character = RPR_Heshmat_Taleqani
+recruit_character = RPR_Fereydoun_Keshavarz
+recruit_character = RPR_Abdossamad_Kambakhsh
+recruit_character = RPR_Noureddin_Alamouti

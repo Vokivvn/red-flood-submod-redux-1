@@ -1,0 +1,1613 @@
+Russian_unification_decisions_nationalist = {
+	Unification_unify_russia_nationalist = {
+		icon = GFX_Russian_uni_nationalist
+		ai_will_do = { factor = 100 }
+		fire_only_once = yes
+		visible = {
+			OR = {
+				tag = DKB
+				tag = RUS
+				tag = SRU
+				tag = ORE
+				tag = SIB
+				tag = PRI
+				tag = ARC
+				AND = {
+					tag = KCK
+					has_country_leader = {
+						character = KCK_Gajda
+						ruling_only = yes
+					}
+				}
+			}
+			owns_state = 195 #RUS #Petrograd
+			owns_state = 234 #DKB #Ekaterinodar
+			owns_state = 652 #ORE #Orenburg
+			owns_state = 590 #ORE #Akmonlinsk
+			owns_state = 570 #SIB #Novonikolayevsk
+			owns_state = 234
+			owns_state = 231
+			var:978.owner = {
+				OR = {
+					tag = ROOT
+					tag = MNS
+				}
+			}
+		}
+		remove_effect = {
+			Unification_unify_russia_effects = yes
+		}
+	}
+
+	Unification_core_territory_nationalist = {
+		icon = GFX_Russian_uni_nationalist
+		ai_will_do = { factor = 100 }
+		visible = {
+			OR = {
+				tag = ARC
+				tag = PRI
+				tag = RUS
+				tag = SIB
+				tag = SRU
+				#Integrates Mongolia
+				tag = DKB
+				AND = {
+					tag = KCK
+					has_country_leader = {
+						character = KCK_Gajda
+						ruling_only = yes
+					}
+				}
+			}
+			any_owned_state = {
+				OR = {
+					has_variable = is_russian_state
+					AND = {
+						has_variable = is_mongolian_state
+						ROOT = { has_country_flag = integrate_mongolia }
+					}
+				}
+				NOT = { is_core_of = ROOT }
+			}
+		}
+		complete_effect = {
+			Unification_core_territory_effects = yes
+		}
+	}
+
+
+	Unification_invade_armenia_nationalist = {
+		icon = GFX_Russian_uni_nationalist
+		days_remove = 14
+		ai_will_do = { factor = 100 }
+		visible = {
+			OR = {
+				230 = { is_claim_or_core_of_owner = yes owner = { NOT = { tag = ROOT } } }
+				country_exists = ARM
+			}
+			OR = {
+				AND = {
+					tag = DKB 
+					has_completed_focus = DKB_we_are_scythians_we_are_asians
+				}
+				AND = {
+					tag = ORE
+					OR = {
+						has_completed_focus = ORE_subdue_cossacks
+						has_completed_focus = Orenburg_establish_western_strategic_frontier
+					}
+				}
+				AND = {
+					tag = KCK
+					has_completed_focus = KCK_bring_cossacks_to_heel
+				}
+				AND = {
+					OR = {
+						tag = RUS
+						tag = SRU
+					}
+					has_completed_focus = RUS_ultimatum_to_south_east
+				}
+				tag = ARC
+				tag = PRI
+			}
+		}
+		available = {
+			is_neighbor_of = var:230.owner
+			has_war = no
+			NOT = { has_country_flag = RUS_chose_wargoal }
+		}
+		war_with_on_remove = ARM
+		complete_effect = {
+			set_country_flag = {
+				flag = RUS_chose_wargoal
+				days = 15
+				value = 1
+			} 
+		}
+		remove_effect = {
+			declare_war_on = {
+				type = annex_everything
+				target = var:230.owner
+			}
+		}
+	}
+	Unification_invade_seu_nationalist = {
+		icon = GFX_Russian_uni_nationalist
+		days_remove = 14
+		ai_will_do = { factor = 100 }
+		visible = {
+			OR = {
+				234 = { is_claim_or_core_of_owner = yes owner = { NOT = { tag = ROOT } } }
+				country_exists = DKB
+			}
+			OR = {
+				AND = {
+					tag = ORE
+					OR = {
+						has_completed_focus = ORE_subdue_cossacks
+						has_completed_focus = Orenburg_western_expedition
+					}
+				}
+				AND = {
+					tag = SIB
+					owns_state = 574 #Yakutsk
+					owns_state = 978 #Harbin
+				}
+				AND = {
+					tag = KCK
+					has_completed_focus = KCK_bring_cossacks_to_heel
+				}
+				AND = {
+					OR = {
+						tag = RUS
+						tag = SRU
+					}
+					has_completed_focus = RUS_ultimatum_to_south_east
+				}
+				tag = ARC
+				tag = PRI
+			}
+		}
+		available = {
+			is_neighbor_of = var:234.owner
+			has_war = no
+			NOT = { has_country_flag = RUS_chose_wargoal }
+		}
+		war_with_on_remove = DKB
+		complete_effect = {
+			set_country_flag = {
+				flag = RUS_chose_wargoal
+				days = 14
+				value = 1
+			}
+		}
+		remove_effect={
+			declare_war_on = {
+				type = annex_everything
+				target = var:234.owner
+			}
+		}
+	}
+	Unification_invade_russia_nationalist = {
+		icon = GFX_Russian_uni_nationalist
+		days_remove = 14
+		ai_will_do = { factor = 100 }
+		visible = {
+			219 = { is_claim_or_core_of_owner = yes owner = { NOT = { tag = ROOT } } }
+			OR = {
+				AND = {
+					owns_state = 234 #Ekaterinodar
+					owns_state = 652 #Orenburg
+					tag = DKB
+					has_completed_focus = DKB_burn_kolchaks_nest
+				}
+				AND = {
+					tag = ORE
+					OR = {
+						has_completed_focus = ORE_walk_into_kremlin
+						has_completed_focus = Orenburg_secure_russia
+					}
+					owns_state = 218 #Novocherkask
+					owns_state = 231 #Kartli
+				}
+				AND = {
+					tag = SIB
+					owns_state = 574 #Yakutsk
+					owns_state = 978 #Harbin
+				}
+				AND = {
+					tag = KCK
+					has_completed_focus = KCK_final_round
+				}
+				tag = ARC
+				tag = PRI
+			}
+		}
+		available = {
+			is_neighbor_of = var:219.owner	
+			NOT = { has_country_flag = RUS_chose_wargoal }
+			has_war = no
+		}
+		war_with_on_remove = RUS
+		war_with_on_remove = SRU
+		war_with_on_remove = TER
+		complete_effect = {
+			set_country_flag = {
+				flag = RUS_chose_wargoal
+				days = 15
+				value = 1
+            }
+		}
+		remove_effect={
+			declare_war_on = {
+				type = annex_everything
+				target = var:219.owner
+			}
+		}
+	}
+	Unification_invade_ore_nationalist = {
+		icon = GFX_Russian_uni_nationalist
+		days_remove = 14
+		ai_will_do = { factor = 100 }
+		visible = {
+			OR = {
+				652 = { is_claim_or_core_of_owner = yes owner = { NOT = { tag = ROOT } } }
+				country_exists = ORE
+			}
+			OR = {
+				AND = {
+					tag = DKB
+					owns_state = 231 #Kartli
+					has_completed_focus = DKB_bashkirs_shouldnt_exist
+				}
+				AND = {
+					tag = SIB
+					owns_state = 574 #Yakutsk
+					owns_state = 978 #Harbin
+				}
+				AND = {
+					tag = KCK
+					has_completed_focus = KCK_bring_cossacks_to_heel
+				}
+				AND = {
+					OR = {
+						tag = RUS
+						tag = SRU
+					}
+					has_completed_focus = RUS_ultimatum_to_orenburg
+				}
+				tag = ARC
+				tag = PRI
+			}
+		}
+		available = {
+			OR = {
+				is_neighbor_of = ORE
+				is_neighbor_of = var:652.owner
+			}
+			NOT = { has_country_flag = RUS_chose_wargoal }
+			has_war = no
+		}
+		war_with_on_remove = ORE
+		complete_effect = {
+			set_country_flag = {
+				flag = RUS_chose_wargoal
+				days = 15
+				value = 1
+            }
+		}
+		remove_effect = {
+			declare_war_on = {
+				type = annex_everything
+				target = var:652.owner
+			}
+		}
+	}
+	Unification_invade_siberia_nationalist = {
+		icon = GFX_Russian_uni_nationalist
+		days_remove = 14
+		ai_will_do = { factor = 100 }
+		visible = {
+			OR = {
+				570 = { is_claim_or_core_of_owner = yes owner = { NOT = { tag = ROOT } } }
+				country_exists = SIB
+				country_exists = MO4
+			}
+			OR = {
+				AND = {
+					owns_state = 234 #Ekaterinodar
+					owns_state = 652 #Orenburg
+					tag = DKB
+					has_completed_focus = DKB_steppe_isnt_kirgiz
+				}
+				AND = {
+					tag = ORE
+					owns_state = 218 #Novocherkask
+					owns_state = 231 #Kartli
+					OR = {
+						has_completed_focus = ORE_empire_of_north
+						has_completed_focus = Orenburg_eastern_expedition
+					}
+				}
+				AND = {
+					OR = {
+						tag = RUS
+						tag = SRU
+					}
+					has_completed_focus = RUS_retake_siberia
+				}
+				AND = {
+					OR = {
+						AND = {
+							tag = KCK
+							has_completed_focus = KCK_the_siberian_opportunity
+						}
+						tag = ARC
+						tag = PRI
+					}
+					OR = {
+						var:570.owner = { owns_state = 1213 }
+						owns_state = 1213
+					}
+				}
+			}
+		}
+		available = {
+			is_neighbor_of = var:570.owner
+			NOT = { has_country_flag = RUS_chose_wargoal }
+			has_war = no
+		}
+		war_with_on_remove = SIB
+		war_with_on_remove = MO4
+		complete_effect = {
+			set_country_flag = {
+				flag = RUS_chose_wargoal
+				days = 15
+				value = 1
+            }
+		}
+		remove_effect={
+			declare_war_on = {
+				type = annex_everything
+				target = var:570.owner
+			}
+		}
+	}
+	Unification_invade_kck_nationalist = {
+		icon = GFX_Russian_uni_nationalist
+		days_remove = 14
+		ai_will_do = { factor = 100 }
+		visible = {
+			OR = {
+				574 = { is_claim_or_core_of_owner = yes owner = { NOT = { tag = ROOT } } }
+				country_exists = KCK
+			}
+			OR = {
+				AND = {
+					owns_state = 234 #Ekaterinodar
+					owns_state = 652 #Orenburg
+					tag = DKB
+					has_completed_focus = DKB_end_mongolian_treachery
+				}
+				AND = {
+					tag = ORE
+					owns_state = 218 #Novocherkask
+					owns_state = 231 #Kartli
+					OR = {
+						has_completed_focus = ORE_empire_of_north
+						has_completed_focus = Orenburg_eastern_expedition
+					}
+				}
+				AND = {
+					OR = {
+						tag = RUS
+						tag = SRU
+					}
+					has_completed_focus = RUS_ultimatum_to_yakutsk
+				}
+				AND = {
+					tag = SIB
+					KCK = { owns_state = 978 }
+				}
+				tag = ARC
+				tag = PRI
+			}
+		}
+		available = {
+			is_neighbor_of = var:574.owner
+			NOT = { has_country_flag = RUS_chose_wargoal }
+			has_war = no
+		}
+		war_with_on_remove = KCK
+		complete_effect = {
+			set_country_flag = {
+				flag = RUS_chose_wargoal
+				days = 15
+				value = 1
+            }
+		}
+		remove_effect={
+			declare_war_on = {
+				type = annex_everything
+				target = var:574.owner
+			}
+		}
+	}
+	Unification_invade_mongolia_nationalist = {
+		icon = GFX_Russian_uni_nationalist
+		days_remove = 14
+		ai_will_do = { factor = 100 }
+		visible = {
+			OR = {
+				330 = { is_claim_or_core_of_owner = yes owner = { NOT = { tag = ROOT } } }
+				country_exists = MO2
+				country_exists = MON
+				country_exists = MPA
+				country_exists = TAN
+				country_exists = KHU
+				country_exists = ALT
+			}
+			NOT = { MON = { has_completed_focus = Mongolia_greatermongolia } }
+			OR = {
+				AND = { #Check Peaceful union is not possible
+					country_exists = ALT
+					OR = {
+						AND = {
+							tag = ORE
+							NOT = {
+								country_exists = SIB
+								country_exists = DKB
+							}
+							OR = {
+								has_completed_focus = ORE_empire_of_north
+								has_completed_focus = Orenburg_establish_eastern_strategic_frontier
+							}
+							ALT_ORE_peaceful_uni = no
+						}
+					}
+				}
+				AND = {
+					tag = DKB
+					owns_state = 218 #Novocherkask
+					owns_state = 231 #Kartli
+					has_completed_focus = DKB_end_mongolian_treachery
+				}
+				AND = {
+					tag = KCK
+					owns_state = 978 #Harbin
+					has_completed_focus = KCK_end_barons_endeavor
+				}
+				tag = SIB
+				tag = ARC
+				tag = PRI
+			}
+		}
+		available = {
+			NOT = { has_country_flag = RUS_chose_wargoal }
+			has_war = no
+			OR = {
+				is_neighbor_of = var:330.owner
+				is_neighbor_of = MO2
+				is_neighbor_of = MON
+				is_neighbor_of = MPA
+				is_neighbor_of = ALT
+				is_neighbor_of = TAN
+				is_neighbor_of = KHU
+			}
+		}
+		war_with_on_remove = MO2
+		war_with_on_remove = MON
+		war_with_on_remove = MPA
+		war_with_on_remove = ALT
+		war_with_on_remove = TAN
+		war_with_on_remove = KHU
+		complete_effect = {
+			set_country_flag = {
+				flag = RUS_chose_wargoal
+				days = 15
+				value = 1
+			}
+		}
+		remove_effect = {
+			every_country = {
+				limit = {
+					OR = {
+						tag = var:330.owner
+						tag = MO2
+						tag = MON
+						tag = MPA
+						tag = ALT
+						tag = TAN
+						tag = KHU
+					}
+				}
+				ROOT = {
+					declare_war_on = {
+						type = annex_everything
+						target = PREV
+					}
+				}
+			}
+		}
+	}
+	Unification_invade_kav_nationalist = {
+		icon = GFX_Russian_uni_nationalist
+		days_remove = 14
+		ai_will_do = { factor = 100 }
+		visible = {
+			OR = {
+				231 = { is_claim_or_core_of_owner = yes owner = { NOT = { tag = ROOT } } }
+				country_exists = GEO
+				country_exists = KAV
+			}
+			OR = {
+				AND = {
+					tag = DKB 
+					has_completed_focus = DKB_we_are_scythians_we_are_asians
+				}
+				AND = {
+					tag = ORE
+					OR = {
+						has_completed_focus = ORE_subdue_cossacks
+						has_completed_focus = Orenburg_establish_western_strategic_frontier
+					}
+				}
+				AND = {
+					tag = SIB
+					owns_state = 574 #Yakutsk
+					owns_state = 978 #Harbin
+				}
+				AND = {
+					tag = KCK
+					has_completed_focus = KCK_bring_cossacks_to_heel
+				}
+				AND = {
+					OR = {
+						tag = RUS
+						tag = SRU
+					}
+					has_completed_focus = RUS_ultimatum_to_south_east
+				}
+				tag = ARC
+				tag = PRI
+			}
+		}
+		available = {
+			NOT = { has_country_flag = RUS_chose_wargoal }
+			has_war = no
+			is_neighbor_of = var:231.owner
+		}
+		war_with_on_remove = KAV
+		war_with_on_remove = GEO
+		complete_effect = {
+			set_country_flag = {
+				flag = RUS_chose_wargoal
+				days = 15
+				value = 1
+			}
+		}
+		remove_effect = {
+			declare_war_on = {
+				type = annex_everything
+				target = var:231.owner
+			}
+		}
+	}
+	Unification_invade_baltics_nationalist = {
+		icon = GFX_Russian_uni_nationalist
+		days_remove = 14
+		ai_will_do = { factor = 100 }
+		visible = {
+			OR = {
+				1058 = { is_claim_or_core_of_owner = yes owner = { NOT = { tag = ROOT } } }
+				country_exists = WRR
+				country_exists = WRU
+				country_exists = WRT
+				AND = {
+					EST = {
+						exists = yes
+						is_in_faction = no
+					}
+				}
+				AND = {
+					LAT = {
+						exists = yes
+						is_in_faction = no
+					}
+				}
+			}
+			OR = {
+				AND = {
+					tag = DKB
+					has_completed_focus = DKB_burn_kolchaks_nest
+				}
+				AND = {
+					tag = ORE
+					OR = {
+						has_completed_focus = ORE_walk_into_kremlin
+						has_completed_focus = Orenburg_expand_western_strategic_frontier
+					}
+				}
+				tag = SIB
+				tag = ARC
+				tag = PRI
+			}
+		}
+		available = {
+			NOT = { has_country_flag = RUS_chose_wargoal }
+			has_war = no
+			OR = {
+				is_neighbor_of = var:1058.owner
+				is_neighbor_of = WRR
+				is_neighbor_of = WRU
+				is_neighbor_of = WRT
+				is_neighbor_of = EST
+				is_neighbor_of = LAT
+			}
+		}
+		war_with_on_remove = WRR
+		war_with_on_remove = WRU
+		war_with_on_remove = WRT
+		war_with_on_remove = EST 
+		war_with_on_remove = LAT 
+		complete_effect = {
+			set_country_flag = {
+              flag = RUS_chose_wargoal
+              days = 15
+              value = 1
+            }
+		}
+		remove_effect = {
+			every_country = {
+				limit = {
+					OR = {
+						tag = var:1058.owner
+						tag = WRU
+						tag = WRR
+						tag = WRT
+						AND = {
+							is_in_faction = no
+							OR = {
+								tag = LAT
+								tag = EST
+							}
+						}
+					}
+				}
+				ROOT = {
+					declare_war_on = {
+						type = annex_everything
+						target = PREV
+					}
+				}
+			}
+		}
+	}
+	Unification_invade_finland_nationalist = {
+		icon = GFX_Russian_uni_nationalist
+		days_remove = 14
+		ai_will_do = { factor = 100 }
+		visible = {
+			OR = {
+				111 = { is_claim_or_core_of_owner = yes owner = { NOT = { tag = ROOT } } }
+				AND = {
+					country_exists = FIN
+					FIN = { is_in_faction = no }
+				}
+				country_exists = FIR
+			}
+			OR = {
+				AND = {
+					tag = DKB
+					has_completed_focus = DKB_burn_kolchaks_nest
+				}
+				AND = {
+					tag = ORE
+					OR = {
+						has_completed_focus = ORE_walk_into_kremlin
+						has_completed_focus = Orenburg_expand_western_strategic_frontier
+					}
+				}
+				tag = SIB
+				tag = ARC
+				tag = PRI
+			}
+		}
+		available = {
+			NOT = { has_country_flag = RUS_chose_wargoal }
+			has_war = no
+			OR = {
+				is_neighbor_of = var:111.owner
+				is_neighbor_of = FIN
+				is_neighbor_of = FIR
+			}
+		}
+		war_with_on_remove = FIN
+		war_with_on_remove = FIR
+		complete_effect = {
+			set_country_flag = {
+				flag = RUS_chose_wargoal
+				days = 15
+				value = 1
+            }
+		}
+		remove_effect = {
+			every_country = {
+				limit = {
+					OR = {
+						tag = var:111.owner
+						tag = FIN
+						tag = FIR
+					}
+				}
+				ROOT = {
+					declare_war_on = {
+						type = annex_everything
+						target = PREV
+					}
+				}
+			}
+		}
+	}
+
+	Unification_invade_zhr_nationalist = {
+		icon = GFX_Russian_uni_nationalist
+		days_remove = 14
+		ai_will_do = { factor = 100 }
+		visible = {
+			OR = {
+				978 = { is_claim_or_core_of_owner = yes owner = { NOT = { tag = ROOT } } }
+				country_exists = ZHR
+				country_exists = ARC
+				country_exists = PRI
+				country_exists = HAR
+				AND = {
+					country_exists = MNS
+					MNS = {
+						NOT = { has_country_flag = is_russian_warlord }
+					}
+				}
+				country_exists = PSL
+				country_exists = OLN
+				country_exists = GUK 
+				country_exists = FCR
+			}
+			OR = {
+				AND = {
+					owns_state = 234 #Ekaterinodar
+					owns_state = 652 #Orenburg
+					tag = DKB
+					has_completed_focus = DKB_end_mongolian_treachery
+				}
+				AND = {
+					tag = ORE
+					OR = {
+						has_completed_focus = ORE_empire_of_north
+						has_completed_focus = Orenburg_expand_eastern_strategic_frontier
+					}
+				}
+				AND = {
+					OR = {
+						tag = RUS
+						tag = SRU
+					}
+					has_completed_focus = RUS_finish_zhelto
+				}
+				AND = {
+					tag = KCK
+					has_completed_focus = KCK_harbin_delenda_est	
+				}
+				tag = SIB
+			}
+		}
+		available = {
+			NOT = { has_country_flag = RUS_chose_wargoal }
+			has_war = no
+			OR = {
+				is_neighbor_of = var:978.owner
+				is_neighbor_of = ZHR
+				is_neighbor_of = ARC
+				is_neighbor_of = PRI
+				is_neighbor_of = MNS
+				is_neighbor_of = PSL
+				is_neighbor_of = OLN
+				is_neighbor_of = GUK 
+				is_neighbor_of = FCR
+				is_neighbor_of = HAR
+			}
+		}
+		war_with_on_remove = ZHR
+		war_with_on_remove = ARC
+		war_with_on_remove = PRI
+		war_with_on_remove = MNS
+		war_with_on_remove = PSL
+		war_with_on_remove = OLN
+		war_with_on_remove = GUK 
+		war_with_on_remove = FCR
+		war_with_on_remove = HAR
+		complete_effect = {
+			set_country_flag = {
+				flag = RUS_chose_wargoal
+				days = 15
+				value = 1
+            }
+		}
+		remove_effect = {
+			every_country = {
+				limit = {
+					OR = {
+						tag = var:978.owner
+						tag = ZHR
+						tag = ARC
+						tag = PRI
+						AND = {
+							tag = MNS
+							NOT = { has_country_flag = is_russian_warlord }
+						}
+						tag = PSL
+						tag = OLN
+						tag = GUK 
+						tag = FCR
+						tag = HAR
+					}
+				}
+				ROOT = {
+					declare_war_on = {
+						type = annex_everything
+						target = PREV
+					}
+				}
+			}
+		}
+	}
+}
+
+
+Russian_unification_decisions_socialist = {
+	Unification_unify_russia_socialist = {
+		icon = GFX_Russian_uni_socialist
+		ai_will_do = { factor = 100 }
+		fire_only_once = yes
+		visible = {
+			OR = {
+				AND = {
+					tag = ALT
+					has_completed_focus = ALT_kings_of_shambala
+				}
+				AND = {
+					tag = HAR
+					has_completed_focus = HAR_liberate_homeland
+				}
+				AND = {
+					tag = KAV
+					has_completed_focus = KAV_eurasia_freed
+				}
+				AND = {
+					tag = PSL
+					has_completed_focus = PSL_freedom_to_russia
+				}
+				AND = {
+					tag = ZHR
+					has_completed_focus = ZHR_youngrussiahailvictorious
+				}
+			}
+			owns_state = 195 #RUS #Petrograd
+			owns_state = 234 #DKB #Ekaterinodar
+			owns_state = 652 #ORE #Orenburg
+			owns_state = 590 #ORE #Akmonlinsk
+			owns_state = 570 #SIB #Novonikolayevsk
+			owns_state = 234
+			owns_state = 231
+			var:978.owner = {
+				OR = {
+					tag = ROOT
+					tag = MNS
+				}
+			}
+		}
+		remove_effect = {
+			Unification_unify_russia_effects = yes
+		}
+	}
+	Unification_core_territory_socialist = {
+		icon = GFX_Russian_uni_socialist
+		ai_will_do = { factor = 100 }
+		visible = {
+			OR = {
+				tag = ALT
+				tag = PSL
+				tag = ZHR
+				tag = HAR
+				#Integrates Mongolia
+				tag = FCR
+				tag = KAV
+			}
+			any_owned_state = {
+				OR = {
+					has_variable = is_russian_state
+					has_variable = is_mongolian_state
+				}
+				NOT = { is_core_of = ROOT }
+			}
+		}
+		complete_effect = {
+			Unification_core_territory_effects = yes
+		}
+	}
+
+	Unification_invade_armenia_socialist = {
+		icon = GFX_Russian_uni_socialist
+		days_remove = 14
+		ai_will_do = { factor = 100 }
+		visible = {
+			OR = {
+				230 = { is_claim_or_core_of_owner = yes owner = { NOT = { tag = ROOT } } }
+				country_exists = ARM
+			}
+			AND = {
+				tag = KAV
+				has_completed_focus = KAV_fullfill_transcaucasia
+			}
+		}
+		available = {
+			is_neighbor_of = var:230.owner
+			has_war = no
+			NOT = { has_country_flag = RUS_chose_wargoal }
+		}
+		war_with_on_remove = ARM
+		complete_effect = {
+			set_country_flag = {
+				flag = RUS_chose_wargoal
+				days = 15
+				value = 1
+			} 
+		}
+		remove_effect = {
+			declare_war_on = {
+				type = annex_everything
+				target = var:230.owner
+			}
+		}
+	}
+	Unification_invade_seu_socialist = {
+		icon = GFX_Russian_uni_socialist
+		days_remove = 14
+		ai_will_do = { factor = 100 }
+		visible = {
+			OR = {
+				234 = { is_claim_or_core_of_owner = yes owner = { NOT = { tag = ROOT } } }
+				country_exists = DKB
+			}
+			OR = {
+				AND = {
+					tag = KAV
+					has_completed_focus = KAV_march_north
+				}
+				AND = {
+					tag = ZHR
+					has_completed_focus = ZHR_desertcampaign
+				}
+				tag = ALT
+				tag = HAR
+				tag = FCR
+				tag = PSL
+			}
+		}
+		available = {
+			is_neighbor_of = var:234.owner
+			has_war = no
+			NOT = { has_country_flag = RUS_chose_wargoal }
+		}
+		war_with_on_remove = DKB
+		complete_effect = {
+			set_country_flag = {
+				flag = RUS_chose_wargoal
+				days = 14
+				value = 1
+			}
+		}
+		remove_effect={
+			declare_war_on = {
+				type = annex_everything
+				target = var:234.owner
+			}
+		}
+	}
+	Unification_invade_russia_socialist = {
+		icon = GFX_Russian_uni_socialist
+		days_remove = 14
+		ai_will_do = { factor = 100 }
+		visible = {
+			219 = { is_claim_or_core_of_owner = yes owner = { NOT = { tag = ROOT } } }
+			OR = {
+				AND = {
+					owns_state = 234 #Ekaterinodar
+					owns_state = 652 #Orenburg
+					tag = KAV
+					has_completed_focus = KAV_annihilate_kolchakocracy
+				}
+				AND = {
+					tag = ZHR
+					has_completed_focus = ZHR_offensiveonmoscow
+				}
+				tag = ALT
+				tag = HAR
+				tag = FCR
+				tag = PSL
+			}
+		}
+		available = {
+			is_neighbor_of = var:219.owner	
+			NOT = { has_country_flag = RUS_chose_wargoal }
+			has_war = no
+		}
+		war_with_on_remove = RUS
+		war_with_on_remove = SRU
+		war_with_on_remove = TER
+		complete_effect = {
+			set_country_flag = {
+				flag = RUS_chose_wargoal
+				days = 15
+				value = 1
+            }
+		}
+		remove_effect={
+			declare_war_on = {
+				type = annex_everything
+				target = var:219.owner
+			}
+		}
+	}
+	Unification_invade_ore_socialist = {
+		icon = GFX_Russian_uni_socialist
+		days_remove = 14
+		ai_will_do = { factor = 100 }
+		visible = {
+			OR = {
+				652 = { is_claim_or_core_of_owner = yes owner = { NOT = { tag = ROOT } } }
+				country_exists = ORE
+			}
+			OR = {
+				AND = {
+					tag = KAV
+					has_completed_focus = KAV_trek_east
+				}
+				AND = {
+					tag = ALT
+					ALT_ORE_peaceful_uni = no
+					owns_state = 570 #Novonikolayevsk
+					owns_state = 978 #Harbin
+				}
+				AND = {
+					tag = ZHR
+					has_completed_focus = ZHR_returntocentralasia
+				}
+				tag = HAR
+				tag = FCR
+				tag = PSL
+			}
+		}
+		available = {
+			is_neighbor_of = var:652.owner
+			NOT = { has_country_flag = RUS_chose_wargoal }
+			has_war = no
+		}
+		war_with_on_remove = ORE
+		complete_effect = {
+			set_country_flag = {
+				flag = RUS_chose_wargoal
+				days = 15
+				value = 1
+            }
+		}
+		remove_effect={
+			declare_war_on = {
+				type = annex_everything
+				target = var:652.owner
+			}
+		}
+	}
+	Unification_invade_siberia_socialist = {
+		icon = GFX_Russian_uni_socialist
+		days_remove = 14
+		ai_will_do = { factor = 100 }
+		visible = {
+			OR = {
+				570 = { is_claim_or_core_of_owner = yes owner = { NOT = { tag = ROOT } } }
+				country_exists = SIB
+				country_exists = MO4
+			}
+			OR = {
+				AND = {
+					owns_state = 234 #Ekaterinodar
+					owns_state = 652 #Orenburg
+					tag = KAV
+					has_completed_focus = KAV_trek_east
+				}
+				AND = {
+					tag = ALT
+					owns_state = 978 #Harbin
+				}
+				AND = {
+					tag = ZHR
+					has_completed_focus = ZHR_assassinatethesiberiangeneralgovernor
+				}
+				AND = {
+					OR = {
+						tag = HAR
+						tag = FCR
+						tag = PSL
+					}
+					OR = {
+						var:570.owner = { owns_state = 1213 }
+						owns_state = 1213
+					}
+				}
+			}
+		}
+		available = {
+			is_neighbor_of = var:570.owner
+			NOT = { has_country_flag = RUS_chose_wargoal }
+			has_war = no
+		}
+		war_with_on_remove = SIB
+		war_with_on_remove = MO4
+		complete_effect = {
+			set_country_flag = {
+				flag = RUS_chose_wargoal
+				days = 15
+				value = 1
+            }
+		}
+		remove_effect={
+			declare_war_on = {
+				type = annex_everything
+				target = var:570.owner
+			}
+		}
+	}
+	Unification_invade_kck_socialist = {
+		icon = GFX_Russian_uni_socialist
+		days_remove = 14
+		ai_will_do = { factor = 100 }
+		visible = {
+			OR = {
+				574 = { is_claim_or_core_of_owner = yes owner = { NOT = { tag = ROOT } } }
+				country_exists = KCK
+			}
+			OR = {
+				AND = {
+					owns_state = 234 #Ekaterinodar
+					owns_state = 652 #Orenburg
+					tag = KAV
+					has_completed_focus = KAV_trek_east
+				}
+				AND = {
+					tag = ALT
+					owns_state = 978 #Harbin
+				}
+				AND = {
+					tag = ZHR
+					has_completed_focus = ZHR_yakutiaswitchingsides
+				}
+				tag = HAR
+				tag = FCR
+				tag = PSL
+			}
+		}
+		available = {
+			is_neighbor_of = var:574.owner
+			NOT = { has_country_flag = RUS_chose_wargoal }
+			has_war = no
+		}
+		war_with_on_remove = KCK
+		complete_effect = {
+			set_country_flag = {
+				flag = RUS_chose_wargoal
+				days = 15
+				value = 1
+            }
+		}
+		remove_effect={
+			declare_war_on = {
+				type = annex_everything
+				target = var:574.owner
+			}
+		}
+	}
+	Unification_invade_mongolia_socialist = {
+		icon = GFX_Russian_uni_socialist
+		days_remove = 14
+		ai_will_do = { factor = 100 }
+		visible = {
+			OR = {
+				330 = { is_claim_or_core_of_owner = yes owner = { NOT = { tag = ROOT } } }
+				country_exists = MO2
+				country_exists = TAN
+				country_exists = KHU
+				AND = {
+					country_exists = ALT
+					ALT = { has_completed_focus = ALT_OTB_putsch }
+				}
+			}
+			NOT = {
+				MON = { has_completed_focus = Mongolia_greatermongolia }
+				AND = {
+					tag = ZHR
+					MON = { has_completed_focus = Mongolia_defendtherepublic }
+				}
+			}
+			OR = {
+				AND = { #Check Peaceful union is not possible
+					country_exists = ALT
+					OR = {
+						AND = {
+							tag = KAV
+							has_completed_focus = KAV_trek_east
+							ALT_KAV_peaceful_uni = no
+						}
+						AND = {
+							tag = ZHR
+							ALT_ZHR_peaceful_uni = no
+						}
+					}
+				}
+				tag = HAR
+				tag = FCR
+				tag = PSL
+			}
+		}
+		available = {
+			NOT = { has_country_flag = RUS_chose_wargoal }
+			has_war = no
+			OR = {
+				is_neighbor_of = var:330.owner
+				is_neighbor_of = MO2
+				is_neighbor_of = ALT
+				is_neighbor_of = TAN
+				is_neighbor_of = KHU
+			}
+		}
+		war_with_on_remove = MO2
+		war_with_on_remove = ALT
+		war_with_on_remove = TAN
+		war_with_on_remove = KHU
+		complete_effect = {
+			set_country_flag = {
+				flag = RUS_chose_wargoal
+				days = 15
+				value = 1
+			}
+		}
+		remove_effect = {
+			if = {
+				limit = {
+					ROOT = { tag = ZHR }
+					ALT = {
+						has_completed_focus = ALT_gurkhin_prevails
+						exists = yes
+					}
+				}
+				ZHR = { give_military_access = ALT }
+                ALT = { give_military_access = ZHR }
+			}
+			every_country = {
+				limit = {
+					OR = {
+						tag = var:330.owner
+						tag = MO2
+						AND = {
+							tag = ALT
+							NOT = { ROOT = { tag = ZHR } }
+						}
+						tag = TAN
+						tag = KHU
+					}
+				}
+				ROOT = {
+					declare_war_on = {
+						type = annex_everything
+						target = PREV
+					}
+				}
+			}
+		}
+	}
+	Unification_invade_kav_socialist = {
+		icon = GFX_Russian_uni_socialist
+		days_remove = 14
+		ai_will_do = { factor = 100 }
+		visible = {
+			OR = {
+				231 = { is_claim_or_core_of_owner = yes owner = { NOT = { tag = ROOT } } }
+				country_exists = GEO
+				country_exists = KAV
+			}
+			OR = {
+				AND = {
+					tag = ALT
+					owns_state = 570 #Novonikolayevsk
+					AND = {
+						ZHR_KAV_peaceful_uni = no
+						ALT_KAV_peaceful_uni = no
+					}
+					NOT = {
+						country_exists = SIB
+						country_exists = ZHR
+					}
+				}
+				AND = {
+					tag = ZHR
+					has_completed_focus = ZHR_desertcampaign
+					ZHR_KAV_peaceful_uni = no
+					NOT = { country_exists = SIB }
+				}
+				AND = {
+					tag = FCR
+					FCR_KAV_peaceful_uni = no
+					owns_state = 570 #Novonikolayevsk 
+					owns_state = 574 #Yakutsk
+				}
+				AND = {
+					tag = PSL
+					ZHR_KAV_peaceful_uni = no
+				}
+				tag = HAR
+			}
+		}
+		available = {
+			NOT = { has_country_flag = RUS_chose_wargoal }
+			has_war = no
+			is_neighbor_of = var:231.owner
+		}
+		war_with_on_remove = KAV
+		war_with_on_remove = GEO
+		complete_effect = {
+			set_country_flag = {
+				flag = RUS_chose_wargoal
+				days = 15
+				value = 1
+			}
+		}
+		remove_effect = {
+			declare_war_on = {
+				type = annex_everything
+				target = var:231.owner
+			}
+		}
+	}
+	Unification_invade_baltics_socialist = {
+		icon = GFX_Russian_uni_socialist
+		days_remove = 14
+		ai_will_do = { factor = 100 }
+		visible = {
+			OR = {
+				1058 = { is_claim_or_core_of_owner = yes owner = { NOT = { tag = ROOT } } }
+				country_exists = WRR
+				country_exists = WRU
+				AND = {
+					WRT = {
+						exists = yes
+						NOT = {
+							has_government = vanguard_socialism
+						}
+					}
+				}
+				AND = {
+					EST = {
+						exists = yes
+						is_in_faction = no
+					}
+				}
+				AND = {
+					LAT = {
+						exists = yes
+						is_in_faction = no
+					}
+				}
+			}
+			OR = {
+				AND = {
+					tag = KAV
+					has_completed_focus = KAV_annihilate_kolchakocracy
+				}
+				AND = {
+					tag = ZHR
+					has_completed_focus = ZHR_offensiveonmoscow
+				}
+				tag = ALT
+				tag = HAR
+				tag = PSL
+				tag = FCR
+			}
+		}
+		available = {
+			NOT = { has_country_flag = RUS_chose_wargoal }
+			has_war = no
+			OR = {
+				is_neighbor_of = var:1058.owner
+				is_neighbor_of = WRR
+				is_neighbor_of = WRU
+				is_neighbor_of = WRT
+				is_neighbor_of = EST
+				is_neighbor_of = LAT
+			}
+		}
+		war_with_on_remove = WRR
+		war_with_on_remove = WRU
+		war_with_on_remove = WRT
+		war_with_on_remove = EST 
+		war_with_on_remove = LAT 
+		complete_effect = {
+			set_country_flag = {
+              flag = RUS_chose_wargoal
+              days = 15
+              value = 1
+            }
+		}
+		remove_effect = {
+			every_country = {
+				limit = {
+					OR = {
+						tag = var:1058.owner
+						tag = WRU
+						tag = WRR
+						tag = WRT
+						AND = {
+							is_in_faction = no
+							OR = {
+								tag = LAT
+								tag = EST
+							}
+						}
+					}
+				}
+				ROOT = {
+					declare_war_on = {
+						type = annex_everything
+						target = PREV
+					}
+				}
+			}
+		}
+	}
+	Unification_invade_finland_socialist = {
+		icon = GFX_Russian_uni_socialist
+		days_remove = 14
+		ai_will_do = { factor = 100 }
+		visible = {
+			OR = {
+				111 = { is_claim_or_core_of_owner = yes owner = { NOT = { tag = ROOT } } }
+				country_exists = FIN
+			}
+			OR = {
+				AND = {
+					tag = KAV
+					has_completed_focus = KAV_annihilate_kolchakocracy    
+				}
+				tag = ALT
+				AND = {
+					tag = ZHR
+					has_completed_focus = ZHR_offensiveonmoscow
+				}
+				tag = HAR
+				tag = PSL
+				tag = FCR
+			}
+		}
+		available = {
+			NOT = { has_country_flag = RUS_chose_wargoal }
+			has_war = no
+			OR = {
+				is_neighbor_of = var:111.owner
+				is_neighbor_of = FIN
+			}
+		}
+		war_with_on_remove = FIN
+		complete_effect = {
+			set_country_flag = {
+				flag = RUS_chose_wargoal
+				days = 15
+				value = 1
+            }
+		}
+		remove_effect = {
+			every_country = {
+				limit = {
+					OR = {
+						tag = var:111.owner
+						tag = FIN
+					}
+				}
+				ROOT = {
+					declare_war_on = {
+						type = annex_everything
+						target = PREV
+					}
+				}
+			}
+		}
+	}
+
+	Unification_invade_zhr_socialist = {
+		icon = GFX_Russian_uni_socialist
+		days_remove = 14
+		ai_will_do = { factor = 100 }
+		visible = {
+			OR = {
+				978 = { is_claim_or_core_of_owner = yes owner = { NOT = { tag = ROOT } } }
+				country_exists = ZHR
+				country_exists = ARC
+				country_exists = PRI
+				country_exists = MNS
+				country_exists = PSL
+				country_exists = OLN
+				country_exists = GUK 
+				country_exists = FCR
+			}
+			owns_state = 234 #Ekaterinodar
+			owns_state = 652 #Orenburg
+			ZHR_KAV_peaceful_uni = no
+			HAR_KAV_peaceful_uni = no 
+			FCR_KAV_peaceful_uni = no
+			AND = {
+				tag = KAV
+				has_completed_focus = KAV_trek_east
+			}
+		}
+		available = {
+			NOT = { has_country_flag = RUS_chose_wargoal }
+			has_war = no
+			OR = {
+				is_neighbor_of = var:978.owner
+				is_neighbor_of = ZHR
+				is_neighbor_of = ARC
+				is_neighbor_of = PRI
+				is_neighbor_of = MNS
+				is_neighbor_of = PSL
+				is_neighbor_of = OLN
+				is_neighbor_of = GUK 
+				is_neighbor_of = FCR
+			}
+		}
+		war_with_on_remove = ZHR
+		war_with_on_remove = ARC
+		war_with_on_remove = PRI
+		war_with_on_remove = MNS
+		war_with_on_remove = PSL
+		war_with_on_remove = OLN
+		war_with_on_remove = GUK 
+		war_with_on_remove = FCR
+		complete_effect = {
+			set_country_flag = {
+				flag = RUS_chose_wargoal
+				days = 15
+				value = 1
+            }
+		}
+		remove_effect = {
+			every_country = {
+				limit = {
+					OR = {
+						tag = var:978.owner
+						tag = ZHR
+						tag = ARC
+						tag = PRI
+						tag = MNS
+						tag = PSL
+						tag = OLN
+						tag = GUK 
+						tag = FCR
+					}
+				}
+				ROOT = {
+					declare_war_on = {
+						type = annex_everything
+						target = PREV
+					}
+				}
+			}
+		}
+	}
+}

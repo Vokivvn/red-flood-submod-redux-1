@@ -1,0 +1,36 @@
+ideas = {
+
+#################
+# Country ideas #
+#################
+
+	country = {
+		FJN_jiaoren_faction = {
+			modifier = {
+				conscription = 0.01
+				army_core_defence_factor = 0.05
+			}
+			picture = generic_idea_RF_idea_revolution
+		}
+		FJN_rival_government = {
+			modifier = {
+				stability_factor = -0.1
+                political_power_factor = 0.30
+				army_morale_factor = 0.05
+			}
+			picture = generic_idea_RF_idea_speeches
+		}
+		FJN_socialist_policies = {
+			modifier = {
+				monthly_population = 0.1
+				research_speed_factor = 0.03
+				consumer_goods_expected_value = 0.05
+			}
+			picture = testing_socialism
+		}
+	}
+###########
+#MINISTERS#
+###########
+}
+	

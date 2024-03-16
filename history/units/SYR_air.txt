@@ -1,0 +1,11 @@
+﻿air_wings = {
+	454 = {
+		# 1st Squadron -- Hawker Audax
+		small_plane_cas_airframe_0 =  {
+			owner = "SYR" 
+			amount = 25
+			creator = "ENG"
+			version_name = "Fairey Gordon"
+		}
+	}
+}

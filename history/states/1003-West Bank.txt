@@ -1,0 +1,29 @@
+
+state={
+	id=1003
+	name="STATE_1003" #Palestine
+	manpower = 333142
+	
+	state_category = large_town
+
+	history={
+		owner = SYR
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			air_base = 2
+		}
+		victory_points = {
+			1086 8
+		}
+		victory_points = {
+			7107 1
+		}
+		add_core_of = SYR
+		add_claim_by = SNP
+	}
+
+	provinces = {
+		1086 7107 1
+	}
+}

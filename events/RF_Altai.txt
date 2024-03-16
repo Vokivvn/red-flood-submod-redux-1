@@ -1,0 +1,251 @@
+add_namespace = alt
+
+
+	country_event = {
+		id = alt.4
+		title = alt.4.t
+		desc = alt.4.d
+		picture = GFX_report_event_generic_sign_treaty3
+		
+		fire_only_once = yes
+		is_triggered_only = yes
+		
+		option = {
+			name = alt.4.a
+		
+			country_event = {
+				days = 2
+				id = alt.14
+			}
+			ai_chance = {
+				factor = 10
+				modifier = {
+					factor = 100
+					OR = {
+						has_game_rule = {
+							rule = ALT_ai_route
+							option = BOKII
+						}
+						has_game_rule = {
+							rule = ALT_ai_route
+							option = BARCHENKO
+						}
+					}
+				}
+			}
+			
+		}
+
+		option = {
+			name = alt.4.b
+			
+			country_event = {
+				days = 2
+				id = alt.15
+			}
+			ai_chance = {
+				factor = 10
+				modifier = {
+					factor = 100
+					has_game_rule = {
+						rule = ALT_ai_route
+						option = GURKHIN
+					}
+				}
+			}
+		
+		}
+
+	}
+
+	country_event = {
+		id = alt.5
+		title = alt.5.t
+		desc = alt.5.desc
+		picture = GFX_institutionofmillenarianism
+		fire_only_once = yes
+		is_triggered_only = yes
+		
+		option = {
+			name = alt.5.a
+			every_state = {
+			limit = {
+				is_core_of = ALT
+			}
+			add_core_of = ZHR
+		    }
+		    ALT = {
+			    every_unit_leader = {
+				    set_nationality = ZHR
+			    }
+		    }
+		    annex_country = {
+		        target = ALT
+	  		    transfer_troops = yes
+		    }
+		}
+	}
+
+	country_event = {
+		id = alt.6
+		title = alt.6.title
+		desc = alt.6.desc
+		picture = GFX_partisansdestroyed
+
+		fire_only_once = yes
+		is_triggered_only = yes
+		
+		option = {
+			name = alt.6.a
+			add_stability = -0.10
+		}
+
+		option = {
+			name = alt.6.b
+			add_stability = -0.10
+		}
+	}
+	country_event = {
+		id = alt.14
+		title = alt.14.title
+		desc = alt.14.desc
+		picture = GFX_report_event_generic_sign_treaty3
+		
+		fire_only_once = yes
+		is_triggered_only = yes
+
+		option = {
+			name = alt.14.a
+			set_country_flag = ALT_bokii_win
+			complete_national_focus = ALT_OTB_putsch
+			kill_country_leader = yes
+			set_politics = {
+				ruling_party = vanguard_socialism
+				elections_allowed = no
+			}
+			ai_chance = {
+				factor = 10
+				modifier = {
+					factor = 100
+					has_game_rule = {
+						rule = ALT_ai_route
+						option = BOKII
+					}
+				}
+			}
+		}
+		option = {
+			name = alt.14.b
+			set_country_flag = ALT_barchenko_win
+			complete_national_focus = ALT_OTB_putsch
+			kill_country_leader = yes
+			set_politics = {
+				ruling_party = revisionist_socialism
+				elections_allowed = no
+			}
+			ai_chance = {
+				factor = 10
+				modifier = {
+					factor = 100
+					has_game_rule = {
+						rule = ALT_ai_route
+						option = BARCHENKO
+					}
+				}
+			}
+		}
+	}
+	
+	country_event = {
+		id = alt.15
+		title = alt.15.title
+		desc = alt.15.desc
+		picture = GFX_report_event_generic_sign_treaty3
+		
+		fire_only_once = yes
+		is_triggered_only = yes
+
+		option = {
+			name = alt.15.a
+			set_country_flag = ALT_gurkhin_win
+			complete_national_focus = ALT_gurkhin_prevails
+			ai_chance = {
+				factor = 10
+				modifier = {
+					factor = 100
+					has_game_rule = {
+						rule = ALT_ai_route
+						option = GURKHIN
+					}
+				}
+			}
+		}
+	}
+	
+	country_event = {
+		id = alt.16
+		title = alt.16.title
+		desc = alt.16.desc
+		
+		fire_only_once = yes
+		is_triggered_only = yes
+
+		option = {
+			name = alt.16.a
+			ai_chance = {
+				factor = 10
+			}
+		}
+	}
+	
+	country_event = {
+		id = alt.17
+		title = alt.17.title
+		desc = alt.17.desc
+		picture = GFX_report_event_generic_sign_treaty3
+		
+		fire_only_once = yes
+		is_triggered_only = yes
+
+		option = {
+			name = alt.17.a
+			ai_chance = {
+				factor = 10
+			}
+		}
+	}
+	
+	country_event = {
+		id = alt.18
+		title = alt.18.title
+		desc = alt.18.desc
+		picture = GFX_report_event_generic_sign_treaty3
+		
+		fire_only_once = yes
+		is_triggered_only = yes
+
+		option = {
+			name = alt.18.a
+			ai_chance = {
+				factor = 10
+			}
+		}
+	}
+	
+	country_event = {
+		id = alt.19
+		title = alt.19.title
+		desc = alt.19.desc
+		picture = GFX_report_event_generic_sign_treaty3
+		
+		fire_only_once = yes
+		is_triggered_only = yes
+
+		option = {
+			name = alt.19.a
+			ai_chance = {
+				factor = 10
+			}
+		}
+	}
+	

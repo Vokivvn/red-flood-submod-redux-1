@@ -1,0 +1,30 @@
+characters={
+	TUK_solomon_hertzfeld={
+		name="Solomon Hertzfeld"
+		portraits={
+			civilian={
+				large="gfx/leaders/TUK/Jew.png"
+			}
+		}
+		country_leader={
+			desc="POLITICS_SOLOMON_HERTZFELD_DESC"
+			ideology=social_liberalism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	TUK_zeki={
+		name="Zeki Velidi Togan"
+		portraits={
+			civilian={
+				large="gfx/leaders/TUK/Tatar.png"
+			}
+		}
+		country_leader={
+			ideology=revolutionary_nationalism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	
+}

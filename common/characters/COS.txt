@@ -1,0 +1,14 @@
+characters = {
+	COS_cleto_gonzález_víquez = {
+		name = "Cleto González Víquez"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/COS/Portrait_Cleto_González_Víquez.png"
+			}
+		}
+		country_leader = {
+			ideology = progressive_democracy
+			expire = "1965.1.1.1"
+		}
+	}
+}

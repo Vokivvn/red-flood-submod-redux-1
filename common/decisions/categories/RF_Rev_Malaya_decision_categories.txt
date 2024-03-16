@@ -1,0 +1,9 @@
+RML_national_liberation = {
+	allowed = {
+		tag = RML
+	}
+	visible = {
+		always = yes
+	}
+	priority = 100
+}

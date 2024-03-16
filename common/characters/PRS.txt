@@ -1,0 +1,453 @@
+characters = {
+	PRS_kurt_von_schleicher = {
+		name = "Kurt von Schleicher"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/PRS/Portrait_PRS_Kurt_Schleicher.png"
+			}
+		}
+		country_leader = {
+			ideology = oligarchy
+			expire = "1965.1.1.1"
+		}
+	}
+	PRS_erich_ludendorff = {
+		name = "Erich Ludendorff"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/PRS/Portrait_Erich_Ludendorff.png"
+			}
+		}
+		country_leader = {
+			ideology = military_dictatorship
+			expire = "1965.1.1.1"
+		}
+	}
+	PRS_thomas_mann = {
+		name = "Thomas Mann"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/PRS/Portrait_Thomas_Mann.png"
+			}
+		}
+		country_leader = {
+			ideology = national_liberalism
+			expire = "1965.1.1.1"
+		}
+	}
+	PRS_edgar_jung = {
+		name = "Edgar Jung"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/PRS/Portrait_Edgar_Jung.png"
+			}
+		}
+		country_leader = {
+			ideology = anocracy
+			expire = "1965.1.1.1"
+		}
+	}
+	PRS_paul_lensch = {
+		name = "Paul Lensch"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/PRS/Portrait_Paul_Lensch.png"
+			}
+		}
+		country_leader = {
+			ideology = social_nationalism
+			expire = "1965.1.1.1"
+		}
+	}
+	PRS_carl_friedrich_goerdeler = {
+		name = "Carl Friedrich Goerdeler"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/PRS/Portrait_Carl_Friedrich_Goerdeler.png"
+			}
+		}
+		country_leader = {
+			ideology = national_conservatism
+			expire = "1965.1.1.1"
+		}
+	}
+	PRS_mathilde_ludendorff = {
+		name = "Mathilde Ludendorff"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/PRS/Portrait_Mathilde_Ludendorff.png"
+			}
+		}
+		country_leader = {
+			ideology = theocracy
+			expire = "1965.1.1.1"
+		}
+	}
+	PRS_rudolf_hess = {
+		name = "Rudolf Heß"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/PRS/Portrait_Rudolf_Hess.png"
+			}
+		}
+		country_leader = {
+			ideology = reactionary_populism
+			expire = "1965.1.1.1"
+		}
+	}
+	PRS_wilhelm_kulz = {
+		name = "Wilhelm Külz"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/PRS/Portrait_PRS_Wilhelm_Kulz.png"
+			}
+		}
+		country_leader = {
+			ideology = social_liberalism
+			expire = "1965.1.1.1"
+		}
+	}
+	PRS_fritz_schulenburg_hog = {
+		name = PRS_fritz_schulenburg_hog
+		advisor = {
+			slot = head_of_government
+			idea_token = PRS_fritz_schulenburg_hog
+			allowed = {
+				original_tag = PRS
+			}
+			available = {
+				always = no
+			}
+			traits = {
+				hog_naive_optimist
+				head_of_government
+			}
+		}
+	}
+	PRS_heinrich_schnee = {
+		name = PRS_heinrich_schnee_hog
+		advisor = {
+			slot = head_of_government
+			idea_token = PRS_heinrich_schnee_hog
+			allowed = {
+				original_tag = PRS
+			}
+			available = {
+				always = no
+			}
+			traits = {
+				hog_silent_workhorse
+				head_of_government
+			}
+		}
+	}
+	PRS_rudiger_goltz = {
+		name = PRS_rudiger_goltz_hog
+		advisor = {
+			slot = head_of_government
+			idea_token = PRS_rudiger_goltz_hog
+			allowed = {
+				original_tag = PRS
+			}
+			available = {
+				always = no
+			}
+			traits = {
+				hog_flamboyant_tough_guy
+				head_of_government
+			}
+		}
+	}
+	PRS_erwin_planck = {
+		name = PRS_erwin_planck_hog
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/PRS/PRS_erwin_planck_hog.png"
+			}
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = PRS_erwin_planck_hog
+			allowed = {
+				original_tag = PRS
+			}
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_government_available
+					always = no
+				}
+			}
+			traits = {
+				hog_political_protege
+				head_of_government
+			}
+		}
+	}
+
+	PRS_ludwig_beck = {
+		name = "Ludwig Beck"
+		portraits = {
+			army = {
+				large = "gfx/leaders/PRS/PRS_Ludwig_Beck_general.png"
+			}
+		}
+		field_marshal = {
+			traits = { old_guard defensive_doctrine thorough_planner }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 2
+		}
+	}
+	PRS_franz_halder = {
+		name = "Franz Halder"
+		portraits = {
+			army = {
+				large = "gfx/leaders/PRS/PRS_Franz_Halder_general.png"
+			}
+		}
+		field_marshal = {
+			traits = { old_guard offensive_doctrine organisational_leader }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 2
+		}
+	}
+	PRS_gerd_von_rundstedt = {
+		name = "Gerd von Rundstedt"
+		portraits = {
+			army = {
+				large = "gfx/leaders/PRS/PRS_Gerd_Rundstedt_general.png"
+			}
+		}
+		field_marshal = {
+			traits = { old_guard infantry_officer thorough_planner expert_delegator }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 3
+		}
+	}
+	PRS_heinz_guderian = {
+		name = "Heinz Guderian"
+		portraits = {
+			army = {
+				large = "gfx/leaders/PRS/PRS_Heinz_Guderian_general.png"
+			}
+		}
+		corps_commander = {
+			traits = { media_personality armor_officer panzer_leader }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = PRS_heinz_guderian_hog
+			allowed = {
+				original_tag = PRS
+			}
+			available = {
+				always = no
+			}
+			traits = {
+				hog_reformist_soldier
+				head_of_government
+			}
+		}
+	}
+	PRS_konstantin_neurath = {
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/PRS/PRS_konstantin_neurath_for.png"
+			}
+		}
+		advisor = {
+			slot = foreign_minister
+			idea_token = PRS_konstantin_neurath_for
+			allowed = {
+				original_tag = PRS
+			}
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			traits = {
+				for_great_compromiser
+				foreign_minister
+			}
+		}
+	}
+
+	PRS_hjalmar_schacht = {
+		name = PRS_hjalmar_schacht_eco
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/PRS/PRS_hjalmar_schacht_eco.png"
+			}
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = PRS_hjalmar_schacht_eco
+			allowed = {
+				original_tag = PRS
+			}
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			traits = {
+				eco_bank_president
+				economy_minister
+			}
+		}
+	}
+	PRS_wilhelm_groener_sec = {
+		name = PRS_wilhelm_groener_sec
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/PRS/PRS_wilhelm_groener_sec.png"
+			}
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = PRS_wilhelm_groener_sec
+			allowed = {
+				original_tag = PRS
+			}
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			traits = {
+				sec_prince_of_terror
+				security_minister
+			}
+		}
+	}
+
+	PRS_walter_model = {
+		name = "Walter Model"
+		portraits = {
+			army = {
+				large = "gfx/leaders/PRS/PRS_Walter_Model_general.png"
+			}
+		}
+		corps_commander = {
+			traits = { career_officer inflexible_strategist infantry_leader }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	PRS_friedrich_paulus = {
+		name = "Friedrich Paulus"
+		portraits = {
+			army = {
+				large = "gfx/leaders/PRS/PRS_Friedrich_Paulus_general.png"
+			}
+		}
+		corps_commander = {
+			traits = { career_officer adaptable cavalry_leader }
+			skill = 2
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+		}
+	}
+	PRS_hans_jurgen_von_arnim = {
+		name = "Hans-Jürgen von Arnim"
+		portraits = {
+			army = {
+				large = "gfx/leaders/PRS/PRS_Hans_Arnim_general.png"
+			}
+		}
+		corps_commander = {
+			traits = { career_officer infantry_leader trickster }
+			skill = 2
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+		}
+	}
+	PRS_fedor_von_bock = {
+		name = "Fedor von Bock"
+		portraits = {
+			army = {
+				large = "gfx/leaders/PRS/PRS_Fedor_Bock_general.png"
+			}
+		}
+		corps_commander = {
+			traits = { career_officer politically_connected skilled_staffer adaptable }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 3
+		}
+	}
+	PRS_ferdinand_von_bredow = {
+		name = "Ferdinand von Bredow"
+		portraits = {
+			army = {
+				large = "gfx/leaders/PRS/PRS_Ferdinand_Bredow_general.png"
+			}
+		}
+		corps_commander = {
+			traits = { politically_connected trait_reckless }
+			skill = 1
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
+	PRS_paul_ludwig_ewald_von_kleist = {
+		name = "Paul Ludwig Ewald von Kleist"
+		portraits = {
+			army = {
+				large = "gfx/leaders/PRS/PRS_Ewald_Kleist_general.png"
+			}
+		}
+		corps_commander = {
+			traits = { old_guard brilliant_strategist armor_officer panzer_leader  }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 3
+		}
+	}
+	PRS_rudiger_von_der_goltz = {
+		name = "Rüdiger von der Goltz"
+		portraits = {
+			army = {
+				large = "gfx/leaders/PRS/Portrait_Rudiger_Goltz_general.png"
+			}
+		}
+		corps_commander = {
+			traits = { old_guard trait_reckless winter_specialist commando }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+		}
+	}
+}

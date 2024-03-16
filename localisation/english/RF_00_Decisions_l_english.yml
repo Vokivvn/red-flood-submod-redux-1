@@ -1,0 +1,209 @@
+﻿l_english: 
+
+#Category
+ideology_generic_category:0 "Political Actions"
+peacetime_decisions:0 "Peacetime Actions"
+wartime_decisions:0 "Wartime Actions"
+destroy_the_spanish_language:0 "Destroy the Spanish Language"
+
+#Anarchist
+anarchism_rally:0 "Arrange Communal Debates"
+anarchism_rally_desc:0 "Healthy argument on the tenets of leftism and the best way forward fosters understanding, uniting our communes under the umbrella of anarchy."
+
+anarchism_propaganda:0 "Democratise Institutions"
+anarchism_propaganda_desc:0 "A happy worker's voice matters. Ensuring every establishment is controlled by the community instead of some ex-capitalist or commissar is sure to satiate the people."
+
+anarchism_conference:0 "Local Militia Elections"
+anarchism_conference_desc:0 "Running elections for the militia gives it free publicity, and reminds us of the omnipresent need to defend revolution and insurrection."
+
+anarchism_appeal:0 "Participation of the People"
+anarchism_appeal_desc:0 "Long downtrodden, the people of this land are now free to engage with matters of community organisation big and small. We should encourage them to take the first step towards a better, freer future."
+#Vanguard Socialist
+vanguard_socialism_rally:0 "Central Committee Congress"
+vanguard_socialism_rally_desc:0 "Calling a meeting of our central committee allows us to check if socialism is being efficiently implemented across the country, and quell any potential social issues."
+
+vanguard_socialism_propaganda:0 "Open Party Membership"
+vanguard_socialism_propaganda_desc:0 "Everyone would like to be a member of the vanguard party. To bring as many into its fold as possible is to make a sure revolution and a happy populace."
+
+vanguard_socialism_conference:0 "Host Another Party Conference"
+vanguard_socialism_conference_desc:0 ""
+
+vanguard_socialism_appeal:0 "Prepare Revolutionary Parade"
+vanguard_socialism_appeal_desc:0 "Parades show us the power of our vanguard, and the necessity of war against capital and the blackest of reaction."
+
+#Popular Socialist
+popular_socialism_rally:0 "Recall Unpopular Representatives"
+popular_socialism_rally_desc:0 "The people's will isn't always perfect. If we gently nudge the most sloven and gluttonous of bureaucrats to retire, we can replace them with people the electorate likes more."
+
+popular_socialism_propaganda:0 "Integrate Trade Unions"
+popular_socialism_propaganda_desc:0 "Trade unions are the seeds of Marxism. When the socialist state walks in lockstep alongside its trade unions, it can never fall."
+
+popular_socialism_conference:0 "New Session of the Councils"
+popular_socialism_conference_desc:0 ""
+
+popular_socialism_appeal:0 "Concessions to Soldiers' Councils"
+popular_socialism_appeal_desc:0 "Listening to the humanitarian and materiel concerns of our soldiers' councils will keep our war efforts going smoothly."
+
+#Revisionist Socialist
+revisionist_socialism_rally:0 "Reconcile with Radicals"
+revisionist_socialism_rally_desc:0 "Unchecked radical elements will inevitably try to seize state power. Reconciliation is a necessary step in leftist unity."
+
+revisionist_socialism_propaganda:0 "Entice the Middle-Class" 
+revisionist_socialism_propaganda_desc:0 "Stuck between reaction and revolution, the middle class is neither wholly with capital or labour. Befriending this demographic will give us half the nation's power on our side."
+
+revisionist_socialism_conference:0 "Expand the Party Membership"
+revisionist_socialism_conference_desc:0 ""
+
+revisionist_socialism_appeal:0 "Protect Wartime Workers' Rights"
+revisionist_socialism_appeal_desc:0 "There is a fine line between rationing and deprivation, patriotic work and working oneself to death. The war effort cannot go on without a solid defence of worker's rights."
+
+#Social Democrat
+progressivism_rally:0 "Form Special Commissions"
+progressivism_rally_desc:0 "Social injustice must be evaluated before it can be fixed. We should set up commissions to analyse and understanding our issues, before enacting measures to deal with them."
+
+progressivism_propaganda:0 "Promises to Capital Owners"
+progressivism_propaganda_desc:0 "For some reason, capitalists always seem to have palpitations when dealing with social democrats, mistaking us for the communists! We must assure them that we won't seize the fruits of their hard labour."
+
+progressivism_conference:0 "Survey the Party Membership"
+progressivism_conference_desc:0 ""
+
+progressivism_appeal:0 "Work with Trade Unions"
+progressivism_appeal_desc:0 "Trade unions are the scales that balance labour and capital. Collaborating with them both sides is to win the war at home, everyone enjoying an equitable division of resources."
+
+#Liberal
+liberalism_rally:0 "Protect Essential Industries"
+liberalism_rally_desc:0 "When the economy works like a well-oiled machine, everyone is happy. We must ensure the continued functioning of all industries."
+
+liberalism_propaganda:0 "Capitalism for All!"
+liberalism_propaganda_desc:0 "Capitalism's benefits trickle down to all kinds of hard-workers, from the janitor to the CEO. Philanthropy and public works work. Capitalism works."
+
+liberalism_conference:0 "Seek Political Favours"
+liberalism_conference_desc:0 ""
+
+liberalism_appeal:0 "Stockpile Resources for War"
+liberalism_appeal_desc:0 "Loathe as we often are to admit it, war is good for the market. An increase in production now will leave us far stronger later."
+
+#Conservative
+conservatism_rally:0 "Cuts to Unnecessary Institutions"
+conservatism_rally_desc:0 "To be austere is to be severe, firm and able to survive all adversity. As austerity is the quality of being austere, it stands to reason that austerity is a perfect quality for our state."
+
+conservatism_propaganda:0 "Appeal to Tradition"
+conservatism_propaganda_desc:0 "There was a time when everyone followed tradition, and everyone was happy. Reminding the people that we can bring this time back is sure to appease them."
+
+conservatism_conference:0 "Ally Against Party Rivals"
+conservatism_conference_desc:0 ""
+
+conservatism_appeal:0 "Call upon Patriotic Duty"
+conservatism_appeal_desc:0 "War is never waged for petty reasons. Each citizen should be reminded that every war we commit to is a war for our souls, and a war for the spirit and sanctity of our nation."
+
+#Right Authoritarian
+right_authoritarianism_rally:0 "Purge Uncooperative Citizens"
+right_authoritarianism_rally_desc:0 "Civil society can only be maintained with absolute concord. We have no use to threats to this concord, so must they must be eliminated swiftly."
+
+right_authoritarianism_propaganda:0 "Service Guarantees Security"
+right_authoritarianism_propaganda_desc:0 "Citizens have a duty to help their community reach its pinnacle. A sustained campaign focusing on the importance of public service is crucial in elevating the disenfranchised, and reminding them of the firm hand of the fatherland."
+
+right_authoritarianism_conference:0 "Host a Prestigious Party"
+right_authoritarianism_conference_desc:0 ""
+
+right_authoritarianism_appeal:0 "Absolution for Service"
+right_authoritarianism_appeal_desc:0 "Our soldiers are to be above it all. Public demonstrations of our military capacity and the many boons of being in the military will convince civilians of this."
+
+#Despotic
+despotism_rally:0 "The Great Speech"
+despotism_rally_desc:0 "Words have power. The words of our glorious leader have the most power. A great speech in a common square is cathartic, unveiling and cleansing all social ills."
+
+despotism_propaganda:0 "Reward Loyal Subjects"
+despotism_propaganda_desc:0 "While loyalty to land and state is its own reward, adding material benefits tempts the less convinced."
+
+despotism_conference:0 "Sideline Rival Insiders"
+despotism_conference_desc:0 ""
+
+despotism_appeal:0 "Rally the Nation!"
+despotism_appeal_desc:0 "If the entire nation marches in unison, they will never forget the necessity and the joy of war."
+
+#Reactionary
+reactionism_rally:0 "Construct National Works"
+reactionism_rally_desc:0 "The first and greatest civilisations were formed when a mass of humanity was herded together in order to create amazing structures: the very first national monuments. We need art for us to thrive, and it reaches its pinnacle when done in service of your state."
+
+reactionism_propaganda:0 "Bully Rival Parties"
+reactionism_propaganda_desc:0 "Other parties are decadent: too attached to the decaying world, too obsessed with the superficial. They should be crushed under our heels, for we are the only sane option."
+
+reactionism_conference:0 "Gather the Sages"
+reactionism_conference_desc:0 ""
+
+reactionism_appeal:0 "Inspire Ideological Militarism"
+reactionism_appeal_desc:0 "We fight wars on two levels: one with our guns against our enemies, and one with our tongues against modernity. A corps unequipped to think about the conditions we leave in and acts disconnected from the valiance of a previous era is deficient. Someone who talks and theorises but never bothers to get up and do something in real life is deficient. We must raise ideal soldiers with deological perfection."
+
+#Accelerationism
+accelerationism_rally:0 "Confluence of Technologies"
+accelerationism_rally_desc:0 "As sciences advance, the study of man, time, space, matter and more bears fruit. Novel machinations, plans and designs that enrich our lives. Our progress stands testament to the just cause of our endeavours."
+
+accelerationism_propaganda:0 "Promise a Liberating Alternative"
+accelerationism_propaganda_desc:0 "Out with the stuffy, cramped, conservative and navel gazing ways of the Empires. The modern world is changing, it is inevitable that we change with it. This new way of life is one truly more envigorating."
+
+accelerationism_conference:0 "The Orthodox and Unorthodox"
+accelerationism_conference_desc:0 "While innovation is a noble pursuit, great vision an enviable trait and creativity a desirable ability, there are always limits to what can be expressed, acted upon, and institutionalised. We must maintain an orthodoxy and contain the unorthodoxy."
+
+accelerationism_appeal:0 "March in the Name of Progress"
+accelerationism_appeal_desc:0 "How better to demonstrate the justness of our path than a show of strength? How better to instil pride of place and dedication to our vision than the March of Progress? The great parade of all that we have wrought. Men and machine ready at arms to defend all we stand for."
+
+###
+
+generic_develop_civil_industry:0 "Develop Civilian Industries"
+generic_develop_civil_industry_desc:0 ""
+
+generic_appeal_to_neighbours:0 "Appeal to Neighbours"
+generic_appeal_to_neighbours_desc:0 ""
+
+generic_build_up_surplus:0 "Build up a Surplus"
+generic_build_up_surplus_desc:0 ""
+
+generic_neutral_posture:0 "Neutral Posturing"
+generic_neutral_posture_desc:0 ""
+
+generic_training_programmes_army:0 "Army Training Programmes"
+generic_training_programmes_army_desc:0 ""
+
+generic_training_programmes_air:0 "Air Training Programmes"
+generic_training_programmes_air_desc:0 ""
+
+generic_training_programmes_navy:0 "Navy Training Programmes"
+generic_training_programmes_navy_desc:0 ""
+
+###
+
+generic_emergency_production_measures:0 "Emergency Production Measures"
+generic_emergency_production_measures_desc:0 ""
+
+generic_expand_wartime_effort:0 "Expand Wartime Effort"
+generic_expand_wartime_effort_desc:0 ""
+
+generic_establish_war_room:0 "Establish a War Room"
+generic_establish_war_room_desc:0 ""
+
+generic_war_propaganda:0 "War Propaganda Programs"
+generic_war_propaganda_desc:0 ""
+
+###
+
+generic_army_training_decision_text:0 "£command_power §Y35§!"
+generic_army_training_decision_text_blocked:0 "£command_power §R35§!"
+
+generic_air_training_decision_text:0 "£command_power §Y35§!"
+generic_air_training_decision_text_blocked:0 "£command_power §R35§!"
+
+generic_navy_training_decision_text:0 "£command_power §Y35§!"
+generic_navy_training_decision_text_blocked:0 "£command_power §R35§!"
+
+generic_epm_text:0 "£command_power §Y50§!"
+generic_epm_text_blocked:0 "£command_power §R50§!"
+
+generic_ewe_text:0 "£command_power §Y50§!"
+generic_ewe_text_blocked:0 "£command_power §R50§!"
+
+generic_ewr_text:0 "£command_power §Y25§!"
+generic_ewr_text_blocked:0 "£command_power §R25§!"
+
+generic_war_propaganda_text:0 "£command_power §Y25§!"
+generic_war_propaganda_text_blocked:0 "£command_power §R25§!"

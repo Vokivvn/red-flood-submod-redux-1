@@ -1,0 +1,14 @@
+characters = {
+    DY1_lapp={
+		name="Josef Lapp"
+		portraits={
+			civilian={
+				large="gfx/leaders/DY1/Lapp.png"
+			}
+		}
+		country_leader={
+			ideology=anocracy
+			expire="1965.1.1.1"
+		}
+	}
+}

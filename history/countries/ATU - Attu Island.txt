@@ -1,0 +1,78 @@
+﻿capital = 713
+
+set_research_slots = 0
+
+set_politics = {
+	ruling_party = despotism
+	last_election = "1933.10.25"
+	election_frequency = 48
+	elections_allowed = no
+}
+	
+set_popularities = {
+	vanguard_socialism = 10
+	popular_socialism = 10
+	anarchism = 10
+	revisionist_socialism = 10
+	progressivism = 10
+	liberalism = 10
+	conservatism = 10
+	right_authoritarianism = 10
+	despotism = 0
+	reactionism = 10
+	accelerationism = 10
+}
+
+recruit_character = ATU_backwards_text
+recruit_character = ATU_ozmandiaz
+recruit_character = ATU_fireizzle
+recruit_character = ATU_oza
+recruit_character = ATU_holy_baba
+recruit_character = ATU_florian
+recruit_character = ATU_multi
+recruit_character = ATU_teutonic
+recruit_character = ATU_any
+recruit_character = ATU_red_flood_dev_team
+recruit_character = ATU_sparrow
+
+recruit_character = AUS_Sigmund_Freud
+recruit_character = SAN_Batko_Epstein
+recruit_character = SAN_Glorious_Leader_Epstein
+recruit_character = SAN_Comrade_Epstein
+recruit_character = SAN_Chairman_Epstein
+recruit_character = SAN_Senator_Epstein
+recruit_character = SAN_CEO_Jeffery_Epstein
+recruit_character = SAN_Father_Epstein
+recruit_character = SAN_El_Presidente_Epstein
+recruit_character = SAN_General_Epstein
+recruit_character = SAN_King_Jeffery_I
+recruit_character = SAN_Marquis_de_Epstein
+recruit_character = PRU_Ena
+recruit_character = XIA_Chairman_Meow
+recruit_character = FRA_Fernand_Léger
+recruit_character = IRE_William_Butler_Yeats
+recruit_character = SYR_Bashar_al_Assad
+recruit_character = SZC_Deng_Xiaoping
+recruit_character = CZE_Pat_Mat
+recruit_character = MAG_Big_Man_Tyrone
+recruit_character = JKR_Trixie
+recruit_character = CAL_Kanye_West
+recruit_character = FRA_Antonin_Artaud_troll
+recruit_character = FIU_Filippo_Tomaso_Marinetti_socdem
+recruit_character = FIU_Guido_Keller_revsoc
+recruit_character = FIU_Harukichi_Shimoi_desp
+recruit_character = FIU_Gabriele_D_Annunzio_rightauth
+recruit_character = FIU_Mario_Carli_vansoc
+recruit_character = FIU_Alceste_De_Ambris_popsoc
+recruit_character = FIU_Renzo_Novatore_anarch
+recruit_character = FIU_Giovanni_Papini_con
+recruit_character = FIU_The_Tyrantslayer
+recruit_character = FIU_Amogus_Augustus
+recruit_character = PCN_Hyena
+recruit_character = ITA_Biggus_Dickus
+recruit_character = FRA_L_Imposteur
+recruit_character = USA_Max
+recruit_character = USA_Nestor_Makhno
+recruit_character = GOE_Hermann_Goring
+recruit_character = USA_Andrew_Melon
+recruit_character = PUR_Sneed

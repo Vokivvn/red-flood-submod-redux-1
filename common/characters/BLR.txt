@@ -1,0 +1,1076 @@
+characters = {
+	BLR_stanislaw_bulak_balachowicz = {
+		name = "Stanisław Bułak-Bałachowicz"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/BLR/BLR_Stanislaw_Bulak_Balachowicz.png"
+			}
+		}
+		country_leader = {
+			ideology = military_dictatorship
+			expire = "1965.1.1.1"
+		}
+	}
+	BLR_panteleimon_ponomarenko = {
+		name = "Panteleimon Ponomarenko"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/BLR/Portrait_Paromchik.png"
+			}
+		}
+		country_leader = {
+			ideology = leninism
+			expire = "1965.1.1.1"
+		}
+	}
+	BLR_dmytro = {
+		name = "Dmytro Klyachkivsky"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/BLR/BLR_dmytro.png"
+			}
+		}
+		country_leader = {
+			ideology = military_dictatorship
+			expire = "1965.1.1.1"
+		}
+	}
+	BLR_boris_savinkov = {
+		name = "Boris Savinkov"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/BLR/Portrait_Savinkow.png"
+			}
+		}
+		country_leader = {
+			ideology = nationalist_socialism
+			expire = "1965.1.1.1"
+		}
+	}
+	BLR_vaclau_lastouski = {
+		name = "Vaclau Lastouski"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/BLR/Portrait_Lastouski.png"
+			}
+		}
+		country_leader = {
+			ideology = folk_socialism
+			expire = "1965.1.1.1"
+		}
+	}
+	BLR_piotr_kreceuski = {
+		name = "Piotr Krečeŭski"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/BLR/Portrait_Kreceuski.png"
+			}
+		}
+		country_leader = {
+			ideology = social_liberalism
+			expire = "1965.1.1.1"
+		}
+	}
+	BLR_vincent_hadleuski = {
+		name = "Vincent Hadleŭski"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/BLR/Portrait_Hadleuski.png"
+			}
+		}
+		country_leader = {
+			ideology = social_conservatism
+			expire = "1965.1.1.1"
+		}
+	}
+	BLR_michal_vistuska = {
+		name = "Michał Vituška"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/BLR/Portrait_Vituska.png"
+			}
+		}
+		country_leader = {
+			ideology = esoteric_reactionism
+			expire = "1965.1.1.1"
+		}
+	}
+	BLR_Yevhgenia_Bosch = {
+		name = "Yevhgenia Bosch"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/BLR/Portrait_Bosch.png"
+			}
+		}
+		country_leader = {
+			ideology = vperedism
+			expire = "1965.1.1.1"
+		}
+	}
+	BLR_Uladzimir_Kirylavic = {
+		name = "Uladzimir Kirylavič"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/BLR/Portrait_Uladzimir_I.png"
+			}
+		}
+		country_leader = {
+			expire = "2000.1.1"
+			ideology = military_dictatorship
+		}
+	}
+	BLR_Uladzimir_I = {
+		name = "Uladzimir I"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/BLR/Portrait_Uladzimir_I.png"
+			}
+		}
+	}
+	BLR_kanstancin_jezawitau = {
+		name = "Kanstancin Jezawitau"
+		portraits = {
+			army = {
+				large="gfx/leaders/BLR/Portrait_Kanstancin_Jezawitau.png"
+			}
+		}
+		corps_commander = {
+			traits = { infantry_officer }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 3
+		}
+	}
+	BLR_kyprian_kandratovich = {
+		name = "Kyprian Kandratovich"
+		portraits = {
+			army = {
+				large="gfx/leaders/BLR/Portrait_Kyprian_Kandratovich.png"
+				small = "GFX_idea_BLR_int_kiprijan_kandratovic_des"
+			}
+		}
+		corps_commander = {
+			traits = { old_guard }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 1
+			logistics_skill = 2
+		}
+		advisor = {
+			allowed = {
+				original_tag = BLR
+			}
+			cost = 150
+			slot = security_minister
+			available = {
+				NOT = {
+					has_completed_focus = BLR_one_way_or_another
+				}
+			}
+			idea_token = BLR_int_kiprijan_kandratovic_des
+			traits = {
+				security_minister
+				sec_back_stabber
+			}
+		}
+		advisor = {
+			allowed = {
+			    original_tag = BLR
+			}
+			cost = 150
+			slot = high_command
+			available = {
+	    
+			}
+			idea_token = BLR_staff_kipryjan_kandratavic 
+			traits = {
+			    cos_school_of_mass_combat
+			}
+		}
+	}
+	BLR_aliaksandr_prushinsky = {
+		name = "Aliaksandr Prushinsky"
+		portraits = {
+			army = {
+				large="gfx/leaders/BLR/Portrait_Prushinsky.png"
+				small = "GFX_idea_BLR_staff_aliaksandr_prushinsky"
+			}
+		}
+		corps_commander = {
+			traits = { brilliant_strategist }
+			skill = 3
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 3
+		}
+		advisor = {
+			allowed = {
+			    original_tag = BLR
+			}
+			cost = 150
+			slot = high_command
+			available = {
+	    
+			}
+			idea_token = BLR_staff_aliaksandr_prushinsky
+			traits = {
+			    cos_school_of_psychology
+			}
+		    }
+	}
+	BLR_hassan_kanapatsky = {
+		name = "Hassan Kanapatsky"
+		portraits = {
+			army = {
+				large="gfx/leaders/BLR/Portrait_Kanapatsky.png"
+				small = "gfx/interface/ministers/BLR/BLR_theo_hassan_kanapatsky.tga"
+			}
+		}
+		corps_commander = {
+			traits = { cavalry_officer }
+			skill = 4
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 1
+		}
+		advisor = {
+			allowed = {
+				original_tag = BLR
+			}
+			cost = 150
+			slot = theorist
+			available = {
+			}
+			idea_token = BLR_theo_hassan_kanapatsky 
+			traits = {
+				victory_through_airpower
+			}
+		}
+	}
+	BLR_frants_kushal = {
+		name = "Frants Kushal"
+		portraits = {
+			army = {
+				large="gfx/leaders/BLR/Portrait_Kushal.png"
+			}
+		}
+		corps_commander = {
+			traits = { infantry_officer }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
+	BLR_boris_permikin = {
+		name = "Boris Permikin"
+		portraits = {
+			army = {
+				large="gfx/leaders/BLR/Portrait_Permikin.png"
+				small = "GFX_idea_BLR_army_boris_permikin"
+			}
+		}
+		corps_commander = {
+			traits = { inflexible_strategist }
+			skill = 4
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 1
+		}
+		advisor = {
+			allowed = {
+			    original_tag = BLR
+			}
+			cost = 150
+			slot = army_chief
+			available = {
+	    
+			}
+			idea_token = BLR_army_boris_permikin
+			traits = {
+			    carm_elastic_defence_doctrine
+			}
+		}
+	}
+	BLR_mikalay_dzyamidau = {
+		name = "Mikalay Dzyamidau"
+		portraits = {
+			army = {
+				large="gfx/leaders/BLR/Portrait_Dzyamidau.png"
+				small = "gfx/interface/ministers/BLR/BLR_army_mikalay_dziamidau.tga"
+			}
+		}
+		corps_commander = {
+			traits = { politically_connected }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+		}
+		advisor = {
+			allowed = {
+			    original_tag = BLR
+			}
+			cost = 150
+			slot = army_chief
+			available = {
+	    
+			}
+			idea_token = BLR_army_mikalay_dziamidau
+			traits = {
+			    carm_guns_and_butter_doctrine
+			}
+		}
+	}
+	BLR_michail_yaroslavtsev = {
+		name = "Michail Yaroslavtsev"
+		portraits = {
+			army = {
+				large="gfx/leaders/BLR/Portrait_Yaroslavtsev.png"
+			}
+		}
+		corps_commander = {
+			traits = { war_hero }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	BLR_jan_sierada = {
+		name = "Jan Sierada"
+		portraits = {
+			army = {
+				small = "GFX_idea_BLR_hog_jan_sierada_des"
+			}
+		}
+
+		advisor = {
+			allowed = {
+				original_tag = BLR
+			}
+			cost = 150
+			slot = head_of_government
+			available = {
+				NOT = {
+					has_completed_focus = BLR_one_way_or_another
+				}
+			}
+			idea_token = BLR_hog_jan_sierada_des
+			traits = {
+				head_of_government
+				hog_flamboyant_tough_guy
+			}
+		}
+	}
+	BLR_anton_luckievich = {
+		name = "Anton Luckievich"
+		portraits = {
+			army = {
+				small = "GFX_idea_BLR_hog_anton_luckievich_scd"
+			}
+		}
+
+		advisor = {
+			allowed = {
+				original_tag = BLR
+			}
+			cost = 150
+			slot = head_of_government
+			available = {
+				has_completed_focus = BLR_bsh_coalition
+			}
+			idea_token = BLR_hog_anton_luckievich_scd
+			traits = {
+				head_of_government
+				hog_ambitious_union_boss
+			}
+		}
+	}
+	BLR_roman_skirmunt = {
+		name = "Roman Skirmunt"
+		portraits = {
+			army = {
+				small = "GFX_idea_BLR_hog_roman_skirmunt_con"
+			}
+		}
+
+		advisor = {
+			allowed = {
+				original_tag = BLR
+			}
+			cost = 150
+			slot = head_of_government
+			available = {
+				has_completed_focus = BLR_bnp_coalition
+			}
+			idea_token = BLR_hog_roman_skirmunt_con
+			traits = {
+				head_of_government
+				hog_backroom_backstabber
+			}
+		}
+	}
+	BLR_juliusz_rommel = {
+		name = "Juliusz Rómmel"
+		portraits = {
+			army = {
+				small = "GFX_idea_BLR_hog_juliusz_rommel_emp"
+			}
+		}
+
+		advisor = {
+			allowed = {
+				original_tag = BLR
+			}
+			cost = 150
+			slot = head_of_government
+			available = {
+				has_completed_focus = BLR_foreign_clique
+			}
+			idea_token = BLR_hog_juliusz_rommel_emp
+			traits = {
+				head_of_government
+				hog_old_general
+			}
+		}
+	}
+	BLR_leanard_zajac = {
+		name = "Leanard Zajac"
+		portraits = {
+			army = {
+				small = "GFX_idea_BLR_hog_leanard_zajac_revs"
+			}
+		}
+		
+		advisor = {
+			allowed = {
+				original_tag = BLR
+			}
+			cost = 150
+			slot = head_of_government
+			available = {
+				has_completed_focus = BLR_pale_horse
+			}
+			idea_token = BLR_hog_leanard_zajac_revs
+			traits = {
+				head_of_government
+				hog_ambitious_union_boss
+			}
+		}
+	}
+	BLR_janka_bylina = {
+		name = "Janka Bylina"
+		portraits = {
+			army = {
+				small = "GFX_idea_BLR_hog_janka_bylina_rea"
+			}
+		}
+		advisor = {
+			allowed = {
+				original_tag = BLR
+			}
+			cost = 150
+			slot = head_of_government
+			available = {
+				has_completed_focus = BLR_actions_of_vituska
+			}
+			idea_token = BLR_hog_janka_bylina_rea
+			traits = {
+				head_of_government
+				hog_political_protege
+			}
+		}
+	}
+	BLR_szymon_rak_michajlowski = {
+		name = "Szymon Rak-Michajlowski"
+		portraits = {
+			army = {
+				small = "GFX_idea_BLR_eco_szymon_rak_michajlowski_des"
+			}
+		}
+		
+		advisor = {
+			allowed = {
+				original_tag = BLR
+			}
+			cost = 150
+			slot = economy_minister
+			available = {
+				NOT = {
+					has_completed_focus = BLR_one_way_or_another
+				}
+			}
+			idea_token = BLR_eco_szymon_rak_michajlowski_des
+			traits = {
+				economy_minister
+				eco_corrupt_kleptocrat
+			}
+		}
+	}
+	BLR_usevalad_ignatouski = {
+		name = "Usevalad Ignatouski"
+		portraits = {
+			army = {
+				small = "GFX_idea_BLR_eco_usevalad_ignatouski_scd"
+			}
+		}
+		advisor = {
+			allowed = {
+				original_tag = BLR
+			}
+			cost = 150
+			slot = economy_minister
+			available = {
+				has_completed_focus = BLR_bsh_coalition
+			}
+			idea_token = BLR_eco_usevalad_ignatouski_scd
+			traits = {
+				economy_minister
+				eco_mixed_economy
+			}
+		}
+	}
+	BLR_arkadz_smolicz = {
+		name = "Arkadz Smolicz"
+		portraits = {
+			army = {
+				small = "GFX_idea_BLR_eco_arkadz_smolicz_con"
+			}
+		}
+		advisor = {
+			allowed = {
+				original_tag = BLR
+			}
+			cost = 150
+			slot = economy_minister
+			available = {
+				has_completed_focus = BLR_bnp_coalition
+			}
+			idea_token = BLR_eco_arkadz_smolicz_con
+			traits = {
+				economy_minister
+			}
+		}
+	}
+	BLR_brunon_kostecki = {
+		name = "Brunon Kostecki"
+		portraits = {
+			army = {
+				small = "GFX_idea_BLR_eco_brunon_kostecki_emp"
+			}
+		}
+		advisor = {
+			allowed = {
+				original_tag = BLR
+			}
+			cost = 150
+			slot = economy_minister
+			available = {
+				has_completed_focus = BLR_foreign_clique
+			}
+			idea_token = BLR_eco_brunon_kostecki_emp
+			traits = {
+				economy_minister
+				eco_industrialiser
+			}
+		}
+	}
+	BLR_sciapan_niekraszewicz = {
+		name = "Sciapan Niekraszewicz"
+		portraits = {
+			army = {
+				small = "GFX_idea_BLR_eco_sciapan_niekraszewicz_revs"
+			}
+		}
+		advisor = {
+			allowed = {
+				original_tag = BLR
+			}
+			cost = 150
+			slot = economy_minister
+			available = {
+				has_completed_focus = BLR_pale_horse
+			}
+			idea_token = BLR_eco_sciapan_niekraszewicz_revs
+			traits = {
+				economy_minister
+				eco_administrative_genius
+			}
+		}
+	}
+	BLR_kazimier_svajak = {
+		name = "Kazimier Svajak"
+		portraits = {
+			army = {
+				small = "GFX_idea_BLR_eco_kazimier_svajak_rea"
+			}
+		}
+		advisor = {
+			allowed = {
+				original_tag = BLR
+			}
+			cost = 150
+			slot = economy_minister
+			available = {
+				has_completed_focus = BLR_actions_of_vituska
+			}
+			idea_token = BLR_eco_kazimier_svajak_rea
+			traits = {
+				economy_minister
+				eco_steel_magnate
+			}
+		}
+	}
+	BLR_jazep_liosik = {
+		name = "Jazep Liosik"
+		portraits = {
+			army = {
+				small = "GFX_idea_BLR_for_jazep_liosik_des"
+			}
+		}
+		advisor = {
+			allowed = {
+				original_tag = BLR
+			}
+			cost = 150
+			slot = foreign_minister
+			available = {
+				NOT = {
+					has_completed_focus = BLR_one_way_or_another
+				}
+			}
+			idea_token = BLR_for_jazep_liosik_des
+			traits = {
+				foreign_minister
+				for_biased_intellectual
+			}
+		}
+	}
+	BLR_ivan_kraskouski = {
+		name = "Ivan Kraskouski"
+		portraits = {
+			army = {
+				small = "GFX_idea_BLR_for_ivan_kraskouski_scd"
+			}
+		}
+		advisor = {
+			allowed = {
+				original_tag = BLR
+			}
+			cost = 150
+			slot = foreign_minister
+			available = {
+				has_completed_focus = BLR_bsh_coalition
+			}
+			idea_token = BLR_for_ivan_kraskouski_scd
+			traits = {
+				foreign_minister
+				for_ideological_crusader
+			}
+		}
+	}
+	BLR_paval_aliaksiuk = {
+		name = "Paval Aliaksiuk"
+		portraits = {
+			army = {
+				small = "GFX_idea_BLR_for_paval_aliaksiuk_con"
+			}
+		}
+		advisor = {
+			allowed = {
+				original_tag = BLR
+			}
+			cost = 150
+			slot = foreign_minister
+			available = {
+				has_completed_focus = BLR_bnp_coalition
+			}
+			idea_token = BLR_for_paval_aliaksiuk_con
+			traits = {
+				foreign_minister
+				for_ideological_crusader
+			}
+		}
+	}
+	BLR_aliaksandr_dalgarukau = {
+		name = "Aliaksandr Dalgarukau"
+		portraits = {
+			army = {
+				small = "GFX_idea_BLR_for_aliaksandr_dalgarukau_emp"
+			}
+		}
+		advisor = {
+			allowed = {
+				original_tag = BLR
+			}
+			cost = 150
+			slot = foreign_minister
+			available = {
+				has_completed_focus = BLR_foreign_clique
+			}
+			idea_token = BLR_for_aliaksandr_dalgarukau_emp
+			traits = {
+				foreign_minister
+				for_the_cloak_n_dagger_schemer
+			}
+		}
+	}
+	BLR_tomasz_hryb = {
+		name = "Tomasz Hryb"
+		portraits = {
+			army = {
+				small = "GFX_idea_BLR_for_tomasz_hryb_revs"
+			}
+		}
+		advisor = {
+			allowed = {
+				original_tag = BLR
+			}
+			cost = 150
+			slot = foreign_minister
+			available = {
+				has_completed_focus = BLR_pale_horse
+			}
+			idea_token = BLR_for_tomasz_hryb_revs
+			traits = {
+				foreign_minister
+				for_general_staffer
+			}
+		}
+	}
+	BLR_mikola_abramcyk = {
+		name = "Mikola Abramcyk"
+		portraits = {
+			army = {
+				small = "GFX_idea_BLR_for_mikola_abramcyk_rea"
+			}
+		}
+		advisor = {
+			allowed = {
+				original_tag = BLR
+			}
+			cost = 150
+			slot = foreign_minister
+			available = {
+				has_completed_focus = BLR_actions_of_vituska
+			}
+			idea_token = BLR_for_mikola_abramcyk_rea
+			traits = {
+				foreign_minister
+				for_great_compromiser
+			}
+		}
+	}
+	BLR_kliment_dyadorau = {
+		name = "Kliment Dyadorau"
+		portraits = {
+			army = {
+				small = "GFX_idea_BLR_int_kliment_dyadorau_emp"
+			}
+		}
+		advisor = {
+			allowed = {
+				original_tag = BLR
+			}
+			cost = 150
+			slot = security_minister
+			available = {
+				has_completed_focus = BLR_foreign_clique
+			}
+			idea_token = BLR_int_kliment_dyadorau_emp
+			traits = {
+				security_minister
+				sec_efficient_sociopath
+			}
+		}
+	}
+	BLR_fabian_szantyr = {
+		name = "Fabian Szantyr"
+		portraits = {
+			army = {
+				small = "GFX_idea_BLR_int_fabian_szantyr_revs_scd"
+			}
+		}
+		advisor = {
+			allowed = {
+				original_tag = BLR
+			}
+			cost = 150
+			slot = security_minister
+			available = {
+				OR = {
+					has_completed_focus = BLR_pale_horse
+					has_completed_focus = BLR_bsh_coalition
+				}
+			}
+			idea_token = BLR_int_fabian_szantyr_revs_scd
+			traits = {
+				security_minister
+				sec_secret_police_chief
+			}
+		}
+	}
+	BLR_ivan_luckievich = {
+		name = "Ivan Luckievich"
+		portraits = {
+			army = {
+				small = "GFX_idea_BLR_int_ivan_luckievich_con_rea"
+			}
+		}
+		advisor = {
+			allowed = {
+			    original_tag = BLR
+			}
+			cost = 150
+			slot = security_minister
+			available = {
+				OR = {
+					has_completed_focus = BLR_actions_of_vituska
+					has_completed_focus = BLR_bnp_coalition
+				}
+				
+			}
+			idea_token = BLR_int_ivan_luckievich_con_rea
+			traits = {
+			    security_minister
+			}
+		    }
+	}
+	BLR_jakub_kolas = {
+		name = "Jakub Kolas"
+		portraits = {
+			army = {
+				small = "GFX_idea_BLR_intel_jakub_kolas_scd"
+			}
+		}
+		advisor = {
+			allowed = {
+			    original_tag = BLR
+			}
+			cost = 150
+			slot = head_of_intel
+			available = {
+				OR = {
+					has_government = progressivism
+					has_government = liberalism
+				}
+			}
+			idea_token = BLR_intel_jakub_kolas_scd 
+			traits = {
+			    head_of_intel
+			    int_technical_specialist
+			}
+		    }
+	}
+	BLR_jazep_mamonka = {
+		name = "Jazep Mamonka"
+		portraits = {
+			army = {
+				small = "GFX_idea_BLR_intel_jazep_mamonka_con_des"
+			}
+		}
+		advisor = {
+			allowed = {
+			    original_tag = BLR
+			}
+			cost = 150
+			slot = head_of_intel
+			available = {
+				OR = {
+					has_government = despotism
+					has_government = conservatism
+				}
+			}
+			idea_token = BLR_intel_jazep_mamonka_con_des 
+			traits = {
+			    head_of_intel
+			    int_dismal_enigma
+			}
+		}
+	}
+	BLR_eugeniusz_tinz = {
+		name = "Eugeniusz Tinz"
+		portraits = {
+			army = {
+				small = "GFX_idea_BLR_intel_eugeniusz_tinz_emp"
+			}
+			civilian = {
+				large = "gfx/leaders/BLR/Portrait_Eugeniusz_Tinz.png"
+			}
+		}
+		advisor = {
+			allowed = {
+			    original_tag = BLR
+			}
+			cost = 150
+			slot = head_of_intel
+			available = {
+				has_completed_focus = BLR_foreign_clique
+			}
+			idea_token = BLR_intel_eugeniusz_tinz_emp 
+			traits = {
+			    head_of_intel
+			    int_industrial_specialist
+			}
+		}
+	}
+	BLR_paluta_badunova = {
+		name = "Paluta Badunova"
+		portraits = {
+			army = {
+				small = "GFX_idea_BLR_intel_paluta_badunova_revs"
+			}
+		}
+		advisor = {
+			allowed = {
+			    original_tag = BLR
+			}
+			cost = 150
+			slot = head_of_intel
+			available = {
+				has_completed_focus = BLR_pale_horse
+			}
+			idea_token = BLR_intel_paluta_badunova_revs 
+			traits = {
+			    head_of_intel
+			    int_technical_specialist
+			}
+		}
+	}
+	BLR_branislau_kaminski = {
+		name = "Branislau Kaminski"
+		portraits = {
+			army = {
+				small = "GFX_idea_BLR_intel_branislau_kaminski_rea"
+			}
+		}
+		advisor = {
+			allowed = {
+			    original_tag = BLR
+			}
+			cost = 150
+			slot = head_of_intel
+			available = {
+				has_completed_focus = BLR_actions_of_vituska
+			}
+			idea_token = BLR_intel_branislau_kaminski_rea 
+			traits = {
+			    head_of_intel
+			    int_logistics_specialist
+			}
+		}
+	}
+	BLR_naval_research_institute_of_minsk = {
+		name = "Naval Research Institute of Minsk"
+		portraits = {
+			army = {
+				small = "GFX_idea_BLR_naval_research_institute_of_minsk"
+			}
+		}
+		advisor = {
+			allowed = {
+				original_tag = BLR
+			}
+			cost = 150
+			slot = navy_chief
+			available = {
+				
+			}
+			idea_token = BLR_naval_research_institute_of_minsk 
+			traits = {
+				cnav_indirect_approach_doctrine
+			}
+		}
+	}
+	BLR_river_patrol_central_command = {
+		name = "River Patrol Central Command"
+		portraits = {
+			army = {
+				small = "GFX_idea_BLR_river_patrol_central_command"
+			}
+		}
+		advisor = {
+			allowed = {
+				original_tag = BLR
+			}
+			cost = 150
+			slot = navy_chief
+			available = {
+				
+			}
+			idea_token = BLR_river_patrol_central_command 
+			traits = {
+				cnav_base_control_doctrine
+			}
+		}
+	}
+	BLR_benjamin_adamowicz = {
+		name = "Benjamin Adamowicz"
+		portraits = {
+			army = {
+				small = "GFX_idea_BLR_air_benjamin_adamowicz" 
+			}
+		}
+		advisor = {
+			allowed = {
+				original_tag = BLR
+			}
+			cost = 150
+			slot = air_chief
+			available = {
+				
+			}
+			idea_token = BLR_air_benjamin_adamowicz
+			traits = {
+				cair_air_superiority_doctrine
+			}
+		}
+	}
+	BLR_donat_makijonek = {
+		name = "Donat Makijonek"
+		portraits = {
+			army = {
+				small = "GFX_idea_BLR_air_donat_makijonek"
+			}
+		}
+		advisor = {
+			allowed = {
+				original_tag = BLR
+			}
+			cost = 150
+			slot = air_chief
+			available = {
+				
+			}
+			idea_token = BLR_air_donat_makijonek 
+			traits = {
+				cair_battlefield_support_doctrine
+			}
+		}
+		advisor = {
+			allowed = {
+				original_tag = BLR
+			}
+			cost = 150
+			slot = theorist
+			available = {
+				
+			}
+			idea_token = BLR_theo_donat_makijonek
+			traits = {
+				superior_firepower_expert
+			}
+		}
+	}
+
+}

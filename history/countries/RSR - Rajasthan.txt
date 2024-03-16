@@ -1,0 +1,87 @@
+﻿capital = 429
+set_research_slots = 2
+set_convoys = 75
+set_stability = 0.5
+country_event = { id = india.15 days = 121 }
+oob = "RSR"
+
+add_ideas = {
+	RAJ_shared_economy
+	RSR_popular_mobilization
+	RSR_industrialization_program
+	RSR_princely_resistence
+	limited_exports
+	low_economic_mobilisation
+}
+
+set_technology = {
+	infantry_weapons = 1
+	tech_support = 1
+	tech_recon = 1
+	tech_engineers = 1
+	gw_artillery = 1
+	basic_train = 1
+	tech_trucks =1
+	motorised_infantry = 1
+}
+
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+	set_technology = {
+		iw_small_airframe = 1
+		aa_lmg = 1
+		aa_cannon_1 = 1
+		early_bombs = 1
+		engines_1 = 1
+	}
+}
+if = {
+	limit = { NOT = { has_dlc = "By Blood Alone" } }
+	set_technology = {
+		early_fighter = 1
+		CAS1 = 1
+	}
+}
+
+set_politics = {
+	ruling_party = popular_socialism
+	last_election = "1933.10.25"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	vanguard_socialism = 20
+	popular_socialism = 40
+	anarchism = 10
+	revisionist_socialism = 10
+	progressivism = 5
+	liberalism = 5
+	conservatism = 3
+	right_authoritarianism = 2
+	despotism = 3
+	reactionism = 2
+	accelerationism = 0
+}
+
+recruit_character = RSR_shripad_dange
+recruit_character = RSR_M_N_Roy
+recruit_character = RSR_mandayam_parthasarathi_tirumal_acharya
+recruit_character = RSR_nathuram_godse
+recruit_character = RSR_Bhagat_Singh
+recruit_character = RSR_Sachindranath_Sanyal
+recruit_character = RSR_Narayan_Malhar_Joshi
+recruit_character = RSR_Surya_Sen
+recruit_character = RSR_Gangadhar_Adhikari
+recruit_character = RSR_Puran_Chand_Joshi
+recruit_character = RSR_Muzaffar_Ahmad
+recruit_character = RSR_Bankim_Mukherjee
+recruit_character = RSR_Somnath_Lahriri
+recruit_character = RSR_Abdur_Rezzak_Khan
+recruit_character = RSR_Abdul_Halim
+recruit_character = RSR_Bhupendranath_Datta
+recruit_character = RSR_Sohan_Singh_Josh
+recruit_character = RSR_Shantaram_Savlaram_Mirajkar
+recruit_character = RSR_Sachchidanand_Vishnu_Ghate
+recruit_character = RSR_Satya_Bhakta
+recruit_character = RSR_Virendranath_Chattopadhyaya
+

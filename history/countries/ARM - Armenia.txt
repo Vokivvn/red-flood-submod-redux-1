@@ -1,0 +1,122 @@
+﻿capital = 230
+set_research_slots = 3 
+set_convoys = 25
+set_stability = 0.5
+
+oob = "ARM"
+if = { limit = { has_dlc = "By Blood Alone" } set_air_oob = "ARM_air" }
+if = { limit = {  NOT = { has_dlc = "By Blood Alone" } }  set_air_oob = "ARM_air_legacy" }
+
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+	set_technology = {
+		iw_small_airframe = 1
+		aa_lmg = 1
+		aa_cannon_1 = 1
+		early_bombs = 1
+		engines_1 = 1
+	}
+}
+if = {
+	limit = { NOT = { has_dlc = "By Blood Alone" } }
+	set_technology = {
+		early_fighter = 1
+		CAS1 = 1
+	}
+}
+
+
+if = {
+	limit = { NOT = { has_dlc = "No Step Back" } }
+	set_technology = {
+		gwtank = 1
+		basic_light_tank = 1 
+	}
+}
+if = {
+	limit = { has_dlc = "No Step Back" }
+	set_technology = {
+		gwtank_chassis = 1
+		basic_light_tank_chassis = 1 
+	}
+}
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	set_technology = {
+		early_submarine = 1
+		basic_submarine = 1
+		early_destroyer = 1
+		early_light_cruiser = 1
+		early_heavy_cruiser = 1
+		early_battleship = 1
+		early_battlecruiser = 1
+		transport = 1
+	}
+}
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	set_technology = {
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		early_ship_hull_light = 1
+		early_ship_hull_cruiser = 1
+		early_ship_hull_heavy = 1
+		mtg_transport = 1
+		basic_battery = 1
+		basic_torpedo = 1
+	}
+}
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1		
+	tech_recon = 1
+	tech_engineers = 1
+	tech_trucks =1
+	motorised_infantry = 1
+	fuel_silos = 1
+}
+
+set_politics = {
+	ruling_party = revisionist_socialism
+	last_election = "1933.10.25"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	vanguard_socialism = 4
+	popular_socialism = 12
+	anarchism = 5
+	revisionist_socialism = 45
+	progressivism = 15
+	liberalism = 6
+	conservatism = 3
+	right_authoritarianism = 2
+	despotism = 0
+	reactionism = 8
+	accelerationism = 0
+}
+
+recruit_character = ARM_aram_manukian
+recruit_character = ARM_garegin_nzhdeh
+recruit_character = ARM_mikayel_varandian
+recruit_character = ARM_andranik_ozanyan
+recruit_character = ARM_daniel_bek_pirowmyan
+recruit_character = ARM_drastmat_kanayan
+recruit_character = ARM_movses_silikyan
+recruit_character = ARM_tvomas_nazarbekyan
+recruit_character = ARM_avetis_nazarbekian
+recruit_character = ARM_hamo_ohanjanyan
+recruit_character = ARM_alexandr_khatisian
+recruit_character = ARM_sarkis_dkhrouni
+recruit_character = ARM_vahan_papazin
+recruit_character = ARM_sirakn_tigranyan
+recruit_character = ARM_harutiun_jangulian
+recruit_character = ARM_hayk_asatryan
+recruit_character = ARM_abraham_gyulkhandayan
+recruit_character = ARM_mihram_damadian
+recruit_character = ARM_drastamat_kanayan
+recruit_character = ARM_arsham_khondkaryan
+recruit_character = ARM_stepan_sapah_guliann
+recruit_character = ARM_khachadur_amirin

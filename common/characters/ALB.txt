@@ -1,0 +1,90 @@
+characters = {
+	ALB_enver_hoxha = {
+		name = "Enver Hoxha"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/ALB/Portrait_ALB_Enver_Hoxha.png"
+			}
+		}
+		country_leader = {
+			ideology = religious_fundamentalism #le trolltaud
+			expire = "1965.1.1.1"
+			traits = {
+				#popular_figurehead
+			}
+		}
+	}
+	ALB_fuad = {
+		name = "Skënderbeu III"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ALB/Portrait_ALB_Skanderbeg_III.png"
+			}
+		}
+		country_leader = {
+			ideology = absolute_monarchy
+			expire = "1965.1.1.1"
+			traits = { }
+		}
+	}
+	ALB_roland_napoleon = {
+		name = "Skënderbeu IV"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ALB/Portrait_ALB_Skanderbeg_II.png"
+			}
+		}
+		country_leader = {
+			ideology = liberal_conservatism
+			expire = "1965.1.1.1"
+			traits = { }
+		}
+	}
+	ALB_franz_nopcsa = {
+		name = "Skënderbeu IV"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ALB/Portrait_ALB_Skanderbeg_IV.png"
+			}
+		}
+	}
+	ALB_cenu_bej_kryeziu = {
+		name = "Cenu bej Kryeziu"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ALB/Portrait_ALB_Cenu_bej_Kreyziu.png"
+			}
+		}
+		country_leader = {
+			ideology = oligarchy 
+			expire = "1965.1.1.1"
+			traits = { }
+		}
+	}
+	ALB_midhat_frasheri = {
+		name = "Mid'hat Frashëri"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ALB/Portrait_ALB_Midhat_Frasheri.png"
+			}
+		}
+		country_leader = {
+			ideology = nationalist_socialism
+			expire = "1965.1.1.1"
+			traits = { }
+		}
+	}
+	ALB_fan = {
+		name = "Fan Noli"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ALB/Fan.png"
+			}
+		}
+		country_leader = {
+			ideology = liberal_socialism
+			expire = "1965.1.1.1"
+			traits = { }
+		}
+	}
+}

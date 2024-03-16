@@ -1,0 +1,17 @@
+RF_april_fools_2021 = {
+	name = "RULE_APRIL_FOOLS_2021_CONTENT"
+	group = "RULE_GROUP_RF_APRIL_FOOLS"
+
+	option = {
+		name = no
+		text = "RULE_DISABLE_AF"
+		desc = "RULE_DISABLE_AF_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = yes
+		text = "RULE_ENABLE_AF"
+		desc = "RULE_ENABLE_AF_DESC"
+		allow_achievements = yes
+	}
+}

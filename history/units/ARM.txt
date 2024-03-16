@@ -1,0 +1,126 @@
+﻿division_template = {
+	name = "Hetevakayin Divizia"			# Infantry Division
+
+	division_names_group = ARM_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+}
+division_template = {
+	name = "Lerrnagnats’neri Bazhin"				# Mountain Division
+
+	division_names_group = ARM_MTN_01
+
+	regiments = {
+		mountaineers = { x = 0 y = 0 }
+		mountaineers = { x = 0 y = 1 }
+		mountaineers = { x = 0 y = 2 }	
+		mountaineers = { x = 1 y = 0 }
+		mountaineers = { x = 1 y = 1 }
+		mountaineers = { x = 1 y = 2 }
+	}
+}
+division_template = {
+	name = "Hetselazorayin Divizia"
+
+	division_names_group = ARM_CAV_01
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+	}
+}
+units = {
+	division = {
+		name = "1st Hetevakayin Divizia"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 12320
+		division_template = "Hetevakayin Divizia"	
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+
+	}
+	division = {
+		name = "2nd Hetevakayin Divizia"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 12441
+		division_template = "Hetevakayin Divizia"	
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+
+	}
+	division = {
+		name = "3rd Hetevakayin Divizia"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 11853
+		division_template = "Hetevakayin Divizia"	
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+
+	}
+	division = {
+		name = "4th Hetevakayin Divizia"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 11853
+		division_template = "Hetevakayin Divizia"	
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+
+	}
+	division = {
+		name = "1st Hetselazor"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 6935
+		division_template = "Hetselazorayin Divizia"	
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.9
+
+	}
+	division = {
+		name = "2nd Hetselazor"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 11853
+		division_template = "Hetselazorayin Divizia"	
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.9
+
+	}
+}
+
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "ARM"
+		}
+		requested_factories = 2
+		progress = 0.9
+		efficiency = 90
+	}
+}

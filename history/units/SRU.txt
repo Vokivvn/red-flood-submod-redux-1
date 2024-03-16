@@ -1,0 +1,403 @@
+﻿##### Division Templates #####
+division_template = {
+	name = "Strelkovaya Diviziya"			# Rifle Division
+	division_names_group = RUS_INF_01
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 3 y = 0 }
+		infantry = { x = 3 y = 1 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }		# Recon bn had 16 L tanks, 10 ACs, 1x mot inf co
+		artillery = { x = 0 y = 1 }	# Heavy Arty Regiment had 1x 152mm bn + 2x 122mm bn
+	}
+}
+
+division_template = {
+	name = "Pekhotnaya Diviziya"			# Infantry Division
+	division_names_group = RUS_INF_01
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+		infantry = { x = 3 y = 0 }
+		infantry = { x = 3 y = 1 }
+		infantry = { x = 3 y = 2 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }		# Recon bn had 16 L tanks, 10 ACs, 1x mot inf co
+		artillery = { x = 0 y = 1 }	# Heavy Arty Regiment had 1x 152mm bn + 2x 122mm bn
+	}
+}
+
+division_template = {
+	name = "Kavaleriyskaya Diviziya"	# Cavarly Division
+	division_names_group = RUS_CAV_01
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 2 y = 0 }
+		cavalry = { x = 2 y = 1 }
+		cavalry = { x = 2 y = 2 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 }	# Heavy Arty Regiment had 1x 152mm bn + 2x 122mm bn
+	}
+}
+
+division_template = {
+	name = "Avtobronetankovaya Diviziya"			# Tank Division
+	division_names_group = RUS_ARM_01
+	regiments = {
+		light_armor = { x = 0 y = 0 }
+		light_armor = { x = 0 y = 1 }
+		light_armor = { x = 0 y = 2 }
+		motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+		motorized = { x = 1 y = 2 }
+	}
+}
+division_template = {
+	name = "Mekhanizirovannaya Diviziya"			# Motorized Division
+	division_names_group = RUS_MOT_01
+	regiments = {
+		motorized = { x = 0 y = 0 }
+		motorized = { x = 0 y = 1 }
+		motorized = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+	}
+}
+##### OOB #####
+units = {
+	division = {
+		name = "Drozdovskaya Dobrovolcheskaya Diviziya"
+		location = 6704
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.8
+	}
+	division = {
+		name = "Kellerovskaya Dobrovolcheskaya Diviziya"
+		location = 418
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.8
+	}
+	division = {
+		name = "8ya Pekhotnaya Diviziya"#(HQ-Chernigov)
+		location = 3568
+		division_template = "Pekhotnaya Diviziya"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "9ya Pekhotnaya Diviziya"#(HQ-Poltava)
+		location = 511
+		division_template = "Pekhotnaya Diviziya"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "15ya Pekhotnaya Diviziya"#(HQ-Lugansk)
+		location = 9461
+		division_template = "Pekhotnaya Diviziya"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "31ya Pekhotnaya Diviziya"#(HQ-Kharkov)
+		location = 418
+		division_template = "Pekhotnaya Diviziya"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "33ya Pekhotnaya Diviziya"#(HQ-Chernigov)
+		location = 3568
+		division_template = "Pekhotnaya Diviziya"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "36ya Pekhotnaya Diviziya"#(HQ-Oryol)
+		location = 9355
+		division_template = "Pekhotnaya Diviziya"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "7ya Pekhotnaya Diviziya"#(HQ-Nizhny Novgorod)
+		location = 413
+		division_template = "Pekhotnaya Diviziya"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "34ya Pekhotnaya Diviziya"#(HQ-Alexandrovsk)
+		location = 11405
+		division_template = "Pekhotnaya Diviziya"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "40ya Pekhotnaya Diviziya"#(HQ-Kerch)
+		location = 9680
+		division_template = "Pekhotnaya Diviziya"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "42ya Pekhotnaya Diviziya"#(HQ-Chernigov)
+		location = 3568
+		division_template = "Pekhotnaya Diviziya"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "44ya Pekhotnaya Diviziya"#(HQ-Kursk)
+		location = 3580
+		division_template = "Pekhotnaya Diviziya"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "53ya Pekhotnaya Diviziya"#(HQ-Sevastopol)
+		location = 3686
+		division_template = "Pekhotnaya Diviziya"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "3ya Strelkovaya Diviziya"#(HQ-Poltava)
+		location = 511
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "4ya Strelkovaya Diviziya"#(HQ-Alexandrovsk)
+		location = 11405
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "7ya Kavaleriyskaya Diviziya"#(HQ-Sumy)
+		location = 3520
+		division_template = "Kavaleriyskaya Diviziya"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "8ya Kavaleriyskaya Diviziya"#(HQ-Melitopol)
+		location = 11700
+		division_template = "Kavaleriyskaya Diviziya"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "9ya Kavaleriyskaya Diviziya"#(HQ-Chernigov)
+		location = 3568
+		division_template = "Kavaleriyskaya Diviziya"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "10ya Kavaleriyskaya Diviziya"#(HQ-Kharkov)
+		location = 418
+		division_template = "Kavaleriyskaya Diviziya"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "11ya Kavaleriyskaya Diviziya"#(HQ-Poltava)
+		location = 511
+		division_template = "Kavaleriyskaya Diviziya"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "12ya Kavaleriyskaya Diviziya"#(HQ-Yuzovka)
+		location = 6474
+		division_template = "Kavaleriyskaya Diviziya"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "1ya Avtobronetankovaya Diviziya"#(Kharkov)
+		location = 418
+		division_template = "Avtobronetankovaya Diviziya"
+		start_experience_factor = 0.2
+	}
+	division = {
+		name = "5ya Mekhanizirovannaya Diviziya"#(HQ-Yuzovka)
+		location = 6474
+		division_template = "Mekhanizirovannaya Diviziya"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "7ya Mekhanizirovannaya Diviziya"#(HQ-Alexandrovsk)
+		location = 11405
+		division_template = "Mekhanizirovannaya Diviziya"
+		start_experience_factor = 0.3
+	}
+}
+
+instant_effect = {
+	if = {
+		limit = {
+			has_dlc = "No Step Back"
+		}
+		create_equipment_variant = {
+			name = "T-27"
+			type = light_tank_chassis_0
+			parent_version = 0
+			modules = {
+				main_armament_slot = tank_heavy_machine_gun
+				turret_type_slot = tank_light_fixed_superstructure_turret
+				suspension_type_slot = tank_bogie_suspension
+				armor_type_slot = tank_riveted_armor
+				engine_type_slot = tank_gasoline_engine
+			}
+			upgrades = {
+				tank_nsb_engine_upgrade = 1
+				tank_nsb_armor_upgrade = 1
+			}
+			obsolete = yes
+			icon = "GFX_gwtank_medium"
+		}
+
+		create_equipment_variant = {
+			name = "T-26TU mod. 1933"
+			type = light_tank_chassis_1
+			parent_version = 0
+			modules = {
+				main_armament_slot = tank_small_cannon_2
+				turret_type_slot = tank_light_two_man_tank_turret
+				suspension_type_slot = tank_bogie_suspension
+				armor_type_slot = tank_riveted_armor
+				engine_type_slot = tank_gasoline_engine
+				special_type_slot_1 = tank_radio_1
+			}
+			upgrades = {
+				tank_nsb_engine_upgrade = 2
+				tank_nsb_armor_upgrade = 2
+			}
+			icon = "GFX_SOV_basic_light_tank_medium"
+		}
+		create_equipment_variant = {
+			name = "BT-5"
+			type = light_tank_chassis_1
+			parent_version = 1
+			modules = {
+				main_armament_slot = tank_small_cannon_2
+				turret_type_slot = tank_light_one_man_tank_turret
+				suspension_type_slot = tank_christie_suspension
+				armor_type_slot = tank_riveted_armor
+				engine_type_slot = tank_gasoline_engine
+			}
+			upgrades = {
+				tank_nsb_engine_upgrade = 8
+				tank_nsb_armor_upgrade = 1
+			}
+			icon = "GFX_SOV_improved_light_tank_medium"
+		}
+		create_equipment_variant = {
+			name = "BT-7"
+			type = light_tank_chassis_2
+			parent_version = 0
+			modules = {
+				main_armament_slot = tank_small_cannon_2
+				turret_type_slot = tank_light_two_man_tank_turret
+				suspension_type_slot = tank_christie_suspension
+				armor_type_slot = tank_welded_armor
+				engine_type_slot = tank_gasoline_engine
+			}
+			upgrades = {
+				tank_nsb_engine_upgrade = 10
+				tank_nsb_armor_upgrade = 2
+			}
+			icon = "GFX_SOV_improved_light_tank_medium"
+		}
+
+		create_equipment_variant = {
+			name = "T-28"
+			type = medium_tank_chassis_0
+			parent_version = 0
+			modules = {
+				main_armament_slot = tank_close_support_gun
+				turret_type_slot = tank_medium_three_man_tank_turret
+				suspension_type_slot = tank_bogie_suspension
+				armor_type_slot = tank_riveted_armor
+				engine_type_slot = tank_gasoline_engine
+				special_type_slot_1 = tank_radio_1
+				special_type_slot_2 = secondary_turret_hmg
+				special_type_slot_3 = secondary_turret_hmg
+			}
+			upgrades = {
+				tank_nsb_armor_upgrade = 3
+				tank_nsb_engine_upgrade = 10
+			}
+			icon = "GFX_SOV_basic_heavy_tank_medium"
+		}
+		create_equipment_variant = {
+			name = "T-35"
+			type = heavy_tank_chassis_0
+			parent_version = 0
+			modules = {
+				main_armament_slot = tank_close_support_gun
+				turret_type_slot = tank_medium_three_man_tank_turret
+				suspension_type_slot = tank_bogie_suspension
+				armor_type_slot = tank_riveted_armor
+				engine_type_slot = tank_gasoline_engine
+				special_type_slot_1 = tank_radio_1
+				special_type_slot_2 = secondary_turret_hmg
+				special_type_slot_3 = secondary_turret_hmg
+				special_type_slot_4 = secondary_turret_small_cannon
+			}
+			upgrades = {
+				tank_nsb_armor_upgrade = 3
+				tank_nsb_engine_upgrade = 10
+			}
+			icon = "GFX_SOV_basic_heavy_tank_medium"
+		}
+	}
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+		}
+		requested_factories = 2
+		progress = 0.82
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = artillery_equipment_1
+		}
+		requested_factories = 1
+		progress = 0.83
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+		}
+		requested_factories = 1
+		progress = 0.44
+		efficiency = 100
+	}
+	if = {
+		limit = { has_dlc = "No Step Back" }
+		add_equipment_production = {
+			equipment = {
+				type = light_tank_chassis_0
+			}
+			requested_factories = 2
+			progress = 0.59
+			efficiency = 50
+		}
+	}
+	else = {
+		add_equipment_production = {
+			equipment = {
+				type = light_tank_equipment_0
+			}
+			requested_factories = 2
+			progress = 0.59
+			efficiency = 50
+		}
+	}
+}	

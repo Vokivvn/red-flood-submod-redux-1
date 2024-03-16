@@ -1,0 +1,35 @@
+﻿l_english:
+
+#PARTIES#
+BNG_vanguard_socialism_party:0 "CPoI - L"
+BNG_popular_socialism_party:0 "CPoI - S"
+BNG_anarchism_party:0 "AU"
+BNG_revisionist_socialism_party:0 "KSP"
+BNG_progressivism_party:0 "AML - S"
+BNG_liberalism_party:0 "AML - M"
+BNG_conservatism_party:0 "AML - N"
+BNG_right_authoritarianism_party:0 "AML - I"
+BNG_despotism_party:0 "Bengal Army"
+BNG_reactionism_party:0 "NVO (RSS) Radicals"
+BNG_accelerationism_party:0 "AIR"
+
+BNG_vanguard_socialism_party_long:0 "Communist Party of India - Leninist"
+BNG_popular_socialism_party_long:0 "Communist Party of India - Spartakist"
+BNG_anarchism_party_long:0 "Anarchists Union"
+BNG_revisionist_socialism_party_long:0 "Krishak Sramik Party"
+BNG_progressivism_party_long:0 "All-India Muslim League - Socialist"
+BNG_liberalism_party_long:0 "All-India Muslim League - Moderate"
+BNG_conservatism_party_long:0 "All-India Muslim League - Nationalist"
+BNG_right_authoritarianism_party_long:0 "All-India Muslim League - Pan-Islamic"
+BNG_despotism_party_long:0 "Bengal Military Administration"
+BNG_reactionism_party_long:0 "National Volunteer Organisation - Radicals"
+BNG_accelerationism_party_long:0 "Association for Indian Renewal"
+#LEADER DESCRIPTIONS#
+#IDEAS#
+BNG_bangistan_project:0 "Bangistan Project"
+BNG_bangistan_project_desc:0 "East Bengal is the far-removed sixth region of a Muslim state in India. Bangistan as it is often known, is isolated from its brothers in the West of the country, but not willing to simply be subsumed into the burgeoning Federal Republic under Subhas Bose. The Muslims of Bengal have been awoken to the risk of marginalisation they face, and now work together to build Bangistan into a nation of its own whether the Western branch of the Muslim-League can reach them or not."
+BNG_the_eastern_league:0 "The Eastern League"
+BNG_the_eastern_league_desc:0 "The All-India Muslim League is now divided by the warring states of India. It was originally founded in Dacca, though now Karachi, Dacca and the other headquarters are adrfit from one another. Until the league can unify, the Eastern League will fend for itself."
+#CUSTOM TOOLTIPS AND FLAGS#
+#DECISIONS (1.5 Update)#
+#FOCUSES#

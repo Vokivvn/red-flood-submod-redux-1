@@ -1,0 +1,42 @@
+characters = {
+	KOK_konstantin_osipov = {
+		name = "Konstantin Osipov"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/KOK/Portrait_Konstantin_Osipov.png"
+			}
+		}
+		country_leader = {
+			ideology = stratocratic_socialism
+			expire = "1965.1.1.1"
+		}
+	}
+	KOK_konstantin_monstrov = {
+		name = "Konstantin Monstrov"
+		country_leader = {
+			ideology = oligarchy
+			expire = "1965.1.1.1"
+		}
+	}
+	KOK_veli_kayyum_han = {
+		name = "Veli Kayyum Han"
+		country_leader = {
+			ideology = national_rejuvenatism
+			expire = "1965.1.1.1"
+		}
+	}
+	KOK_shermuhammad_bek_react = {
+		name = "Shermuhammad-Bek"
+		country_leader = {
+			ideology = religious_fundamentalism
+			expire = "1965.1.1.1"
+		}
+	}
+	KOK_shermuhammad_bek_right_auth = {
+		name = "Shermuhammad-Bek"
+		country_leader = {
+			ideology = military_dictatorship
+			expire = "1965.1.1.1"
+		}
+	}
+}

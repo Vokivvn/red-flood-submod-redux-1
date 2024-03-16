@@ -1,0 +1,1912 @@
+add_namespace = india
+
+country_event = {	#unite INC tags
+	id = india.1
+	title = india.1.title
+	desc = india.1.desc
+	picture = GFX_report_event_soviet_in_riga
+
+	fire_only_once = yes
+	trigger = {
+		tag = BIH
+		has_war = no
+		INC = { has_war = no }
+		is_neighbor_of = INC
+		OR = {
+			OR = {
+				has_government = liberalism
+				AND = {
+					has_government = progressivism
+					NOT = { has_country_leader = { character = BIH_subhas_chandra_bose } }
+				}
+			}
+			AND = {
+				var:429.owner = { OR = { tag = BIH tag = INC } }
+				var:430.owner = { OR = { tag = BIH tag = INC } }
+				var:438.owner = { OR = { tag = BIH tag = INC } }
+			}
+		}
+	}
+	option = {
+		name = india.1.a
+		ai_chance = { factor = 1}
+		INC = {
+			transfer_navy = {
+				target = BIH
+			}
+		}
+		BIH = {
+			annex_country = {
+				target = INC
+				transfer_troops = yes
+			}
+			#set_nationality = {
+			#	target_country = BIH
+			#	character = INC_character
+			#}
+			if = {
+				limit = {
+					ARY = {
+						exists = yes
+						is_subject = no
+					}
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = ARY
+				}
+				every_state = {
+					limit = {
+						is_core_of = ARY
+					}
+					add_core_of = BIH
+				}
+			}
+		}
+		every_state = {
+			limit = {
+				OR = {
+					is_core_of = INC
+					is_core_of = UPI
+					is_core_of = RSR
+				}
+			}
+			add_core_of = BIH
+		}
+		add_to_temp_array = { core_removal_array = INC }
+		remove_all_cores_and_claims_of_tags = yes
+	}
+
+	option = {
+		name = india.1.b
+		ai_chance = { factor = 1}
+		BIH = {
+			transfer_navy = {
+				target = INC
+			}
+		}
+		INC = {
+			annex_country = {
+				target = BIH
+				transfer_troops = yes
+			}
+			set_capital = { state = 431 }
+			country_event = {
+				id = india.25
+				days = 42
+			}
+			#set_nationality = {
+			#	target_country = BIH
+			#	character = INC_character
+			#}
+			remove_ideas = {
+				INC_cut_off_congress
+				INC_congress_schism
+			}
+			if = {
+				limit = {
+					ARY = {
+						exists = yes
+						is_subject = no
+					}
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = ARY
+				}
+				every_state = {
+					limit = {
+						is_core_of = ARY
+					}
+					add_core_of = INC
+				}
+			}
+		}
+		every_state = {
+			limit = {
+				OR = {
+					is_core_of = UPI
+					is_core_of = BIH
+					is_core_of = RSR
+				}
+			}
+			add_core_of = INC
+		}
+		add_to_temp_array = { core_removal_array = BIH }
+		remove_all_cores_and_claims_of_tags = yes
+	}
+}
+
+country_event = {	#Princes faction
+	id = india.2
+	title = india.2.title
+	desc = india.2.desc
+	picture = GFX_report_event_soviet_in_riga
+
+	fire_only_once = yes
+	trigger = {
+		tag = HYD
+		MAD = {
+			exists = yes
+			is_subject = no
+		}
+	}
+
+	option = {
+		name = india.2.a
+		ai_chance = { factor = 1}
+		create_faction = HYD_princely_fed_faction
+		every_country = {
+			limit = {
+				OR = {
+					tag = MYS
+					tag = TRA
+				}
+				exists = yes
+				is_subject = no
+				OR = {
+					has_government = conservatism
+					has_government = liberalism
+				}
+			}
+			HYD = { add_to_faction = PREV }
+		}
+		if = {
+			limit = {
+				KSM = {
+					exists = yes
+					is_subject = no
+					has_government = right_authoritarianism
+					is_neighbor_of = HYD
+				}
+			}
+			add_to_faction = KSM
+		}
+		MYS = {
+			declare_war_on = {
+				target = MAD
+				type = annex_everything
+			}
+		}
+		MAD = {
+			add_state_claim = 427
+			add_state_claim = 425
+			add_state_claim = 936
+		}
+		hidden_effect = {
+			ORS = {
+				transfer_state = 423
+				transfer_state = 320
+				set_state_controller = 1223
+				remove_state_claim = 423
+				remove_state_claim = 320
+				add_state_core = 423
+				add_state_core = 320
+				load_oob = ORS
+				declare_war_on = {
+					target = MAD
+					type = annex_everything
+				}
+			}
+		}
+	}
+}
+
+country_event = {	#DIN and PNJ unite
+	id = india.3
+	title = india.3.title
+	desc = india.3.desc
+	picture = GFX_report_event_soviet_in_riga
+
+	fire_only_once = yes
+	trigger = {
+		tag = PNJ
+		is_neighbor_of = DIN
+		has_government = liberalism
+		date > 1938.4.21
+	}
+	option = {
+		name = india.3.a
+		ai_chance = { factor = 1 }
+		DIN = {
+			annex_country = {
+				target = PNJ
+				transfer_troops = yes
+			}
+			#set_nationality = {
+			#	target_country = DIN
+			#	#character = PNJ_character
+			#}
+			change_tag_from = PNJ
+			add_ideas = limited_conscription
+			retire_country_leader = yes
+			promote_character = DIN_Liaquat_Ali_Khan
+		}
+		hidden_effect = {
+			DIN = {
+				add_state_core = 440
+				add_state_core = 1157
+				add_state_core = 1158
+			}
+			remove_state_core = 440
+			remove_state_core = 1157
+			remove_state_core = 1158
+		}
+	}
+}
+
+country_event = {	#Assam chooses a side
+	id = india.4
+	title = india.4.title
+	desc = india.4.desc
+	picture = GFX_report_event_soviet_in_riga
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {	#AML/Bengal
+		name = india.4.a
+		ai_chance = { factor = 1 }
+		trigger = {
+			ASM = {
+				has_government = conservatism
+			}
+		}
+		BNG = {
+			annex_country = {
+				target = ASM
+				transfer_troops = yes
+			}
+			#set_nationality = {
+			#	target_country = BNG
+			#	character = ASM_character
+			#}
+			change_tag_from = ASM
+		}
+		hidden_effect = {
+			BNG = {
+				add_state_core = 432
+				add_state_core = 434
+				add_state_core = 1080
+				add_state_core = 1081
+				add_state_core = 894
+				add_state_core = 1220
+				country_event = {
+					id = bangistan.1
+					days = 42
+				}
+			}
+			ASM = {
+				remove_state_core = 432
+				remove_state_core = 434
+				remove_state_core = 1080
+				remove_state_core = 1081
+				remove_state_core = 894
+				remove_state_core = 1220
+			}
+		}
+	}
+	option = {	#INC
+		name = india.4.b
+		ai_chance = { factor = 1 }
+		trigger = {
+			ASM = {
+				OR = {
+					has_government = liberalism
+					has_government = progressivism
+				}
+			}
+		}
+		BIH = {
+			annex_country = {
+				target = ASM
+				transfer_troops = yes
+			}
+			#set_nationality = {
+			#	target_country = BIH
+			#	character = ASM_character
+			#}
+			change_tag_from = ASM
+		}
+		hidden_effect = {
+			BIH = {
+				add_state_core = 432
+				add_state_core = 434
+				add_state_core = 1080
+				add_state_core = 1081
+				add_state_core = 894
+				
+			}
+			ASM = {
+				remove_state_core = 432
+				remove_state_core = 434
+				remove_state_core = 1080
+				remove_state_core = 1081
+				remove_state_core = 894
+				remove_state_core = 1220
+			}
+			BNG = {
+				transfer_state = 1220
+				add_state_core = 1220
+				country_event = {
+					id = bangistan.1
+					days = 42
+				}
+			}
+		}
+
+	}
+}
+country_event = {	#TRA goes red
+	id = india.5
+	title = india.5.title
+	desc = india.5.desc
+	picture = GFX_report_event_soviet_in_riga
+
+	fire_only_once = yes
+	trigger = {
+		tag = TRA
+		is_in_faction = no
+		is_subject = no
+		popular_socialism > 0.4
+	}
+
+	option = {	#
+		name = india.5.a
+		ai_chance = { factor = 5 }
+		set_politics = {
+			ruling_party = revisionist_socialism
+			elections_allowed = no
+		}
+		add_popularity = {
+			ideology = revisionist_socialism
+			popularity = 0.2
+		}
+		add_popularity = {
+			ideology = popular_socialism
+			popularity = -0.2
+		}
+		remove_ideas = TRA_political_agitation
+		if = {
+			limit = {
+				RSR = { exists = yes is_subject = no has_war = no }
+			}
+			country_event = {
+				id = india.6
+				days = 35
+			}
+		}
+	}
+	option = {	#
+		name = india.5.b
+		ai_chance = { factor = 5 }
+		set_politics = {
+			ruling_party = popular_socialism
+			elections_allowed = no
+		}
+		remove_ideas = TRA_political_agitation
+		if = {
+			limit = {
+				RSR = { exists = yes is_subject = no has_war = no }
+			}
+			country_event = {
+				id = india.6
+				days = 35
+			}
+		}
+	}
+	option = {	#
+		name = india.5.c
+		ai_chance = { factor = 2 }
+		add_political_power = -150
+		hidden_effect = {
+			1217 = {
+				add_claim_by = TRA
+			}
+			TRA = {
+				declare_war_on = {
+					target = MAD
+					type = take_state_focus
+					generator = { 1217 }
+				}
+			}
+		}
+	}
+}
+country_event = {	#TRA joins HSPR
+	id = india.6
+	title = india.6.title
+	desc = india.6.desc
+	picture = GFX_report_event_soviet_in_riga
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {	#
+		name = india.6.a
+		ai_chance = { factor = 1 }
+		RSR = {
+			annex_country = {
+				target = TRA
+				transfer_troops = yes
+			}
+			#set_nationality = {
+			#	target_country = RSR
+			#}
+			change_tag_from = TRA
+			create_wargoal = {
+				type = take_state_focus
+				target = MAD
+			}
+		}
+		hidden_effect = {
+			RSR = {
+				add_state_core = 936
+				add_state_core = 1217
+			}
+			TRA = {
+				remove_state_core = 936
+			}
+		}
+	}
+}
+country_event = {	#HSPR fights the churchill slayer
+	id = india.7
+	title = india.7.title
+	desc = india.7.desc
+	picture = GFX_report_event_soviet_in_riga
+
+	fire_only_once = yes
+	trigger = {
+		tag = RSR
+		NOT = {
+			has_full_control_of_state = 438
+		}
+		UPI = {
+			OR = {
+				exists = no
+				is_subject = yes
+			}
+		}
+		OR = {
+			INC = { exists = no }
+			BIH = { exists = no }
+		}
+	}
+
+	option = {
+		name = india.7.a
+		ai_chance = { factor = 1 }
+		trigger = {
+			ARY = {
+				has_full_control_of_state = 438
+			}
+		}
+		create_wargoal = {
+			type = annex_everything
+			target = ARY
+		}
+	}
+	option = {
+		name = india.7.b
+		ai_chance = { factor = 1 }
+		trigger = {
+			BIH = {
+				has_full_control_of_state = 438
+			}
+		}
+		create_wargoal = {
+			type = annex_everything
+			target = BIH
+		}
+	}
+	option = {
+		name = india.7.c
+		ai_chance = { factor = 1 }
+		trigger = {
+			INC = {
+				has_full_control_of_state = 438
+			}
+		}
+		create_wargoal = {
+			type = annex_everything
+			target = INC
+		}
+	}
+}
+country_event = {	#schenanigans in Punjab
+	id = india.8
+	title = india.8.title
+	desc = india.8.desc
+	picture = GFX_report_event_soviet_in_riga
+
+	fire_only_once = yes
+	trigger = {
+		tag = PNJ
+		date > 1936.06.16
+	}
+
+	option = {	#Union Secularists (highly unlikely)
+		name = india.8.a
+		ai_chance = { factor = 2 }
+		hidden_effect = {
+			DIN = {
+				country_event = {
+					id = india.9
+					days = 35
+				}
+			}
+		}
+	}
+	option = {	#INC loyalists (Unlikely)
+		name = india.8.b
+		ai_chance = { factor = 3 }
+		set_politics = {
+			ruling_party = progressivism
+		}
+		remove_ideas = PNJ_autoritarian_minority_rule
+		hidden_effect = {
+			DIN = {
+				country_event = {
+					id = india.9
+					days = 35
+				}
+			}
+		}
+	}
+	option = {	#Khalistan (giga unlikely)
+		name = india.8.c
+		ai_chance = { factor = 1 }
+		set_politics = {
+			ruling_party = right_authoritarianism
+		}
+		hidden_effect = {
+			DIN = {
+				country_event = {
+					id = india.9
+					days = 35
+				}
+			}
+		}
+	}
+	option = {	#AML - good (highly likely)
+		name = india.8.d
+		ai_chance = { factor = 20 }
+		set_politics = {
+			ruling_party = liberalism
+		}
+		remove_ideas = PNJ_autoritarian_minority_rule
+	}
+}
+country_event = {	#
+	id = india.9
+	title = india.9.title
+	desc = india.9.desc
+	picture = GFX_report_event_soviet_in_riga
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {	#
+		name = india.9.a
+		ai_chance = { factor = 1 }
+		trigger = {
+			PNJ = {
+				has_government = right_authoritarianism
+			}
+		}
+		set_politics = {
+			ruling_party = right_authoritarianism
+		}
+		create_wargoal = {
+			type = annex_everything
+			target = PNJ
+		}
+	}
+	option = {	#
+		name = india.9.a
+		ai_chance = { factor = 1 }
+		trigger = {
+			PNJ = {
+				OR = {
+					has_government = progressivism
+					has_government = conservatism
+				}
+			}
+		}
+		set_politics = {
+			ruling_party = conservatism
+		}
+	}
+}
+country_event = {	#The East Punjab War
+	id = india.10
+	title = india.10.title
+	desc = india.10.desc
+	picture = GFX_report_event_soviet_in_riga
+
+	fire_only_once = yes
+	trigger = {
+		tag = DIN
+		DIN = {
+			AND = {
+				has_full_control_of_state = 1158
+				has_full_control_of_state = 441
+			}
+		}
+		ARY = {
+			OR = {
+				has_government = reactionism
+				has_government = despotism
+			}
+			has_war = yes
+		}
+	}
+	immediate = {
+		1159 = {
+			remove_claim_by = DIN
+			add_core_of = DIN
+		}
+		439 = {
+			remove_claim_by = DIN
+			add_core_of = DIN
+		}
+	}
+	option = {	#
+		name = india.10.a
+		ai_chance = { factor = 1 }
+		set_capital = { state = 440 }
+		set_cosmetic_tag = DIN_pakistan
+		remove_ideas = DIN_khan_kalat
+		remove_ideas = DIN_sind_ittehad
+		create_wargoal = {
+			type = take_core_state
+			target = ARY
+		}
+	}
+}
+country_event = {	#The Kashmir Issue
+	id = india.11
+	title = india.11.title
+	desc = india.11.desc
+	picture = GFX_report_event_soviet_in_riga
+
+	fire_only_once = yes
+	trigger = {
+		tag = KSM
+		DIN = {
+			has_full_control_of_state = 440
+			has_full_control_of_state = 1158
+		}
+	}
+	option = {	#
+		name = india.11.a
+		ai_chance = { factor = 1 }
+		set_politics = {
+			ruling_party = progressivism
+		}
+		add_popularity = {
+			ideology = progressivism
+			popularity = 0.25
+		}
+		hidden_effect = {
+			DIN = {
+				country_event = {
+					id = india.111
+					days = 35
+				}
+			}
+		}
+	}
+	option = {	#
+		name = india.11.b
+		ai_chance = { factor = 1 }
+		set_politics = {
+			ruling_party = conservatism
+		}
+		add_popularity = {
+			ideology = conservatism
+			popularity = 0.25
+		}
+		hidden_effect = {
+			DIN = {
+				country_event = {
+					id = india.111
+					days = 35
+				}
+			}
+		}
+	}
+	option = {	#
+		name = india.11.c
+		ai_chance = { factor = 2 }
+		add_political_power = -50
+		hidden_effect = {
+			DIN = {
+				country_event = {
+					id = india.111
+					days = 35
+				}
+			}
+		}
+	}
+}
+country_event = {	#The Kashmir Issue 2
+	id = india.111
+	title = india.111.title
+	desc = india.111.desc
+	picture = GFX_report_event_soviet_in_riga
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	immediate = {
+		441 = {
+			remove_claim_by = DIN
+			add_core_of = DIN
+		}
+		787 = {
+			remove_claim_by = DIN
+			add_core_of = DIN
+		}
+		798 = {
+			add_claim_by = DIN
+		}
+	}
+	option = {	#
+		name = india.111.a
+		ai_chance = { factor = 1 }
+		trigger = {
+			KSM = {
+				OR = {
+					has_government = progressivism
+					has_government = right_authoritarianism
+				}
+			}
+		}
+		create_wargoal = {
+			type = take_core_state
+			target = KSM
+		}
+	}
+	option = {	#
+		name = india.111.b
+		ai_chance = { factor = 1 }
+		trigger = {
+			KSM = {
+				has_government = conservatism
+			}
+		}
+		DIN = {
+			annex_country = {
+				target = KSM
+				transfer_troops = yes
+			}
+			change_tag_from = KSM
+		}
+	}
+}
+country_event = {	#unite INC tags 2
+	id = india.12
+	title = india.12.title
+	desc = india.12.desc
+	picture = GFX_report_event_soviet_in_riga
+
+	fire_only_once = yes
+	trigger = {
+		tag = PNJ
+		has_war = no
+		has_government = progressivism
+		OR = {
+			BIH = {
+				is_neighbor_of = PNJ
+				has_war = no
+				OR = {
+					has_government = liberalism
+					has_government = progressivism
+				}
+			}
+			INC = {
+				is_neighbor_of = PNJ
+				has_war = no
+				OR = {
+					has_government = liberalism
+					has_government = progressivism
+				}
+			}
+		}
+	}
+	option = {
+		name = india.12.a
+		ai_chance = { factor = 1 }
+		trigger = {
+			is_neighbor_of = INC
+		}
+		transfer_navy = { target = INC }
+		INC = {
+			annex_country = {
+				target = PNJ
+				transfer_troops = yes
+			}
+			#set_nationality = {
+			#	target_country = INC
+				#character = INC_character
+			#}
+			change_tag_from = PNJ
+			every_state = {
+				limit = { is_core_of = PNJ }
+				add_core_of = INC
+			}
+			country_event = {
+				id = india.13
+				days = 60
+			}
+		}
+		every_state = {
+			limit = { is_core_of = PNJ }
+			remove_core_of = PNJ
+		}
+	}
+	option = {
+		name = india.12.b
+		ai_chance = { factor = 1 }
+		trigger = {
+			is_neighbor_of = BIH
+		}
+		transfer_navy = { target = BIH }
+		BIH = {
+			annex_country = {
+				target = PNJ
+				transfer_troops = yes
+			}
+			#set_nationality = {
+			#	target_country = BIH
+				#character = BIH_character
+			#}
+			change_tag_from = PNJ
+			every_state = {
+				limit = { is_core_of = PNJ }
+				add_core_of = BIH
+			}
+		}
+		every_state = {
+			limit = { is_core_of = PNJ }
+			remove_core_of = PNJ
+		}
+	}
+}
+country_event = {	#The Indus War
+	id = india.13
+	title = india.13.title
+	desc = india.13.desc
+	picture = GFX_report_event_soviet_in_riga
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	immediate = {
+		every_state = {
+			limit = { is_core_of = ARY }
+			add_core_of = INC
+		}
+		every_state = {
+			limit = { is_core_of = INC }
+			add_claim_by = ARY
+		}
+	}
+	option = {	#
+		name = india.13.a
+		ai_chance = { factor = 1 }
+		create_wargoal = {
+			type = annex_everything
+			target = ARY
+		}
+	}
+}
+country_event = {	#
+	id = india.14
+	title = india.14.title
+	desc = india.14.desc
+	picture = GFX_report_event_soviet_in_riga
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {	#
+		name = india.14.a
+		ai_chance = { factor = 1 }
+	}
+}
+country_event = {	#RSR elections
+	id = india.15
+	title = india.15.title
+	desc = india.15.desc
+	picture = GFX_report_event_soviet_in_riga
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {	#
+		name = india.15.a
+		ai_chance = { factor = 3 }
+		add_political_power = 5
+	}
+	option = {	#
+		name = india.15.b
+		ai_chance = { factor = 3 }
+		retire_country_leader = yes
+		promote_character = RSR_M_N_Roy
+	}
+	option = {	#
+		name = india.15.c
+		ai_chance = { factor = 0 }
+		set_politics = {
+			ruling_party = anarchism
+			elections_allowed = yes
+        }
+	}
+}
+country_event = {	#The Hyderabad War (HSPR has fallen)
+	id = india.16
+	title = india.16.title
+	desc = india.16.desc
+	picture = GFX_report_event_soviet_in_riga
+
+	fire_only_once = yes
+	trigger = {
+		ROOT = {
+			is_indian_tag = yes
+			has_full_control_of_state = 429
+			OR = {
+				has_full_control_of_state = 439
+				has_full_control_of_state = 431
+			}
+			has_war = no
+		}
+		RSR = { exists = no }
+		HYD = {
+			is_subject = no
+			exists = yes
+		}
+	}
+	option = {	#
+		name = india.16.a
+		ai_chance = { factor = 1 }
+		ROOT = {
+			add_state_claim = 427
+		}
+		declare_war_on = {
+			type = annex_everything
+			target = HYD
+		}
+	}
+}
+country_event = {	#Bengal border for support vs churchill
+	id = india.17
+	title = india.17.title
+	desc = india.17.desc
+	picture = GFX_report_event_soviet_in_riga
+
+	fire_only_once = yes
+	trigger = {
+		tag = BNG
+		BIH = {
+			has_full_control_of_state = 1219
+			has_war_with = UPI
+			surrender_progress > 0.3
+		}
+	}
+	option = {	#ask for a trade - land for support vs churchill
+		name = india.17.a
+		ai_chance = { factor = 1 }
+		BIH = {
+			country_event = {
+				id = india.18
+				days = 1
+			}
+		}
+	}
+}
+country_event = {	#Bengal border for support vs churchill
+	id = india.18
+	title = india.18.title
+	desc = india.18.desc
+	picture = GFX_report_event_soviet_in_riga
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {	#Just Khulna
+		name = india.18.a
+		ai_chance = { factor = 5 }
+		BNG = {
+			transfer_state = 1219
+			send_equipment = {
+				type = infantry_equipment
+				amount = 800
+				target = BIH
+			}
+			give_military_access = BIH
+		}
+		BIH = {
+			diplomatic_relation = {
+				country = BNG
+				relation = non_aggression_pact
+				active = yes
+			}
+		}
+		add_opinion_modifier = {
+			target = BIH
+			modifier = offered_support
+		}
+		BIH = {
+			add_opinion_modifier = {
+				target = BNG
+				modifier = offered_support
+			}
+		}
+	}
+	option = {	#Khulna and Tripura
+		name = india.18.b
+		ai_chance = { factor = 3 }
+		trigger = {
+			BIH = {
+				has_full_control_of_state = 1080
+			}
+		}
+		BNG = {
+			transfer_state = 1219
+			transfer_state = 1080
+			hidden_effect = {
+				remove_state_claim = 1080
+				add_state_core = 1080
+			}
+			send_equipment = {
+				type = infantry_equipment
+				amount = 1600
+				target = BIH
+			}
+			give_military_access = BIH
+		}
+		BIH = {
+			diplomatic_relation = {
+				country = BNG
+				relation = non_aggression_pact
+				active = yes
+			}
+		}
+		add_opinion_modifier = {
+			target = BIH
+			modifier = offered_support
+		}
+		BIH = {
+			add_opinion_modifier = {
+				target = BNG
+				modifier = offered_support
+			}
+		}
+	}
+}
+country_event = {	#Pakistan/Dinia demands on Afghanistan
+	id = india.19
+	title = india.19.title
+	desc = india.19.desc
+	picture = GFX_report_event_soviet_in_riga
+
+	fire_only_once = yes
+	trigger = {
+		tag = DIN
+		has_full_control_of_state = 439
+		has_full_control_of_state = 1158
+		has_full_control_of_state = 441
+		has_war = no
+		AFG = {
+			exists = yes
+			is_subject = no
+			has_war = no
+		}
+	}
+	option = {	#ask for a trade - land for security/alliance/whatever right?
+		name = india.19.a
+		ai_chance = { factor = 1 }
+		AFG = {
+			country_event = {
+				id = india.20
+				days = 5
+			}
+		}
+	}
+}
+country_event = {	#Pakistan/Dinia demands on Afghanistan
+	id = india.20
+	title = india.20.title
+	desc = india.20.desc
+	picture = GFX_report_event_soviet_in_riga
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {	#yes
+		name = india.20.a
+		ai_chance = { factor = 1 }
+		if = {
+			limit = {
+				AFG = { has_full_control_of_state = 993 }
+			}
+			993 = {
+				transfer_state_to = DIN
+				remove_core_of = AFG
+			}
+		}
+		if = {
+			limit = {
+				AFG = { has_full_control_of_state = 445 }
+			}
+			445 = {
+				transfer_state_to = DIN
+				remove_core_of = AFG
+			}
+		}
+		if = {
+			limit = {
+				AFG = { has_full_control_of_state = 442 }
+			}
+			442 = {
+				transfer_state_to = DIN
+				add_core_of = DIN
+				remove_core_of = AFG
+			}
+		}
+		DIN = {
+			country_event = {
+				id = india.21
+				days = 5
+			}
+		}
+	}
+	option = {	#no
+		name = india.20.b
+		ai_chance = { factor = 3 }
+		DIN = {
+			country_event = {
+				id = india.22
+				days = 5
+			}
+		}
+	}
+}
+country_event = {	#Pakistan/Dinia demands on Afghanistan - yes
+	id = india.21
+	title = india.21.title
+	desc = india.21.desc
+	picture = GFX_report_event_soviet_in_riga
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {	#
+		name = india.21.a
+		ai_chance = { factor = 1 }
+		
+	}
+}
+country_event = {	#Pakistan/Dinia demands on Afghanistan - no
+	id = india.22
+	title = india.22.title
+	desc = india.22.desc
+	picture = GFX_report_event_soviet_in_riga
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {	#
+		name = india.22.a
+		ai_chance = { factor = 1 }
+		
+	}
+}
+country_event = {	#RSR fights INC for funsies
+	id = india.23
+	title = india.23.title
+	desc = india.23.desc
+	picture = GFX_report_event_soviet_in_riga
+
+	fire_only_once = yes
+	trigger = {
+		tag = RSR
+		OR = {
+			UPI = { has_war_with = BIH }
+			BNG = { has_war_with = BIH }
+		}
+		INC = { exists = yes }
+	}
+	option = {	#
+		name = india.23.a
+		ai_chance = { factor = 1 }
+		create_wargoal = {
+			type = annex_everything
+			target = INC
+		}
+	}
+}
+country_event = {	#unite INC tags 2: Madras Boogaloo
+	id = india.24
+	title = india.24.title
+	desc = india.24.desc
+	picture = GFX_report_event_soviet_in_riga
+
+	fire_only_once = yes
+	trigger = {
+		OR = {
+			tag = BIH
+			tag = INC
+		}
+		is_neighbor_of = MAD
+		MAD = {
+			has_government = liberalism
+			has_war = no
+			is_subject = no
+		}
+		var:438.owner = { OR = { tag = BIH tag = INC } }
+		var:429.owner = { OR = { tag = BIH tag = INC } }
+	}
+	option = {
+		name = india.24.a
+		ai_chance = { factor = 1}
+		trigger = {
+			BIH = {
+				has_full_control_of_state = 438
+				has_full_control_of_state = 429
+			}
+		}
+		MAD = {
+			transfer_navy = { target = BIH }
+		}
+		BIH = {
+			annex_country = {
+				target = MAD
+				transfer_troops = yes
+			}
+			#set_nationality = {
+			#	target_country = BIH
+			#	character = INC_character
+			#}
+		}
+		every_state = {
+			limit = { is_core_of = MAD }
+			add_core_of = BIH
+			remove_core_of = MAD
+		}
+		every_country = {
+			limit = {
+				OR = {
+					tag = MYS
+					tag = TRA
+				}
+				exists = yes
+				is_subject = no
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = PREV
+			}
+			every_state = {
+				limit = {
+					is_core_of = PREV
+				}
+				add_core_of = BIH
+			}
+		}
+	}
+	option = {
+		name = india.24.b
+		ai_chance = { factor = 1}
+		trigger = {
+			INC = {
+				has_full_control_of_state = 438
+				has_full_control_of_state = 429
+			}
+		}
+		MAD = {
+			transfer_navy = { target = INC }
+		}
+		INC = {
+			annex_country = {
+				target = MAD
+				transfer_troops = yes
+			}
+			#set_nationality = {
+			#	target_country = BIH
+			#	character = INC_character
+			#}
+		}
+		every_state = {
+			limit = { is_core_of = MAD }
+			add_core_of = BIH
+			remove_core_of = MAD
+		}
+		every_country = {
+			limit = {
+				OR = {
+					tag = MYS
+					tag = TRA
+				}
+				exists = yes
+				is_subject = no
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = PREV
+			}
+			every_state = {
+				limit = {
+					is_core_of = PREV
+				}
+				add_core_of = INC
+			}
+		}
+	}
+}
+country_event = {	#choose your fighter, India
+	id = india.25
+	title = india.25.title
+	desc = india.25.desc
+	picture = GFX_report_event_soviet_in_riga
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {	#
+		name = india.25.a
+		ai_chance = { factor = 1}
+		set_politics = {
+			ruling_party = liberalism
+			elections_allowed = no
+		}
+		add_popularity = {
+			ideology = liberalism
+			popularity = 0.2
+		}
+	}
+	option = {	#
+		name = india.25.b
+		ai_chance = { factor = 1}
+		set_politics = {
+			ruling_party = revisionist_socialism
+			elections_allowed = no
+		}
+		add_popularity = {
+			ideology = revisionist_socialism
+			popularity = 0.2
+		}
+	}
+	option = {	#
+		name = india.25.c
+		ai_chance = { factor = 1}
+		retire_country_leader = yes
+		promote_character = INC_Vallahbai_Patel
+		add_popularity = {
+			ideology = progressivism
+			popularity = 0.1
+		}
+	}
+}
+country_event = {	#the partition plan
+	id = india.26
+	title = india.26.title
+	desc = india.26.desc
+	picture = GFX_report_event_soviet_in_riga
+
+	fire_only_once = yes
+	trigger = {
+		tag = DIN
+		has_full_control_of_state = 439
+		has_full_control_of_state = 433
+		has_full_control_of_state = 1161
+		has_full_control_of_state = 1160
+		has_full_control_of_state = 1159
+		has_full_control_of_state = 1076
+		has_war = no
+	}
+
+	option = {	#
+		name = india.26.a
+		ai_chance = { factor = 1}
+		trigger = {
+			INC = {
+				has_full_control_of_state = 428
+				NOT = {
+					has_full_control_of_state = 438
+				}
+			}
+		}
+		every_state = {
+			limit = {
+				OR = {
+					state = 433
+					state = 1161
+				}
+			}
+			transfer_state_to = INC
+			add_core_of = INC
+			remove_claim_by = INC
+		}
+		INC = {
+			diplomatic_relation = {
+				country = DIN
+				relation = non_aggression_pact
+				active = yes
+			}
+		}
+	}
+	option = {	#
+		name = india.26.b
+		ai_chance = { factor = 1}
+		trigger = {
+			BIH = {
+				has_full_control_of_state = 428
+				NOT = {
+					has_full_control_of_state = 438
+				}
+			}
+		}
+		every_state = {
+			limit = {
+				OR = {
+					state = 433
+					state = 1161
+				}
+			}
+			transfer_state_to = BIH
+			add_core_of = BIH
+			remove_claim_by = INC
+		}
+		BIH = {
+			diplomatic_relation = {
+				country = DIN
+				relation = non_aggression_pact
+				active = yes
+			}
+		}
+	}
+	option = {	#
+		name = india.26.c
+		ai_chance = { factor = 1}
+		trigger = {
+			INC = {
+				has_full_control_of_state = 428
+				has_full_control_of_state = 438
+			}
+		}
+		every_state = {
+			limit = {
+				OR = {
+					state = 433
+					state = 1161
+					state = 1160
+					state = 1076
+				}
+			}
+			transfer_state_to = INC
+			add_core_of = INC
+			remove_claim_by = INC
+		}
+	}
+	option = {	#
+		name = india.26.d
+		ai_chance = { factor = 1}
+		trigger = {
+			BIH = {
+				has_full_control_of_state = 428
+				has_full_control_of_state = 438
+			}
+		}
+		every_state = {
+			limit = {
+				OR = {
+					state = 433
+					state = 1161
+					state = 1160
+					state = 1076
+				}
+			}
+			transfer_state_to = BIH
+			add_core_of = BIH
+			remove_claim_by = INC
+		}
+	}
+}
+country_event = {	#RSR took Lucknow somehow
+	id = india.27
+	title = india.27.title
+	desc = india.27.desc
+	picture = GFX_report_event_soviet_in_riga
+
+	fire_only_once = yes
+	trigger = {
+		tag = RSR
+		has_full_control_of_state = 438
+	}
+	option = {	#
+		name = india.27.a
+		ai_chance = { factor = 1 }
+		add_state_core = 438
+		add_state_core = 1077
+		every_country = {
+			limit = {
+				OR = {
+					tag = INC
+					tag = BIH
+				}
+				exists = yes
+			}
+			every_state = {
+				limit = { is_core_of = PREV }
+				add_core_of = RSR
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = PREV
+			}
+		}
+	}
+}
+country_event = {	#RSR beat the INC
+	id = india.28
+	title = india.28.title
+	desc = india.28.desc
+	picture = GFX_report_event_soviet_in_riga
+
+	fire_only_once = yes
+	trigger = {
+		tag = RSR
+		has_full_control_of_state = 438
+		has_full_control_of_state = 431
+		has_full_control_of_state = 428
+		has_war = no
+	}
+	option = {	#
+		name = india.28.a
+		ai_chance = { factor = 1 }
+		every_country = {
+			limit = {
+				OR = {
+					tag = ARY
+					tag = BNG
+					tag = DIN
+					tag = PNJ
+					tag = HYD
+					tag = KSM
+				}
+				exists = yes
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = PREV
+			}
+		}
+	}
+}
+country_event = {	#unite PAK tags
+	id = india.29
+	title = india.29.title
+	desc = india.29.desc
+	picture = GFX_report_event_soviet_in_riga
+
+	fire_only_once = yes
+	trigger = {
+		tag = BNG
+		has_war = no
+		is_subject = no
+		is_neighbor_of = DIN
+		OR = {
+			has_government = conservatism
+			has_government = liberalism
+			has_government = progressivism
+			has_government = right_authoritarianism
+		}
+		has_full_control_of_state = 431
+		DIN = {
+			has_war = no
+			is_subject = no
+			OR = {
+				has_government = liberalism
+				has_government = right_authoritarianism
+			}
+			has_full_control_of_state = 438
+		}
+	}
+	option = {
+		name = india.29.a
+		ai_chance = { factor = 1 }
+		transfer_navy = { target = DIN }
+		DIN = {
+			annex_country = {
+				target = BNG
+				transfer_troops = yes
+			}
+			#set_nationality = {
+			#	target_country = DIN
+			#	character = BNG_character
+			#}
+			every_state = {
+				limit = { is_core_of = BNG }
+				add_core_of = DIN
+			}
+			change_tag_from = BNG
+		}
+	}
+}
+country_event = {	#Punjab forms the Union of India (based?)
+	id = india.30
+	title = india.30.title
+	desc = india.30.desc
+	picture = GFX_report_event_soviet_in_riga
+
+	fire_only_once = yes
+	trigger = {
+		tag = PNJ
+		has_government = conservatism
+		has_war = no
+		OR = {
+			AND = {
+				PNJ = { has_full_control_of_state = 443 }
+				DIN = { exists = no }
+			}
+			DIN = {
+				has_government = conservatism
+				has_war = no
+			}
+		}
+	}
+	option = {	#
+		name = india.30.a
+		ai_chance = { factor = 1 }
+		trigger = {
+			DIN = { exists = no }
+		}
+		set_cosmetic_tag = PNJ_union_costag
+		add_state_core = 443
+		add_state_core = 444
+		add_state_core = 895
+		add_state_core = 1222
+		add_state_core = 1214
+		hidden_effect = {
+			country_event = {
+				id = india.31
+				days = 35
+			}
+		}
+	}
+	option = {	#
+		name = india.30.b
+		ai_chance = { factor = 1 }
+		trigger = {
+			DIN = { exists = yes }
+		}
+		set_cosmetic_tag = PNJ_union_costag
+		annex_country = {
+			target = DIN
+			transfer_troops = yes
+		}
+		#set_nationality = {
+		#	target_country = PNJ
+		#	character = TAG_character
+		#}
+		every_state = {
+			limit = { is_core_of = DIN }
+			add_core_of = PNJ
+		}
+		change_tag_from = DIN
+		hidden_effect = {
+			country_event = {
+				id = india.31
+				days = 35
+			}
+		}
+	}
+}
+country_event = {	#Union expands - offer Kashmir protection/unification, Bharat can be friends too
+	id = india.31
+	title = india.31.title
+	desc = india.31.desc
+	picture = GFX_report_event_soviet_in_riga
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {	#
+		name = india.31.a
+		ai_chance = { factor = 1 }
+		KSM = {
+			country_event = {
+				id = india.32
+				days = 35
+			}
+		}
+		ARY = {
+			country_event = {
+				id = india.32
+				days = 35
+			}
+		}
+	}
+}
+country_event = {	#Union of India?
+	id = india.32
+	title = india.32.title
+	desc = india.32.desc
+	picture = GFX_report_event_soviet_in_riga
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {	#unify?
+		name = india.32.a
+		ai_chance = { 
+			factor = 1
+			modifier = {
+				factor = 100
+				has_government = progressivism
+			}
+			modifier = {
+				factor = 5
+				has_government = conservatism
+			}
+			modifier = {
+				factor = -5
+				has_government = despotism
+			}
+			modifier = {
+				factor = -5
+				has_government = right_authoritarianism
+			}
+		}
+		PNJ = {
+			annex_country = {
+				target = ROOT
+				transfer_troops = yes
+			}
+			#set_nationality = {
+			#	target_country = PNJ
+			#	character = TAG_character
+			#}
+			every_state = {
+				limit = { is_core_of = ROOT }
+				add_core_of = PNJ
+			}
+			change_tag_from = ROOT
+		}
+		PNJ = {
+			country_event = {
+				id = india.33
+				days = 3
+			}
+		}
+	}
+	option = {	#nope lmao
+		name = india.32.b
+		ai_chance = { factor = 4 }
+		PNJ = {
+			country_event = {
+				id = india.34
+				days = 3
+			}
+		}
+	}
+}
+country_event = {	#yes
+	id = india.33
+	title = india.33.title
+	desc = india.33.desc
+	picture = GFX_report_event_soviet_in_riga
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {	#
+		name = india.33.a
+		ai_chance = { factor = 1 }
+		add_political_power = 50
+	}
+}
+country_event = {	#no
+	id = india.34
+	title = india.34.title
+	desc = india.34.desc
+	picture = GFX_report_event_soviet_in_riga
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {	#
+		name = india.34.a
+		ai_chance = { factor = 1 }
+		PNJ = {
+			create_wargoal = {
+				type = annex_everything
+				target = PREV
+			}
+		}
+	}
+}
+country_event = {	#little india unification removes the fotr
+	id = india.100
+	title = india.100.title
+	desc = india.100.desc
+	picture = GFX_report_event_soviet_in_riga
+
+	fire_only_once = yes
+	trigger = {
+		OR = {
+			tag = ARY
+			tag = BIH
+			tag = INC
+			tag = RSR
+		}
+		has_full_control_of_state = 429
+		has_full_control_of_state = 438
+		has_full_control_of_state = 431
+		has_full_control_of_state = 428
+		has_full_control_of_state = 424
+		has_full_control_of_state = 427
+		has_full_control_of_state = 425
+		has_war = no
+		is_subject = no
+	}
+	option = {	#
+		name = india.100.a
+		ai_chance = { factor = 1 }
+		remove_ideas = RAJ_shared_economy
+		add_political_power = 150
+		#news event unification		
+	}
+}
+country_event = {	#big india unification
+	id = india.101
+	title = india.101.title
+	desc = india.101.desc
+	picture = GFX_report_event_soviet_in_riga
+
+	fire_only_once = yes
+	trigger = {
+		OR = {
+			tag = ARY
+			tag = BIH
+			tag = INC
+			tag = RSR
+		}
+		has_full_control_of_state = 429
+		has_full_control_of_state = 438
+		has_full_control_of_state = 431
+		has_full_control_of_state = 428
+		has_full_control_of_state = 424
+		has_full_control_of_state = 427
+		has_full_control_of_state = 425
+		
+		has_full_control_of_state = 439
+		has_full_control_of_state = 430
+		has_full_control_of_state = 936
+		has_full_control_of_state = 441
+		has_full_control_of_state = 440
+		has_full_control_of_state = 443
+		has_full_control_of_state = 442
+		has_war = no
+		is_subject = no
+	}
+	option = {	#
+		name = india.101.a
+		ai_chance = { factor = 1 }
+		#costag?
+		#news event unification		
+	}
+}

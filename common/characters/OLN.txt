@@ -1,0 +1,86 @@
+characters = {
+	OLN_sergei_yesenin = {
+		name = "Segei Yesenin"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/OLN/Portrait_Yesenin.png"
+			}
+		}
+		country_leader = {
+			ideology = agrarian_socialism
+			expire = "1965.1.1.1"
+		}
+	}
+	OLN_lev_gumilyov = {
+		name = "Lev Gumilyov"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/OLN/Portrait_Gummy.png"
+			}
+		}
+		country_leader = {
+			ideology = national_rejuvenatism
+			expire = "1965.1.1.1"
+		}
+	}
+	OLN_razumnik_ivanov_razumnik = {
+		name = "Razumnik Ivanov-Razumnik"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/OLN/Portrait_Razumnik.png"
+			}
+		}
+		country_leader = {
+			ideology = constitutional_dictatorship
+			expire = "1965.1.1.1"
+		}
+	}
+	OLN_yuriy_sablin = {
+		name = "Yuriy Sablin"
+		portraits = {
+			army = {
+				large = "gfx/leaders/ZHR/Yuriy Sablin.png"
+			}
+		}
+		corps_commander = {
+			traits = { infantry_officer }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	OLN_viktorin_molchanov = {
+		name = "Viktorin Molchanov"
+		portraits = {
+			army = {
+				large = "gfx/leaders/ZHR/Viktorin Molchanov.png"
+			}
+		}
+		corps_commander = {
+			traits = { harsh_leader }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 1
+			logistics_skill = 3
+		}
+	}
+	OLN_semyon_budenny = {
+		name = "Semyon Budenny"
+		portraits = {
+			army = {
+				large = "gfx/leaders/ZHR/Semyon Budenny.png"
+			}
+		}
+		corps_commander = {
+			traits = { old_guard }
+			skill = 1
+			attack_skill = 3
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+}

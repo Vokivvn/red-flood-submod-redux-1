@@ -1,0 +1,59 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_generic_bg_344x155"
+		texturefile = "gfx/interface/generic_bg_344x155.dds"
+	}
+
+	spriteType = {
+		name = "GFX_button_178x34"
+		texturefile = "gfx/interface/button_178x34.dds"
+	}
+
+
+	spriteType = {
+		name = "GFX_vanguard_socialism_small"
+		texturefile = "gfx/interface/ideologies/vanguard_socialism_small.dds"
+	}
+	spriteType = {
+		name = "GFX_popular_socialism_small"
+		texturefile = "gfx/interface/ideologies/popular_socialism_small.dds"
+	}
+	spriteType = {
+		name = "GFX_revisionist_socialism_small"
+		texturefile = "gfx/interface/ideologies/revisionist_socialism_small.dds"
+	}
+	spriteType = {
+		name = "GFX_anarchism_small"
+		texturefile = "gfx/interface/ideologies/anarchism_small.dds"
+	}
+	spriteType = {
+		name = "GFX_progressivism_small"
+		texturefile = "gfx/interface/ideologies/progressivism_small.dds"
+	}
+	spriteType = {
+		name = "GFX_liberalism_small"
+		texturefile = "gfx/interface/ideologies/liberalism_small.dds"
+	}
+	spriteType = {
+		name = "GFX_conservatism_small"
+		texturefile = "gfx/interface/ideologies/conservatism_small.dds"
+	}
+	spriteType = {
+		name = "GFX_reactionism_small"
+		texturefile = "gfx/interface/ideologies/reactionism_small.dds"
+	}
+	spriteType = {
+		name = "GFX_despotism_small"
+		texturefile = "gfx/interface/ideologies/despotism_small.dds"
+	}
+	spriteType = {
+		name = "GFX_right_authoritarianism_small"
+		texturefile = "gfx/interface/ideologies/right_authoritarianism_small.dds"
+	}
+	spriteType = {
+		name = "GFX_accelerationism_small"
+		texturefile = "gfx/interface/ideologies/accelerationism_small.dds"
+	}
+}
+

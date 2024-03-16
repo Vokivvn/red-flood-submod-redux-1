@@ -1,0 +1,752 @@
+characters = {
+	FIR_yrjo_sirola = {
+		name = "Yrjö Sirola"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/FIR/portrait_sirola.png"
+			}
+		}
+		country_leader = {
+			ideology = leninism
+			expire = "1965.1.1.1"
+		}
+	}
+	FIR_oskari_tokoi = {
+		name = "Oskari Tokoi"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/FIR/portrait_oskari.png"
+			}
+		}
+		country_leader = {
+			ideology = spartakism
+			expire = "1965.1.1.1"
+		}
+	}
+	FIR_karl_einar_paivio = {
+		name = "Karl Einar Päiviö"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/FIR/portrait_FIR_Karl_Paivio.png"
+			}
+		}
+		country_leader = {
+			ideology = social_anarchism
+			expire = "1965.1.1.1"
+		}
+	}
+	FIR_Helsinki_Veterans_Association = {
+		name = "Helsinki Veteran's Association"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/FIR/portrait_FIR_Helsinki_Veterans_Association.png"
+			}
+		}
+		country_leader = {
+			ideology = individualist_anarchism
+			expire = "1965.1.1.1"
+		}
+	}
+
+	FIR_arvo_tuminen = {
+		name = FIR_arvo_tuminen
+		portraits = {
+			army = {
+				small = "GFX_idea_FIR_arvo_tuminen"
+			}
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = FIR_arvo_tuminen
+			allowed = {
+				original_tag = FIR
+			}
+			traits = {
+				head_of_government
+				hog_ambitious_union_boss
+			}
+			available = {
+				has_completed_focus = FIR_sirola_secures_chairmanship
+			}
+		}
+	}
+	FIR_waino_wuolijoki = {
+		name = FIR_waino_wuolijoki
+		portraits = {
+			army = {
+				small = "GFX_idea_FIR_waino_wuolijoki"
+			}
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = FIR_waino_wuolijoki
+			allowed = {
+				original_tag = FIR
+			}
+			traits = {
+				head_of_government
+				hog_pragmatic_statesman
+			}
+			available = {
+				has_completed_focus = FIR_tokoi_secures_chairmanship
+			}
+		}
+	}
+	FIR_carl_paivio = {
+		name = FIR_carl_paivio
+		portraits = {
+			army = {
+				small = "GFX_idea_FIR_carl_paivio"
+			}
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = FIR_carl_paivio
+			allowed = {
+				original_tag = FIR
+			}
+			traits = {
+				head_of_government
+				hog_silent_workhorse
+			}
+			available = {
+				has_completed_focus = FIR_paivio_secures_chairmanship
+			}
+		}
+	}
+
+	FIR_aimo_aaltonen = {
+		name = FIR_aimo_aaltonen
+		portraits = {
+			army = {
+				small = "GFX_idea_FIR_aimo_aaltonen"
+			}
+		}
+		advisor = {
+			slot = foreign_minister
+			idea_token = FIR_aimo_aaltonen
+			allowed = {
+				original_tag = FIR
+			}
+			traits = {
+				foreign_minister
+				for_great_compromiser
+			}
+			available = {
+				OR = {
+					has_completed_focus = FIR_sirola_secures_chairmanship
+					has_completed_focus = FIR_tokoi_secures_chairmanship
+				}
+			}
+		}
+	}
+	FIR_hiski_salomaa = {
+		name = FIR_hiski_salomaa
+		portraits = {
+			army = {
+				small = "GFX_idea_FIR_hiski_salomaa"
+			}
+		}
+		advisor = {
+			slot = foreign_minister
+			idea_token = FIR_hiski_salomaa
+			allowed = {
+				original_tag = FIR
+			}
+			traits = {
+				foreign_minister
+				for_the_cloak_n_dagger_schemer
+			}
+			available = {
+				has_completed_focus = FIR_paivio_secures_chairmanship
+			}
+		}
+	}
+	FIR_gust_aakula = {
+		name = FIR_gust_aakula
+		portraits = {
+			army = {
+				small = "GFX_idea_FIR_gust_aakula"
+			}
+		}
+		advisor = {
+			slot = foreign_minister
+			idea_token = FIR_gust_aakula
+			allowed = {
+				original_tag = FIR
+			}
+			traits = {
+				foreign_minister
+				for_general_staffer
+			}
+			available = {
+				has_completed_focus = FIR_helsinki_veterans_association_seizes_power
+			}
+		}
+	}
+
+	FIR_ville_pessi = {
+		name = FIR_ville_pessi
+		portraits = {
+			army = {
+				small = "GFX_idea_FIR_ville_pessi"
+			}
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = FIR_ville_pessi
+			allowed = {
+				original_tag = FIR
+			}
+			traits = {
+				economy_minister
+				eco_industrialiser
+			}
+			available = {
+				has_completed_focus = FIR_sirola_secures_chairmanship
+			}
+		}
+	}
+	FIR_johan_helo = {
+		name = FIR_johan_helo
+		portraits = {
+			army = {
+				small = "GFX_idea_FIR_johan_helo"
+			}
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = FIR_johan_helo
+			allowed = {
+				original_tag = FIR
+			}
+			traits = {
+				economy_minister
+				eco_mixed_economy
+			}
+			available = {
+				has_completed_focus = FIR_tokoi_secures_chairmanship
+			}
+		}
+	}
+	FIR_gust_alonen = {
+		name = FIR_gust_alonen
+		portraits = {
+			army = {
+				small = "GFX_idea_FIR_gust_alonen"
+			}
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = FIR_gust_alonen
+			allowed = {
+				original_tag = FIR
+			}
+			traits = {
+				economy_minister
+				eco_infantry_proponent
+			}
+			available = {
+				has_completed_focus = FIR_paivio_secures_chairmanship
+			}
+		}
+	}
+	FIR_ere_kolu = {
+		name = FIR_ere_kolu
+		portraits = {
+			army = {
+				small = "GFX_idea_FIR_ere_kolu"
+			}
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = FIR_ere_kolu
+			allowed = {
+				original_tag = FIR
+			}
+			traits = {
+				economy_minister
+				eco_industrial_chemist
+			}
+			available = {
+				has_completed_focus = FIR_helsinki_veterans_association_seizes_power
+			}
+		}
+	}
+
+	FIR_adolf_taimi = {
+		name = FIR_adolf_taimi
+		portraits = {
+			army = {
+				small = "GFX_idea_FIR_adolf_taimi"
+			}
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = FIR_adolf_taimi
+			allowed = {
+				original_tag = FIR
+			}
+			traits = {
+				security_minister
+				sec_efficient_sociopath
+			}
+			available = {
+				has_completed_focus = FIR_sirola_secures_chairmanship
+			}
+		}
+	}
+	FIR_julius_ailio = {
+		name = FIR_julius_ailio
+		portraits = {
+			army = {
+				small = "GFX_idea_FIR_julius_ailio"
+			}
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = FIR_julius_ailio
+			allowed = {
+				original_tag = FIR
+			}
+			traits = {
+				security_minister
+				sec_compassionate_gentleman
+			}
+			available = {
+				has_completed_focus = FIR_tokoi_secures_chairmanship
+			}
+		}
+	}
+	FIR_jack_ujanen = {
+		name = FIR_jack_ujanen
+		portraits = {
+			army = {
+				small = "GFX_idea_FIR_jack_ujanen"
+			}
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = FIR_jack_ujanen
+			allowed = {
+				original_tag = FIR
+			}
+			traits = {
+				security_minister
+				sec_health_and_safety
+			}
+			available = {
+				has_completed_focus = FIR_paivio_secures_chairmanship
+			}
+		}
+	}
+	FIR_karl_gustaf_nyman = {
+		name = FIR_karl_gustaf_nyman
+		portraits = {
+			army = {
+				small = "GFX_idea_FIR_karl_gustaf_nyman"
+			}
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = FIR_karl_gustaf_nyman
+			allowed = {
+				original_tag = FIR
+			}
+			traits = {
+				security_minister
+				sec_illegalist_terrorist
+			}
+			available = {
+				has_completed_focus = FIR_helsinki_veterans_association_seizes_power
+			}
+		}
+	}
+
+	FIR_eino_rahja = {
+		name = FIR_eino_rahja
+		portraits = {
+			army = {
+				small = "GFX_idea_FIR_eino_rahja"
+			}
+		}
+		advisor = {
+			slot = head_of_intel
+			idea_token = FIR_eino_rahja
+			allowed = {
+				original_tag = FIR
+			}
+			traits = {
+				head_of_intel
+				int_dismal_enigma
+			}
+			available = {
+				has_completed_focus = FIR_sirola_secures_chairmanship
+			}
+		}
+	}
+	FIR_matti_paasivuori = {
+		name = FIR_matti_paasivuori
+		portraits = {
+			army = {
+				small = "GFX_idea_FIR_matti_paasivuori"
+			}
+		}
+		advisor = {
+			slot = head_of_intel
+			idea_token = FIR_matti_paasivuori
+			allowed = {
+				original_tag = FIR
+			}
+			traits = {
+				head_of_intel
+				int_political_specialist
+			}
+			available = {
+				has_completed_focus = FIR_tokoi_secures_chairmanship
+			}
+		}
+	}
+	FIR_fred_jaakkola = {
+		name = FIR_fred_jaakkola
+		portraits = {
+			army = {
+				small = "GFX_idea_FIR_fred_jaakkola"
+			}
+		}
+		advisor = {
+			slot = head_of_intel
+			idea_token = FIR_fred_jaakkola
+			allowed = {
+				original_tag = FIR
+			}
+			traits = {
+				head_of_intel
+				int_naval_intelligence_specialist
+			}
+			available = {
+				has_completed_focus = FIR_paivio_secures_chairmanship
+			}
+		}
+	}
+
+	FIR_juho_henrik_uoti = {
+		name = FIR_juho_henrik_uoti
+		portraits = {
+			army = {
+				small = "GFX_idea_FIR_juho_henrik_uoti"
+			}
+		}
+		advisor = {
+			slot = head_of_intel
+			idea_token = FIR_juho_henrik_uoti
+			allowed = {
+				original_tag = FIR
+			}
+			traits = {
+				head_of_intel
+				int_iron_fisted_renegade
+			}
+			available = {
+				has_completed_focus = FIR_helsinki_veterans_association_seizes_power
+			}
+		}
+	}
+
+	FIR_otto_wille_kuusinen = {
+		name = FIR_otto_wille_kuusinen_cos
+		portraits = {
+			army = {
+				small = "GFX_idea_FIR_otto_wille_kuusinen_cos"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = FIR_otto_wille_kuusinen_cos
+			allowed = {
+				original_tag = FIR
+			}
+			traits = {
+				army_CombinedArms_2
+			}
+		}
+	}
+
+	FIR_tuure_lehen = {
+		name = FIR_tuure_lehen_cos
+		portraits = {
+			army = {
+				small = "GFX_idea_FIR_tuure_lehen_cos"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = FIR_tuure_lehen_cos
+			allowed = {
+				original_tag = FIR
+			}
+			traits = {
+				army_commando_2
+			}
+		}
+	}
+
+	FIR_armas_aikia = {
+		name = FIR_armas_aikia_carm
+		portraits = {
+			army = {
+				small = "GFX_idea_FIR_armas_aikia_carm"
+			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = FIR_armas_aikia_carm
+			allowed = {
+				original_tag = FIR
+			}
+			traits = {
+				carm_armoured_spearhead_doctrine
+			}
+		}
+	}
+	FIR_paavo_prokkonen = {
+		name = FIR_paavo_prokkonen_carm
+		portraits = {
+			army = {
+				small = "GFX_idea_FIR_paavo_prokkonen_carm"
+			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = FIR_paavo_prokkonen_carm
+			allowed = {
+				original_tag = FIR
+			}
+			traits = {
+				carm_elastic_defence_doctrine
+			}
+		}
+	}
+
+	FIR_hugo_meurer = {
+		name = FIR_hugo_meurer_cnav
+		portraits = {
+			army = {
+				small = "GFX_idea_FIR_hugo_meurer_cnav"
+			}
+		}
+		advisor = {
+			slot = navy_chief
+			idea_token = FIR_hugo_meurer_cnav
+			allowed = {
+				original_tag = FIR
+			}
+			traits = {
+				cnav_open_seas_doctrine
+			}
+		}
+	}
+	FIR_adrian_nepenin = {
+		name = FIR_adrian_nepenin_cnav
+		portraits = {
+			army = {
+				small = "GFX_idea_FIR_adrian_nepenin_cnav"
+			}
+		}
+		advisor = {
+			slot = navy_chief
+			idea_token = FIR_adrian_nepenin_cnav
+			allowed = {
+				original_tag = FIR
+			}
+			traits = {
+				cnav_decisive_battle_doctrine	
+			}
+		}
+	}
+
+	FIR_otto_kalvitsa = {
+		name = FIR_otto_kalvitsa_cair
+		portraits = {
+			army = {
+				small = "GFX_idea_FIR_otto_kalvitsa_cair"
+			}
+		}
+		advisor = {
+			slot = air_chief
+			idea_token = FIR_otto_kalvitsa_cair
+			allowed = {
+				original_tag = FIR
+			}
+			traits = {
+				cair_naval_aviation_doctrine
+			}
+		}
+	}
+
+	FIR_jukka_rahja = {
+		name = "Jukka Rahja"
+		portraits = {
+			army = {
+				large="gfx/leaders/FIR/portrait_jukka.png"
+				small = "GFX_idea_FIR_jukka_rahja_carm"
+			}
+		}
+		corps_commander = {
+			traits = { infantry_officer ranger brilliant_strategist old_guard}
+			skill = 4
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 4
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = FIR_jukka_rahja_carm
+			allowed = {
+				original_tag = FIR
+			}
+			traits = {
+				carm_decisive_battle_doctrine
+			}
+		}
+	}
+	FIR_akseli_anttila = {
+		name = "Akseli Anttila"
+		portraits = {
+			army = {
+				large="gfx/leaders/FIR/portrait_akseli.png"
+				small = "GFX_idea_FIR_akseli_anttila_cos"
+			}
+		}
+		corps_commander = {
+			traits = { adaptable commando trait_engineer ranger brilliant_strategist old_guard}
+			skill = 3
+			attack_skill = 3
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 3
+		}
+		advisor = {
+			slot = high_command
+			idea_token = FIR_akseli_anttila_cos
+			allowed = {
+				original_tag = FIR
+			}
+			traits = {
+				army_infantry_2
+			}
+		}
+	}
+	FIR_toivo_antikanen = {
+		name = "Toivo Antikanen"
+		portraits = {
+			army = {
+				large="gfx/leaders/FIR/portrait_FIR_Toivo_Antikanen.png"
+			}
+		}
+		corps_commander = {
+			traits = { organizer adaptable ranger brilliant_strategist }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 2
+		}
+	}
+	FIR_oskari_kumpu = {
+		name = "Oskari Kumpu"
+		portraits = {
+			army = {
+				large="gfx/leaders/FIR/portrait_FIR_Oskari_Kumpu.png"
+				small = "GFX_idea_FIR_oskari_kumpu_cos"
+			}
+		}
+		corps_commander = {
+			traits = { trickster commando trait_reckless career_officer }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 3
+		}
+		advisor = {
+			slot = high_command
+			idea_token = FIR_oskari_kumpu_cos
+			allowed = {
+				original_tag = FIR
+			}
+			traits = {
+				army_regrouping_2
+			}
+		}
+	}
+	FIR_verner_lehtimäki = {
+		name = "Verner Lehtimäki"
+		portraits = {
+			army = {
+				large="gfx/leaders/FIR/portrait_FIR_Verner_Lehtimaki.png"
+				small = "GFX_idea_FIR_verner_lehtimaki_cair"
+			}
+		}
+		corps_commander = {
+			traits = { organizer trickster trait_reckless infantry_officer }
+			skill = 2
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 1
+		}
+		advisor = {
+			slot = air_chief
+			idea_token = FIR_verner_lehtimaki_cair
+			allowed = {
+				original_tag = FIR
+			}
+			traits = {
+				cair_battlefield_support_doctrine
+			}
+		}
+	}
+	FIR_harry_jarv = {
+		name = "Harry Järv"
+		portraits = {
+			army = {
+				large = "gfx/leaders/FIR/portrait_FIR_Harry_Jarv.png"
+				small = "GFX_idea_FIR_harry_jarv_carm"
+			}
+		}
+		corps_commander = {
+			traits = { adaptable winter_expert trait_cautious cavalry_officer }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 1
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = FIR_harry_jarv_carm
+			allowed = {
+				original_tag = FIR
+			}
+			traits = {
+				carm_commando_doctrine	
+			}
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = FIR_harry_jarv_hog
+			allowed = {
+				original_tag = FIR
+			}
+			traits = {
+				head_of_government
+				hog_respected_war_hero
+			}
+			available = {
+				has_completed_focus = FIR_helsinki_veterans_association_seizes_power
+			}
+		}
+	}
+}

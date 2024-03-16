@@ -1,0 +1,99 @@
+﻿capital = 142
+set_research_slots = 3
+set_war_support = 0.1
+set_convoys = 350		# biggest merchant marine in the world
+set_stability = 0.57
+
+oob = "NOR"
+set_naval_oob = "NOR_naval"
+if = { limit = { has_dlc = "By Blood Alone" } set_air_oob = "NOR_air" }
+if = { limit = {  NOT = { has_dlc = "By Blood Alone" } }  set_air_oob = "NOR_air_legacy" }
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	gw_artillery = 1
+	interwar_antiair = 1
+	tech_support = 1		
+	tech_engineers = 1
+	tech_recon = 1
+	basic_train = 1
+}
+
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+	set_technology = {
+		iw_small_airframe = 1
+		aa_lmg = 1
+		aa_cannon_1 = 1
+		early_bombs = 1
+		engines_1 = 1
+	}
+}
+if = {
+	limit = { NOT = { has_dlc = "By Blood Alone" } }
+	set_technology = {
+		early_fighter = 1
+		CAS1 = 1
+	}
+}
+
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	set_technology = {
+		early_destroyer = 1
+		early_submarine = 1
+		early_heavy_cruiser = 1
+	}
+}
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		early_ship_hull_light = 1
+		basic_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		early_ship_hull_cruiser = 1
+		basic_battery = 1
+		basic_torpedo = 1
+		coastal_defense_ships = 1
+	}
+}
+
+
+add_ideas = {
+	limited_conscription
+}
+
+set_cosmetic_tag = NOR_peoples_council
+
+set_politics = {
+	ruling_party = popular_socialism 
+	last_election = "1933.10.16"
+	election_frequency = 36
+	elections_allowed = no
+}
+
+set_popularities = {
+	vanguard_socialism = 21
+	popular_socialism = 41
+	anarchism = 4
+	revisionist_socialism = 24
+	progressivism = 0
+	liberalism = 4
+	conservatism = 6
+	right_authoritarianism = 0
+	despotism = 0
+	reactionism = 0
+	accelerationism = 0
+}
+
+recruit_character = NOR_gotfred_johan_harvold
+recruit_character = NOR_fridtjof_nansen
+recruit_character = NOR_carl_gustav_fleischer
+recruit_character = NOR_kristian_kristiansen_laake
+recruit_character = NOR_otto_ruge
+recruit_character = NOR_birger_eriksen
+recruit_character = NOR_wilhelm_von_tangen_hansteen
+recruit_character = NOR_elias_corneliussen

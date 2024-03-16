@@ -1,0 +1,419 @@
+FIU_keller_aint_broken = {
+        icon = GFX_idea_FIU_aint_broke
+        enable = { always = yes }
+        remove_trigger = { always = no }
+
+        # list of modifiers
+        conscription_factor = keller_aint_broken_conscription_factor
+		consumer_goods_expected_value = keller_aint_broken_consumer_goods
+		industrial_capacity_factory = keller_aint_broken_factory_output
+		production_factory_max_efficiency_factor = keller_aint_broken_production_cap
+		political_power_gain = keller_aint_broken_political_power_gain
+		stability_weekly = keller_aint_broken_stability_weekly
+		research_speed_factor = keller_aint_broken_research_speed
+}
+FIU_unstoppable_machinery = {
+        icon = "GFX_idea_FIU_unstoppable_machinery" # optional, will show up in guis if icon is specified
+        enable = { always = yes } #optional, the modifier won't apply if not enabled
+        remove_trigger = { always = no } #optional, will remove the modifier if true
+
+        # list of modifiers
+        conscription_factor = unstoppable_machinery_conscription_factor
+		consumer_goods_expected_value = unstoppable_machinery_consumer_goods
+		industrial_capacity_factory = unstoppable_machinery_factory_output
+		production_factory_max_efficiency_factor = unstoppable_machinery_production_cap
+		political_power_gain = unstoppable_machinery_political_power_gain
+		stability_weekly = unstoppable_machinery_stability_weekly
+		research_speed_factor = unstoppable_machinery_research_speed
+}
+FIU_duel_of_the_fates = {
+        icon = "GFX_idea_FIU_duel_of_the_fates" # optional, will show up in guis if icon is specified
+        enable = { always = yes } #optional, the modifier won't apply if not enabled
+        remove_trigger = { always = no } #optional, will remove the modifier if true
+
+        # list of modifiers
+        conscription_factor = duel_of_the_fates_conscription_factor
+		consumer_goods_expected_value = duel_of_the_fates_consumer_goods
+		industrial_capacity_factory = duel_of_the_fates_factory_output
+		production_factory_max_efficiency_factor = duel_of_the_fates_production_cap
+		political_power_gain = duel_of_the_fates_political_power_gain
+		stability_weekly = duel_of_the_fates_stability_weekly
+		research_speed_factor = duel_of_the_fates_research_speed
+}
+RUS_neo_stolypinism = {
+        icon = "GFX_idea_generic_pp_unity_bonus" # optional, will show up in guis if icon is specified
+        enable = { always = yes } #optional, the modifier won't apply if not enabled
+        remove_trigger = { always = no } #optional, will remove the modifier if true
+
+        # list of modifiers
+        production_speed_buildings_factor = RUS_neo_stolypinism_speed_buildings
+		drift_defence_factor = RUS_neo_stolypinism_drift_defense
+		consumer_goods_expected_value = RUS_neo_stolypinism_consumer_goods
+		production_speed_bunker_factor = RUS_neo_stolypinism_speed_bunker
+		production_speed_industrial_complex_factor = RUS_neo_stolypinism_speed_industrial_complex
+		production_speed_infrastructure_factor = RUS_neo_stolypinism_speed_infrastructure
+		research_speed_factor = RUS_neo_stolypinism_research_speed
+}
+PRS_europe_conquerors = {
+        icon = "GFX_idea_generic_pp_unity_bonus" # optional, will show up in guis if icon is specified
+        enable = { always = yes } #optional, the modifier won't apply if not enabled
+        remove_trigger = { always = no } #optional, will remove the modifier if true
+
+        # list of modifiers
+		conscription_factor = PRS_conscription_factor
+		army_morale_factor = PRS_army_morale_factor
+		winter_attrition_factor = PRS_winter_attrition_factor
+		experience_gain_army_factor = PRS_experience_gain_army_factor
+}
+UPI_democratization = {
+	icon = "GFX_idea_generic_pp_unity_bonus"
+	enable = { always = yes }
+	remove_trigger = { always = no }
+
+	political_power_factor = UPI_democratization_pp
+	stability_factor = UPI_democratization_stab
+	army_org_factor = UPI_democratization_org
+	foreign_subversive_activites = UPI_democratization_subv
+	consumer_goods_expected_value = UPI_democratization_goods
+}
+ITA_six_chairs_idea = {
+	icon = "GFX_idea_ITA_overseas_council"
+	enable = { always = yes }
+	remove_trigger = { always = no }
+
+	non_core_manpower = ITA_six_chairs_idea_manpower
+	consumer_goods_expected_value = ITA_six_chairs_idea_goods
+	political_power_gain = ITA_six_chairs_idea_pp
+}
+GER_confused_institutions_idea = {
+	icon = "GFX_idea_GER_confused_institutions"
+	enable = { always = yes }
+	remove_trigger = { has_completed_focus = GER_elections_to_new_volksting }
+	political_power_gain = GER_confused_institutions_idea_pp
+	stability_factor = GER_confused_institutions_idea_stab
+	vanguard_socialism_drift = 0.01
+	army_defence_factor = GER_confused_institutions_idea_def
+	army_org_factor = GER_confused_institutions_idea_org
+	conscription_factor = GER_confused_institutions_idea_pop
+	local_resources_factor = GER_confused_institutions_idea_extra
+	production_factory_efficiency_gain_factor = GER_confused_institutions_idea_prod
+}
+GER_IfDK = {
+	icon = "GFX_idea_GER_IfDK"
+	enable = { always = yes }
+	remove_trigger = { always = no }
+	political_power_gain = 0.05
+	foreign_subversive_activites = GER_IfDK_sub
+	monthly_population = GER_IfDK_montpop
+	production_speed_buildings_factor = GER_IfDK_cons
+	research_speed_factor = GER_IfDK_research
+	production_factory_efficiency_gain_factor = GER_IfDK_industry
+	war_support_factor = GER_IfDK_war
+	
+}
+GER_new_dawn = {
+	icon = "GFX_idea_GER_IfDK"
+	enable = { always = yes }
+	remove_trigger = { always = no }
+	political_power_gain = 0.1
+	local_building_slots_factor = GER_newdawn_morefactories
+	consumer_goods_expected_value = GER_newdawn_assurance
+	line_change_production_efficiency_factor = GER_newdawn_efficiency
+	industrial_capacity_factory = GER_newdawn_military
+	production_speed_industrial_complex_factor = GER_newdawn_civilian
+	
+	
+}
+ITA_occupation_resistance_idea = {
+	icon = "GFX_idea_ITA_resistance_to_occupation"
+	enable = { always = yes }
+	remove_trigger = { always = no }
+
+	non_core_manpower = ITA_occupation_resistance_idea_manpower
+	stability_weekly = ITA_occupation_resistance_idea_stability
+	attrition = ITA_occupation_resistance_idea_attrition
+	out_of_supply_factor = ITA_occupation_resistance_idea_partisants
+}
+KAV_chairmans_reforms = {
+	icon = "GFX_idea_KAV_chairman_reforms"
+	enable = { always = yes }
+	remove_trigger = { always = no }
+
+	political_power_factor = KAV_chairmans_reforms_pp
+	conversion_cost_civ_to_mil_factor = KAV_chairmans_reforms_conversion
+	conscription_factor = KAV_chairmans_reforms_manpower
+	consumer_goods_expected_value = KAV_chairmans_reforms_goods
+	attrition = KAV_chairmans_reforms_attrition
+	production_speed_buildings_factor = KAV_chairmans_reforms_construction
+	research_speed_factor = KAV_chairmans_reforms_research
+	encryption_factor = KAV_chairmans_reforms_encryption
+	decryption_factor = KAV_chairmans_reforms_decryption
+	justify_war_goal_time = KAV_chairmans_reforms_wargoal
+}
+
+AUS_sword_of_damocles = {
+	icon = "GFX_idea_AUS_sword_of_damocles"
+	enable = {
+		always = yes
+	}
+	remove_trigger = {
+		always = no
+	}
+	
+	stability_factor = AUS_sword_of_damocles_stab
+	political_power_cost = AUS_sword_of_damocles_pp
+	industrial_capacity_factory = AUS_sword_of_damocles_factoryoutput
+	required_garrison_factor = AUS_sword_of_damocles_garrison
+}
+AUS_rush_of_vengeance = {
+icon = "GFX_idea_AUS_rush_of_vengeance"
+	enable = {
+		always = yes
+	}
+	remove_trigger = {
+		always = no
+	}
+	
+	stability_factor = AUS_rush_of_vengeance_stab
+	political_power_cost = AUS_rush_of_vengeance_pp
+	war_support_factor = AUS_rush_of_vengeance_war_support
+	consumer_goods_expected_value = AUS_rush_of_vengeance_consumer_goods
+}
+
+PSL_republican_remnants = {
+icon = "GFX_idea_GER_IfDK"
+	enable = {
+		always = yes
+	}
+	remove_trigger = {
+		always = no
+	}
+	
+	stability_factor = PSL_republican_remnants_stab
+	revisionist_socialism_drift = PSL_republican_remnants_revsoc
+	progressivism_drift = PSL_republican_remnants_prog
+	army_attack_factor = PSL_republican_remnants_att
+	army_defence_factor = PSL_republican_remnants_def
+}
+
+sabotaged_resources = {
+	remove_trigger = { 
+		has_resistance = no
+	}
+	
+	icon = GFX_modifiers_sabotaged_resource
+	
+	temporary_state_resource_oil = sabotaged_oil
+	temporary_state_resource_aluminium = sabotaged_aluminium
+	temporary_state_resource_rubber = sabotaged_rubber
+	temporary_state_resource_tungsten = sabotaged_tungsten
+	temporary_state_resource_steel = sabotaged_steel
+	temporary_state_resource_chromium = sabotaged_chromium
+}
+
+autonomous_state = {
+	enable = { always = yes }
+
+	icon = GFX_modifiers_sabotaged_resource
+	
+	recruitable_population_factor = -0.5
+	local_building_slots_factor = -0.25
+	state_resources_factor = -0.25
+	state_production_speed_buildings_factor = -0.25
+}
+
+semi_autonomous_state = {
+	enable = { always = yes }
+
+	icon = GFX_modifiers_sabotaged_resource
+	
+	local_building_slots_factor = -0.25
+	state_resources_factor = -0.25
+	state_production_speed_buildings_factor = -0.25
+}
+
+unplanned_offensive = {
+	icon = GFX_unplanned_offensive
+	attacker_modifier = yes
+
+	air_cas_present_factor = -0.75
+	army_attack_factor = -0.9
+	army_speed_factor = -0.75
+	ground_attack_factor = -0.75
+	local_org_regain = -0.5
+}
+
+UKR_deals_and_connections = {
+     icon = "GFX_idea_ukr_deals"
+     enable = {
+		always = yes
+	}
+	remove_trigger = {
+		always = no
+	}
+    political_power_gain = UKR_dac_ppg
+	stability_factor = UKR_dac_sf
+	despotism_drift = UKR_dac_dd
+	right_authoritarianism_drift = UKR_dac_rad
+	accelerationism_drift = UKR_dac_ad 
+	revisionist_socialism_drift = UKR_dac_rsd
+	popular_socialism_drift = UKR_dac_psd
+	consumer_goods_expected_value = UKR_dac_cgf
+	production_factory_start_efficiency_factor = UKR_dac_pfsef
+	progressivism_drift = UKR_dac_pd 
+	min_export = UKR_dac_me
+	line_change_production_efficiency_factor = UKR_dac_lcpef
+
+}
+
+UKR_independence_under_otaman = {
+     icon = "GFX_idea_ukr_Independence_Under_Otaman"
+	 enable = {
+		always = yes
+	}
+	remove_trigger = {
+		always = no
+	}
+	stability_weekly = UKR_iuo_stab
+	war_support_factor = UKR_iuo_ws
+	consumer_goods_expected_value = UKR_iuo_cgf
+	political_power_gain = UKR_iuo_ppg
+	#political_advisor_cost_factor = UKR_iuo_pacf
+	command_power_gain = UKR_iuo_cpg
+	recruitable_population = UKR_iuo_rp
+	industrial_capacity_factory = UKR_iuo_icf
+	production_speed_buildings_factor = UKR_iuo_psbf
+	progressivism_drift = UKR_iuo_pd
+	army_attack_factor = UKR_iuo_aaf
+	army_morale = UKR_iuo_am 
+	army_org_regain = UKR_iuo_aor
+	weekly_manpower = UKR_iuo_wm
+}
+
+UKR_fire_rises_on_the_steppes = {
+	icon = "GFX_idea_ukr_fire"
+	enable = {
+		always = yes
+	}
+	remove_trigger = {
+		always = no
+	}
+	local_resources = UKR_frs_lr
+	army_core_attack_factor = UKR_frs_acaf
+	army_core_defence_factor = UKR_frs_acdf
+	experience_gain_army = UKR_frs_ega
+	experience_gain_air = UKR_frs_ega
+	army_org = UKR_frs_ao
+	
+}
+
+UKR_grand_cultural_revolution = {
+	icon = "GFX_idea_ukr_revolution"
+	enable = {
+		always = yes
+	}
+	remove_trigger = {
+		always = no
+	}
+	weekly_manpower = UKR_gcr_wm
+	political_power_gain = UKR_gcr_ppg
+	stability_weekly = UKR_gcr_sw
+	consumer_goods_expected_value = UKR_gcr_cgf
+	production_speed_buildings_factor = UKR_gcr_psbf
+	production_speed_rocket_site_factor = UKR_rocket_sites
+	production_speed_nuclear_reactor_factor = UKR_rocket_sites
+}
+
+UKR_all_national_energies = {
+	icon = "GFX_idea_ukr_energies"
+	enable = {
+		always = yes
+	}
+	remove_trigger = {
+		always = no
+	}
+	accelerationism_drift = UKR_ane_ad 
+    industrial_capacity_factory = UKR_ane_icf
+	research_speed_factor = UKR_ane_rsf
+	political_power_gain = UKR_ane_ppg
+	army_attack_factor = UKR_ane_attack
+	army_speed_factor = UKR_ane_attack
+}
+
+UKR_effective_state_pattern = {
+	icon = "GFX_idea_ukr_effective"
+	enable = {
+		always = yes
+	}
+	remove_trigger = {
+		always = no
+	}
+	production_speed_buildings_factor = UKR_esp_psbf
+	industrial_capacity_factory = UKR_esp_icf
+	production_lack_of_resource_penalty_factor = UKR_esp_plrpf
+	training_time_factor = UKR_esp_ttf
+	industrial_capacity_factory = UKR_esp_icf
+}
+
+#ASSYRIA
+
+ASY_pansyrianism_dynamic = {
+	enable = { 
+		always = yes
+	}
+	remove_trigger = {
+		always = no
+	}
+	icon = GFX_idea_ASY_pansyrianism
+
+	resistance_growth = -0.10
+	local_non_core_manpower = 0.15
+}
+
+ASY_reashurisation_dynamic = {
+	enable = { 
+		always = yes
+	}
+	remove_trigger = {
+		always = no
+	}
+	icon = GFX_idea_ASY_reashurisation
+
+	compliance_gain = 0.04
+	local_factories = 0.10
+}
+
+warsaw_pact = {
+	icon = "GFX_idea_GER_warschauer_vertrag"
+	enable = {
+		NOT = {
+			any_country = {
+				has_country_flag = warschauer_vertrag
+				has_war_with = ROOT
+			}
+		}
+		OR = {
+			GER = { is_subject = no }
+			POL = { is_subject = no }
+		}
+	}
+	remove_trigger = {
+		NOT = { has_country_flag = warschauer_vertrag }
+	}
+	custom_modifier_tooltip = wp_member_tt
+	consumer_goods_expected_value = ATU.wp_cgf
+	min_export = ATU.wp_me
+	trade_opinion_factor = ATU.wp_tof
+	production_speed_industrial_complex_factor = ATU.wp_psicf
+}
+
+second_smuta = {
+	icon = "GFX_idea_second_smuta"
+	enable = {
+		has_country_flag = is_russian_warlord
+	}
+	remove_trigger = { has_country_flag = remove_idea }
+	forced_surrender_limit = smuta_surrender_limit
+	min_export = smuta_min_export
+	trade_opinion_factor = smuta_tef
+}

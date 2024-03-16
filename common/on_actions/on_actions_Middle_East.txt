@@ -1,0 +1,949 @@
+on_actions = {
+	on_state_control_changed = {
+		effect = {
+			if = {
+				limit = {
+					ISR = {
+						NOT = {
+							ISR = {
+								has_country_flag = ISR_independence_secured
+							}
+						}
+						has_war = yes
+						controls_state = 1003
+						controls_state = 1004
+					}
+					OR = {
+						AND = {
+							ROOT = { tag = ISR }
+							FROM = { tag = SYR }
+							FROM.FROM = { state = 455 }
+						}
+						AND = {
+							ROOT = { tag = ISR }
+							FROM = { tag = SNP }
+							FROM.FROM = { state = 455 }
+						}
+						AND = {
+							ROOT = { tag = ISR }
+							FROM = { tag = CCD }
+							FROM.FROM = { state = 455 }
+						}
+					}
+				}
+				ISR = {
+					if = {
+						limit = {
+							has_war_with = SYR
+						}
+						white_peace = {
+							tag = SYR
+							message = ISR_syria_peace_tt
+						}
+					}
+					if = {
+						limit = {
+							has_war_with = SNP
+						}
+						white_peace = {
+							tag = SNP
+							message = ISR_syria_peace_tt
+						}
+					}
+					if = {
+						limit = {
+							has_war_with = CCD
+						}
+						white_peace = {
+							tag = CCD
+							message = ISR_syria_peace_tt
+						}
+					}
+					set_state_owner = 454
+					set_state_controller = 454
+					set_state_owner = 1004
+					set_state_controller = 1004
+					set_country_flag = ISR_independence_secured
+					remove_ideas = SYR_syrian_circlejerk_war
+				}
+				news_event = {
+					id = news.352
+				}
+				set_global_flag = syr_first_syrian_peace
+				1004 = {
+					remove_core_of = SYR
+					remove_core_of = SNP
+					remove_core_of = CCD
+					set_state_name = ISR_on_action_state_1004_Negev_1
+				}
+				454 = {
+					remove_core_of = SYR
+					remove_core_of = SNP
+					remove_core_of = CCD
+				}
+				455 = {
+					owner = {
+						add_state_claim = 1004
+						add_state_claim = 454
+					}
+				}
+			}
+			if = {
+				limit = {
+					AND = {
+						ROOT = { tag = YEM }
+						FROM = { tag = SAU }
+						FROM.FROM = { state = 678 }
+					}
+				}
+				SAU = {
+					white_peace = {
+						tag = YEM
+					}
+				}
+			}
+			if = {
+				limit = {
+					AND = {
+						ROOT = { tag = OMA }
+						FROM = { tag = SAU }
+						FROM.FROM = { state = 678 }
+					}
+				}
+				SAU = {
+					white_peace = {
+						tag = OMA
+					}
+				}
+			}
+			if = {
+				limit = {
+					AND = {
+						ROOT = { tag = LEB }
+						FROM = {
+							OR = {
+								tag = SYR
+								tag = SNP
+								tag = CCD
+							}
+						}
+						FROM.FROM = { 
+							OR = {
+								state = 554
+								state = 1086
+								state = 454
+								state = 455
+							}
+						}
+					}
+				}
+				554 = {
+					owner = {
+						white_peace = {
+							tag = LEB
+							message = LEB_syria_win_tt
+						}
+					}
+				}
+				set_province_name = { id = 4206 name = LEB_on_action_province_4206 }
+				set_province_name = { id = 1065 name = LEB_on_action_province_1065 }
+				set_province_name = { id = 1108 name = LEB_on_action_province_1108 }
+				454 = {
+					set_state_name = ISR_on_action_state_454_Japhet
+				}
+				LEB = {
+					transfer_state = 454
+					transfer_state = 1092
+					if = {
+						limit = {
+							NOT = {
+								ALW = {
+									owns_state = 1086
+								}
+							}
+						}
+						transfer_state = 1086
+					}
+					set_cosmetic_tag = LEB_talibkino
+				}
+				SYR = { remove_ideas = ISR_minority_revolt_2 }
+				SNP = { remove_ideas = ISR_minority_revolt_2 }
+				CCD = { remove_ideas = ISR_minority_revolt_2 }
+				554 = {
+					owner = {
+						add_state_claim = 553
+						remove_state_core = 553
+						add_state_claim = 454
+						remove_state_core = 454
+						add_state_claim = 1092
+						remove_state_core = 1092
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							ALW = {
+								owns_state = 1086
+							}
+						}
+					}
+					554 = {
+						owner = {
+							add_state_claim = 1086
+							remove_state_core = 1086
+						}
+					}
+					set_province_name = { id = 1088 name = LEB_on_action_province_1088 }
+					set_province_name = { id = 10087 name = LEB_on_action_province_10087 } 
+					1086 = {
+						add_claim_by = LEB
+						set_state_name = ISR_on_action_state_1086_Ramitha
+						add_compliance = 50
+					}
+				}
+			}
+			if = {
+				limit = {
+					AND = {
+						ROOT = { tag = ALW }
+						FROM = {
+							OR = {
+								tag = SYR
+								tag = SNP
+								tag = CCD
+							}
+						}
+						FROM.FROM = { 
+							OR = {
+								state = 554
+								state = 1085
+								state = 677
+							}
+						}
+					}
+				}
+				ALW = {
+					white_peace = {
+						tag = ALW
+						message = ALW_syria_win_tt
+					}
+					set_state_owner = 1085
+					add_state_core = 1085
+				}
+			}
+		}
+	}
+	on_capitulation_immediate = {
+		effect = {
+			if = {
+				limit = {
+					OR = {
+						ROOT = { tag = SYR }
+						ROOT = { tag = SNP }
+						ROOT = { tag = CCD }
+					}
+					FROM = { tag = ISR }
+					ISR = {
+						NOT = {
+							has_country_flag = ISR_independence_secured
+						}
+					}
+				}
+				ISR = {
+					if = {
+						limit = {
+							has_war_with = SYR
+						}
+						white_peace = {
+							tag = SYR
+							message = ISR_syria_peace_tt
+						}
+					}
+					if = {
+						limit = {
+							has_war_with = SNP
+						}
+						white_peace = {
+							tag = SNP
+							message = ISR_syria_peace_tt
+						}
+					}
+					if = {
+						limit = {
+							has_war_with = CCD
+						}
+						white_peace = {
+							tag = CCD
+							message = ISR_syria_peace_tt
+						}
+					}
+					set_state_owner = 454
+					set_state_controller = 454
+					set_state_owner = 1004
+					set_state_controller = 1004
+					set_country_flag = ISR_independence_secured
+					remove_ideas = SYR_syrian_circlejerk_war
+				}
+				news_event = {
+					id = news.352
+				}
+				set_global_flag = syr_first_syrian_peace
+				1004 = {
+					remove_core_of = SYR
+					remove_core_of = SNP
+					remove_core_of = CCD
+					set_state_name = ISR_on_action_state_1004_Negev_2
+				}
+				454 = {
+					remove_core_of = SYR
+					remove_core_of = SNP
+					remove_core_of = CCD
+				}
+				455 = {
+					owner = {
+						add_state_claim = 1004
+						add_state_claim = 454
+					}
+				}
+			}
+			if = {
+				limit = {
+					ROOT = { tag = ISR }
+					OR = {
+						FROM = { tag = SYR }
+						FROM = { tag = SNP }
+						FROM = { tag = CCD }
+					}
+				}
+				if = {
+					limit = {
+						SYR = {
+							owns_state = 455
+						}
+					}
+					SYR = {
+						white_peace = {
+							tag = ISR
+							message = ISR_syria_loss_tt
+						}
+						annex_country = {
+							target = ISR
+						}
+						add_ideas = ISR_minority_revolt_2
+					}
+				}
+				else_if = {
+					limit = {
+						SNP = {
+							owns_state = 455
+						}
+					}
+					SNP = {
+						white_peace = {
+							tag = ISR
+							message = ISR_syria_loss_tt
+						}
+						annex_country = {
+							target = ISR
+						}
+						add_ideas = ISR_minority_revolt_2
+					}
+				}
+				else_if = {
+					limit = {
+						CCD = {
+							owns_state = 455
+						}
+					}
+					CCD = {
+						white_peace = {
+							tag = ISR
+							message = ISR_syria_loss_tt
+						}
+						annex_country = {
+							target = ISR
+						}
+						add_ideas = ISR_minority_revolt_2
+					}
+				}
+				news_event = {
+					id = news.353
+				}
+				454 = {
+					remove_core_of = ISR
+					add_claim_by = ISR
+					set_state_name = ISR_on_action_state_454_Yafa
+				}
+				set_province_name = { id = 4206 name =ISR_on_action_province_4206 }
+				set_province_name = { id = 1065 name = ISR_on_action_province_1065 }
+			}
+			if = {
+				limit = {
+					ROOT = { tag = SNP }
+					FROM = { tag = SYR }
+				}
+				every_state = {
+					limit = {
+						is_core_of = SNP
+					}
+					remove_core_of = SNP
+					add_core_of = SYR
+				}
+				every_state = {
+					limit = {
+						is_claimed_by = SNP
+					}
+					remove_claim_by = SNP
+					add_claim_by = SYR
+				}
+				SYR = {
+					white_peace = {
+						tag = SNP
+						message = SYR_WIN_SNP_tt
+					}
+					annex_country = {
+						target = SNP
+					}			
+				}
+				if = {
+					limit = {
+						SYR = {
+							NOT = {
+								has_war_with = SNP
+								has_war_with = CCD
+							}
+						}
+					}
+					SYR = { remove_ideas = SYR_syrian_circlejerk_war }
+					news_event = {
+						id = news.350
+					}
+					ALW = {
+						country_event = {
+							id = ALW.1
+							days = 60
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					ROOT = { tag = CCD }
+					FROM = { tag = SYR }
+				}
+				every_state = {
+					limit = {
+						is_core_of = CCD
+					}
+					remove_core_of = CCD
+					add_core_of = SYR
+				}
+				every_state = {
+					limit = {
+						is_claimed_by = CCD
+					}
+					remove_claim_by = CCD
+					add_claim_by = SYR
+				}
+				SYR = {
+					white_peace = {
+						tag = CCD
+						message = SYR_WIN_CCD_tt
+					}
+					annex_country = {
+						target = CCD
+					}			
+				}
+				if = {
+					limit = {
+						SYR = {
+							NOT = {
+								has_war_with = SNP
+								has_war_with = CCD
+							}
+						}
+					}
+					SYR = { remove_ideas = SYR_syrian_circlejerk_war }
+					news_event = {
+						id = news.350
+					}
+					ALW = {
+						country_event = {
+							id = ALW.1
+							days = 60
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					ROOT = { tag = SYR }
+					FROM = { tag = SNP }
+				}
+				every_state = {
+					limit = {
+						is_core_of = SYR
+					}
+					remove_core_of = SYR
+					add_core_of = SNP
+				}
+				every_state = {
+					limit = {
+						is_claimed_by = SYR
+					}
+					remove_claim_by = SYR
+					add_claim_by = SNP
+				}
+				SNP = {
+					white_peace = {
+						tag = SYR
+						message = SNP_WIN_SYR_tt
+					}
+					annex_country = {
+						target = SYR
+					}
+				}
+				if = {
+					limit = {
+						SNP = {
+							NOT = {
+								has_war_with = SYR
+								has_war_with = CCD
+							}
+						}
+					}
+					SNP = { 
+						set_politics = {
+							ruling_party = accelerationism
+							elections_allowed = no
+						}
+						SNP_Antoun_Saadeh = {
+							remove_country_leader_role = {
+								ideology = provisional_government
+							}
+							add_country_leader_role = {
+								character = SNP_Antoun_Saadeh
+								promote_leader = yes
+								country_leader = {
+									ideology = national_rejuvenatism
+									expire = "1965.1.1"
+								}
+							}
+							set_portraits = {
+								character = SNP_Antoun_Saadeh
+								civilian = {
+									large = "GFX_Portrait_SNP_Saadeh_Accel"
+								}
+							}
+						}
+						remove_ideas = SYR_syrian_circlejerk_war
+						add_ideas = FRA_league_observer
+					}
+					news_event = {
+						id = news.351
+					}
+					ALW = {
+						country_event = {
+							id = ALW.1
+							days = 60
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					ROOT = { tag = CCD }
+					FROM = { tag = SNP }
+				}
+				every_state = {
+					limit = {
+						is_core_of = CCD
+					}
+					remove_core_of = CCD
+					add_core_of = SNP
+				}
+				every_state = {
+					limit = {
+						is_claimed_by = CCD
+					}
+					remove_claim_by = CCD
+					add_claim_by = SNP
+				}
+				SNP = {
+					white_peace = {
+						tag = CCD
+						message = SNP_WIN_CCD_tt
+					}
+					annex_country = {
+						target = CCD
+					}
+				}
+				if = {
+					limit = {
+						SNP = {
+							NOT = {
+								has_war_with = SYR
+								has_war_with = CCD
+							}
+						}
+					}
+					SNP = { 
+						set_politics = {
+							ruling_party = accelerationism
+							elections_allowed = no
+						}
+						SNP_Antoun_Saadeh = {
+							remove_country_leader_role = {
+								ideology = provisional_government
+							}
+							add_country_leader_role = {
+								character = SNP_Antoun_Saadeh
+								promote_leader = yes
+								country_leader = {
+									ideology = national_rejuvenatism
+									expire = "1965.1.1"
+								}
+							}
+							set_portraits = {
+								character = SNP_Antoun_Saadeh
+								civilian = {
+									large = "GFX_Portrait_SNP_Saadeh_Accel"
+								}
+							}
+						}
+						remove_ideas = SYR_syrian_circlejerk_war
+						add_ideas = FRA_league_observer
+					}
+					news_event = {
+						id = news.351
+					}
+					ALW = {
+						country_event = {
+							id = ALW.1
+							days = 60
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					ROOT = { tag = SYR }
+					FROM = { tag = CCD }
+				}
+				every_state = {
+					limit = {
+						is_core_of = SYR
+					}
+					remove_core_of = SYR
+					add_core_of = CCD
+				}
+				every_state = {
+					limit = {
+						is_claimed_by = SYR
+					}
+					remove_claim_by = SYR
+					add_claim_by = CCD
+				}
+				CCD = {
+					white_peace = {
+						tag = SYR
+						message = CCD_WIN_SYR_tt
+					}
+					annex_country = {
+						target = SYR
+					}			
+				}
+				if = {
+					limit = {
+						CCD = {
+							NOT = {
+								has_war_with = SNP
+								has_war_with = SYR
+							}
+						}
+					}
+					CCD = {
+						remove_ideas = SYR_syrian_circlejerk_war
+						add_ideas = GER_rotfront_observer
+					}
+					news_event = {
+						id = news.360
+					}
+					ALW = {
+						country_event = {
+							id = ALW.1
+							days = 60
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					ROOT = { tag = SNP }
+					FROM = { tag = CCD }
+				}
+				every_state = {
+					limit = {
+						is_core_of = SNP
+					}
+					remove_core_of = SNP
+					add_core_of = CCD
+				}
+				every_state = {
+					limit = {
+						is_claimed_by = SNP
+					}
+					remove_claim_by = SNP
+					add_claim_by = CCD
+				}
+				CCD = {
+					white_peace = {
+						tag = SNP
+						message = CCD_WIN_SNP_tt
+					}
+					annex_country = {
+						target = SNP
+					}			
+				}
+				if = {
+					limit = {
+						CCD = {
+							NOT = {
+								has_war_with = SNP
+								has_war_with = SYR
+							}
+						}
+					}
+					CCD = {
+						remove_ideas = SYR_syrian_circlejerk_war
+						add_ideas = GER_rotfront_observer
+					}
+					news_event = {
+						id = news.360
+					}
+					ALW = {
+						country_event = {
+							id = ALW.1
+							days = 60
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					ROOT = { tag = ASY }
+					FROM = { tag = IRQ }
+				}
+				IRQ = {
+					white_peace = {
+						tag = ASY
+						message = IRQ_conquers_ASY
+					}
+					annex_country = {
+						target = ASY
+					}
+				}
+				ENG = {
+					add_to_faction = IRQ
+				}
+			}
+			if = {
+				limit = {
+					ISR = {
+						has_country_leader = {
+	                	  character = ISR_david_ben_gurion
+	                	  ruling_only = yes
+                    	}
+					}
+					OR = {
+						ROOT = { tag = SYR }
+						ROOT = { tag = SNP }
+						ROOT = { tag = CCD }
+					}
+					FROM = { tag = ISR }
+				}
+				JOR = {
+					transfer_state = 455
+					transfer_state = 1089
+					set_cosmetic_tag = JOR_ISR
+				}
+				ISR = {
+					puppet = JOR
+					if = {
+						limit = {
+							has_war_with = SYR
+						}
+						white_peace = {
+							tag = SYR
+							message = ISR_syria_gurion_win_syr_tt
+						}
+					}
+					if = {
+						limit = {
+							has_war_with = SNP
+						}
+						white_peace = {
+							tag = SNP
+							message = ISR_syria_gurion_win_snp_tt
+						}
+					}
+					if = {
+						limit = {
+							has_war_with = CCD
+						}
+						white_peace = {
+							tag = CCD
+							message = ISR_syria_gurion_win_ccd_tt
+						}
+					}
+					transfer_state = 1003
+					transfer_state = 1092
+				}
+				JOR = {
+					set_popularities = {
+						right_authoritarianism = 100
+					}
+					set_politics = {
+						ruling_party = right_authoritarianism
+						last_election = "1933.10.25"
+						election_frequency = 48
+						elections_allowed = no
+					}
+				}
+				1091 = {
+					add_core_of = DRZ
+					transfer_state_to = DRZ
+				}
+			}
+			if = {
+				limit = {
+					ROOT = { tag = ISR }
+					OR = {
+						FROM = { tag = SYR }
+						FROM = { tag = SNP }
+						FROM = { tag = CCD }
+					}
+					ISR = {
+						has_country_leader = {
+	                	  character = ISR_david_ben_gurion
+	                	  ruling_only = yes
+                    	}
+					}
+				}
+				if = {
+					limit = {
+						SYR = {
+							owns_state = 454
+						}
+					}
+					SYR = {
+						white_peace = {
+							tag = ISR
+							message = ISR_syria_gurion_loss_syr_tt
+						}
+						annex_country = {
+							target = ISR
+						}
+						add_ideas = ISR_minority_revolt_2
+					}
+				}
+				else_if = {
+					limit = {
+						SNP = {
+							owns_state = 454
+						}
+					}
+					SNP = {
+						white_peace = {
+							tag = ISR
+							message = ISR_syria_gurion_loss_snp_tt
+						}
+						annex_country = {
+							target = ISR
+						}
+						add_ideas = ISR_minority_revolt_2
+					}
+				}
+				else_if = {
+					limit = {
+						CCD = {
+							owns_state = 454
+						}
+					}
+					CCD = {
+						white_peace = {
+							tag = ISR
+							message = ISR_syria_gurion_loss_ccd_tt
+						}
+						annex_country = {
+							target = ISR
+						}
+						add_ideas = ISR_minority_revolt_2
+					}
+				}
+			}
+			if = {
+				limit = {
+					ROOT = { tag = LEB }
+					OR = {
+						FROM = { tag = SYR }
+						FROM = { tag = SNP }
+						FROM = { tag = CCD }
+					}
+				}
+				454 = {
+					owner = {
+						add_state_core = 1086
+						white_peace = {
+							tag = LEB
+							message = LEB_syria_loss_tt
+						}
+						annex_country = {
+							target = LEB
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					ROOT = { tag = ALW }
+					OR = {
+						FROM = { tag = SYR }
+						FROM = { tag = SNP }
+						FROM = { tag = CCD }
+					}
+				}
+				454 = {
+					owner = {
+						add_state_core = 1086
+						white_peace = {
+							tag = ALW
+							message = ALW_syria_loss_tt
+						}
+						annex_country = {
+							target = ALW
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						ROOT = { tag = SYR }
+						ROOT = { tag = SNP }
+						ROOT = { tag = CCD }
+					}
+					FROM = { tag = ALW }
+				}
+				ALW = {
+					white_peace = {
+						tag = ALW
+						message = ALW_syria_win_tt
+					}
+					set_state_owner = 1085
+					add_state_core = 1085
+				}
+			}
+		}
+	}
+}

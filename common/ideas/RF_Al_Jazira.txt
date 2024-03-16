@@ -1,0 +1,14 @@
+ideas = {
+	country = {
+		ALJ_ambition = {
+			picture = ALJ_ambition		
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				war_support_factor = 0.2
+				stability_factor = -0.1
+				opinion_gain_monthly_factor = -0.1
+				conscription = 0.01
+			}
+		}
+	}
+}

@@ -1,0 +1,163 @@
+﻿division_template = {
+	name = "Strelkovaya Diviziya"			# Rifle Division
+
+	division_names_group = DKB_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+}
+division_template = {
+	name = "Gorno-Strelkovaya Brigada"				# Mountaineer Brigade
+
+	division_names_group = DKB_MNT_01
+
+	regiments = {
+		mountaineers = { x = 0 y = 0 }
+		mountaineers = { x = 0 y = 1 }
+		mountaineers = { x = 0 y = 2 }	
+		mountaineers = { x = 1 y = 0 }
+		mountaineers = { x = 1 y = 1 }
+		mountaineers = { x = 1 y = 2 }
+	}
+}
+division_template = {
+	name = "Konnyi Eskadron"                        #"motorized Escadron"
+
+	division_names_group = DKB_CAV_01
+
+	regiments = {
+		motorized = { x = 0 y = 0 }
+		motorized = { x = 0 y = 1 }
+		motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+	}
+}
+division_template = {
+	name = "Krasnaya Gvardiya"			# Elite Troops
+
+	division_names_group = DKB_INF_01
+
+	regiments = {
+		shocktroop = { x = 0 y = 0 }
+		shocktroop = { x = 0 y = 1 }
+		shocktroop = { x = 0 y = 2 }
+		shocktroop = { x = 1 y = 0 }
+		shocktroop = { x = 1 y = 1 }
+		shocktroop = { x = 1 y = 2 }
+	}
+}
+units = {
+	division = {
+		name = "1ya Strelkovaya Diviziya"
+		location = 7661
+		division_template = "Strelkovaya Diviziya"	
+		start_experience_factor = 0.7
+		start_equipment_factor = 1.0
+
+	}
+	division = {
+		name = "2ya Strelkovaya Diviziya"
+		location = 1610
+		division_template = "Strelkovaya Diviziya"	
+		start_experience_factor = 0.7
+		start_equipment_factor = 1.0
+
+	}
+	division = {
+		name = "3ya Strelkovaya Diviziya"
+		location = 4458
+		division_template = "Strelkovaya Diviziya"	
+		start_experience_factor = 0.7
+		start_equipment_factor = 1.0
+
+	}
+	division = {
+		name = "4ya Strelkovaya Diviziya"
+		location = 1599
+		division_template = "Strelkovaya Diviziya"	
+		start_experience_factor = 0.7
+		start_equipment_factor = 1.0
+
+	}
+	division = {
+		name = "Rat' Obshchestva Budushchego"
+		location = 1599
+		division_template = "Strelkovaya Diviziya"	
+		start_experience_factor = 0.7
+		start_equipment_factor = 1.0
+
+	}
+	division = {
+		name = "Apostoly Budushchego"
+		location = 4605
+		division_template = "Strelkovaya Diviziya"	
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+
+	}
+	division = {
+		name = "Gruzinskaya Brigada Vol'nykh Dush"
+		location = 6669
+		division_template = "Gorno-Strelkovaya Brigada"	
+		start_experience_factor = 0.8
+		start_equipment_factor = 1.0
+
+	}
+	division = {
+		name = "Gruzinskaya Brigada Vol'nykh Dush"
+		location = 3658
+		division_template = "Gorno-Strelkovaya Brigada"	
+		start_experience_factor = 0.8
+		start_equipment_factor = 1.0
+
+	}
+	division = {
+		name = "Eskadron Kirasirov Chernoy Molnii"
+		location = 3653
+		division_template = "Konnyi Eskadron"	
+		start_experience_factor = 1.0
+		start_equipment_factor = 1.0
+
+	}
+	division = {
+		name = "1ya Krasnaya Gvardiya"
+		location = 1599
+		division_template = "Krasnaya Gvardiya"	
+		start_experience_factor = 1.0
+		start_equipment_factor = 1.0
+
+	}
+	division = {
+		name = "2ya Krasnaya Gvardiya"
+		location = 7661
+		division_template = "Krasnaya Gvardiya"	
+		start_experience_factor = 1.0
+		start_equipment_factor = 1.0
+
+	}
+	division = {
+		name = "Eskadron Batumi"
+		location = 3653
+		division_template = "Konnyi Eskadron"	
+		start_experience_factor = 1.0
+		start_equipment_factor = 1.0
+
+	}
+}
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "KAV"
+		}
+		requested_factories = 2
+		progress = 0.8
+		efficiency = 100
+	}
+}

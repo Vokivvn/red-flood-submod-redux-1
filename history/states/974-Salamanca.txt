@@ -1,0 +1,31 @@
+
+state={
+	id=974
+	name="STATE_974"
+	manpower = 540654
+	
+	state_category = large_town
+	
+	resources={
+		tungsten=1
+	}
+
+	history={
+	    
+		victory_points = {
+	        794 1
+	    }
+		owner = SPR
+		
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+		add_core_of = SPR
+	}
+
+	provinces={
+		794 874 3874 6867 9770
+		2049
+	}
+}

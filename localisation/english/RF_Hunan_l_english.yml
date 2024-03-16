@@ -1,0 +1,58 @@
+﻿l_english:
+
+
+#COUNTRY NAME#
+XIA_PROC_vanguard_socialism:0 "People's Republic of China"
+XIA_PROC_vanguard_socialism_DEF:0 "People's Republic of China"
+XIA_PROC_vanguard_socialism_ADJ:0 "Chinese"
+
+XIA_PROC_popular_socialism:0 "People's Republic of China"
+XIA_PROC_popular_socialism_DEF:0 "People's Republic of China"
+XIA_PROC_popular_socialism_ADJ:0 "Chinese"
+
+XIA_PROC_revisionist_socialism:0 "People's Republic of China"
+XIA_PROC_revisionist_socialism_DEF:0 "People's Republic of China"
+XIA_PROC_revisionist_socialism_ADJ:0 "Chinese"
+#PARTIES#
+XIA_vanguard_socialism_party:0 "CPC - R"
+XIA_popular_socialism_party:0 "CPC - L"
+XIA_anarchism_party:0 "CAM"
+XIA_revisionist_socialism_party:0 "CPC - C"
+XIA_progressivism_party:0 "GMD - Cheng Clique"
+XIA_placeholderism_party:0 "GMD - Moderates"
+XIA_liberalism_party:0 "GMD - Moderates"
+XIA_conservatism_party:0 "GMD - MinZu"
+XIA_right_authoritarianism_party:0 "GMD - CEC"
+XIA_despotism_party:0 "NRA"
+XIA_reactionism_party:0 "GMD - SSS"
+XIA_accelerationism_party:0 "CYP"
+XIA_vanguard_socialism_party_long:0 "Communist Party of China - Rightist"
+XIA_popular_socialism_party_long:0 "Communist Party of China - Leftist"
+XIA_anarchism_party_long:0 "Chinese Anarchist Movement"
+XIA_revisionist_socialism_party_long:0 "Communist Party of China - Centrist"
+XIA_progressivism_party_long:0 "Guomindang - Cheng Qian Clique"
+XIA_placeholderism_party_long:0 "Guomindang - Moderate Faction"
+XIA_liberalism_party_long:0 "Guomindang - Moderate Faction"
+XIA_conservatism_party_long:0 "Guomindang - MinZu Faction"
+XIA_right_authoritarianism_party_long:0 "Guomindang - Central Executive Committee"
+XIA_despotism_party_long:0 "Military Junta of NRA"
+XIA_reactionism_party_long:0 "Guomindang - Senior Statesman Society"
+XIA_accelerationism_party_long:0 "Chinese Youth Party - Hunan"
+
+#LEADER DESCRITIONS#
+POLITICS_QIAN_DESC:0 ""
+POLITICS_MAO_DESC:0 ""
+POLITICS_DUXIU_DESC:0 ""
+POLITICS_BOJUN_DESC:0 ""
+
+#IDEAS#
+XIA_red_faction:0 "The Red Faction"
+XIA_red_faction_desc:0 ""
+XIA_communist_struggle:0 "Internal Communist Struggle"
+XIA_communist_struggle_desc:0 ""
+XIA_experimenal_land_reforms:0 "Experimental Land Reforms"
+XIA_experimenal_land_reforms_desc:0 ""
+#CUSTOM TOOLTIPS AND FLAGS#
+XIA_CPC_faction:0 "Chinese Socialist Front"
+#DECISIONS (1.5 Update)#
+#FOCUSES#

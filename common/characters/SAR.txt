@@ -1,0 +1,26 @@
+characters={
+	SAR_Vyner = {
+		name = "Vyner"
+		portraits = {
+			civilian={
+				large="gfx/leaders/SAR/Portrait_SAR_Vyner.png"
+			}
+		}
+	}
+	SAR_Anthony = {
+		name = "Anthony"
+		portraits = {
+			civilian={
+				large="gfx/leaders/SAR/Portrait_SAR_Anthony.png"
+			}
+		}
+	}
+	SAR_MacBryan = {
+		name = "Abdul Rahman"
+		portraits = {
+			civilian={
+				large="gfx/leaders/SAR/Portrait_SAR_MacBryan.png"
+			}
+		}
+	}
+}

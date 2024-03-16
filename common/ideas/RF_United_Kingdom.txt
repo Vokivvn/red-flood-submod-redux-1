@@ -1,0 +1,792 @@
+ideas = {
+	country = {
+		ENG_economic_catastrophe = {
+			removal_cost = -1 
+			picture = generic_idea_RF_idea_coins
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				consumer_goods_expected_value = 0.2
+				industrial_capacity_factory = -0.2
+				production_speed_buildings_factor = -0.1	
+			}
+		}
+		
+        ENG_divided_nation = {
+			removal_cost = -1 
+			picture = generic_idea_RF_idea_duel
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = -0.1	
+				political_power_gain = -0.5
+				right_authoritarianism_drift = 0.01
+				popular_socialism_drift = 0.01
+			}
+		}
+			
+        ENG_shadow_of_the_somme = {
+			removal_cost = -1 
+			picture = generic_idea_RF_idea_soldier2
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				conscription_factor = -0.25
+				war_support_factor = -0.2
+				training_time_army_factor = 0.20 	
+			}
+		}
+			
+        ENG_imperial_eclipse = {
+			removal_cost = -1 
+			picture = generic_idea_RF_idea_moon
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				justify_war_goal_time = +0.25	
+			}
+		}
+		
+		ENG_edward_viii = {
+			removal_cost = -1
+            picture = ENG_edward_viii
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = 0.05
+				war_support_factor	= 0.03
+				political_power_gain = -0.5
+			}
+		}
+		
+		ENG_political_honeymoon = {
+			removal_cost = -1 
+			picture = generic_constitutional_guarantees
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = 0.05
+				political_power_gain = 0.25
+			}
+		}
+		
+		ENG_brittania_rules_the_waves = {
+			removal_cost = -1
+			picture = FRA_scw_intervention_republicans_focus
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				naval_speed_factor = 0.10
+				navy_capital_ship_attack_factor = 0.05
+				navy_screen_attack_factor = 0.10
+			}
+		}
+		
+		ENG_glorious_army = {
+			removal_cost = -1
+			picture = FRA_scw_intervention_republicans_focus
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				training_time_army_factor = -0.25
+				army_org = 0.20
+				army_morale_factor = 0.2
+			}
+		}
+		
+		ENG_scrap_into_spitfires = {
+			removal_cost = -1
+			picture = GER_volksding
+			cancel = { has_country_flag = remove_idea }                       
+			equipment_bonus = {
+				fighter_equipment_0 = {
+				build_cost_ic = -0.1 instant = yes
+				}
+			}
+			equipment_bonus = {
+				fighter_equipment_1 = {
+				build_cost_ic = -0.1 instant = yes
+				}
+			}
+			equipment_bonus = {
+				fighter_equipment_2 = {
+				build_cost_ic = -0.1 instant = yes
+				}
+			}
+			equipment_bonus = {
+				fighter_equipment_3 = {
+				build_cost_ic = -0.1 instant = yes
+				}
+			}
+		}
+
+		ENG_knights_of_the_sky = {
+			removal_cost = -1
+			picture = GER_volksding
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				air_ace_generation_chance_factor = 0.15
+			}
+		}
+
+		ENG_geddes_axe = {
+			removal_cost = -1
+			picture = generic_constitutional_guarantees
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = -0.05
+				political_power_gain = 0.15
+			}
+		}
+
+		ENG_balenced_budget = {
+			removal_cost = -1
+			picture = generic_constitutional_guarantees
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				political_power_gain = 0.25
+				consumer_goods_expected_value = -0.10
+			}
+		}
+
+		ENG_the_lion_roars = {
+			removal_cost = -1
+			picture = generic_constitutional_guarantees
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				consumer_goods_expected_value = -0.2
+				industrial_capacity_factory = 0.2
+				production_speed_buildings_factor = 0.15
+			}
+		}
+		ENG_company_government_cooperation = {
+			removal_cost = -1
+			picture = generic_constitutional_guarantees
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				production_speed_buildings_factor = 0.10
+				conversion_cost_civ_to_mil_factor = -0.25
+			}
+		}
+		
+		ENG_reduced_tarrifs = {
+			removal_cost = -1
+			picture = generic_constitutional_guarantees
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				consumer_goods_expected_value = -0.02
+			}
+		}
+		
+		ENG_portuguese_trade = {
+			removal_cost = -1
+			picture = generic_constitutional_guarantees
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				consumer_goods_expected_value = -0.03
+				production_factory_max_efficiency_factor = 0.05
+			}
+		}
+		
+		ENG_atlantic_trade = {
+			removal_cost = -1
+			picture = generic_constitutional_guarantees
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				consumer_goods_expected_value = -0.04
+				production_factory_max_efficiency_factor = 0.10
+			}
+		}
+		
+		ENG_global_trade = {
+			removal_cost = -1
+			picture = generic_constitutional_guarantees
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				consumer_goods_expected_value = -0.05
+				production_factory_max_efficiency_factor = 0.15
+				global_building_slots_factor = 0.10
+			}
+		}
+		
+		ENG_farmer_insurance = {
+			removal_cost = -1
+			picture = generic_constitutional_guarantees
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				weekly_manpower = 500
+			}
+		}
+		
+		ENG_home_market_reforms = {
+			removal_cost = -1
+			picture = generic_constitutional_guarantees
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				weekly_manpower = 1000
+				local_building_slots_factor = 0.10
+			}
+		}
+		
+		ENG_coal_mining_reforms = {
+			removal_cost = -1
+			picture = generic_constitutional_guarantees
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				local_resources_factor = 0.10
+			}
+		}
+		
+		ENG_regulation_reforms = {
+			removal_cost = -1
+			picture = generic_constitutional_guarantees
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				local_resources_factor = 0.15
+				production_factory_max_efficiency_factor = 0.1
+			}
+		}
+		
+		ENG_conservative_reforms = {
+			removal_cost = -1
+			picture = generic_constitutional_guarantees
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				weekly_manpower = 1000
+				local_building_slots_factor = 0.10
+				local_resources_factor = 0.15
+				production_factory_max_efficiency_factor = 0.1
+			}
+		}
+		
+		ENG_compassionate_conservatism = {
+			removal_cost = -1
+			picture = generic_constitutional_guarantees
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				political_power_factor = 0.20
+				drift_defence_factor = 0.30
+				foreign_minister_cost_factor = -0.20
+				economy_minister_cost_factor = -0.20
+				security_minister_cost_factor = -0.20
+				#head_of_intel_cost_factor = -0.20
+			}
+		}
+		
+		ENG_national_development_council = {
+			removal_cost = -1
+			picture = generic_constitutional_guarantees
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				production_factory_max_efficiency_factor = 0.1
+				line_change_production_efficiency_factor = 0.2
+			}
+		}
+		
+		ENG_liberal_economic_reforms = {
+			removal_cost = -1
+			picture = generic_constitutional_guarantees
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = -0.05
+				industrial_capacity_factory = 0.05
+			}
+		}
+		
+		ENG_liberal_economic_reforms_2 = {
+			removal_cost = -1
+			picture = generic_constitutional_guarantees
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = -0.02
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+			}
+		}
+		
+		ENG_liberal_economic_reforms_3 = {
+			removal_cost = -1
+			picture = generic_constitutional_guarantees
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = -0.02
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+				production_speed_buildings_factor = 0.1
+			}
+		}
+		
+		ENG_liberal_economic_reforms_4 = {
+			removal_cost = -1
+			picture = generic_constitutional_guarantees
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = -0.02
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
+				production_speed_buildings_factor = 0.1
+			}
+		}
+		
+		ENG_education_reforms = {
+			removal_cost = -1
+			picture = generic_constitutional_guarantees
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				research_speed_factor = 0.15
+			}
+		}
+		
+		ENG_liberal_powerhouse = {
+			removal_cost = -1
+			picture = generic_constitutional_guarantees
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				political_power_factor = 0.20
+				drift_defence_factor = 0.30
+				foreign_minister_cost_factor = -0.20
+				economy_minister_cost_factor = -0.20
+				security_minister_cost_factor = -0.20
+				#head_of_intel_cost_factor = -0.20
+			}
+		}
+		
+		ENG_booming_economy = {
+		removal_cost = -1
+			picture = generic_constitutional_guarantees
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				consumer_goods_expected_value = -0.2
+				industrial_capacity_factory = 0.2
+				production_speed_buildings_factor = 0.15
+			}
+		}
+
+		ENG_keynesian_economics_idea = {
+			removal_cost = -1
+			picture = generic_constitutional_guarantees
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				production_speed_buildings_factor = 0.10
+				consumer_goods_expected_value = 0.05
+			}
+		}
+		
+		ENG_socialist_reconstruction_idea = {
+			removal_cost = -1
+			picture = generic_constitutional_guarantees
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				production_speed_buildings_factor = 0.10
+				industrial_capacity_factory = 0.10
+				consumer_goods_expected_value = 0.1
+			}
+		}
+		
+		ENG_the_new_jerusalam = {
+			removal_cost = -1
+			picture = generic_constitutional_guarantees
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = 0.15
+				consumer_goods_expected_value = 0.10
+				political_power_factor = 0.20
+				drift_defence_factor = 0.30
+			}
+		}
+		
+		ENG_increased_welfare = {
+			removal_cost = -1
+			picture = generic_constitutional_guarantees
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = 0.05
+				consumer_goods_expected_value = 0.05
+				political_power_factor = 0.05
+				drift_defence_factor = 0.10
+			}
+		}
+		
+		ENG_socialist_reconstruction_complete_idea = {
+			removal_cost = -1
+			picture = generic_constitutional_guarantees
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				production_speed_buildings_factor = 0.20
+				industrial_capacity_factory = 0.25
+				consumer_goods_expected_value = 0.15
+			}
+	    }
+		
+	    ENG_maternity_care = {
+			removal_cost = -1
+			picture = generic_constitutional_guarantees
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				weekly_manpower = 250
+			}
+	    }
+		
+	    ENG_national_health_service = {
+			removal_cost = -1
+			picture = generic_constitutional_guarantees
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				weekly_manpower = 500
+				stability_factor = 0.10
+				consumer_goods_expected_value = 0.05
+			}
+	    }
+		
+		ENG_house_of_lords_abolish = {
+			removal_cost = -1
+			picture = generic_constitutional_guarantees
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = -0.03
+				political_power_factor = 0.05
+			}
+	    }
+		
+		ENG_labour_construction_programs = {
+			removal_cost = -1
+			picture = generic_constitutional_guarantees
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				production_speed_buildings_factor = 0.10
+			}
+		}
+		
+		ENG_indian_sinkhole = {
+			removal_cost = -1
+			picture = generic_constitutional_guarantees
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				consumer_goods_expected_value = 0.10
+			}
+		}
+		
+		ENG_volunteer_corps = {
+			removal_cost = -1
+			picture = generic_constitutional_guarantees
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				send_volunteers_tension = -0.50	
+				send_volunteer_size = 3
+				}
+		}
+	
+		ENG_national_unity_government = {
+			removal_cost = -1 
+			picture = great_depression
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = 0.1
+				war_support_factor = 0.1
+				industrial_capacity_factory = 0.1
+			}
+		}
+	 	
+		ENG_air_raid_shelters = {
+			removal_cost = -1 
+			picture = great_depression
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				industry_air_damage_factor = -0.15
+			}
+		}
+		
+		ENG_anti_bombing_preparation = {
+			removal_cost = -1 
+			picture = great_depression
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = 0.05
+			}
+	    }
+		
+		ENG_anti_bombing_preparation2 = {
+			removal_cost = -1 
+			picture = great_depression
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = 0.05
+				industry_air_damage_factor = -0.05
+			}
+		}
+		
+		ENG_anti_bombing_preparation3 = {
+			removal_cost = -1 
+			picture = great_depression
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = 0.07
+				industry_air_damage_factor = -0.05
+			}
+		}
+		
+		ENG_woman_land_army = {
+			removal_cost = -1 
+			picture = great_depression
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				conscription = 0.01
+			}
+	    }
+		
+		ENG_britain_shall_not_burn = {
+			removal_cost = -1 
+			picture = great_depression
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				army_core_defence_factor = 0.2
+			}
+		}
+		ENG_chindits_idea = {
+			removal_cost = -1 
+			picture = generic_idea_RF_idea_soldier2
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				special_forces_attack_factor = 0.05
+				special_forces_defence_factor = 0.05
+				acclimatization_hot_climate_gain_factor = 0.1
+			}
+		}
+	}
+
+#############
+# Companies #
+#############
+
+	#### General ####
+	industrial_concern = {
+	designer = yes
+		aioc = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea aioc"}
+			allowed = {
+				original_tag = ENG
+			}
+			traits = {
+				industrial_manufacturer
+			}
+			research_bonus = {
+				industry = 0.1
+			}
+			modifier = {
+				production_speed_arms_factory_factor = 0.1
+				production_speed_industrial_complex_factor = 0.1
+			}
+		}
+		
+		english_electric = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea english_electric"}
+			allowed = {
+				original_tag = ENG
+			}
+			traits = {
+				electronics_manufacturer
+			}
+			research_bonus = {
+				electronics = 0.1
+			}
+			modifier = {
+				production_speed_radar_station_factor = 0.15
+			}
+		}
+	
+	}
+	
+	#### Weapons ####
+	materiel_manufacturer = {
+	designer = yes
+		
+		rsaf_enfield = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea rsaf_enfield"}
+			allowed = {
+				original_tag = ENG
+			}
+			traits = {
+				infantry_equipment_producer_defense_1
+			}
+			research_bonus = {
+				infantry_weapons = 0.1
+			}
+		}
+		
+		vauxhall = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea vauxhall"}
+			allowed = {
+				original_tag = ENG
+			}
+			traits = {
+				motorised_equipment_producer_offense_1
+			}
+			research_bonus = {
+				motorized_equipment = 0.05
+			}
+		}
+		
+		royal_arsenal = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea royal_arsenal"}
+			allowed = {
+				original_tag = ENG
+			}
+			traits = {
+				artillery_producer_defense_1
+			}
+			research_bonus = {
+				artillery = 0.05
+			}
+		}
+	}
+
+	#### Tanks ####
+	tank_manufacturer = {
+	designer = yes
+		vickers_armstrong_eng = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea vickers_armstrong_eng"}
+			allowed = {
+				original_tag = ENG
+			}
+			traits = {
+				medium_tank_producer_defense_1
+			}
+			research_bonus = {
+				armor = 0.05
+			}
+		}
+		
+		vauxhall_armor = {
+			name = vauxhall
+			picture = vauxhall
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea vauxhall_armor"}
+			allowed = {
+				original_tag = ENG
+			}
+			traits = {
+				small_tank_producer_defense_1
+			}
+			research_bonus = {
+				armor = 0.05
+			}
+		}
+	}
+	
+	#### Naval ####
+	naval_manufacturer = {
+	designer = yes
+		
+		yarrow_shipbuilders = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea yarrow_shipbuilders"}
+			allowed = {
+				original_tag = ENG
+			}
+			traits = { cruiser_producer_defense_2 }
+			research_bonus = {
+				naval_equipment = 0.05
+			}
+		}
+		
+		harland_wolff = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea harland_wolff"}
+			allowed = {
+				original_tag = ENG
+			}
+			traits = {
+				capital_ship_producer_defense_2
+			}
+			research_bonus = {
+				naval_equipment = 0.05
+			}
+		}
+		
+		cammell_laird = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea cammell_laird"}
+			allowed = {
+				original_tag = ENG
+			}
+			traits = {
+				capital_ship_producer_offense_1
+			}
+			research_bonus = {
+				naval_equipment = 0.05
+			}
+		}
+		
+		john_brown_company = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea john_brown_company"}
+			allowed = {
+				original_tag = ENG
+			}
+			traits = {
+				cruiser_producer_mass_1
+			}
+			research_bonus = {
+				naval_equipment = 0.05
+			}
+		}	
+	}
+
+	#### Air ####
+	aircraft_manufacturer = {
+		designer = yes
+		supermarine = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea supermarine"}
+			allowed = {
+				original_tag = ENG
+			}
+			traits = {
+				fighter_producer_offense_2
+			}
+			research_bonus = {
+				air_equipment = 0.05
+			}
+		}
+		
+		hawker = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea hawker"}
+			allowed = {
+				original_tag = ENG
+			}
+			traits = {
+				fighter_producer_mass_2
+			}
+			research_bonus = {
+				air_equipment = 0.05
+			}
+		}	
+		
+		de_havilland = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea de_havilland"}
+			allowed = { original_tag = ENG }
+			traits = {
+				fighter_producer_defense_2
+			}
+			research_bonus = {
+				air_equipment = 0.05
+			}
+		}
+		
+		avro = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea avro"}
+			allowed = {
+				original_tag = ENG
+			}
+			traits = {
+				bomber_producer_offense_1
+			}
+			research_bonus = {
+				air_equipment = 0.05
+			}
+		}
+		
+		fairey_aviation = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea fairey_aviation"}
+			allowed = {
+				original_tag = ENG
+			}
+			traits = {
+				nav_cas_producer_offense_1
+			}
+			research_bonus = {
+				air_equipment = 0.05
+			}
+		}			
+	}
+
+	theorist = { #removed because that's not how it works in this minister system
+		
+	}
+}

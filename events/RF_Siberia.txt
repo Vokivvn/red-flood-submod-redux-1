@@ -1,0 +1,808 @@
+add_namespace = sib
+
+country_event = {
+	id = sib.1
+	title = sib.1.title
+	desc = sib.1.desc
+	#picture = GFX_SIB_
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = sib.1.a
+		set_country_flag = SIB_sidedwithblackhundreds
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 1000
+				has_game_rule = {
+					rule = SIB_ai_route
+					option = SIB_BLACK
+				}
+			}
+		}
+	}
+	option = {
+		name = sib.1.b
+		country_event = {
+			id = sib.24
+			days = 4
+		}
+		hidden_effect = {
+			country_event = {
+				id = sib.26
+				days = 2
+			}
+		}
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 1000
+				has_game_rule = {
+					rule = SIB_ai_route
+					option = SIB_AUTONOMISTS
+				}
+			}
+		}
+	}
+	option = {
+		name = sib.1.c
+		country_event = {
+				id = sib.23
+				days = 4
+			}
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 1000
+				has_game_rule = {
+					rule = SIB_ai_route
+					option = SIB_STATE
+				}
+			}
+		}
+	}
+}
+
+country_event = { # 1938 election
+	id = sib.2
+	title = sib.2.title
+	desc = sib.2.desc
+	#picture = GFX_AUS_civilwar
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = sib.2.a
+		retire_character = SIB_alexei_grishin_almazov_populist
+		promote_character = SIB_ivan_serebrennikov
+		set_politics = {
+			ruling_party = progressivism
+			elections_allowed = no
+		}
+		set_country_flag = soc_dems_are_socialists
+		add_popularity = {
+			ideology = progressivism
+			popularity = 0.15
+		}
+	}
+	option = {
+		name = sib.2.b
+		set_politics = {
+			ruling_party = revisionist_socialism
+			elections_allowed = no
+		}
+		add_popularity = {
+			ideology = revisionist_socialism
+			popularity = 0.15
+		}
+	}
+}
+
+country_event = { # 1942 election
+	id = sib.3
+	title = sib.3.title
+	desc = sib.3.desc
+	#picture = GFX_AUS_civilwar
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = sib.3.a
+		set_politics = {
+			ruling_party = progressivism
+			elections_allowed = no
+		}
+		add_popularity = {
+			ideology = progressivism
+			popularity = 0.15
+		}
+	}
+	option = {
+		name = sib.3.b
+		set_politics = {
+			ruling_party = liberalism
+			elections_allowed = no
+		}
+		add_popularity = {
+			ideology = liberalism
+			popularity = 0.15
+		}
+	}
+	option = {
+		name = sib.3.c
+		set_politics = {
+			ruling_party = conservatism
+			elections_allowed = no
+		}
+		add_popularity = {
+			ideology = conservatism
+			popularity = 0.15
+		}
+	}
+}
+
+country_event = {
+	id = sib.4
+	title = sib.4.title
+	desc = sib.4.desc
+	#picture = GFX_AUS_civilwar
+	fire_only_once = yes
+
+	trigger = {
+		tag = SIB
+		RUS = {
+			has_war_with = SRU
+		}
+	}
+
+	option = {
+		name = sib.4.a
+		RUS = {
+			set_autonomy = {
+				target = SIB
+				autonomy_state = autonomy_free
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = sib.12
+				days = 2
+			}
+		}
+		remove_ideas = RUS_warlord_indifference
+		set_cosmetic_tag = "SIB_independent"
+	}
+}
+
+country_event = {
+	id = sib.5
+	title = sib.5.title
+	desc = sib.5.desc
+	#picture = GFX_AUS_civilwar
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = sib.5.a
+		GER = {
+			add_to_faction = SIB
+		}
+		ai_chance = {
+			base = 10
+		}
+		SIB = {
+			add_ideas = SIB_league_of_nations_member
+		}
+	}
+	option = {
+		name = sib.5.b
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+country_event = {
+	id = sib.6
+	title = sib.6.title
+	desc = sib.6.desc
+	#picture = GFX_AUS_civilwar
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = sib.6.a
+		SIB = {
+			add_to_faction = ROOT
+		}
+		ai_chance = {
+			base = 8
+		}
+	}
+	option = {
+		name = sib.6.b
+		ai_chance = {
+			base = 2
+		}
+	}
+}
+
+country_event = { # Civil War
+	id = sib.7
+	title = sib.7.title
+	desc = sib.7.desc
+	#picture = GFX_AUS_civilwar
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	#trigger = {
+	#	tag = SIB
+	#	date > 1938.1.1
+	#	ZHR = {
+	#		OR = {
+	#			has_government = vanguard_socialism
+	#			has_government = popular_socialism
+	#			has_government = revisionist_socialism
+	#			has_government = anarchism
+	#		}
+	#	}
+	#}
+
+	option = {
+		name = sib.7.a
+		MO4 = {
+			transfer_state = 565
+			transfer_state = 566
+			transfer_state = 567
+			transfer_state = 568
+			transfer_state = 575
+			load_oob = "MO4"
+		}
+		every_state = {
+			limit = {
+				is_core_of = SIB
+			}
+			add_core_of = MO4
+		}
+		SIB = {
+			RUS = {
+				end_puppet = SIB
+			}
+			SRU = {
+				end_puppet = SIB
+			}
+			set_autonomy = {
+			    target = SIB
+			    autonomy_state = autonomy_free
+			}
+		}
+		MO4 = {
+			declare_war_on = {
+			    target = SIB
+			    type = annex_everything
+			}
+		}
+	}
+	option = {
+		name = sib.7.b
+		MO4 = {
+			transfer_state = 565
+			transfer_state = 566
+			transfer_state = 567
+			transfer_state = 568
+			transfer_state = 575
+			load_oob = "MO4"
+		}
+		every_state = {
+			limit = {
+				is_core_of = SIB
+			}
+			add_core_of = MO4
+		}
+		MO4 = {
+			change_tag_from = SIB
+		}
+		SIB = {
+			RUS = {
+				end_puppet = SIB
+			}
+			SRU = {
+				end_puppet = SIB
+			}
+			set_autonomy = {
+			    target = SIB
+			    autonomy_state = autonomy_free
+			}
+		}
+		MO4 = {
+			declare_war_on = {
+			    target = SIB
+			    type = annex_everything
+			}
+		}
+	}
+}
+
+country_event = {
+	id = sib.8
+	title = sib.8.title
+	desc = sib.8.desc
+	#picture = GFX_AUS_civilwar
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = sib.8.a
+		annex_country = {
+		    target = MO4
+	  		transfer_troops = no
+		}
+	}
+}
+
+country_event = {
+	id = sib.9
+	title = sib.9.title
+	desc = sib.9.desc
+	#picture = GFX_AUS_civilwar
+	is_triggered_only = yes
+
+	trigger = {
+		OR = {
+			tag = SIB
+			tag = MO4
+		}
+		SIB = {
+			has_country_flag = SIB_ceasefire_event
+		}
+		MO4 = {
+			has_country_flag = SIB_ceasefire_event
+		}
+		MO4 = {
+			has_offensive_war_with = SIB
+		}
+	}
+
+	option = {
+		name = sib.9.a
+		SIB = {
+			white_peace = {
+    			tag = MO4
+			}
+		}
+		SIB = {
+			transfer_state = 569
+			transfer_state = 40
+			transfer_state = 570
+			transfer_state = 578
+			transfer_state = 403
+			transfer_state = 580
+			transfer_state = 577
+			transfer_state = 579
+		}
+		MO4 = {
+			transfer_state = 568
+			transfer_state = 567
+			transfer_state = 566
+			transfer_state = 565
+			transfer_state = 576
+			transfer_state = 575
+			transfer_state = 516
+		}
+		trigger = {
+			tag = SIB
+		}
+	}
+
+	option = {
+		name = sib.9.b
+		trigger = {
+			tag = MO4
+		}
+	}
+}
+
+country_event = {
+	id = sib.10
+	title = sib.10.title
+	desc = sib.10.desc
+	#picture = GFX_AUS_civilwar
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = sib.10.a
+		annex_country = {
+		    target = SIB
+	  		transfer_troops = no
+		}
+	}
+}
+
+country_event = {
+	id = sib.11
+	title = sib.11.title
+	desc = sib.11.desc
+	#picture = GFX_AUS_civilwar
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = sib.11.a
+		ZHR ={
+			change_tag_from = MO4
+		}
+		hidden_effect = {
+			ZHR = {
+				country_event = {
+					id = sib.111
+					days = 1
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = sib.12
+	title = sib.12.title
+	desc = sib.12.desc
+	#picture = GFX_AUS_civilwar
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = sib.12.a
+		add_timed_idea = {
+			idea = SIB_population_growth
+			days = 180
+		}
+	}
+}
+
+country_event = {
+	id = sib.13
+	title = sib.13.title
+	desc = sib.13.desc
+	#picture = GFX_AUS_civilwar
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = sib.13.a
+		add_doctrine_cost_reduction = {
+			name = HUN_mobile_focus
+			cost_reduction = 0.5
+			uses = 3
+			category = cat_mobile_warfare
+		}
+	}
+	option = {
+		name = sib.13.b
+		add_doctrine_cost_reduction = {
+			name = YUG_supremacy_of_offense
+			cost_reduction = 0.5
+			uses = 3
+			category = cat_superior_firepower
+		}
+	}
+	option = {
+		name = sib.13.c
+		add_doctrine_cost_reduction = {
+			name = HUN_home_defense
+			cost_reduction = 0.5
+			uses = 3
+			category = cat_grand_battle_plan
+		}
+	}
+	option = {
+		name = sib.13.d
+		add_doctrine_cost_reduction = {
+			name = YUG_supremacy_of_defense
+			cost_reduction = 0.5
+			uses = 3
+			category = cat_mass_assault
+		}
+	}
+}
+
+country_event = {
+	id = sib.14
+	title = sib.14.title
+	desc = sib.14.desc
+	#picture = GFX_AUS_civilwar
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = sib.14.a
+		#strat
+		add_doctrine_cost_reduction = {
+			name = "Strategic Destruction"
+			cost_reduction = 0.5
+			uses = 3
+			category = cat_strategic_destruction
+		}
+	}
+	option = {
+		name = sib.14.b
+		#battlefield
+		add_doctrine_cost_reduction = {
+			name = ROM_ground_support
+			cost_reduction = 0.5
+			uses = 3
+			category = battlefield_support_tree
+		}
+	}
+	option = {
+		name = sib.14.c
+		#operation
+		add_doctrine_cost_reduction = {
+			name = ROM_air_defense
+			cost_reduction = 0.5
+			uses = 3
+			category = cat_operational_integrity
+		}
+	}
+}
+
+country_event = {
+	id = sib.15
+	title = sib.15.title
+	desc = sib.15.desc
+	#picture = GFX_AUS_civilwar
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = sib.15.a
+		hidden_effect = {
+			country_event = {
+				id = sib.16
+				days = 3
+			}
+		}
+	}
+}
+
+country_event = {
+	id = sib.16
+	title = sib.16.title
+	desc = sib.16.desc
+	#picture = GFX_AUS_civilwar
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = sib.16.a
+		
+	}
+}
+
+country_event = {
+	id = sib.50
+	is_triggered_only = yes
+	title = sib.50.t
+	desc = sib.50.d_1
+	
+	desc = { # 
+		text = sib.50.d_2
+		trigger = {
+			AND = {
+				has_country_flag = SIB_invite_ukrainian_refugees
+				GUK = { exists = yes }
+			}
+		}
+	}
+	
+	option = {
+		name = sib.50.a
+		every_country = {
+			limit = {
+				is_in_faction_with = SIB
+			}
+			every_owned_state = {
+				limit = {
+					is_capital = yes
+				}
+				add_manpower = 10000
+			}
+		}
+	}
+	
+	option = {
+		name = sib.50.b
+		random_owned_state = {
+			add_manpower = 70000
+		}
+	}
+	
+	option = {
+		name = sib.50.c
+		trigger = {
+			AND = {
+				has_country_flag = SIB_invite_ukrainian_refugees
+				GUK = { exists = yes }
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = SIB_invite_ukrainian_refugees
+			}
+			GUK = {
+				random_owned_state = {
+					limit = {
+						is_capital = yes
+					}
+					add_manpower = 70000
+				}
+			}
+			clr_country_flag = SIB_invite_ukrainian_refugees
+		}
+	}
+}
+
+country_event = {
+	id = sib.111
+	hidden = yes
+	is_triggered_only = yes
+
+	immediate = {
+		ZHR = {
+			annex_country = {
+		  		target = MO4
+	  			transfer_troops = yes
+			}
+		}
+	}
+}
+
+country_event = {
+	id = sib.17
+	title = sib.17.t
+	desc = sib.17.desc
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = sib.17.a	
+		set_country_flag = SIB_vlasov
+		custom_effect_tooltip = SIB_DICTATORSHIP_TT
+	}
+	option = { 
+		name = sib.17.b
+		hidden_effect = {
+			country_event = {
+				id = sib.18
+				days = 1
+			}
+		}
+		custom_effect_tooltip = SIB_REFERENDUM_TT
+	}
+}
+
+country_event = { # refrendum, need a world event for Obolensky becoming a tsar
+	id = sib.18
+	title = sib.18.t
+	desc = sib.18.desc
+	picture = GFX_report_event_fork_in_the_road
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #rurikid
+		name = sib.18.a
+		set_country_flag = SIB_rurikid
+	}
+	option = { #republic
+		name = sib.18.b
+		set_country_flag = SIB_baydalakov
+	}
+}
+
+country_event = {
+	id = sib.19
+	title = sib.19.t
+	desc = sib.19.desc
+	picture = GFX_report_event_important_decisions
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = sib.19.a
+	}
+}
+
+country_event = {
+	id = sib.20
+	title = sib.20.t
+	desc = sib.20.desc
+	picture = GFX_report_event_they_must_know
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = sib.20.a
+	}
+}
+
+country_event = {
+	id = sib.21
+	title = sib.21.t
+	desc = sib.21.desc
+	picture = GFX_report_event_restless_night
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = sib.21.a
+	}
+}
+
+country_event = {
+	id = sib.22
+	title = sib.22.t
+	desc = sib.22.desc
+	picture = GFX_report_event_new_deals_for_a_new_times
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = sib.22.a
+	}
+}
+
+country_event = {
+	id = sib.23
+	title = sib.23.t
+	desc = sib.23.desc
+	#picture = GFX_AUS_civilwar
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = sib.23.a
+		retire_character = SIB_alexei_grishin_almazov_despot
+		complete_national_focus = SIB_third_power
+	}
+}
+
+country_event = {
+	id = sib.24
+	title = sib.24.t
+	desc = sib.24.desc
+	#picture = GFX_AUS_civilwar
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = sib.24.a
+		complete_national_focus = SIB_compromise_with_autonomists
+	}
+}
+
+country_event = {
+	id = sib.25
+	title = sib.25.t
+	desc = sib.25.desc
+	#picture = GFX_AUS_civilwar
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = sib.25.a
+	}
+}
+
+country_event = {
+	id = sib.26
+	title = sib.26.t
+	desc = sib.26.desc
+	#picture = GFX_AUS_civilwar
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = sib.26.a
+	}
+}

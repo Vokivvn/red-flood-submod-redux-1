@@ -1,0 +1,28 @@
+state={
+	id=440
+	name="STATE_440"
+	manpower = 4065000
+
+	state_category = large_town
+
+	history={
+		owner = PNJ
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			air_base = 1
+		}
+		add_core_of = PNJ
+		add_claim_by = DIN
+		victory_points = {
+			8022 10
+		}
+		victory_points = {
+			9084 3
+		}
+	}
+
+	provinces={
+		4979 8022 8106 9084 10173 10887
+	}
+}

@@ -1,0 +1,416 @@
+#####################
+# SUPER EVENT MUSIC #
+#####################
+soundeffect = {
+	name = brazil_super
+	volume = 0.5
+	sounds = {
+		sound = brazil_super
+	} 
+}
+soundeffect = {
+	name = rosenbaum_super
+	volume = 0.5
+	sounds = {
+		sound = rosenbaum_super
+	} 
+}
+soundeffect = {
+	name = chapayev_super
+	volume = 0.5
+	sounds = {
+		sound = chapayev_super
+	} 
+}
+soundeffect = {
+	name = trotsky_super
+	#volume = 0.5
+	sounds = {
+		sound = trotsky_super
+	} 
+}
+soundeffect = {
+	name = gastev_super
+	volume = 0.5
+	sounds = {
+		sound = gastev_super
+	} 
+}
+soundeffect = {
+	name = kerensky_super
+	volume = 0.5
+	sounds = {
+		sound = kerensky_super
+	} 
+}
+soundeffect = {
+	name = blackbloc_super
+	volume = 0.5
+	sounds = {
+		sound = blackbloc_super
+	} 
+}
+soundeffect = {
+	name = novykurs_super
+	volume = 0.5
+	sounds = {
+		sound = novykurs_super
+	} 
+}
+soundeffect = {
+	name = mladorossi_super
+	volume = 0.5
+	sounds = {
+		sound = mladorossi_super
+	} 
+}
+soundeffect = {
+	name = diterikhs_super
+	volume = 0.5
+	sounds = {
+		sound = diterikhs_super
+	} 
+}
+soundeffect = {
+	name = irreal_super
+	volume = 0.5
+	sounds = {
+		sound = irreal_super
+	}
+}
+soundeffect = {
+	name = churchill_super
+	volume = 0.5
+	sounds = {
+		sound = churchill_super
+	}
+}
+soundeffect = {
+	name = kali_super
+	volume = 0.5
+	sounds = {
+		sound = kali_super
+	}
+}
+soundeffect = {
+	name = ruthenia_super
+	volume = 0.5
+	sounds = {
+		sound = ruthenia_super
+	}
+}
+soundeffect = {
+	name = savinkov_super
+	volume = 0.5
+	sounds = {
+		sound = savinkov_super
+	}
+}
+soundeffect = {
+	name = dor_super
+	volume = 0.5
+	sounds = {
+		sound = dor_super
+	}
+}
+soundeffect = {
+	name = collapse_super
+	volume = 0.5
+	sounds = {
+		sound = collapse_super
+	}
+}
+soundeffect = {
+	name = dev_super
+	sounds = {
+		sound = dev_super
+	}
+}
+soundeffect = {
+	name = spain_super
+    volume = 0.5
+	sounds = {
+		sound = spain_super
+	}
+}
+soundeffect = {
+	name = solidarist_super
+	volume = 0.5
+	sounds = {
+		sound = solidarist_super
+	}
+}
+soundeffect = {
+	name = scythia_super
+    volume = 0.5
+	sounds = {
+		sound = scythia_super
+	}
+}
+soundeffect = {
+	name = eurasia_super
+    volume = 0.5
+	sounds = {
+		sound = eurasia_super
+	}
+}
+soundeffect = {
+	name = kornilov_super
+    volume = 0.5
+	sounds = {
+		sound = kornilov_super
+	}
+}
+soundeffect = {
+	name = gulidov_super
+    volume = 0.5
+	sounds = {
+		sound = gulidov_super
+	}
+}
+soundeffect = {
+	name = ww2_super
+    volume = 0.5
+	sounds = {
+		sound = ww2_super
+	}
+}
+soundeffect = {
+	name = italian_victory_super
+    volume = 0.5
+	sounds = {
+		sound = italian_victory_super
+	}
+}
+soundeffect = {
+	name = balbo_super
+    volume = 0.5
+	sounds = {
+		sound = balbo_super
+	}
+}
+soundeffect = {
+	name = nitti_super
+    volume = 0.5
+	sounds = {
+		sound = nitti_super
+	}
+}
+soundeffect = {
+	name = bodin_super
+    volume = 0.5
+	sounds = {
+		sound = bodin_super
+	}
+}
+soundeffect = {
+	name = parsons_super
+    volume = 0.5
+	sounds = {
+		sound = parsons_super
+	}
+}
+soundeffect = {
+	name = hubbard_super
+    volume = 0.5
+	sounds = {
+		sound = hubbard_super
+	}
+}
+soundeffect = {
+	name = sinclair_super
+    volume = 0.5
+	sounds = {
+		sound = sinclair_super
+	}
+}
+soundeffect = {
+	name = sinclair_moderate_super
+    volume = 0.5
+	sounds = {
+		sound = sinclair_moderate_super
+	}
+}
+soundeffect = {
+	name = libs_super
+    volume = 0.5
+	sounds = {
+		sound = libs_super
+	}
+}
+soundeffect = {
+	name = oln_super
+    volume = 0.5
+	sounds = {
+		sound = oln_super
+	}
+}
+soundeffect = {
+	name = tri_super
+    volume = 0.5
+	sounds = {
+		sound = tri_super
+	}
+}
+soundeffect = {
+	name = kamenev_super
+    volume = 0.5
+	sounds = {
+		sound = kamenev_super
+	}
+}
+soundeffect = {
+	name = hyperborea_theme
+	sounds = {
+		sound = hyperborea_theme
+	}
+}
+soundeffect = {
+	name = sam_and_max_theme
+    volume = 0.7
+	sounds = {
+		sound = sam_and_max_theme
+	}
+}
+soundeffect = {
+	name = barchenko_super
+    volume = 0.5
+	sounds = {
+		sound = barchenko_super
+	}
+}
+soundeffect = {
+	name = bokii_super
+    volume = 0.5
+	sounds = {
+		sound = bokii_super
+	}
+}
+soundeffect = {
+	name = gajda_super
+    volume = 0.5
+	sounds = {
+		sound = gajda_super
+	}
+}
+soundeffect = {
+	name = khlebnikov_super
+    volume = 0.5
+	sounds = {
+		sound = khlebnikov_super
+	}
+}
+soundeffect = {
+	name = mayakovsky_super
+    volume = 0.5
+	sounds = {
+		sound = mayakovsky_super
+	}
+}
+soundeffect = {
+	name = mirsky_super
+    volume = 0.5
+	sounds = {
+		sound = mirsky_super
+	}
+}
+soundeffect = {
+	name = rasputin_super
+    volume = 0.5
+	sounds = {
+		sound = rasputin_super
+	}
+}
+soundeffect = {
+	name = bogdanov_super
+    volume = 0.5
+	sounds = {
+		sound = bogdanov_super
+	}
+}
+soundeffect = {
+	name = harbin_super
+	volume = 0.5
+	sounds = { 
+		sound = harbin_super
+	}
+}
+soundeffect = {
+	name = merkulov_super
+	volume = 0.5
+	sounds = { 
+		sound = merkulov_super
+	}
+}
+soundeffect = {
+	name = boldyrev_super
+	volume = 0.5
+	sounds = { 
+		sound = boldyrev_super
+	}
+}
+
+soundeffect = {
+	name = jpr_super
+	volume = 0.5
+	sounds = { 
+		sound = jpr_super
+	}
+}
+
+soundeffect = {
+	name = jpn_chinavictory_super
+	volume = 0.5
+	sounds = { 
+		sound = jpn_chinavictory_super
+	}
+}
+soundeffect = {
+	name = ppr_super
+	volume = 0.5
+	sounds = { 
+		sound = ppr_super
+	}
+}
+soundeffect = {
+	name = severyanin_super
+	volume = 0.5
+	sounds = { 
+		sound = severyanin_super
+	}
+}
+soundeffect = {
+	name = muravyev_super
+	volume = 0.5
+	sounds = { 
+		sound = muravyev_super
+	}
+}
+soundeffect = {
+	name = rodz_super
+	volume = 0.5
+	sounds = { 
+		sound = rodz_super
+	}
+}
+soundeffect = {
+	name = yaroslavsky_super
+	volume = 0.5
+	sounds = { 
+		sound = yaroslavsky_super
+	}
+}
+soundeffect = {
+	name = bandera_super
+	volume = 0.5
+	sounds = { 
+		sound = bandera_super
+	}
+}
+soundeffect = {
+	name = stalin_super
+	volume = 0.5
+	sounds = { 
+		sound = stalin_super
+	}
+}

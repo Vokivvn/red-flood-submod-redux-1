@@ -1,0 +1,6 @@
+﻿
+air_wings = {
+
+	### The AUS planes are in the ITA_air file because they won't load here, idk why
+
+}

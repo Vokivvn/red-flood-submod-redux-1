@@ -1,0 +1,32 @@
+state={
+	id=74
+	name="STATE_74"
+	manpower = 820000
+
+	state_category = rural
+
+
+	history={
+		owner = AUS
+		add_core_of = AUS
+		victory_points = { 3583 5 }
+		victory_points = { 6485 3 }
+		buildings = {
+			infrastructure = 3
+			arms_factory = 1
+			421={
+				bunker = 5
+			}
+			6485={
+				bunker = 5
+			}
+			3583={
+				bunker = 5
+			}
+		}
+		add_claim_by = CZE
+	}
+	provinces= {
+		421 3414 3583 6485
+ 	}
+}

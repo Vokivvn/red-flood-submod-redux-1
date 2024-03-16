@@ -1,0 +1,46 @@
+add_namespace = mali
+
+#debug events#
+
+country_event = {
+	id = mali.999
+	title = mali.999.t
+	desc = mali.999.desc
+	picture = GFX_report_event_MLI_hama_death
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = mali.999.a
+	}
+}
+country_event = {
+	id = mali.1000
+	title = mali.1000.t
+	desc = mali.1000.desc
+	picture = GFX_report_event_MLI_hama_death
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = mali.1000.a
+	}
+}
+country_event = {
+	id = mali.1001
+	title = mali.1001.t
+	desc = mali.1001.desc
+	picture = GFX_report_event_MLI_hama_journal
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = mali.1001.a
+		set_politics = {
+			ruling_party = anarchism
+		}
+		promote_character = MLI_anarchy
+		set_party_name = { 
+			ideology = anarchism
+			long_name = MLI_chaos_party_long
+			name = MLI_chaos_party 
+		}
+	}
+}

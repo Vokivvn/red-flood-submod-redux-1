@@ -1,0 +1,32 @@
+﻿l_english:
+#COUNTRY NAME#
+
+#PARTIES#
+#LEADER DESCRITIONS#
+#IDEAS#
+UGD_guerilla_warfare:0 "Guerilla Warfare"
+UGD_guerilla_warfare_desc:0 ""
+#CUSTOM TOOLTIPS AND FLAGS#
+UGD_tanzania_popular_socialism:0 "Popular Republic of Tanganyika"
+UGD_tanzania_popular_socialism_DEF:0 "the Popular Republic of Tanganyika"
+UGD_tanzania_popular_socialism_ADJ:0 "Tanganyikan"
+
+
+#DECISIONS (1.5 Update)#
+#FOCUSES#
+#EVENTS#
+uganda.1.t:0 "Marxist rebels in Tanganyika"
+uganda.1.desc:0 ""
+uganda.1.a:0 "We must crush these rebels."
+uganda.1.b:0 "Africa will be free!(Play as Tanganyika)"
+uganda.2.t:0 "Rebels seize Stanleyville"
+uganda.2.desc:0 ""
+uganda.2.a:0 "We will aid the British."
+uganda.2.b:0 "We must let it go."
+uganda.3.t:0 "African Marxists make massive gains"
+uganda.3.desc:0 ""
+uganda.3.a:0 "This war is not worth it, call for peace."
+uganda.3.b:0 "We will not cede another inch!"
+uganda.4.t:0 "England seeks peace."
+uganda.4.desc:0 ""
+uganda.4.a:0 "Make it so."

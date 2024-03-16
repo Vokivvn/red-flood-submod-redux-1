@@ -1,0 +1,78 @@
+﻿capital = 431
+set_stability = 0.3
+set_war_support = 0.3
+
+oob = "BIH"
+
+set_research_slots = 2
+
+set_convoys = 75
+
+add_ideas = {
+	RAJ_shared_economy
+	low_economic_mobilisation
+	BIH_home_of_the_congress
+	BIH_young_army
+}
+
+set_technology = {
+	infantry_weapons = 1
+	tech_support = 1
+	tech_recon = 1
+	tech_engineers = 1
+	gw_artillery = 1
+	basic_train = 1
+	tech_trucks =1
+	motorised_infantry = 1
+}
+
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+	set_technology = {
+		iw_small_airframe = 1
+		aa_lmg = 1
+		aa_cannon_1 = 1
+		early_bombs = 1
+		engines_1 = 1
+	}
+}
+if = {
+	limit = { NOT = { has_dlc = "By Blood Alone" } }
+	set_technology = {
+		early_fighter = 1
+		CAS1 = 1
+	}
+}
+
+set_politics = {
+	ruling_party = progressivism
+	last_election = "1933.10.25"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	vanguard_socialism = 2
+	popular_socialism = 3
+	anarchism = 0
+	revisionist_socialism = 15
+	progressivism = 60
+	liberalism = 5
+	conservatism = 10
+	right_authoritarianism = 5
+	despotism = 0
+	reactionism = 0
+	accelerationism = 0
+}
+
+recruit_character = BIH_subhas_chandra_bose
+recruit_character = BIH_Sarojini_Naidu
+recruit_character = BIH_Chakravarti_Rajagopalachari
+recruit_character = BIH_Chittaranjan_Das
+recruit_character = BIH_Basawon_Singh
+recruit_character = BIH_Minoo_Masani
+recruit_character = BIH_Acharya_Narendra_Deva
+recruit_character = BIH_Ram_Manohar_Lohia
+recruit_character = BIH_Yusuf_Meherally
+recruit_character = BIH_Kamaladevi_Chattopadhyay
+recruit_character = BIH_Jayaprakash_Narayan

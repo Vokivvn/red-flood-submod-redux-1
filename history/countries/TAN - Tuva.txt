@@ -1,0 +1,105 @@
+﻿capital = 329
+oob = "TAN"
+
+set_research_slots = 3
+
+set_country_flag = is_russian_warlord
+
+set_cosmetic_tag = TAN_subject
+
+diplomatic_relation = {
+	country = RUS
+	relation = military_access
+	active = yes
+}
+
+add_ideas = {
+	TAN_religious_tensions
+	TAN_divided_tribes
+	TAN_guerilla_army
+	TAN_industrial_dinosaur
+	limited_conscription
+	export_focus
+	low_economic_mobilisation
+}
+
+add_manpower = 25000
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	support_weapons = 1
+	tech_support = 1
+	gw_artillery = 1
+	transport = 1
+}
+
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+	set_technology = {
+		iw_small_airframe = 1
+		aa_lmg = 1
+		aa_cannon_1 = 1
+		early_bombs = 1
+		engines_1 = 1
+	}
+}
+if = {
+	limit = { NOT = { has_dlc = "By Blood Alone" } }
+	set_technology = {
+		early_fighter = 1
+		CAS1 = 1
+	}
+}
+
+set_politics = {
+	ruling_party = reactionism
+	last_election = "1933.10.25"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	vanguard_socialism = 0
+	popular_socialism = 0
+	anarchism = 0
+	revisionist_socialism = 0
+	progressivism = 0
+	liberalism = 0
+	conservatism = 10
+	right_authoritarianism = 10
+	despotism = 35
+	reactionism = 45
+	accelerationism = 0
+}
+
+recruit_character = TAN_Roman
+recruit_character = TAN_boris_rezukhin
+recruit_character = TAN_Shoigu
+recruit_character = TAN_Kuular
+recruit_character = TAN_nikolai_kazagrandi
+recruit_character = TAN_ferdynand_antoni_ossendowski
+recruit_character = TAN_gombozozhavyn_luvsantseveen
+
+add_equipment_to_stockpile = {
+	type = infantry_equipment_1
+	amount = 200
+}
+add_equipment_to_stockpile = {
+	type = artillery_equipment_1
+	amount = 15
+}
+add_equipment_to_stockpile = {
+	type = support_equipment_1
+	amount = 20
+}
+add_equipment_to_stockpile = {
+	type = motorized_equipment_1
+	amount = 100
+}
+add_equipment_to_stockpile = {
+	type = train_equipment_1
+	amount = 10
+}
+
+

@@ -1,0 +1,66 @@
+ideas = {
+	
+	country = {
+		BYJ_egg_dancer = {
+			
+			picture = Egg_dancing
+			
+			allowed = {
+				original_tag = BYJ
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = 0.05
+				opinion_gain_monthly_factor = 0.5
+			}
+		}
+		
+		BYJ_industrial_investment = {
+			
+			picture = Industrial_Investment
+			
+			allowed = {
+				original_tag = BYJ
+			}
+
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.1
+				industrial_capacity_factory = 0.1
+			}
+		}
+		
+		BYJ_fengtian_threat = {
+		
+			picture = Threats_from_Fengtian_army
+
+			allowed = {
+				original_tag = BYJ
+			}
+
+			modifier = {
+				political_power_gain = -0.1
+				stability_factor = -0.12
+			}
+		}
+		
+		BYJ_compulsory_education = {
+		
+			picture = Compulsory_education
+
+			allowed = {
+				original_tag = BYJ
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				research_speed_factor = 0.1
+				consumer_goods_expected_value = 0.05
+				conscription = -0.02
+			}
+		}
+		
+	}
+}

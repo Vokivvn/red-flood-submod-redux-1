@@ -1,0 +1,7642 @@
+###############
+# News Events #
+###############
+
+add_namespace = news
+
+country_event = {
+	id = news.intro
+	title = news.intro.t
+	desc = news.intro.d
+	picture = GFX_report_event_headless_statue
+	is_triggered_only = yes
+	fire_only_once = no
+	option = {
+		name = news.intro.a
+		country_event = annex.event
+	}
+}
+
+country_event = {	#le mans 1936
+	id = news.1
+	title = news.1.t
+	desc = news.1.d
+	picture = GFX_report_event_headless_statue
+
+	fire_only_once = yes
+	major = yes
+	trigger = {
+		date > 1936.6.6
+		OR = {
+			tag = ENG
+			tag = GER
+			tag = FRA
+			tag = ITA
+			tag = FIU
+			tag = USA
+		}
+	}
+
+	option = {
+		name = news.1.a
+		trigger = {
+			tag = FRA
+		}
+	}
+	option = {
+		name = news.1.b
+		trigger = {
+			tag = GER
+		}
+	}
+	option = {
+		name = news.1.c
+		trigger = {
+			OR = {
+				tag = ITA
+				tag = FIU
+			}
+		}
+	}
+	option = {
+		name = news.1.e
+		trigger = {
+			tag = USA
+		}
+	}
+	option = {
+		name = news.1.f
+		trigger = {
+			tag = ENG
+		}
+	}
+	option = {
+		name = news.1.g
+		trigger = {
+			NOT = {
+				tag = FRA
+				tag = GER
+				tag = USA
+				tag = ITA
+				tag = ENG
+			}
+			has_government = accelerationism
+		}
+	}
+	option = {
+		name = news.1.h
+		trigger = {
+			NOT = {
+				tag = FRA
+				tag = GER
+				tag = USA
+				tag = ITA
+				tag = ENG
+				has_government = accelerationism
+			}
+		}
+	}
+}
+
+news_event = {
+	id = news.2
+	title = news.2.t
+	desc = news.2.d
+	picture = GFX_AUS_red_week_globeheads
+
+	is_triggered_only = yes
+	major = yes
+	fire_only_once = no
+	option = {
+		name = news.2.a
+	}
+}
+
+news_event = {
+	id = news.3
+	title = news.3.t
+	desc = news.3.d
+	picture = GFX_ff_dead
+
+	is_triggered_only = yes
+	major = yes
+	fire_only_once = no
+	option = {
+		name = news.3.a
+	}
+}
+# Revolt in the Ottoman Empire
+news_event = {
+	id = news.4
+	title = news.4.t
+	desc = news.4.d
+	picture = GFX_world_event_TUR_ottoman_revolt
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = news.4.a
+		trigger = {
+			NOT = {
+				TAG = ITA
+				TAG = GRE
+				TAG = RUS
+				TAG = ENG
+			}
+		}
+	}
+	option = {
+		name = news.4.b
+		trigger = { 
+			OR = {
+				TAG = ITA
+				TAG = GRE
+				TAG = RUS
+				TAG = ENG
+			}
+		}
+	}
+}
+
+# The Death of Lenin
+news_event = {
+	id = news.5
+	title = news.5.t
+	desc = news.5.d
+	picture = GFX_lenin_dead
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.5.a
+	}
+}
+# Summer Coup War
+news_event = {
+	id = news.6
+	title = news.6.t
+	desc = news.6.d
+	picture = GFX_news_event_047
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = news.6.a
+	}
+}
+# France fails to seize Wallonia
+#news_event = {
+#	id = news.7
+#	title = news.7.t
+#	desc = news.7.d
+#	picture = GFX_news_event_fall_of_calais
+#
+#	major = yes
+#
+#	is_triggered_only = yes
+#
+#	option = {
+#		name = news.7.a
+#		trigger = {
+#			NOT = {
+#				has_government = accelerationism
+#			}
+#		}
+#	}
+#	option = {
+#		name = news.7.b
+#		trigger = { has_government = accelerationism }
+#	}
+#}
+# Brazil falls to Anarchy
+news_event = {
+	id = news.8
+	title = news.8.t
+	desc = news.8.d
+	picture = GFX_news_event_king_speech
+
+	is_triggered_only = yes
+	#fire_only_once = yes
+	major = yes
+
+	option = {
+		name = news.8.a
+		if = {
+			limit = {
+				is_ai = no
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+					}
+				}
+				set_global_flag = Super_Event_Visible
+				set_global_flag = BRA_brazil_collapse_Super_Event_Visible
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+						has_game_rule = {
+							rule = RF_superevents
+							option = no_audio
+						}
+					}
+				}
+				hidden_effect = {
+					sound_effect = "brazil_super"
+				}
+			}
+		}
+	}
+}
+#The Hobbit
+#news_event = {
+#	id = news.9
+#	title = news.9.t
+#	desc = news.9.desc
+#	picture = GFX_news_event_Hobbit
+#	is_triggered_only = yes
+#	fire_only_once = no
+#	major = yes
+#
+#	option = {
+#		name = news.9.a
+#
+#	}
+#
+#}
+#Japanese civil war erupts
+news_event = {
+	id = news.10
+	title = news.10.t
+	desc = news.10.desc
+	picture = GFX_report_JAP_drama_on_deck_wider
+
+	is_triggered_only = no
+	major = yes
+	fire_only_once = yes
+	trigger = {
+		JAP = {
+			has_war_with = JPR
+		}
+		ROOT = { is_ai = no }
+	}
+
+	option = {
+		name = news.10.a
+		if = {
+			limit = {
+				is_ai = no
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+					}
+				}
+				set_global_flag = Super_Event_Visible
+				set_global_flag = JAP_civil_war_Super_Event_Visible
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+						has_game_rule = {
+							rule = RF_superevents
+							option = no_audio
+						}
+					}
+				}
+				hidden_effect = {
+					sound_effect = "jpr_super"
+				}
+			}
+		}
+	}
+}
+#Japanese civil war ends - imps win
+news_event = {
+	id = news.1010
+	title = news.1010.t
+	desc = news.1010.desc
+	picture = GFX_report_JAP_drama_on_deck_wider
+
+	fire_only_once = yes
+	major = yes
+
+	trigger = {
+		has_global_flag = JAP_revolution
+		JPR = { exists = no }
+	}
+
+	option = {
+		name = news.1010.a
+		trigger = {
+			NOT = {
+				OR = {
+					has_government = vanguard_socialism
+					has_government = popular_socialism
+					has_government = revisionist_socialism
+					has_government = progressivism
+				}
+			}
+		}
+	}
+	option = {
+		name = news.1010.b
+		trigger = {
+			OR = {
+				has_government = vanguard_socialism
+				has_government = popular_socialism
+				has_government = revisionist_socialism
+				has_government = progressivism
+			}
+
+		}
+	}
+}
+#Japanese civil war ends - reds win
+news_event = {
+	id = news.1020
+	title = news.1020.t
+	desc = news.1020.desc
+	picture = GFX_report_JAP_drama_on_deck_wider
+
+	fire_only_once = yes
+	major = yes
+
+	trigger = {
+		has_global_flag = JAP_revolution
+		JAP = { exists = no }
+	}
+
+	option = {
+		name = news.1020.a
+		trigger = {
+			OR = {
+				has_government = vanguard_socialism
+				has_government = popular_socialism
+				has_government = revisionist_socialism
+				has_government = progressivism
+			}
+		}
+	}
+	option = {
+		name = news.1020.b
+		trigger = {
+			NOT = {
+				OR = {
+					has_government = vanguard_socialism
+					has_government = popular_socialism
+					has_government = revisionist_socialism
+					has_government = progressivism
+				}
+			}
+		}
+	}
+}
+
+
+#Famine in Zheltorossiya
+news_event = {
+	id = news.11
+	title = news.11.t
+	desc = news.11.desc
+	picture = GFX_report_ZHR_famine_news
+
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.11.a
+		trigger = {
+			NOT = {
+				OR = {
+					original_tag = RUS
+					original_tag = SRU
+					original_tag = DKB
+					original_tag = WRU
+					original_tag = ORE
+					original_tag = SIB
+					original_tag = KCK
+				}
+			}
+		}
+	}
+	option = {
+		name = news.11.b
+		trigger = {
+			OR = {
+				original_tag = RUS
+				original_tag = SRU
+				original_tag = DKB
+				original_tag = WRU
+				original_tag = ORE
+				original_tag = SIB
+				original_tag = KCK
+			}
+		}
+	}
+}
+
+#USA - republicans
+news_event = {
+	id = news.16
+	title = news.16.t
+	desc = news.16.desc
+	picture = GFX_USA_cutting
+
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.16.a
+	}
+}
+
+#USA - americans
+news_event = {
+	id = news.17
+	title = news.17.t
+	desc = news.17.desc
+	picture = GFX_USA_moody
+
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.17.a
+	}
+}
+
+#USA - jobless progressives
+news_event = {
+	id = news.18
+	title = news.18.t
+	desc = news.18.desc
+	picture = GFX_USA_cox
+
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.18.a
+	}
+}
+
+#USA - technocrats
+news_event = {
+	id = news.19
+	title = news.19.t
+	desc = news.19.desc
+	picture = GFX_USA_scott
+
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.19.a
+	}
+}
+
+#Goebbels Victory
+news_event = {
+	id = news.20
+	title = news.20.t
+	desc = news.20.desc
+	picture = GFX_report_GER_goebbels_victory
+
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.20.a
+	}
+}
+#Reventlow Victory
+news_event = {
+	id = news.173
+	title = news.173.t
+	desc = news.173.desc
+	picture = GFX_report_GER_reventlow_victory
+
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.173.a
+	}
+}
+#Radek Victory
+news_event = {
+	id = news.174
+	title = news.174.t
+	desc = news.174.desc
+	picture = GFX_report_GER_radek_victory
+
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.174.a
+	}
+}
+#SPD Victory
+news_event = {
+	id = news.175
+	title = news.175.t
+	desc = news.175.desc
+	picture = GFX_report_GER_spd_victory
+
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.175.a
+	}
+}
+#Popper Victory
+news_event = {
+	id = news.176
+	title = news.176.t
+	desc = news.176.desc
+	picture = GFX_report_GER_popper_victory
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.176.a
+	}
+}
+
+#Assasination of Kolchak
+news_event = {
+	id = news.21
+	title = news.21.t
+	desc = news.21.desc
+	picture = GFX_report_RUS_kolchak_is_ded
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.21.a
+		trigger = {
+			OR = {
+				has_government = reactionism
+				has_government = right_authoritarianism
+				has_government = despotism
+				has_government = conservatism
+			}
+		}
+	}
+	option = {
+		name = news.21.b
+		trigger = {
+			NOT = {
+				OR = {
+					has_government = reactionism
+					has_government = right_authoritarianism
+					has_government = despotism
+					has_government = conservatism
+				}
+			}
+		}
+	}
+}
+#############
+# MAG / MLG #
+#############
+#Malagasy Kingdom Victory
+news_event = {
+	id = news.22
+	title = news.22.t
+	desc = news.22.desc
+	picture = GFX_news_mag_futurism
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.22.a
+#		trigger = {
+#			OR = {
+#				has_government = popular_socialism
+#				has_government = anarchism
+#				has_government = vanguard_socialism
+#				has_government = revisionist_socialism
+#			}
+#		}
+	}
+#	option = {
+#		name = news.22.b
+#		trigger = {
+#			OR = {
+#				has_government = liberalism
+#				has_government = progressivism
+#				has_government = conservatism
+#				has_government = right_authoritarianism
+#			}
+#		}
+#	}
+#	option = {
+#		name = news.22.c
+#		trigger = {
+#			OR = {
+#				has_government = despotism
+#				has_government = reactionism
+#			}
+#		}
+#	}
+#	option = {
+#		name = news.22.d
+#		trigger = {
+#			has_government = accelerationism
+#		}
+#	}
+}
+news_event = {
+	id = news.23
+	title = news.23.t
+	desc = news.23.desc
+	picture = GFX_news_mag_socialism
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = news.23.a
+	}
+}
+
+#Malagasy Empire - LFN
+news_event = {
+	id = news.24
+	title = news.24.t
+	desc = news.24.desc
+	picture = GFX_news_mag_empire
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.24.a
+	}
+}
+#Malagasy Empire - HM
+news_event = {
+	id = news.25
+	title = news.25.t
+	desc = news.25.desc
+	picture = GFX_news_mag_regency
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.25.a
+	}
+}
+#Nationalist Coup
+news_event = {
+	id = news.54
+	title = news.54.t
+	desc = news.54.desc
+	picture = GFX_news_MAG_civilwar
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.54.a
+	}
+}
+news_event = {
+	id = news.26
+	title = news.26.t
+	desc = news.26.desc
+	picture = GFX_report_ASS_merc_takeover
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.26.a
+	}
+}
+news_event = {
+	id = news.27
+	title = news.27.t
+	desc = news.27.desc
+	picture = GFX_report_ASS_merc_takeover
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.27.a
+	}
+}
+news_event = {	#Tsar crowned RUS
+	id = news.29
+	title = news.29.t
+	desc = news.29.desc
+	picture = GFX_news_event_royal_visit
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.29.a
+	}
+}
+news_event = {	#Tsar crowned SRU
+	id = news.30
+	title = news.30.t
+	desc = news.30.desc
+	picture = GFX_news_event_royal_visit
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.30.a
+	}
+}
+
+#######################
+# RUSSIAN UNIFICATION #
+#######################
+
+news_event = {
+	id = news.31
+	title = news.31.t
+	desc = news.31.desc
+	picture = GFX_report_RUS_uni_rosenbaum
+
+	is_triggered_only = yes
+	major = yes
+	#fire_only_once = yes
+
+	option = {
+		name = news.31.a
+		if = {
+			limit = {
+				is_ai = no
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+					}
+				}
+				set_global_flag = Super_Event_Visible
+				set_global_flag = ZHR_rusuni_rosenbaum_Super_Event_Visible
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+						has_game_rule = {
+							rule = RF_superevents
+							option = no_audio
+						}
+					}
+				}
+				hidden_effect = {
+					sound_effect = "rosenbaum_super"
+				}
+			}
+		}
+	}
+}
+news_event = {
+	id = news.32
+	title = news.32.t
+	desc = news.32.desc
+	picture = GFX_report_RUS_uni_chapayev
+
+	is_triggered_only = yes
+	#fire_only_once = yes
+	major = yes
+	option = {
+		name = news.32.a
+		if = {
+			limit = {
+				is_ai = no
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+					}
+				}
+				set_global_flag = Super_Event_Visible
+				set_global_flag = ZHR_rusuni_chapayev_Super_Event_Visible
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+						has_game_rule = {
+							rule = RF_superevents
+							option = no_audio
+						}
+					}
+				}
+				hidden_effect = {
+					sound_effect = "chapayev_super"
+				}
+			}
+		}
+	}
+}
+news_event = {
+	id = news.33
+	title = news.33.t
+	desc = news.33.desc
+	picture = GFX_news_event_kamenev
+
+	is_triggered_only = yes
+	major = yes
+	#fire_only_once = yes
+
+	option = {
+		name = news.33.a
+		if = {
+			limit = {
+				is_ai = no
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+					}
+				}
+				set_global_flag = Super_Event_Visible
+				set_global_flag = ZHR_rusuni_trotsky_Super_Event_Visible
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+						has_game_rule = {
+							rule = RF_superevents
+							option = no_audio
+						}
+					}
+				}
+				hidden_effect = {
+					sound_effect = "trotsky_super"
+				}
+			}
+		}
+	}
+}
+news_event = {
+	id = news.34
+	title = news.34.t
+	desc = news.34.desc
+	picture = GFX_report_RUS_uni_gastev
+
+	is_triggered_only = yes
+	major = yes
+	#fire_only_once = yes
+
+	option = {
+		name = news.34.a
+		if = {
+			limit = {
+				is_ai = no
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+					}
+				}
+				set_global_flag = Super_Event_Visible
+				set_global_flag = ZHR_rusuni_gastev_Super_Event_Visible
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+						has_game_rule = {
+							rule = RF_superevents
+							option = no_audio
+						}
+					}
+				}
+				hidden_effect = {
+					sound_effect = "gastev_super"
+				}
+			}
+		}
+	}
+}
+news_event = {
+	id = news.35
+	title = news.35.t
+	desc = news.35.desc
+	picture = GFX_report_RUS_uni_kerensky
+
+	is_triggered_only = yes
+	major = yes
+	#fire_only_once = yes
+
+	option = {
+		name = news.35.a
+		if = {
+			limit = {
+				is_ai = no
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+					}
+				}
+				set_global_flag = Super_Event_Visible
+				set_global_flag = ZHR_rusuni_kerensky_Super_Event_Visible
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+						has_game_rule = {
+							rule = RF_superevents
+							option = no_audio
+						}
+					}
+				}
+				hidden_effect = {
+					sound_effect = "kerensky_super"
+				}
+			}
+		}
+	}
+}
+news_event = {
+	id = news.36
+	title = news.36.t
+	desc = news.36.desc
+	picture = GFX_report_RUS_uni_blackbloc
+
+	is_triggered_only = yes
+	major = yes
+	#fire_only_once = yes
+
+	option = {
+		name = news.36.a
+		if = {
+			limit = {
+				is_ai = no
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+					}
+				}
+				set_global_flag = Super_Event_Visible
+				set_global_flag = ZHR_rusuni_blackbloc_Super_Event_Visible
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+						has_game_rule = {
+							rule = RF_superevents
+							option = no_audio
+						}
+					}
+				}
+				hidden_effect = {
+					sound_effect = "blackbloc_super"
+					set_global_flag = rusuni_blac
+				}
+			}
+		}
+	}
+}
+news_event = {
+	id = news.37
+	title = news.37.t
+	desc = news.37.desc
+	picture = GFX_report_RUS_uni_diterikhs
+
+	is_triggered_only = yes
+	major = yes
+	#fire_only_once = yes
+	option = {
+		name = news.37.a
+		if = {
+			limit = {
+				is_ai = no
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+					}
+				}
+				set_global_flag = Super_Event_Visible
+				set_global_flag = ZHR_rusuni_diterikhs_Super_Event_Visible
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+						has_game_rule = {
+							rule = RF_superevents
+							option = no_audio
+						}
+					}
+				}
+				hidden_effect = {
+					sound_effect = "diterikhs_super"
+				}
+			}
+		}
+	}
+}
+news_event = {
+	id = news.38
+	title = news.38.t
+	desc = news.38.desc
+	picture = GFX_report_RUS_uni_mladorossi
+
+	major = yes
+	#fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = news.38.a
+		if = {
+			limit = {
+				is_ai = no
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+					}
+				}
+				set_global_flag = Super_Event_Visible
+				set_global_flag = ZHR_rusuni_mladorossi_Super_Event_Visible
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+						has_game_rule = {
+							rule = RF_superevents
+							option = no_audio
+						}
+					}
+				}
+				hidden_effect = {
+					sound_effect = "mladorossi_super"
+				}
+			}
+		}
+	}
+}
+news_event = {
+	id = news.39
+	title = news.39.t
+	desc = news.39.desc
+	picture = GFX_report_RUS_uni_novykurs
+
+	major = yes
+	#fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = news.39.a
+		if = {
+			limit = {
+				is_ai = no
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+					}
+				}
+				set_global_flag = Super_Event_Visible
+				set_global_flag = ZHR_rusuni_novykurs_Super_Event_Visible
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+						has_game_rule = {
+							rule = RF_superevents
+							option = no_audio
+						}
+					}
+				}
+				hidden_effect = {
+					sound_effect = "novykurs_super"
+				}
+			}
+		}
+	}
+}
+news_event = {
+	id = news.49
+	title = news.49.t
+	desc = news.49.desc
+	picture = GFX_report_RUS_uni_savinkov
+
+	#fire_only_once = yes
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.49.a
+		if = {
+			limit = {
+				is_ai = no
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+					}
+				}
+				set_global_flag = Super_Event_Visible
+				set_global_flag = RUS_uni_savinkov_Super_Event_Visible
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+						has_game_rule = {
+							rule = RF_superevents
+							option = no_audio
+						}
+					}
+				}
+				hidden_effect = {
+					sound_effect = "savinkov_super"
+				}
+			}
+		}
+	}
+}
+news_event = {
+	id = news.50
+	title = news.50.t
+	desc = news.50.desc
+	picture = GFX_report_RUS_uni_ruthenia
+
+	#fire_only_once = yes
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.50.a
+		if = {
+			limit = {
+				is_ai = no
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+					}
+				}
+				set_global_flag = Super_Event_Visible
+				set_global_flag = RUS_uni_ruthenia_Super_Event_Visible
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+						has_game_rule = {
+							rule = RF_superevents
+							option = no_audio
+						}
+					}
+				}
+				hidden_effect = {
+					sound_effect = "ruthenia_super"
+				}
+			}
+		}
+	}
+}
+news_event = { #death of russia
+	id = news.51
+	title = news.51.t
+	desc = news.51.desc
+	picture = GFX_report_RUS_uni_dor
+	
+	#fire_only_once = yes
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.51.a
+		if = {
+			limit = {
+				is_ai = no
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+					}
+				}
+				set_global_flag = Super_Event_Visible
+				set_global_flag = DOR_Super_Event_Visible
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+						has_game_rule = {
+							rule = RF_superevents
+							option = no_audio
+						}
+					}
+				}
+				hidden_effect = {
+					sound_effect = "dor_super"
+				}
+			}
+		}
+	}
+}
+news_event = {
+	id = news.53
+	title = news.53.t
+	desc = news.53.desc
+	picture = GFX_report_RUS_uni_dor
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.53.a
+		trigger = {
+			OR = {
+				has_government = conservatism
+				has_government = right_authoritarianism
+				has_government = liberalism
+				has_government = progressivism
+			}
+		}
+	}
+	option = {
+		name = news.53.b
+		trigger = {
+			OR = {
+			has_government = despotism
+			has_government = reactionism
+			}
+		}
+	}
+	option = {
+		name = news.53.c
+		trigger = {
+			OR = {
+			has_government = vanguard_socialism
+			has_government = popular_socialism
+			has_government = revisionist_socialism
+			has_government = anarchism
+			}
+		}
+	}
+	option = {
+		name = news.53.d
+		trigger = {
+		has_government = accelerationism
+		}
+	}
+	option = {
+		name = news.53.e
+		trigger = {
+		tag = FIN
+		}
+	}
+}
+news_event = {
+	id = news.65
+	title = news.65.t
+	desc = news.65.desc
+	picture = GFX_news_event_harbin
+
+	#fire_only_once = yes
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.65.a
+		if = {
+			limit = {
+				is_ai = no
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+					}
+				}
+				set_global_flag = Super_Event_Visible
+				set_global_flag = RUS_uni_harbin_Super_Event_Visible
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+						has_game_rule = {
+							rule = RF_superevents
+							option = no_audio
+						}
+					}
+				}
+				hidden_effect = {
+					sound_effect = "harbin_super"
+				}
+			}
+		}
+	}
+}
+news_event = {
+	id = news.66
+	title = news.66.t
+	desc = news.66.desc
+	picture = GFX_report_RUS_uni_nts
+
+	#fire_only_once = yes
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.66.a
+		if = {
+			limit = {
+				is_ai = no
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+					}
+				}
+				set_global_flag = Super_Event_Visible
+				set_global_flag = RUS_uni_solidarists_Super_Event_Visible
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+						has_game_rule = {
+							rule = RF_superevents
+							option = no_audio
+						}
+					}
+				}
+				hidden_effect = {
+					sound_effect = "solidarist_super"
+				}
+			}
+		}
+	}
+}
+news_event = {
+	id = news.67
+	title = news.67.t
+	desc = news.67.desc
+	picture = GFX_report_RUS_uni_scythia
+
+	major = yes
+	is_triggered_only = yes
+	#fire_only_once = yes
+
+	option = {
+		name = news.67.a
+		if = {
+			limit = {
+				is_ai = no
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+					}
+				}
+				set_global_flag = Super_Event_Visible
+				set_global_flag = RUS_uni_scythia_Super_Event_Visible
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+						has_game_rule = {
+							rule = RF_superevents
+							option = no_audio
+						}
+					}
+				}
+				hidden_effect = {
+					sound_effect = "scythia_super"
+				}
+			}
+		}
+	}
+}
+news_event = {
+	id = news.68
+	title = news.68.t
+	desc = news.68.desc
+	picture = GFX_report_RUS_uni_eurasia
+
+	#fire_only_once = yes
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.68.a
+		if = {
+			limit = {
+				is_ai = no
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+					}
+				}
+				set_global_flag = Super_Event_Visible
+				set_global_flag = RUS_uni_eurasia_Super_Event_Visible
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+						has_game_rule = {
+							rule = RF_superevents
+							option = no_audio
+						}
+					}
+				}
+				hidden_effect = {
+					sound_effect = "eurasia_super"
+				}
+			}
+		}
+	}
+}
+#news_event = {
+#	id = news.69
+#	title = news.69.t
+#	desc = news.69.desc
+#	picture = GFX_report_RUS_uni_kornilov
+#
+#	fire_only_once = yes
+#	major = yes
+#	is_triggered_only = yes
+#
+#	option = {
+#		name = news.69.a
+#
+#		if = {
+#			limit = {
+#				NOT = {
+#					has_game_rule = {
+#						rule = RF_superevents
+#						option = no
+#					}
+#				}
+#			}
+#			set_global_flag = Super_Event_Visible
+#			set_global_flag = RUS_uni_kornilov_Super_Event_Visible
+#		}
+#		if = {
+#			limit = {
+#				NOT = {
+#					has_game_rule = {
+#						rule = RF_superevents
+#						option = no
+#					}
+#					has_game_rule = {
+#						rule = RF_superevents
+#						option = no_audio
+#					}
+#				}
+#			}
+#			hidden_effect = {
+#				sound_effect = "kornilov_super"
+#			}
+#		}
+#	}
+#}
+#news_event = {
+#	id = news.70
+#	title = news.70.t
+#	desc = news.70.desc
+#	picture = GFX_report_RUS_uni_gulidov
+#
+#	fire_only_once = yes
+#	major = yes
+#	is_triggered_only = yes
+#
+#	option = {
+#		name = news.70.a
+#
+#		if = {
+#			limit = {
+#				NOT = {
+#					has_game_rule = {
+#						rule = RF_superevents
+#						option = no
+#					}
+#				}
+#			}
+#			set_global_flag = Super_Event_Visible
+#			set_global_flag = RUS_uni_gulidov_Super_Event_Visible
+#		}
+#		if = {
+#			limit = {
+#				NOT = {
+#					has_game_rule = {
+#						rule = RF_superevents
+#						option = no
+#					}
+#					has_game_rule = {
+#						rule = RF_superevents
+#						option = no_audio
+#					}
+#				}
+#			}
+#			hidden_effect = {
+#				sound_effect = "gulidov_super"
+#			}
+#		}
+#	}
+#}
+news_event = {
+	id = news.76
+	title = news.76.t
+	desc = news.76.desc
+	picture = GFX_news_event_milyukov
+
+	#fire_only_once = yes
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.76.a
+		if = {
+			limit = {
+				is_ai = no
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+					}
+				}
+				set_global_flag = Super_Event_Visible
+				set_global_flag = RUS_uni_Libs_Super_Event_Visible
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+						has_game_rule = {
+							rule = RF_superevents
+							option = no_audio
+						}
+					}
+				}
+				hidden_effect = {
+					sound_effect = "libs_super"
+				}
+			}
+		}
+	}
+}
+news_event = {
+	id = news.77
+	title = news.77.t
+	desc = news.77.desc
+	picture = GFX_news_event_spiridonova
+
+	fire_only_once = yes
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.77.a
+		if = {
+			limit = {
+				is_ai = no
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+					}
+				}
+				set_global_flag = Super_Event_Visible
+				set_global_flag = RUS_uni_Oln_Super_Event_Visible
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+						has_game_rule = {
+							rule = RF_superevents
+							option = no_audio
+						}
+					}
+				}
+				hidden_effect = {
+					sound_effect = "oln_super"
+				}
+			}
+		}
+	}
+}
+news_event = {
+	id = news.78
+	title = news.78.t
+	desc = news.78.desc
+	picture = GFX_news_event_triumvirate
+
+	fire_only_once = yes
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.78.a
+		if = {
+			limit = {
+				is_ai = no
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+					}
+				}
+				set_global_flag = Super_Event_Visible
+				set_global_flag = RUS_uni_Tri_Super_Event_Visible
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+						has_game_rule = {
+							rule = RF_superevents
+							option = no_audio
+						}
+					}
+				}
+				hidden_effect = {
+					sound_effect = "tri_super"
+				}
+			}
+		}
+	}
+}
+news_event = {
+	id = news.79
+	title = news.79.t
+	desc = news.79.desc
+	picture = GFX_report_RUS_uni_trotsky
+
+	#fire_only_once = yes
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.79.a
+		if = {
+			limit = {
+				is_ai = no
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+					}
+				}
+				set_global_flag = Super_Event_Visible
+				set_global_flag = RUS_uni_Kamenev_Super_Event_Visible
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+						has_game_rule = {
+							rule = RF_superevents
+							option = no_audio
+						}
+					}
+				}
+				hidden_effect = {
+					sound_effect = "kamenev_super"
+				}
+			}
+		}
+	}
+}
+#####################
+# CONGO UNIFICATION #
+#####################
+#Prussian Congo, Huttig
+news_event = {
+	id = news.40
+	title = news.40.t
+	desc = news.40.desc
+	picture = GFX_report_PCN_unification
+
+	is_triggered_only = no
+	fire_only_once = yes
+	major = yes
+	trigger = {
+		PCN = {
+			owns_state = 295
+			owns_state = 999
+			owns_state = 998
+			owns_state = 916
+			owns_state = 990
+			owns_state = 788
+			owns_state = 1001
+			owns_state = 1000
+			has_completed_focus = PCN_appointhuttig
+		}
+		ROOT = { is_ai = no }
+	}
+	option = {
+		name = news.40.a
+	}
+}
+#Nouvelle Belgique
+news_event = {
+	id = news.41
+	title = news.41.t
+	desc = news.41.desc
+	picture = GFX_report_NBE_unification
+
+	is_triggered_only = no
+	fire_only_once = yes
+	major = yes
+	trigger = {
+		NBE = {
+			owns_state = 295
+			owns_state = 999
+			owns_state = 998
+			owns_state = 916
+			owns_state = 990
+			owns_state = 788
+			owns_state = 1001
+			owns_state = 1000
+		}
+		ROOT = { is_ai = no }
+	}
+	option = {
+		name = news.41.a
+		}
+}
+#Kivu
+news_event = {
+	id = news.42
+	title = news.42.t
+	desc = news.42.desc
+	picture = GFX_report_KIV_unification
+
+	is_triggered_only = no
+	fire_only_once = yes
+
+	major = yes
+
+	trigger = {
+		KIV = {
+			owns_state = 295
+			owns_state = 999
+			owns_state = 998
+			owns_state = 916
+			owns_state = 990
+			owns_state = 788
+			owns_state = 1001
+			owns_state = 1000
+		}
+		ROOT = { is_ai = no }
+	}
+	option = {
+		name = news.42.a
+	}
+}
+#Congolese Republic
+news_event = {
+	id = news.43
+	title = news.43.t
+	desc = news.43.desc
+	picture = GFX_report_CFS_unification
+
+	is_triggered_only = no
+	fire_only_once = yes
+
+	major = yes
+
+	trigger = {
+		CFS = {
+			owns_state = 295
+			owns_state = 999
+			owns_state = 998
+			owns_state = 916
+			owns_state = 788
+			owns_state = 1001
+			owns_state = 1000
+		}
+		ROOT = { is_ai = no }
+	}
+	option = {
+		name = news.43.a
+	}
+}
+#PCN, Brody
+news_event = {
+	id = news.44
+	title = news.44.t
+	desc = news.44.desc
+	picture = GFX_report_PCN_unification
+
+	is_triggered_only = no
+	fire_only_once = yes
+
+	major = yes
+
+	trigger = {
+		PCN = {
+			owns_state = 295
+			owns_state = 999
+			owns_state = 998
+			owns_state = 916
+			owns_state = 990
+			owns_state = 788
+			owns_state = 1001
+			owns_state = 1000
+			has_completed_focus = PCN_appointbrody
+		}
+		ROOT = { is_ai = no }
+	}
+	option = {
+		name = news.44.a
+	}
+}
+
+##########
+# FRANCE #
+##########
+
+news_event = {
+	id = news.45
+	title = news.45.t
+	desc = news.45.desc
+	picture = GFX_report_FRA_etat_irreal
+
+	is_triggered_only = yes
+	#fire_only_once = yes
+	major = yes
+
+	option = {
+		name = news.45.a
+		trigger = {
+			NOT = {
+				has_government = accelerationism
+			}
+		}
+		if = {
+			limit = {
+				is_ai = no
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+					}
+				}
+				set_global_flag = Super_Event_Visible
+				set_global_flag = etat_irreal_Super_Event_Visible
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+						has_game_rule = {
+							rule = RF_superevents
+							option = no_audio
+						}
+					}
+				}
+				hidden_effect = {
+					sound_effect = "irreal_super"
+				}
+			}
+		}
+	}
+	option = {
+		name = news.45.b
+		trigger = {
+			has_government = accelerationism
+		}
+		if = {
+			limit = {
+				is_ai = no
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+					}
+				}
+				set_global_flag = Super_Event_Visible
+				set_global_flag = etat_irreal_Super_Event_Visible
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+						has_game_rule = {
+							rule = RF_superevents
+							option = no_audio
+						}
+					}
+				}
+				hidden_effect = {
+					sound_effect = "irreal_super"
+				}
+			}
+		}
+	}
+}
+#########
+# INDIA #
+#########
+#India unified under Churchill
+news_event = {
+	id = news.46
+	title = news.46.t
+	desc = news.46.desc
+	picture = GFX_news_event_eng_churchill_sign_treaty
+
+	#fire_only_once = yes
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.46.a
+		if = {
+			limit = {
+				is_ai = no
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+					}
+				}
+				set_global_flag = Super_Event_Visible
+				set_global_flag = UPI_Churchill_Super_Event_Visible
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+						has_game_rule = {
+							rule = RF_superevents
+							option = no_audio
+						}
+					}
+				}
+				hidden_effect = {
+					sound_effect = "churchill_super"
+				}
+			}
+		}
+	}
+}
+#India unified Churchill deposed
+news_event = {
+	id = news.47
+	title = news.47.t
+	desc = news.47.desc
+	picture = GFX_news_event_eng_decolonization
+
+	#fire_only_once = yes
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.47.a
+		if = {
+			limit = {
+				is_ai = no
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+					}
+				}
+				set_global_flag = Super_Event_Visible
+				set_global_flag = UPI_Churchill_Super_Event_Visible
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+						has_game_rule = {
+							rule = RF_superevents
+							option = no_audio
+						}
+					}
+				}
+				hidden_effect = {
+					sound_effect = "churchill_super"
+				}
+			}
+		}
+	}
+}
+#Avatar conquers Asia
+news_event = {
+	id = news.48
+	title = news.48.t
+	desc = news.48.desc
+	picture = GFX_news_event_indian_parade
+
+	#fire_only_once = yes
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.48.a
+		if = {
+			limit = {
+				is_ai = no
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+					}
+				}
+				set_global_flag = Super_Event_Visible
+				set_global_flag = UPI_Kali_Super_Event_Visible
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+						has_game_rule = {
+							rule = RF_superevents
+							option = no_audio
+						}
+					}
+				}
+				hidden_effect = {
+					sound_effect = "kali_super"
+				}
+			}
+		}
+	}
+}
+#########
+# U S A #
+#########
+news_event = {
+	id = news.52
+	title = news.52.t
+	desc = news.52.desc
+	picture = GFX_report_USA_collapse
+
+	#fire_only_once = yes
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.52.a
+		if = {
+			limit = {
+				is_ai = no
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+					}
+				}
+				set_global_flag = Super_Event_Visible
+				set_global_flag = USA_collapse_Super_Event_Visible
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+						has_game_rule = {
+							rule = RF_superevents
+							option = no_audio
+						}
+					}
+				}
+				hidden_effect = {
+					sound_effect = "collapse_super"
+				}
+			}
+		}
+	}
+}
+news_event = {
+	id = news.74
+	title = news.74.t
+	desc = news.74.desc
+	picture = GFX_usa_uni_bodin
+
+	#fire_only_once = yes
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.74.a
+		if = {
+			limit = {
+				is_ai = no
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+					}
+				}
+				set_global_flag = Super_Event_Visible
+				set_global_flag = usauni_bodin_Super_Event_Visible
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+						has_game_rule = {
+							rule = RF_superevents
+							option = no_audio
+						}
+					}
+				}
+				hidden_effect = {
+					sound_effect = "bodin_super"
+				}
+			}
+		}
+	}
+}
+news_event = {
+	id = news.196
+	title = news.196.t
+	desc = news.196.desc
+	picture = GFX_usa_uni_parsons
+
+	#fire_only_once = yes
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.196.a
+		if = {
+			limit = {
+				is_ai = no
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+					}
+				}
+				set_global_flag = Super_Event_Visible
+				set_global_flag = usauni_parsons_Super_Event_Visible
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+						has_game_rule = {
+							rule = RF_superevents
+							option = no_audio
+						}
+					}
+				}
+				hidden_effect = {
+					sound_effect = "parsons_super"
+				}
+			}
+		}
+	}
+}
+news_event = {
+	id = news.198
+	title = news.198.t
+	desc = news.198.desc
+	picture = GFX_usa_uni_hubbard
+
+	#fire_only_once = yes
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.198.a
+		if = {
+			limit = {
+				is_ai = no
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+					}
+				}
+				set_global_flag = Super_Event_Visible
+				set_global_flag = usauni_hubbard_Super_Event_Visible
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+						has_game_rule = {
+							rule = RF_superevents
+							option = no_audio
+						}
+					}
+				}
+				hidden_effect = {
+					sound_effect = "hubbard_super"
+				}
+			}
+		}
+	}
+}
+news_event = {
+	id = news.75
+	title = news.75.t
+	desc = news.75.desc
+	picture = GFX_usa_uni_sinclair
+
+	#fire_only_once = yes
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.75.a
+		if = {
+			limit = {
+				is_ai = no
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+					}
+				}
+				set_global_flag = Super_Event_Visible
+				set_global_flag = usauni_sinclair_Super_Event_Visible
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+						has_game_rule = {
+							rule = RF_superevents
+							option = no_audio
+						}
+					}
+				}
+				hidden_effect = {
+					sound_effect = "sinclair_super"
+				}
+			}
+		}
+	}
+}
+news_event = {
+	id = news.197
+	title = news.197.t
+	desc = news.197.desc
+	picture = GFX_usa_uni_sinclair_moderate
+
+	#fire_only_once = yes
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.197.a
+		if = {
+			limit = {
+				is_ai = no
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+					}
+				}
+				set_global_flag = Super_Event_Visible
+				set_global_flag = usauni_sinclair_moderate_Super_Event_Visible
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+						has_game_rule = {
+							rule = RF_superevents
+							option = no_audio
+						}
+					}
+				}
+				hidden_effect = {
+					sound_effect = "sinclair_moderate_super"
+				}
+			}
+		}
+	}
+}
+#############
+# S P A I N #
+#############
+news_event = {	#SCW
+	id = news.55
+	title = news.55.t
+	desc = news.55.desc
+	picture = SPR_civil_war
+
+	#fire_only_once = yes
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.55.a
+		if = {
+			limit = {
+				is_ai = no
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+					}
+				}
+				set_global_flag = Super_Event_Visible
+				set_global_flag = SPA_civil_war_Super_Event_Visible
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+						has_game_rule = {
+							rule = RF_superevents
+							option = no_audio
+						}
+					}
+				}
+				hidden_effect = {
+					sound_effect = "spain_super"
+				}
+			}
+		}
+	}
+}
+news_event = {	#SCW escalates CNT
+	id = news.56
+	title = news.56.t
+	desc = news.56.desc
+	picture = SPR_anarchist_rise
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.56.a
+	}
+}
+news_event = {	#SCW escalates again JONS
+	id = news.57
+	title = news.57.t
+	desc = news.57.desc
+	picture = SPR_jons_rise
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.57.a
+	}
+}
+news_event = {	#SCW FAL flips
+	id = news.58
+	title = news.58.t
+	desc = news.58.desc
+	picture = SPR_falange_coup
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.58.a
+	}
+}
+news_event = {	#SCW ends anarchists
+	id = news.59
+	title = news.59.t
+	desc = news.59.desc
+	picture = SPR_anarchist_victory
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.59.a
+		clr_global_flag = spain_cw
+	}
+}
+
+news_event = {	#SCW ends communists
+	id = news.60
+	title = news.60.t
+	desc = news.60.desc
+	picture = SPR_communist_victory
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.60.a
+		clr_global_flag = spain_cw
+	}
+}
+
+news_event = {	#SCW ends republicans
+	id = news.61
+	title = news.61.t
+	desc = news.61.desc
+	picture = SPR_republic_victory
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.61.a
+		clr_global_flag = spain_cw
+	}
+}
+
+news_event = {	#SCW ends falange
+	id = news.62
+	title = news.62.t
+	desc = news.62.desc
+	picture = SPR_falange_victory
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.62.a
+		clr_global_flag = spain_cw
+	}
+}
+
+news_event = {	#SCW ends jons
+	id = news.63
+	title = news.63.t
+	desc = news.63.desc
+	picture = SPR_jons_victory
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.63.a
+		clr_global_flag = spain_cw
+	}
+}
+
+news_event = {	#SCW ends natrej
+	id = news.64
+	title = news.64.t
+	desc = news.64.desc
+	picture = SPR_regenerationist_victory
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.64.a
+		clr_global_flag = spain_cw
+	}
+}
+news_event = {	#
+	id = news.199
+	title = news.199.t
+	desc = news.199.desc
+	picture = SPR_lerroux_election
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.199.a
+	}
+}
+news_event = {	#
+	id = news.200
+	title = news.200.t
+	desc = news.200.desc
+	picture = SPR_ortega_election
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.200.a
+	}
+}
+news_event = {	#
+	id = news.201
+	title = news.201.t
+	desc = news.201.desc
+	picture = SPR_rios_election
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.201.a
+	}
+}
+news_event = {	#
+	id = news.202
+	title = news.202.t
+	desc = news.202.desc
+	picture = SPR_lerroux_2_election
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.202.a
+	}
+}
+news_event = {	#
+	id = news.203
+	title = news.203.t
+	desc = news.203.desc
+	picture = SPR_ortega_2_election
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.203.a
+	}
+}
+news_event = {	#
+	id = news.204
+	title = news.204.t
+	desc = news.204.desc
+	picture = SPR_rios_2_election
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.204.a
+	}
+}
+news_event = {	#
+	id = news.205
+	title = news.205.t
+	desc = news.205.desc
+	picture = SPR_suner_election
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.205.a
+	}
+}
+news_event = {	#
+	id = news.206
+	title = news.206.t
+	desc = news.206.desc
+	picture = SPR_caballero_election
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.206.a
+	}
+}
+news_event = {	#
+	id = news.207
+	title = news.207.t
+	desc = news.207.desc
+	picture = SPR_hinojosa_election
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.207.a
+	}
+}
+news_event = {	#
+	id = news.208
+	title = news.208.t
+	desc = news.208.desc
+	picture = SPR_nin_election
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.208.a
+	}
+}
+news_event = {	#
+	id = news.209
+	title = news.209.t
+	desc = news.209.desc
+	picture = SPR_besteiro_election
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.209.a
+	}
+}
+news_event = {	#
+	id = news.210
+	title = news.210.t
+	desc = news.210.desc
+	picture = SPR_uribe_election
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.210.a
+	}
+}
+news_event = {	#
+	id = news.211
+	title = news.211.t
+	desc = news.211.desc
+	picture = SPR_hernandez_election
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.211.a
+	}
+}
+
+#############################
+###   I   T   A   L   Y   ###
+#############################
+news_event = {
+	id = news.71
+	title = news.71.t
+	desc = news.71.desc
+	picture = GFX_news_event_073
+
+	#fire_only_once = yes
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.71.a
+		if = {
+			limit = {
+				is_ai = no
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+					}
+				}
+				set_global_flag = Super_Event_Visible
+				set_global_flag = ITA_victory_Super_Event_Visible
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+						has_game_rule = {
+							rule = RF_superevents
+							option = no_audio
+						}
+					}
+				}
+				hidden_effect = {
+					sound_effect = "italian_victory_super"
+				}
+			}
+		}
+	}
+}
+news_event = {
+	id = news.72
+	title = news.72.t
+	desc = news.72.desc
+	picture = GFX_news_event_006
+
+	#fire_only_once = yes
+	major = yes
+	is_triggered_only = yes
+
+	trigger = {
+		all_of_scopes = {
+			array = ITA_euro_capitals
+			OR = {
+				is_owned_by = ITA
+				controller = {
+					overlord = {
+						original_tag = ITA
+					}
+				}
+			}
+		}
+		ITA = { has_government = despotism }
+	}
+
+	option = {
+		name = news.72.a
+		if = {
+			limit = {
+				is_ai = no
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+					}
+				}
+				set_global_flag = Super_Event_Visible
+				set_global_flag = ITA_balbo_Super_Event_Visible
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+						has_game_rule = {
+							rule = RF_superevents
+							option = no_audio
+						}
+					}
+				}
+				hidden_effect = {
+					sound_effect = "balbo_super"
+				}
+			}
+		}
+	}
+}
+news_event = {
+	id = news.73
+	title = news.73.t
+	desc = news.73.desc
+	picture = GFX_news_event_063
+
+	#fire_only_once = yes
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.73.a
+		if = {
+			limit = {
+				is_ai = no
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+					}
+				}
+				set_global_flag = Super_Event_Visible
+				set_global_flag = ITA_nitti_Super_Event_Visible
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+						has_game_rule = {
+							rule = RF_superevents
+							option = no_audio
+						}
+					}
+				}
+				hidden_effect = {
+					sound_effect = "nitti_super"
+				}
+			}
+		}
+	}
+}
+
+news_event = {
+	id = news.990
+	title = news.990.t
+	desc = news.990.desc
+	picture = GFX_shit_and_cum
+
+	#fire_only_once = yes
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.990.a
+		if = {
+			limit = {
+				is_ai = no
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+					}
+				}
+				set_global_flag = Super_Event_Visible
+				set_global_flag = DEV_civil_war_Super_Event_Visible
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+						has_game_rule = {
+							rule = RF_superevents
+							option = no_audio
+						}
+					}
+				}
+				hidden_effect = {
+					sound_effect = "dev_super"
+				}
+			}
+		}
+	}
+}
+news_event = {
+	id = news.992
+	title = news.992.t
+	desc = news.992.desc
+	picture = GFX_news_hyperborea
+
+	#fire_only_once = yes
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.992.a
+		if = {
+			limit = {
+				is_ai = no
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+					}
+				}
+				set_global_flag = Super_Event_Visible
+				set_global_flag = YUG_hyperborea_Super_Event_Visible
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+						has_game_rule = {
+							rule = RF_superevents
+							option = no_audio
+						}
+					}
+				}
+				hidden_effect = {
+					sound_effect = "hyperborea_theme"
+				}
+			}
+		}
+	}
+}
+#USA - Max
+news_event = {
+	id = news.170
+	title = news.170.t
+	desc = news.170.desc
+	picture = GFX_report_USA_election
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.170.a
+	}
+}
+news_event = {
+	id = news.991
+	title = news.991.t
+	desc = news.991.desc
+	picture = GFX_USA_max_speech
+
+	#fire_only_once = yes
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.991.a
+		if = {
+			limit = {
+				is_ai = no
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+					}
+				}
+				set_global_flag = Super_Event_Visible
+				set_global_flag = USA_max_Super_Event_Visible
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+						has_game_rule = {
+							rule = RF_superevents
+							option = no_audio
+						}
+					}
+				}
+				hidden_effect = {
+					sound_effect = "sam_and_max_theme"
+				}
+			}
+		}
+	}
+}
+#France at war with Germany
+news_event = {
+	id = news.100
+	title = news.100.t
+	desc = news.100.desc
+	picture = GFX_report_FRA_war_w_ger
+
+	#fire_only_once = yes
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.100.a
+		if = {
+			limit = {
+				is_ai = no
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+					}
+				}
+				set_global_flag = Super_Event_Visible
+				set_global_flag = ww2_Super_Event_Visible
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+						has_game_rule = {
+							rule = RF_superevents
+							option = no_audio
+						}
+					}
+				}
+				hidden_effect = {
+					sound_effect = "ww2_super"
+				}
+			}
+		}
+	}
+}
+#France at war with UK
+news_event = {
+	id = news.101
+	title = news.101.t
+	desc = news.101.desc
+	picture = GFX_report_FRA_war_w_ger
+
+	#fire_only_once = yes
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.101.a
+		if = {
+			limit = {
+				is_ai = no
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+					}
+				}
+				set_global_flag = Super_Event_Visible
+				set_global_flag = ww2_Super_Event_Visible
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+						has_game_rule = {
+							rule = RF_superevents
+							option = no_audio
+						}
+					}
+				}
+				hidden_effect = {
+					sound_effect = "ww2_super"
+				}
+			}
+		}
+	}
+}
+
+news_event = {	#Imp Korea Reclaims Japan
+	id = news.103
+	title = news.103.t
+	desc = news.103.desc
+	picture = GFX_news_event_050
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.103.a
+	}
+}
+news_event = {	#Imp Manchuria Reclaims Japan
+	id = news.104
+	title = news.104.t
+	desc = news.104.desc
+	picture = GFX_news_event_050
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.104.a
+	}
+}
+
+news_event = {	#Indochinese revolt
+	id = news.106
+	title = news.106.t
+	desc = news.106.desc
+	picture = GFX_annam_rising
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.106.a
+	}
+}
+news_event = {	#persian civil war
+	id = news.107
+	title = news.107.t
+	desc = news.107.desc
+	picture = GFX_PER_civil_war
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		trigger = {
+		OR = {
+			has_government = vanguard_socialism
+			has_government = popular_socialism
+			has_government = revisionist_socialism
+			has_government = anarchism
+		}
+	}
+		name = news.107.a
+
+	}
+	option = {
+		name = news.107.b
+		trigger = {
+			OR = {
+				has_government = liberalism
+				has_government = progressivism
+				has_government = conservatism
+				has_government = right_authoritarianism
+				has_government = despotism
+				has_government = reactionism
+			}
+		}
+	}
+	option = {
+		name = news.107.c
+		trigger = {
+		has_government = accelerationism
+		}
+	}
+}
+news_event = {	#third temple
+	id = news.108
+	title = news.108.t
+	desc = news.108.desc
+	picture = GFX_ISR_third_temple
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.108.a
+
+	}
+}
+news_event = {	#SDAP Danemarke
+	id = news.109
+	title = news.109.t
+	desc = news.109.desc
+	picture = GFX_DEN_SDAP_election
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.109.a
+
+	}
+}
+news_event = {	#RV Danemarke
+	id = news.110
+	title = news.110.t
+	desc = news.110.desc
+	picture = GFX_DEN_RV_election
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.110.a
+
+	}
+}
+news_event = {	#DKP Danemarke
+	id = news.111
+	title = news.111.t
+	desc = news.111.desc
+	picture = GFX_DEN_DKP_election
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.111.a
+
+	}
+}
+news_event = {	#S&R Danemarke
+	id = news.112
+	title = news.112.t
+	desc = news.112.desc
+	picture = GFX_DEN_S&R_election
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.112.a
+
+	}
+}
+news_event = {	#Fuck Parliament !!!
+	id = news.113
+	title = news.113.t
+	desc = news.113.desc
+	picture = GFX_DEN_DKP_parliament
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.113.a
+
+	}
+}
+news_event = {	#RSF coup
+	id = news.114
+	title = news.114.t
+	desc = news.114.desc
+	picture = GFX_DEN_RSF
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.114.a
+
+	}
+}
+news_event = {	#Sigma males take power
+	id = news.115
+	title = news.115.t
+	desc = news.115.desc
+	picture = GFX_DEN_SDAP_F_election
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.115.a
+
+	}
+}
+news_event = {	#Despooking Denmark
+	id = news.116
+	title = news.116.t
+	desc = news.116.desc
+	picture = GFX_DEN_USF_election
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.116.a
+
+	}
+}
+news_event = {	#LENIN IS YOUNG AGAIN :salute: :salute: :salute:
+	id = news.117
+	title = news.117.t
+	desc = news.117.desc
+	picture = GFX_DEN_DKP_B_election
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.117.a
+
+	}
+}
+
+news_event = { #Hoxhaaaaaaaaaaaaaaaaaa
+	id = news.118
+	title = news.118.t
+	desc = news.118.desc
+	picture = GFX_world_event_hoxha
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.118.a
+	}
+
+}
+news_event = { #Napoleon path real
+	id = news.119
+	title = news.119.t
+	desc = news.119.desc
+	picture = GFX_world_event_napoleon
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.119.a
+	}
+
+}
+
+news_event = { #fuad 2 but hungarian
+	id = news.120
+	title = news.120.t
+	desc = news.120.desc
+	picture = GFX_world_event_franz
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.120.a
+	}
+
+}
+news_event = { #we live in ghegeria
+	id = news.121
+	title = news.121.t
+	desc = news.121.desc
+	picture = GFX_world_event_kryeziu
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.121.a
+	}
+
+}
+
+news_event = { #carol abdicates
+	id = news.122
+	title = news.122.t
+	desc = news.122.desc
+	picture = GFX_world_event_carol_gone
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.122.a
+	}
+
+}
+news_event = { #libs in romania
+	id = news.123
+	title = news.123.t
+	desc = news.123.desc
+	picture = GFX_world_event_pnl
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.123.a
+	}
+
+}
+news_event = { #iorga in romania
+	id = news.124
+	title = news.124.t
+	desc = news.124.desc
+	picture = GFX_world_event_iorga
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.124.a
+	}
+
+}
+news_event = { #girlboss romania
+	id = news.125
+	title = news.125.t
+	desc = news.125.desc
+	picture = GFX_world_event_cantacuzino
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.125.a
+	}
+
+}
+news_event = { #romania unites, libs
+	id = news.126
+	title = news.126.t
+	desc = news.126.desc
+	picture = GFX_world_event_frn_uni
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.126.a
+	}
+
+}
+news_event = { #romania unites, frn
+	id = news.127
+	title = news.127.t
+	desc = news.127.desc
+	picture = GFX_world_event_frn_uni
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.127.a
+	}
+
+}
+news_event = { #romania unites, iorga
+	id = news.128
+	title = news.128.t
+	desc = news.128.desc
+	picture = GFX_world_event_iorga_uni
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.128.a
+	}
+
+}
+news_event = { #romania unites, cantacuzino
+	id = news.129
+	title = news.129.t
+	desc = news.129.desc
+	picture = GFX_world_event_cantacuzino_uni
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.129.a
+	}
+
+}
+news_event = { #romania unites, carol
+	id = news.130
+	title = news.130.t
+	desc = news.130.desc
+	picture = GFX_world_event_carol_uni
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.130.a
+	}
+
+}
+news_event = { #moldova unites, pcd
+	id = news.131
+	title = news.131.t
+	desc = news.131.desc
+	picture = GFX_world_event_popescu_uni
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.131.a
+	}
+
+}
+news_event = { #moldova unites, pm
+	id = news.132
+	title = news.132.t
+	desc = news.132.desc
+	picture = GFX_world_event_lupu_uni
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.132.a
+	}
+
+}
+news_event = { #moldova unites, crm
+	id = news.133
+	title = news.133.t
+	desc = news.133.desc
+	picture = GFX_world_event_crm_uni
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.133.a
+	}
+
+}
+news_event = { #moldova unites, legion
+	id = news.134
+	title = news.134.t
+	desc = news.134.desc
+	picture = GFX_world_event_codreanu_uni
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.134.a
+	}
+
+}
+news_event = { #moldova unites, anarchists
+	id = news.135
+	title = news.135.t
+	desc = news.135.desc
+	picture = GFX_world_event_anarch_uni
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.135.a
+	}
+
+}
+news_event = { #moldova unites, eliade
+	id = news.136
+	title = news.136.t
+	desc = news.136.desc
+	picture = GFX_world_event_eliade_uni
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.136.a
+	}
+
+}
+news_event = { #transylvania unites, pauker
+	id = news.137
+	title = news.137.t
+	desc = news.137.desc
+	picture = GFX_world_event_pauker_uni
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.137.a
+	}
+
+}
+news_event = { #transylvania unites, flureas
+	id = news.138
+	title = news.138.t
+	desc = news.138.desc
+	picture = GFX_world_event_flureas_uni
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.138.a
+	}
+
+}
+news_event = { #transylvania unites, crusade
+	id = news.139
+	title = news.139.t
+	desc = news.139.desc
+	picture = GFX_world_event_stelescu_uni
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.139.a
+	}
+
+}
+news_event = { #romanian-moldovan war
+	id = news.140
+	title = news.140.t
+	desc = news.140.desc
+	picture = GFX_world_event_mr_war
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.140.a
+	}
+
+}
+news_event = { #the second war of union - romania vs transylvania
+	id = news.141
+	title = news.141.t
+	desc = news.141.desc
+	picture = GFX_world_event_tr_war
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.141.a
+	}
+
+}
+news_event = { #the second war of union - moldova vs transylvania
+	id = news.142
+	title = news.142.t
+	desc = news.142.desc
+	picture = GFX_world_event_tr_war
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.142.a
+	}
+
+}
+news_event = { #lupu in moldova
+	id = news.143
+	title = news.143.t
+	desc = news.143.desc
+	picture = GFX_world_event_lupu
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.143.a
+	}
+
+}
+news_event = { #pcd moldova
+	id = news.144
+	title = news.144.t
+	desc = news.144.desc
+	picture = GFX_world_event_popescu
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.144.a
+	}
+
+}
+news_event = { #crm
+	id = news.145
+	title = news.145.t
+	desc = news.145.desc
+	picture = GFX_world_event_crm
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.145.a
+	}
+
+}
+news_event = { #legionnaire moldova
+	id = news.146
+	title = news.146.t
+	desc = news.146.desc
+	picture = GFX_world_event_codreanu
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.146.a
+	}
+
+}
+news_event = { #crm does a social experiment
+	id = news.147
+	title = news.147.t
+	desc = news.147.desc
+	picture = GFX_world_event_crm_2
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.147.a
+	}
+
+}
+news_event = { #codreanu blasted; eliadeia
+	id = news.148
+	title = news.148.t
+	desc = news.148.desc
+	picture = GFX_world_event_eliade
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.148.a
+	}
+
+}
+news_event = { #codreanu blasted; anarhia
+	id = news.149
+	title = news.149.t
+	desc = news.149.desc
+	picture = GFX_world_event_anarch
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.149.a
+	}
+
+}
+news_event = { #bye foris
+	id = news.150
+	title = news.150.t
+	desc = news.150.desc
+	picture = GFX_world_event_foris_gone
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.150.a
+	}
+
+}
+news_event = { #hi flureas
+	id = news.151
+	title = news.151.t
+	desc = news.151.desc
+	picture = GFX_world_event_flureas
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.151.a
+	}
+
+}
+news_event = { #TRAIASCA CRUCIADA!!!!!!!!
+	id = news.152
+	title = news.152.t
+	desc = news.152.desc
+	picture = GFX_world_event_stelescu
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.152.a
+	}
+
+}
+news_event = { #gajda uni
+	id = news.153
+	title = news.153.t
+	desc = news.153.desc
+	picture = GFX_news_event_gajda
+
+	#fire_only_once = yes
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.153.a
+		if = {
+			limit = {
+				is_ai = no
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+					}
+				}
+				set_global_flag = Super_Event_Visible
+				set_global_flag = RUS_uni_gajda_Super_Event_Visible
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+						has_game_rule = {
+							rule = RF_superevents
+							option = no_audio
+						}
+					}
+				}
+				hidden_effect = {
+					sound_effect = "gajda_super"
+				}
+			}
+		}
+	}
+
+}
+news_event = { #gajda uni - slavia
+	id = news.154
+	title = news.154.t
+	desc = news.154.desc
+	picture = GFX_news_event_gajda
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.154.a
+		
+	}
+
+}
+
+
+news_event = { #The Slovak Revolution
+	id = news.155
+	title = news.155.t
+	desc = news.155.desc
+	picture = GFX_SLO_revolution
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.155.a
+		trigger = {
+			has_socialist_government = yes
+			NOT = {
+				tag = HUN
+			}
+		}
+	}
+	option = {
+		name = news.155.b
+		trigger = {
+			tag = SLO
+		}
+	}
+	option = {
+		name = news.155.c
+		trigger = {
+			tag = HUN
+		}
+	}
+	option = {
+		name = news.155.d
+		trigger = {
+			NOT = {
+				has_socialist_government = yes
+				OR = {
+					tag = HUN
+					tag = SLO
+				}
+			}
+		}
+	}
+}
+news_event = { #The Slovak Revolution - Intervention
+	id = news.156
+	title = news.156.t
+	desc = news.156.desc
+	picture = GFX_HUN_intervention_slovakia
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.156.a
+		trigger = {
+			has_socialist_government = yes
+			NOT = {
+				tag = HUN
+			}
+		}
+	}
+	option = {
+		name = news.156.b
+		trigger = {
+			tag = SLO
+		}
+	}
+	option = {
+		name = news.156.c
+		trigger = {
+			tag = HUN
+		}
+	}
+	option = {
+		name = news.156.d
+		trigger = {
+			NOT = {
+				has_socialist_government = yes
+				OR = {
+					tag = HUN
+					tag = SLO
+				}
+			}
+		}
+	}
+
+}
+news_event = { #The Slovak Revolution - Intervention - Failure
+	id = news.157
+	title = news.157.t
+	desc = news.157.desc
+	picture = GFX_SLO_victory
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.157.a
+		trigger = {
+			has_socialist_government = yes
+			NOT = {
+				tag = HUN
+			}
+		}
+	}
+	option = {
+		name = news.157.b
+		trigger = {
+			tag = SLO
+		}
+	}
+	option = {
+		name = news.157.c
+		trigger = {
+			tag = HUN
+		}
+	}
+	option = {
+		name = news.157.d
+		trigger = {
+			NOT = {
+				has_socialist_government = yes
+				OR = {
+					tag = HUN
+					tag = SLO
+				}
+			}
+		}
+	}
+}
+
+news_event = { #bog uni
+	id = news.158
+	title = news.158.t
+	desc = news.158.desc
+	picture = GFX_news_event_vperdists
+
+	#fire_only_once = yes
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.158.a
+		if = {
+			limit = {
+				is_ai = no
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+					}
+				}
+				set_global_flag = Super_Event_Visible
+				set_global_flag = RUS_uni_Bogdanov_Super_Event_Visible
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+						has_game_rule = {
+							rule = RF_superevents
+							option = no_audio
+						}
+					}
+				}
+				hidden_effect = {
+					sound_effect = "bogdanov_super"
+				}
+			}
+		}
+	}
+
+}
+news_event = { #mayakovsky uni
+	id = news.159
+	title = news.159.t
+	desc = news.159.desc
+	picture = GFX_news_event_mayakovsky
+
+	#fire_only_once = yes
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.159.a
+		if = {
+			limit = {
+				is_ai = no
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+					}
+				}
+				set_global_flag = Super_Event_Visible
+				set_global_flag = RUS_uni_mayakovsky_Super_Event_Visible
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+						has_game_rule = {
+							rule = RF_superevents
+							option = no_audio
+						}
+					}
+				}
+				hidden_effect = {
+					sound_effect = "mayakovsky_super"
+				}
+			}
+		}
+	}
+
+}
+news_event = { #mirsky uni
+	id = news.160
+	title = news.160.t
+	desc = news.160.desc
+	picture = GFX_news_event_mirsky
+
+	#fire_only_once = yes
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.160.a
+		if = {
+			limit = {
+				is_ai = no
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+					}
+				}
+				set_global_flag = Super_Event_Visible
+				set_global_flag = RUS_uni_mirsky_Super_Event_Visible
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+						has_game_rule = {
+							rule = RF_superevents
+							option = no_audio
+						}
+					}
+				}
+				hidden_effect = {
+					sound_effect = "mirsky_super"
+				}
+			}
+		}
+	}
+
+}
+news_event = { #khleb uni
+	id = news.161
+	title = news.161.t
+	desc = news.161.desc
+	picture = GFX_news_event_khlebnikov
+
+	#fire_only_once = yes
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.161.a
+		if = {
+			limit = {
+				is_ai = no
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+					}
+				}
+				set_global_flag = Super_Event_Visible
+				set_global_flag = RUS_uni_khlebnikov_Super_Event_Visible
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+						has_game_rule = {
+							rule = RF_superevents
+							option = no_audio
+						}
+					}
+				}
+				hidden_effect = {
+					sound_effect = "khlebnikov_super"
+				}
+			}
+		}
+	}
+
+}
+news_event = { #bokii uni
+	id = news.162
+	title = news.162.t
+	desc = news.162.desc
+	picture = GFX_news_event_bokii
+
+	#fire_only_once = yes
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.162.a
+		if = {
+			limit = {
+				is_ai = no
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+					}
+				}
+				set_global_flag = Super_Event_Visible
+				set_global_flag = RUS_uni_bokii_Super_Event_Visible
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+						has_game_rule = {
+							rule = RF_superevents
+							option = no_audio
+						}
+					}
+				}
+				hidden_effect = {
+					sound_effect = "bokii_super"
+				}
+			}
+		}
+	}
+
+}
+news_event = { #barchenko uni
+	id = news.163
+	title = news.163.t
+	desc = news.163.desc
+	picture = GFX_news_event_barchenko
+
+	#fire_only_once = yes
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.163.a
+		if = {
+			limit = {
+				is_ai = no
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+					}
+				}
+				set_global_flag = Super_Event_Visible
+				set_global_flag = RUS_uni_barchenko_Super_Event_Visible
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+						has_game_rule = {
+							rule = RF_superevents
+							option = no_audio
+						}
+					}
+				}
+				hidden_effect = {
+					sound_effect = "barchenko_super"
+				}
+			}
+		}
+	}
+
+}
+news_event = { #rasputin uni
+	id = news.164
+	title = news.164.t
+	desc = news.164.desc
+	picture = GFX_news_event_rasputin
+
+	#fire_only_once = yes
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.164.a
+		if = {
+			limit = {
+				is_ai = no
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+					}
+				}
+				set_global_flag = Super_Event_Visible
+				set_global_flag = RUS_uni_rasputin_Super_Event_Visible
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+						has_game_rule = {
+							rule = RF_superevents
+							option = no_audio
+						}
+					}
+				}
+				hidden_effect = {
+					sound_effect = "rasputin_super"
+				}
+			}
+		}
+	}
+
+}
+
+#MRDM Electoral Victory
+news_event = {
+	id = news.165
+	title = news.165.t
+	desc = news.165.desc
+	picture = GFX_news_mlg_ralaimongo
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.165.a
+	}
+}
+#AKVM Electoral Victory
+news_event = {
+	id = news.166
+	title = news.166.t
+	desc = news.166.desc
+	picture = GFX_news_mlg_raseta
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.166.a
+	}
+}
+#PCM Electoral Victory
+news_event = {
+	id = news.167
+	title = news.167.t
+	desc = news.167.desc
+	picture = GFX_news_mlg_dussac
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.167.a
+	}
+}
+#USDM Electoral Victory
+news_event = {
+	id = news.168
+	title = news.168.t
+	desc = news.168.desc
+	picture = GFX_news_mlg_ravoahangy
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.168.a
+	}
+}
+
+news_event = {	#Japanese Victory in Indochina
+	id = news.171
+	title = news.171.t
+	desc = news.171.desc
+	picture = GFX_DAI_japanese_victory
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.171.a
+	}
+}
+news_event = {	#ELF Victory in Indochina
+	id = news.172
+	title = news.172.t
+	desc = news.172.desc
+	picture = GFX_DAI_elf_victory
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.172.a
+	}
+}
+news_event = { #merkulov uni
+	id = news.177
+	title = news.177.t
+	desc = news.177.desc
+	picture = GFX_news_event_merkulovs
+
+	#fire_only_once = yes
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = news.177.a
+		if = {
+			limit = {
+				is_ai = no
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+					}
+				}
+				set_global_flag = Super_Event_Visible
+				set_global_flag = RUS_uni_merkulovs_Super_Event_Visible
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+						has_game_rule = {
+							rule = RF_superevents
+							option = no_audio
+						}
+					}
+				}
+				hidden_effect = {
+					sound_effect = "merkulov_super"
+				}
+			}
+		}
+	}
+}
+news_event = {	#Korean Civil War
+	id = news.178
+	title = news.178.t
+	desc = news.178.d
+	picture = GFX_korean_uprising
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.178.a
+	}
+}
+
+news_event = {
+	id = news.179
+	title = news.179.t
+	desc = news.179.d
+	picture = GFX_world_event_balli_kombetar
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = news.179.a
+	}
+}
+
+news_event = {
+	id = news.180
+	title = news.180.t
+	desc = news.180.d
+	picture = GFX_world_event_hoxha
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = news.180.a
+	}
+}
+news_event = {
+	id = news.181
+	title = news.181.t
+	desc = news.181.d
+	picture = GFX_PRS_ludendorff_death
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = news.181.a
+	}
+}
+news_event = {
+	id = news.182
+	title = news.182.t
+	desc = news.182.d
+	picture = GFX_PRS_aborted_putsch
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = news.182.a
+	}
+}
+news_event = {
+	id = news.183
+	title = news.183.t
+	desc = news.183.d
+	picture = GFX_PRS_patriot_coup
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = news.183.a
+	}
+}
+news_event = {
+	id = news.184
+	title = news.184.t
+	desc = news.184.d
+	picture = GFX_PRS_lensch_victory
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = news.184.a
+	}
+}
+news_event = {
+	id = news.185
+	title = news.185.t
+	desc = news.185.d
+	picture = GFX_PRS_mann_victory
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = news.185.a
+	}
+}
+news_event = {
+	id = news.186
+	title = news.186.t
+	desc = news.186.d
+	picture = GFX_PRS_goerdeler_victory
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = news.186.a
+	}
+}
+news_event = {
+	id = news.187
+	title = news.187.t
+	desc = news.187.d
+	picture = GFX_PRS_jung_victory
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = news.187.a
+	}
+}
+news_event = {
+	id = news.188
+	title = news.188.t
+	desc = news.188.d
+	picture = GFX_PRS_mathilde_victory
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = news.188.a
+	}
+}
+news_event = {
+	id = news.189
+	title = news.189.t
+	desc = news.189.d
+	picture = GFX_PRS_hess_victory
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = news.189.a
+	}
+}
+
+news_event = {
+	id = news.190
+	title = news.190.t
+	desc = news.190.d
+	picture = GFX_YUG_zbor_victory
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = news.190.a
+	}
+}
+
+news_event = {
+	id = news.191
+	title = news.191.t
+	desc = news.191.d
+	picture = GFX_YUG_dvor_dominance
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = news.191.a
+	}
+}
+
+news_event = {
+	id = news.192
+	title = news.192.t
+	desc = news.192.d
+	picture = GFX_YUG_zenit_win
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = news.192.a
+	}
+}
+
+news_event = {
+	id = news.193
+	title = news.193.t
+	desc = news.193.d
+	picture = GFX_YUG_leontic_dominance
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = news.193.a
+	}
+}
+
+news_event = {
+	id = news.194
+	title = news.194.t
+	desc = news.194.desc
+	picture = GFX_KAV_kremlin_gone
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = news.194.a
+		trigger = {
+			has_government = accelerationism
+		}
+	}
+	option = {
+		name = news.194.b
+		trigger = {
+			has_government = anarchism
+		}
+	}
+	option = {
+		name = news.194.c
+		trigger = {
+			OR = {
+				has_government = vanguard_socialism
+				has_government = popular_socialism
+				has_government = revisionist_socialism
+			}
+		}
+	}
+	option = {
+		name = news.194.d
+		trigger = {
+			OR = {
+				has_government = progressivism
+				has_government = liberalism
+				has_government = conservatism
+				has_government = right_authoritarianism	
+			}
+		}
+	}
+	option = {
+		name = news.194.e
+		trigger = {
+			has_government = reactionism
+		}
+	}
+}
+news_event = {  
+	id = news.195
+	title = news.195.t
+	desc = news.195.d
+	#picture = 
+
+	major = yes
+	is_triggered_only = yes
+	#fire_only_once = yes
+
+	major = yes
+	option = {
+		name = news.195.a
+	}
+}
+
+## ANNAM ##
+
+news_event = {	#Phan Xich Long as Emperor
+	id = news.212
+	title = news.212.t
+	desc = news.212.desc
+	picture = GFX_DAI_ming_insurrection
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.212.a
+	}
+}
+news_event = {	#INVF Coup
+	id = news.213
+	title = news.213.t
+	desc = news.213.desc
+	picture = GFX_DAI_INVF_coup
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.213.a
+	}
+}
+news_event = {	#Coconut Monk
+	id = news.214
+	title = news.214.t
+	desc = news.214.desc
+	picture = GFX_DAI_coconut_news
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.214.a
+	}
+}
+news_event = {	#Cao Dai
+	id = news.215
+	title = news.215.t
+	desc = news.215.desc
+	picture = GFX_DAI_cao_dai_news
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.215.a
+	}
+}
+news_event = {	#Lutteurs
+	id = news.216
+	title = news.216.t
+	desc = news.216.desc
+	picture = GFX_DAI_lutteurs_news
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.216.a
+	}
+}
+news_event = {	#Sedang Empire
+	id = news.217
+	title = news.217.t
+	desc = news.217.desc
+	picture = GFX_DAI_sedang_news
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.217.a
+	}
+}
+news_event = {	#Diem Reigns
+	id = news.218
+	title = news.218.t
+	desc = news.218.desc
+	picture = GFX_DAI_diem_chairman
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.218.a
+	}
+}
+news_event = {	#Quoc Reigns
+	id = news.219
+	title = news.219.t
+	desc = news.219.desc
+	picture = GFX_DAI_quoc_chairman
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.219.a
+	}
+}
+news_event = {	#Syndies Coup
+	id = news.220
+	title = news.220.t
+	desc = news.220.desc
+	picture = GFX_DAI_syndicalists_coup
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.220.a
+	}
+}
+news_event = {	#VNQDD Coup
+	id = news.221
+	title = news.221.t
+	desc = news.221.desc
+	picture = GFX_DAI_vnqdd_coup
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.221.a
+	}
+}
+news_event = {	#Bao Dai Emperor
+	id = news.222
+	title = news.222.t
+	desc = news.222.desc
+	picture = GFX_DAI_bao_dai_throne
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.222.a
+	}
+}
+news_event = {	#Indochinese Reformation
+	id = news.223
+	title = news.223.t
+	desc = news.223.desc
+	picture = GFX_DAI_khoi_president
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.223.a
+	}
+}
+news_event = {	#Japanese Coup
+	id = news.224
+	title = news.224.t
+	desc = news.224.desc
+	picture = GFX_DAI_japanese_coup
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.224.a
+	}
+}
+news_event = {	#Total Banderite Victory
+	id = news.225
+	title = news.225.t
+	desc = news.225.desc
+	picture = GFX_UKR_bandera_victory
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.225.a
+		if = {
+			limit = {
+				is_ai = no
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+					}
+				}
+				set_global_flag = Super_Event_Visible
+				set_global_flag = UKR_uni_bandera_Super_Event_Visible
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+						has_game_rule = {
+							rule = RF_superevents
+							option = no_audio
+						}
+					}
+				}
+				hidden_effect = {
+					sound_effect = "bandera_super"
+				}
+			}
+		}
+	}
+}
+news_event = {	#OUN comes to power
+	id = news.226
+	title = news.226.t
+	desc = news.226.desc
+	picture = GFX_UKR_OUN_win
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.226.a
+	}
+}
+news_event = {	#Vynnchenko wins
+	id = news.227
+	title = news.227.t
+	desc = news.227.desc
+	picture = GFX_UKR_vynn_win
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.227.a
+	}
+}
+news_event = {	#Petlura wins
+	id = news.228
+	title = news.228.t
+	desc = news.228.desc
+	picture = GFX_UKR_petlura_win
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.228.a
+	}
+}
+news_event = {	#Knights win
+	id = news.229
+	title = news.229.t
+	desc = news.229.desc
+	picture = GFX_UKR_knights_win
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.229.a
+	}
+}
+news_event = {	#Semenko wins
+	id = news.230
+	title = news.230.t
+	desc = news.230.desc
+	picture = GFX_UKR_semenko_win
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.230.a
+	}
+}
+news_event = {	#Kaganovich wins
+	id = news.231
+	title = news.231.t
+	desc = news.231.desc
+	picture = GFX_UKR_kagan_win
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.231.a
+	}
+}
+
+news_event = {	#Caliph Cornelius wins
+	id = news.232
+	title = news.232.t
+	desc = news.232.desc
+	picture = GFX_world_event_MAR_caliph_victory
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.232.a
+	}
+}
+
+news_event = {	#Gay Jewish Masons win
+	id = news.233
+	title = news.233.t
+	desc = news.233.desc
+	picture = GFX_world_event_TUR_republic_victory
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.233.a
+	}
+}
+
+news_event = {	#Greek conservatives wins
+	id = news.234
+	title = news.234.t
+	desc = news.234.desc
+	picture = GFX_world_event_GRE_conservatives_win
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.234.a
+	}
+}
+news_event = {	#Greek liberals wins
+	id = news.235
+	title = news.235.t
+	desc = news.235.desc
+	picture = GFX_world_event_GRE_liberals_win
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.235.a
+	}
+}
+news_event = {	#Metaxas crisis
+	id = news.236
+	title = news.236.t
+	desc = news.236.desc
+	picture = GFX_world_event_GRE_metaxas_crisis
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.236.a
+	}
+}
+news_event = {	#Metaxas wins
+	id = news.237
+	title = news.237.t
+	desc = news.237.desc
+	picture = GFX_world_event_GRE_metaxas_win
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.237.a
+	}
+}
+news_event = {	#Greek socialist march
+	id = news.238
+	title = news.238.t
+	desc = news.238.desc
+	picture = GFX_world_event_GRE_socialist_march
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.238.a
+	}
+}
+news_event = {	#Neo-orphists wins
+	id = news.239
+	title = news.239.t
+	desc = news.239.desc
+	picture = GFX_world_event_GRE_orphists_win
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.239.a
+	}
+}
+news_event = {	#Futuro-surrealists wins
+	id = news.240
+	title = news.240.t
+	desc = news.240.desc
+	picture = GFX_world_event_GRE_surrealists_win
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.240.a
+	}
+}
+news_event = {	#Svolos wins
+	id = news.241
+	title = news.241.t
+	desc = news.241.desc
+	picture = GFX_world_event_GRE_svolos_win
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.241.a
+	}
+}
+news_event = {	#Leninists wins
+	id = news.242
+	title = news.242.t
+	desc = news.242.desc
+	picture = GFX_world_event_GRE_leninists_win
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.242.a
+	}
+}
+news_event = {	#Greek conservatives final
+	id = news.243
+	title = news.243.t
+	desc = news.243.desc
+	picture = GFX_world_event_GRE_conservatives_final
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.243.a
+	}
+}
+news_event = {	#Neo-orphists final
+	id = news.244
+	title = news.244.t
+	desc = news.244.desc
+	picture = GFX_world_event_GRE_orphists_final
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.244.a
+	}
+}
+news_event = {	#Futuro-surrealists final
+	id = news.245
+	title = news.245.t
+	desc = news.245.desc
+	picture = GFX_world_event_GRE_surrealists_final
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.245.a
+	}
+}
+news_event = {	#Svolos final
+	id = news.246
+	title = news.246.t
+	desc = news.246.desc
+	picture = GFX_world_event_GRE_svolos_final
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.246.a
+	}
+}
+news_event = {	#Leninists final
+	id = news.247
+	title = news.247.t
+	desc = news.247.desc
+	picture = GFX_world_event_GRE_leninists_final
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.247.a
+	}
+}
+news_event = {	#Greco-turkish war
+	id = news.248
+	title = news.248.t
+	desc = news.248.desc
+	picture = GFX_world_event_GRE_gre_turks_war
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.248.a
+	}
+}
+news_event = {	#Greek liberals megali
+	id = news.249
+	title = news.249.t
+	desc = news.249.desc
+	picture = GFX_world_event_GRE_liberals_megali
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.249.a
+	}
+}
+
+news_event = {	#Bulgarian mutiny
+	id = news.250
+	title = news.250.t
+	desc = news.250.desc
+	picture = GFX_world_event_BUL_bulgarian_mutiny
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.250.a
+	}
+}
+news_event = {	#Bulgarian chaos
+	id = news.251
+	title = news.251.t
+	desc = news.251.desc
+	picture = GFX_world_event_BUL_bulgarian_chaos
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.251.a
+	}
+}
+news_event = {	#Agrarists win
+	id = news.252
+	title = news.252.t
+	desc = news.252.desc
+	picture = GFX_world_event_BUL_agrarists_win
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.252.a
+	}
+}
+news_event = {	#Popsocs win
+	id = news.253
+	title = news.253.t
+	desc = news.253.desc
+	picture = GFX_world_event_BUL_popsocs_win
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.253.a
+	}
+}
+news_event = {	#Anarchists win
+	id = news.254
+	title = news.254.t
+	desc = news.254.desc
+	picture = GFX_world_event_BUL_anarchists_win
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.254.a
+	}
+}
+news_event = {	#Vansocs win
+	id = news.255
+	title = news.255.t
+	desc = news.255.desc
+	picture = GFX_world_event_BUL_vansocs_win
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.255.a
+	}
+}
+news_event = {	#Deunov win
+	id = news.256
+	title = news.256.t
+	desc = news.256.desc
+	picture = GFX_world_event_BUL_deunov_win
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.256.a
+	}
+}
+news_event = {	#Zlatarog win
+	id = news.257
+	title = news.257.t
+	desc = news.257.desc
+	picture = GFX_world_event_BUL_zlatarog_win
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.257.a
+	}
+}
+news_event = {	#Zveno win
+	id = news.258
+	title = news.258.t
+	desc = news.258.desc
+	picture = GFX_world_event_BUL_zveno_win
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.258.a
+	}
+}
+news_event = {	#Agrarists uni
+	id = news.259
+	title = news.259.t
+	desc = news.259.desc
+	picture = GFX_world_event_BUL_agrarists_uni
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.259.a
+	}
+}
+news_event = {	#Popsocs uni
+	id = news.260
+	title = news.260.t
+	desc = news.260.desc
+	picture = GFX_world_event_BUL_popsocs_uni
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.260.a
+	}
+}
+news_event = {	#Anarchists uni
+	id = news.261
+	title = news.261.t
+	desc = news.261.desc
+	picture = GFX_world_event_BUL_anarchists_uni
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.261.a
+	}
+}
+news_event = {	#Vansocs uni
+	id = news.262
+	title = news.262.t
+	desc = news.262.desc
+	picture = GFX_world_event_BUL_vansocs_uni
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.262.a
+	}
+}
+news_event = {	#Deunov uni
+	id = news.263
+	title = news.263.t
+	desc = news.263.desc
+	picture = GFX_world_event_BUL_deunov_uni
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.263.a
+	}
+}
+news_event = {	#Zlatarog uni
+	id = news.264
+	title = news.264.t
+	desc = news.264.desc
+	picture = GFX_world_event_BUL_zlatarog_uni
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.264.a
+	}
+}
+news_event = {	#Zveno uni
+	id = news.265
+	title = news.265.t
+	desc = news.265.desc
+	picture = GFX_world_event_BUL_zveno_uni
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.265.a
+	}
+}
+news_event = {	#Annenkov uni
+	id = news.266
+	title = news.266.t
+	desc = news.266.desc
+	picture = GFX_world_event_BUL_zveno_uni
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.266.a
+	}
+}
+news_event = {	#Malayan uprising
+	id = news.267
+	title = news.267.t
+	desc = news.267.desc
+	picture = GFX_world_event_MAL_malayan_uprising
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.267.a
+	}
+}
+news_event = {	#Malayan collapse
+	id = news.268
+	title = news.268.t
+	desc = news.268.desc
+	picture = GFX_world_event_MAL_malayan_collapse
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.268.a
+	}
+}
+news_event = {	#Malayan crushed
+	id = news.269
+	title = news.269.t
+	desc = news.269.desc
+	picture = GFX_world_event_MAL_malayan_crushed
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.269.a
+	}
+}
+news_event = {	#Malay coup
+	id = news.270
+	title = news.270.t
+	desc = news.270.desc
+	picture = GFX_world_event_RML_malay_coup
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.270.a
+	}
+}
+news_event = {	#Chinese countercoup
+	id = news.271
+	title = news.271.t
+	desc = news.271.desc
+	picture = GFX_world_event_RML_chinese_countercoup
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.271.a
+	}
+}
+news_event = {	#Onn elected
+	id = news.272
+	title = news.272.t
+	desc = news.272.desc
+	picture = GFX_world_event_MAL_onn_elected
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.272.a
+	}
+}
+news_event = {	#Zaaba elected
+	id = news.273
+	title = news.273.t
+	desc = news.273.desc
+	picture = GFX_world_event_MAL_zaaba_elected
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.273.a
+	}
+}
+news_event = {	#Kerensky gone xddd
+	id = news.274
+	title = news.274.t
+	desc = news.274.desc
+	picture = GFX_world_event_ZHR_no_kerensky
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.274.a
+	}
+}
+news_event = {	#Kerensky says fuck off
+	id = news.275
+	title = news.275.t
+	desc = news.275.desc
+	picture = GFX_world_event_ZHR_kerensky_lmao
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.275.a
+	}
+}
+
+news_event = {	#Danzig garrsion
+	id = news.276
+	title = news.276.t
+	desc = news.276.desc
+	picture = GFX_world_event_DAN_garrison
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.276.a
+	}
+}
+
+news_event = {	#Danzig SPD
+	id = news.277
+	title = news.277.t
+	desc = news.277.desc
+	picture = GFX_world_event_DAN_spd
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.277.a
+	}
+}
+
+news_event = {	#Danzig chuddies
+	id = news.278
+	title = news.278.t
+	desc = news.278.desc
+	picture = GFX_world_event_DAN_chuds
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.278.a
+	}
+}
+
+news_event = {	#Danzig poets
+	id = news.279
+	title = news.279.t
+	desc = news.279.desc
+	picture = GFX_world_event_DAN_poets
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.279.a
+	}
+}
+
+news_event = {	#Danzig Polix garrsion
+	id = news.280
+	title = news.280.t
+	desc = news.280.desc
+	picture = GFX_world_event_DAN_garrison1
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.280.a
+	}
+}
+
+news_event = {	#Danzig ultra chuds
+	id = news.281
+	title = news.281.t
+	desc = news.281.desc
+	picture = GFX_world_event_DAN_ultrachuds
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.281.a
+	}
+}
+
+news_event = {	#Danzig light chuds
+	id = news.282
+	title = news.282.t
+	desc = news.282.desc
+	picture = GFX_world_event_DAN_lightchuds
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.282.a
+	}
+}
+
+news_event = {	#Danzig hanseatic democracy
+	id = news.283
+	title = news.283.t
+	desc = news.283.desc
+	picture = GFX_world_event_DAN_democracy
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.283.a
+	}
+}
+
+news_event = {	#Danzig hanseatic dictatorship
+	id = news.284
+	title = news.284.t
+	desc = news.284.desc
+	picture = GFX_world_event_DAN_dictatorship
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.284.a
+	}
+}
+
+news_event = {	#Danzig hanseatic socialism
+	id = news.285
+	title = news.285.t
+	desc = news.285.desc
+	picture = GFX_world_event_DAN_socialism
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.285.a
+	}
+}
+
+news_event = {	#Danzig is annexed by prussia
+	id = news.286
+	title = news.286.t
+	desc = news.286.desc
+	picture = GFX_world_event_DAN_fall
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.286.a
+	}
+}
+
+news_event = {	#ZHR Triumvirate
+	id = news.287
+	title = news.287.t
+	desc = news.287.desc
+	picture = GFX_world_event_ZHR_triumvirate
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.287.a
+	}
+}
+
+news_event = {	#the bog
+	id = news.288
+	title = news.288.t
+	desc = news.288.desc
+	picture = GFX_world_event_ZHR_the_bog
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.288.a
+	}
+}
+
+news_event = {	#the gastev
+	id = news.289
+	title = news.289.t
+	desc = news.289.desc
+	picture = GFX_world_event_ZHR_the_gastev
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.289.a
+	}
+}
+
+news_event = {	#spiridon(ova) merkulov
+	id = news.290
+	title = news.290.t
+	desc = news.290.desc
+	picture = GFX_world_event_ZHR_spiridonova
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.290.a
+	}
+}
+
+news_event = {	#>kamenev
+	id = news.291
+	title = news.291.t
+	desc = news.291.desc
+	picture = GFX_world_event_ZHR_kamenev
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.291.a
+	}
+}
+
+news_event = {	#trotsky :DDD
+	id = news.292
+	title = news.292.t
+	desc = news.292.desc
+	picture = GFX_world_event_ZHR_trot
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.292.a
+	}
+}
+
+news_event = {	#chapayev
+	id = news.293
+	title = news.293.t
+	desc = news.293.desc
+	picture = GFX_world_event_ZHR_chap
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.293.a
+	}
+}
+
+news_event = {	#milyukov
+	id = news.294
+	title = news.294.t
+	desc = news.294.desc
+	picture = GFX_world_event_ZHR_milyukov
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.294.a
+	}
+}
+
+news_event = {	#rand
+	id = news.295
+	title = news.295.t
+	desc = news.295.desc
+	picture = GFX_world_event_ZHR_rand
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.295.a
+	}
+}
+
+news_event = {	#zhr collapses
+	id = news.296
+	title = news.296.t
+	desc = news.296.desc
+	picture = GFX_world_event_ZHR_bye
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.296.a
+	}
+}
+#############
+#	CHOONA	#
+#############
+news_event = {	#Hu is dead
+	id = news.297
+	title = news.297.t
+	desc = news.297.desc
+	picture = GFX_news_event_king_speech
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.297.a
+	}
+}
+
+news_event = {	#Beiyang Fractures
+	id = news.298
+	title = news.298.t
+	desc = news.298.desc
+	picture = GFX_news_event_king_speech
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.298.a
+	}
+}
+
+news_event = {	#The Republic Lives On
+	id = news.299
+	title = news.299.t
+	desc = news.299.desc
+	picture = GFX_news_event_king_speech
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.299.a
+	}
+}
+
+news_event = {	#Jiangxi Raid
+	id = news.300
+	title = news.300.t
+	desc = news.300.desc
+	picture = GFX_news_event_king_speech
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.300.a
+	}
+}
+
+news_event = {	#YCP Rules Sichuan
+	id = news.301
+	title = news.301.t
+	desc = news.301.desc
+	picture = GFX_news_event_king_speech
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.301.a
+	}
+}
+
+news_event = {	#CPC Rules Hunan
+	id = news.302
+	title = news.302.t
+	desc = news.302.desc
+	picture = GFX_news_event_king_speech
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.302.a
+	}
+}
+
+news_event = {	#Jingwei Unites the GMD
+	id = news.303
+	title = news.303.t
+	desc = news.303.desc
+	picture = GFX_news_event_king_speech
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.303.a
+	}
+}
+#CHOONA UNIS#
+news_event = {	#BYJ
+	id = news.304
+	title = news.304.t
+	desc = news.304.desc
+	picture = GFX_news_event_king_speech
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.304.a
+	}
+}
+news_event = {	#MAN
+	id = news.305
+	title = news.305.t
+	desc = news.305.desc
+	picture = GFX_news_event_king_speech
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.305.a
+	}
+}
+news_event = {	#KMT/RGMD
+	id = news.306
+	title = news.306.t
+	desc = news.306.desc
+	picture = GFX_news_event_king_speech
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.306.a
+	}
+}
+news_event = {	#FJN/LGMD
+	id = news.307
+	title = news.307.t
+	desc = news.307.desc
+	picture = GFX_news_event_king_speech
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.307.a
+	}
+}
+news_event = {	#FJN/UGMD
+	id = news.308
+	title = news.308.t
+	desc = news.308.desc
+	picture = GFX_news_event_king_speech
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.308.a
+	}
+}
+news_event = {	#SZC/YCP
+	id = news.309
+	title = news.309.t
+	desc = news.309.desc
+	picture = GFX_news_event_king_speech
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.309.a
+	}
+}
+news_event = {	#MNG/MING
+	id = news.310
+	title = news.310.t
+	desc = news.310.desc
+	picture = GFX_news_event_king_speech
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.310.a
+	}
+}
+news_event = {	#XIA/CPC
+	id = news.311
+	title = news.311.t
+	desc = news.311.desc
+	picture = GFX_news_event_king_speech
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.311.a
+	}
+}
+#SARAWAK#
+news_event = {	#Confederation
+	id = news.312
+	title = news.312.t
+	desc = news.312.desc
+	picture = GFX_world_event_SAR_anthony
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.312.a
+	}
+}
+news_event = {	#Sultanate
+	id = news.313
+	title = news.313.t
+	desc = news.313.desc
+	picture = GFX_world_event_SAR_macbryan
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.313.a
+	}
+}
+
+
+news_event = {	#Mises Joins the UK's Faction
+	id = news.314
+	title = news.314.t
+	desc = news.314.desc
+	picture = GFX_world_event_AUS_Mises_Britain
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		trigger = {
+			ROOT = {
+				NOT = {
+					AND = {
+						has_war_with = ENG
+						has_war_with = AUS
+					}
+				}
+			}
+		}
+		name = news.314.a
+	}
+	option = {
+		trigger = {
+			ROOT = {
+				OR = {
+					has_war_with = AUS
+					has_war_with = ENG
+				}
+			}
+		}
+		name = news.314.b
+	}
+}
+
+news_event = {	#Tan Malaka W
+	id = news.315
+	title = news.315.t
+	desc = news.315.desc
+	picture = GFX_world_event_RML_malaka
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.315.a
+	}
+}
+
+### SIAM ###
+
+news_event = {	#Boworadet win
+	id = news.316
+	title = news.316.t
+	desc = news.316.desc
+	picture = GFX_world_event_SIA_boworadet_win
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.316.a
+	}
+}
+news_event = {	#Boworadet lose
+	id = news.317
+	title = news.317.t
+	desc = news.317.desc
+	picture = GFX_world_event_SIA_boworadet_lose
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.317.a
+	}
+}
+news_event = {	#Phibun
+	id = news.318
+	title = news.318.t
+	desc = news.318.desc
+	picture = GFX_world_event_SIA_phibun_pm
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.318.a
+	}
+}
+news_event = {	#Banomyong
+	id = news.319
+	title = news.319.t
+	desc = news.319.desc
+	picture = GFX_world_event_SIA_pridi_pm
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.319.a
+	}
+}
+news_event = {	#Songsuradet
+	id = news.320
+	title = news.320.t
+	desc = news.320.desc
+	picture = GFX_world_event_SIA_songsuradet_pm
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.320.a
+	}
+}
+news_event = {	#Prajadhipok
+	id = news.321
+	title = news.321.t
+	desc = news.321.desc
+	picture = GFX_world_event_SIA_prajadhipok_crowned
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.321.a
+	}
+}
+news_event = {	#Sukhumbandhu
+	id = news.322
+	title = news.322.t
+	desc = news.322.desc
+	picture = GFX_world_event_SIA_sukhumbandhu_crowned
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.322.a
+	}
+}
+
+
+
+news_event = {	#Zhelto Army Coup
+	id = news.323
+	title = news.323.t
+	desc = news.323.desc
+	picture = GFX_world_event_RML_malaka
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.323.a
+	}
+}
+
+news_event = {	#anhui unites china
+	id = news.324
+	title = news.324.t
+	desc = news.324.desc
+	picture = GFX_world_event_MON_uni
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.324.a
+	}
+}
+
+news_event = {	#severyanin uni
+	id = news.325
+	title = news.325.t
+	desc = news.325.desc
+	picture = GFX_world_event_RUS_uni_severyanin
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.325.a
+		if = {
+			limit = {
+				is_ai = no
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+					}
+				}
+				set_global_flag = Super_Event_Visible
+				set_global_flag = RUS_uni_severyanin_Super_Event_Visible
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+						has_game_rule = {
+							rule = RF_superevents
+							option = no_audio
+						}
+					}
+				}
+				hidden_effect = {
+					sound_effect = "severyanin_super"
+				}
+			}
+		}
+	}
+}
+
+news_event = {	#stalin uni
+	id = news.326
+	title = news.326.t
+	desc = news.326.desc
+	picture = GFX_world_event_RUS_uni_stalin
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.326.a
+		if = {
+			limit = {
+				is_ai = no
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+					}
+				}
+				set_global_flag = Super_Event_Visible
+				set_global_flag = RUS_uni_stalin_Super_Event_Visible
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+						has_game_rule = {
+							rule = RF_superevents
+							option = no_audio
+						}
+					}
+				}
+				hidden_effect = {
+					sound_effect = "stalin_super"
+				}
+			}
+		}
+	}
+}
+
+news_event = {	#drodz scw win
+	id = news.327
+	title = news.327.t
+	desc = news.327.desc
+	picture = GFX_world_event_RUS_droz
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.327.a
+	}
+}
+
+news_event = {	#kolchak scw win
+	id = news.328
+	title = news.328.t
+	desc = news.328.desc
+	picture = GFX_world_event_RUS_kolchak
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.328.a
+	}
+}
+
+news_event = {	#mlads coup
+	id = news.329
+	title = news.329.t
+	desc = news.329.desc
+	picture = GFX_world_event_RUS_mlads
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.329.a
+	}
+}
+
+news_event = {	#shtabs coup
+	id = news.330
+	title = news.330.t
+	desc = news.330.desc
+	picture = GFX_world_event_RUS_shtabs
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.330.a
+	}
+}
+
+news_event = {	#birkeneid
+	id = news.331
+	title = news.331.t
+	desc = news.331.desc
+	picture = GFX_world_event_birkeneid
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.331.a
+	}
+}
+
+news_event = {	#carlsbad pact
+	id = news.332
+	title = news.332.t
+	desc = news.332.desc
+	picture = GFX_world_event_carlsbad
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.332.a
+	}
+}
+
+news_event = {	#holy alliance
+	id = news.333
+	title = news.333.t
+	desc = news.333.desc
+	picture = GFX_world_event_chudpakt
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.333.a
+	}
+}
+
+news_event = {	#gajda yakutia
+	id = news.334
+	title = news.334.t
+	desc = news.334.desc
+	picture = GFX_world_event_KCK_gajda
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.334.a
+	}
+}
+
+news_event = {	#yakut yakutia
+	id = news.335
+	title = news.335.t
+	desc = news.335.desc
+	picture = GFX_world_event_KCK_yakut
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.335.a
+	}
+}
+
+news_event = {	#gurkhin uni
+	id = news.336
+	title = news.336.t
+	desc = news.336.desc
+	picture = GFX_world_event_mongolia_gurkhin
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.336.a
+	}
+}
+
+news_event = {	#otb uni
+	id = news.337
+	title = news.337.t
+	desc = news.337.desc
+	picture = GFX_world_event_mongolia_otb
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.337.a
+	}
+}
+
+news_event = {	#semyonov uni
+	id = news.338
+	title = news.338.t
+	desc = news.338.desc
+	picture = GFX_world_event_mongolia_semyonov
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.338.a
+	}
+}
+
+news_event = {	#sternberg uni
+	id = news.339
+	title = news.339.t
+	desc = news.339.desc
+	picture = GFX_world_event_mongolia_sternberg
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.339.a
+	}
+}
+
+news_event = {	#anhui uni
+	id = news.340
+	title = news.340.t
+	desc = news.340.desc
+	picture = GFX_world_event_mongolia_anhui
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.340.a
+	}
+}
+
+news_event = {	#intermarium-russia war
+	id = news.341
+	title = news.341.t
+	desc = news.341.desc
+	picture = GFX_POL_intermarium_war
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.341.a
+	}
+}
+
+news_event = {	#ukraine-russia peaceful uni
+	id = news.342
+	title = news.342.t
+	desc = news.342.desc
+	picture = GFX_world_event_UKR_peace_russia
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.342.a
+	}
+}
+
+news_event = {	#Birkeneid intervention in ww2
+	id = news.343
+	title = news.343.t
+	desc = news.343.desc
+	picture = GFX_SWE_win
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.343.a
+	}
+}
+
+news_event = {	#Hajj War
+	id = news.344
+	title = news.344.t
+	desc = news.344.desc
+	picture = GFX_world_event_SAU_Hajji_War
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.344.a
+	}
+}
+
+news_event = {	#Yugoslav Tsardom
+	id = news.345
+	title = news.345.t
+	desc = news.345.desc
+	picture = GFX_world_event_YUG_tsardom
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.345.a
+	}
+}
+
+news_event = {	#Saudi-Oman war
+	id = news.346
+	title = news.346.t
+	desc = news.346.desc
+	picture = GFX_world_event_SAU_OMA
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.346.a
+	}
+}
+
+news_event = {	#Saudi-Yemen war
+	id = news.347
+	title = news.347.t
+	desc = news.347.desc
+	picture = GFX_world_event_SAU_YEM
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.347.a
+	}
+}
+
+news_event = {	#Saudi-Yemen war alt
+	id = news.3471
+	title = news.3471.t
+	desc = news.3471.desc
+	picture = GFX_world_event_SAU_YEM
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.3471.a
+	}
+}
+
+news_event = {	#Saudi victory
+	id = news.348
+	title = news.348.t
+	desc = news.348.desc
+	picture = GFX_world_event_SAU_winnage
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.348.a
+	}
+}
+
+news_event = {	#Hejaz victory
+	id = news.349
+	title = news.349.t
+	desc = news.349.desc
+	picture = GFX_world_event_ALJ_winnage
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.349.a
+	}
+}
+
+news_event = {	#Kingdom of Syria victory
+	id = news.350
+	title = news.350.t
+	desc = news.350.desc
+	picture = GFX_world_event_SYR_winnage
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.350.a
+	}
+}
+
+news_event = {	#SSNP victory
+	id = news.351
+	title = news.351.t
+	desc = news.351.desc
+	picture = GFX_world_event_SNP_winnage
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.351.a
+	}
+}
+
+news_event = {	#Israel wins for now
+	id = news.352
+	title = news.352.t
+	desc = news.352.desc
+	picture = GFX_world_event_ISR_winnage
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.352.a
+	}
+}
+
+news_event = {	#Israel crushed
+	id = news.353
+	title = news.353.t
+	desc = news.353.desc
+	picture = GFX_world_event_ISR_losage
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.353.a
+	}
+}
+
+news_event = {	#muravyev uni
+	id = news.354
+	title = news.354.t
+	desc = news.354.desc
+	picture = GFX_world_event_RUS_uni_muravyev
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.354.a
+		if = {
+			limit = {
+				is_ai = no
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+					}
+				}
+				set_global_flag = Super_Event_Visible
+				set_global_flag = RUS_uni_muravyev_Super_Event_Visible
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+						has_game_rule = {
+							rule = RF_superevents
+							option = no_audio
+						}
+					}
+				}
+				hidden_effect = {
+					sound_effect = "muravyev_super"
+				}
+			}
+		}
+	}
+}
+
+news_event = {	#yaroslavsky uni
+	id = news.355
+	title = news.355.t
+	desc = news.355.desc
+	picture = GFX_world_event_RUS_uni_yaroslavsky
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.355.a
+		if = {
+			limit = {
+				is_ai = no
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+					}
+				}
+				set_global_flag = Super_Event_Visible
+				set_global_flag = RUS_uni_yaroslavsky_Super_Event_Visible
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+						has_game_rule = {
+							rule = RF_superevents
+							option = no_audio
+						}
+					}
+				}
+				hidden_effect = {
+					sound_effect = "yaroslavsky_super"
+				}
+			}
+		}
+	}
+}
+
+news_event = {	#boldyrev uni
+	id = news.356
+	title = news.356.t
+	desc = news.356.desc
+	picture = GFX_world_event_RUS_uni_boldyrev
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.356.a
+		if = {
+			limit = {
+				is_ai = no
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+					}
+				}
+				set_global_flag = Super_Event_Visible
+				set_global_flag = ZHR_rusuni_boldyrev_Super_Event_Visible
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+						has_game_rule = {
+							rule = RF_superevents
+							option = no_audio
+						}
+					}
+				}
+				hidden_effect = {
+					sound_effect = "boldyrev_super"
+				}
+			}
+		}
+	}
+}
+
+news_event = {	#ppr uni
+	id = news.357
+	title = news.357.t
+	desc = news.357.desc
+	picture = GFX_world_event_RUS_uni_ppr
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.357.a
+		if = {
+			limit = {
+				is_ai = no
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+					}
+				}
+				set_global_flag = Super_Event_Visible
+				set_global_flag = RUS_uni_PPR_Super_Event_Visible
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+						has_game_rule = {
+							rule = RF_superevents
+							option = no_audio
+						}
+					}
+				}
+				hidden_effect = {
+					sound_effect = "ppr_super"
+				}
+			}
+		}
+	}
+}
+
+news_event = {	#rodz uni
+	id = news.358
+	title = news.358.t
+	desc = news.358.desc
+	picture = GFX_world_event_RUS_uni_rodzaevsky
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.358.a
+		if = {
+			limit = {
+				is_ai = no
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+					}
+				}
+				set_global_flag = Super_Event_Visible
+				set_global_flag = RUS_uni_rodz_Super_Event_Visible
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+						has_game_rule = {
+							rule = RF_superevents
+							option = no_audio
+						}
+					}
+				}
+				hidden_effect = {
+					sound_effect = "rodz_super"
+				}
+			}
+		}
+	}
+}
+
+
+news_event = {
+	id = news.359
+	title = news.359.t
+	desc = news.359.desc
+	picture = GFX_ITA_leaving_entente
+
+	major = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = news.359.a
+		trigger = {
+			NOT = {
+				tag = ITA
+				is_ally_with = FRA
+			}
+		}
+	}
+	option = {
+		name = news.359.b
+		trigger = {
+			tag = ITA
+		}
+	}
+	option = {
+		name = news.359.c
+		trigger = {
+			is_ally_with = FRA
+		}
+	}
+}
+
+news_event = {	#Alexandretta victory
+	id = news.360
+	title = news.360.t
+	desc = news.360.desc
+	picture = GFX_world_event_CCD_winnage
+
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.360.a
+		trigger = {
+			NOT = {
+				tag = CCD
+			}
+		}
+	}
+	option = {
+		name = news.360.b
+		set_cosmetic_tag = CCD_reuni
+		trigger = {
+			tag = CCD
+		}
+	}
+}
+
+news_event = {
+	id = news.999
+	title = news.999.t
+	desc = news.999.d
+	picture = GFX_news_event_king_speech
+
+	is_triggered_only = yes
+	major = yes
+	#fire_only_once = yes
+
+	major = yes
+
+	option = {
+		name = news.999.a
+
+		if = {
+			limit = {
+				is_ai = no
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+					}
+				}
+				set_global_flag = Super_Event_Visible
+				set_global_flag = JAP_china_victory_Super_Event_Visible
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = RF_superevents
+							option = no
+						}
+						has_game_rule = {
+							rule = RF_superevents
+							option = no_audio
+						}
+					}
+				}
+				hidden_effect = {
+					sound_effect = "jpn_chinavictory_super"
+				}
+			}
+		}
+	}
+}
+
+

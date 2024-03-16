@@ -1,0 +1,15 @@
+characters = {
+	SWF_Theodor_Seitz = {
+		name = "Theodor Seitz"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/SWF/Portrait_Theodor.png"
+			}
+		}
+		country_leader = {
+			desc = "politics_Theodor_desc"
+			ideology = oligarchy
+			expire = "1965.1.1.1"
+		}
+	}
+}

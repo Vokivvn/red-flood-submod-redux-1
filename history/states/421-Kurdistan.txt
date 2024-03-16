@@ -1,0 +1,26 @@
+
+state={
+	id=421
+	name="STATE_421"
+	manpower = 780278
+
+	state_category = rural
+	resources={
+		oil=6 # was: 12
+	}
+	history={
+		owner = PER
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = PER
+		add_claim_by = KUR
+		victory_points = {
+			12773 3
+		}
+	}
+
+	provinces={
+		829 5050 9816 10774 12773
+	}
+}

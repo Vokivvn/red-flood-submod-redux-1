@@ -1,0 +1,209 @@
+﻿capital = 231
+set_research_slots = 3
+set_convoys = 75
+set_stability = 0.5
+
+set_country_flag = is_russian_warlord
+
+oob = "KAV"
+set_air_oob = "KAV_air"
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_recon = 1
+	tech_support = 1		
+	tech_engineers = 1
+	tech_military_police = 1
+	tech_mountaineers = 1
+	tech_trucks =1
+	motorised_infantry = 1
+	paratroopers = 1
+	gw_artillery = 1
+	synth_oil_experiments = 1
+	basic_machine_tools = 1
+	electronic_mechanical_engineering = 1
+	fuel_silos = 1
+	fuel_refining = 1
+	basic_train = 1
+}
+
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+	set_technology = {
+		iw_small_airframe = 1
+		iw_medium_airframe = 1
+		iw_large_airframe = 1
+		basic_small_airframe = 1
+		aa_lmg = 1
+		aa_cannon_1 = 1
+		early_bombs = 1
+		engines_1 = 1
+	}
+}
+if = {
+	limit = { NOT = { has_dlc = "By Blood Alone" } }
+	set_technology = {
+		early_fighter = 1
+		fighter1 = 1
+		early_bomber = 1
+		strategic_bomber1 = 1
+		naval_bomber1 = 1
+	}
+}
+
+if = {
+	limit = { NOT = { has_dlc = "No Step Back" } }
+	set_technology = {
+		gwtank = 1
+		basic_light_tank = 1 
+	}
+}
+if = {
+	limit = { has_dlc = "No Step Back" }
+	set_technology = {
+		gwtank_chassis = 1
+		engine_tech_1 = 1
+		basic_light_tank_chassis = 1 
+	}
+}
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	set_technology = {
+		early_submarine = 1
+		basic_submarine = 1
+		early_destroyer = 1
+		early_light_cruiser = 1
+		early_heavy_cruiser = 1
+		early_battleship = 1
+		early_battlecruiser = 1
+		transport = 1
+	}
+}
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	set_technology = {
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		early_ship_hull_light = 1
+		early_ship_hull_cruiser = 1
+		early_ship_hull_heavy = 1
+		mtg_transport = 1
+		basic_battery = 1
+		basic_torpedo = 1
+	}
+}
+
+add_ideas = {
+	limited_conscription
+	export_focus
+	low_economic_mobilisation
+	extensive_conscription
+}
+
+set_politics = {
+	ruling_party = accelerationism
+	last_election = "1933.10.25"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	vanguard_socialism = 5
+	popular_socialism = 0
+	anarchism = 10
+	revisionist_socialism = 5
+	progressivism = 5
+	liberalism = 0
+	conservatism = 0
+	right_authoritarianism = 5
+	despotism = 0
+	reactionism = 5
+	accelerationism = 65
+}
+
+
+recruit_character = KAV_vladimir_mayakovsky
+recruit_character = KAV_Velimir_Khlebnikov
+recruit_character = KAV_igor_severyanin
+recruit_character = KAV_iosif_stalin
+recruit_character = KAV_dmitry_mirsky
+
+recruit_character = KAV_Osip_Brik
+recruit_character = KAV_Aleksandr_Rodchenko
+recruit_character = KAV_Grigory_Malenkov
+recruit_character = KAV_Vladimir_Tatlin
+
+recruit_character = KAV_Pyotr_Arapov
+recruit_character = KAV_Alexei_Tolstoy
+recruit_character = KAV_Pavel_Florensky
+recruit_character = KAV_Konstantin_Chkheidze
+
+
+recruit_character = KAV_Burliuk
+recruit_character = KAV_Aleksei_Kruchyonykh
+recruit_character = KAV_Ryurik_Ivnev
+recruit_character = KAV_Vasily_Kandinsky
+recruit_character = KAV_Graal_Aralsky
+
+recruit_character = KAV_Nikolay_Gumilyov
+recruit_character = KAV_Georgy_Ivanov
+recruit_character = KAV_Vadim_Shershenevich
+recruit_character = KAV_Anna_Akhmatova
+
+recruit_character = KAV_Sergei_Kirov
+recruit_character = KAV_Sergo_Ordzhonikidze
+recruit_character = KAV_Anastas_Mikoyan
+recruit_character = KAV_Kamo
+
+recruit_character = KAV_mikhail_velikanov
+recruit_character = KAV_ivan_bagramyan
+recruit_character = KAV_anatoliy_gekker
+recruit_character = KAV_giorgi_mazniev
+recruit_character = KAV_kaikhosro_chelokayev
+recruit_character = KAV_valiko_jugheli
+recruit_character = KAV_aleksandr_chkheidze
+recruit_character = KAV_aleksandr_andronikov
+recruit_character = KAV_avel_makaev
+recruit_character = KAV_giorgi_kvinitadze
+recruit_character = KAV_ivan_rogov
+recruit_character = KAV_lev_vladimirsky
+recruit_character = KAV_Slavorossov
+recruit_character = KAV_Shakhovskaya
+recruit_character = KAV_mikhail_frunze
+recruit_character = KAV_sergei_bunyachenko
+recruit_character = KAV_nestor_makhno
+recruit_character = KAV_Semyon_Budyonny
+
+add_equipment_to_stockpile = {
+	type = fighter_equipment_1
+	amount = 100
+}
+add_equipment_to_stockpile = {
+	type = infantry_equipment_1
+	amount = 2000
+}
+add_equipment_to_stockpile = {
+	type = artillery_equipment_1
+	amount = 150
+}
+add_equipment_to_stockpile = {
+	type = support_equipment_1
+	amount = 500
+}
+add_equipment_to_stockpile = {
+	type = train_equipment_1
+	amount = 20
+}
+add_equipment_to_stockpile = {
+	type = motorized_equipment_1
+	amount = 350
+}
+
+activate_advisor = KAV_Osip_Brik_hog 
+activate_advisor = KAV_iosif_stalin_int 
+activate_advisor = KAV_Aleksandr_Rodchenko_for 
+activate_advisor = KAV_Grigory_Malenkov_eco 
+activate_advisor = KAV_Vladimir_Tatlin_sec
+
+
+

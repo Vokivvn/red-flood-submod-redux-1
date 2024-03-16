@@ -1,0 +1,68 @@
+######################
+# Montenegrin Events #
+######################
+
+add_namespace = montenegro
+country_event = {
+	id = montenegro.1
+	title = montenegro.1.t
+	desc = montenegro.1.desc
+	picture = GFX_report_event_spain_civil_war_soldiers
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = montenegro.1.a
+		ai_chance = { factor = 1 }
+		if = {
+			limit = {
+				YUG = {
+					exists = yes
+				}
+			}
+			YUG = {
+				annex_country = {
+					target = MNT
+					transfer_troops = yes
+				}
+				if = {
+					limit = {
+						MNT = {
+							is_ai = no
+						}
+					}
+					change_tag_from = MNT
+				}
+			}
+		}
+		else = {
+
+		}
+		
+	}
+}
+country_event = {
+	id = montenegro.2
+	title = montenegro.2.t
+	desc = montenegro.2.desc
+	picture = GFX_trollface
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = montenegro.2.a
+		trigger = {
+			is_ai = no
+		}
+		YUG = {
+			change_tag_from = MNT
+		}
+	}
+	option = {
+		name = montenegro.2.b
+		trigger = {
+			is_ai = no
+		}
+		KCK = {
+			change_tag_from = MNT
+		}
+	}
+}

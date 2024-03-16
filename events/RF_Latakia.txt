@@ -1,0 +1,73 @@
+add_namespace = ALW
+
+country_event = {
+	id = ALW.1
+	title = ALW.1.t
+	desc = ALW.1.desc
+	picture = GFX_GER_march_action
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = ALW.1.a
+		ai_chance = { factor = 60 }
+		554 = {
+			owner = {
+				annex_country = {
+					target = ALW
+					transfer_troops = yes
+				}
+			}
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					ISR = {
+						NOT = {
+							owns_state = 454
+							has_country_flag = ISR_independence_secured
+						}
+					}
+				}
+				LEB = {
+					set_country_flag = SYR_war_time
+					country_event = {
+						id = leb.2
+						days = 30
+					}
+				}
+			}
+		}
+	}
+	option = { 
+		name = ALW.1.b
+		ai_chance = { factor = 40 }
+		554 = {
+			owner = {
+				declare_war_on = {
+					target = ALW
+					type = annex_everything
+				}
+			}
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					ISR = {
+						NOT = {
+							owns_state = 454
+							has_country_flag = ISR_independence_secured
+						}
+					}
+				}
+				LEB = {
+					set_country_flag = SYR_war_time
+					country_event = {
+						id = leb.2
+						days = 30
+					}
+				}
+			}
+		}
+	}
+}

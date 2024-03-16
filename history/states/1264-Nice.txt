@@ -1,0 +1,30 @@
+state={
+	id=1264
+	name="STATE_1264" # Nice
+	manpower = 407594
+
+	state_category = large_town
+
+	history={
+		owner = FRA
+		victory_points = {
+			9909 5
+		}
+		victory_points = {
+			13615 1
+		}
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+			dockyard = 1
+			air_base = 4
+			9909 = {
+				naval_base = 2
+			}
+		}
+		add_core_of = FRA
+	}
+	provinces={
+		3959 9909 13615
+	}
+}

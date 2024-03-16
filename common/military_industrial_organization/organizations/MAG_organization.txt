@@ -1,0 +1,23 @@
+################################
+#tank_manufacturer##############
+################################
+MAG_Karenjy_organization = {
+	include = generic_tank_organization
+	icon = GFX_idea_Karenjy
+	allowed = {
+		original_tag = MAG 
+	}
+}
+################################
+#naval_manufacturer##############
+################################
+################################
+#aircraft_manufacturer##############
+################################
+MAG_Air_Madagascar_organization = {
+	include = generic_general_aircraft_organization
+	icon = GFX_idea_Air_Madagascar
+	allowed = {
+		original_tag = MAG 
+	}
+}

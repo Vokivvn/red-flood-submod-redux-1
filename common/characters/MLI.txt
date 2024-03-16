@@ -1,0 +1,28 @@
+characters = {
+	MLI_boubou_hama = {
+		name = "Boubou Hama"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MLI/Portrait_Boubou_Hama.png"
+			}
+		}
+		country_leader = {
+			ideology = personalist_dictatorship
+			expire = "1965.1.1.1"
+		}
+	}
+	MLI_anarchy = {
+		name = "Constant Anarchy"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MLI/Portrait_Failstate_Mali.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_HAMA_DED_DESC"
+			ideology = stateless_anarchy
+			expire = "1965.1.1.1"
+			traits = { complete_anarchy }
+		}
+	}
+}

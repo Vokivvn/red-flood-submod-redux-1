@@ -1,0 +1,98 @@
+﻿capital = 1024
+
+oob = "NEU"
+
+# Starting tech
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	support_weapons = 1
+	tech_support = 1
+	tech_recon = 1
+	tech_engineers = 1
+	tech_trucks =1
+	motorised_infantry = 1
+}
+
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+	set_technology = {
+		iw_small_airframe = 1
+		aa_lmg = 1
+		aa_cannon_1 = 1
+		early_bombs = 1
+		engines_1 = 1
+	}
+}
+if = {
+	limit = { NOT = { has_dlc = "By Blood Alone" } }
+	set_technology = {
+		early_fighter = 1
+		CAS1 = 1
+	}
+}
+
+if = {
+	limit = {
+		not = { has_dlc = "Man the Guns"}
+	}
+	set_technology = {
+		early_submarine = 1
+		early_destroyer = 1
+		basic_destroyer = 1
+		early_light_cruiser = 1
+		basic_light_cruiser = 1
+		early_heavy_cruiser = 1
+		early_battleship = 1
+		transport = 1
+	}
+}
+if = {
+	limit = { has_dlc = "Man the Guns"}
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		early_ship_hull_light = 1
+		basic_ship_hull_light = 1
+		early_ship_hull_cruiser = 1
+		basic_ship_hull_cruiser = 1
+		early_ship_hull_heavy = 1
+		basic_battery = 1
+		basic_light_battery = 1
+		basic_torpedo = 1
+		submarine_mine_laying = 1
+		mtg_transport = 1
+	}
+}
+
+
+set_convoys = 10
+
+set_popularities = {
+	accelerationism = 0
+	reactionism = 53
+	despotism = 0
+	right_authoritarianism = 20
+	conservatism = 27
+	liberalism = 0
+	progressivism = 0
+	popular_socialism = 0
+	vanguard_socialism = 0
+	anarchism = 0
+}
+
+set_politics = {
+	ruling_party = reactionism
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+recruit_character = NEU_deitsches_fertaytixung_rod 
+recruit_character = NEU_Hans_Hennin_fon_Khossel 
+recruit_character = NEU_Ekon_Alprect_Lemke
+recruit_character = NEU_Arthur_Kooler
+recruit_character = NEU_Kustaf_Pucholts

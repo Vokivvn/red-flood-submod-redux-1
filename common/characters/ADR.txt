@@ -1,0 +1,14 @@
+characters = {
+	ADR_boris_I = {
+		name = "Borís I"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ADR/Portrait_Boris_I.png"
+			}
+		}
+		country_leader = {
+			ideology = constitutional_monarchy
+			expire = "1965.1.1.1"
+		}
+	}
+}

@@ -1,0 +1,59 @@
+state=
+{
+	id=69
+	name="STATE_69"
+	manpower = 2800000
+
+	state_category = town
+
+	resources={
+		steel=8
+	}
+
+	history={
+		owner = AUS
+		add_core_of = AUS
+		victory_points = { 6470 5 }
+		victory_points = { 424 10 }
+		victory_points = { 11414 3 }
+		victory_points = { 11432 3 }
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 2
+			424 = {
+				bunker = 5
+			}
+			469  = {
+				bunker = 5
+			}
+			 3418  = {
+				bunker = 5
+			}
+			 3585 = {
+				bunker = 5
+			}
+			 6470 = {
+				bunker = 5
+			}
+			 9555 = {
+				bunker = 5
+			}
+			 11401
+			  = {
+				bunker = 5
+			}
+			 11414
+			  = {
+				bunker = 5
+			}
+			 11432 = {
+				bunker = 5
+			}
+
+		}
+		add_claim_by = CZE
+	}
+	provinces= {
+		424 469 3418 3585 6470 9555 11401 11414 11432
+	}
+}

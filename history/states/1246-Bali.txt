@@ -1,0 +1,22 @@
+state={
+	id=1246
+	name="STATE_1246"
+	manpower=1913100
+	
+	state_category=pastoral
+
+	history={
+		owner = DEI
+		victory_points = { #Singaradja
+			4273 3
+		}
+		add_core_of = DEI
+		buildings = {
+			infrastructure = 2
+		}
+	}
+
+	provinces={
+		4273 7293
+	}
+}

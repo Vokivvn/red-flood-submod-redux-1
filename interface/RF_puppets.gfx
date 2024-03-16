@@ -1,0 +1,27 @@
+spriteTypes = {
+
+    ############
+	# Autonomous States
+	############
+
+	spriteType = {
+		name = "GFX_autonomy_icon"
+		textureFile = "gfx/interface/autonomy/russia.png"
+	}
+
+	spriteType = {
+		name = "GFX_general_governorate_icon"
+		textureFile = "gfx/interface/autonomy/russia.png"
+	}
+
+	spriteType = {
+		name = "GFX_ayregion_icon"
+		textureFile = "gfx/interface/autonomy/yugoslavia.png"
+	}
+
+	spriteType = {
+		name = "GFX_socialistrepublic_icon"
+		textureFile = "gfx/interface/autonomy/socialistrepublic.png"
+	}
+
+}

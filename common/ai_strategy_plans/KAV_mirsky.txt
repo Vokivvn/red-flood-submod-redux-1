@@ -1,0 +1,19 @@
+Kavkaz_path_3 = {
+	name = "Kavkaz3"
+	desc = "Placeholder"
+	enable = {
+        original_tag = KAV
+		has_game_rule = {
+			rule = KAV_ai_route
+			option = KAV_MIRSKY
+		}
+	}
+	ai_national_focuses = {
+		KAV_we_live_in_a_society
+		KAV_the_red_princes_dream
+        KAV_forward_to_utopia
+        KAV_fullfill_transcaucasia
+        KAV_path_of_zoroaster
+        KAV_eurasia_freed
+	}
+}

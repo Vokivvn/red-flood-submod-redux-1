@@ -1,0 +1,114 @@
+#####################################
+#	Indochina EVENTS - BABA + ARIEL	#And Hours Too #Also Pintar 
+#####################################
+
+add_namespace = annam
+
+country_event = {
+	id = annam.1 #Revolts galore
+	title = annam.1.t
+	desc = annam.1.desc
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = annam.1.a
+		SMC = {
+			drop_cosmetic_tag = yes
+			set_politics = {
+				ruling_party = reactionism
+				elections_allowed = no
+			}
+		}
+		news_event = {
+			id = news.212
+		}
+	}
+	option = {
+		name = annam.1.b
+		SMC = {
+			add_country_leader_role = {
+				character = "SMC_Yvonne"
+				country_leader = {
+					ideology = constitutional_monarchy
+					expire = "1965.1.1.1"
+				}
+				promote_leader = yes
+			}
+			set_politics = {
+				ruling_party = despotism
+				elections_allowed = no
+			}
+			set_cosmetic_tag = SMC_Sedang
+		}
+		news_event = {
+			id = news.217
+		}
+	}
+	option = {
+		name = annam.1.c
+		SMC = {
+			country_event = {
+				id = annam.2
+				days = 14
+			}
+		}
+	}
+}
+country_event = {
+	id = annam.2 #INVF power struggle
+	title = annam.2.t
+	desc = annam.2.desc
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = annam.2.a
+		SMC = {
+			drop_cosmetic_tag = yes
+			set_politics = {
+				ruling_party = revisionist_socialism
+				elections_allowed = no
+			}
+		}
+		news_event = {
+			id = news.214
+		}
+	}
+	option = {
+		name = annam.2.b
+		SMC = {
+			drop_cosmetic_tag = yes
+			set_politics = {
+				ruling_party = despotism
+				elections_allowed = no
+			}
+		}
+		news_event = {
+			id = news.215
+		}
+	}
+	option = {
+		name = annam.2.c
+		SMC = {
+			drop_cosmetic_tag = yes
+			add_country_leader_role = {
+				character = "SMC_Ta_Thu_Thau"
+				country_leader = {
+					ideology = zadrugism
+					expire = "1965.1.1.1"
+				}
+				promote_leader = yes
+			}
+			set_politics = {
+				ruling_party = accelerationism
+				elections_allowed = no
+			}
+		}
+		news_event = {
+			id = news.216
+		}
+	}
+}

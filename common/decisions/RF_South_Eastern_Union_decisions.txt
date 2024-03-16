@@ -1,0 +1,334 @@
+DKB_diplomatic_decisions = {
+	DKB_gorgulov_asia_minor = {
+		cost = 50
+		ai_will_do = {
+			factor = 0.5
+		}
+		icon = generic_prepare_civil_war
+		fire_only_once = yes
+		visible = {
+			has_completed_focus = DKB_and_go_beyond
+			has_war = no
+			OR = {
+				country_exists = TUR
+				country_exists = KUR
+				country_exists = ASY
+			}
+		}
+		available = {
+			OR = {
+				is_neighbor_of = TUR
+				is_neighbor_of = KUR
+				is_neighbor_of = ASY
+			}
+		}
+		complete_effect = {
+			every_country = {
+				limit = {
+					OR = {
+						tag = TUR
+						tag = KUR
+						tag = ASY
+					}
+				}
+				DKB = {
+					create_wargoal = {
+						target = PREV
+						type = annex_everything
+					}
+				}
+			}
+		}
+	}
+	DKB_gorgulov_balkans = {
+		cost = 50
+		ai_will_do = {
+			factor = 0.5
+		}
+		icon = generic_prepare_civil_war
+		fire_only_once = yes
+		visible = {
+			has_completed_focus = DKB_and_go_beyond
+			has_war = no
+			OR = {
+				country_exists = YUG
+				country_exists = BUL
+				country_exists = SER
+				country_exists = CRO
+				country_exists = DY1 #Banat
+				country_exists = BOS
+				country_exists = MAC
+				country_exists = MNT
+				country_exists = ALB
+				country_exists = GRE
+				country_exists = ROM
+				country_exists = MOL
+				country_exists = MAR
+			}
+		}
+		available = {
+			OR = {
+				is_neighbor_of = YUG
+				is_neighbor_of = BUL
+				is_neighbor_of = SER
+				is_neighbor_of = CRO
+				is_neighbor_of = DY1 #Banat
+				is_neighbor_of = BOS
+				is_neighbor_of = MAC
+				is_neighbor_of = MNT
+				is_neighbor_of = ALB
+				is_neighbor_of = GRE
+				is_neighbor_of = ROM
+				is_neighbor_of = MOL
+				is_neighbor_of = MAR
+			}
+		}
+		complete_effect = {
+			every_country = {
+				limit = {
+					OR = {
+						tag = YUG
+						tag = BUL
+						tag = SER
+						tag = CRO
+						tag = DY1 #Banat
+						tag = BOS
+						tag = MAC
+						tag = MNT
+						tag = ALB
+						tag = GRE
+						tag = ROM
+						tag = MOL
+						tag = MAR
+					}
+				}
+				DKB = {
+					create_wargoal = {
+						target = PREV
+						type = annex_everything
+					}
+				}
+			}
+		}
+	}
+	DKB_gorgulov_central_europe = {
+		cost = 50
+		ai_will_do = {
+			factor = 0.5
+		}
+		icon = generic_prepare_civil_war
+		fire_only_once = yes
+		visible = {
+			has_completed_focus = DKB_and_go_beyond
+			has_war = no
+		}
+		complete_effect = {
+			every_country = {
+				limit = {
+					OR = {
+						tag = PRS
+						tag = CZE
+						tag = SLO
+						tag = MOL
+						tag = TRS
+						tag = HUN
+					}
+				}
+				DKB = {
+					create_wargoal = {
+						target = PREV
+						type = annex_everything
+					}
+				}
+			}
+		}
+	}
+	DKB_gorgulov_germany = {
+		cost = 50
+		ai_will_do = {
+			factor = 0.5
+		}
+		icon = generic_prepare_civil_war
+		fire_only_once = yes
+		visible = {
+			has_completed_focus = DKB_and_go_beyond
+			has_war = no
+			country_exists = GER
+		}
+		available = {
+			is_neighbor_of = GER
+		}
+		complete_effect = {
+			create_wargoal = {
+    			type = puppet_wargoal_focus
+   				target = GER
+			}
+		}
+	}
+	DKB_gorgulov_japan = {
+		cost = 50
+		ai_will_do = {
+			factor = 0.5
+		}
+		icon = generic_prepare_civil_war
+		fire_only_once = yes
+		visible = {
+			has_completed_focus = DKB_and_go_beyond
+			has_war = no
+			OR = {
+				country_exists = JAP
+				country_exists = JPR
+			}
+		}
+		complete_effect = {
+			every_country = {
+				limit = {
+					OR = {
+						tag = JPR
+						tag = JAP
+					}
+				}
+				DKB = {
+					create_wargoal = {
+						target = PREV
+						type = annex_everything
+					}
+				}
+			}
+		}
+	}
+	DKB_gorgulov_britain = {
+		cost = 50
+		ai_will_do = {
+			factor = 0.5
+		}
+		icon = generic_prepare_civil_war
+		fire_only_once = yes
+		visible = {
+			has_completed_focus = DKB_and_go_beyond
+			has_war = no
+			OR = {
+				country_exists = ENG
+				country_exists = USA
+			}
+		}
+		available = {
+			owns_state = 848
+			owns_state = 408
+			owns_state = 637
+		}
+		complete_effect = {
+			every_country = {
+				limit = {
+					OR = {
+						tag = ENG
+						tag = USA
+					}
+				}
+				DKB = {
+					create_wargoal = {
+						target = PREV
+						type = annex_everything
+					}
+				}
+			}
+		}
+	}
+
+	DKB_return_to_sich_decision = {
+		cost = 25
+		ai_will_do = {
+			factor = 0.5
+		}
+		icon = GFX_Russian_uni_nationalist
+		fire_only_once = yes
+		visible = {
+			has_completed_focus = DKB_return_to_sich
+		}
+		available = {
+			OR = {
+				is_neighbor_of = RUS
+				is_neighbor_of = SRU
+			}
+			OR = {
+				RUS = { exists = no }
+				SRU = { exists = no }
+			}
+		}
+		complete_effect = {
+			if = {
+				limit = { RUS = { exists = yes } }
+				RUS = { DKB = { PREV_annex_CURRENT_warlord = yes } }
+			}
+			else_if = {
+				limit = { SRU = { exists = yes } }
+				SRU = { DKB = { PREV_annex_CURRENT_warlord = yes } }
+			}
+		}
+	}
+	DKB_he_surged_up_orthodox_quiet_don = {
+		cost = 25
+		ai_will_do = {
+			factor = 0.5
+		}
+		icon = GFX_Russian_uni_nationalist
+		fire_only_once = yes
+		visible = {
+			has_completed_focus = DKB_our_russian_cousins
+			has_completed_focus = DKB_lineytsy_victorious
+		}
+		available = {
+			OR = {
+				is_neighbor_of = RUS
+				is_neighbor_of = SRU
+			}
+			OR = {
+				RUS = { exists = no }
+				SRU = { exists = no }
+			}
+		}
+		complete_effect = {
+			if = {
+				limit = { RUS = { exists = yes } }
+				RUS = { DKB = { PREV_annex_CURRENT_warlord = yes } }
+			}
+			else_if = {
+				limit = { SRU = { exists = yes } }
+				SRU = { DKB = { PREV_annex_CURRENT_warlord = yes } }
+			}
+		}
+	}
+	DKB_libertys_requiem = {
+		cost = 25
+		ai_will_do = {
+			factor = 0.5
+		}
+		allowed = { tag = DKB }
+		icon = GFX_Russian_uni_nationalist
+		fire_only_once = yes
+		visible = {
+			has_completed_focus = DKB_our_russian_brothers
+		}
+		available = {
+			OR = {
+				is_neighbor_of = RUS
+				is_neighbor_of = SRU
+			}
+			OR = {
+				RUS = { exists = no }
+				SRU = { exists = no }
+			}
+		}
+		complete_effect = {
+			if = {
+				limit = { RUS = { exists = yes } }
+				RUS = { DKB = { PREV_annex_CURRENT_warlord = yes } }
+			}
+			else_if = {
+				limit = { SRU = { exists = yes } }
+				SRU = { DKB = { PREV_annex_CURRENT_warlord = yes } }
+			}
+		}
+	}
+}
+

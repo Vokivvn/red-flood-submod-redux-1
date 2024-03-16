@@ -1,0 +1,801 @@
+add_namespace = bulgaria
+
+country_event = {
+	id = bulgaria.1
+	title = bulgaria.1.t
+	desc = bulgaria.1.desc
+	picture = GRE_walk
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = bulgaria.1.a
+		
+		hidden_effect = {
+			set_country_flag = BUL_mutiny_unlock
+			mark_focus_tree_layout_dirty = yes
+			add_popularity = {
+			    ideology = revisionist_socialism
+				popularity = -0.2
+			}
+			swap_ideas = {
+				remove_idea = BUL_lucky_clover
+				add_idea = BUL_worn_luck
+			}
+			news_event = {
+				id = news.250
+			}
+		}
+	}
+}
+
+country_event = {
+	id = bulgaria.3
+	title = bulgaria.3.t
+	desc = bulgaria.3.desc
+	picture = GRE_kill
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = bulgaria.3.a
+		custom_effect_tooltip = "BUL_opposition_increase"
+		add_to_variable = {
+				var = BUL_communists
+				value = 1
+		}
+		custom_effect_tooltip = "BUL_consequences"
+		set_country_flag = BUL_friendly_fire
+		ai_chance = { 
+			base = 40
+			modifier = {
+				factor = 10000
+				OR = {
+					has_game_rule = {
+						rule = BUL_ai_route
+						option = BUL_DEUNOV
+					}
+					has_game_rule = {
+						rule = BUL_ai_route
+						option = BUL_ZLATAROG
+					}
+					has_game_rule = {
+						rule = BUL_ai_route
+						option = BUL_COMMUNISTS
+					}
+					has_game_rule = {
+						rule = BUL_ai_route
+						option = BUL_ANARCHISTS
+					}
+				}
+			}
+		} 
+	}
+
+	option = {
+		name = bulgaria.3.b
+		custom_effect_tooltip = "BUL_agrarian_increase"
+		add_to_variable = {
+			var = BUL_agrarians
+			value = 1
+		}
+		ai_chance = { 
+			base = 60
+			modifier = {
+				factor = 10000
+				has_game_rule = {
+					rule = BUL_ai_route
+					option = BUL_AGRARISTS
+				}
+			} 
+		}
+	}
+		
+}
+
+country_event = {
+	id = bulgaria.4
+	title = bulgaria.4.t
+	desc = bulgaria.4.desc
+	picture = GRE_kill
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = bulgaria.4.a
+		custom_effect_tooltip = "BUL_opposition_increase"
+		add_to_variable = {
+				var = BUL_communists
+				value = 1
+		}
+		ai_chance = {
+			base = 60
+			modifier = {
+				factor = 10000
+				OR = {
+					has_game_rule = {
+						rule = BUL_ai_route
+						option = BUL_COMMUNISTS
+					}
+					has_game_rule = {
+						rule = BUL_ai_route
+						option = BUL_ANARCHISTS
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = bulgaria.4.b
+		custom_effect_tooltip = "BUL_agrarian_increase"
+		add_to_variable = {
+			var = BUL_agrarians
+			value = 1
+		}
+		set_country_flag = BUL_friendly_fire_two
+		custom_effect_tooltip = "BUL_consequences"
+		ai_chance = { 
+			base = 40
+			modifier = {
+				factor = 10000
+				OR = {
+					has_game_rule = {
+						rule = BUL_ai_route
+						option = BUL_DEUNOV
+					}
+					has_game_rule = {
+						rule = BUL_ai_route
+						option = BUL_ZLATAROG
+					}
+					has_game_rule = {
+						rule = BUL_ai_route
+						option = BUL_AGRARISTS
+					}
+				}
+			} 
+		}
+	}	
+}
+
+country_event = {
+	id = bulgaria.5
+	title = bulgaria.5.t
+	desc = bulgaria.5.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+   
+    option = {
+		name = bulgaria.5.a
+		trigger = {
+			check_variable = { BUL_communists < BUL_agrarians }
+			NOT = {
+				AND = {
+					has_country_flag = BUL_friendly_fire
+					has_country_flag = BUL_friendly_fire_two
+				}
+			}
+		}
+		hidden_effect = {
+			retire_country_leader = yes
+			promote_character = BUL_Rayko_Daskalov
+			set_country_flag = BUL_elections_unlock
+			mark_focus_tree_layout_dirty = yes
+			complete_national_focus = BUL_silence_after_storm
+		}
+		ai_chance = { 
+			base = 40
+			modifier = {
+				factor = 10000
+				has_game_rule = {
+					rule = BUL_ai_route
+					option = BUL_AGRARISTS
+				}
+			} 
+		}
+	}
+	option = {
+		name = bulgaria.5.b
+		trigger = {
+			has_country_flag = BUL_friendly_fire
+			has_country_flag = BUL_friendly_fire_two
+		}
+		hidden_effect = {
+			remove_ideas = BUL_worn_luck
+			add_ideas = BUL_small_cloud_big_rain
+			retire_country_leader = yes
+			promote_character = BUL_Rayko_Daskalov
+			set_country_flag = BUL_chaos_unlock
+			mark_focus_tree_layout_dirty = yes
+			complete_national_focus = BUL_thunder_after_silence
+			news_event = {
+				id = news.251
+			}
+		}
+		ai_chance = { 
+			base = 40
+			modifier = {
+				factor = 10000
+				OR = {
+					has_game_rule = {
+						rule = BUL_ai_route
+						option = BUL_DEUNOV
+					}
+					has_game_rule = {
+						rule = BUL_ai_route
+						option = BUL_ZLATAROG
+					}
+				}
+			} 
+		}
+	}
+	option = {
+		name = bulgaria.5.c
+		trigger = {
+			check_variable = { BUL_communists > BUL_agrarians }
+			NOT = {
+				AND = {
+					has_country_flag = BUL_friendly_fire
+					has_country_flag = BUL_friendly_fire_two
+				}
+			}
+		}
+		hidden_effect = {
+			retire_country_leader = yes
+			promote_character = BUL_Rayko_Daskalov
+			set_country_flag = BUL_elections_unlock
+			mark_focus_tree_layout_dirty = yes
+			complete_national_focus = BUL_silence_after_storm
+		}
+		ai_chance = { 
+			base = 40
+			modifier = {
+				factor = 10000
+				OR = {
+					has_game_rule = {
+						rule = BUL_ai_route
+						option = BUL_COMMUNISTS
+					}
+					has_game_rule = {
+						rule = BUL_ai_route
+						option = BUL_ANARCHISTS
+					}
+				}
+			}
+		} 
+	}
+}
+country_event = {
+	id = bulgaria.6
+	title = bulgaria.6.t
+	desc = bulgaria.6.desc
+	picture = GFX_report_event_generic_sign_treaty3
+		
+	fire_only_once = yes
+	is_triggered_only = yes
+		
+	option = {
+		name = bulgaria.6.a
+		
+		country_event = {
+			days = 14
+			id = bulgaria.8
+		}	
+	}
+}
+country_event = {
+	id = bulgaria.7
+	title = bulgaria.7.t
+	desc = bulgaria.7.desc
+	picture = GFX_report_event_generic_sign_treaty3
+		
+	fire_only_once = yes
+	is_triggered_only = yes
+		
+	option = {
+		name = bulgaria.7.a
+		set_politics = {
+			ruling_party = accelerationism
+		}
+		add_popularity = {
+			ideology = accelerationism
+			popularity = 0.3
+		}
+		hidden_effect = {
+			news_event = {
+				id = news.257
+			}
+		}
+		mark_focus_tree_layout_dirty = yes
+		set_country_flag = BUL_golden_horn
+		ai_chance = { 
+			base = 60
+			modifier = {
+				factor = 10000
+				has_game_rule = {
+					rule = BUL_ai_route
+					option = BUL_ZLATAROG
+				}
+			} 
+		}
+	}
+	option = {
+		name = bulgaria.7.b
+		set_politics = {
+			ruling_party = reactionism
+		}
+		add_popularity = {
+			ideology = reactionism
+			popularity = 0.3
+		}
+		hidden_effect = {
+			news_event = {
+				id = news.256
+			}
+		}
+		mark_focus_tree_layout_dirty = yes
+		set_country_flag = BUL_spawn_of_satan
+		ai_chance = { 
+			base = 40
+			modifier = {
+				factor = 10000
+				has_game_rule = {
+					rule = BUL_ai_route
+					option = BUL_DEUNOV
+				}
+			} 
+		}
+	}
+}
+country_event = {
+	id = bulgaria.8
+	title = bulgaria.8.t
+	desc = bulgaria.8.desc
+	picture = GFX_report_event_generic_sign_treaty3
+		
+	fire_only_once = yes
+	is_triggered_only = yes
+		
+	option = {
+		name = bulgaria.8.a
+		trigger = {
+			check_variable = { BUL_communists < BUL_agrarians }
+		}
+		add_popularity = {
+			ideology = revisionist_socialism
+			popularity = 0.15
+		}
+		hidden_effect = {
+			news_event = {
+				id = news.252
+			}
+		}
+		mark_focus_tree_layout_dirty = yes
+		set_country_flag = BUL_another_agrarian_w
+		remove_ideas = BUL_worn_luck
+		ai_chance = { 
+			base = 40
+			modifier = {
+				factor = 10000
+				has_game_rule = {
+					rule = BUL_ai_route
+					option = BUL_AGRARISTS
+				}
+			} 
+		}
+	}
+	option = {
+		name = bulgaria.8.b
+		trigger = {
+			check_variable = { BUL_communists > BUL_agrarians }
+		}
+		set_politics = {
+			ruling_party = vanguard_socialism
+		}
+		add_popularity = {
+			ideology = vanguard_socialism
+			popularity = 0.2
+		}
+		hidden_effect = {
+			news_event = {
+				id = news.255
+			}
+		}
+		mark_focus_tree_layout_dirty = yes
+		set_country_flag = BUL_tankie_w
+		remove_ideas = BUL_worn_luck
+		ai_chance = { 
+			base = 60
+			modifier = {
+				factor = 10000
+				has_game_rule = {
+					rule = BUL_ai_route
+					option = BUL_COMMUNISTS
+				}
+			} 
+		}
+	}
+	option = {
+		name = bulgaria.8.c
+		
+		trigger = {
+			check_variable = { BUL_communists > BUL_agrarians }
+		}
+		set_politics = {
+			ruling_party = anarchism
+		}
+		add_popularity = {
+			ideology = anarchism
+			popularity = 0.3
+		}
+		hidden_effect = {
+			news_event = {
+				id = news.254
+			}
+		}
+		mark_focus_tree_layout_dirty = yes
+		set_country_flag = BUL_anarchoids
+		remove_ideas = BUL_worn_luck
+		ai_chance = { 
+			base = 40
+			modifier = {
+				factor = 10000
+				has_game_rule = {
+					rule = BUL_ai_route
+					option = BUL_ANARCHISTS
+				}
+			} 
+		}
+	}
+}
+country_event = {
+	id = bulgaria.9
+	title = bulgaria.9.t
+	desc = bulgaria.9.desc
+	picture = GFX_report_event_generic_sign_treaty3
+		
+	fire_only_once = yes
+	is_triggered_only = yes
+		
+	option = {
+		name = bulgaria.9.a
+		GER = { add_to_faction = BUL }
+	}
+}
+
+country_event = {
+	id = bulgaria.10 #stambo resigns
+	title = bulgaria.10.t
+	desc = bulgaria.10.desc
+		
+	fire_only_once = yes
+	is_triggered_only = yes
+		
+	option = {
+		name = bulgaria.10.a
+	}
+}
+
+country_event = {
+	id = bulgaria.11 #corpos vote
+	title = bulgaria.11.t
+	desc = bulgaria.11.desc
+		
+	fire_only_once = yes
+	is_triggered_only = yes
+		
+	option = {
+		name = bulgaria.11.a
+	}
+	option = {
+		name = bulgaria.11.b
+	}
+	option = {
+		name = bulgaria.11.c
+	}
+}
+
+country_event = {
+	id = bulgaria.12 #daskalov peasantloving
+	title = bulgaria.12.t
+	desc = bulgaria.12.desc
+		
+	fire_only_once = yes
+	is_triggered_only = yes
+		
+	option = {
+		name = bulgaria.12.a
+		custom_effect_tooltip = "BUL_agrarian_increase"
+		add_to_variable = {
+			var = BUL_agrarians
+			value = 1
+		}
+		ai_chance = { 
+			base = 60
+			modifier = {
+				factor = 10000
+				has_game_rule = {
+					rule = BUL_ai_route
+					option = BUL_AGRARISTS
+				}
+			}
+		}
+	}
+
+	option = {
+		name = bulgaria.12.b
+		custom_effect_tooltip = "BUL_opposition_increase"
+		add_to_variable = {
+			var = BUL_communists
+			value = 1
+		}
+		ai_chance = { 
+			base = 40
+			modifier = {
+				factor = 10000
+				OR = {
+					has_game_rule = {
+						rule = BUL_ai_route
+						option = BUL_COMMUNISTS
+					}
+					has_game_rule = {
+						rule = BUL_ai_route
+						option = BUL_ANARCHISTS
+					}
+				}
+			}
+		} 
+	}
+}
+
+country_event = {
+	id = bulgaria.13 #peasants attack kulaks
+	title = bulgaria.13.t
+	desc = bulgaria.13.desc
+		
+	fire_only_once = yes
+	is_triggered_only = yes
+		
+	option = {
+		name = bulgaria.13.a
+	}
+	option = {
+		name = bulgaria.13.b
+	}
+}
+
+country_event = {
+	id = bulgaria.14 #parliament soyrage
+	title = bulgaria.14.t
+	desc = bulgaria.14.desc
+		
+	fire_only_once = yes
+	is_triggered_only = yes
+		
+	option = {
+		name = bulgaria.14.a
+	}
+	option = {
+		name = bulgaria.14.b
+	}
+	option = {
+		name = bulgaria.14.c
+	}
+}
+
+country_event = {
+	id = bulgaria.15 #army debate
+	title = bulgaria.15.t
+	desc = bulgaria.15.desc
+		
+	fire_only_once = yes
+	is_triggered_only = yes
+		
+	option = {
+		name = bulgaria.15.a
+	}
+	option = {
+		name = bulgaria.15.b
+	}
+	option = {
+		name = bulgaria.15.c
+	}
+}
+
+country_event = {
+	id = bulgaria.16 #tractor army
+	title = bulgaria.16.t
+	desc = bulgaria.16.desc
+		
+	fire_only_once = yes
+	is_triggered_only = yes
+		
+	option = {
+		name = bulgaria.16.a
+	}
+}
+
+country_event = {
+	id = bulgaria.17 #collectivisation
+	title = bulgaria.17.t
+	desc = bulgaria.17.desc
+		
+	fire_only_once = yes
+	is_triggered_only = yes
+		
+	option = {
+		name = bulgaria.17.a
+	}
+}
+
+country_event = {
+	id = bulgaria.18 #daskalov in belgrad
+	title = bulgaria.18.t
+	desc = bulgaria.18.desc
+		
+	fire_only_once = yes
+	is_triggered_only = yes
+		
+	option = {
+		name = bulgaria.18.a
+	}
+}
+
+country_event = {
+	id = bulgaria.19 #red guards
+	title = bulgaria.19.t
+	desc = bulgaria.19.desc
+		
+	fire_only_once = yes
+	is_triggered_only = yes
+		
+	option = {
+		name = bulgaria.19.a
+	}
+}
+
+country_event = {
+	id = bulgaria.20 #child soldiers
+	title = bulgaria.20.t
+	desc = bulgaria.20.desc
+		
+	fire_only_once = yes
+	is_triggered_only = yes
+		
+	option = {
+		name = bulgaria.20.a
+	}
+}
+
+country_event = {
+	id = bulgaria.21 #uni protests
+	title = bulgaria.21.t
+	desc = bulgaria.21.desc
+		
+	fire_only_once = yes
+	is_triggered_only = yes
+		
+	option = {
+		name = bulgaria.21.a
+	}
+}
+
+country_event = {
+	id = bulgaria.22 #nerd emoji
+	title = bulgaria.22.t
+	desc = bulgaria.22.desc
+		
+	fire_only_once = yes
+	is_triggered_only = yes
+		
+	option = {
+		name = bulgaria.22.a
+	}
+}
+
+country_event = {
+	id = bulgaria.23 #shoooting range
+	title = bulgaria.23.t
+	desc = bulgaria.23.desc
+		
+	fire_only_once = yes
+	is_triggered_only = yes
+		
+	option = {
+		name = bulgaria.23.a
+	}
+}
+
+country_event = {
+	id = bulgaria.24 #sarajevo bank
+	title = bulgaria.24.t
+	desc = bulgaria.24.desc
+		
+	fire_only_once = yes
+	is_triggered_only = yes
+		
+	option = {
+		name = bulgaria.24.a
+	}
+}
+
+country_event = {
+	id = bulgaria.25 #oracle
+	title = bulgaria.25.t
+	desc = bulgaria.25.desc
+		
+	fire_only_once = yes
+	is_triggered_only = yes
+		
+	option = {
+		name = bulgaria.25.a
+	}
+}
+
+country_event = {
+	id = bulgaria.26 #shaytanov king
+	title = bulgaria.26.t
+	desc = bulgaria.26.desc
+		
+	fire_only_once = yes
+	is_triggered_only = yes
+		
+	option = {
+		name = bulgaria.26.a
+		set_country_leader_portrait = {
+			portrait = GFX_Portrait_BUL_Gypsy_King
+		}
+	}
+}
+
+country_event = {
+	id = bulgaria.27 #DOG SPINNING 
+	title = bulgaria.27.t
+	desc = bulgaria.27.desc
+		
+	fire_only_once = yes
+	is_triggered_only = yes
+		
+	option = {
+		name = bulgaria.27.a
+	}
+}
+
+country_event = {
+	id = bulgaria.28 #social rating 
+	title = bulgaria.28.t
+	desc = bulgaria.28.desc
+		
+	fire_only_once = yes
+	is_triggered_only = yes
+		
+	option = {
+		name = bulgaria.28.a
+	}
+}
+
+country_event = {
+	id = bulgaria.29 #solar dance
+	title = bulgaria.29.t
+	desc = bulgaria.29.desc
+		
+	fire_only_once = yes
+	is_triggered_only = yes
+		
+	option = {
+		name = bulgaria.29.a
+	}
+}
+
+country_event = {
+	id = bulgaria.30 #deunov in belgrad
+	title = bulgaria.30.t
+	desc = bulgaria.30.desc
+		
+	fire_only_once = yes
+	is_triggered_only = yes
+		
+	option = {
+		name = bulgaria.30.a
+	}
+}

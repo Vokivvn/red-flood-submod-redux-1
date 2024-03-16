@@ -1,0 +1,81 @@
+﻿l_english: 
+
+#COUNTRY NAME#
+SAF_SAU_vanguard_socialism:0 "South African Socialist Republics"
+SAF_SAU_vanguard_socialism_DEF:0 "South African Union"
+SAF_SAU_vanguard_socialism_ADJ:0 "South African"
+SAF_SAU_popular_socialism:0 "South African Socialist Republics"
+SAF_SAU_popular_socialism_DEF:0 "South African Union"
+SAF_SAU_popular_socialism_ADJ:0 "South African"
+SAF_SAU_anarchism:0 "South African Free Territory"
+SAF_SAU_anarchism_DEF:0 "South African Union"
+SAF_SAU_anarchism_ADJ:0 "South African"
+SAF_SAU_revisionist_socialism:0 "South African Socialist Republics"
+SAF_SAU_revisionist_socialism_DEF:0 "South African Union"
+SAF_SAU_revisionist_socialism_ADJ:0 "South African"
+SAF_SAU_progressivism:0 "South African Union"
+SAF_SAU_progressivism_DEF:0 "South African Union"
+SAF_SAU_progressivism_ADJ:0 "South African"
+SAF_SAU_liberalism:0 "South African Union"
+SAF_SAU_liberalism_DEF:0 "South African Union"
+SAF_SAU_liberalism_ADJ:0 "South African"
+SAF_SAU_conservatism:0 "South African Union"
+SAF_SAU_conservatism_DEF:0 "South African Union"
+SAF_SAU_conservatism_ADJ:0 "South African"
+SAF_SAU_right_authoritarianism:0 "South African Union"
+SAF_SAU_right_authoritarianism_DEF:0 "South African Union"
+SAF_SAU_right_authoritarianism_ADJ:0 "South African"
+SAF_SAU_despotism:0 "South African Union"
+SAF_SAU_despotism_DEF:0 "South African Union"
+SAF_SAU_despotism_ADJ:0 "South African"
+SAF_SAU_reactionism:0 "South African Union"
+SAF_SAU_reactionism_DEF:0 "South African Union"
+SAF_SAU_reactionism_ADJ:0 "South African"
+SAF_SAU_accelerationism:0 "Surreal South African Union"
+SAF_SAU_accelerationism_DEF:0 "South African Union"
+SAF_SAU_accelerationism_ADJ:0 "South African"
+
+#PARTIES#
+SAF_vanguard_socialism_party:0 "SLSA (V)"
+SAF_popular_socialism_party:0 "SLSA (L)"
+SAF_anarchism_party:0 "SLSA (A)"
+SAF_revisionist_socialism_party:0 "NLP"
+SAF_progressivism_party:0 "Coalition (L)"
+SAF_liberalism_party:0 "Coalition (U)"
+SAF_conservatism_party:0 "UP"
+SAF_right_authoritarianism_party:0 "AFR"
+SAF_despotism_party:0 "Bantu Clique"
+SAF_reactionism_party:0 "SANC"
+SAF_accelerationism_party:0 "NC"
+SAF_vanguard_socialism_party_long:0 "Socialist League of South Africa (V)"
+SAF_popular_socialism_party_long:0 "Socialist League of South Africa (L)"
+SAF_anarchism_party_long:0 "Socialist League of South Africa (A)"
+SAF_revisionist_socialism_party_long:0 "New Labour Party"
+SAF_progressivism_party_long:0 "United-Labour Coalition (L)"
+SAF_liberalism_party_long:0 "United-Labour Coaltion (U)"
+SAF_conservatism_party_long:0 "United Party"
+SAF_right_authoritarianism_party_long:0 "Afrikaner Party"
+SAF_despotism_party_long:0 "Bantu Clique"
+SAF_reactionism_party_long:0 "South African Native Congress"
+SAF_accelerationism_party_long:0 "National Convention"
+
+#LEADER DESCRITIONS#
+politics_george_villiers_desc:0 "George Villiers, 6th Earl of Clarendon, has served loyally as Governor-General of the Union of South Africa since 1931 however he has never been interested in the politics of South Africa opting to maintain neutrality and filling his time with hunting and outdoor activities in the wilds of the African Dominion.
+politics_Walter_Madeley_desc:0 "."
+politics_Tielman_Roos_desc:0 "."
+politics_Nicolaas_Havenga_desc:0 "."
+politics_Edwin_Mofutsanyana_desc:0 "."
+politics_Zacharias_Mahabane_desc:0 "."
+politics_Moses_Kotane_desc:0 "Moses Kotane is the leader of the Socialist League of South Africa, who in the early 1930s formulated his ideas on revamped revolutionary tactics taking inspiration from the successful revolution in Germany and the failed revolution in Russia. He however opted not to copy the European revolutions instead he created political theory, Kotanism, that was unique to the circumstances of the African Natives. This was to maximise the revolutionary potential in South Africa and give the native proletariat the greatest chance at freedom. His political theory hinges upon extreme anti-imperialism which has caused concern among the colonial governments in Africa as his ideas and himself grow ever more popular."
+
+politics_Edward_Roux_desc:0 "Edward Roux is a former member of the South African Communist Party who after Red Friday left the party and joined the labour party after seeing the failure of revolutionary tactics. However, after the Labour party opted to join in a coalition government with the United Party, he has led a splinter party named the New Labour Party which has a much further left platform than its former party. This places the new party as the only mainstream party in opposition to the apartheid and relocation policies of the other mainstream parties."
+
+politics_Clements_Kadalie_desc:0 "Clements Kadalie is South Africa's first native national trade union leader, however since the Native Labour and Land Act (1922) has worked in the underground Socialist League of South Africa to further the rights of the natives of South Africa. Wether through violent action or political speeches in the reservations Clements has been a tireless advocate for Native socialism. With the rise of Mosesism in the reservations led by Moses Kotane he has thrown his weight behind this charismatic revolutionary even if he disagrees with the authoritarian aspects of the ideology in favour of more anarchist leanings."
+
+politics_Sobhuza_II_desc:0 "Sobhuza II ascended to the throne after the death of his father, Ngwane V, as King of Swaziland on 10 December 1899, when he was only four months old. Early in his reign, Sobhuza sought to address the problem of land partition and deprivation instituted by the British authorities in 1907. He did so by first leading a delegation to London to meet with King George V and petition him to restore the lands to the Swazi people. He again took his case on the land issue in 1929 to the Judicial Committee of the Privy Council. He was defeated by the terms of the Foreign Jurisdictions Act, which effectively placed the actions of British administrations in protectorates beyond the reach of the British courts."
+
+Portrait_D_F_Malan_desc:0 "Daniel François Malan, the former Minister of the interior, Education and Public health, in response to the union of the South African Party and his National Party and the current coalition with the Labour Party formed the Purified National Party with 19 former United Party mps. This new party was formed to protect the policies of relocation and apartheid from perceived softening of the coalition and union of the main parties on these policies."
+
+#IDEAS#
+#CUSTOM TOOLTIPS AND FLAGS#
+#DECISIONS (1.5 Update)#

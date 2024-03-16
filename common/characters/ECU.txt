@@ -1,0 +1,15 @@
+characters = {
+	ECU_antonio_pons = {
+		name = "Antonio Pons"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ECU/Portrait_ECU_Antonio_Pons.png"
+			}
+		}
+
+		country_leader = {
+			ideology = national_conservatism
+			expire = "1965.1.1.1"
+		}
+	}	
+}

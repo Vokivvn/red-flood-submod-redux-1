@@ -1,0 +1,27 @@
+state={
+	id=1235
+	name="STATE_1235"
+	manpower = 1106400
+
+	state_category = town
+
+	history = {
+		owner = DEI
+		victory_points = { #Sibolga
+			10522 3
+		}
+		victory_points = { #Goenoengsitoli
+			12126 1
+		}
+		add_core_of = DEI
+		buildings = {
+			infrastructure = 2
+			10522 = {
+				naval_base = 2
+			}
+		}
+	}
+	provinces={
+		8360 10522 4446 12126 13608
+	}
+}

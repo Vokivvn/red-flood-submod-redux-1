@@ -1,0 +1,26 @@
+state= {
+	id=1191
+	name="STATE_1191"
+	manpower = 358946
+	
+	state_category = rural
+	
+	resources = {
+	}
+
+	history= {
+		owner = VEN
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = VEN
+		
+		victory_points = {
+			13523 2
+		}
+	}
+
+	provinces= {
+		5000 4892 5056 13523 13522 13518 4942 8024 13516 13517 8080
+ 	}
+}

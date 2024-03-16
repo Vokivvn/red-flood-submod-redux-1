@@ -1,0 +1,78 @@
+focus_tree = {
+	id = italy_bordiga
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = ITA
+		}
+	}
+	continuous_focus_position = { x = 50 y = 2400 }
+
+	focus = {
+		id = ITA_a_new_chairman
+		icon = GFX_focus_ITA_a_new_chairman
+		cost = 8
+		x = 7
+		y = 0
+		completion_reward = {
+			add_political_power = 5
+		}
+	}
+	focus = {
+		id = ITA_eat_lasagna
+		icon = GFX_focus_ITA_eat_lasagna
+		cost = 8
+		relative_position_id = ITA_a_new_chairman
+		x = -1
+		y = 1
+		prerequisite = {
+			focus = ITA_a_new_chairman
+		}
+		completion_reward = {
+			add_ideas = ITA_he_ate_all_lasagna
+		}
+	}
+	focus = {
+		id = ITA_write_theory
+		icon = GFX_focus_ITA_write_theory
+		cost = 8
+		relative_position_id = ITA_a_new_chairman
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = ITA_a_new_chairman
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = popular_socialism
+				popularity = 0.01
+			}
+		}
+	}
+	focus = {
+		id = ITA_sit_in_a_chair
+		icon = GFX_focus_ITA_sit_in_a_chair
+		cost = 20
+		relative_position_id = ITA_a_new_chairman
+		x = 0
+		y = 2
+		prerequisite = {
+			focus = ITA_eat_lasagna
+		}
+		prerequisite = {
+			focus = ITA_write_theory
+		}
+		completion_reward = {
+			hidden_effect = {
+				remove_ideas = {
+					ITA_the_slump
+					ITA_ineffective_military
+					ITA_overburdened_administration
+					ITA_the_libyan_war
+					ITA_lagging_south
+				}
+			}
+		}
+	}
+}

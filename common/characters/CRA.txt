@@ -1,0 +1,14 @@
+characters = {
+	CRA_cândido_rondon = {
+		name = "Cândido Rondon"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/CRA/Portrait_Candido_Rondon.png"
+			}
+		}
+		country_leader = {
+			ideology = social_liberalism
+			expire = "1965.1.1.1"
+		}
+	}
+}

@@ -1,0 +1,26 @@
+characters = {
+	NYC_william_o_dwyer = {
+		name = "William O'Dwyer"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/NYC/Portrait_William_O_Dwyer.png"
+			}
+		}
+		country_leader = {
+			ideology = social_liberalism
+			expire = "1965.1.1.1"
+		}
+	}
+	NYC_fiorello_la_guardia = {
+		name = "Fiorello La Guardia"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/NYC/Portrait_Fiorello_La_Guardia.png"
+			}
+		}
+		country_leader = {
+			ideology = progressive_democracy
+			expire = "1965.1.1.1"
+		}
+	}
+}

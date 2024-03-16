@@ -1,0 +1,4 @@
+##################
+#### CONSTANTS ###
+##################
+# Used for the Merge Plant traits for easier maintenance

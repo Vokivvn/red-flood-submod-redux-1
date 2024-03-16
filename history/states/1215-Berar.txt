@@ -1,0 +1,26 @@
+
+state={
+	id=1215
+	name="STATE_1215"
+	manpower = 1043100
+
+	state_category = town
+
+	resources={
+		
+	}
+
+	history={
+		owner = RSR
+		add_core_of = RSR
+		add_claim_by = HYD
+		buildings = {
+			infrastructure = 2
+		}
+
+	}
+
+	provinces={
+		7619 10030 12781
+	}
+}

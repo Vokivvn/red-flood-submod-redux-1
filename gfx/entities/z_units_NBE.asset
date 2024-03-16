@@ -1,0 +1,157 @@
+
+# Infantry
+
+
+	entity = {
+		clone = "FRA_infantry_entity"
+		name = "NBE_infantry_entity"
+		pdxmesh = "NBE_infantry_rifle_mesh"
+	}
+	
+	entity = {
+		clone = "FRA_infantry_2_entity"
+		name = "NBE_infantry_2_entity"
+		pdxmesh = "NBE_infantry_mg_mesh"
+	}
+	
+	entity = {
+		clone = "NBE_infantry_2_entity"
+		name = "NBE_infantry_3_entity"
+	}
+
+
+# Cavalry
+
+
+	entity = {
+		clone = "FRA_infantry_rider_entity"
+		name = "NBE_infantry_rider_entity"
+		pdxmesh = "NBE_infantry_rifle_mesh"
+	}
+
+	entity = {
+		clone = "FRA_infantry_mg_rider_entity"
+		name = "NBE_infantry_mg_rider_entity"
+		pdxmesh = "NBE_infantry_mg_mesh"
+	}
+	
+	entity = {
+		clone = "FRA_cavalry_rifle_combined_entity"
+		name = "NBE_cavalry_rifle_combined_entity"
+		
+		attach = { 	name = "infantry_unit"		Saddle_Node = "NBE_infantry_rider_entity" }
+	}
+
+	entity = {
+		clone = "FRA_cavalry_mg_combined_entity"
+		name = "NBE_cavalry_mg_combined_entity"
+		
+		attach = { 	name = "infantry_unit"		Saddle_Node = "NBE_infantry_mg_rider_entity" }
+	}
+
+	entity = {
+		clone = "FRA_cavalry_entity"
+		name = "NBE_cavalry_entity"
+
+		attach = { 	name = "infantry"		infantry = "NBE_infantry_rider_entity" }
+		attach = { 	name = "cavalry"		cavalry = "NBE_cavalry_rifle_combined_entity" }
+	}
+	
+	entity = {
+		clone = "FRA_cavalry_2_entity"
+		name = "NBE_cavalry_2_entity"
+		
+		attach = { 	name = "infantry"		infantry = "NBE_infantry_mg_rider_entity" }
+		attach = { 	name = "cavalry"		cavalry = "NBE_cavalry_mg_combined_entity" }
+	}
+
+
+# Cars
+
+
+	entity = {
+		clone = "motorized_entity"
+		name = "NBE_motorized_entity"
+		
+		attach = { name = "infantry" 	infantry = "NBE_infantry_entity" }
+	}
+
+	entity = {
+		clone = "motorized_entity"
+		name = "NBE_mechanized_entity"
+
+		attach = { name = "vehicle" 	vehicle = "FRA_mechanized_entity" }
+		attach = { name = "infantry" 	infantry = "NBE_infantry_entity" }
+	}
+	
+	entity = {
+		clone = "artillery_entity"
+		name = "NBE_artillery_entity"
+		
+		attach = { name = infantry		infantry = "NBE_infantry_entity" }
+	}
+	
+	entity = {
+		clone = "anti_tank_entity"
+		name = "NBE_anti_tank_entity"
+	
+		attach = { name = infantry			infantry = "NBE_infantry_entity" }
+	}
+	
+
+# Bycicles
+
+	
+	entity = {
+		clone = "JAP_bicycle_entity"
+		name = "NBE_bicycle_entity"
+		
+		attach = { 	name = "infantry"		infantry = "NBE_bicycle_rider_rifle_entity" }	
+		attach = { 	name = "combined"		combined = "NBE_bicycle_rifle_combined_entity" }
+	}
+	
+	entity = {
+		clone = "JAP_bicycle_rifle_combined_entity"
+		name = "NBE_bicycle_rifle_combined_entity"
+		
+		attach = { 	name = "rider"	bike_center = "NBE_bicycle_rider_rifle_entity" }
+	}
+
+	entity = {
+		clone = "JAP_bicycle_rider_rifle_entity"
+		name = "NBE_bicycle_rider_rifle_entity"
+		pdxmesh = "NBE_infantry_rifle_mesh"	
+		
+		attach = { 	name = "rifle1"	Right_Hand_node = "JAP_infantry_weapon_rifle_right_entity" }	
+		attach = { 	name = "rifle2"	Left_Hand_node = "JAP_infantry_weapon_rifle_left_entity" }
+		attach = { 	name = "rifle4"	Root_node_2 = "JAP_infantry_weapon_rifle_right_entity" }
+	}
+	
+	entity = {
+		clone = "JAP_bicycle_2_entity"
+		name = "NBE_bicycle_2_entity"
+		
+		attach = { 	name = "infantry"		infantry = "NBE_bicycle_rider_mg_entity" }	
+		attach = { 	name = "combined"		combined = "NBE_bicycle_mg_combined_entity" }
+	}
+	
+	entity = {
+		clone = "JAP_bicycle_mg_combined_entity"
+		name = "NBE_bicycle_mg_combined_entity"
+		
+		attach = { 	name = "rider"	bike_center = "NBE_bicycle_rider_mg_entity" }
+	}
+
+	entity = {
+		clone = "JAP_bicycle_rider_mg_entity"
+		name = "NBE_bicycle_rider_mg_entity"
+		pdxmesh = "NBE_infantry_mg_mesh"	
+		
+		attach = { 	name = "rifle1"	Right_Hand_node = "JAP_infantry_weapon_mg_right_entity" }	
+		attach = { 	name = "rifle2"	Left_Hand_node = "JAP_infantry_weapon_mg_left_entity" }
+	}
+	
+
+#
+
+

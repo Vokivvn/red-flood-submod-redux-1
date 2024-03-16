@@ -1,0 +1,30 @@
+state=
+{
+	id=1142
+	name="STATE_1142"
+	manpower = 300000
+	
+	state_category = rural
+	resources={
+		rubber=12
+	}	
+	
+
+	history= {
+		owner = LIB
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			13422 = {
+				naval_base = 1
+			}
+		}
+		victory_points = {
+			13422 4
+		}
+		add_core_of = LIB
+	}
+	provinces={
+		13422
+	}
+}

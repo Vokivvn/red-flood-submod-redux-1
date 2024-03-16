@@ -1,0 +1,29 @@
+ideas = {
+	country = {
+		ICE_danish_exiles = {
+			removal_cost = -1
+			picture = ICE_father_dream
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				political_power_factor = 0.5
+			}
+		}
+		ICE_lady_promise = {
+			removal_cost = -1
+			picture = ICE_lady_promise
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				political_power_factor = -0.5
+			}
+		}
+		ICE_another_generation_of_vikings = {
+			removal_cost = -1
+			picture = ICE_another_generation_of_vikings
+			cancel = { has_country_flag = remove_idea }
+			modifier = { #increase p
+				weekly_manpower = 200
+				stability_factor = -0.03
+			}
+		}
+	}
+}

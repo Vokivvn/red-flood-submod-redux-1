@@ -1,0 +1,28 @@
+
+state={
+	id=1297
+	name="STATE_1297"
+	manpower = 142345
+	state_category = rural
+
+	history={
+		owner = PRS
+		add_core_of = PRS
+		add_core_of = GER
+		add_core_of = LIT
+		buildings = {
+			infrastructure = 2
+			3288 = {
+				naval_base = 1
+				bunker = 8
+			}
+		}
+		victory_points = {
+			3288 10
+		}
+	}
+
+	provinces={
+		3288
+	}
+}

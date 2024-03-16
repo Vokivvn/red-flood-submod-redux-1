@@ -1,0 +1,40 @@
+
+state={
+	id=1041
+	name="STATE_1041"
+
+	history={
+		owner = TUK
+		victory_points = {
+			12581 20
+		}
+		victory_points = {
+			10187 5
+		}
+		victory_points = {
+			4467 5
+		}
+		victory_points = {
+			2058 5
+		}
+		victory_points = {
+			10488 5
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+			air_base = 1
+			arms_factory = 1
+		}
+
+		add_core_of = TUK
+
+	}
+
+	provinces = {
+		12430 12581 2058 1483 10408 10187 10488 4923 4467 10530
+	}
+	manpower=2253000
+	buildings_max_level_factor=1.000
+	state_category=city
+}

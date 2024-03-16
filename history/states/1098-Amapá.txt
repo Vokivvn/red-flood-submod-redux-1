@@ -1,0 +1,30 @@
+
+state={
+	id=1098
+	name="STATE_1098"
+	manpower = 100000
+	state_category = pastoral
+	
+	resources={
+		rubber=120 # was: 30
+	}
+
+	history={
+		owner = BRA
+		buildings = {
+			infrastructure = 1
+			4980 = {
+				naval_base = 1
+			}
+		}
+		add_core_of = BRA
+		victory_points = {
+			4980 1 
+		}
+
+	}
+
+	provinces={
+		4980
+	}
+}

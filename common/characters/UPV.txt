@@ -1,0 +1,357 @@
+characters = {
+	UPV_nazi_boni = {
+		name = "Nazi Boni"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/UPV/Portrait_Upper_Volta_Nazi_Boni.png"
+				small="gfx/interface/ministers/UPV/UPV_nazi_boni_hog.dds"
+			}
+		}
+		country_leader = {
+			ideology = social_nationalism
+			expire = "1965.1.1.1"
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = UPV_nazi_boni_hog
+			traits = { head_of_government hog_he_is_nazi_boni }
+		}
+	}
+	UPV_blaise_bassoleth = {
+		name = "Blaise Bassoleth"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/UPV/Portrait_Upper_Volta_Blaise_Bassoleth.png"
+				small="gfx/interface/ministers/UPV/UPV_blaise_bassoleth_hog.dds"
+			}
+		}
+		country_leader = {
+			ideology = democratic_socialism
+			expire = "1965.1.1.1"
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = UPV_Bassoleth_hog
+			available = {
+				has_country_leader = {
+					character = UPV_blaise_bassoleth
+					ruling_only = yes
+				}
+			}
+			traits = { head_of_government hog_ambitious_union_boss }
+		}
+	}
+	UPV_diongolo_traore = {
+		name = "Diongolo Traoré"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/UPV/Portrait_Upper_Volta_Diongolo_Traore.png"
+				small="gfx/interface/ministers/UPV/UPV_diongolo_traore_hog.dds"
+			}
+		}
+		country_leader = {
+			ideology = social_liberalism
+			expire = "1965.1.1.1"
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = UPV_diongolo_traore_hog
+			available = {
+				has_country_leader = {
+					character = UPV_diongolo_traore
+					ruling_only = yes
+				}
+			}
+			traits = { head_of_government hog_happy_amateur }
+		}
+	}
+	UPV_daniel_ouezzin_coulibaly = {
+		name = "Daniel Ouezzin Coulibaly"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/UPV/Portrait_Upper_Volta_Daniel_Ouezzin_Coulibaly.png"
+				small="gfx/interface/ministers/UPV/UPV_daniel_ouezzin_coulibaly_hog.dds"
+			}
+		}
+		country_leader = {
+			ideology = libertarian_capitalism
+			expire = "1965.1.1.1"
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = UPV_daniel_ouezzin_coulibaly_hog
+			available = {
+				has_country_leader = {
+					character = UPV_daniel_ouezzin_coulibaly
+					ruling_only = yes
+				}
+			}
+			traits = { head_of_government hog_money_man }
+		}
+	}
+	UPV_joseph_conombo = {
+		name = "Joseph Conombo"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/UPV/Portrait_Upper_Volta_Joseph_Conombo.png"
+				small="gfx/interface/ministers/UPV/UPV_joseph_conombo_hog.dds"
+			}
+		}
+		country_leader = {
+			ideology = social_nationalism
+			expire = "1965.1.1.1"
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = UPV_Conombo_hog
+			available = {
+				has_country_leader = {
+					character = UPV_joseph_conombo
+					ruling_only = yes
+				}
+			}
+			traits = { head_of_government hog_naive_optimist }
+		}
+	}
+	UPV_dieudonne_yougbare = {
+		name = "Dieudonné Yougbaré"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/UPV/Portrait_Upper_Volta_Dieudonne_Yougbare.png"
+				small="gfx/interface/ministers/UPV/UPV_dieudonne_yougbare_hog.dds"
+			}
+		}
+		country_leader = {
+			ideology = social_conservatism
+			expire = "1965.1.1.1"
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = UPV_dieudonne_yougbare_hog
+			available = {
+				has_country_leader = {
+					character = UPV_dieudonne_yougbare
+					ruling_only = yes
+				}
+			}
+			traits = { head_of_government hog_spiritual_leader }
+		}
+	}
+	UPV_sangoul_lamizana = {
+		name = "Sangoulé Lamizana"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/UPV/Portrait_Upper_Volta_Sangoule_Lamizana.png"
+				small="gfx/interface/ministers/UPV/UPV_sangoule_lamizana_hog.dds"
+			}
+		}
+		country_leader = {
+			ideology = oligarchy
+			expire = "1965.1.1.1"
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = UPV_sangoul_lamizana_hog
+			available = {
+				has_country_leader = {
+					character = UPV_sangoul_lamizana
+					ruling_only = yes
+				}
+			}
+			traits = { head_of_government hog_corporate_suit }
+		}
+		advisor = {
+			slot = head_of_intel
+			idea_token = UPV_sangoul_lamizana_int
+			available = {
+				has_government = right_authoritarianism	
+			}
+			traits = { head_of_intel int_industrial_specialist }
+		}
+		advisor = {
+			slot = high_command
+			idea_token = UPV_sangoul_lamizana_command
+			traits = { high_command cos_school_of_manoeuvre }
+		}
+	}
+	UPV_begnon_damien_kone = {
+		name="Bégnon-Damien Kone"
+		portraits={
+			civilian = {
+				small="gfx/interface/ministers/UPV/UPV_begnon_damien_kone_eco.dds"
+			}
+		}
+		advisor = {
+			slot = economy_minister
+			available = {
+				has_government = progressivism
+				has_government = liberalism
+				has_government = conservatism
+			}
+			idea_token = UPV_begnon_damien_kone_eco
+			traits = { economy_minister eco_balanced_budget_economy }
+		}
+	}
+	UPV_jean_baptiste_boukari_lingani = {
+		name="Jean-Baptiste Boukari Lingani"
+		portraits={
+			civilian = {
+				small="gfx/interface/ministers/UPV/UPV_jean-baptiste_boukari_lingani_eco.dds"
+			}
+		}
+		advisor = {
+			slot = economy_minister
+			available = {
+				has_government = revisionist_socialism
+			}
+			idea_token = UPV_jean-baptiste_boukari_lingani_eco
+			traits = { economy_minister eco_planned_economy_proponent }
+		}
+	}
+	UPV_tapsoba_tinga_dominique = {
+		name="Tapsoba Tinga Dominique"
+		portraits={
+			civilian = {
+				small="gfx/interface/ministers/UPV/UPV_tapsoba_tinga_dominique_eco.dds"
+			}
+		}
+		advisor = {
+			slot = economy_minister
+			available = {
+				has_government = right_authoritarianism
+			}
+			idea_token = UPV_tapsoba_tinga_dominique_eco
+			traits = { economy_minister eco_administrative_genius }
+		}
+	}
+	UPV_christophe_kalenzaga = {
+		name="Christophe Kalenza"
+		portraits={
+			civilian = {
+				small="gfx/interface/ministers/UPV/UPV_christophe_kalenzaga_for.dds"
+			}
+		}
+		advisor = {
+			slot = foreign_minister
+			available = {
+				has_government = progressivism
+				has_government = liberalism
+				has_government = conservatism
+			}
+			idea_token = UPV_christophe_kalenzaga_for
+			traits = { foreign_minister for_biased_intellectual }
+		}
+	}
+	UPV_henri_guissou = {
+		name="Henri Guissou"
+		portraits={
+			civilian = {
+				small="gfx/interface/ministers/UPV/UPV_henri_guissou_for.dds"
+			}
+		}
+		advisor = {
+			slot = foreign_minister
+			available = {
+				has_government = revisionist_socialism
+			}
+			idea_token = UPV_henri_guissou_for
+			traits = { foreign_minister for_ideological_crusader }
+		}
+	}
+	UPV_georges_bamina_nebie = {
+		name="Georges Bamina Nebié"
+		portraits={
+			civilian = {
+				small="gfx/interface/ministers/UPV/UPV_georges_bamina_nebie_for.dds"
+			}
+		}
+		advisor = {
+			slot = foreign_minister
+			available = {
+				has_government = right_authoritarianism
+			}
+			idea_token = UPV_georges_bamina_nebie_for
+			traits = { foreign_minister for_general_staffer }
+		}
+		advisor = {
+			slot = army_chief
+			available = {
+				has_government = right_authoritarianism
+			}
+			idea_token = UPV_georges_bamina_nebie_army
+			traits = { army_chief carm_guns_and_butter_doctrine }
+		}
+	}
+	UPV_yacouba_sido = {
+		name="Yacouba Sido"
+		portraits={
+			civilian = {
+				small="gfx/interface/ministers/UPV/UPV_yacouba_sido_sec.dds"
+			}
+		}
+		advisor = {
+			slot = security_minister
+			available = {
+				has_government = progressivism
+				has_government = liberalism
+				has_government = conservatism
+			}
+			idea_token = UPV_yacouba_sido_sec
+			traits = {  security_minister sec_health_and_safety }
+		}
+	}
+	UPV_baba_sy = {
+		name="Baba Sy"
+		portraits={
+			civilian = {
+				small="gfx/interface/ministers/UPV/UPV_baba_sy_sec.dds"
+			}
+		}
+		advisor = {
+			slot = security_minister
+			available = {
+				has_government = revisionist_socialism
+			}
+			idea_token = UPV_baba_sy_sec
+			traits = { security_minister sec_man_of_the_people }
+		}
+	}
+	UPV_military_council = {
+		name="Conseil Militaire"
+		portraits={
+			civilian = {
+				small="gfx/interface/ministers/UPV/UPV_military_council_sec.dds"
+			}
+		}
+		advisor = {
+			slot = security_minister
+			available = {
+				has_government = right_authoritarianism
+			}
+			idea_token = UPV_military_council_sec
+			traits = { security_minister sec_prince_of_terror }
+		}
+	}
+	UPV_nouhon_sigue = {
+		name="Nouhon Sigué"
+		portraits={
+			civilian = {
+				small="gfx/interface/ministers/UPV/UPV_nouhon_sigue_sec.dds"
+			}
+		}
+		advisor = {
+			slot = head_of_intel
+			available = {
+				has_government = progressivism
+				has_government = liberalism
+				has_government = conservatism
+				has_government = revisionist_socialism
+			}
+			idea_token = UPV_nouhon_sigue_int
+			traits = { head_of_intel int_political_specialist }
+		}
+	}
+
+
+}
+

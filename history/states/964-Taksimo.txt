@@ -1,0 +1,32 @@
+state={
+	id=964
+	name="STATE_964"
+	state_category = town
+	provinces={
+		1761 4716 4835 7736 7854 12506 12575 
+	}
+	manpower = 178381
+	buildings_max_level_factor=1.000
+	
+
+	
+	history = {
+	
+	owner = SIB
+	
+	add_core_of = SIB
+
+	 
+	        buildings = {
+			
+			infrastructure = 1
+			
+			
+			}
+	
+	
+	
+	
+	
+	}
+}

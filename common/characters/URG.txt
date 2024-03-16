@@ -1,0 +1,28 @@
+characters={
+	URG_gabriel_terra={
+		name="Gabriel Terra"
+		portraits={
+			civilian={
+				large="gfx/leaders/URG/Portrait_URG_Gabriel_Terra.png"
+			}
+		}
+		country_leader={
+			desc="POLITICS_ALEXEI_II_DESC"
+			ideology=reactionary_populism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	URG_luis_alberto_de_herrera = {
+		name = "Luis Alberto de Herrera"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/URG/Portrait_Luis_Alberto_de_Herrera.png"
+			}
+		}
+		country_leader = {
+			ideology = classical_liberalism
+			expire = "1965.1.1.1"
+		}
+	}
+}

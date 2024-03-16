@@ -1,0 +1,36 @@
+
+state={
+	id=408
+	name="STATE_408"
+	resources={
+		chromium=18
+	}
+
+	history={
+		owner = ZHR
+		victory_points = {
+			957 30
+		}
+		buildings = {
+			infrastructure = 3
+			dockyard = 2
+			industrial_complex = 3
+			air_base = 5
+			957 = {
+				naval_base = 8
+				coastal_bunker = 3
+			}
+
+	}
+
+		add_core_of = ZHR
+
+	}
+
+	provinces={
+		957 11879 3977
+	}
+	manpower= 1441465
+	buildings_max_level_factor=1.000
+	state_category=metropolis
+}

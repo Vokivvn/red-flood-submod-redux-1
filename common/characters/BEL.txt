@@ -1,0 +1,15 @@
+characters = {
+	BEL_leopold_III = {
+		name = "Leopold III"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/BEL/Portriat_BEL_Leopold_III.png"
+			}
+		}
+		country_leader = {
+			ideology = anocracy
+			expire = "1965.1.1.1"
+			id=-1
+		}
+	}
+}

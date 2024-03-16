@@ -1,0 +1,489 @@
+GER_exporting_revolution = {
+	GER_france_release = {
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+		}
+		visible = {
+			16 = { is_owned_by_ROOT_or_ai_ally = yes }
+		}
+
+		days_remove = 21
+
+		complete_effect = {
+			if = {
+				limit = { NOT = { has_country_flag = ger_french_collabs } }
+				country_event = germany.27
+				complete_national_focus = GER_comite_france_libre
+			}
+		}
+
+		remove_effect = {
+			hidden_effect = {
+				if = {
+					limit = { has_completed_focus = GER_pangermanic_rhetoric }
+					every_state = {
+						limit = {
+							OR = {
+								state = 34 #Wallonia
+								state = 29 #Pas de Calais
+								state = 938 #Calais
+							}
+						}
+						add_claim_by = GER
+					}
+				}
+				else = {
+					every_state = {
+						limit = {
+							OR = {
+								state = 34 #Wallonia
+								state = 29 #Pas de Calais
+								state = 938 #Calais
+							}
+						}
+						add_core_of = SFR
+					}
+				}
+				every_state = {
+					limit = {
+						OR = {
+							state = 958 #East Wallonia
+							state = 920 #Upper Lorraine
+						}
+					}
+					add_claim_by = GER
+				}
+				every_state = {
+					limit = {
+						OR = {
+							state = 1
+							state = 33
+							state = 25
+							state = 785 
+							state = 15
+							state = 14
+							state = 30
+							state = 16
+							state = 18
+							state = 17
+							state = 23
+							state = 1264
+							state = 19
+							state = 31
+							state = 22
+							state = 21
+							state = 735
+							state = 32
+							state = 26
+							state = 20
+							state = 27
+							state = 24
+						}
+					}
+					add_core_of = SFR
+				}
+				CYN = { country_event = CYN.1 }
+			}
+			every_state = {
+				limit = {
+					is_owned_by_ROOT_or_ai_ally = yes
+					is_core_of = SFR
+					is_not_claim_or_core_of_ROOT = yes
+				}
+				SFR = { transfer_state = PREV }
+			}
+			set_temp_variable = { tag_to_release = SFR }
+			puppet_released_tag = yes
+			
+			set_province_name = { id = 11506 name = GER_decision_GER_france_release_province_11506 }
+			if = {
+				limit = { has_country_flag = GER_deat_win }
+				SFR = {
+					set_politics = {
+						ruling_party = popular_socialism
+					}
+					add_popularity = {
+						ideology = popular_socialism
+						popularity = 0.30
+					}
+					set_cosmetic_tag = SFR_deat
+				}
+			}
+			else_if = {
+				limit = { has_country_flag = GER_pierre_win }
+				SFR = {
+					set_politics = {
+						ruling_party = revisionist_socialism
+					}
+					add_popularity = {
+						ideology = revisionist_socialism
+						popularity = 0.30
+					}
+					set_cosmetic_tag = SFR_pierre
+				}
+			}
+			else_if = {
+				limit = { has_country_flag = GER_pelletier_win }
+				SFR = {
+					set_politics = {
+						ruling_party = vanguard_socialism
+					}
+					add_popularity = {
+						ideology = vanguard_socialism
+						popularity = 0.30
+					}
+					set_cosmetic_tag = SFR_pelletier
+				}
+			}
+			recheck_annexations = yes
+		}
+	}
+	GER_czechia_release = {
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+		}
+		visible = {
+			has_completed_focus = GER_prison_house_thesis
+			9 = { is_owned_by_ROOT_or_ai_ally = yes }
+		}
+		days_remove = 21
+		
+		complete_effect = {
+			if = {
+				limit = { NOT = { has_country_flag = ger_czech_collabs } }
+				country_event = germany.24
+				complete_national_focus = GER_found_VCNO
+			}
+		}
+		
+		remove_effect = {
+			every_state = {
+				limit = {
+					is_owned_by_ROOT_or_ai_ally = yes
+					is_core_of = CZE
+					is_not_claim_or_core_of_ROOT = yes
+				}
+				CZE = { transfer_state = PREV }
+			}
+			set_temp_variable = { tag_to_release = CZE }
+			puppet_released_tag = yes
+			
+			CZE = { set_cosmetic_tag = CZE_socialist_puppet }
+			if = {
+				limit = { has_country_flag = GER_bolen_win }
+				CZE = {
+					set_politics = {
+						ruling_party = vanguard_socialism
+						elections_allowed = no			
+					}
+					add_popularity = {
+						ideology = vanguard_socialism
+						popularity = 0.20
+					}
+					set_country_flag = GER_bolen_win
+				}
+			}
+			else_if = {
+				limit = { has_country_flag = GER_stribny_win }
+				CZE = {
+					set_politics = {
+						ruling_party = revisionist_socialism
+						elections_allowed = no			
+					}
+					add_popularity = {
+						ideology = revisionist_socialism
+						popularity = 0.20
+					}
+					set_country_flag = GER_stribny_win
+				}
+			}
+			else_if = {
+				limit = { has_country_flag = GER_verbnsky }
+				CZE = {
+					set_politics = {
+						ruling_party = popular_socialism
+						elections_allowed = no			
+					}
+					add_popularity = {
+						ideology = popular_socialism
+						popularity = 0.20
+					}
+					set_country_flag = GER_verbnsky
+				}
+			}
+			else_if = {
+				limit = { has_country_flag = GER_patejdl }
+				CZE = {
+					set_politics = {
+						ruling_party = progressivism
+						elections_allowed = no			
+					}
+					set_country_flag = is_socialist_aligned
+					add_popularity = {
+						ideology = progressivism
+						popularity = 0.20
+					}
+					set_country_flag = GER_patejdl
+				}
+			}
+			else_if = {
+				limit = { has_country_flag = GER_hasek }
+				CZE = {
+					set_politics = {
+						ruling_party = anarchism
+						elections_allowed = no			
+					}
+					add_popularity = {
+						ideology = anarchism
+						popularity = 0.20
+					}
+					set_country_flag = GER_hasek
+				}
+			}
+		}
+	}
+	
+	GER_italy_release = {
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 10000
+		}
+		visible = {
+			2 = { is_owned_by_ROOT_or_ai_ally = yes }
+		}
+		days_remove = 21
+
+		complete_effect = {
+			if = {
+				limit = { NOT = { has_country_flag = ger_italian_collabs } }
+				country_event = germany.25
+				complete_national_focus = GER_futurism_problem
+			}
+			add_to_temp_array = { core_removal_array = ITA }
+			remove_all_cores_and_claims_of_tags = yes
+		}
+
+		remove_effect = {
+			if = {
+				limit = {
+					var:109.owner = { OR = { tag = YUG tag = BUL } has_government = reactionism }
+					NOT = { has_completed_focus = GER_pangermanic_rhetoric }
+				}
+				every_state = {
+					limit = {
+						OR = {
+							state = 1262
+							state = 1265
+							state = 736
+							state = 163
+						}
+					}
+					add_core_of = ITA
+				}
+			}
+			every_state = {
+				limit = {
+					OR = {
+						state = 158
+						state = 1263
+						state = 1200
+						state = 159
+						state = 161
+						state = 160
+						state = 162
+						state = 1072
+						state = 157
+						state = 2
+						state = 1266
+						state = 117
+						state = 156
+						state = 115
+						state = 114
+					}
+				}
+				add_core_of = ITA
+				if = {
+					limit = { 
+						is_owned_by_ROOT_or_ai_ally = yes
+						is_not_claim_or_core_of_ROOT = yes
+					}
+					transfer_state_to = ITA
+				}
+			}
+			set_temp_variable = { tag_to_release = ITA }
+			puppet_released_tag = yes
+			
+			GER_yug_ita_renaming = yes
+			if = {
+				limit = { has_country_flag = GER_basso_win }
+				ITA = {
+					promote_character = ITA_lelio_basso
+					set_politics = { 
+						ruling_party = popular_socialism
+					}
+					add_popularity = {
+						ideology = popular_socialism
+						popularity = 0.23
+					}
+					set_cosmetic_tag = ITA_basso
+				}
+			}
+			else_if = {
+				limit = { has_country_flag = GER_ricci_win }
+				ITA = {
+					promote_character = ITA_berto_ricci
+					set_politics = { 
+						ruling_party = vanguard_socialism
+					}
+					add_popularity = {
+						ideology = vanguard_socialism
+						popularity = 0.23
+					}
+					set_cosmetic_tag = ITA_ricci
+				}
+			}
+			else_if = {
+				limit = { has_country_flag = GER_rosselli_win }
+				ITA = {
+					promote_character = ITA_carlo_rosselli
+					set_politics = { 
+						ruling_party = progressivism
+					}
+					add_popularity = {
+						ideology = progressivism
+						popularity = 0.23
+					}
+					set_cosmetic_tag = ITA_republic
+				}
+			}
+			recheck_annexations = yes
+		}
+	}
+	GER_free_the_swiss = {
+		fire_only_once = yes
+		#days_remove = 1
+		ai_will_do = {
+			factor = 100
+		}
+		is_good = yes 
+		selectable_mission = no 
+		days_mission_timeout = 7
+		activation = {
+			has_completed_focus = GER_prison_house_thesis
+			3 = { is_owned_by_ROOT_or_ai_ally = yes }
+			SWI = { exists = no }
+		}
+		available = { hidden_trigger = { always = no } }
+		timeout_effect = {
+			every_state	= {
+				limit = {
+					is_owned_by_ROOT_or_ai_ally = yes
+					is_core_of = SWI
+				}
+				SWI = { transfer_state = PREV }
+			}
+			set_temp_variable = { tag_to_release = SWI }
+			puppet_released_tag = yes
+			GER = { country_event = germany.46 }
+			SWI = {
+				set_cosmetic_tag = SWI_socialist_puppet
+			}
+		}
+	}
+	GER_switzerland_release = {
+		ai_will_do = {
+			factor = 10000
+		}
+		is_good = yes
+		selectable_mission = no 
+		days_mission_timeout = 7
+		activation = {
+			NOT = { has_completed_focus = GER_prison_house_thesis }
+			ITA = { ROOT_can_grant_land = yes }
+			SFR = { exists = yes }
+			OR = {
+				SWI = { is_subject_of = GER }
+				var:846.owner = { tag = GER }
+				var:845.owner = { tag = GER }
+			}
+			NOT = { #Allies don't own the their Swiss states already
+				AND = {
+					var:3.owner = { tag = GER }
+					var:151.owner = { tag = GER }
+					var:845.owner = { tag = ITA }
+					var:846.owner = { tag = SFR }
+				}
+			}
+		}
+		available = { hidden_trigger = { always = no } }
+		timeout_effect = {
+			3 = { add_core_of = GER transfer_state_to = GER }
+			151 = { add_core_of = GER transfer_state_to = GER }
+			845 = { add_core_of = ITA transfer_state_to = ITA }
+			846 = { add_core_of = SFR transfer_state_to = SFR }
+			recheck_annexations = yes
+		}
+	}
+
+	GER_slovenia_transfer = {
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 10000
+		}
+		is_good = yes
+		selectable_mission = no 
+		days_mission_timeout = 7
+		activation = {
+			owns_state = 4
+			102 = { is_owned_by_ROOT_or_ai_ally = yes }
+			var:109.owner = {
+				OR = {
+					tag = YUG
+					tag = BUL
+				}
+				ROOT_can_grant_land = yes
+			}
+		}
+		available = { hidden_trigger = { always = no } }
+		timeout_effect = {
+			set_temp_variable = { tag_to_release = var:109.owner }
+			102 = {
+				transfer_state_and_add_core = yes
+				set_state_name = YUG_102_Rename
+			}
+			set_province_name = {
+				id = 9627
+				name = YUG_9627_VP_Rename
+			}
+			recheck_annexations = yes
+		}
+	}
+
+	#GER_reunify_with_brothers = {
+	#	fire_only_once = yes
+	#	#days_remove = 1
+
+	#	visible = {
+	#		has_completed_focus = GER_pangermanic_rhetoric
+    #    }
+	#	available = {
+	#		HOL = { 
+	#			exists = yes
+	#		}
+	#	}
+	#	complete_effect = {
+	#		every_state = {
+	#			limit = {
+	#				is_core_of = HOL
+	#			}
+	#			add_core_of = GER
+	#		}
+	#		declare_war_on = {
+	#			target = HOL
+	#			type = annex_everything
+	#		}
+	#	}
+	#}
+}

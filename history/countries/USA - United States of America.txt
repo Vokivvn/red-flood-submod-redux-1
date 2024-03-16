@@ -1,0 +1,250 @@
+﻿capital = 361
+set_research_slots = 4
+set_convoys = 175
+set_stability = 0.5
+
+oob = "USA"
+set_naval_oob = "USA_naval"
+if = { limit = { has_dlc = "By Blood Alone" } set_air_oob = "USA_air" }
+if = { limit = {  NOT = { has_dlc = "By Blood Alone" } }  set_air_oob = "USA_air_legacy" }
+
+set_variable = { var = senators_support value = 48 }
+set_variable = { var = senators_total value = 96 }
+set_variable = { var = representatives_support value = 218 }
+set_variable = { var = representatives_total value = 435 }
+set_variable = { var = quorum_low value = 39 }
+set_variable = { var = quorum_medium value = 49 }
+set_variable = { var = quorum_high value = 58 }
+USA_recalc_congress_icon_frames = yes
+
+add_ideas = {
+	USA_land_of_the_free
+	USA_dustbowl
+	USA_great_depression
+	USA_under_budget_military
+	USA_organized_crime
+	USA_prohibition
+	USA_klan_civil_war
+	USA_disjointed_government
+	undisturbed_isolation
+}
+
+# Events
+country_event = { id = usa.1 days = 303 }
+country_event = { id = usa.2 days = 170 }
+country_event = { id = usa.23 days = 85 }
+country_event = { id = usa.24 days = 230 }
+country_event = { id = usa.55 days = 547 }
+
+#DIPLOMACY
+set_autonomy = {
+	target = PHI
+	autonomous_state = autonomy_integrated_puppet
+}
+set_autonomy = {
+	target = HAI
+	autonomous_state = autonomy_puppet
+}
+set_autonomy = {
+	target = PAN
+	autonomous_state = autonomy_puppet
+}
+
+set_technology = {
+	### ARMY ####
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	support_weapons = 1
+	tech_support = 1
+	tech_recon = 1
+	tech_engineers = 1
+	tech_trucks =1
+	motorised_infantry = 1
+	gw_artillery = 1
+	marines = 1
+	paratroopers = 1
+	tech_mountaineers = 1
+	tech_special_forces = 1
+	### AIR ###
+	fuel_silos = 1
+}
+#NSB
+if = {
+	limit = { NOT = { has_dlc = "No Step Back" } }
+	set_technology = {
+		gwtank = 1
+		basic_light_tank = 1
+	}
+}
+if = {
+	limit = { has_dlc = "No Step Back" }
+	set_technology = {
+		gwtank_chassis = 1
+		basic_light_tank_chassis = 1
+		engine_tech_1 = 1
+	}
+}
+
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	set_technology = {
+		early_submarine = 1
+		basic_submarine = 1
+		early_destroyer = 1
+		early_light_cruiser = 1
+		basic_light_cruiser = 1
+		early_heavy_cruiser = 1
+		early_battleship = 1
+		early_battlecruiser = 1
+		early_carrier = 1
+		basic_carrier = 1
+		transport = 1
+	}
+}
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		early_ship_hull_light = 1
+		basic_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		early_ship_hull_cruiser = 1
+		basic_ship_hull_cruiser = 1
+		early_ship_hull_heavy = 1
+		early_ship_hull_carrier = 1
+		basic_ship_hull_carrier = 1
+		basic_battery = 1
+		basic_light_battery = 1
+		basic_medium_battery = 1
+		basic_heavy_battery = 1
+		basic_torpedo = 1
+		sonar = 1
+		basic_depth_charges = 1
+		basic_cruiser_armor_scheme = 1
+		basic_heavy_armor_scheme = 1
+		mtg_transport = 1
+		improved_airplane_launcher = 1
+		basic_dp_light_battery = 1
+	}
+}
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+	set_technology = {
+		iw_small_airframe = 1
+		basic_small_airframe = 1
+		iw_medium_airframe = 1
+		basic_medium_airframe = 1
+		engines_1 = 1
+		engines_2 = 1
+		aa_lmg = 1
+		early_bombs = 1
+		aircraft_construction = 1
+	}
+}
+if = {
+	limit = { NOT = { has_dlc = "By Blood Alone" } }
+	set_technology = {
+		early_fighter = 1
+		cv_early_fighter = 1
+		cv_naval_bomber1 = 1
+		cv_CAS1 = 1
+		naval_bomber1 = 1
+		CAS1 = 1
+		early_bomber = 1
+	}
+}
+
+set_politics = {
+	ruling_party = liberalism
+	last_election = "1933.10.25"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	vanguard_socialism = 0
+	popular_socialism = 5
+	anarchism = 0
+	revisionist_socialism = 10
+	progressivism = 25
+	liberalism = 20
+	conservatism = 25
+	right_authoritarianism = 0
+	despotism = 0
+	reactionism = 0
+	accelerationism = 15
+}
+
+recruit_character = USA_andrew_mellon
+recruit_character = USA_james_renshaw_cox
+recruit_character = USA_dan_moody
+recruit_character = USA_elizabeth_gurley_flynn
+recruit_character = USA_howard_scott
+recruit_character = USA_la_guardia
+recruit_character = USA_bronson_murray_cutting
+recruit_character = USA_george_s._patton
+recruit_character = USA_omar_bradley
+recruit_character = USA_dwight_d._eisenhower
+recruit_character = USA_geoffrey_keyes
+recruit_character = USA_lucian_truscott
+recruit_character = USA_mark_clark
+recruit_character = USA_mason_mathews_patrick
+recruit_character = USA_walter_krueger
+recruit_character = USA_lloyd_fredendall
+recruit_character = USA_leslie_mcnair
+recruit_character = USA_jonathan_wainwright
+recruit_character = USA_russell_hartle
+recruit_character = USA_leonard_gerow
+recruit_character = USA_edward_brooks
+recruit_character = USA_clarence_huebner
+recruit_character = USA_alexander_patch
+recruit_character = USA_william_simpson
+recruit_character = USA_j._lawton_collins
+recruit_character = USA_courtney_hodges
+recruit_character = USA_joseph_stilwell
+recruit_character = USA_oscar_griswold
+recruit_character = USA_maurice_rose
+recruit_character = USA_ernest_king
+recruit_character = USA_chester_w._nimitz
+recruit_character = USA_william_halsey_jr
+recruit_character = USA_frank_jack_fletcher
+recruit_character = USA_raymond_a._spruance
+recruit_character = USA_harold_rainsford_stark
+recruit_character = USA_arleigh_burke
+recruit_character = USA_charles_m_cooke_jr
+recruit_character = USA_james_farley
+recruit_character = USA_joe_r_hanley
+recruit_character = USA_john_f_wirds
+recruit_character = USA_charles_o_andrews
+recruit_character = USA_henry_morgenthau
+recruit_character = USA_wilber_brucker
+recruit_character = USA_allen_gifford
+recruit_character = USA_bibb_graves
+recruit_character = USA_daniel_roper
+recruit_character = USA_alf_landon
+recruit_character = USA_robert_la_follette
+recruit_character = USA_joseph_harley
+recruit_character = USA_melvin_hazen
+recruit_character = USA_bourke_hicken
+recruit_character = USA_merlin_hull
+recruit_character = USA_bankhead
+recruit_character = USA_Robert_Eichelberger
+recruit_character = USA_Leigh_Noyes
+recruit_character = USA_Wilson_Brown
+recruit_character = USA_Barton_Kyle_Yount
+recruit_character = USA_Lewis_H_Brereton
+recruit_character = USA_Smedley_Butler
+recruit_character = USA_John_C_H_Lee
+recruit_character = USA_John_W_Wilcox_Jr
+recruit_character = USA_Haywood_S_Hansell
+recruit_character = USA_Frederick_Martin
+recruit_character = USA_Jacob_L_Devers
+recruit_character = USA_Malin_Craig
+recruit_character = USA_Howard_L_Vickery
+recruit_character = USA_Emory_S_Land
+recruit_character = USA_Jimmy_Doolittle
+recruit_character = USA_Robert_Olds
+recruit_character = USA_Robert_H_Goddard
+recruit_character = USA_Charles_G_Dawes
+recruit_character = USA_senate

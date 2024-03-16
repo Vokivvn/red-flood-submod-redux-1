@@ -1,0 +1,729 @@
+focus_tree = {
+	id = USA_makhno_path
+
+	country = {
+		factor = 0
+		modifier = {
+			add = 5
+			tag = USA
+		}
+	}
+	continuous_focus_position = { x = 2300 y = 1100 }
+	default = no
+	shared_focus = USA_hunt_bonnie_and_clyde
+	shared_focus = USA_second_vinson_act
+	shared_focus = USA_billy_mitchels_air
+	shared_focus = USA_reviewmilitaryspending
+	shared_focus = USA_our_direction
+
+	focus = {
+		id = USA_makhnos_presidency
+		icon = GFX_Focus_USA_makhnos_presidency
+		x = 8
+		y = 0
+		cost = 5
+		available = {
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+	focus = {
+		id = USA_ukrainian_republic_of_blue_wedge
+		icon = GFX_Focus_USA_ukrainian_republic_of_blue_wedge
+		relative_position_id = USA_makhnos_presidency
+		x = 0
+		y = 1
+		cost = 5
+		prerequisite = {
+			focus = USA_makhnos_presidency
+		} 
+		available = {
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_popularity = {
+				ideology = revisionist_socialism
+				popularity = 0.1
+			}
+			remove_ideas = USA_disjointed_government
+			set_cosmetic_tag = "USA_blue_ukraine"
+		}
+	}
+
+	focus = {
+		id = USA_improve_farming_techniques
+		icon = GFX_Focus_USA_improve_farming_techniques
+		relative_position_id = USA_ukrainian_republic_of_blue_wedge
+		x = -3
+		y = 1
+		cost = 5
+		prerequisite = {
+			focus = USA_ukrainian_republic_of_blue_wedge
+		} 
+		available = {
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = USA_dustbowl_improve_1
+				add_idea = USA_dustbowl_improve_2
+			}
+		}
+	}
+	focus = {
+		id = USA_end_the_dustbowl_makhno
+		icon = GFX_Focus_USA_end_the_dustbowl_makhno
+		relative_position_id = USA_improve_farming_techniques
+		x = 0
+		y = 1
+		cost = 5
+		prerequisite = {
+			focus = USA_improve_farming_techniques
+		} 
+		available = {
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			remove_ideas = USA_dustbowl_improve_2
+		}
+	}
+
+	focus = {
+		id = USA_relief_for_industrial_workers
+		icon = GFX_Focus_USA_relief_for_industrial_workers
+		relative_position_id = USA_ukrainian_republic_of_blue_wedge
+		x = -1
+		y = 1
+		cost = 5
+		prerequisite = {
+			focus = USA_ukrainian_republic_of_blue_wedge
+		} 
+		available = {
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = USA_great_depression
+				add_idea = USA_great_depression_1
+			}
+			add_political_power = -75
+		}
+	}
+	focus = {
+		id = USA_end_exploitation
+		icon = GFX_Focus_USA_end_exploitation
+		relative_position_id = USA_relief_for_industrial_workers
+		x = 0
+		y = 1
+		cost = 5
+		prerequisite = {
+			focus = USA_relief_for_industrial_workers
+		} 
+		available = {
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_popularity = {
+				ideology = revisionist_socialism
+				popularity = 0.1
+			}
+			add_political_power = -75
+		}
+	}
+
+	focus = {
+		id = USA_extreme_land_redistribution
+		icon = GFX_Focus_USA_extreme_land_redistribution
+		relative_position_id = USA_ukrainian_republic_of_blue_wedge
+		x = 1
+		y = 1
+		cost = 5
+		prerequisite = {
+			focus = USA_ukrainian_republic_of_blue_wedge
+		} 
+		available = {
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_stability = -0.1
+			add_political_power = -100
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+			}
+		}
+	}
+	focus = {
+		id = USA_empower_farming_unions_makhno
+		icon = GFX_Focus_USA_empower_farming_unions_makhno
+		relative_position_id = USA_extreme_land_redistribution
+		x = 0
+		y = 1
+		cost = 5
+		prerequisite = {
+			focus = USA_extreme_land_redistribution
+		} 
+		available = {
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_ideas = USA_farmer_unions_idea
+		}
+	}
+
+	focus = {
+		id = USA_bring_in_the_militias
+		icon = GFX_Focus_USA_bring_in_the_militias
+		relative_position_id = USA_ukrainian_republic_of_blue_wedge
+		x = 3
+		y = 1
+		cost = 5
+		prerequisite = {
+			focus = USA_ukrainian_republic_of_blue_wedge
+		} 
+		available = {
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = USA_under_budget_military
+				add_idea = USA_uara
+			}
+			remove_ideas = USA_klan_civil_war
+			add_manpower = 10000
+		}
+	}
+	focus = {
+		id = USA_death_to_the_working_people
+		icon = GFX_Focus_USA_death_to_the_working_people
+		relative_position_id = USA_bring_in_the_militias
+		x = 0
+		y = 1
+		cost = 5
+		prerequisite = {
+			focus = USA_bring_in_the_militias
+		} 
+		available = {
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_stability = -0.1
+			add_popularity = {
+				ideology = accelerationism
+				popularity = -0.2
+			}
+			add_popularity = {
+				ideology = conservatism
+				popularity = -0.15
+			}
+			add_popularity = {
+				ideology = liberalism
+				popularity = -0.2
+			}
+			add_popularity = {
+				ideology = progressivism
+				popularity = -0.15
+			}
+		}
+	}
+
+	focus = {
+		id = USA_realm_of_makhnovist_dream
+		icon = GFX_Focus_USA_realm_of_makhnovist_dream
+		relative_position_id = USA_ukrainian_republic_of_blue_wedge
+		x = 0
+		y = 3
+		cost = 5
+		prerequisite = {
+			focus = USA_end_the_dustbowl_makhno
+		}
+		prerequisite = {
+			focus = USA_end_exploitation
+		} 
+		prerequisite = {
+			focus = USA_empower_farming_unions_makhno
+		} 
+		prerequisite = {
+			focus = USA_death_to_the_working_people
+		}
+		available = {
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			remove_ideas = USA_great_depression_1
+			add_stability = 0.15
+			add_war_support = 0.1
+		}
+	}
+
+	focus = {
+		id = USA_international_ukrainian_community
+		icon = GFX_Focus_USA_international_ukrainian_community
+		relative_position_id = USA_realm_of_makhnovist_dream
+		x = -3
+		y = 1
+		cost = 5
+		prerequisite = {
+			focus = USA_realm_of_makhnovist_dream
+		} 
+		available = {
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			UKR = { add_opinion_modifier = { target = USA modifier = large_increase } }
+			add_opinion_modifier = { target = UKR modifier = large_increase }
+			if = {
+				limit = {
+					DKB = { has_government = right_authoritarianism }
+				}
+				DKB = { add_opinion_modifier = { target = USA modifier = large_increase } }
+				add_opinion_modifier = { target = DKB modifier = large_increase }
+			}
+			#if = {
+			#	limit = {
+			#		STE = { has_government = revisionist_socialism }
+			#	}
+			#	STE = { add_opinion_modifier = { target = USA modifier = large_increase } }
+			#	add_opinion_modifier = { target = STE modifier = large_increase }
+			#}
+			if = {
+				limit = {
+					GUK = { exists = yes }
+				}
+				GUK = { add_opinion_modifier = { target = USA modifier = large_increase } }
+				add_opinion_modifier = { target = GUK modifier = large_increase }
+			}
+			if = {
+				limit = {
+					PRP = { exists = yes }
+				}
+				PRP = { add_opinion_modifier = { target = USA modifier = large_increase } }
+				add_opinion_modifier = { target = PRP modifier = large_increase }
+			}
+			add_ideas = USA_iuc
+		}
+	}
+	focus = {
+		id = USA_our_praire_brothers
+		icon = GFX_Focus_USA_our_praire_brothers
+		relative_position_id = USA_international_ukrainian_community
+		x = 0
+		y = 1
+		cost = 5
+		prerequisite = {
+			focus = USA_international_ukrainian_community
+		} 
+		available = {
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_manpower = 25000
+			1047 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			388 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			389 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			381 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			390 = {
+				add_extra_state_shared_building_slots = 1
+			}
+			384 = {
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+	focus = {
+		id = USA_demand_cold_ukraine
+		icon = GFX_Focus_USA_demand_cold_ukraine
+		relative_position_id = USA_our_praire_brothers
+		x = 0
+		y = 1
+		cost = 5
+		prerequisite = {
+			focus = USA_our_praire_brothers
+		} 
+		available = {
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			CAN = {
+				country_event = {
+					id = april_fools.8
+					days = 3
+				}
+			}
+			add_state_core = 473
+			add_state_core = 470
+			add_state_core = 469
+		}
+	}
+
+	focus = {
+		id = USA_mandatory_education_in_ukrainian
+		icon = GFX_Focus_USA_mandatory_education_in_ukrainian
+		relative_position_id = USA_realm_of_makhnovist_dream
+		x = 0
+		y = 1
+		cost = 5
+		prerequisite = {
+			focus = USA_realm_of_makhnovist_dream
+		} 
+		available = {
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_ideas = USA_ukrainisation
+			add_stability = -0.1
+		}
+	}
+	focus = {
+		id = USA_crackdown_on_mennonites
+		icon = GFX_Focus_USA_crackdown_on_mennonites
+		relative_position_id = USA_mandatory_education_in_ukrainian
+		x = -1
+		y = 1
+		cost = 5
+		prerequisite = {
+			focus = USA_mandatory_education_in_ukrainian
+		} 
+		available = {
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_political_power = 50
+			383 = {
+				add_extra_state_shared_building_slots = 1
+			}
+			395 = {
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+	focus = {
+		id = USA_as_ukrainian_as_apple_pie
+		icon = GFX_Focus_USA_as_ukrainian_as_apple_pie
+		relative_position_id = USA_mandatory_education_in_ukrainian
+		x = 1
+		y = 1
+		cost = 5
+		prerequisite = {
+			focus = USA_mandatory_education_in_ukrainian
+		} 
+		available = {
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = USA_ukrainisation
+				add_idea = USA_ukrainisation1
+			}
+		}
+	}
+	focus = {
+		id = USA_steppe_roots
+		icon = GFX_Focus_USA_steppe_roots
+		relative_position_id = USA_mandatory_education_in_ukrainian
+		x = 0
+		y = 2
+		cost = 5
+		prerequisite = {
+			focus = USA_crackdown_on_mennonites
+		}
+		prerequisite = {
+			focus = USA_as_ukrainian_as_apple_pie
+		} 
+		available = {
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			377 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			380 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			382 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			376 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			1061 = {
+				add_extra_state_shared_building_slots = 1
+			}
+			1044 = {
+				add_extra_state_shared_building_slots = 1
+			}
+			swap_ideas = {
+				remove_idea = USA_ukrainisation1
+				add_idea = USA_ukrainisation2
+			}
+		}
+	}
+
+	focus = {
+		id = USA_replace_tanks_with_carriages
+		icon = GFX_Focus_USA_replace_tanks_with_carriages
+		relative_position_id = USA_realm_of_makhnovist_dream
+		x = 3
+		y = 1
+		cost = 5
+		prerequisite = {
+			focus = USA_realm_of_makhnovist_dream
+		} 
+		available = {
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = USA_uara
+				add_idea = USA_uara1
+			}
+			custom_effect_tooltip = "5 Tachanka divisions will spawn"
+			hidden_effect = {
+				load_oob = "USA_tachanka"
+			}
+		}
+	}
+	focus = {
+		id = USA_abolish_regular_army
+		icon = GFX_Focus_USA_abolish_regular_army
+		relative_position_id = USA_replace_tanks_with_carriages
+		x = 0
+		y = 1
+		cost = 5
+		prerequisite = {
+			focus = USA_replace_tanks_with_carriages
+		} 
+		available = {
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = USA_uara1
+				add_idea = USA_uara2
+			}
+			add_ideas = volunteer_only
+		}
+	}
+	focus = {
+		id = USA_free_ponies_for_all
+		icon = GFX_Focus_USA_free_ponies_for_all
+		relative_position_id = USA_abolish_regular_army
+		x = 0
+		y = 1
+		cost = 5
+		prerequisite = {
+			focus = USA_abolish_regular_army
+		} 
+		available = {
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = USA_uara2
+				add_idea = USA_uara3
+			}
+			add_political_power = -150
+		}
+	}
+
+	focus = {
+		id = USA_blue_ukraine_rises
+		icon = GFX_Focus_USA_blue_ukraine_rises
+		relative_position_id = USA_steppe_roots
+		x = 0
+		y = 1
+		cost = 5
+		prerequisite = {
+			focus = USA_demand_cold_ukraine
+		}
+		prerequisite = {
+			focus = USA_steppe_roots
+		} 
+		prerequisite = {
+			focus = USA_free_ponies_for_all
+		} 
+		available = {
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_political_power = 100
+			add_stability = 0.2
+			add_war_support = 0.1
+			swap_ideas = {
+				remove_idea = USA_ukrainisation2
+				add_idea = USA_ukrainian_america
+			}
+		}
+	}
+}

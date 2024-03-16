@@ -1,0 +1,1014 @@
+add_namespace = ukraine
+
+# Fajda won #
+country_event = {
+	id = ukraine.1
+	title = ukraine.1.t
+	desc = ukraine.1.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = ukraine.1.a
+		annex_country = {
+			target = GUK
+			transfer_troops = yes
+		}
+		GUK = {
+			every_unit_leader = {
+				set_nationality = UKR
+			}
+		}
+	}
+}
+#Petliura coup##
+country_event = {
+	id = ukraine.2
+	title = ukraine.2.t
+	desc = ukraine.2.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = ukraine.2.a
+		set_politics = {
+			ruling_party = progressivism
+		}
+		set_country_flag = UKR_petliura_in_charge
+		remove_ideas = UKR_limiting_army_power
+		mark_focus_tree_layout_dirty = yes
+	}
+}
+##Fajda lost##
+country_event = {
+	id = ukraine.3
+	title = ukraine.3.t
+	desc = ukraine.3.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = ukraine.3.a
+	}
+}
+##OUN Choice##
+country_event = {
+	id = ukraine.4
+	title = ukraine.4.t
+	desc = ukraine.4.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = ukraine.4.a
+		set_country_flag = UKR_knights_chosen
+		ai_chance = {
+			factor = 65
+			modifier = {
+				factor = 10000
+				has_game_rule = {
+					rule = UKR_ai_route
+					option = UKR_BANDERA
+				}
+			}
+		}
+	}
+
+	option = {
+		name = ukraine.4.b
+		set_country_flag = UKR_bandera_chosen
+		ai_chance = {
+			factor = 35
+			modifier = {
+				factor = 10000
+				has_game_rule = {
+					rule = UKR_ai_route
+					option = UKR_KNIGHTS
+				}
+			}
+		}
+	}
+}
+##Hardliners or moderates ?##
+country_event = {
+	id = ukraine.5
+	title = ukraine.5.t
+	desc = ukraine.5.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = ukraine.5.a
+		country_event = { 
+			id = ukraine.6
+			days = 5
+		}
+		ai_chance = {
+			factor = 75
+			modifier = {
+				factor = 10000
+				OR = {
+					has_game_rule = {
+						rule = UKR_ai_route
+						option = UKR_PETLURA
+					}
+					has_game_rule = {
+						rule = UKR_ai_route
+						option = UKR_VYNNCHENKO
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = ukraine.5.b
+		country_event = { 
+			id = ukraine.7
+			days = 5
+		}
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 10000
+				OR = {
+					has_game_rule = {
+						rule = UKR_ai_route
+						option = UKR_SEMENKO
+					}
+					has_game_rule = {
+						rule = UKR_ai_route
+						option = UKR_KAGANOVICH
+					}
+				}
+			}
+		}
+	}
+}
+#USDRP choice
+country_event = {
+	id = ukraine.6
+	title = ukraine.6.t
+	desc = ukraine.6.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = ukraine.6.a
+		set_country_flag = UKR_petliura_choice
+		ai_chance = {
+			factor = 60
+			modifier = {
+				factor = 10000
+				has_game_rule = {
+					rule = UKR_ai_route
+					option = UKR_PETLURA
+				}
+			}
+		}
+	}
+	option = {
+		name = ukraine.6.b
+		set_country_flag = UKR_vynnchenko_choice
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 10000
+				has_game_rule = {
+					rule = UKR_ai_route
+					option = UKR_VYNNCHENKO
+				}
+			}
+		}
+	}
+}
+#UKP choice
+country_event = {
+	id = ukraine.7
+	title = ukraine.7.t
+	desc = ukraine.7.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = ukraine.7.a
+		set_country_flag = UKR_kaganovich_choice
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 10000
+				has_game_rule = {
+					rule = UKR_ai_route
+					option = UKR_KAGANOVICH
+				}
+			}
+		}
+	}
+	option = {
+		name = ukraine.7.b
+		set_country_flag = UKR_semenko_choice
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 10000
+				has_game_rule = {
+					rule = UKR_ai_route
+					option = UKR_SEMENKO
+				}
+			}
+		}
+	}
+}
+#pick your hohol - bandera
+country_event = {
+	id = ukraine.81
+	title = ukraine.81.t
+	desc = ukraine.81.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = ukraine.81.a
+		set_politics = {
+			ruling_party = despotism
+		}
+		activate_advisor = UKR_batko_nash_hog
+		activate_advisor = UKR_yaroslav_stetsko_for
+		activate_advisor = UKR_dmytro_dontsov_eco
+		activate_advisor = UKR_dmytro_klyachkivsky_sec
+		activate_advisor = UKR_mykola_lebed_int
+		set_country_flag = UKR_bandera_win
+		news_event = {
+			id = news.226
+		}
+		mark_focus_tree_layout_dirty = yes
+		ai_chance = {
+			base = 40
+		}
+	}
+}
+#pick your hohol - knights
+country_event = {
+	id = ukraine.82
+	title = ukraine.82.t
+	desc = ukraine.82.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = ukraine.82.a
+		set_politics = {
+			ruling_party = accelerationism
+			long_name = UKR_accelerationism_party2_long
+			name = UKR_accelerationism_party2
+		}
+		activate_advisor = UKR_volodymyr_shayan_hog
+		activate_advisor = UKR_yevhen_yulii_for
+		activate_advisor = UKR_vasyl_kurhut_eco
+		activate_advisor = UKR_ulas_samchuk_sec
+		activate_advisor = UKR_lev_rebet_int
+		set_country_flag = UKR_knights_win
+		news_event = {
+			id = news.229
+		}
+		mark_focus_tree_layout_dirty = yes
+		ai_chance = {
+			base = 40
+		}
+	}
+}
+#pick your hohol - petlura
+country_event = {
+	id = ukraine.83
+	title = ukraine.83.t
+	desc = ukraine.83.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = ukraine.83.a
+		set_country_flag = UKR_petliura_prevails
+		activate_advisor = UKR_andriy_livytsky_hog
+		activate_advisor = UKR_borys_martos_for
+		activate_advisor = UKR_serhiy_ostapenko_eco
+		activate_advisor = UKR_isaak_mazepa_sec
+		activate_advisor = UKR_volodomyr_kedrovsky_int
+		mark_focus_tree_layout_dirty = yes
+		news_event = {
+			id = news.228
+		}
+		ai_chance = {
+			base = 40
+		}
+	}
+}
+#pick your hohol - vynny
+country_event = {
+	id = ukraine.84
+	title = ukraine.84.t
+	desc = ukraine.84.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = ukraine.84.a
+		set_politics = {
+			ruling_party = revisionist_socialism
+		}
+		set_country_flag = UKR_vynnchenko_win
+
+		activate_advisor = UKR_andriy_livytsky_hog
+		activate_advisor = UKR_borys_martos_for
+		activate_advisor = UKR_serhiy_ostapenko_eco
+		activate_advisor = UKR_isaak_mazepa_sec
+		activate_advisor = UKR_symon_petliura_int
+		mark_focus_tree_layout_dirty = yes
+		news_event = {
+			id = news.227
+		}
+		ai_chance = {
+			base = 40
+		}
+	}
+}
+#pick your hohol - kagan
+country_event = {
+	id = ukraine.85
+	title = ukraine.85.t
+	desc = ukraine.85.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = ukraine.85.a
+		set_politics = {
+			ruling_party = vanguard_socialism
+		}
+		set_country_flag = UKR_kaganovich_win
+		activate_advisor = UKR_andrei_bubnov_hog
+		activate_advisor = UKR_mykola_skyrpnyk_for
+		activate_advisor = UKR_viktor_novozhilov_eco
+		activate_advisor = UKR_anton_makarenko_sec
+		activate_advisor = UKR_stanisław_kosior_int
+		mark_focus_tree_layout_dirty = yes
+		news_event = {
+			id = news.231
+		}
+		ai_chance = {
+			base = 40
+		}
+	}
+}
+#pick your hohol - semenko
+country_event = {
+	id = ukraine.86
+	title = ukraine.86.t
+	desc = ukraine.86.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = ukraine.86.a
+		set_politics = {
+			ruling_party = accelerationism
+			long_name = UKR_accelerationism_party1_long
+			name = UKR_accelerationism_party1
+		}
+		retire_country_leader = yes
+		set_country_flag = UKR_semenko_win
+		set_cosmetic_tag = UKR_semenko
+		activate_advisor = UKR_yulian_shpol_hog
+		activate_advisor = UKR_heo_shkurupii_for
+		activate_advisor = UKR_mykhailo_volobuyev_eco
+		activate_advisor = UKR_nikita_khrushchev_sec
+		activate_advisor = UKR_mykola_kulish_int
+		mark_focus_tree_layout_dirty = yes
+		news_event = {
+			id = news.230
+		}
+		ai_chance = {
+			base = 40
+		}
+	}
+}
+
+country_event = {#mikh intro
+	id = ukraine.9
+	title = ukraine.9.t
+	desc = ukraine.9.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = ukraine.9.a
+	}
+}
+
+country_event = { #Mikh sways OUN 
+	id = ukraine.10
+	title = ukraine.10.t
+	desc = ukraine.10.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = ukraine.10.a 
+		set_country_flag = UKR_bandera_allied
+		custom_effect_tooltip = UKR_mikh_bandera
+		ai_chance = {
+			factor = 35
+			modifier = {
+				factor = 10000
+				has_game_rule = {
+					rule = UKR_ai_route
+					option = UKR_KNIGHTS
+				}
+			}
+		}
+
+	}
+
+	option = {
+		name = ukraine.10.b
+		set_country_flag = UKR_knights_allied 
+		custom_effect_tooltip = UKR_mikh_knights
+		ai_chance = {
+			factor = 65
+			modifier = {
+				factor = 10000
+				has_game_rule = {
+					rule = UKR_ai_route
+					option = UKR_BANDERA
+				}
+			}
+		}
+	}
+}
+
+country_event = { #Mikh thughunts the communists
+	id = ukraine.11
+	title = ukraine.11.t
+	desc = ukraine.11.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = ukraine.11.a
+		set_country_flag = UKR_kaganovich_alive 
+		custom_effect_tooltip = UKR_semenko_ded
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 10000
+				has_game_rule = {
+					rule = UKR_ai_route
+					option = UKR_KAGANOVICH
+				}
+			}
+		}
+	}
+
+	option = {
+		name = ukraine.11.b
+		set_country_flag = UKR_semenko_alive 
+		custom_effect_tooltip = UKR_kagan_ded
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 10000
+				has_game_rule = {
+					rule = UKR_ai_route
+					option = UKR_SEMENKO
+				}
+			}
+		}
+	}
+}
+
+country_event = { #Mikhnovsky tries to bribe Petlura
+	id = ukraine.12
+	title = ukraine.12.t
+	desc = ukraine.12.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = ukraine.12.a
+		set_country_flag = UKR_petliura_choice
+		custom_effect_tooltip = UKR_mikh_no_bribe
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 10000
+				has_game_rule = {
+					rule = UKR_ai_route
+					option = UKR_PETLURA
+				}
+			}
+		}
+
+	}
+
+	option = {
+		name = ukraine.12.b
+		set_country_flag = UKR_petlura_bribed
+		custom_effect_tooltip = UKR_mikh_yes_bribe
+		ai_chance = {
+			factor = 75
+			modifier = {
+				factor = 10000
+				NOT = {
+					has_game_rule = {
+						rule = UKR_ai_route
+						option = UKR_PETLURA
+					}
+				}
+			}
+		}
+
+
+	}
+}
+
+country_event = { #UKP-USDLP coalition event
+	id = ukraine.13
+	title = ukraine.13.t
+	desc = ukraine.13.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = ukraine.13.a
+		set_country_flag = UKR_vynnchenko_choice
+		custom_effect_tooltip = UKR_usdlp_alone
+		ai_chance = {
+			factor = 60
+			modifier = {
+				factor = 10000
+				has_game_rule = {
+					rule = UKR_ai_route
+					option = UKR_VYNNCHENKO
+				}
+			}
+		}
+	}
+
+	option = {
+		name = ukraine.13.b
+		custom_effect_tooltip = UKR_usdlp_ukp
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 10000
+				OR = {
+					has_game_rule = {
+						rule = UKR_ai_route
+						option = UKR_KAGANOVICH
+					}
+					has_game_rule = {
+						rule = UKR_ai_route
+						option = UKR_SEMENKO
+					}
+					has_game_rule = {
+						rule = UKR_ai_route
+						option = UKR_KAGANOVICH
+					}
+
+				}
+			}
+		}
+	}
+}
+
+country_event = { #Petlura meets the Polakcs
+	id = ukraine.14
+	title = ukraine.14.t
+	desc = ukraine.14.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = ukraine.14.a
+		set_country_flag = UKR_petlura_deal
+		custom_effect_tooltip = UKR_petliura_bribed
+		ai_chance = {
+			factor = 45
+			modifier = {
+				factor = 10000
+				OR = {
+					has_game_rule = {
+						rule = UKR_ai_route
+						option = UKR_BANDERA
+					}
+					has_game_rule = {
+						rule = UKR_ai_route
+						option = UKR_KNIGHTS
+					}
+				}	
+			}
+		}
+	}
+
+	option = {
+		name = ukraine.14.b
+		set_country_flag = UKR_petlura_refuses
+		custom_effect_tooltip = UKR_petliura_strong_man
+		ai_chance = {
+			factor = 55
+			modifier = {
+				factor = 10000
+					OR = {
+						has_game_rule = {
+							rule = UKR_ai_route
+							option = UKR_VYNNCHENKO
+						}
+						has_game_rule = {
+							rule = UKR_ai_route
+							option = UKR_SEMENKO
+						}
+						has_game_rule = {
+							rule = UKR_ai_route
+							option = UKR_KAGANOVICH
+						}
+
+					}	
+			}
+		}
+	}
+}
+
+country_event = { #mikh arrested
+	id = ukraine.15
+	title = ukraine.15.t
+	desc = ukraine.15.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = ukraine.15.a
+	}
+}
+
+country_event = { #banderite student
+	id = ukraine.16
+	title = ukraine.16.t
+	desc = ukraine.16.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = ukraine.16.a
+	}
+}
+
+country_event = { #bandera and petlura 
+	id = ukraine.17
+	title = ukraine.17.t
+	desc = ukraine.17.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = ukraine.17.a
+	}
+}
+
+country_event = { #banderite pshek progroms
+	id = ukraine.18
+	title = ukraine.18.t
+	desc = ukraine.18.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = ukraine.18.a
+	}
+}
+
+country_event = { #banderite scouts
+	id = ukraine.19
+	title = ukraine.19.t
+	desc = ukraine.19.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = ukraine.19.a
+	}
+}
+
+country_event = { #vynny school
+	id = ukraine.20
+	title = ukraine.20.t
+	desc = ukraine.20.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = ukraine.20.a
+	}
+}
+
+country_event = { #vynny park
+	id = ukraine.21
+	title = ukraine.21.t
+	desc = ukraine.21.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = ukraine.21.a
+	}
+}
+
+country_event = { #vynny art expo
+	id = ukraine.22
+	title = ukraine.22.t
+	desc = ukraine.22.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = ukraine.22.a
+	}
+}
+
+country_event = { #vynny parliament
+	id = ukraine.23
+	title = ukraine.23.t
+	desc = ukraine.23.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = ukraine.23.a
+	}
+}
+
+country_event = { #vynny colonists
+	id = ukraine.24
+	title = ukraine.24.t
+	desc = ukraine.24.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = ukraine.24.a
+	}
+}
+
+country_event = { #petlura workers
+	id = ukraine.25
+	title = ukraine.25.t
+	desc = ukraine.25.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = ukraine.25.a
+	}
+}
+
+country_event = { #petlura statue
+	id = ukraine.26
+	title = ukraine.26.t
+	desc = ukraine.26.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = ukraine.26.a
+	}
+}
+
+country_event = { #petlura state
+	id = ukraine.27
+	title = ukraine.27.t
+	desc = ukraine.27.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = ukraine.27.a
+	}
+}
+
+country_event = { #petlura army exercise
+	id = ukraine.28
+	title = ukraine.28.t
+	desc = ukraine.28.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = ukraine.28.a
+	}
+}
+
+country_event = { #petlura evictions
+	id = ukraine.29
+	title = ukraine.29.t
+	desc = ukraine.29.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = ukraine.29.a
+	}
+}
+
+country_event = { #knights progroms
+	id = ukraine.30
+	title = ukraine.30.t
+	desc = ukraine.30.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = ukraine.30.a
+	}
+}
+
+country_event = { #knights prophet
+	id = ukraine.31
+	title = ukraine.31.t
+	desc = ukraine.31.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = ukraine.31.a
+	}
+}
+
+country_event = { #knights government
+	id = ukraine.32
+	title = ukraine.32.t
+	desc = ukraine.32.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = ukraine.32.a
+	}
+}
+
+country_event = { #knights festival
+	id = ukraine.33
+	title = ukraine.33.t
+	desc = ukraine.33.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = ukraine.33.a
+	}
+}
+
+country_event = { #knights big building in novy kiev
+	id = ukraine.34
+	title = ukraine.34.t
+	desc = ukraine.34.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = ukraine.34.a
+	}
+}
+
+country_event = { #semenko bookburning
+	id = ukraine.35
+	title = ukraine.35.t
+	desc = ukraine.35.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = ukraine.35.a
+	}
+}
+
+country_event = { #semenko dam
+	id = ukraine.36
+	title = ukraine.36.t
+	desc = ukraine.36.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = ukraine.36.a
+		hidden_effect = {
+			if = {
+				limit = {
+					controls_state = 201
+				}
+				country_event = {
+					id = ukraine.37
+					days = 950
+				}
+			}
+		}
+	}
+}
+
+country_event = { #semenko dam finished
+	id = ukraine.37
+	title = ukraine.37.t
+	desc = ukraine.37.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = ukraine.37.a
+	}
+}
+
+country_event = { #semenko art expo
+	id = ukraine.38
+	title = ukraine.38.t
+	desc = ukraine.38.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = ukraine.38.a
+	}
+}
+
+country_event = { #semenko trial
+	id = ukraine.39
+	title = ukraine.39.t
+	desc = ukraine.39.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = ukraine.39.a
+	}
+}
+
+country_event = { #kagan meets kavkaz
+	id = ukraine.40
+	title = ukraine.40.t
+	desc = ukraine.40.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = ukraine.40.a
+	}
+}
+
+country_event = { #kagan kiev cathedral blow up
+	id = ukraine.41
+	title = ukraine.41.t
+	desc = ukraine.41.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = ukraine.41.a
+		set_province_name = {
+ 			id = 525
+  			name = UKR_event_ukraine_41_a_province_525
+		}
+		202 = {
+			set_state_name = UKR_event_ukraine_41_a_202
+		}
+	}
+}
+
+country_event = { #kagan semenko suicide
+	id = ukraine.42
+	title = ukraine.42.t
+	desc = ukraine.42.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = ukraine.42.a
+	}
+}
+
+country_event = { #kagan peasants
+	id = ukraine.43
+	title = ukraine.43.t
+	desc = ukraine.43.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = ukraine.43.a
+	}
+}
+
+country_event = { #kagan's dream
+	id = ukraine.44
+	title = ukraine.44.t
+	desc = ukraine.44.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = ukraine.44.a
+	}
+}

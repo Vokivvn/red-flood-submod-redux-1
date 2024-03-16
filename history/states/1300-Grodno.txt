@@ -1,0 +1,23 @@
+
+state={
+	id=1300
+	name="STATE_1300"
+	manpower = 397682
+	state_category = town_mini
+
+	history={
+		owner = BLR
+		add_core_of = BLR
+		victory_points = {
+			318 5
+		}
+		buildings = {
+			infrastructure = 3
+			air_base = 3
+		}
+	}
+
+	provinces={
+		318 3281 6306 6359 13206
+	}
+}

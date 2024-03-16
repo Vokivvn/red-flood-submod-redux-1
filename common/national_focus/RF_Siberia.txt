@@ -1,0 +1,2577 @@
+focus_tree = {
+	id = RF_Siberia
+	country = {
+		factor = 0
+		modifier = {
+			add = 100
+			original_tag = SIB
+		}
+	}
+	continuous_focus_position = { x = 50 y = 2500 }
+	focus = {
+		id = SIB_siberian_troubles
+		icon = GFX_goal_SIB_siberian_troubles
+		cost = 5
+		x = 16
+		y = 0
+		available = {
+		}
+		ai_will_do = {
+			factor = 30
+		}
+		completion_reward = {
+			add_political_power = -50
+			hidden_effect = {
+				country_event = {
+					id = sib.21
+					days = 7
+				}
+			}
+		}
+	}
+	focus = {
+		id = SIB_rampant_crime
+		icon = GFX_goal_SIB_rampant_crime
+		cost = 5
+		relative_position_id = SIB_siberian_troubles
+		x = -1
+		y = 1
+		prerequisite = {
+			focus = SIB_siberian_troubles
+		}
+		ai_will_do = {
+			factor = 30
+		}
+		completion_reward = {
+			add_stability = -0.05
+
+		}
+	}
+	focus = {
+		id = SIB_separatist_agitators
+		icon = GFX_goal_SIB_separatist_agitators
+		cost = 5
+		relative_position_id = SIB_siberian_troubles
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = SIB_siberian_troubles
+		}
+		ai_will_do = {
+			factor = 30
+		}
+		completion_reward = {
+			add_war_support = -0.10
+			add_popularity = {
+				ideology = revisionist_socialism
+				popularity = 0.10
+			}
+			add_popularity = {
+			ideology = progressivism
+			popularity = 0.05
+			}
+		}
+	}
+	focus = {
+		id = SIB_establish_emergency_provisional_directorate
+		icon = GFX_goal_SIB_establish_emergency_provisional_directorate
+		cost = 4
+		relative_position_id = SIB_siberian_troubles
+		x = 0
+		y = 2
+		prerequisite = {
+			focus = SIB_rampant_crime
+		}
+		prerequisite = {
+			focus = SIB_separatist_agitators
+		}
+		ai_will_do = {
+			factor = 30
+		}
+		completion_reward = {
+			add_political_power = 100
+			country_event = {
+				id = sib.1
+				days = 1
+			}
+		}
+	}
+	#Autonomists
+	focus = {
+		id = SIB_compromise_with_autonomists
+		icon = GFX_goal_SIB_compromise_with_autonomists
+		cost = 1
+		relative_position_id = SIB_establish_emergency_provisional_directorate
+		x = -14
+		y = 1
+		prerequisite = {
+			focus = SIB_establish_emergency_provisional_directorate
+		}
+		available = {
+			has_country_flag = SIB_sidedwithautonomists
+			is_subject = no
+		}
+		mutually_exclusive = {
+			focus = SIB_black_hundreds_in_siberian_duma
+			focus = SIB_third_power
+		}
+		ai_will_do = {
+			factor = 30
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = progressivism
+				popularity = 0.20
+			}
+			set_politics = {
+				ruling_party = progressivism
+				elections_allowed = no
+			}
+			add_political_power = 100
+			hidden_effect = {
+				promote_character = SIB_alexei_grishin_almazov_populist
+			}
+		}
+	}
+	focus = {
+		id = SIB_invite_opposition_to_government
+		icon = GFX_goal_SIB_invite_opposition_to_government
+		cost = 2
+		relative_position_id = SIB_compromise_with_autonomists
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = SIB_compromise_with_autonomists
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = revisionist_socialism
+				popularity = 0.1	
+			}
+			add_popularity = {
+				ideology = progressivism
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = liberalism
+				popularity = 0.1	
+			}
+			add_popularity = {
+				ideology = conservatism
+				popularity = 0.15	
+			}
+		}
+	}
+	focus = {
+		id = SIB_first_federal_government
+		icon = GFX_goal_SIB_first_federal_government
+		cost = 5
+		relative_position_id = SIB_invite_opposition_to_government
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = SIB_invite_opposition_to_government
+		}
+		available = {
+			is_subject = no
+		}
+		completion_reward = {
+			add_stability = 0.1
+			country_event = {
+				id = sib.2
+			}
+		}
+	}
+	#
+	
+	#left#
+	focus = {
+		id = SIB_mimic_swiss_confederation
+		icon = GFX_goal_SIB_mimic_swiss_confederation
+		cost = 5
+		relative_position_id = SIB_first_federal_government
+		x = -4
+		y = 1
+		prerequisite = {
+			focus = SIB_first_federal_government
+		}
+		completion_reward = {
+			add_political_power = 50
+			add_ideas = SIB_swiss
+			add_popularity = {
+				ideology = liberalism
+				popularity = 0.05
+			}
+		}
+	}
+	focus = {
+		id = SIB_local_autonomy
+		icon = GFX_goal_SIB_local_autonomy
+		cost = 4
+		relative_position_id = SIB_mimic_swiss_confederation
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = SIB_mimic_swiss_confederation
+		}
+		completion_reward = {
+			add_political_power = 50
+			every_owned_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = SIB_free_education
+		icon = GFX_goal_SIB_free_education
+		cost = 4
+		relative_position_id = SIB_local_autonomy
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = SIB_local_autonomy
+		}
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	focus = {
+		id = SIB_recognize_our_minorities
+		icon = GFX_goal_SIB_recognize_our_minorities
+		cost = 4
+		relative_position_id = SIB_free_education
+		x = 2
+		y = 1
+		prerequisite = {
+			focus = SIB_free_education
+		}
+		completion_reward = {
+			add_stability = 0.05
+			add_ideas = SIB_minorities_recognized
+		}
+	}
+	#centre#
+	focus = {
+		id = SIB_deal_with_economic_chaos
+		icon = GFX_goal_SIB_deal_with_economic_chaos
+		cost = 4
+		relative_position_id = SIB_first_federal_government
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = SIB_first_federal_government
+		}
+		completion_reward = {
+			add_political_power = 100
+			add_ideas = SIB_econreforms
+		}
+	}
+	focus = {
+		id = SIB_modernization_reforms
+		icon = GFX_goal_SIB_modernization_reforms
+		cost = 4
+		relative_position_id = SIB_deal_with_economic_chaos
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = SIB_deal_with_economic_chaos
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 3
+				category = infantry_weapons
+				category = artillery
+				category = air_equipment
+			}
+		}
+	}
+	focus = {
+		id = SIB_popular_land_reform
+		icon = GFX_goal_SIB_popular_land_reform
+		cost = 4
+		relative_position_id = SIB_deal_with_economic_chaos
+		x = -2
+		y = 1
+		prerequisite = {
+			focus = SIB_deal_with_economic_chaos
+		}
+		completion_reward = {
+			add_ideas = SIB_popularland
+			add_popularity = {
+				ideology = progressivism
+				popularity = 0.05
+			}
+			40 = {
+				add_extra_state_shared_building_slots = 1
+			}
+			570 = {
+				add_extra_state_shared_building_slots = 1
+			}
+			578 = {
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+	focus = {
+		id = SIB_massive_subsidies_to_industry
+		icon = GFX_goal_SIB_massive_subsidies_to_industry
+		cost = 5
+		relative_position_id = SIB_deal_with_economic_chaos
+		x = 2
+		y = 1
+		prerequisite = {
+			focus = SIB_deal_with_economic_chaos
+		}
+		completion_reward = {
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_ideas = SIB_industrial_subsidies
+		}
+	}
+	focus = {
+		id = SIB_welfare_state
+		icon = GFX_goal_SIB_welfare_state
+		cost = 4
+		relative_position_id = SIB_modernization_reforms
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = SIB_popular_land_reform
+		}
+		prerequisite = {
+			focus = SIB_modernization_reforms
+		}
+		prerequisite = {
+			focus = SIB_massive_subsidies_to_industry
+		}
+		completion_reward = {
+			hidden_effect = {
+				remove_ideas = {
+					SIB_patriotism1
+					SIB_industrial_subsidies
+					SIB_econreforms
+					SIB_popularland
+				}
+				add_ideas = SIB_welfarestate
+     		}
+			custom_effect_tooltip = "SIB_WELFARE_STATE_TOOLTIP"
+		}
+	}
+	focus = {
+		id = SIB_republican_transformation
+		icon = GFX_goal_SIB_republican_transformation
+		cost = 4
+		relative_position_id = SIB_welfare_state
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = SIB_welfare_state
+		}
+		available = {
+			is_subject = no
+		}
+		completion_reward = {
+			add_political_power = 75
+			add_ideas = SIB_transformation
+		}
+	}
+	#right#
+	focus = {
+		id = SIB_appeal_to_patriotism
+		icon = GFX_goal_SIB_appeal_to_patriotism
+		cost = 4
+		relative_position_id = SIB_first_federal_government
+		x = 4
+		y = 1
+		prerequisite = {
+			focus = SIB_first_federal_government
+		}
+		completion_reward = {
+			add_stability = 0.1
+			add_war_support = 0.15
+			add_ideas = SIB_patriotism
+		}
+	}
+	focus = {
+		id = SIB_protect_private_property
+		icon = GFX_goal_SIB_protect_private_property
+		cost = 4
+		relative_position_id = SIB_appeal_to_patriotism
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = SIB_appeal_to_patriotism
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = liberalism
+				popularity = 0.05
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = SIB_siberian_military
+		icon = GFX_goal_SIB_siberian_military
+		cost = 4
+		relative_position_id = SIB_protect_private_property
+		x = -1
+		y = 1
+		prerequisite = {
+			focus = SIB_protect_private_property
+		}
+		completion_reward = {
+		 add_tech_bonus = {
+				bonus = 1
+				uses = 2
+				category = support_tech
+			}
+		}
+	}
+	focus = {
+		id = SIB_heirs_of_yermak_and_dezhnev
+		icon = GFX_goal_SIB_heirs_of_yermak_and_dezhnev
+		cost = 4
+		relative_position_id = SIB_protect_private_property
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = SIB_protect_private_property
+		}
+		completion_reward = {
+			add_war_support = 0.10
+			add_ideas = SIB_siberia_glory
+		}
+	}
+	focus = {
+		id = SIB_expand_artillery_factories
+		icon = GFX_goal_SIB_expand_artillery_factories
+		cost = 4
+		relative_position_id = SIB_protect_private_property
+		x = -2
+		y = 2
+		prerequisite = {
+			focus = SIB_siberian_military
+		}
+		prerequisite = {
+			focus = SIB_heirs_of_yermak_and_dezhnev
+		}
+		completion_reward = {
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	#finisher#
+	focus = {
+		id = SIB_europe_of_our_own
+		icon = GFX_goal_SIB_europe_of_our_own
+		cost = 5
+		relative_position_id = SIB_republican_transformation
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = SIB_recognize_our_minorities
+		}
+		prerequisite = {
+			focus = SIB_republican_transformation
+		}
+		prerequisite = {
+			focus = SIB_expand_artillery_factories
+		}
+		available = { 
+			is_subject = no
+		}
+		will_lead_to_war_with = ALT
+		will_lead_to_war_with = TAN
+		will_lead_to_war_with = MO2
+		will_lead_to_war_with = KCK
+		will_lead_to_war_with = ZHR
+		will_lead_to_war_with = ARC
+		will_lead_to_war_with = PRI
+		will_lead_to_war_with = MNS
+		will_lead_to_war_with = PSL
+		will_lead_to_war_with = GUK
+		will_lead_to_war_with = FCR
+		completion_reward = {
+			unlock_decision_category_tooltip = SIB_liberation
+		}
+	}
+	focus = {
+		id = SIB_sign_a_treaty
+		icon = GFX_goal_SIB_sign_a_treaty
+		cost = 5
+		relative_position_id = SIB_republican_transformation
+		x = 0
+		y = 2
+		prerequisite = {
+			focus = SIB_europe_of_our_own
+		}
+		available = { 
+			is_subject = no
+			owns_state = 653
+			owns_state = 570
+			owns_state = 574
+			owns_state = 978
+			owns_state = 408
+		}
+		completion_reward = {
+			CAN = {	add_opinion_modifier = {	target = SIB	modifier = large_increase	}	}
+			USA = {	add_opinion_modifier = {	target = SIB	modifier = large_increase	}	}
+			ENG = {	add_opinion_modifier = {	target = SIB	modifier = large_increase	}	}
+			SWE = {	add_opinion_modifier = {	target = SIB	modifier = large_increase	}	}
+			NZL = {	add_opinion_modifier = {	target = SIB	modifier = large_increase	}	}
+			ICE = {	add_opinion_modifier = {	target = SIB	modifier = large_increase	}	}
+			SAF = {	add_opinion_modifier = {	target = SIB	modifier = large_increase	}	}
+			hidden_effect = {
+			set_cosmetic_tag = SIB_uni_united_states_of_siberia
+			}
+		}
+	}
+	
+	#Black Hundreds
+	focus = {
+		id = SIB_black_hundreds_in_siberian_duma
+		icon = GFX_goal_SIB_black_hundreds_in_siberian_duma
+		cost = 1
+		relative_position_id = SIB_establish_emergency_provisional_directorate
+		x = 17
+		y = 1
+		prerequisite = {
+			focus = SIB_establish_emergency_provisional_directorate
+		}
+		available = {
+			has_country_flag = SIB_sidedwithblackhundreds
+		}
+		mutually_exclusive = {
+			focus = SIB_compromise_with_autonomists
+			focus = SIB_third_power
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = despotism
+				popularity = 0.20
+			}
+			activate_advisor = SIB_ivan_mikhailov_hog
+			activate_advisor = SIB_pyotr_gran_for
+			activate_advisor = SIB_ivan_krasilnikov_eco
+			activate_advisor = SIB_vladimir_dudinsky_sec
+			activate_advisor = SIB_karl_von_nolken_int
+		}
+	}
+	focus = {
+		id = SIB_eliminate_separatism
+		icon = GFX_goal_SIB_eliminate_separatism
+		cost = 2
+		relative_position_id = SIB_black_hundreds_in_siberian_duma
+		x = -6
+		y = 1
+		prerequisite = {
+			focus = SIB_black_hundreds_in_siberian_duma
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = progressivism
+				popularity = -0.10
+			}
+		}
+	}
+	focus = {
+		id = SIB_supremacy_of_the_church
+		icon = GFX_goal_SIB_supremacy_of_the_church
+		cost = 2
+		relative_position_id = SIB_eliminate_separatism
+		x = -1
+		y = 1
+		prerequisite = {
+			focus = SIB_eliminate_separatism
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = reactionism
+				popularity = 0.10
+			}
+			add_stability = 0.05
+		}
+	}
+	focus = {
+		id = SIB_crush_the_bandits
+		icon = GFX_goal_SIB_crush_the_bandits
+		cost = 2
+		relative_position_id = SIB_eliminate_separatism
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = SIB_eliminate_separatism
+		}
+		completion_reward = {
+			add_political_power = -25
+			add_stability = 0.05
+		}
+	}
+	focus = {
+		id = SIB_education_will_make_you_russian
+		icon = GFX_goal_SIB_education_will_make_you_russian
+		cost = 2
+		relative_position_id = SIB_eliminate_separatism
+		x = 0
+		y = 2
+		prerequisite = {
+			focus = SIB_supremacy_of_the_church
+		}
+		prerequisite = {
+			focus = SIB_crush_the_bandits
+		}
+		completion_reward = {
+			add_research_slot = 1
+			add_ideas = SIB_russification_by_education
+		}
+	}
+	focus = {
+		id = SIB_long_live_governor_general
+		icon = GFX_goal_SIB_long_live_governor_general
+		cost = 1
+		relative_position_id = SIB_eliminate_separatism
+		x = 0
+		y = 3
+		prerequisite = {
+			focus = SIB_education_will_make_you_russian
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = despotism
+				popularity = 0.10
+			}
+		}
+	}
+	focus = {
+		id = SIB_terrorize_the_opposition
+		icon = GFX_goal_SIB_terrorize_the_opposition
+		cost = 2
+		relative_position_id = SIB_black_hundreds_in_siberian_duma
+		x = -2
+		y = 1
+		prerequisite = {
+			focus = SIB_black_hundreds_in_siberian_duma
+		}
+		completion_reward = {
+			add_stability = -0.15
+			add_political_power = 50
+			add_manpower = -2759
+		}
+	}
+	focus = {
+		id = SIB_unleash_the_cossacks
+		icon = GFX_goal_SIB_unleash_the_cossacks
+		cost = 2
+		relative_position_id = SIB_terrorize_the_opposition
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = SIB_terrorize_the_opposition
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = right_authoritarianism
+				popularity = 0.10
+			}
+			add_war_support = 0.05
+			add_manpower = -1473
+		}
+	}
+	focus = {
+		id = SIB_break_autonomists
+		icon = GFX_goal_SIB_break_autonomists
+		cost = 2
+		relative_position_id = SIB_unleash_the_cossacks
+		x = -1
+		y = 1
+		prerequisite = {
+			focus = SIB_unleash_the_cossacks
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = progressivism
+				popularity = -0.20
+			}
+			add_popularity = {
+				ideology = liberalism
+				popularity = -0.20
+			}
+			add_popularity = {
+				ideology = conservatism
+				popularity = -0.20
+			}
+			add_manpower = -10623
+			add_stability = -0.1
+		}
+	}
+	focus = {
+		id = SIB_burn_the_heretics
+		icon = GFX_goal_SIB_burn_the_heretics
+		cost = 2
+		relative_position_id = SIB_unleash_the_cossacks
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = SIB_unleash_the_cossacks
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = accelerationism
+				popularity = -0.20
+			}
+			add_manpower = -5873
+			add_war_support = 0.05
+			add_stability = -0.05
+		}
+	}
+	focus = {
+		id = SIB_unyielding_dictatorship
+		icon = GFX_goal_SIB_unyielding_dictatorship
+		cost = 2
+		relative_position_id = SIB_unleash_the_cossacks
+		x = 0
+		y = 2
+		prerequisite = {
+			focus = SIB_break_autonomists
+		}
+		prerequisite = {
+			focus = SIB_burn_the_heretics
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = despotism
+				popularity = 0.30
+			}
+			add_stability = 0.05
+			country_event = {
+				id = sib.12
+				days = 1
+			}
+		}
+	}
+	focus = {
+		id = SIB_mikhailov_plan
+		icon = GFX_goal_SIB_mikhailov_plan
+		cost = 3
+		relative_position_id = SIB_black_hundreds_in_siberian_duma
+		x = 2
+		y = 1
+		prerequisite = {
+			focus = SIB_black_hundreds_in_siberian_duma
+		}
+		completion_reward = {
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+	focus = {
+		id = SIB_tough_strike_penalties
+		icon = GFX_goal_SIB_tough_strike_penalties
+		cost = 2
+		relative_position_id = SIB_mikhailov_plan
+		x = -2
+		y = 1
+		prerequisite = {
+			focus = SIB_mikhailov_plan
+		}
+		completion_reward = {
+			add_ideas = SIB_workethic
+		}
+	}
+	focus = {
+		id = SIB_talks_with_the_bourgeoisie
+		icon = GFX_goal_SIB_talks_with_the_bourgeoisie
+		cost = 2
+		relative_position_id = SIB_mikhailov_plan
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = SIB_mikhailov_plan
+		}
+		completion_reward = {
+			add_stability = 0.05
+			every_owned_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = SIB_monopolize_foreign_trade
+		icon = GFX_goal_SIB_monopolize_foreign_trade
+		cost = 2
+		relative_position_id = SIB_mikhailov_plan
+		x = 2
+		y = 1
+		prerequisite = {
+			focus = SIB_mikhailov_plan
+		}
+		completion_reward = {
+			add_ideas = limited_exports
+		}
+	}
+	focus = {
+		id = SIB_scout_for_resources
+		icon = GFX_goal_SIB_scout_for_resources
+		cost = 4
+		relative_position_id = SIB_mikhailov_plan
+		x = 0
+		y = 2
+		prerequisite = {
+			focus = SIB_tough_strike_penalties
+		}
+		prerequisite = {
+			focus = SIB_talks_with_the_bourgeoisie
+		}
+		prerequisite = {
+			focus = SIB_monopolize_foreign_trade
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = SIB_workethic
+				add_idea = SIB_workethic1
+			}
+			578 = {
+				add_resource = {
+					type = oil
+					amount = 20
+				}
+				add_resource = {
+					type = steel
+					amount = 10
+				}
+			}
+		}
+	}
+	focus = {
+		id = SIB_colonial_industrialization
+		icon = GFX_goal_SIB_colonial_industrialization
+		cost = 5
+		relative_position_id = SIB_scout_for_resources
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = SIB_scout_for_resources
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = SIB_workethic1
+				add_idea = SIB_workethic2
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			40 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = SIB_russian_troops_in_siberia
+		icon = GFX_goal_SIB_russian_troops_in_siberia
+		cost = 3
+		relative_position_id = SIB_black_hundreds_in_siberian_duma
+		x = 6
+		y = 1
+		prerequisite = {
+			focus = SIB_black_hundreds_in_siberian_duma
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 3
+				category = infantry_weapons
+			}
+			RUS = {	add_opinion_modifier = {	target = SIB	modifier = large_increase	}	}
+		}
+	}
+	focus = {
+		id = SIB_improved_cavalry_tactics
+		icon = GFX_goal_SIB_improved_cavalry_tactics
+		cost = 3
+		relative_position_id = SIB_russian_troops_in_siberia
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = SIB_russian_troops_in_siberia
+		}
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				cost_reduction = 1.0
+				uses = 3
+				category = cat_mobile_warfare
+			}
+		}
+	}
+	focus = {
+		id = SIB_fortify_the_mongolian_border
+		icon = GFX_goal_SIB_fortify_the_mongolian_border
+		cost = 5
+		relative_position_id = SIB_improved_cavalry_tactics
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = SIB_improved_cavalry_tactics
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					owns_state = 962
+				}
+				962 = {
+					add_building_construction = {
+						type = bunker
+						level = 1
+						instant_build = yes
+						province = 10528
+					}
+					add_building_construction = {
+						type = bunker
+						level = 1
+						instant_build = yes
+						province = 4837
+					}
+					add_building_construction = {
+						type = bunker
+						level = 1
+						instant_build = yes
+						province = 7717
+					}
+					add_building_construction = {
+						type = bunker
+						level = 1
+						instant_build = yes
+						province = 7676
+					}
+					add_building_construction = {
+						type = bunker
+						level = 1
+						instant_build = yes
+						province = 1834
+					}
+					add_building_construction = {
+						type = bunker
+						level = 1
+						instant_build = yes
+						province = 12649
+					}
+					add_building_construction = {
+						type = bunker
+						level = 1
+						instant_build = yes
+						province = 1689
+					}
+					add_building_construction = {
+						type = bunker
+						level = 1
+						instant_build = yes
+						province = 7799
+					}
+					add_building_construction = {
+						type = bunker
+						level = 1
+						instant_build = yes
+						province = 4777
+					}
+					add_building_construction = {
+						type = bunker
+						level = 1
+						instant_build = yes
+						province = 10563
+					}
+					add_building_construction = {
+						type = bunker
+						level = 1
+						instant_build = yes
+						province = 12520
+					}
+					add_building_construction = {
+						type = bunker
+						level = 1
+						instant_build = yes
+						province = 7843
+					}
+				}
+			}
+			if = {
+				limit = {
+					owns_state = 329
+				}
+				329 = {
+					add_building_construction = {
+						type = bunker
+						level = 1
+						instant_build = yes
+						province = 7703
+					}
+					add_building_construction = {
+						type = bunker
+						level = 1
+						instant_build = yes
+						province = 12610
+					}
+					add_building_construction = {
+						type = bunker
+						level = 1
+						instant_build = yes
+						province = 10597
+					}
+					add_building_construction = {
+						type = bunker
+						level = 1
+						instant_build = yes
+						province = 1877
+					}
+					add_building_construction = {
+						type = bunker
+						level = 1
+						instant_build = yes
+						province = 1676
+					}
+					add_building_construction = {
+						type = bunker
+						level = 1
+						instant_build = yes
+						province = 7804
+					}
+					add_building_construction = {
+						type = bunker
+						level = 1
+						instant_build = yes
+						province = 7819
+					}
+				}
+			}
+			if = {
+				limit = {
+					owns_state = 961
+				}
+				961 = {
+					add_building_construction = {
+						type = bunker
+						level = 1
+						instant_build = yes
+						province = 12628
+					}
+					add_building_construction = {
+						type = bunker
+						level = 1
+						instant_build = yes
+						province = 4690
+					}
+					add_building_construction = {
+						type = bunker
+						level = 1
+						instant_build = yes
+						province = 4711
+					}
+					add_building_construction = {
+						type = bunker
+						level = 1
+						instant_build = yes
+						province = 1816
+					}
+				}
+			}
+			569 = {
+				add_building_construction = {
+					type = bunker
+					level = 1
+					instant_build = yes
+					province = 1685
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					instant_build = yes
+					province = 10580
+				}
+			}
+			568 = {
+				add_building_construction = {
+					type = bunker
+					level = 1
+					instant_build = yes
+					province = 10712
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					instant_build = yes
+					province = 10639
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					instant_build = yes
+					province = 12691
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					instant_build = yes
+					province = 4818
+				}
+			}
+			567 = {
+				add_building_construction = {
+					type = bunker
+					level = 1
+					instant_build = yes
+					province = 7713
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					instant_build = yes
+					province = 10562
+				}
+			}
+			566 = {
+				add_building_construction = {
+					type = bunker
+					level = 1
+					instant_build = yes
+					province = 1810
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					instant_build = yes
+					province = 10543
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					instant_build = yes
+					province = 4797
+				}
+			}
+		}
+	}
+	focus = {
+		id = SIB_novonikolayevsk_aviation_division
+		icon = GFX_goal_SIB_novonikolayevsk_aviation_division
+		cost = 3
+		relative_position_id = SIB_fortify_the_mongolian_border
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = SIB_fortify_the_mongolian_border
+		}
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = tac_bomber_equipment_1
+				amount = 100
+				producer = RUS
+			}
+			570 = {
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = SIB_russia_in_trouble
+		icon = GFX_goal_SIB_russia_in_trouble
+		cost = 3
+		relative_position_id = SIB_black_hundreds_in_siberian_duma
+		x = 0
+		y = 5
+		prerequisite = {
+			focus = SIB_long_live_governor_general
+		}
+		prerequisite = {
+			focus = SIB_unyielding_dictatorship
+		}
+		prerequisite = {
+			focus = SIB_colonial_industrialization
+		}
+		prerequisite = {
+			focus = SIB_novonikolayevsk_aviation_division
+		}
+		available = {
+			is_subject = no
+			date > 1937.1.1
+		}
+		completion_reward = {
+			add_political_power = 150
+			add_war_support = 0.20
+		}
+	}
+	focus = {
+		id = SIB_the_false_motherland
+		icon = GFX_goal_SIB_the_false_motherland
+		cost = 5
+		relative_position_id = SIB_russia_in_trouble
+		x = -3
+		y = 1
+		prerequisite = {
+			focus = SIB_russia_in_trouble
+		}
+		mutually_exclusive = {
+			focus = SIB_aid_the_motherland
+		}
+		available = {
+			RUS = {
+				has_country_flag = RUS_kolchakdead
+			}
+			SRU = {
+				exists = no
+			}
+			is_subject = no
+			has_war = no
+		}
+		completion_reward = {
+			add_political_power = 100
+			SIB = {	add_opinion_modifier = {	target = RUS	modifier = huge_decrease	}	}
+			custom_effect_tooltip = SIB_the_false_motherland_tt
+		}
+	}
+	focus = {
+		id = SIB_invite_drozdovites
+		icon = GFX_goal_SIB_invite_drozdovites
+		cost = 5
+		relative_position_id = SIB_the_false_motherland
+		x = -3
+		y = 1
+		prerequisite = {
+			focus = SIB_the_false_motherland
+		}
+		ai_will_do = {
+			factor = 1000
+		}
+		available = { 
+			is_subject = no
+		}
+		completion_reward = {
+			403 = {
+				add_manpower = 10000
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_1
+				amount = 20000
+				producer = RUS
+			}
+			add_equipment_to_stockpile = {
+				type = light_tank_chassis_0
+				amount = 100
+				producer = RUS
+				variant_name = "T-27"
+			}
+			add_equipment_to_stockpile = {
+				type = small_plane_airframe_0
+				amount = 200
+				producer = RUS
+				variant_name = "I-15"
+			}
+			add_ideas = SIB_havenfordrozd
+			SIB = {	add_opinion_modifier = {	target = TRK	modifier = large_increase	}	}
+		}
+	}
+	focus = {
+		id = SIB_construct_the_yermak_line
+		icon = GFX_goal_SIB_construct_the_yermak_line
+		cost = 5
+		relative_position_id = SIB_the_false_motherland
+		x = 3
+		y = 1
+		prerequisite = {
+			focus = SIB_the_false_motherland
+		}
+		ai_will_do = {
+			factor = 1000
+		}
+		completion_reward = {
+			403 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 7803
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 4659
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 7774
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 7846
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 4209
+				}
+			}
+			580 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 10620
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 7867
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 1812
+				}
+			}
+		}
+	}
+	focus = {
+		id = SIB_aid_the_motherland
+		icon = GFX_goal_SIB_aid_the_motherland
+		cost = 1
+		relative_position_id = SIB_russia_in_trouble
+		x = 3
+		y = 1
+		prerequisite = {
+			focus = SIB_russia_in_trouble
+		}
+		mutually_exclusive = {
+			focus = SIB_the_false_motherland
+		}
+		available = {
+			date > 1939.01.01
+			OR = {
+				AND = {
+					RUS = {
+						NOT = {
+							has_country_flag = RUS_kolchakdead
+						}
+					}
+					RUS = {
+						exists = yes
+					}
+					SRU = {
+						exists = no
+					}
+				}
+				AND = {
+					SRU = {
+						exists = yes
+					}
+					RUS = {
+						exists = no
+					}
+				}
+			}
+			is_subject = no
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					RUS = {
+						exists = yes
+					}
+				}
+				RUS = {
+					SIB = {
+						PREV_annex_CURRENT_warlord = yes
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					SRU = {
+						exists = yes
+					}
+				}
+				SRU = {
+					SIB = {
+						PREV_annex_CURRENT_warlord = yes
+					}
+				}
+			}
+		}
+	}
+	#Solidarists
+	focus = {
+		id = SIB_third_power
+		icon = GFX_SIB_third_power
+		cost = 1
+		relative_position_id = SIB_establish_emergency_provisional_directorate
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = SIB_establish_emergency_provisional_directorate
+		}
+		mutually_exclusive = {
+			focus = SIB_compromise_with_autonomists
+			focus = SIB_black_hundreds_in_siberian_duma
+		}
+		available = {
+			has_country_flag = SIB_sidedwithsolidarists
+		}
+		ai_will_do = {
+			factor = 30
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = right_authoritarianism
+				popularity = 0.3
+			}
+			add_popularity = {
+				ideology = conservatism
+				popularity = 0.1
+			}
+			add_popularity = {
+				ideology = progressivism
+				popularity = 0.05
+			}
+			set_politics = {
+				ruling_party = right_authoritarianism
+				elections_allowed = no
+			}
+			set_party_name = {
+				ideology = conservatism
+				long_name = SIB_nts_party_long
+				name = SIB_nts_party
+			}
+			set_party_name = {
+				ideology = progressivism
+				long_name = SIB_nts_party_long
+				name = SIB_nts_party
+			}
+			add_country_leader_role = {
+				character = SIB_victor_baydalakov
+				country_leader = {
+					ideology = social_nationalism
+					expire = "1967.1.1.1"
+				}
+				promote_leader = yes
+			}
+			remove_ideas = {
+				RUS_warlord_indifference
+			}
+			RUS = {
+				end_puppet = SIB
+			}
+		}
+	}
+	focus = {
+		id = SIB_death_to_the_tyrants
+		icon = GFX_SIB_death_to_the_tyrants
+		cost = 3
+		relative_position_id = SIB_third_power
+		x = -1
+		y = 1
+		prerequisite = {
+			focus = SIB_third_power
+		}
+		ai_will_do = {
+			factor = 30
+		}
+		completion_reward = {
+			add_stability = -0.05
+			add_popularity = {
+				ideology = despotism
+				popularity = -0.2
+				
+			}
+		}
+	}
+	focus = {
+		id = SIB_liberty_for_the_workers
+		icon = GFX_SIB_liberty_for_the_workers
+		cost = 3
+		relative_position_id = SIB_third_power
+		x = 1
+		y = 1
+		ai_will_do = {
+			factor = 30
+		}
+		prerequisite = {
+			focus = SIB_third_power
+		}
+		completion_reward = {
+			add_stability = 0.1
+			add_popularity = {
+				ideology = progressivism
+				popularity = 0.05
+				
+			}
+		}
+	}
+	focus = {
+		id = SIB_solidarisation
+		icon = GFX_SIB_solidarisation
+		cost = 4
+		relative_position_id = SIB_third_power
+		x = 0
+		y = 2
+		ai_will_do = {
+			factor = 30
+		}
+		prerequisite = {
+			focus = SIB_death_to_the_tyrants	
+		}
+		prerequisite = {
+			focus = SIB_liberty_for_the_workers
+		}
+		completion_reward = {
+			add_stability = 0.1
+			country_event = {
+				id = sib.19
+				days = 4
+			}
+		}
+	}
+	focus = {
+		id = SIB_siberian_riflemen_experience
+		icon = GFX_SIB_coordination_headquarters
+		cost = 4
+		relative_position_id = SIB_solidarisation
+		x = -5
+		y = 2
+		ai_will_do = {
+			factor = 30
+		}
+		prerequisite = {
+			focus = SIB_solidarisation
+		}
+		completion_reward = {
+			army_experience = 20
+			add_tech_bonus = {
+				bonus = 1
+				uses = 2
+				category = infantry_weapons
+				category = artillery
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 2000
+				producer = SIB
+			}
+			add_ideas = SIB_synchronization_army
+		}
+	}
+	focus = {
+		id = SIB_redefine_military_hierarchy
+		icon = GFX_SIB_redefine_military_hierarchy
+		cost = 3
+		relative_position_id = SIB_siberian_riflemen_experience
+		x = -1
+		y = 1
+		ai_will_do = {
+			factor = 30
+		}
+		prerequisite = {
+			focus = SIB_siberian_riflemen_experience
+		}
+		completion_reward = {
+			add_political_power = 75
+			add_war_support = 0.1
+			add_popularity = {
+				ideology = right_authoritarianism
+				popularity = 0.10
+			}
+		}
+	}
+	focus = {
+		id = SIB_coordination_headquarters
+		icon = GFX_SIB_coordination_headquarters
+		cost = 3
+		relative_position_id = SIB_redefine_military_hierarchy
+		x = 0
+		y = 1
+		ai_will_do = {
+			factor = 30
+		}
+		prerequisite = {
+			focus = SIB_redefine_military_hierarchy
+		}
+		completion_reward = {
+			add_ideas = SIB_synchronization_army_1
+				hidden_effect = {
+				country_event = {
+					id = sib.25
+					days = 4
+				}
+			}
+		}
+	}
+	focus = {
+		id = SIB_feasible_tasks
+		icon = GFX_SIB_feasible_tasks
+		cost = 3
+		relative_position_id = SIB_siberian_riflemen_experience
+		x = 1
+		y = 1
+		ai_will_do = {
+			factor = 30
+		}
+		prerequisite = {
+			focus = SIB_siberian_riflemen_experience
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			every_state = {
+				limit = {
+					OR = {
+						state = 570
+						state = 403
+						state = 568
+						state = 567
+						state = 566
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+
+		}
+	}
+	focus = {
+		id = SIB_no_more_whips_and_carrots
+		icon = GFX_SIB_no_more_whips_and_carrots
+		cost = 3
+		relative_position_id = SIB_feasible_tasks
+		x = 0
+		y = 1
+		ai_will_do = {
+			factor = 30
+		}
+		prerequisite = {
+			focus = SIB_feasible_tasks
+		}
+		completion_reward = {
+			army_experience = 20
+			add_stability = 0.05
+			add_war_support = 0.1
+			swap_ideas = {
+				remove_idea = SIB_synchronization_army
+				add_idea = SIB_synchronization_army_2
+			}
+		}
+	}
+	focus = {
+		id = SIB_vanguard_of_national_revolution
+		icon = GFX_SIB_vanguard_of_national_revolution
+		cost = 3
+		relative_position_id = SIB_siberian_riflemen_experience
+		x = 0
+		y = 3
+		ai_will_do = {
+			factor = 30
+		}
+		prerequisite = {
+			focus = SIB_coordination_headquarters
+		}
+		prerequisite = {
+			focus = SIB_no_more_whips_and_carrots
+		}
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 2
+				category = land_doctrine
+			}
+			swap_ideas = {
+				remove_idea = SIB_synchronization_army_2
+				add_idea = SIB_russian_militarism
+			}
+		}
+	}
+	focus = {
+		id = SIB_sower_soweth_the_world
+		icon = GFX_SIB_sower_soweth_the_world
+		cost = 3
+		relative_position_id = SIB_solidarisation
+		x = 0
+		y = 2
+		ai_will_do = {
+			factor = 30
+		}
+		prerequisite = {
+			focus = SIB_solidarisation
+		}
+		completion_reward = {
+			add_stability = 0.1
+			add_popularity = {
+				ideology = progressivism
+				popularity = 0.05
+			}
+		}
+	}
+	focus = {
+		id = SIB_radio_free_russia
+		icon = GFX_SIB_radio_free_russia
+		cost = 3
+		relative_position_id = SIB_sower_soweth_the_world
+		x = -1
+		y = 1
+		ai_will_do = {
+			factor = 30
+		}
+		prerequisite = {
+			focus = SIB_sower_soweth_the_world
+		}
+		completion_reward = {
+			add_ideas = SIB_society
+			add_tech_bonus = {
+				bonus = 1
+				uses = 2
+				category = electronics
+			}
+			hidden_effect = {
+			country_event = {
+				id = sib.20
+				days = 14
+				}
+			}
+		}
+	}
+	focus = {
+		id = SIB_rule_of_the_worthy
+		icon = GFX_SIB_rule_of_the_worthy
+		cost = 3
+		relative_position_id = SIB_sower_soweth_the_world
+		x = 1
+		y = 1
+		ai_will_do = {
+			factor = 30
+		}
+		prerequisite = {
+			focus = SIB_sower_soweth_the_world
+		}
+		completion_reward = {
+			add_ideas = SIB_meritocratic_leadership
+		}
+	}
+	focus = {
+		id = SIB_merciful_optimalism
+		icon = GFX_SIB_merciful_optimalism
+		cost = 3
+		relative_position_id = SIB_radio_free_russia
+		x = 0
+		y = 1
+		ai_will_do = {
+			factor = 30
+		}
+		prerequisite = {
+			focus = SIB_radio_free_russia
+		}
+		completion_reward = {
+			add_stability = 0.05
+			add_tech_bonus = {
+				uses = 2
+				bonus = 1.0
+				category = support_tech
+			}
+			swap_ideas = {
+				remove_idea = SIB_society
+				add_idea = SIB_society1
+			}
+		}
+	}
+	focus = {
+		id = SIB_imperative_of_self_development
+		icon = GFX_SIB_imperative_of_self_development
+		cost = 3
+		relative_position_id = SIB_rule_of_the_worthy
+		x = 0
+		y = 1
+		ai_will_do = {
+			factor = 30
+		}
+		prerequisite = {
+			focus = SIB_rule_of_the_worthy
+		}
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	focus = {
+		id = SIB_leading_role_of_the_union
+		icon = GFX_SIB_leading_role_of_the_union
+		cost = 3
+		relative_position_id = SIB_sower_soweth_the_world
+		x = 0
+		y = 3
+		ai_will_do = {
+			factor = 30
+		}
+		prerequisite = {
+			focus = SIB_merciful_optimalism	
+		}
+		prerequisite = {
+			focus = SIB_imperative_of_self_development
+		}
+		completion_reward = {
+			add_political_power = 100
+			swap_ideas = {
+				remove_idea = SIB_society1
+				add_idea = SIB_society2
+			}
+		}
+	}	
+	focus = {
+		id = SIB_recalibration_of_the_economy
+		icon = GFX_SIB_recalibration_of_the_economy
+		cost = 3
+		relative_position_id = SIB_solidarisation
+		x = 5
+		y = 1
+		ai_will_do = {
+			factor = 30
+		}
+		prerequisite = {
+			focus = SIB_solidarisation
+		}
+		completion_reward = {
+			403 = {
+				add_extra_state_shared_building_slots = 2
+			}
+			580 = {
+				add_extra_state_shared_building_slots = 2
+			}
+			568 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			566 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = SIB_national_labour_movement
+		icon = GFX_SIB_national_labour_movement
+		cost = 3
+		relative_position_id = SIB_recalibration_of_the_economy
+		x = 0
+		y = 1
+		ai_will_do = {
+			factor = 30
+		}
+		prerequisite = {
+			focus = SIB_recalibration_of_the_economy
+		}
+		completion_reward = {
+			add_political_power = 100
+			add_ideas = SIB_SVSNK
+		}
+	}
+	focus = {
+		id = SIB_salt_of_the_land
+		icon = GFX_SIB_salt_of_the_land
+		cost = 3
+		relative_position_id = SIB_national_labour_movement
+		x = 0
+		y = 1
+		ai_will_do = {
+			factor = 30
+		}
+		prerequisite = {
+			focus = SIB_national_labour_movement
+		}
+		completion_reward = {
+			add_manpower = 35000
+			hidden_effect = {
+			country_event = {
+				id = sib.22
+				days = 10
+				}
+			}
+			swap_ideas = {
+				remove_idea = SIB_SVSNK
+				add_idea = SIB_syncretisation_people
+			}	
+		}
+	}
+	focus = {
+		id = SIB_board_of_siberian_industry
+		icon = GFX_SIB_board_of_siberian_industry
+		cost = 3
+		relative_position_id = SIB_salt_of_the_land
+		x = -1
+		y = 1
+		ai_will_do = {
+			factor = 30
+		}
+		prerequisite = {
+			focus = SIB_salt_of_the_land
+		}
+		completion_reward = {
+			add_stability = 0.05
+				swap_ideas = {
+				remove_idea = SIB_syncretisation_people
+				add_idea = SIB_SVSNK1
+			}
+						add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = industry
+			}
+			add_resource = {
+				type = oil
+				amount = 10
+				state = 403
+			}
+		}
+	}
+	focus = {
+		id = SIB_nationalism_activism_idealism
+		icon = GFX_SIB_nationalism_activism_idealism
+		cost = 3
+		relative_position_id = SIB_salt_of_the_land
+		x = 1
+		y = 1
+		ai_will_do = {
+			factor = 30
+		}
+		prerequisite = {
+			focus = SIB_salt_of_the_land
+		}
+		completion_reward = {
+			add_stability = 0.10
+			add_popularity = {
+				ideology = conservatism
+				popularity = 0.10
+			}
+		}
+	}
+	focus = {
+		id = SIB_liberty_and_justice
+		icon = GFX_SIB_liberty_and_justice
+		cost = 3
+		relative_position_id = SIB_recalibration_of_the_economy
+		x = 0
+		y = 4
+		prerequisite = {
+			focus = SIB_board_of_siberian_industry	
+		}
+		prerequisite = {
+			focus = SIB_nationalism_activism_idealism
+		}
+		completion_reward = {
+			add_political_power = 75
+			swap_ideas = {
+				remove_idea = SIB_SVSNK1
+				add_idea = SIB_solidarism_idea
+			}
+		}
+	}
+	focus = {
+		id = SIB_intrasigence_day
+		icon = GFX_SIB_intrasigence_day
+		cost = 3
+		relative_position_id = SIB_leading_role_of_the_union
+		x = 0
+		y = 2
+		ai_will_do = {
+			factor = 30
+		}
+		prerequisite = {
+			focus = SIB_vanguard_of_national_revolution
+		}
+		prerequisite = {
+			focus = SIB_liberty_and_justice
+		}
+		prerequisite = {
+			focus = SIB_leading_role_of_the_union
+		}
+		available = {
+			NOT = {
+				any_state = {
+					is_core_of = SIB
+					NOT = {
+						is_owned_by = SIB
+					}
+				}
+			}
+			is_subject = no
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = SIB_synchronization_army_1
+				add_idea = SIB_headquarters
+			}	
+		}
+	}
+	focus = {
+		id = SIB_benevolence_for_the_steppes
+		icon = GFX_SIB_benevolence_for_the_steppes
+		cost = 3
+		relative_position_id = SIB_intrasigence_day
+		x = -1
+		y = 1
+		ai_will_do = {
+			factor = 30
+		}
+		prerequisite = {
+			focus = SIB_intrasigence_day
+		}
+		available = { 
+			is_subject = no
+		}
+		bypass = {
+			KHW = {
+				exists = no
+			}
+			TUK = {
+				exists = no
+			}
+			TUC = {
+				exists = no
+			}
+			BKR = {
+				exists = no
+			}
+			KOK = {
+				exists = no
+			}
+		}
+		completion_reward = {
+			diplomatic_relation = { 
+				country = TUC
+				relation = non_aggression_pact 
+			}	
+			diplomatic_relation = { 
+				country = KHW
+				relation = non_aggression_pact 
+			}
+			diplomatic_relation = { 
+				country = TUK
+				relation = non_aggression_pact 
+			}
+			diplomatic_relation = { 
+				country = BKR
+				relation = non_aggression_pact 
+			}
+			diplomatic_relation = { 
+				country = KOK
+				relation = non_aggression_pact 
+			}
+		}
+	}
+	focus = {
+		id = SIB_plan_copper_mountain
+		icon = GFX_SIB_plan_copper_mountain
+		cost = 3
+		relative_position_id = SIB_intrasigence_day
+		x = 1
+		y = 1
+		ai_will_do = {
+			factor = 30
+		}
+		prerequisite = {
+			focus = SIB_intrasigence_day
+		}
+		available = { 
+			is_subject = no
+		}
+		completion_reward = {
+		403 = {
+			add_building_construction = {
+				type = bunker
+				level = 2
+				instant_build = yes
+				province = 3169
+			}
+			add_building_construction = {
+				type = bunker
+				level = 2
+				instant_build = yes
+				province = 4774
+			}
+			add_building_construction = {
+				type = bunker
+				level = 2
+				instant_build = yes
+				province = 1744
+			}
+			add_building_construction = {
+				type = bunker
+				level = 2
+				instant_build = yes
+				province = 1771
+			}
+			add_building_construction = {
+				type = bunker
+				level = 2
+				instant_build = yes
+				province = 10648
+			}
+			add_building_construction = {
+				type = bunker
+				level = 2
+				instant_build = yes
+				province = 10716
+			}
+			add_building_construction = {
+				type = bunker
+				level = 2
+				instant_build = yes
+				province = 7228
+			}
+			add_building_construction = {
+				type = bunker
+				level = 2
+				instant_build = yes
+				province = 12567
+			}
+			add_building_construction = {
+				type = bunker
+				level = 2
+				instant_build = yes
+				province = 10133
+			}
+		}
+		}
+	}
+	focus = {
+		id = SIB_proving_ground_150
+		icon = GFX_SIB_proving_ground_150
+		cost = 3
+		relative_position_id = SIB_intrasigence_day
+		x = 0
+		y = 2
+		ai_will_do = {
+			factor = 30
+		}
+		prerequisite = {
+			focus = SIB_benevolence_for_the_steppes
+			focus = SIB_plan_copper_mountain
+		}
+		available = {
+		}
+		completion_reward = {
+			army_experience = 30
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = air_doctrine
+			}
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = armor
+			}
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = air_equipment
+			}
+		}
+	}
+	focus = {
+		id = SIB_form_operative_battlegroups
+		icon = GFX_SIB_form_operative_battlegroups
+		cost = 2
+		relative_position_id = SIB_proving_ground_150
+		x = 0
+		y = 1
+		ai_will_do = {
+			factor = 30
+		}
+		prerequisite = {
+			focus = SIB_proving_ground_150
+		}
+		available = {
+		}
+		completion_reward = {
+			army_experience = 50
+		}
+	}
+	focus = {
+		id = SIB_making_our_move
+		icon = GFX_SIB_making_our_move
+		cost = 1
+		relative_position_id = SIB_form_operative_battlegroups
+		x = 0
+		y = 1
+		ai_will_do = {
+			factor = 30
+		}
+		prerequisite = {
+			focus = SIB_form_operative_battlegroups
+		}
+		available = {
+			
+		}
+		completion_reward = { 
+			unlock_decision_category_tooltip = SIB_unification		
+		}
+	}
+	focus = {
+		id = SIB_nation_under_sacred_trident
+		icon = GFX_SIB_nation_under_sacred_trident
+		cost = 1
+		relative_position_id = SIB_making_our_move
+		x = 0
+		y = 1
+		ai_will_do = {
+			factor = 30
+		}
+		prerequisite = {
+			focus = SIB_making_our_move
+		}
+		available = {
+			owns_state = 219
+			owns_state = 195
+			owns_state = 231
+			owns_state = 590
+			owns_state = 408
+		}
+		completion_reward = {
+			unlock_decision_tooltip = Unification_unify_russia_nationalist
+			add_war_support = 0.3
+			add_stability = 0.3
+			add_research_slot = 1
+		}
+	}
+	focus = {
+		id = SIB_quo_vadis
+		icon = GFX_SIB_quo_vadis
+		cost = 1
+		relative_position_id = SIB_nation_under_sacred_trident
+		x = 0
+		y = 1
+		ai_will_do = {
+			factor = 30
+		}
+		prerequisite = {
+			focus = SIB_nation_under_sacred_trident
+		}
+		available = {
+			is_subject = no
+			owns_state = 219
+			owns_state = 195
+			owns_state = 574
+			owns_state = 408
+		}
+		completion_reward = {
+			country_event = {
+				id = sib.17
+			}	
+		} 
+	}
+	focus = {
+		id = SIB_symphony_of_unity
+		icon = GFX_SIB_symphony_of_unity
+		cost = 1
+		relative_position_id = SIB_quo_vadis
+		x = -2
+		y = 1
+		ai_will_do = {
+			factor = 30
+		}
+		prerequisite = {
+			focus = SIB_quo_vadis
+		}
+		mutually_exclusive = {
+			focus = SIB_dictate_of_unifier
+		}
+		mutually_exclusive = {
+			focus = SIB_harmony_of_time
+		}
+		available = { 
+			has_country_flag = SIB_baydalakov
+		}
+		completion_reward = {
+			set_politics = {
+				ruling_party = progressivism
+			}
+			set_cosmetic_tag = SIB_uni_progressivism
+		}
+	}
+	focus = {
+		id = SIB_dictate_of_unifier
+		icon = GFX_SIB_dictate_of_unifier
+		cost = 1
+		relative_position_id = SIB_quo_vadis
+		x = 0
+		y = 1
+		ai_will_do = {
+			factor = 30
+		}
+		prerequisite = {
+			focus = SIB_quo_vadis
+		}
+		mutually_exclusive = {
+			focus = SIB_symphony_of_unity
+		}
+		mutually_exclusive = {
+			focus = SIB_harmony_of_time
+		}	
+		available = {
+			has_country_flag = SIB_vlasov
+		}
+		completion_reward = { 
+			set_cosmetic_tag = SIB_uni_right_authoritarianism
+			
+		}
+	}
+	focus = {
+		id = SIB_harmony_of_time
+		icon = GFX_SIB_harmony_of_time
+		cost = 1
+		relative_position_id = SIB_quo_vadis
+		x = 2
+		y = 1
+		ai_will_do = {
+			factor = 30
+		}
+		prerequisite = {
+			focus = SIB_quo_vadis
+		}
+		mutually_exclusive = {
+			focus = SIB_symphony_of_unity
+		}
+		mutually_exclusive = {
+			focus = SIB_dictate_of_unifier
+		}
+		available = {
+			has_country_flag = SIB_rurikid
+		}
+		completion_reward = { 
+			
+			set_politics = {
+				ruling_party = conservatism
+			}
+			add_country_leader_role = {
+				character = SIB_alexander_iv
+				country_leader = {
+					ideology = national_conservatism
+					expire = "1965.1.1.1"
+				}
+				promote_leader = yes
+			}
+			set_cosmetic_tag = SIB_uni_conservatism
+		}
+	}
+}

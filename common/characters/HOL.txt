@@ -1,0 +1,87 @@
+characters = {
+	HOL_wilhemina = {
+		name = "Wilhemina"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/HOL/Portrait_Wilhemina.png"
+			}
+		}
+		country_leader = {
+			ideology = classical_liberalism
+			expire = "1965.1.1.1"
+		}
+	}
+	HOL_Willem_Schermerhorn = {
+		name = "Willem Schermerhorn"
+		country_leader = {
+			ideology = social_liberalism
+			expire = "1965.1.1.1"
+		}
+	}
+	HOL_izaak_reijnders = {
+		name = "Izaak Reijnders"
+		field_marshal = {
+			traits = { old_guard inflexible_strategist trait_reckless }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 3
+		}
+	}
+	HOL_petrus_wilhelmus_best = {
+		name = "Petrus Wilhelmus Best"
+		corps_commander = {
+			traits = { organizer skilled_staffer }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 3
+		}
+	}
+	HOL_godfried_van_voorst_tot_voorst = {
+		name = "Godfried van Voorst tot Voorst"
+		corps_commander = {
+			traits = { brilliant_strategist career_officer armor_officer politically_connected }
+			skill = 4
+			attack_skill = 3
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 3
+		}
+	}
+	HOL_johannes_theodorus_furstner = {
+		name = "Johannes Theodorus Furstner"
+		navy_leader = {
+			traits = { caustic_personality fly_swatter blockade_runner }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 3
+			maneuvering_skill = 2
+			coordination_skill = 3
+		}
+	}
+	HOL_conrad_helfrich = {
+		name = "Conrad Helfrich"
+		navy_leader = {
+			traits = { seawolf superior_tactician bold navy_career_officer }
+			skill = 4
+			attack_skill = 5
+			defense_skill = 2
+			maneuvering_skill = 3
+			coordination_skill = 2
+		}
+	}
+	HOL_karel_doorman = {
+		name = "Karel Doorman"
+		navy_leader = {
+			traits = { fleet_protector naval_lineage bold }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			maneuvering_skill = 3
+			coordination_skill = 2
+		}
+	}
+}

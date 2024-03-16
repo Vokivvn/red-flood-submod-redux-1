@@ -1,0 +1,74 @@
+ideas = {
+	country = {
+		PRS_the_castle_doctrine = {
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				war_support_factor = 0.1
+				political_power_gain = -0.15
+				army_org_factor = 0.1
+				army_defence_factor = 0.10
+			}
+			picture = GFX_idea_PRS_the_castle_doctrine
+		}
+		PRS_help_from_the_bear = {
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				army_core_defence_factor = 0.10
+			}
+			picture = GFX_idea_PRS_help_from_the_bear
+		}
+		PRS_auswanderer = {
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = -0.05
+				weekly_manpower = 500
+			}
+			picture = GFX_idea_PRS_auswanderer
+		}
+		PRS_calm_before_the_storm = {
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = 0.10
+				political_power_gain = -0.25
+			}
+			picture = GFX_idea_PRS_calm_before_the_storm
+		}
+		PRS_our_patron_lost = {
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				consumer_goods_expected_value = 0.05
+				army_defence_factor = -0.05
+			}
+			picture = GFX_idea_PRS_our_patron_lost
+		}
+		PRS_the_storm = {
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = -0.20
+			}
+			picture = GFX_idea_PRS_the_storm
+		}
+		PRS_prussian_spring = {
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				political_power_gain = 0.15
+			}
+			picture = GFX_idea_PRS_prussian_spring
+		}
+		PRS_patriots_in_power = {
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = 0.10
+			}
+			picture = GFX_idea_PRS_patriots_in_power
+		}
+	}
+}

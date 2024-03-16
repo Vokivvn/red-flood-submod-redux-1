@@ -1,0 +1,24 @@
+
+state={
+	id=822
+	name="STATE_822"
+
+	history={
+		add_core_of = DAI
+		owner = DAI
+		buildings = {
+			infrastructure = 2
+		}
+		victory_points = {
+			1302 5 #Hue
+		}
+	}
+
+	provinces={
+		1302 7280 12297
+	}
+
+	manpower = 2028000 # first-order estimate
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

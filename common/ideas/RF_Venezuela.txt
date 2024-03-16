@@ -1,0 +1,71 @@
+ideas = {
+
+#################
+# Country ideas #
+#################
+
+	country = {
+		VEN_shadow_of_the_seven_sisters = {
+			picture = VEN_shadow_of_the_seven_sisters
+			cancel = { has_country_flag = remove_idea }
+			removal_cost = -1
+			modifier = {
+				min_export = -0.40
+			}
+		}
+		VEN_shadow_of_the_seven_sisters_2 = {
+			picture = VEN_shadow_of_the_seven_sisters
+			cancel = { has_country_flag = remove_idea }
+			removal_cost = -1
+			modifier = {
+				min_export = -0.10
+			}
+		}
+		
+		VEN_coffee-reliant_economy = {
+			picture = VEN_Coffee-reliant_Economy
+			cancel = { has_country_flag = remove_idea }
+			removal_cost = -1
+			modifier = {
+				consumer_goods_expected_value = 0.10
+				production_speed_buildings_factor = -0.10
+				custom_modifier_tooltip = VEN_coffee-reliant_economy_tt
+			}
+		}
+		
+		VEN_VDC_bankruptcy = {
+		
+			picture = VEN_Legacy_of_the_VDC_Bankruptcy
+			cancel = { has_country_flag = remove_idea }	
+			removal_cost = -1
+			modifier = {
+				production_speed_synthetic_refinery_factor = -0.50
+				production_speed_fuel_silo_factor = -0.50
+				production_speed_infrastructure_factor = -0.20
+				trade_opinion_factor = -0.5
+			}
+		}
+		
+		VEN_Land_of_Countless_Coups = {
+			picture = VEN_Land_of_Countless_Coups
+			cancel = { has_country_flag = remove_idea }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.15
+				custom_modifier_tooltip = VEN_Land_of_Countless_Coups_tt
+			}
+		}
+		
+		VEN_New_Bolivars = {
+		
+			picture = VEN_New_Generation_of_Bolivars
+			cancel = { has_country_flag = remove_idea }
+			removal_cost = -1
+			modifier = {
+				war_support_factor = 0.10
+				justify_war_goal_time = -0.15
+				conscription = 0.01
+			}
+		}
+	}
+}

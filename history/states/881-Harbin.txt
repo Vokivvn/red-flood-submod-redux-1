@@ -1,0 +1,39 @@
+
+state={
+	id=881
+	name="STATE_881"
+
+	history={
+		owner = ZHR
+		victory_points = {
+			7663 5 
+		}
+		victory_points = {
+			9782 5 
+		}
+		victory_points = {
+			7652 5 
+		}
+		victory_points = {
+			7523 5 
+		}
+		victory_points = {
+			3815 5 
+		}
+		buildings = {
+			infrastructure = 2
+			air_base = 4
+            industrial_complex = 2
+			arms_factory = 1
+		}
+
+	}
+
+	provinces={
+		7523 7591 7652 9782 9913 11864 12412 
+	}
+	manpower=3349453
+	buildings_max_level_factor=1.000
+	state_category=large_city
+	local_supplies=0.000
+}

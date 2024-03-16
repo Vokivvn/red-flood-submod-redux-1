@@ -1,0 +1,77 @@
+
+vanguard_socialism_allowed = {
+	custom_trigger_tooltip = {
+		tooltip = RF_ideology_allowed
+		has_government = vanguard_socialism
+	}
+}
+
+popular_socialism_allowed = {
+	custom_trigger_tooltip = {
+		tooltip = RF_ideology_allowed
+		has_government = popular_socialism
+	}
+}
+
+anarchism_allowed = {
+	custom_trigger_tooltip = {
+		tooltip = RF_ideology_allowed
+		has_government = anarchism
+	}
+}
+
+revisionist_socialism_allowed = {
+	custom_trigger_tooltip = {
+		tooltip = RF_ideology_allowed
+		has_government = revisionist_socialism
+	}
+}
+
+progressivism_allowed = {
+	custom_trigger_tooltip = {
+		tooltip = RF_ideology_allowed
+		has_government = progressivism
+	}
+}
+
+liberalism_allowed = {
+	custom_trigger_tooltip = {
+		tooltip = RF_ideology_allowed
+		has_government = liberalism
+	}
+}
+
+conservatism_allowed = {
+	custom_trigger_tooltip = {
+		tooltip = RF_ideology_allowed
+		has_government = conservatism
+	}
+}
+
+right_authoritarianism_allowed = {
+	custom_trigger_tooltip = {
+		tooltip = RF_ideology_allowed
+		has_government = right_authoritarianism
+	}
+}
+
+despotism_allowed = {
+	custom_trigger_tooltip = {
+		tooltip = RF_ideology_allowed
+		has_government = despotism
+	}
+}
+
+reactionism_allowed = {
+	custom_trigger_tooltip = {
+		tooltip = RF_ideology_allowed
+		has_government = reactionism
+	}
+}
+
+accelerationism_allowed = {
+	custom_trigger_tooltip = {
+		tooltip = RF_ideology_allowed
+		has_government = accelerationism
+	}
+}

@@ -1,0 +1,12 @@
+﻿
+air_wings = {
+	231 = {
+		# 1st Squadron
+		small_plane_airframe_0 =  {
+			owner = "KAV" 
+			creator = "RUS"
+			amount = 40
+			version_name = "I-15"
+		}
+	}
+}

@@ -1,0 +1,21 @@
+
+state={
+	id=224
+	name="STATE_224"
+	manpower = 1005567
+	
+	state_category = town
+
+	history={
+		owner = SRU
+		buildings = {
+			infrastructure = 3
+			air_base = 2
+		}
+		add_core_of = SRU
+	}
+
+	provinces={
+		315 343 371 11229 11298 11325 
+	}
+}

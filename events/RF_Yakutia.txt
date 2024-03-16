@@ -1,0 +1,585 @@
+add_namespace = kck
+
+#Chaos in the Capital
+country_event = {
+	id = kck.1
+	title = kck.1.title
+	desc = kck.1.desc
+	#picture = GFX_report_event_generic_sign_treaty3
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = kck.1.a
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 1000
+				has_game_rule = {
+					rule = KCK_ai_route
+					option = KCK_KSENOFONTOV
+				}
+			}
+		}
+		set_country_flag = KCK_ksenofontov_path_unlock
+		mark_focus_tree_layout_dirty = yes
+	}
+	option = {
+		name = kck.1.b
+		ai_chance = {
+			factor = 90
+			modifier = {
+				factor = 1000
+				has_game_rule = {
+					rule = KCK_ai_route
+					option = KCK_STARK
+				}
+			}
+		}
+		set_country_flag = KCK_stark_path_unlock
+		mark_focus_tree_layout_dirty = yes
+	}
+}
+
+#Constitution of Free Yakutia
+country_event = {
+	id = kck.2
+	title = kck.2.title
+	desc = kck.2.desc
+	#picture = GFX_report_event_generic_sign_treaty3
+
+	is_triggered_only = yes
+
+	option = {
+		name = kck.2.a
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+#Integrate to Russia (RUS)
+country_event = {
+	id = kck.3
+	title = kck.3.title
+	desc = kck.3.desc
+	#picture = GFX_report_event_generic_sign_treaty3
+
+	is_triggered_only = yes
+
+	option = {
+		name = kck.3.a
+		ai_chance = {
+			factor = 1
+		}
+		#RUS = { change_tag_from = ROOT }
+		annex_country = {
+			target = KCK
+			transfer_troops = yes
+		}
+		add_naval_commander_role = {
+			Character = KCK_georgiy_stark
+			traits = { ironside old_guard_navy career_officer }
+			skill = 3
+			attack_skill = 4
+			defense_skill = 2
+			maneuvering_skill = 2
+			coordination_skill = 2
+		}
+	}
+}
+
+#Klondike of Japan (SAVE THIS BUT MOVE IT TO THE NEW TREE)
+country_event = {
+	id = kck.4
+	title = kck.4.title
+	desc = kck.4.desc
+	#picture = GFX_report_event_generic_sign_treaty3
+
+	is_triggered_only = yes
+
+	option = {
+		name = kck.4.a
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+#Choice of Land Doctrine
+country_event = {
+	id = kck.5
+	title = kck.5.title
+	desc = kck.5.desc
+	#picture = GFX_report_event_generic_sign_treaty3
+
+	is_triggered_only = yes
+
+	option = {
+		name = kck.5.a
+		ai_chance = {
+			factor = 1
+		}
+		add_doctrine_cost_reduction = {
+			cost_reduction = 0.5
+			uses = 3
+			category = cat_mobile_warfare
+		}
+	}
+	option = {
+		name = kck.5.b
+		ai_chance = {
+			factor = 1
+		}
+		add_doctrine_cost_reduction = {
+			cost_reduction = 0.5
+			uses = 3
+			category = cat_superior_firepower
+		}
+	}
+	option = {
+		name = kck.5.c
+		ai_chance = {
+			factor = 1
+		}
+		add_doctrine_cost_reduction = {
+			cost_reduction = 0.5
+			uses = 3
+			category = cat_grand_battle_plan
+		}
+	}
+	#i like how you can't choose mass assault
+}
+
+#Choice of Air Doctrine
+country_event = {
+	id = kck.6
+	title = kck.6.title
+	desc = kck.6.desc
+	#picture = GFX_report_event_generic_sign_treaty3
+
+	is_triggered_only = yes
+
+	option = {
+		name = kck.6.a
+		ai_chance = {
+			factor = 1
+		}
+		add_doctrine_cost_reduction = {
+			cost_reduction = 0.5
+			uses = 3
+			category = strategic_destruction_tree
+		}
+	}
+	option = {
+		name = kck.6.b
+		ai_chance = {
+			factor = 1
+		}
+		add_doctrine_cost_reduction = {
+			cost_reduction = 0.5
+			uses = 3
+			category = battlefield_support_tree
+		}
+	}
+	option = {
+		name = kck.6.c
+		ai_chance = {
+			factor = 1
+		}
+		add_doctrine_cost_reduction = {
+			cost_reduction = 0.5
+			uses = 3
+			category = operational_integrity_tree
+		}
+	}
+}
+
+#Choice of Naval Doctrine
+country_event = {
+	id = kck.7
+	title = kck.7.title
+	desc = kck.7.desc
+	#picture = GFX_report_event_generic_sign_treaty3
+
+	is_triggered_only = yes
+
+	option = {
+		name = kck.7.a
+		ai_chance = {
+			factor = 1
+		}
+		add_doctrine_cost_reduction = {
+			cost_reduction = 0.5
+			uses = 3
+			category = fleet_in_being_tree
+		}
+	}
+	option = {
+		name = kck.7.b
+		ai_chance = {
+			factor = 1
+		}
+		add_doctrine_cost_reduction = {
+			cost_reduction = 0.5
+			uses = 3
+			category = trade_interdiction_tree
+		}
+	}
+	option = {
+		name = kck.7.c
+		ai_chance = {
+			factor = 1
+		}
+		add_doctrine_cost_reduction = {
+			cost_reduction = 0.5
+			uses = 3
+			category = convoy_defense_tree
+		}
+	}
+}
+
+# Join Commonwealth
+country_event = {
+	id = kck.8
+	title = kck.8.title
+	desc = kck.8.desc
+	#picture = GFX_report_event_generic_sign_treaty3
+
+	is_triggered_only = yes
+
+	option = {
+		name = kck.8.a
+		add_to_faction = KCK
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = kck.8.b
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+# News about Kolchak-Drozdovsky War
+country_event = {
+	id = kck.9
+	title = kck.9.title
+	desc = kck.9.desc
+	#picture = GFX_report_event_generic_sign_treaty3
+
+	is_triggered_only = yes
+
+	option = {
+		name = kck.9.a
+	}
+}
+
+# REPLACE THIS WITH THE SPEECH
+country_event = {
+	id = kck.10
+	title = kck.10.title
+	desc = kck.10.desc
+	#picture = GFX_report_event_generic_sign_treaty3
+
+	is_triggered_only = yes
+
+	option = {
+		name = kck.10.a
+	}
+}
+
+# Red Sailors Mutiny
+country_event = {
+	id = kck.11
+	title = kck.11.title
+	desc = kck.11.desc
+	#picture = GFX_report_event_generic_sign_treaty3
+
+	is_triggered_only = yes
+
+	option = {
+		name = kck.11.a
+		KCK = {
+			every_owned_state = {
+				add_core_of = ZHR
+			}
+		}
+		ZHR = { change_tag_from = KCK }
+		ZHR = {
+			annex_country = {
+				target = KCK
+				transfer_troops = yes
+			}
+			add_opinion_modifier = {
+				target = JPR
+				modifier = large_increase
+			}
+		}
+		JPR = {
+			add_opinion_modifier = {
+				target = ZHR
+				modifier = large_increase
+			}
+		}
+	}
+}
+
+# Finally Annexation
+country_event = {
+	id = kck.12
+	title = kck.12.title
+	desc = kck.12.desc
+	#picture = GFX_report_event_generic_sign_treaty3
+
+	is_triggered_only = yes
+
+	option = {
+		name = kck.12.a
+		ROOT = {
+			change_tag_from = KCK
+		}
+		annex_country = {
+			target = KCK
+			transfer_troops = yes
+		}
+		add_naval_commander_role = {
+			Character = KCK_georgiy_stark
+			traits = { ironside old_guard_navy career_officer }
+			skill = 3
+			attack_skill = 4
+			defense_skill = 2
+			maneuvering_skill = 2
+			coordination_skill = 2
+		}
+	}
+}
+country_event = {
+	id = kck.13
+	title = kck.13.title
+	desc = kck.13.desc
+	#picture = GFX_report_event_generic_sign_treaty3
+
+	is_triggered_only = yes
+
+	option = {
+		name = kck.13.a
+		custom_effect_tooltip = "A decision will appear to create Magadan."
+		hidden_effect = {
+			set_country_flag = magadan_city_KCK
+		}
+	}
+}
+#pick path
+country_event = {
+	id = kck.14
+	title = kck.14.title
+	desc = kck.14.desc
+	#picture = GFX_report_event_generic_sign_treaty3
+
+	is_triggered_only = yes
+
+	option = {
+		trigger = {
+			country_exists = ZHR
+		}
+		name = kck.14.a
+		custom_effect_tooltip = "We will join our Free Russian brothers."
+        set_country_flag = KCK_zhelto
+		KCK = {
+			every_owned_state = {
+				add_core_of = ZHR
+			}
+		}
+	}
+	option = {
+		name = kck.14.b
+		custom_effect_tooltip = "We will decide our own future."
+        set_country_flag = KCK_independence
+	}
+}
+#use for gajda
+country_event = {
+	id = kck.15
+	title = kck.15.title
+	desc = kck.15.desc
+	#picture = GFX_report_event_generic_sign_treaty3
+
+	is_triggered_only = yes
+
+	option = {
+		name = kck.15.a
+		custom_effect_tooltip = "A decision will appear to create Dezhnevsk."
+		hidden_effect = {
+			set_country_flag = dezhnevsk_city_KCK
+		}
+	}
+}
+################## REPLACE THIS WITH A SPEECH TO THE SAILORS
+country_event = {
+	id = kck.16
+	title = kck.16.title
+	desc = kck.16.desc
+	#picture = GFX_report_event_generic_sign_treaty3
+
+	is_triggered_only = yes
+
+	option = {
+		name = kck.16.a
+	}
+}
+country_event = {
+	id = kck.17
+	title = kck.17.title
+	desc = kck.17.desc
+	#picture = GFX_report_event_generic_sign_treaty3
+
+	is_triggered_only = yes
+	trigger = {
+		AND = {
+			KCK = {
+				has_government = progressivism
+			}
+			JKR = {
+				has_government = accelerationism
+			}
+		}
+	}
+
+	option = {
+		name = kck.17.a
+		KCK = {
+			add_opinion_modifier = { target = JKR modifier = medium_increase }
+		}
+		JKR = {
+			add_opinion_modifier = { target = KCK modifier = medium_increase }
+		}
+	}
+}
+
+country_event = {
+	id = kck.18
+	title = kck.18.title
+	desc = kck.18.desc
+	#picture = GFX_report_event_generic_sign_treaty3
+
+	is_triggered_only = yes
+
+	option = {
+		name = kck.18.a
+	}
+}
+
+country_event = {
+	id = kck.19
+	title = kck.19.title
+	desc = kck.19.desc
+	#picture = GFX_report_event_generic_sign_treaty3
+
+	is_triggered_only = yes
+
+	option = {
+		name = kck.19.a
+	}
+}
+
+country_event = {
+	id = kck.20
+	title = kck.20.title
+	desc = kck.20.desc
+	#picture = GFX_report_event_generic_sign_treaty3
+
+	is_triggered_only = yes
+
+	option = {
+		name = kck.20.a
+	}
+}
+
+country_event = {
+	id = kck.34
+	title = kck.34.t
+	desc = kck.34.desc
+	#picture = GFX_news_event_aid_pact
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = kck.34.a
+		
+		KCK = {
+			country_event = {
+				id = kck.35 #yes
+				days = 1
+			}
+		}
+	}
+	option = {
+		name = kck.34.b
+		KCK = {
+			country_event = {
+				id = kck.36 #no
+				days = 1
+			}
+		}
+		
+	}
+}
+
+country_event = {
+	id = kck.35
+	title = kck.35.t
+	desc = kck.35.desc
+	#picture = GFX_news_event_aid_pact
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = kck.35.a
+		every_state = {
+			limit = {
+				is_core_of = SIB
+			}
+			add_core_of = KCK
+		}
+		SIB = {
+			every_unit_leader = {
+				set_nationality = KCK
+			}
+		}
+		annex_country = {
+		    target = SIB
+	  		transfer_troops = yes
+		}
+	}
+}
+
+country_event = {
+	id = kck.36
+	title = kck.36.t
+	desc = kck.36.desc
+	#picture = GFX_news_event_aid_pact
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = kck.36.a
+		create_wargoal = {
+			type = annex_everything
+			target = SIB
+		}
+		every_state = {
+			limit = {
+				OR = {
+					is_owned_by = SIB
+				}
+				NOT = {
+					is_core_of = KCK
+				}
+			}
+			add_core_of = KCK
+		}
+	}
+}

@@ -1,0 +1,27 @@
+characters = {
+	ICE_kristján_X = {
+		name = "Kristján X"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ICE/Portrait_Kris_RW_ICE.png"
+			}
+		}
+		country_leader = {
+			ideology = anocracy
+			expire = "1965.1.1.1"
+		}
+	}
+	ICE_wilhelm_wain_prior = {
+		name = "Wilhelm Wain Prior"
+		portraits = {
+		}
+		corps_commander = {
+			traits = { trickster }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 2
+		}
+	}
+}

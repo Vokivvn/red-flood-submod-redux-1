@@ -1,0 +1,20 @@
+state={
+	id=1006
+	name="STATE_1006"
+
+	state_category = wasteland
+
+	history={
+		owner = FRA
+		buildings = {
+			infrastructure = 1
+		}
+		add_claim_by = ALG
+
+	}
+
+	provinces={
+		12842 10731 8088 1958
+	}
+	manpower=14203
+}

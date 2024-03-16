@@ -1,0 +1,1264 @@
+characters = {
+	GER_paul_levi = {
+		name = "Paul Levi"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/GER/Portrait_GER_Paul_Levi.png"
+			}
+		}
+		country_leader = {
+			desc = POLITICS_Levi_DESC
+			ideology = democratic_socialism
+			traits = { GER_levi_tsf }
+			expire = "1965.1.1.1"
+		}
+	}
+	GER_Lenin_Goebbles = {
+		name = "Joseph Goebbels/Vladimir Lenin"
+		country_leader = {
+			ideology = state_socialism
+			expire = "1965.1.1.1"
+		}
+	}
+	GER_KPD_council_Goebbles = {
+		name = "Joseph Goebbels/Parteiführungsrat"
+		country_leader = {
+			ideology = state_socialism
+			expire = "1965.1.1.1"
+		}
+	}
+	GER_KPD_Goebbels_Radek = {
+		name = "Joseph Goebbels/Karl Radek"
+		country_leader = {
+			ideology = state_socialism
+			expire = "1965.1.1.1"
+		}
+	}
+	GER_KPD_Goebbels_Brandler = {
+		name = "Joseph Goebbels/Heinrich Brandler"
+		country_leader = {
+			ideology = state_socialism
+			expire = "1965.1.1.1"
+		}
+	}
+	GER_KPD_Reventlow_Radek = {
+		name = "Ernst Reventlow/Karl Radek"
+		country_leader = {
+			ideology = state_socialism
+			expire = "1965.1.1.1"
+		}
+	}
+	GER_KPD_Reventlow_Brandler = {
+		name = "Ernst Reventlow/Heinrich Brandler"
+		country_leader = {
+			ideology = state_socialism
+			expire = "1965.1.1.1"
+		}
+	}
+	GER_herbert_frahm = {
+		name = "Herbert Frahm"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/GER/Portrait_GER_Herbert_Frahm.png"
+				small="gfx/interface/ministers/GER/GER_herbert_frahm_for.tga"
+			}
+		}
+		country_leader = {
+			desc = POLITICS_Frahm_DESC
+			ideology = spartakism
+			traits = { GER_frahm_tsf }
+			expire = "1965.1.1.1"
+		}
+	}
+	GER_karl_popper = {
+		name = "Karl Popper"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/GER/Portrait_GER_Karl_Popper.png"
+			}
+		}
+		country_leader = {
+			desc = POLITICS_Popper_DESC
+			ideology = liberal_socialism
+			traits = { GER_popper_tsf }
+			expire = "1965.1.1.1"
+		}
+	}
+	GER_ernst_meyer = {
+		name = "Ernst Meyer"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/GER/Portrait_GER_Ernst_Meyer.png"
+			}
+		}
+		country_leader = {
+			desc = POLITICS_Meyer_DESC
+			traits = { GER_meyer_tsf }
+			expire = "1965.1.1"
+			ideology = spartakism
+		}
+	}
+	GER_karl_radek = {
+		name = GER_karl_radek_sec
+		portraits = {
+			civilian = {
+				large="gfx/leaders/GER/Portrait_Karl_Radek.png"
+			}
+		}
+	}
+	GER_Paul_Joseph_Goebbels = {
+		name = "Joseph Goebbels"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/GER/Portrait_GER_Joseph_Goebbels.png"
+			}
+		}
+	}
+	GER_Ernst_Graf_zu_Reventlow = {
+		name = "Ernst Reventlow"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/GER/Portrait_GER_Ernst_zu_Reventlow.png"
+				small = "gfx/interface/ministers/GER/GER_Ernst_Reventlow.png"
+			}
+		}
+
+	}
+	GER_Bertolt_Brecht = {
+		name = "Bertolt Brecht"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/GER/Portrait_GER_Bertolt_Brecht.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_Brecht_DESC"
+			traits = { GER_brecht_tsf }
+			expire = "1965.1.1"
+			ideology = spartakism
+		}
+	}
+	GER_Anna_Seghers = {
+		name = "Anna Seghers"
+		gender = female
+		portraits = {
+			civilian = {
+				large="gfx/leaders/GER/Portrait_GER_Anna_Seghers.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_Seghers_DESC"
+			traits = { GER_seghers_tsf }
+			expire = "1965.1.1"
+			ideology = spartakism
+		}
+	}
+	GER_hans_blueher = {
+		name = "Hans Blüher"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GER/Portrait_GER_hans_blueher.png"
+			}
+			army = {
+				large = "gfx/leaders/GER/Portrait_GER_hans_blueher_gen.png"
+			}
+		}
+		country_leader = {
+			ideology = reactionary_populism
+			expire = "1965.1.1.1"
+		}
+	}
+	GER_SRNP_otto_braun = {
+		name = "Otto Braun"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/GER/Portrait_GER_Otto_Braun.png"
+			}
+		}
+		country_leader = {
+			ideology = national_rejuvenatism
+			expire = "1965.1.1.1"
+		}
+	}
+	GER_rudolf_rocker = {
+		name = "Rudolf Rocker"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/GER/Portrait_GER_Rudolf_Rocker.png"
+			}
+		}
+		country_leader = {
+			ideology = social_anarchism
+			expire = "1965.1.1.1"
+		}
+	}
+	GER_Walther_Rathenau = {
+		portraits = {
+			civilian = {
+				large="gfx/leaders/GER/Portrait_GER_Walther_Rathenau.png"
+			}
+		}
+		name = "Walther Rathenau"
+		country_leader = {
+			ideology = social_liberalism
+			expire = "1965.1.1.1"
+		}
+	}
+	GER_Vitus_Heller = {
+		name = "Vitus Heller"
+		country_leader = {
+			ideology = social_conservatism
+			expire = "1965.1.1.1"
+		}
+	}
+	GER_Walter_Caspari = {
+		name = "Walter Caspari"
+		country_leader = {
+			ideology = anocracy
+			expire = "1965.1.1.1"
+		}
+	}
+	GER_Adolf_von_Harnier = {
+		name = "Adolf von Harnier"
+		country_leader = {
+			ideology = constitutional_dictatorship
+			expire = "1965.1.1.1"
+		}
+	}
+
+	###LEVI STARTING CABINET###
+	GER_georg_ledebour = {
+		name = "Georg Ledebour"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/GER/GER_georg_ledebour.png"
+			}
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = GER_georg_ledebour_hog
+			allowed = {
+				original_tag = GER
+			}
+			available = {
+				has_country_leader = {
+					character = GER_paul_levi
+				}
+			}
+			traits = {
+				hog_naive_optimist
+			}
+		}
+	}
+	GER_adolf_hoffman = {
+		name = "Adolph Hoffmann"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/GER/GER_adolf_hoffman.png"
+			}
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = GER_adolf_hoffman_eco
+			allowed = {
+				original_tag = GER
+			}
+			available = {
+				has_country_leader = {
+					character = GER_paul_levi
+				}
+			}
+			traits = {
+				eco_reformer
+			}
+		}
+	}
+	GER_ernst_daumig = {
+		name = "Ernst Däumig"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/GER/GER_ernst_daumig.png"
+			}
+		}
+		advisor = {
+			slot = foreign_minister
+			idea_token = GER_ernst_daumig_for
+			allowed = {
+				original_tag = GER
+			}
+			available = {
+				has_country_leader = {
+					character = GER_paul_levi
+				}
+			}
+			traits = {
+				for_apologetic_clerk
+			}
+		}
+	}
+	GER_theodor_liebknecht = {
+		name = "Theodoer Liebknecht"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/GER/GER_theodor_liebknecht.png"
+			}
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = GER_theodor_liebknecht_sec
+			allowed = {
+				original_tag = GER
+			}
+			available = {
+				has_country_leader = {
+					character = GER_paul_levi
+				}
+			}
+			traits = {
+				sec_man_of_the_people
+			}
+		}
+	}
+	GER_hans_gunther_van_hooven = {
+		name = "Hans-Günther van Hooven"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/GER/GER_hans_gunther_van_hooven.png"
+			}
+		}
+		advisor = {
+			slot = head_of_intel
+			idea_token = GER_hans_gunther_van_hooven_int
+			allowed = {
+				original_tag = GER
+			}
+			available = {
+				has_country_leader = {
+					character = GER_paul_levi
+				}
+			}
+			traits = {
+				int_logistics_specialist
+			}
+		}
+	}
+	
+	###GOEBBELS CABINET###
+	GER_ernst_nieksch = {
+		name = "Ernst Niekisch"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/GER/GER_niekisch.png"
+			}
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = GER_ernst_nieksch_hog
+			allowed = {
+				original_tag = GER
+			}
+			available = {
+				has_completed_focus = GER_1848_commence_again
+			}
+			traits = {
+				hog_flamboyant_tough_guy
+			}
+		}
+	}
+	GER_august_winnig = {
+		name = "August Winnig"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/GER/GER_winnig.png"
+			}
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = GER_august_winnig_eco
+			allowed = {
+				original_tag = GER
+			}
+			available = {
+				has_completed_focus = GER_1848_commence_again
+			}
+			traits = { 
+				eco_balanced_budget_economy
+			}
+		}
+	}
+	GER_heinrich_laufenberg = {
+		name = "Heinrich Laufenberg"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/GER/GER_laufenberg.png"
+			}
+		}
+		advisor = {
+			slot = foreign_minister
+			idea_token = GER_heinrich_laufenberg_for
+			allowed = {
+				original_tag = GER
+			}
+			available = {
+				has_completed_focus = GER_1848_commence_again
+			}
+			traits = { 
+				for_the_cloak_n_dagger_schemer
+			}
+		}
+	}
+	GER_wolfgang_steinitz = {
+		name = "Wolfgang Steinitz"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/GER/GER_steinitz.png"
+			}
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = GER_wolfgang_steinitz_sec
+			allowed = {
+				original_tag = GER
+			}
+			available = {
+				has_completed_focus = GER_1848_commence_again
+			}
+			traits = { 
+				sec_compassionate_gentleman
+			}
+		}
+	}
+	GER_josef_romer = {
+		name = "Josef Romer"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/GER/GER_romer.png"
+			}
+		}
+		advisor = {
+			slot = head_of_intel
+			idea_token = GER_josef_romer_intel
+			allowed = {
+				original_tag = GER
+			}
+			available = {
+				has_completed_focus = GER_1848_commence_again
+			}
+			traits = { 
+				int_dismal_enigma
+			}
+		}
+	}
+	
+	###RADEK CABINET###
+	
+	GER_otto_ruhle = {
+		name = "Otto Rühle"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/GER/GER_ruhle.png"
+			}
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = GER_otto_ruhle_hog
+			allowed = {
+				original_tag = GER
+			}
+			available = {
+				OR = {
+					has_completed_focus = GER_breminists_in_berlin
+				}
+			}
+			traits = { 
+				hog_silent_workhorse
+			}
+		}
+	}
+	GER_anton_pannekoek = {
+		name = "Anton Pannekoek"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/GER/GER_pannenkoek.png"
+			}
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = GER_anton_pannekoek_eco
+			allowed = {
+				original_tag = GER
+			}
+			available = {
+				OR = {
+					has_completed_focus = GER_breminists_in_berlin
+				}
+			}
+			traits = { 
+				eco_planned_economy_proponent
+			}
+		}
+	}
+	GER_ruth_fischer = {
+		name = "Ruth Fischer"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/GER/GER_fisher.png"
+			}
+		}
+		advisor = {
+			slot = foreign_minister
+			idea_token = GER_ruth_fischer_for
+			allowed = {
+				original_tag = GER
+			}
+			available = {
+				OR = {
+					has_completed_focus = GER_breminists_in_berlin
+				}
+			}
+			traits = { 
+				for_ideological_crusader
+			}
+		}
+	}
+	GER_lotte_kornfeld = {
+		name = "Lotte Kornfeld"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/GER/GER_kornfled.png"
+			}
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = GER_lotte_kornfeld_sec
+			allowed = {
+				original_tag = GER
+			}
+			available = {
+				OR = {
+					has_completed_focus = GER_breminists_in_berlin
+				}
+			}
+			traits = { 
+				sec_health_and_safety
+			}
+		}
+	}
+	GER_richard_sorge = {
+		name = "Richard Sorge"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/GER/GER_sorge.png"
+			}
+		}
+		advisor = {
+			slot = head_of_intel
+			idea_token = GER_richard_sorge_intel
+			allowed = {
+				original_tag = GER
+			}
+			available = {
+				OR = {
+					has_completed_focus = GER_breminists_in_berlin
+				}
+			}
+			traits = { 
+				int_political_specialist
+			}
+		}
+	}
+	
+	##POPPER'S CABINET
+	GER_wilhelm_buck = {
+		name = "Wilhelm Buck"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/GER/GER_wilhelm_buck.png"
+			}
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = GER_wilhelm_buck_hog
+			allowed = {
+				original_tag = GER
+			}
+			available = {
+				OR = {
+					has_completed_focus = GER_moderate_road
+				}
+			}
+			traits = { 
+				hog_pragmatic_statesman
+			}
+		}
+	}
+	GER_friedrich_hayek = {
+		name = "Friedrich Hayek"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/GER/GER_Friedrich_Hayek.png"
+			}
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = GER_friedrich_hayek_eco
+			allowed = {
+				original_tag = GER
+			}
+			available = {
+				OR = {
+					has_completed_focus = GER_moderate_road
+				}
+			}
+			traits = { 
+				eco_mixed_economy
+			}
+		}
+	}
+	GER_hermann_muller = {
+		name = "Hermann Müller"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/GER/GER_Hermann_Muller.png"
+			}
+		}
+		advisor = {
+			slot = foreign_minister
+			idea_token = GER_hermann_muller_for
+			allowed = {
+				original_tag = GER
+			}
+			available = {
+				OR = {
+					has_completed_focus = GER_moderate_road
+				}
+			}
+			traits = { 
+				for_great_compromiser
+			}
+		}
+	}
+	GER_wilhelm_kulz = {
+		name = "Wilhelm Külz"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/GER/GER_wilhelm_kulz.png"
+			}
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = GER_wilhelm_kulz_sec
+			allowed = {
+				original_tag = GER
+			}
+			available = {
+				OR = {
+					has_completed_focus = GER_moderate_road
+				}
+			}
+			traits = { 
+				sec_man_of_the_people
+			}
+		}
+	}
+	GER_otto_gessler = {
+		name = "Otto Gessler"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/GER/GER_Otto_Gessler.png"
+			}
+		}
+		advisor = {
+			slot = head_of_intel
+			idea_token = GER_otto_gessler_int
+			allowed = {
+				original_tag = GER
+			}
+			available = {
+				OR = {
+					has_completed_focus = GER_moderate_road
+				}
+			}
+			traits = { 
+				sec_silent_lawyer
+			}
+		}
+	}
+	
+	### BRECHT/SEGHERS/FRAHM/MEYER CABINET ###
+	
+	GER_otto_grotewohl = {
+		name = "Otto Grotewohl"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/GER/GER_Otto_Grotewohl.png"
+			}
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = GER_otto_grotewohl_hog
+			allowed = {
+				original_tag = GER
+			}
+			available = {
+				OR = {
+					has_completed_focus = GER_recovering_from_red_week
+				}
+			}
+			traits = { 
+				hog_political_protege
+			}
+		}
+	}
+	GER_rudolf_hilferding = {
+		name = "Rudolf Hilferding"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/GER/GER_Rudolf_Hilferding.png"
+			}
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = GER_rudolf_hilferding_eco
+			allowed = {
+				original_tag = GER
+			}
+			available = {
+				OR = {
+					has_completed_focus = GER_recovering_from_red_week
+				}
+			}
+			traits = { 
+				eco_industrial_chemist
+			}
+		}
+	}
+	GER_walter_stoecker = {
+		name = "Walter Stoecker"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/GER/GER_Walter_Stoecker.png"
+			}
+		}
+		advisor = {
+			slot = foreign_minister
+			idea_token = GER_walter_stoecker_for
+			allowed = {
+				original_tag = GER
+			}
+			available = {
+				OR = {
+					has_completed_focus = GER_recovering_from_red_week
+				}
+			}
+			traits = { 
+				for_general_staffer
+			}
+		}
+	}
+	GER_heinrich_peus = {
+		name = "Heinrich Pëus"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/GER/GER_Heinrich_Peus.png"
+			}
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = GER_heinrich_peus_sec
+			allowed = {
+				original_tag = GER
+			}
+			available = {
+				OR = {
+					has_completed_focus = GER_recovering_from_red_week
+				}
+			}
+			traits = { 
+				sec_media_magnate
+			}
+		}
+	}
+	GER_wilhelm_zaisser = {
+		name = "Wilhelm Zaisser"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/GER/GER_Wilhelm_Zaisser.png"
+			}
+		}
+		advisor = {
+			slot = head_of_intel
+			idea_token = GER_wilhelm_zaisser_int
+			allowed = {
+				original_tag = GER
+			}
+			available = {
+				OR = {
+					has_completed_focus = GER_recovering_from_red_week
+				}
+			}
+			traits = { 
+				int_technical_specialist
+			}
+		}
+	}
+	
+	###REVENTLOW CABINET###
+	GER_hermann_esser = {
+		name = "Hermann Esser"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/GER/GER_Hermann_Esser.png"
+			}
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = GER_hermann_esser_hog
+			allowed = {
+				original_tag = GER
+			}
+			available = {
+				OR = {
+					has_completed_focus = GER_neuer_volkssozializmus
+				}
+			}
+			traits = { 
+				hog_backroom_backstabber
+			}
+		}
+
+	}
+	GER_moeller_van_den_bruck = {
+		name = "Moeller van den Bruck"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/GER/GER_Moeller_van_den_Bruck.png"
+			}
+		}
+		advisor = {
+			slot = foreign_minister
+			idea_token = GER_moeller_van_den_bruck_for
+			allowed = {
+				original_tag = GER
+			}
+			available = {
+				OR = {
+					has_completed_focus = GER_neuer_volkssozializmus
+				}
+			}
+			traits = { 
+				for_biased_intellectual
+			}
+		}
+	}
+	GER_gregor_strasser = {
+		name = "Gregor Strasser"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/GER/GER_Gregor_Strasser.png"
+			}
+		}
+		advisor = {
+			idea_token = GER_gregor_strasser_eco
+			slot = economy_minister
+			allowed = {
+				original_tag = GER
+			}
+			available = {
+				OR = {
+					has_completed_focus = GER_neuer_volkssozializmus
+				}
+			}
+			traits = {
+				eco_planned_economy_proponent
+			}
+		}
+	}
+	GER_Jakob_Wilhelm_Hauer = {
+		name = "Jakob Wilhelm Hauer"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/GER/GER_Jakob_Wilhelm_Hauer.png"
+			}
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = GER_Jakob_Wilhelm_Hauer_sec
+			allowed = {
+				original_tag = GER
+			}
+			available = {
+				OR = {
+					has_completed_focus = GER_neuer_volkssozializmus
+				}
+			}
+			traits = { 
+				sec_compassionate_gentleman
+			}
+		}
+	}
+	GER_Ernst_Roehm = {
+		name = "Ernst Röhm"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/GER/GER_Ernst_Rohm.png"
+			}
+		}
+		advisor = {
+			slot = head_of_intel
+			idea_token = GER_Ernst_Roehm_int
+			allowed = {
+				original_tag = GER
+			}
+			available = {
+				OR = {
+					has_completed_focus = GER_neuer_volkssozializmus
+				}
+			}
+			traits = { 
+				int_logistics_specialist
+			}
+		}
+	}
+	
+
+
+	GER_max_hölz = {
+		name = "Max Hölz"
+		portraits = {
+			army = {
+				large="gfx/leaders/GER/Portrait_Germany_Max_Holz.png"
+				small = "gfx/interface/ministers/GER/GER_max_hoelz.png"
+			}
+		}
+		field_marshal = {
+			traits = { offensive_doctrine trait_reckless war_hero trickster inspirational_leader hamburger_artikel }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 2
+		}
+		advisor = {
+			idea_token = GER_max_holz_cos
+			slot = high_command
+			available = {
+				original_tag = GER
+			}
+			traits = {
+				army_concealment_3
+			}
+		}
+	}
+	GER_ludwig_renn = {
+		name = "Ludwig Renn"
+		portraits = {
+			army = {
+				large="gfx/leaders/GER/Portrait_Germany_Ludwig_Renn.png"
+				small = "gfx/interface/ministers/GER/GER_ludwig_renn.png"
+			}
+		}
+		field_marshal = {
+			traits = { brilliant_strategist organisational_leader war_hero expert_delegator hamburger_artikel }
+			skill = 4
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 2
+		}
+		advisor = {
+			idea_token = GER_ludwig_renn_carm
+			slot = army_chief
+			available = {
+				original_tag = GER
+			}
+			traits = {
+				carm_doctrine_of_autonomy
+			}
+		}
+	}
+	GER_ernst_thälmann = {
+		name = "Ernst Thälmann"
+		portraits = {
+			army = {
+				large="gfx/leaders/GER/Portrait_Germany_Ernst_Thalmann.png"
+				small = "gfx/interface/ministers/GER/GER_ernst_thalmann.png"
+			}
+		}
+		field_marshal = {
+			traits = { politically_connected media_personality fortress_buster bearer_of_artillery hamburger_artikel }
+			skill = 4
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 2
+		}
+		advisor = {
+			idea_token = GER_ernst_thälmann_cos
+			slot = high_command
+			available = {
+				original_tag = GER
+			}
+			traits = {
+				army_artillery_2
+			}
+		}
+	}
+	GER_hans_kahle = {
+		name = "Hans Kahle"
+		portraits = {
+			army = {
+				large = "gfx/leaders/GER/Portrait_GER_Hans_Kahle.png"
+				small = "gfx/interface/ministers/GER/GER_hans_kahle.png"
+			}
+		}
+		field_marshal = {
+			traits = { defensive_doctrine thorough_planner politically_connected hamburger_artikel }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 2
+		}
+	}
+	GER_magrit_zinke = {
+		name = "Magrit Zinke"
+		portraits = {
+			army = {
+				large="gfx/leaders/GER/Portrait_Germany_Magrit_Zinke.png"
+			}
+		}
+		corps_commander = {
+			traits = { panzer_leader armor_officer hamburger_artikel }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	GER_sigfrid_henrici = {
+		name = "Sigfrid Henrici"
+		portraits = {
+			army = {
+				large="gfx/leaders/GER/Portrait_Germany_Sigfrid_Henrici.png"
+			}
+		}
+		corps_commander = {
+			traits = { panzer_leader offensive_doctrine former_imperial hamburger_artikel }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	GER_hans_beimler = {
+		name = "Hans Beimler"
+		portraits = {
+			army = {
+				large="gfx/leaders/GER/Portrait_Germany_Hans_Beimler.png"
+			}
+		}
+		corps_commander = {
+			traits = { fortress_buster offensive_doctrine trait_engineer hamburger_artikel }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 1
+		}
+	}
+	GER_erich_manstein = {
+		name = "Erich Manstein"
+		portraits = {
+			army = {
+				large="gfx/leaders/GER/Portrait_Germany_Erich_Manstein.png"
+				small = "gfx/interface/ministers/GER/GER_erich_manstein.png"
+			}
+		}
+		corps_commander = {
+			traits = { brilliant_strategist trickster panzer_leader hamburger_artikel trait_engineer former_imperial }
+			skill = 4
+			attack_skill = 4
+			defense_skill = 1
+			planning_skill = 3
+			logistics_skill = 2
+		}
+		advisor = {
+			idea_token = GER_erich_manstein_cos
+			slot = high_command
+			available = {
+				original_tag = GER
+			}
+			traits = {
+				army_armored_2
+			}
+		}
+	}
+	GER_günter_kluge = {
+		name = "Günter Kluge"
+		portraits = {
+			army = {
+				large="gfx/leaders/GER/Portrait_Germany_Günter_Kluge.png"
+			}
+		}
+		corps_commander = {
+			traits = { career_officer hamburger_artikel armor_officer former_imperial }
+			skill = 4
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 3
+		}
+	}
+	GER_friedrich_wilhelm_voigt = {
+		name = "Friedrich Wilhelm Voigt"
+		portraits = {
+			army = {
+				large="gfx/leaders/GER/Portrait_Germany_Friedrich_Wilhelm_Voigt.png"
+			}
+		}
+		corps_commander = {
+			traits = {  hamburger_artikel trickster }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
+	GER_falk_harnack = {
+		name = "Falk Harnack"
+		portraits = {
+			army = {
+				large="gfx/leaders/GER/Portrait_Germany_Falk_Harnack.png"
+				small = "GFX_idea_GER_arvid_harnack_int"
+			}
+		}
+		corps_commander = {
+			traits = {  hamburger_artikel infantry_officer commando hill_fighter }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	GER_walter_steffens = {
+		name = "Walter Steffens"
+		portraits = {
+			navy = {
+				large="gfx/leaders/GER/Portrait_Germany_Walter_Steffens.png"
+				small = "gfx/interface/ministers/GER/GER_walter_steffens.png"
+			}
+		}
+		navy_leader = {
+			traits = { seawolf  }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			maneuvering_skill = 1
+			coordination_skill = 2
+		}
+		advisor = {
+			idea_token = GER_walter_steffens_cos
+			slot = high_command
+			available = {
+				original_tag = GER
+			}
+			traits = {
+				navy_chief_commerce_raiding_2
+			}
+		}
+	}
+	GER_karl_artelt = {
+		name = "Karl Artelt"
+		portraits = {
+			navy = {
+				large="gfx/leaders/GER/Portrait_Germany_Karl_Artelt.png"
+				small = "gfx/interface/ministers/GER/GER_karl_artelt.png"
+			}
+		}
+		navy_leader = {
+			traits = { blockade_runner superior_tactician }
+			skill = 4
+			attack_skill = 2
+			defense_skill = 2
+			maneuvering_skill = 3
+			coordination_skill = 4
+		}
+		advisor = {
+			idea_token = GER_karl_artelt_cnav
+			slot = navy_chief
+			available = {
+				original_tag = GER
+			}
+			traits = {
+				cnav_indirect_approach_doctrine
+			}
+		}
+	}
+	GER_Helmuth_Wilberg = {
+		name = "Helmuth Wilberg"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/GER/GER_Helmuth_Wilberg.png"
+			}
+		}
+		advisor = {
+			idea_token = GER_Helmuth_Wilberg_cair
+			slot = air_chief
+			available = {
+				original_tag = GER
+			}
+			traits = {
+				cair_battlefield_support_doctrine
+			}
+		}
+	}
+	GER_Johannes_Trautloft = {
+		name = "Johannes Trautloft"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/GER/GER_Johannes_Trautloft.png"
+			}
+		}
+		advisor = {
+			idea_token = GER_Johannes_Trautloft_cair
+			slot = high_command
+			available = {
+				original_tag = GER
+			}
+			traits = {
+				air_chief_reform_2
+			}
+		}
+	}
+
+	### FRA PUPPETS
+	GER_hans_richter = {
+		name = "Hans Richter"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GER/Portrait_GER_Hans_Richter.png"
+			}
+		}
+	}
+	GER_fidus = {
+		name = "Fidus"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GER/Portrait_GER_Fidus.png"
+			}
+		}
+	}
+	GER_gerhard_rossbach = {
+		name = "Gerhard Roßbach"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GER/Portrait_GER_Gerhard_Rossbach.png"
+			}
+		}
+	}
+}

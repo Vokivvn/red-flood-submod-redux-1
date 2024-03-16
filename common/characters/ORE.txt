@@ -1,0 +1,778 @@
+characters = {
+
+	### Country Leader
+
+	ORE_aleksandr_dutov = {
+		name = "Aleksandr Dutov"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ORE/Portrait_Orenburg_Dutov.png"
+			}
+		}
+		country_leader = {
+			ideology = military_dictatorship
+			expire = "1965.1.1.1"
+		}
+	}
+	ORE_zhakhansha_dosmukhamedov = {
+		name = "Zhakhansha Dosmukhamedov"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ORE/Portrait_ORE_Zhakhansha_Dosmukhamedov.png"
+			}
+		}
+		country_leader = {
+			ideology = national_conservatism
+			expire = "1965.1.1.1"
+		}
+	}
+	ORE_nikolay_trubetskoy = {
+		name = "Nikolay Trubetskoy"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ORE/Portrait_ORE_Nikolay_Trubetskoy.png"
+			}
+		}
+		country_leader = {
+			ideology = national_rejuvenatism
+			expire = "1965.1.1.1"
+		}
+	}
+	ORE_rasputin = {
+		name = "Grigory Rasputin"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ORE/Portrait_ORE_Rasputin.png"
+			}
+		}
+		country_leader = {
+			expire = "1965.1.1"
+			ideology = esoteric_reactionism
+		}
+	}
+	
+	### Ministers
+	ORE_george_gurdjieff = {
+		name = "George Gurdjieff"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/ALT/ALT_george_gurdjieff_hog.tga"
+			}
+		}
+		advisor = {
+			slot = head_of_government
+			traits = {
+				hog_naive_optimist
+			}
+			available = {
+				has_government = reactionism
+			}
+			idea_token = ORE_george_gurdjieff_hog
+
+		}
+	}
+	ORE_tryi_akemchi = {
+		name = "Tryi Akemchi"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/ALT/ALT_tryi_akemchi_eco.tga"
+			}
+		}
+		advisor = {
+			slot = economy_minister
+			traits = {
+				eco_mixed_economy
+			}
+			available = {
+				has_government = reactionism
+			}
+			idea_token = ORE_tryi_akemchi_eco
+
+		}
+	}
+	ORE_maria_rasputin = {
+		name = "Maria Rasputin"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/ALT/ALT_maria_rasputin_for.tga"
+			}
+		}
+		advisor = {
+			slot = foreign_minister
+			traits = {
+				hog_flamboyant_tough_guy
+			}
+			available = {
+				has_government = reactionism
+			}
+			idea_token = ORE_maria_rasputin_for
+		}
+	}
+	ORE_dulustaan_michilovich_bobutov = {
+		name = "Dulustaan Michilovich Bobutov"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/ALT/ALT_dulustaan_michilovich_bobutov_sec.tga"
+			}
+		}
+		advisor = {
+			slot = security_minister
+			traits = {
+				ALT_yukat_explorer
+			}
+			available = {
+				has_government = reactionism
+			}
+			idea_token = ORE_dulustaan_michilovich_bobutov_sec
+		}
+	}
+	ORE_praskovya_rasputin = {
+		name = "Praskovya Rasputin"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/ALT/ALT_praskovya_rasputin_int.tga"
+			}
+		}
+		advisor = {
+			slot = head_of_intel
+			traits = {
+				ALT_despotic_loyalist
+			}
+			available = {
+				has_government = reactionism
+			}
+			idea_token = ORE_praskovya_rasputin_int
+		}
+	}
+	ORE_Khalel_Dosmuchamedov = {
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/ORE/Khalel_Dosmuchamedov.dds"
+			}
+		}
+		advisor = {
+			name = ORE_Khalel_Dosmuchamedov_hog
+			slot = head_of_government
+			idea_token = ORE_Khalel_Dosmuchamedov_hog
+			available = {
+				has_government = conservatism
+			}
+			traits = {
+				hog_silent_workhorse
+			}
+		}
+	}
+	ORE_Pyotr_Savickij = {
+		name = ORE_Pyotr_Savickij_hog
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/ORE/Pyotr_Savickij.dds"
+			}
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = ORE_Pyotr_Savickij_hog
+			allowed = {
+				original_tag = ORE
+			}
+			available = {
+				has_government = accelerationism
+			}
+			traits = {
+				hog_backroom_backstabber
+			}
+		}
+	}
+	
+	### Foreign Minister
+	
+	ORE_Baktigerey_Kulmanov = {
+		name = ORE_Baktigerey_Kulmanov_for
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/ORE/Baktigerey_Kulmanov.dds"
+			}
+		}
+		advisor = {
+			slot = foreign_minister
+			idea_token = ORE_Baktigerey_Kulmanov_for
+			allowed = {
+				original_tag = ORE
+			}
+			available = {
+				has_government = conservatism
+			}
+			traits = { 
+				for_great_compromiser
+			}
+		}
+	}
+	ORE_Georges_Florovsky = {
+		name = ORE_Georges_Florovsky_for
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/ORE/Georges_Florovsky.dds"
+			}
+		}
+		advisor = {
+			slot = foreign_minister
+			idea_token = ORE_Georges_Florovsky_for
+			allowed = {
+				original_tag = ORE
+			}
+			available = {
+				has_government = accelerationism
+			}
+			traits = { 
+				for_iron_fisted_brute
+			}
+		}
+	}
+	
+	## Economy Minister
+	
+	ORE_Nurgali_Ipmagambetov = {
+		name = ORE_Nurgali_Ipmagambetov_eco
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/ORE/Nurgali_Ipmagambetov.dds"
+			}
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = ORE_Nurgali_Ipmagambetov_eco
+			allowed = {
+				original_tag = ORE
+			}
+			available = {
+				has_government = conservatism
+			}
+			traits = { 
+				eco_balanced_budget_economy
+			}
+		}
+	}
+	ORE_Sergei_Efron = {
+		name = ORE_Sergei_Efron_eco
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/ORE/Sergei_Efron.dds"
+			}
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = ORE_Sergei_Efron_eco
+			allowed = {
+				original_tag = ORE
+			}
+			available = {
+				has_government = accelerationism
+			}
+			traits = { 
+				eco_mixed_economy
+			}
+		}
+	}
+	ORE_matvei_martynov = {
+		name = "Matvei Martynov"
+		portraits = {
+			civilian = { 
+				large = "gfx/leaders/ORE/Portrait_Matvei_Martynov.png"
+			}
+			army = {
+				large = "gfx/leaders/ORE/Portrait_Matvei_Martynov.png"
+				small = "gfx/interface/ministers/ORE/Matvei_Martynov.dds"
+			}
+		}
+		country_leader = {
+			ideology = military_dictatorship
+			expire = "1965.1.1.1"
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = ORE_Matvei_Martynov_eco
+			allowed = {
+				original_tag = ORE
+			}
+			available = {
+				has_government = despotism
+			}
+			traits = { 
+				eco_infantry_proponent
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = ORE_Matvei_Martynov_eco
+			allowed = {
+				original_tag = ORE
+			}
+			traits = { 
+				army_entrenchment_2
+			}
+		}
+		field_marshal = {
+			traits = { infantry_officer } 
+			skill = 2
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	
+	## Security Minister
+	
+	ORE_Otynshy_Alzhanov = {
+		name = ORE_Otynshy_Alzhanov_sec
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/ORE/Otynshy_Alzhanov.dds"
+			}
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = ORE_Otynshy_Alzhanov_sec
+			allowed = {
+				original_tag = ORE
+			}
+			available = {
+				has_government = conservatism
+			}
+			traits = { 
+				sec_crime_fighter
+			}
+		}
+	}
+	ORE_Anton_Kartashev = {
+		name = ORE_Anton_Kartashev_sec
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/ORE/Anton_Kartashev.dds"
+			}
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = ORE_Anton_Kartashev
+			allowed = {
+				original_tag = ORE
+			}
+			available = {
+				has_government = accelerationism
+			}
+			traits = { 
+				sec_man_of_the_people
+			}
+		}
+	}
+	ORE_Aleksandr_Kravtsov = {
+		name = ORE_Aleksandr_Kravtsov_sec
+		portraits = {
+			army = {
+				large = "gfx/leaders/ORE/Portrait_Aleksandr_Kravtsov.png"
+				small = "gfx/interface/ministers/ORE/Alexandr_Kravtsov.dds"
+			}
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = ORE_Aleksandr_Kravtsov_sec
+			allowed = {
+				original_tag = ORE
+			}
+			available = {
+				has_government = despotism
+			}
+			traits = { 
+				sec_secret_police_chief
+			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = ORE_Aleksandr_Kravtsov_coa
+			allowed = {
+				original_tag = ORE
+			}
+			traits = {
+				carm_decisive_battle_doctrine
+			}
+		}
+		field_marshal = {
+			traits = { career_officer trickster } 
+			skill = 3
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
+		}
+		advisor = {
+			slot = high_command
+			idea_token = ORE_Aleksandr_Kravtsov_hc
+			allowed = {
+				original_tag = ORE
+			}
+			traits = {
+				army_cavalry_2
+			}
+		}
+	}
+
+	## Head of Intel
+
+	ORE_Karash_Gumar = {
+		name = ORE_Karash_Gumar_int
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/ORE/Karash_Gumar.dds"
+			}
+		}
+		advisor = {
+			slot = head_of_intel
+			idea_token = ORE_Karash_Gumar_int
+			allowed = {
+				original_tag = ORE
+			}
+			available = {
+				has_government = conservatism
+			}
+			traits = { 
+				int_political_specialist
+			}
+		}
+	}
+	ORE_Pyotr_Suvchinsky = {
+		name = ORE_Pyotr_Suvchinsky_int
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/ORE/Pyotr_Suvchinsky.dds"
+			}
+		}
+		advisor = {
+			slot = head_of_intel
+			idea_token = ORE_Pyotr_Suvchinsky_int
+			allowed = {
+				original_tag = ORE
+			}
+			available = {
+				has_government = accelerationism
+			}
+			traits = {
+				int_logistics_specialist
+			}
+		}
+	}
+	ORE_Ivan_Shivtsov = {
+		name = ORE_Ivan_Shivtsov_int
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/ORE/Ivan_Shivtsov.dds"
+				large = "gfx/leaders/ORE/Portrait_Ivan_Shivtsov.png"
+			}
+		}
+		advisor = {
+			slot = head_of_intel
+			idea_token = ORE_Ivan_Shivtsov_int
+			allowed = {
+				original_tag = ORE
+			}
+			available = {
+				has_government = despotism
+			}
+			traits = { 
+				int_dismal_enigma
+			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = ORE_Ivan_Shivtsov_coa
+			allowed = {
+				original_tag = ORE
+			}
+			traits = {
+				carm_doctrine_of_autonomy
+			}
+		}
+		corps_commander = {
+			traits = { trickster cavalry_officer }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+		}
+	}
+
+#Military
+
+	ORE_Caspian_Coastal_Patrol = {
+		name = "Caspian Coastal Patrol"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/ORE/Caspian_Coastal_Patrol.dds"
+			}
+		}
+		advisor = {
+			slot = navy_chief
+			idea_token = ORE_Caspian_Coastal_Patrol_con
+			allowed = {
+				original_tag = ORE
+			}
+			traits = { 
+				cnav_open_seas_doctrine
+			}
+		}
+	}
+	ORE_Aral_Coastal_Patrol = {
+		name = "Aral Coastal Patrol"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/ORE/Aral_Coastal_Patrol.dds"
+			}
+		}
+		advisor = {
+			slot = navy_chief
+			idea_token = ORE_Aral_Coastal_Patrol_con
+			allowed = {
+				original_tag = ORE
+			}
+			traits = { 
+				cnav_base_control_doctrine
+			}
+		}
+	}
+	
+	## Air Chief
+	
+	ORE_Nikolay_Ragozin = {
+		name = "Nikolay Ragozin"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/ORE/Nikolay_Ragozin.dds"
+			}
+		}
+		advisor = {
+			slot = air_chief
+			idea_token = ORE_Nikolay_Ragozin_coaf
+			allowed = {
+				original_tag = ORE
+			}
+			traits = { 
+				cair_air_superiority_doctrine
+			}
+		}
+		advisor = {
+			slot = theorist
+			idea_token = ORE_Nikolay_Ragozin_theorist
+			allowed = {
+				original_tag = ORE
+			}
+			traits = { 
+				heavy_fighter_theorist
+			}
+			research_bonus = {
+				cat_strategic_destruction = 0.1
+			}
+		}
+	}	
+	ORE_Bakhtyuras_Besikbayev = {
+		name = "Bakhtyuras Besikbayev"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/ORE/Bakhtyuras_Besikbayev.dds"
+			}
+		}
+		advisor = {
+			slot = air_chief
+			idea_token = ORE_Bakhtyuras_Besikbayev_coaf
+			allowed = {
+				original_tag = ORE
+			}
+			traits = { 
+				cair_battlefield_support_doctrine
+			}
+		}
+	}
+
+	### Corps Commander
+
+	ORE_alexandr_vagin={
+		name="Alexandr Vagin"
+		portraits={
+			army={
+				small="gfx/interface/ministers/STE/STE_Aleksandr_Vagin.png"
+			}
+			army={
+				large="gfx/leaders/STE/Portrait_Vagin.png"
+			}
+		}
+		corps_commander={
+			traits={ old_guard trait_reckless }
+			skill=3
+			attack_skill=4
+			defense_skill=1
+			planning_skill=2
+			logistics_skill=4
+		}
+		advisor = {
+			slot = high_command
+			idea_token = ORE_alexandr_vagin_com
+			allowed = {
+				original_tag = ORE
+			}
+			traits = { 
+				army_commando_3
+			}
+		}
+	}
+	ORE_Ivan_Zaytsev={
+		name="Ivan Zaytsev"
+		portraits={
+			army={
+				small="gfx/interface/ministers/STE/STE_Ivan_Zaytsev.png"
+			}
+			army={
+				large="gfx/leaders/STE/Portrait_Ivan_Zaytsev.png"
+			}
+		}
+		corps_commander={
+			traits={ harsh_leader }
+			skill=3
+			attack_skill=3
+			defense_skill=2
+			planning_skill=1
+			logistics_skill=1
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = ORE_Ivan_Zaytsev_army
+			allowed = {
+				original_tag = ORE
+			}
+			traits = { 
+				carm_doctrine_of_autonomy
+			}
+		}
+	}
+	ORE_vasily_flug ={
+		name="Vasily Flug"
+		portraits={
+			army = {
+				large = "gfx/leaders/STE/Portrait_STE_Vasily_Flug.png"
+				small="gfx/interface/ministers/STE/STE_Vasily_Flug_theo.png"
+			}
+		}
+		advisor = {
+			slot = theorist
+			idea_token = ORE_vasily_flug_theo
+			allowed = {
+				original_tag = ORE
+			}
+			traits = { 
+				military_theorist
+			}
+		}
+	}
+	ORE_nurken_abdirov ={
+		name="Nurken Abdirov"
+		portraits={
+			army = {
+				small="gfx/interface/ministers/STE/STE_Nurken_Abdirov.png"
+			}
+		}
+		advisor = {
+			slot = air_chief
+			idea_token = ORE_nurken_abdirov_air
+			allowed = {
+				original_tag = ORE
+			}
+			traits = { 
+				cair_battlefield_support_doctrine
+			}
+		}
+	}
+	ORE_gavriil_yenborisov = {
+		name = "Gavriil Yenborisov"
+		portraits = {
+			army = {
+				large = "gfx/leaders/ORE/Portrait_Gavriil_Yenborisov.png"
+				small = "gfx/interface/ministers/ORE/Gavriil_Yenborisov.dds"
+			}
+		}
+		corps_commander = {
+			traits = { infantry_officer brilliant_strategist } 
+			skill = 4
+			attack_skill = 2
+			defense_skill = 4
+			planning_skill = 4
+			logistics_skill = 3
+		}
+		advisor = {
+			slot = foreign_minister
+			idea_token = ORE_gavriil_yenborisov_for
+			allowed = {
+				original_tag = ORE
+			}
+			available = {
+				has_government = despotism
+			}
+			traits = { 
+				foreign_minister
+				for_biased_intellectual
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = ORE_gavriil_yenborisov_cos
+			allowed = {
+				original_tag = ORE
+			}
+			available = {
+				has_government = despotism
+			}
+			traits = { 
+				army_CombinedArms_2
+			}
+		}
+	}
+
+	ORE_ivan_akulinin = {
+		name = "Ivan Akulinin"
+		portraits = {
+			army = {
+				large = "gfx/interface/ORE/Portrait_Ivan_Akulinin.png"
+				small = "gfx/interface/ministers/ORE/Ivan_Akulinin.dds"
+			}
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = ORE_Ivan_Akulinin_hog
+			allowed = {
+				original_tag = ORE
+			}
+			available = {
+				has_government = despotism
+			}
+			traits = {
+				head_of_government
+				hog_local_tyrant
+			}
+		}
+		advisor = {
+			slot = theorist
+			idea_token = ORE_Ivan_Akulinin_theorist
+			allowed = {
+				original_tag = ORE
+			}
+			traits = { 
+				military_theorist
+			}
+		}
+		corps_commander = {
+			traits = { trait_reckless }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+}

@@ -1,0 +1,27 @@
+
+state={
+	id=1083
+	name="STATE_1083"
+	manpower = 4560178
+
+	state_category = rural
+
+	resources={
+		aluminium = 3
+	}
+
+	history={
+		owner = BIH
+		add_core_of = BIH
+		buildings = {
+			infrastructure = 2
+		}
+		victory_points = {
+			12420 5
+		}
+	}
+
+	provinces={
+		1510 7497 7574 8120 10401 12375 12420 12480
+	}
+}

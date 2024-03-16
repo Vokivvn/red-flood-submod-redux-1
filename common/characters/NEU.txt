@@ -1,0 +1,68 @@
+characters = {
+	NEU_deitsches_fertaytixung_rod = {
+		name = "Deitsches Fertaytixung Rod"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/NEU/Portrait_GDC.png"
+			}
+		}
+		country_leader = {
+			ideology = reactionary_populism
+			expire = "1965.1.1.1"
+		}
+	}
+	 NEU_Hans_Hennin_fon_Khossel = {
+		name = "Hans Hënnin fon Khossel"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/NEU/Portrait_Hans_Henning_Von_Cossel.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_NEU_HHC_DESC"
+			expire = "1965.1.1"
+			ideology = esoteric_reactionism
+		}
+	}
+	NEU_Ekon_Alprect_Lemke = {
+		name = "Ekon Alprect-Lemke"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/NEU/Portrait_Egon_Albrecht_Lemke.png"
+			}
+		}
+		country_leader = {
+			expire = "1965.1.1"
+			ideology = reactionary_populism
+			desc = "POLITICS_NEU_EAL_DESC"
+		}
+	}
+
+	NEU_Kustaf_Pucholts = {
+		name = "Kustaf Pucholts"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/NEU/Portrait_Gustav_Buchholtz.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_NEU_GB_DESC"
+			expire = "1965.1.1"
+			ideology = esoteric_reactionism
+		}
+	}
+	NEU_Arthur_Kooler  = {
+		name = "Arthur Kooler"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/NEU/Portrait_Arthur_Koeler.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_NEU_AK_DESC"
+			expire = "1965.1.1"
+			ideology = reactionary_populism
+		}
+	}
+
+}

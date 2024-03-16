@@ -1,0 +1,17 @@
+state = {
+	id = 878
+	name = "STATE_878"
+	manpower = 3493000
+	state_category = rural
+	history = {
+		owner = BYJ
+		add_core_of = BYJ
+		buildings = {
+			infrastructure = 1
+		}
+		victory_points = { 10446 2 }
+	}
+	provinces = {
+		7568 10446 10434 12426 4158
+	}
+}

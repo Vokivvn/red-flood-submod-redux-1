@@ -1,0 +1,90 @@
+﻿capital = 612
+
+oob = "MON"
+set_research_slots = 2
+
+set_country_flag = is_russian_warlord
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	support_weapons = 1
+	tech_support = 1
+	gw_artillery = 1	
+	transport = 1
+}
+
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+	set_technology = {
+		iw_small_airframe = 1
+		aa_lmg = 1
+		aa_cannon_1 = 1
+		early_bombs = 1
+		engines_1 = 1
+	}
+}
+if = {
+	limit = { NOT = { has_dlc = "By Blood Alone" } }
+	set_technology = {
+		early_fighter = 1
+		CAS1 = 1
+	}
+}
+
+add_ideas = {
+	limited_conscription
+	MON_humiliation
+	MON_reclamation
+	MON_agrarianeconomy
+	MON_brokenarmy
+	CHI_bej_dejure
+}
+
+set_politics = {
+	ruling_party = right_authoritarianism
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	vanguard_socialism = 0
+	popular_socialism = 3
+	anarchism = 3
+	revisionist_socialism = 2
+	progressivism = 2
+	liberalism = 5
+	conservatism = 20
+	right_authoritarianism = 40
+	despotism = 15
+	reactionism = 10
+	accelerationism = 0
+}
+
+recruit_character = MON_duan_qirui
+recruit_character = MON_xu_shuzheng
+recruit_character = MON_wang_yitang
+recruit_character = MON_yuan_keding
+recruit_character = MON_prince_darijaya
+
+add_equipment_to_stockpile = {
+	type = infantry_equipment_1
+	amount = 200
+}
+add_equipment_to_stockpile = {
+	type = artillery_equipment_1
+	amount = 15
+}
+add_equipment_to_stockpile = {
+	type = support_equipment_1
+	amount = 20
+}
+add_equipment_to_stockpile = {
+	type = motorized_equipment_1
+	amount = 100
+}
+add_equipment_to_stockpile = {
+	type = train_equipment_1
+	amount = 10
+}

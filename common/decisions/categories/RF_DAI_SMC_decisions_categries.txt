@@ -1,0 +1,48 @@
+DAI_SMC_resource_extraction = {
+	picture = decision_cat_picture_FRA_worldwide_futurism
+	visible = {
+		OR = {
+			tag = DAI
+			tag = SMC
+		}
+	}
+	allowed = {
+		OR = {
+			tag = DAI
+			tag = SMC
+		}
+	}
+	priority = 50
+}
+DAI_SMC_fending_off_japan_white = {
+	picture = decision_cat_picture_FRA_worldwide_futurism
+	visible = {
+		OR = {
+			tag = DAI
+			tag = SMC
+		}
+	}
+	allowed = {
+		OR = {
+			tag = DAI
+			tag = SMC
+		}
+	}
+	priority = 50
+}
+DAI_SMC_fending_off_japan_red = {
+	picture = decision_cat_picture_FRA_worldwide_futurism
+	visible = {
+		OR = {
+			tag = DAI
+			tag = SMC
+		}
+	}
+	allowed = {
+		OR = {
+			tag = DAI
+			tag = SMC
+		}
+	}
+	priority = 50
+}

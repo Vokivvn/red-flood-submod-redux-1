@@ -1,0 +1,68 @@
+characters = {
+	BIH_subhas_chandra_bose = {
+		name = "Subhas Chandra Bose"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/BIH/Portrait_Chandra_Bose.png"
+			}
+		}
+		country_leader = {
+			ideology = social_nationalism
+			expire = "1965.1.1.1"
+			traits = {
+				headstrong
+			}
+		}
+	}
+	BIH_Sarojini_Naidu = {
+		name = "Sarojini Naidu"
+		
+	}
+	BIH_Chakravarti_Rajagopalachari = {
+		name = "Chakravarti Rajagopalachari"
+		
+	}
+	BIH_Chittaranjan_Das = {
+		name = "Chittaranjan Das"
+		
+	}
+	BIH_Basawon_Singh = {
+		name = "Basawon Singh"
+		
+	}
+	BIH_Minoo_Masani = {
+		name = "Minoo Masani"
+		
+	}
+	BIH_Acharya_Narendra_Deva = {
+		name = "Acharya Narendra Deva"
+		
+	}
+	BIH_Ram_Manohar_Lohia = {
+		name = "Ram Manohar Lohia"
+		
+	}
+	BIH_Yusuf_Meherally = {
+		name = "Yusuf Meherally"
+		
+	}
+	BIH_Kamaladevi_Chattopadhyay = {
+		name = "Kamaladevi Chattopadhyay"
+		
+	}
+	BIH_Jayaprakash_Narayan = {
+		name = "Jayaprakash Narayan"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/BIH/Portrait_Jayaprakash_Narayan.png"
+			}
+		}
+		country_leader = {
+			ideology = democratic_socialism
+			expire = "1965.1.1.1"
+			traits = {
+				
+			}
+		}
+	}
+}

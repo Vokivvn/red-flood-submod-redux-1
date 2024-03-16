@@ -1,0 +1,29 @@
+characters = {
+	AFG_habibullah_kalakani = {
+		name = "Habibullah Kalakani"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/AFG/Portrait_Habibullah_Kalakani.png"
+			}
+		}
+		country_leader = {
+			ideology = religious_fundamentalism
+			expire = "1965.1.1.1"
+		}
+	}
+	AFG_mohammed_zahir_shah = {
+		name = "Mohammed Zahir Shah"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/AFG/Portrait_mohammed_zahir.png"
+			}
+		}
+		country_leader = {
+			ideology = constitutional_monarchy
+			expire = "1965.1.1.1"
+			traits = {
+				#Bandit_King
+			}
+		}
+	}
+}

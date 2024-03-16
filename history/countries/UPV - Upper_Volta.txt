@@ -1,0 +1,85 @@
+﻿capital = 778
+
+oob = "UPV"
+
+set_research_slots = 2
+
+add_ideas = {
+	UPV_naive_politics
+	UPV_christian_government
+	UPV_widespread_illiteracy
+	UPV_lack_of_electricity
+	UPV_no_healthcare
+}
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1
+	tech_recon = 1
+	tech_engineers = 1
+	tech_trucks =1
+	motorised_infantry = 1
+	gw_artillery = 1
+}
+
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+	set_technology = {
+		iw_small_airframe = 1
+		aa_lmg = 1
+		engines_1 = 1
+	}
+}
+if = {
+	limit = { NOT = { has_dlc = "By Blood Alone" } }
+	set_technology = {
+		early_fighter = 1
+	}
+}
+
+set_politics = {
+	ruling_party = progressivism
+	last_election = "1933.10.25"
+	election_frequency = 48
+	elections_allowed = no
+}	
+	
+set_popularities = {
+	vanguard_socialism = 0
+	popular_socialism = 0
+	anarchism = 0
+	revisionist_socialism = 10
+	liberalism = 10
+	conservatism = 10
+	right_authoritarianism = 15
+	progressivism = 25
+	despotism = 0
+	reactionism = 25
+	accelerationism = 5
+}
+
+set_stability = 0.6
+set_war_support = 0.8
+
+recruit_character = UPV_nazi_boni
+recruit_character = UPV_blaise_bassoleth
+recruit_character = UPV_diongolo_traore
+recruit_character = UPV_joseph_conombo
+recruit_character = UPV_sangoul_lamizana 
+recruit_character = UPV_daniel_ouezzin_coulibaly
+recruit_character = UPV_dieudonne_yougbare
+recruit_character = UPV_begnon_damien_kone
+recruit_character = UPV_jean_baptiste_boukari_lingani
+recruit_character = UPV_tapsoba_tinga_dominique
+recruit_character = UPV_christophe_kalenzaga
+recruit_character = UPV_henri_guissou
+recruit_character = UPV_georges_bamina_nebie
+recruit_character = UPV_yacouba_sido
+recruit_character = UPV_baba_sy
+recruit_character = UPV_military_council
+recruit_character = UPV_nouhon_sigue
+
+
+
+

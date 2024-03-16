@@ -1,0 +1,31 @@
+capital = 1266
+set_research_slots = 0
+
+add_ideas = {
+	LEO_boniface
+	LEO_walls
+}
+
+set_politics = {
+	ruling_party = despotism
+	last_election = "1933.10.25"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	vanguard_socialism = 0
+	popular_socialism = 0
+	anarchism = 0
+	revisionist_socialism = 0
+	progressivism = 0
+	liberalism = 0
+	conservatism = 0
+	right_authoritarianism = 0
+	despotism = 100
+	reactionism = 0
+	accelerationism = 0
+}
+
+set_stability = 1
+
+recruit_character = LEO_Ignatius

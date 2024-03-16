@@ -1,0 +1,17 @@
+characters={
+	CAC_Godfrey_Huggins={
+		name="Godfrey Huggins"
+		portraits={
+			civilian={
+				large="gfx/leaders/CAC/Portrait_Godfrey_Huggins.png"
+			}
+		}
+		country_leader={
+			
+			ideology=classical_liberalism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	
+}

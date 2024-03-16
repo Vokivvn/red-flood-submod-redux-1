@@ -1,0 +1,630 @@
+characters = {
+	MAN_Yasuhito = {
+		name = "Yasuhito"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MAN/Portrait_Yasuhito.png"
+			}
+		}
+	}
+	MAN_kishi_nobusuke = {
+		name = "Kishi Nobusuke"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MAN/Portrait_MAN_Kishi_Nobusuke.png"
+			}
+		}
+		country_leader = {
+			ideology = plutocracy
+			expire = "1965.1.1.1"
+		}
+	}
+	MAN_itagaki_seishiro = {
+		name = "Itagaki Seishirō"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MAN/Portrait_Seishiro_Itagaki.png"
+			}
+			army = {
+				small = "GFX_idea_itagaki"
+			}
+		}
+		country_leader = {
+			ideology = military_dictatorship
+			expire = "1965.1.1.1"
+			traits = { warrior_code }
+		}
+		field_marshal = {
+			traits = { JAP_samurai_lineage inflexible_strategist trait_reckless }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
+		}
+		advisor = {
+			slot = high_command
+			idea_token = MAN_itagaki_cos
+			allowed = {
+				original_tag = MAN
+			}
+			available = {
+				OR = {
+					has_government = despotism
+					has_government = right_authoritarianism
+					has_government = accelerationism
+				}
+				NOT = {
+					has_completed_focus = MAN_chase_out_the_japanese
+				}
+			}
+			traits = { 
+				cos_school_of_mass_combat
+			}
+		}
+	}
+	MAN_jiang_kanghu = {
+		name = "Jiang Kanghu"
+		country_leader = {
+			ideology = social_nationalism
+			expire = "1965.1.1.1"
+		}
+	}
+	MAN_Tetsuzan_Nagata = {
+		name = "Tetsuzan Nagata"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MAN/Portrait_Tetsuzan_Nagata.png"
+			}
+		}
+		country_leader = {
+			expire = "1965.1.1"
+			ideology = technocracy
+			traits = {
+				silent_workhorse
+			}
+		}
+	}
+
+	MAN_zhang_jinghui = {	#jap
+		name = MAN_zhang_jinghui_hog
+		portraits = {
+			army = {
+				small = "GFX_idea_jinghui"
+			}
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = MAN_zhang_jinghui_hog
+			allowed = {
+				original_tag = MAN
+			}
+			available = {
+				OR = {
+					has_government = despotism
+					has_government = right_authoritarianism
+				}
+			}
+			traits = { 
+				head_of_government
+				hog_old_general
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = MAN_jinghui_cos
+			allowed = {
+				original_tag = MAN
+			}
+			available = {
+				OR = {
+					has_government = despotism
+					has_government = right_authoritarianism
+				}
+				NOT = {
+					has_completed_focus = MAN_chase_out_the_japanese
+				}
+			}
+			traits = { 
+				cos_school_of_psychology
+			}
+		}
+	}
+	MAN_zuolin = {	#feng
+		name = MAN_zuolin_hog
+		portraits = {
+			army = {
+				small = "GFX_idea_zuolin"
+				large = "gfx/leaders/MAN/Zhang_Zuolin_g.png"
+			}
+			civilian = {
+				large = "gfx/leaders/MAN/Portrait_Zhang_Zuolin1.png" 
+			}
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = MAN_zuolin_hog
+			allowed = {
+				original_tag = MAN
+			}
+			available = {
+				has_government = despotism
+			}
+			visible = {
+				has_country_flag = MAN_fengtian_govt
+			}
+			traits = { 
+				head_of_government
+				hog_old_general
+			}
+		}
+	}
+	MAN_minobe = {	#techno
+		name = MAN_minobe_hog
+		portraits = {
+			army = {
+				small = "GFX_idea_minobe"
+			}
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = MAN_minobe_hog
+			allowed = {
+				original_tag = MAN
+			}
+			available = {
+				OR = {
+					has_government = accelerationism
+					has_government = liberalism
+					has_government = conservatism
+					has_government = progressivism
+				}
+				NOT = {
+					has_completed_focus = MAN_chase_out_the_japanese
+				}
+			}
+			visible = {
+				has_country_flag = MAN_japan
+			}
+			traits = { 
+				head_of_government
+				hog_pragmatic_statesman
+			}
+		}
+	}
+	MAN_yanqing = {	#jap
+		name = MAN_yanqing_for
+		portraits = {
+			army = {
+				small = "GFX_idea_yangqing"
+			}
+		}
+		advisor = {
+			slot = foreign_minister
+			idea_token = MAN_yanqing_for
+			allowed = {
+				original_tag = MAN
+			}
+			visible = {
+				has_country_flag = MAN_exiles_here
+			}
+			traits = { 
+				foreign_minister
+			}
+		}
+	}
+
+	MAN_yosuke_matsuoka = {
+		name = MAN_yosuke_matsuoka_for
+		portraits = {
+			army = {
+				small = "GFX_idea_matsuoka"
+			}
+		}
+		advisor = {
+			slot = foreign_minister
+			idea_token = MAN_yosuke_matsuoka_for
+			allowed = {
+				original_tag = MAN
+			}
+			available = {
+				NOT = { has_completed_focus = MAN_chase_out_the_japanese }
+			}
+			visible = {
+				has_country_flag = MAN_japan
+			}
+			traits = { 
+				foreign_minister
+				for_ideological_crusader
+			}
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = MAN_yosuke_matsuoka_eco
+			allowed = {
+				original_tag = MAN
+			}
+			available = {
+				OR = {
+					has_government = despotism
+					has_government = right_authoritarianism
+				}
+				NOT = {
+					has_completed_focus = MAN_chase_out_the_japanese
+				}
+			}
+			visible = {
+				has_country_flag = MAN_japan
+			}
+			traits = { 
+				economy_minister
+				eco_oil_baron
+			}
+		}
+	}
+
+
+	MAN_nobosuke_kishi = {	#jap
+		name = MAN_nobosuke_kishi_eco
+		portraits = {
+			army = {
+				small = "GFX_idea_kishi"
+			}
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = MAN_nobosuke_kishi_eco
+			allowed = {
+				original_tag = MAN
+			}
+			available = {
+				OR = {
+					has_government = right_authoritarianism
+					has_government = despotism
+				}
+				NOT = {
+					has_completed_focus = MAN_chase_out_the_japanese
+				}
+			}
+			visible = {
+				has_country_flag = MAN_japan
+			}
+			traits = { 
+				economy_minister
+				eco_planned_economy_proponent
+			}
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = MAN_nobosuke_kishi_hog
+			allowed = {
+				original_tag = MAN
+			}
+			available = {
+				OR = {
+					has_government = right_authoritarianism
+					has_government = despotism
+				}
+				NOT = {
+					has_completed_focus = MAN_chase_out_the_japanese
+				}
+			}
+			visible = {
+				has_country_flag = MAN_japan
+			}
+			traits = { 
+				head_of_government
+				hedonist
+			}
+		}
+	}
+	MAN_takuo_godo = {	#jap
+		name = MAN_takuo_godo_eco
+		portraits = {
+			army = {
+				small = "GFX_idea_godo"
+			}
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = MAN_takuo_godo_eco
+			allowed = {
+				original_tag = MAN
+			}
+			available = {
+				OR = {
+					has_government = despotism
+					has_government = right_authoritarianism
+				}
+				NOT = {
+					has_completed_focus = MAN_chase_out_the_japanese
+				}
+			}
+			visible = {
+				has_country_flag = MAN_japan
+			}
+			traits = { 
+				economy_minister
+				eco_steel_magnate
+			}
+		}
+	}
+	MAN_ikeda_shigeaki = {	#jap
+		name = MAN_ikeda_shigeaki_eco
+		portraits = {
+			army = {
+				small = "GFX_idea_ikeda"
+			}
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = MAN_ikeda_shigeaki_eco
+			allowed = {
+				original_tag = MAN
+			}
+			available = {
+				OR = {
+					has_government = despotism
+					has_government = right_authoritarianism
+				}
+				NOT = {
+					has_completed_focus = MAN_chase_out_the_japanese
+				}
+			}
+			visible = {
+				has_country_flag = MAN_japan
+			}
+			traits = { 
+				economy_minister
+				eco_bank_president
+			}
+		}
+	}
+
+	MAN_dogmeat = {	#feng
+		name = MAN_dogmeat_sec
+		portraits = {
+			army = {
+				small = "GFX_idea_chongchan"
+			}
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = MAN_dogmeat_sec
+			allowed = {
+				original_tag = MAN
+			}
+			visible = {
+				has_country_flag = MAN_fengtian_govt
+			}
+			traits = { 
+				security_minister
+				sec_prince_of_terror
+			}
+		}
+	}
+	MAN_X = {
+		name = MAN_X
+		advisor = {
+			slot = head_of_intel
+			idea_token = MAN_X_int
+			allowed = {
+				original_tag = MAN
+			}
+			traits = { 
+				head_of_intel
+				int_logistics_specialist
+			}
+		}
+	}
+	MAN_xueliang = {	#feng
+		name = MAN_xueliang_cao
+		portraits = {
+			army = {
+				small = "GFX_idea_shueliang"
+			}
+			civilian = {
+				large = "gfx/leaders/MAN/Portrait_Zhang_Xueliang.png"
+			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = MAN_xueliang_cao
+			allowed = {
+				original_tag = MAN
+			}
+			available = {
+				has_country_flag = MAN_fengtian_govt
+			}
+			traits = { 
+				carm_armoured_spearhead_doctrine
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = MAN_xueliang_cos
+			allowed = {
+				original_tag = MAN
+			}
+			available = {
+				has_country_flag = MAN_fengtian_govt
+			}
+			traits = { 
+				cos_school_of_manoeuvre
+			}
+		}
+	}
+	MAN_haipeng = {	#feng
+		name = MAN_haipeng_cao
+		portraits = {
+			army = {
+				small = "GFX_idea_haipeng"
+			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = MAN_haipeng_cao
+			allowed = {
+				original_tag = MAN
+			}
+			available = {
+				has_country_flag = MAN_fengtian_govt
+			}
+			traits = { 
+				carm_guns_and_butter_doctrine
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = MAN_haipeng_cos
+			allowed = {
+				original_tag = MAN
+			}
+			available = {
+				has_country_flag = MAN_fengtian_govt
+			}
+			traits = { 
+				cos_school_of_mass_combat
+			}
+		}	
+	}
+
+	MAN_con = {
+		name = MAN_con
+		advisor = {
+			slot = navy_chief
+			idea_token = MAN_con_navy
+			allowed = {
+				original_tag = MAN
+			}
+			traits = { 
+				cnav_base_control_doctrine
+			}
+		}
+	}
+	MAN_caof = {
+		name = MAN_caof
+		advisor = {
+			slot = air_chief
+			idea_token = MAN_caof_air
+			allowed = {
+				original_tag = MAN
+			}
+			traits = { 
+				cair_battlefield_support_doctrine
+			}
+		}
+	}
+	
+	MAN_ishiwara_kanji = {
+		name = "Ishiwara Kanji"
+		portraits = {
+			army = {
+				large = "gfx/leaders/MAN/Portrait_Kanji_Ishiwara.png"
+				small = "GFX_idea_ishiwara"
+			}
+		}
+		corps_commander = {
+			traits = { JAP_samurai_lineage }
+			skill = 1 
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = MAN_ishiwara_cao
+			allowed = {
+				original_tag = MAN
+			}
+			available = {
+				has_country_flag = MAN_japan
+			}
+			traits = {
+				carm_armoured_spearhead_doctrine
+			}
+		}
+	}
+	MAN_doihara_kenji = {
+		name = "Doihara Kenji"
+		portraits = {
+			army = {
+				large = "gfx/leaders/MAN/Portrait_Doihara_Kenji.png"
+				small = "GFX_idea_doihara"
+			}
+		}
+		corps_commander = {
+			traits = { career_officer substance_abuser }
+			skill = 1 
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = MAN_doihara_cao
+			allowed = {
+				original_tag = MAN
+			}
+			available = {
+				has_country_flag = MAN_japan
+			}
+			traits = { 
+				carm_decisive_battle_doctrine
+			}
+		}
+	}
+	MAN_kanin_kotohito = {
+		name = "Kan'in Kotohito"
+		portraits = {
+			army = {
+				large = "gfx/leaders/MAN/Portrait_Kanin_Kotohito.png"
+				small = "GFX_idea_kotohito"
+			}
+		}
+		corps_commander = {
+			traits = { cavalry_officer }
+			skill = 3 
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 3
+			logistics_skill = 1
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = MAN_kanin_cao
+			allowed = {
+				original_tag = MAN
+			}
+			available = {
+				has_country_flag = MAN_japan
+			}
+			traits = { 
+				carm_guns_and_butter_doctrine
+			}
+		}
+	}
+	MAN_Chen_Shufan = {
+		name = "Chen Shufan"
+	}
+	MAN_Ma_Zahanshan = {
+		name = "Ma Zahanshan"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MAN/Portrait_Ma_Zahanshan.png"
+			}
+		}
+	}
+	MAN_li_shouxin = {
+		name = "Li Shouxin"
+		corps_commander = {
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+		}
+	}
+}

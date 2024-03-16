@@ -1,0 +1,41 @@
+ZHR_diplomatic_decisions = {
+	ZHR_join_kavkaz = {
+		days_remove = 14
+		ai_will_do = { factor = 100 }
+		icon = GFX_Russian_uni_socialist
+		fire_only_once = yes
+		visible = { 
+			ZHR_KAV_peaceful_uni = yes
+			NOT = { country_exists = SIB }
+		}
+		available = {
+			is_neighbor_of = KAV
+			NOT = { has_country_flag = RUS_chose_wargoal }
+		}
+		complete_effect = {
+			set_country_flag = {
+				flag = RUS_chose_wargoal
+				days = 15
+				value = 1
+            }
+		}
+		remove_effect = {
+			if = {
+				limit = { KAV = { is_ai = no } }
+				KAV = { ZHR = { PREV_annex_CURRENT_warlord = yes } }
+			}
+			if = {
+				limit = { ZHR = { is_ai = no } }
+				ZHR = { KAV = { PREV_annex_CURRENT_warlord = yes } }
+			}
+			if = {
+				limit = {
+					ZHR = { is_ai = yes }
+					KAV = { is_ai = yes }
+				}
+				country_event = russia.201
+			}
+		}
+	}
+
+}

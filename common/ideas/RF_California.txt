@@ -1,0 +1,262 @@
+ideas = {
+
+#################
+# Country ideas #
+#################
+
+	country = {
+		CAL_aneweconomy = {
+			picture = CAL_new_economy
+			modifier = {
+				production_factory_max_efficiency_factor = 0.10
+				consumer_goods_expected_value = -0.07
+			}
+		}
+		CAL_astrangearmy = {
+			picture = CAL_spiritualist_army
+			modifier = {
+				army_org = 0.10
+				training_time_army_factor = 0.10
+				attrition = -0.15
+			}
+		}
+		CAL_investigatingspiritual = {
+			picture = CAL_investigate_spirits
+			modifier = {
+				research_speed_factor = 0.08
+				political_power_gain = -0.10
+				stability_factor = 0.1
+				despotism_drift = 0.02
+			}
+		}
+		CAL_protestantism = {
+			picture = CAL_protestant_spirit
+			modifier = {
+				research_speed_factor = -0.02
+				production_speed_buildings_factor = 0.08
+				industrial_capacity_factory = 0.06
+			}
+		}
+		CAL_paganism = {
+			picture = CAL_state_spirits
+			modifier = {
+				production_speed_buildings_factor = 0.08
+				industrial_capacity_factory = 0.06
+				army_core_attack_factor = 0.10
+				army_core_defence_factor = 0.10
+				non_core_manpower = 0.08
+			}
+		}
+		CAL_freecinema = {
+			picture = CAL_free_hollywood
+			modifier = {
+				MONTHLY_POPULATION = 0.10
+				trade_opinion_factor = 0.25
+			}
+		}
+		CAL_awakeningtheworld = {
+			picture = CAL_enlightning_world
+			modifier = {
+				MONTHLY_POPULATION = 0.20
+				trade_opinion_factor = 0.35
+				consumer_goods_expected_value = 0.08
+				political_power_gain = -0.02
+			}
+		}
+		CAL_investigationsphysical = {
+			picture = CAL_investing_natural
+			modifier = {
+				MONTHLY_POPULATION = -0.20
+				conscription = 0.03
+				political_power_gain = 0.05
+			}
+		}
+		CAL_harnessingparanormal = {
+			picture = CAL_harnessing_supernatural
+			modifier = {
+				conscription = 0.04
+				army_org = 0.10
+				offence = 0.13
+			}
+		}
+		CAL_thebellline_idea = {
+			picture = CAL_thevoicebell
+			modifier = {
+				despotism_drift = 0.02
+			}
+		}
+		CAL_waragainsthidden = {
+			picture = CAL_war_against_ghosts
+			modifier = {
+				despotism_drift = 0.02
+				MONTHLY_POPULATION = -0.15
+			}
+		}
+		CAL_oranges = {
+			picture = CAL_oranges_andmilk
+			modifier = {
+				MONTHLY_POPULATION = 0.10
+				consumer_goods_expected_value = -0.07
+				political_power_gain = -0.12
+			}
+		}
+		CAL_unitary = {
+			picture = CAL_unitary_equal
+			modifier = {
+				stability_factor = 0.1
+				conservatism_drift = 0.02
+			}
+		}
+		CAL_democracy = {
+			picture = CAL_democracy_protected
+			modifier = {
+				liberalism_drift = 0.02
+				progressivism_drift = 0.01
+				conservatism_drift = 0.02
+			}
+		}
+		CAL_individualism = {
+			picture = CAL_individual
+			modifier = {
+				research_speed_factor = 0.04
+			}
+		}
+		CAL_dollar = {
+			picture = CAL_dollar_official
+			modifier = {
+				consumer_goods_expected_value = -0.03
+			}
+		}
+		CAL_autonomousworkers = {
+			picture = CAL_autonomous_workers
+			modifier = {
+				consumer_goods_expected_value = -0.05
+				political_power_gain = 0.12
+				production_speed_buildings_factor = -0.01
+				industrial_capacity_factory = 0.08
+			}
+		}
+		CAL_politicalmachine = {
+			picture = CAL_megaphone_political
+			modifier = {
+				stability_factor = 0.15
+				war_support_factor = 0.15
+				political_power_gain = 0.12
+			}
+		}
+		CAL_twelveprinciples = {
+			picture = CAL_principes
+			modifier = {
+				revisionist_socialism_drift = 0.02
+			}
+		}
+		CAL_christianwelfare = {
+			picture = CAL_welfare_christian
+			modifier = {
+				consumer_goods_expected_value = 0.04
+				MONTHLY_POPULATION = 0.40
+			}
+		}
+		CAL_puredemocracy = {
+			picture = CAL_purified_democracy
+			modifier = {
+				revisionist_socialism_drift = 0.01
+				anarchism_drift = 0.02
+				popular_socialism_drift = 0.02
+				progressivism_drift = 0.02
+			}
+		}
+		CAL_sierranevada = {
+			picture = CAL_trail_sierranevada
+			modifier = {
+				acclimatization_hot_climate_gain_factor = 0.20
+				heat_attrition_factor = -0.20
+			}
+		}
+		CAL_farms = {
+			picture = CAL_farm_subsidies
+				modifier = {
+				stability_factor = 0.1
+				consumer_goods_expected_value = 0.01
+			}
+		}
+		CAL_militias = {
+			picture = CAL_californian_militias
+			modifier = {
+				conscription = 0.03
+				war_support_factor = -0.10
+				army_attack_factor = -0.10
+			}
+		}
+		CAL_army = {
+			picture = CAL_official_army
+			modifier = {
+				conscription = 0.01
+				war_support_factor = 0.12
+			}
+		}
+		CAL_militarytraining = {
+			picture = CAL_training
+			modifier = {
+				training_time_army_factor = -0.10
+				training_time_factor = -0.10
+			}
+		}
+		CAL_bayarea = {
+			picture = CAL_dockyard_construction
+			modifier = {
+				industrial_capacity_dockyard = 0.14
+			}
+		}
+		CAL_volunteers = {
+			picture = CAL_volunteerarmy
+			modifier = {
+				weekly_manpower = 100
+				conscription = -0.01
+			}
+		}
+		CAL_digging = {
+		picture = CAL_diggy_diggy
+			modifier = {
+			max_dig_in = 1.1
+			dig_in_speed = 0.10
+			}
+		}
+		CAL_attackdigging = {
+			picture = CAL_mortar
+			modifier = {
+				max_dig_in = 1.1
+				dig_in_speed = 0.25
+				supply_consumption_factor = -0.10
+			}
+		}
+
+		CAL_revealingtheplots = {
+			picture = CAL_revelation
+			modifier = {
+				weekly_manpower = -15
+			}
+		}
+		CAL_supersoldiers = {
+			#picture = 
+			modifier = {
+				army_org_factor = 0.07
+			}
+		}
+		CAL_drugged_up_soldiers = {
+			#picture = 
+			modifier = {
+				army_attack_factor = 0.05
+				army_defence_factor = -0.05
+			}
+		}
+		CAL_entrenchment = {
+			picture = CAL_isolation_army
+			modifier = {
+				army_defence_factor = 0.05
+				dig_in_speed = 0.1
+				max_dig_in_factor = 0.15
+			}
+		}
+	}#END OF COUNTRY IDEAS
+}#END OF IDEAS

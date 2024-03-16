@@ -1,0 +1,1633 @@
+add_namespace = spain_starting
+add_namespace = spain_cw
+add_namespace = spain_nf
+add_namespace = cnt
+add_namespace = spain_rep
+add_namespace = spain_pce
+
+#CIVIL WAR EVENTS#
+country_event = {
+	id = spain_cw.1
+	title = spain_cw.1.t
+	desc = spain_cw.1.desc
+	picture = GFX_report_event_spain_civil_war_soldiers
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = spain_cw.1.a
+		ai_chance = { factor = 1 }
+		hidden_effect = {
+			set_global_flag = spain_cw
+			SPR_cw = YES
+			set_politics = {
+				ruling_party = progressivism
+			}
+			SPA = {
+				transfer_state = 169
+				transfer_state = 170
+				transfer_state = 171
+				transfer_state = 172
+				transfer_state = 174
+				transfer_state = 176
+				transfer_state = 974
+				transfer_state = 1009
+				add_state_core = 169
+				add_state_core = 170
+				add_state_core = 171
+				add_state_core = 172
+				add_state_core = 174
+				add_state_core = 176
+				add_state_core = 974
+				add_state_core = 1009
+				load_oob = SPA_Civil_War
+				declare_war_on = {
+					target = SPR
+					type = annex_everything
+				}
+				set_cosmetic_tag = SPA_CW
+			}
+			CNT = {
+				transfer_state = 165
+				transfer_state = 173
+				transfer_state = 965
+				transfer_state = 973
+				add_state_core = 165
+				add_state_core = 173
+				add_state_core = 965
+				add_state_core = 973
+				load_oob = CNT_Civil_War
+				declare_war_on = {
+					target = SPR
+					type = annex_everything
+				}
+				declare_war_on = {
+					target = SPA
+					type = annex_everything
+				}
+				set_cosmetic_tag = CNT_CW
+			}
+			FMO = {
+				transfer_state = 178
+				transfer_state = 290
+				transfer_state = 461
+				transfer_state = 462
+				transfer_state = 699
+				transfer_state = 783
+				transfer_state = 967
+				transfer_state = 968
+				transfer_state = 969
+				transfer_state = 970
+				transfer_state = 971
+				transfer_state = 972
+				transfer_state = 178
+				add_state_core = 290
+				add_state_core = 461
+				add_state_core = 462
+				add_state_core = 699
+				add_state_core = 783
+				add_state_core = 967
+				add_state_core = 968
+				add_state_core = 969
+				add_state_core = 970
+				add_state_core = 971
+				add_state_core = 972
+			}
+			SPR = {
+				every_state = {
+					limit = {
+						OR = {
+							is_owned_by = SPA
+							is_owned_by = CNT
+							is_owned_by = FMO
+						}
+					}
+					remove_core_of = SPR
+				}
+				every_unit_leader = {
+					limit = {
+						has_id = 1936
+					}
+					set_nationality = FMO
+				}
+				load_oob = SPR_Civil_War
+				set_popularities = {
+					vanguard_socialism = 19
+					popular_socialism = 17
+					anarchism = 6
+					revisionist_socialism = 4
+					progressivism = 41
+					liberalism = 1
+					conservatism = 8
+					right_authoritarianism = 0
+					despotism = 3
+					reactionism = 1
+					accelerationism = 0
+				}
+				set_party_name = {
+					ideology = popular_socialism
+					long_name = "Unión de Hermanos Proletarios"
+					name = "LSE"
+				}
+				set_party_name = {
+					ideology = right_authoritarianism
+					long_name = "Partido Patriótico"
+					name = "PP"
+				}
+				set_party_name = {
+					ideology = despotism
+					long_name = "Partido Nacionalista Español"
+					name = "PNE"
+				}
+				end_puppet = GBN
+			}
+			GBN = {
+				set_cosmetic_tag = GBN_biafra
+				set_politics = {
+					ruling_party = despotism
+				}
+				GBN_Mariano_Alonso = {
+					set_portraits = {
+						civilian = {
+							large = GFX_portrait_mariano_alonso_despotic
+						}
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = spain_cw.1.b
+		ai_chance = { factor = 1 }
+		hidden_effect = {
+			set_global_flag = spain_cw
+			SPR_cw = YES
+			set_politics = {
+				ruling_party = progressivism
+			}
+			SPA = {
+				transfer_state = 169
+				transfer_state = 170
+				transfer_state = 171
+				transfer_state = 172
+				transfer_state = 174
+				transfer_state = 176
+				transfer_state = 974
+				transfer_state = 1009
+				add_state_core = 169
+				add_state_core = 170
+				add_state_core = 171
+				add_state_core = 172
+				add_state_core = 174
+				add_state_core = 176
+				add_state_core = 974
+				add_state_core = 1009
+				load_oob = SPA_Civil_War
+				declare_war_on = {
+					target = SPR
+					type = annex_everything
+				}
+				set_cosmetic_tag = SPA_CW
+				change_tag_from = ROOT
+			}
+			CNT = {
+				transfer_state = 165
+				transfer_state = 173
+				transfer_state = 965
+				transfer_state = 973
+				add_state_core = 165
+				add_state_core = 173
+				add_state_core = 965
+				add_state_core = 973
+				load_oob = CNT_Civil_War
+				declare_war_on = {
+					target = SPR
+					type = annex_everything
+				}
+				declare_war_on = {
+					target = SPA
+					type = annex_everything
+				}
+				set_cosmetic_tag = CNT_CW
+			}
+			FMO = {
+				transfer_state = 178
+				transfer_state = 290
+				transfer_state = 461
+				transfer_state = 462
+				transfer_state = 699
+				transfer_state = 783
+				transfer_state = 967
+				transfer_state = 968
+				transfer_state = 969
+				transfer_state = 970
+				transfer_state = 971
+				transfer_state = 972
+				transfer_state = 178
+				add_state_core = 290
+				add_state_core = 461
+				add_state_core = 462
+				add_state_core = 699
+				add_state_core = 783
+				add_state_core = 967
+				add_state_core = 968
+				add_state_core = 969
+				add_state_core = 970
+				add_state_core = 971
+				add_state_core = 972
+			}
+			SPR = {
+				every_state = {
+					limit = {
+						OR = {
+							is_owned_by = SPA
+							is_owned_by = CNT
+							is_owned_by = FMO
+						}
+					}
+					remove_core_of = SPR
+				}
+				every_unit_leader = {
+					limit = {
+						has_id = 1936
+					}
+					set_nationality = FMO
+				}
+				load_oob = SPR_Civil_War
+				set_popularities = {
+					vanguard_socialism = 19
+					popular_socialism = 17
+					anarchism = 6
+					revisionist_socialism = 4
+					progressivism = 41
+					liberalism = 1
+					conservatism = 8
+					right_authoritarianism = 0
+					despotism = 3
+					reactionism = 1
+					accelerationism = 0
+				}
+				set_party_name = {
+					ideology = popular_socialism
+					long_name = "Unión de Hermanos Proletarios"
+					name = "LSE"
+				}
+				set_party_name = {
+					ideology = right_authoritarianism
+					long_name = "Partido Patriótico"
+					name = "PP"
+				}
+				set_party_name = {
+					ideology = despotism
+					long_name = "Partido Nacionalista Español"
+					name = "PNE"
+				}
+				end_puppet = GBN
+			}
+			GBN = {
+				set_cosmetic_tag = GBN_biafra
+				set_politics = {
+					ruling_party = despotism
+				}
+				GBN_Mariano_Alonso = {
+					set_portraits = {
+						civilian = {
+							large = GFX_portrait_mariano_alonso_despotic
+						}
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = spain_cw.1.c
+		ai_chance = { factor = 1 }
+		hidden_effect = {
+			set_global_flag = spain_cw
+			SPR_cw = YES
+			set_politics = {
+				ruling_party = progressivism
+			}
+			SPA = {
+				transfer_state = 169
+				transfer_state = 170
+				transfer_state = 171
+				transfer_state = 172
+				transfer_state = 174
+				transfer_state = 176
+				transfer_state = 974
+				transfer_state = 1009
+				add_state_core = 169
+				add_state_core = 170
+				add_state_core = 171
+				add_state_core = 172
+				add_state_core = 174
+				add_state_core = 176
+				add_state_core = 974
+				add_state_core = 1009
+				load_oob = SPA_Civil_War
+				declare_war_on = {
+					target = SPR
+					type = annex_everything
+				}
+				set_cosmetic_tag = SPA_CW
+			}
+			CNT = {
+				transfer_state = 165
+				transfer_state = 173
+				transfer_state = 965
+				transfer_state = 973
+				add_state_core = 165
+				add_state_core = 173
+				add_state_core = 965
+				add_state_core = 973
+				load_oob = CNT_Civil_War
+				declare_war_on = {
+					target = SPR
+					type = annex_everything
+				}
+				declare_war_on = {
+					target = SPA
+					type = annex_everything
+				}
+				set_cosmetic_tag = CNT_CW
+				change_tag_from = ROOT
+			}
+			GBN = {
+				transfer_state = 297
+				transfer_state = 539
+				set_cosmetic_tag = GBN_biafra
+				set_politics = {
+					ruling_party = despotism
+				}
+			}
+			FMO = {
+				transfer_state = 178
+				transfer_state = 290
+				transfer_state = 461
+				transfer_state = 462
+				transfer_state = 699
+				transfer_state = 783
+				transfer_state = 967
+				transfer_state = 968
+				transfer_state = 969
+				transfer_state = 970
+				transfer_state = 971
+				transfer_state = 972
+				transfer_state = 178
+				add_state_core = 290
+				add_state_core = 461
+				add_state_core = 462
+				add_state_core = 699
+				add_state_core = 783
+				add_state_core = 967
+				add_state_core = 968
+				add_state_core = 969
+				add_state_core = 970
+				add_state_core = 971
+				add_state_core = 972
+			}
+			SPR = {
+				every_state = {
+					limit = {
+						OR = {
+							is_owned_by = SPA
+							is_owned_by = CNT
+							is_owned_by = FMO
+						}
+					}
+					remove_core_of = SPR
+				}
+				every_unit_leader = {
+					limit = {
+						has_id = 1936
+					}
+					set_nationality = FMO
+				}
+				load_oob = SPR_Civil_War
+				set_popularities = {
+					vanguard_socialism = 19
+					popular_socialism = 17
+					anarchism = 6
+					revisionist_socialism = 4
+					progressivism = 41
+					liberalism = 1
+					conservatism = 8
+					right_authoritarianism = 0
+					despotism = 3
+					reactionism = 1
+					accelerationism = 0
+				}
+				set_party_name = {
+					ideology = popular_socialism
+					long_name = "Unión de Hermanos Proletarios"
+					name = "LSE"
+				}
+				set_party_name = {
+					ideology = right_authoritarianism
+					long_name = "Partido Patriótico"
+					name = "PP"
+				}
+				set_party_name = {
+					ideology = despotism
+					long_name = "Partido Nacionalista Español"
+					name = "PNE"
+				}
+				end_puppet = GBN
+			}
+			GBN = {
+				set_cosmetic_tag = GBN_biafra
+				set_politics = {
+					ruling_party = despotism
+				}
+				GBN_Mariano_Alonso = {
+					set_portraits = {
+						civilian = {
+							large = GFX_portrait_mariano_alonso_despotic
+						}
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = spain_cw.1.d
+		ai_chance = { factor = 1 }
+		hidden_effect = {
+			set_global_flag = spain_cw
+			SPR_cw = YES
+			set_politics = {
+				ruling_party = progressivism
+			}
+			SPA = {
+				transfer_state = 169
+				transfer_state = 170
+				transfer_state = 171
+				transfer_state = 172
+				transfer_state = 174
+				transfer_state = 176
+				transfer_state = 974
+				transfer_state = 1009
+				add_state_core = 169
+				add_state_core = 170
+				add_state_core = 171
+				add_state_core = 172
+				add_state_core = 174
+				add_state_core = 176
+				add_state_core = 974
+				add_state_core = 1009
+				load_oob = SPA_Civil_War
+				declare_war_on = {
+					target = SPR
+					type = annex_everything
+				}
+				set_cosmetic_tag = SPA_CW
+			}
+			CNT = {
+				transfer_state = 165
+				transfer_state = 173
+				transfer_state = 965
+				transfer_state = 973
+				add_state_core = 165
+				add_state_core = 173
+				add_state_core = 965
+				add_state_core = 973
+				load_oob = CNT_Civil_War
+				declare_war_on = {
+					target = SPR
+					type = annex_everything
+				}
+				declare_war_on = {
+					target = SPA
+					type = annex_everything
+				}
+				set_cosmetic_tag = CNT_CW
+			}
+			FMO = {
+				transfer_state = 178
+				transfer_state = 290
+				transfer_state = 461
+				transfer_state = 462
+				transfer_state = 699
+				transfer_state = 783
+				transfer_state = 967
+				transfer_state = 968
+				transfer_state = 969
+				transfer_state = 970
+				transfer_state = 971
+				transfer_state = 972
+				transfer_state = 178
+				add_state_core = 290
+				add_state_core = 461
+				add_state_core = 462
+				add_state_core = 699
+				add_state_core = 783
+				add_state_core = 967
+				add_state_core = 968
+				add_state_core = 969
+				add_state_core = 970
+				add_state_core = 971
+				add_state_core = 972
+				change_tag_from = ROOT
+			}
+			SPR = {
+				every_state = {
+					limit = {
+						OR = {
+							is_owned_by = SPA
+							is_owned_by = CNT
+							is_owned_by = FMO
+						}
+					}
+					remove_core_of = SPR
+				}
+				every_unit_leader = {
+					limit = {
+						has_id = 1936
+					}
+					set_nationality = FMO
+				}
+				load_oob = SPR_Civil_War
+				set_popularities = {
+					vanguard_socialism = 19
+					popular_socialism = 17
+					anarchism = 6
+					revisionist_socialism = 4
+					progressivism = 41
+					liberalism = 1
+					conservatism = 8
+					right_authoritarianism = 0
+					despotism = 3
+					reactionism = 1
+					accelerationism = 0
+				}
+				set_party_name = {
+					ideology = popular_socialism
+					long_name = "Unión de Hermanos Proletarios"
+					name = "LSE"
+				}
+				set_party_name = {
+					ideology = right_authoritarianism
+					long_name = "Partido Patriótico"
+					name = "PP"
+				}
+				set_party_name = {
+					ideology = despotism
+					long_name = "Partido Nacionalista Español"
+					name = "PNE"
+				}
+				end_puppet = GBN
+			}
+			GBN = {
+				set_cosmetic_tag = GBN_biafra
+				set_politics = {
+					ruling_party = despotism
+				}
+				GBN_Mariano_Alonso = {
+					set_portraits = {
+						civilian = {
+							large = GFX_portrait_mariano_alonso_despotic
+						}
+					}
+				}
+			}
+		}
+	}
+}
+country_event = {
+	id = spain_cw.2
+	title = spain_cw.2.t
+	desc = spain_cw.2.desc
+	picture = GFX_report_event_spain_civil_war_soldiers
+	fire_only_once = yes
+	trigger = {
+		NOT = {
+			has_global_flag = scw_over
+		}
+		TAG = SPR
+		date > 1937.9.16
+		SPR = {
+			controls_province = 3938
+		}
+	}
+	option = {
+		name = spain_cw.2.a
+		ai_chance = { factor = 1 }
+		hidden_effect = {
+			set_global_flag = spain_pce
+			SPR = {
+				set_politics = {
+					ruling_party = vanguard_socialism
+				}
+				remove_ideas = {
+					#SPR_spanish_spring
+					SPR_black_triennium
+					SPR_behemoth_leviathan
+					SPR_separatism
+				}
+				load_oob = SPR_LEN
+				set_cosmetic_tag = SPR_LENIN
+				set_popularities = {
+					vanguard_socialism = 43
+					popular_socialism = 22
+					anarchism = 0
+					revisionist_socialism = 20
+					progressivism = 4
+					liberalism = 0
+					conservatism = 0
+					right_authoritarianism = 0
+					despotism = 0
+					reactionism = 0
+					accelerationism = 11
+				}
+				set_party_name = {
+					ideology = popular_socialism
+					long_name = "Sociedad Socialista Numantina"
+					name = "SSN"
+				}
+				set_party_name = {
+					ideology = revisionist_socialism
+					long_name = "Unión de Cristianos Socialistas"
+					name = "UCS"
+				}
+				set_party_name = {
+					ideology = anarchism
+					long_name = "Jabalís"
+					name = "Jabalís"
+				}
+				set_party_name = {
+					ideology = progressivism
+					long_name = "Partido Republicano Radical Socialista"
+					name = "PRRS"
+				}
+				set_party_name = {
+					ideology = accelerationism
+					long_name = "Línea Proletaria"
+					name = "LP"
+				}
+			}
+			news_event = {
+				id = news.56
+				days = 1
+			}
+		}
+	}
+}
+country_event = {
+	id = spain_cw.3
+	title = spain_cw.3.t
+	desc = spain_cw.3.desc
+	picture = GFX_report_event_spain_civil_war_soldiers
+	fire_only_once = yes
+	trigger = {
+		NOT = {
+			has_global_flag = scw_over
+		}
+		TAG = SPA
+		date > 1937.9.16
+	}
+	option = {
+		name = spain_cw.3.a
+		ai_chance = { factor = 40 }
+		hidden_effect = {
+			set_global_flag = spain_jons
+			clr_global_flag = spain_fal
+			SPA = {
+				set_politics = {
+					ruling_party = popular_socialism
+				}
+				set_cosmetic_tag = SPA_JONS_CW
+			}
+			news_event = {
+				id = news.57
+				days = 1
+			}
+			add_popularity = {
+				ideology = popular_socialism
+				popularity = 0.15
+			}
+		}
+		SPR = {
+			add_ideas = SPR_death
+		}
+		CNT = {
+			add_ideas = SPR_death
+		}
+		SPA = {
+			add_ideas = SPR_death
+		}
+	}
+	option = {
+		name = spain_cw.3.b
+		ai_chance = { factor = 60 }
+		hidden_effect = {
+			set_global_flag = spain_fal
+			clr_global_flag = spain_jons
+			SPA = {
+				set_politics = {
+					ruling_party = despotism
+				}
+				set_cosmetic_tag = SPA_FALANGE_CW
+			}
+			news_event = {
+				id = news.58
+				days = 1
+			}
+			add_popularity = {
+				ideology = despotism
+				popularity = 0.15
+			}
+		}
+		SPR = {
+			add_ideas = SPR_death
+		}
+		CNT = {
+			add_ideas = SPR_death
+		}
+		SPA = {
+			add_ideas = SPR_death
+		}
+	}
+}
+country_event = {
+	id = spain_cw.4
+	title = spain_cw.4.t
+	desc = spain_cw.4.desc
+	picture = GFX_report_event_spain_civil_war_soldiers
+	fire_only_once = yes
+	trigger = {
+		NOT = {
+			has_global_flag = scw_over
+		}
+		TAG = SPA
+		date > 1939.9.16
+	}
+	option = {
+		name = spain_cw.4.a
+		ai_chance = { factor = 1 }
+		SPR = {
+			add_ideas = SPR_death2
+		}
+		CNT = {
+			add_ideas = SPR_death2
+		}
+		SPA = {
+			add_ideas = SPR_death2
+		}
+	}
+}
+country_event = {
+	id = spain_cw.5
+	title = spain_cw.5.t
+	desc = spain_cw.5.desc
+	picture = GFX_report_event_spain_civil_war_soldiers
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = spain_cw.5.a
+		ai_chance = { factor = 1 }
+		hidden_effect = {
+			set_global_flag = scw_over
+			CNT = {
+				remove_ideas = SPR_death
+				remove_ideas = SPR_death2
+			}
+			SPA = {
+				remove_ideas = SPR_death
+				remove_ideas = SPR_death2
+			}
+			SPR = {
+				remove_ideas = SPR_death
+				remove_ideas = SPR_death2
+			}
+			if = {
+				limit = {
+					AND = {
+						TAG = CNT
+						has_war = no
+					}
+				}
+				set_global_flag = scw_cnt
+				news_event = {
+					id = news.59
+					days = 1
+				}
+				CNT = {
+					drop_cosmetic_tag = yes
+					country_event = {
+						id = cnt.1
+						days = 30
+					}
+				}
+				every_state = {
+					limit = {
+						OR = {
+							is_core_of = SPA
+							is_core_of = SPR
+							is_core_of = CNT
+						}
+					}
+					add_core_of = CNT
+					remove_core_of = SPA
+					remove_core_of = SPR
+				}
+			}
+			else_if = {
+				limit = {
+					AND = {
+						TAG = SPR
+						has_war = no
+						has_global_flag = spain_pce
+					}
+				}
+				set_global_flag = scw_pce
+				news_event = {
+					id = news.60
+					days = 1
+				}
+				every_state = {
+					limit = {
+						OR = {
+							is_core_of = SPA
+							is_core_of = SPR
+							is_core_of = CNT
+						}
+					}
+					add_core_of = SPR
+					remove_core_of = CNT
+					remove_core_of = SPA
+				}
+				SPR = {
+					drop_cosmetic_tag = yes
+				}
+			}
+			else_if = {
+				limit = {
+					AND = {
+						TAG = SPR
+						has_war = no
+						NOT = {
+							has_global_flag = spain_pce
+						}
+					}
+				}
+				set_global_flag = scw_spr
+				news_event = {
+					id = news.61
+					days = 1
+				}
+				every_state = {
+					limit = {
+						OR = {
+							is_core_of = SPA
+							is_core_of = SPR
+							is_core_of = CNT
+						}
+					}
+					add_core_of = SPR
+					remove_core_of = CNT
+					remove_core_of = SPA
+				}
+			}
+			else_if = {
+				limit = {
+					AND = {
+						TAG = SPA
+						has_war = no
+						has_global_flag = spain_fal
+					}
+				}
+				set_global_flag = scw_fal
+				news_event = {
+					id = news.62
+					days = 1
+				}
+				SPA = {
+					set_cosmetic_tag = SPA_FALANGE
+					country_event = {
+						id = spain_nf.2
+						days = 1825
+					}
+				}
+				every_state = {
+					limit = {
+						OR = {
+							is_core_of = SPA
+							is_core_of = SPR
+							is_core_of = CNT
+						}
+					}
+					add_core_of = SPA
+					remove_core_of = CNT
+					remove_core_of = SPR
+				}
+			}
+			else_if = {
+				limit = {
+					AND = {
+						TAG = SPA
+						has_war = no
+						has_global_flag = spain_jons
+					}
+				}
+				set_global_flag = scw_jons
+				news_event = {
+					id = news.63
+					days = 1
+				}
+				SPA = {
+					set_cosmetic_tag = SPA_JONS
+				}
+				every_state = {
+					limit = {
+						OR = {
+							is_core_of = SPA
+							is_core_of = SPR
+							is_core_of = CNT
+						}
+					}
+					add_core_of = SPA
+					remove_core_of = CNT
+					remove_core_of = SPR
+				}
+			}
+			else_if = {
+				limit = {
+					AND = {
+						TAG = SPA
+						has_war = no
+					}
+				}
+				set_global_flag = scw_nf
+				news_event = {
+					id = news.64
+					days = 1
+				}
+				SPA = {
+					drop_cosmetic_tag = yes
+					country_event = {
+						id = spain_nf.1
+						days = 1
+					}
+				}
+				every_state = {
+					limit = {
+						OR = {
+							is_core_of = SPA
+							is_core_of = SPR
+							is_core_of = CNT
+						}
+					}
+					add_core_of = SPA
+					remove_core_of = CNT
+					remove_core_of = SPR
+				}
+			}
+			set_capital = { state = 1069 }
+			country_event = {
+				id = spain_cw.6
+				days = 2
+			}
+		}
+	}
+}
+
+country_event = {
+	id = spain_cw.6
+	title = spain_cw.6.t
+	desc = spain_cw.6.desc
+	picture = GFX_report_event_spain_civil_war_soldiers
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = spain_cw.6.a
+		ai_chance = { factor = 1 }
+		trigger = {
+			OR = {
+				AND = {
+					has_global_flag = scw_over
+					NOT = {
+						has_global_flag = spain_pce
+					}
+					OR = {
+						TAG = SPR
+						TAG = SPA
+					}
+				}
+				AND = {
+					has_global_flag = scw_over
+					has_global_flag = spain_pce
+					TAG = SPA
+				}
+			}
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					TAG = SPA
+				}
+				SPA = {
+					annex_country = {
+						target = FMO
+						transfer_troops = yes
+					}
+					change_tag_from = FMO
+					every_state = {
+						limit = {
+							is_core_of = FMO
+						}
+						add_core_of = SPA
+						remove_core_of = FMO
+					}
+					set_nationality = {
+						target_country = FMO
+						character = SPR_francisco_franco
+					}
+				}
+			}
+			if = {
+				limit = {
+					AND = {
+						TAG = SPR
+					}
+				}
+				SPR = {
+					annex_country = {
+						target = FMO
+						transfer_troops = yes
+					}
+					change_tag_from = FMO
+					every_state = {
+						limit = {
+							is_core_of = FMO
+						}
+						add_core_of = SPR
+						remove_core_of = FMO
+					}
+					set_nationality = {
+						target_country = FMO
+						character = SPR_francisco_franco
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = spain_cw.6.b
+		ai_chance = { factor = 1 }
+		trigger = {
+			OR = {
+				AND = {
+					has_global_flag = scw_over
+					TAG = CNT
+				}
+				AND = {
+					has_global_flag = scw_over
+					has_global_flag = spain_pce
+					TAG = SPR
+				}
+			}
+		}
+		hidden_effect = {
+			add_political_power = -10
+		}
+	}
+}
+
+
+#NATIONAL FRONT EVENTS#
+country_event = {
+	id = spain_nf.1
+	title = spain_nf.1.t
+	desc = spain_nf.1.desc
+	picture = GFX_report_event_spain_civil_war_soldiers
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = spain_nf.1.a
+		ai_chance = { factor = 55 }
+		retire_country_leader = yes
+		add_country_leader_role = {
+			character = SPA_ernesto_gimenez_caballero
+			promote_leader = yes
+			country_leader = {
+				desc = "POLITICS_GECE_DESC"
+				ideology = fiumanism
+				traits = {  }
+				expire = "1965.1.1.1"
+			}
+		}
+		set_cosmetic_tag = SPA_gece
+	}
+	option = {
+		name = spain_nf.1.b
+		ai_chance = { factor = 45 }
+		retire_country_leader = yes
+		add_country_leader_role = {
+			character = SPA_Salvador_Dali_Base
+			promote_leader = yes
+			country_leader = {
+				desc = "POLITICS_DALI_DESC"
+				ideology = surrealism
+				traits = {  }
+				expire = "1965.1.1.1"
+			}
+		}
+		country_event = {
+			id = spain_nf.3
+			days = 365
+		}
+	}
+}
+country_event = {
+	id = spain_nf.2
+	title = spain_nf.2.t
+	desc = spain_nf.2.desc
+	picture = GFX_report_event_spain_civil_war_soldiers
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	immediate = {
+		kill_country_leader = yes
+		set_party_name = {
+			ideology = anarchism
+			long_name = "Unión Social Hispánica"
+			name = "USH"
+		}
+		set_party_name = {
+			ideology = vanguard_socialism
+			long_name = "Juntas Ofensivas Nacional-Sindicalistas"
+			name = "JONS"
+		}
+		set_party_name = {
+			ideology = popular_socialism
+			long_name = "Falange Española Sindicalista"
+			name = "FES"
+		}
+		set_party_name = {
+			ideology = progressivism
+			long_name = "Union de Estudiantes"
+			name = "UE"
+		}
+		set_party_name = {
+			ideology = conservatism
+			long_name = "Asociación Nacional de Propagandistas Católicos"
+			name = "ANPC"
+		}
+		set_party_name = {
+			ideology = right_authoritarianism
+			long_name = "Falange Española Nacional"
+			name = "FEN"
+		}
+		set_party_name = {
+			ideology = despotism
+			long_name = "Falange Española Auténtica"
+			name = "FEA"
+		}
+		set_party_name = {
+			ideology = reactionism
+			long_name = "Reserva Espiritual de Occidente"
+			name = "REO"
+		}
+	}
+	option = {
+		name = spain_nf.2.a
+		ai_chance = { factor = 45 }
+		add_country_leader_role = {
+			character = SPA_Ruiz_de_Alda
+			promote_leader = yes
+			country_leader = {
+				desc = "POLITICS_RUIZ_DESC"
+				ideology = personalist_dictatorship
+				traits = {  }
+				expire = "1965.1.1.1"
+			}
+		}
+		add_popularity = {
+			ideology = despotism
+			popularity = 0.15
+		}
+		set_cosmetic_tag = SPA_hat
+	}
+	option = {
+		name = spain_nf.2.b
+		ai_chance = { factor = 25 }
+		set_politics = {
+			ruling_party = right_authoritarianism
+		}
+		add_country_leader_role = {
+			character = SPA_Agustin_de_Foxa
+			promote_leader = yes
+			country_leader = {
+				desc = "POLITICS_FOXA_DESC"
+				ideology = oligarchy
+				traits = {  }
+			}
+		}
+		add_popularity = {
+			ideology = right_authoritarianism
+			popularity = 0.15
+		}
+	}
+	option = {
+		name = spain_nf.2.c
+		ai_chance = { factor = 35 }
+		set_politics = {
+			ruling_party = popular_socialism
+		}
+		add_country_leader_role = {
+			character = SPA_Dionisio_Ridruejo
+			promote_leader = yes
+			country_leader = {
+				desc = "POLITICS_RIDRUEJO_DESC"
+				ideology = national_syndicalism
+				traits = {  }
+			}
+		}
+		add_popularity = {
+			ideology = popular_socialism
+			popularity = 0.15
+		}
+		set_cosmetic_tag = SPA_the_good_ending
+	}
+}
+country_event = {
+	id = spain_nf.3
+	title = spain_nf.3.t
+	desc = spain_nf.3.desc
+	picture = GFX_report_event_spain_civil_war_soldiers
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = spain_nf.3.a
+		ai_chance = { factor = 65 }
+		retire_country_leader = yes
+		add_country_leader_role = {
+			character = SPA_Salvador_Dali_surrealist
+			promote_leader = yes
+			country_leader = {
+				desc = "POLITICS_DALI_L_DESC"
+				ideology = surrealism
+				traits = {  }
+			}
+		}
+		set_cosmetic_tag = SPA_l_dali
+	}
+	option = {
+		name = spain_nf.3.b
+		ai_chance = { factor = 35 }
+		retire_country_leader = yes
+		add_country_leader_role = {
+			character = SPA_Salvador_Dali_monarchist
+			promote_leader = yes
+			country_leader = {
+				desc = "POLITICS_DALI_R_DESC"
+				ideology = national_rejuvenatism
+				traits = {  }
+			}
+		}
+		set_cosmetic_tag = SPA_r_dali
+	}
+}
+#REPUBLICAN EVENTS#
+country_event = {
+	id = spain_rep.1
+	title = spain_rep.1.t
+	desc = spain_rep.1.desc
+	picture = GFX_report_event_spain_civil_war_soldiers
+	#is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		NOT = {
+			has_cosmetic_tag = SPR_LENIN
+			OR = {
+    			has_government = popular_socialism
+  				has_government = vanguard_socialism
+  				has_government = accelerationism
+			}
+		}
+		tag = SPR
+		date > 1938.9.17
+	}
+	option = {
+		name = spain_rep.1.a
+		ai_chance = { factor = 20 }
+		set_politics = {
+			ruling_party = liberalism
+		}
+		country_event = {
+			id = spain_rep.2
+			days = 1460
+		}
+		add_popularity = {
+			ideology = liberalism
+			popularity = 0.15
+		}
+		news_event = {
+			id = news.200
+		}
+	}
+	option = {
+		name = spain_rep.1.b
+		ai_chance = { factor = 55 }
+		set_politics = {
+			ruling_party = revisionist_socialism
+		}
+		country_event = {
+			id = spain_rep.3
+			days = 1460
+		}
+		add_popularity = {
+			ideology = revisionist_socialism
+			popularity = 0.15
+		}
+		news_event = {
+			id = news.201
+		}
+	}
+	option = {
+		name = spain_rep.1.c
+		ai_chance = { factor = 25 }
+		country_event = {
+			id = spain_rep.4
+			days = 1460
+		}
+		add_popularity = {
+			ideology = progressivism
+			popularity = 0.15
+		}
+		news_event = {
+			id = news.199
+		}
+	}
+}
+country_event = {
+	id = spain_rep.2
+	title = spain_rep.2.t
+	desc = spain_rep.2.desc
+	picture = GFX_report_event_spain_civil_war_soldiers
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = spain_rep.2.a
+		ai_chance = { factor = 35 }
+		add_popularity = {
+			ideology = liberalism
+			popularity = 0.15
+		}
+		news_event = {
+			id = news.203
+		}
+	}
+	option = {
+		name = spain_rep.2.b
+		ai_chance = { factor = 65 }
+		set_politics = {
+			ruling_party = popular_socialism
+		}
+		set_cosmetic_tag = SPR_caballero
+		add_popularity = {
+			ideology = popular_socialism
+			popularity = 0.15
+		}
+		news_event = {
+			id = news.206
+		}
+	}
+}
+country_event = {
+	id = spain_rep.3
+	title = spain_rep.3.t
+	desc = spain_rep.3.desc
+	picture = GFX_report_event_spain_civil_war_soldiers
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = spain_rep.3.a
+		ai_chance = { factor = 25 }
+		add_popularity = {
+			ideology = revisionist_socialism
+			popularity = 0.15
+		}
+		news_event = {
+			id = news.204
+		}
+	}
+	option = {
+		name = spain_rep.3.b
+		ai_chance = { factor = 75 }
+		set_politics = {
+			ruling_party = conservatism
+		}
+		add_popularity = {
+			ideology = conservatism
+			popularity = 0.15
+		}
+		news_event = {
+			id = news.207
+		}
+	}
+}
+country_event = {
+	id = spain_rep.4
+	title = spain_rep.4.t
+	desc = spain_rep.4.desc
+	picture = GFX_report_event_spain_civil_war_soldiers
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = spain_rep.4.a
+		ai_chance = { factor = 30 }
+		add_popularity = {
+			ideology = progressivism
+			popularity = 0.15
+		}
+		news_event = {
+			id = news.202
+		}
+	}
+	option = {
+		name = spain_rep.4.b
+		ai_chance = { factor = 70 }
+		set_politics = {
+			ruling_party = right_authoritarianism
+		}
+		add_popularity = {
+			ideology = right_authoritarianism
+			popularity = 0.15
+		}
+		news_event = {
+			id = news.205
+		}
+	}
+}
+#COMMUNIST EVENTS#
+country_event = {
+	id = spain_pce.1
+	title = spain_pce.1.t
+	desc = spain_pce.1.desc
+	picture = GFX_report_event_spain_civil_war_soldiers
+	fire_only_once = yes
+	trigger = {
+		has_global_flag = spain_pce
+		TAG = SPR
+		date > 1941.9.16
+	}
+	option = {
+		name = spain_pce.1.a
+		ai_chance = { factor = 45 }
+		retire_country_leader = yes
+		add_country_leader_role = {
+			character = SPR_andreu_nin
+			promote_leader = yes
+			country_leader = {
+				desc = "POLITICS_NIN_DESC"
+				ideology = leninism
+				traits = {  }
+				expire = "1965.1.1.1"
+			}
+		}
+		add_popularity = {
+			ideology = vanguard_socialism
+			popularity = 0.15
+		}
+		set_cosmetic_tag = SPR_nin
+		news_event = {
+			id = news.208
+		}
+	}
+	option = {
+		name = spain_pce.1.b
+		ai_chance = { factor = 25 }
+		set_politics = {
+			ruling_party = popular_socialism
+		}
+		add_popularity = {
+			ideology = popular_socialism
+			popularity = 0.15
+		}
+		promote_character = SPR_julian_besteiro
+		set_cosmetic_tag = SPR_besteiro
+		news_event = {
+			id = news.209
+		}
+	}
+	option = {
+		name = spain_pce.1.c
+		ai_chance = { factor = 10 }
+		set_politics = {
+			ruling_party = accelerationism
+		}
+		add_popularity = {
+			ideology = accelerationism
+			popularity = 0.15
+		}
+		set_cosmetic_tag = SPR_hernandez
+		news_event = {
+			id = news.211
+		}
+	}
+	option = {
+		name = spain_pce.1.d
+		ai_chance = { factor = 20 }
+		retire_country_leader = yes
+		add_country_leader_role = {
+			character = SPR_vicente_uribe
+			promote_leader = yes
+			country_leader = {
+				desc = "POLITICS_URIBE_DESC"
+				ideology = social_republicanism
+				traits = {  }
+				expire = "1965.1.1.1"
+			}
+		}
+		add_popularity = {
+			ideology = vanguard_socialism
+			popularity = 0.15
+		}
+		set_cosmetic_tag = SPR_uribe
+		news_event = {
+			id = news.210
+		}
+	}
+}
+#FAI-CNT EVENTS#
+country_event = {
+	id = cnt.1
+	title = cnt.1.t
+	desc = cnt.1.desc
+	picture = GFX_report_event_spain_civil_war_soldiers
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = cnt.1.a
+		ai_chance = { factor = 25 }
+		retire_country_leader = yes
+		add_country_leader_role = {
+			character = CNT_Abraham_Guillen
+			promote_leader = yes
+			country_leader = {
+				desc = "POLITICS_GUILLEN_DESC"
+				ideology = social_anarchism
+				traits = {  }
+				expire = "1965.1.1.1"
+			}
+		}
+		hidden_effect = {
+			set_cosmetic_tag = CNT_mutualism
+		}
+	}
+	option = {
+		name = cnt.1.b
+		ai_chance = { factor = 30 }
+		retire_country_leader = yes
+		add_country_leader_role = {
+			character = CNT_Angel_Pestana
+			promote_leader = yes
+			country_leader = {
+				desc = "POLITICS_PESTANA_DESC"
+				ideology = social_anarchism
+				traits = {  }				
+				expire = "1965.1.1.1"
+				}
+		}
+		hidden_effect = {
+			set_cosmetic_tag = CNT_syndie
+			country_event = {
+				id = cnt.3
+				days = 365
+			}
+		}
+	}
+	option = {
+		name = cnt.1.c
+		ai_chance = { factor = 45 }
+	}
+}
+country_event = {
+	id = cnt.3
+	title = cnt.3.t
+	desc = cnt.3.desc
+	picture = GFX_report_event_spain_civil_war_soldiers
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = cnt.3.a
+		ai_chance = { factor = 20 }
+		retire_country_leader = yes
+		add_country_leader_role = {
+			character = CNT_Luys_Santa_Marina
+			promote_leader = yes
+			country_leader = {
+				desc = "POLITICS_SANTA_DESC"
+				ideology = national_anarchism
+				traits = {  }
+				expire = "1965.1.1.1"
+			}
+		}
+		set_cosmetic_tag = CNT_anfash
+	}
+	option = {
+		name = cnt.3.b
+		ai_chance = { factor = 80 }
+	}
+}

@@ -1,0 +1,81 @@
+add_namespace = sar
+
+country_event = {
+	id = sar.1 #the future of North Borneo
+	title = sar.1.t
+	desc = sar.1.desc
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = sar.1.a
+		SAR = {
+			drop_cosmetic_tag = yes
+			set_cosmetic_tag = SAR_Anthony
+			add_country_leader_role = {
+				character = "SAR_Anthony"
+				country_leader = {
+					ideology = constitutional_monarchy
+					expire = "1965.1.1.1"
+				}
+				promote_leader = yes
+			}
+			set_politics = {
+				ruling_party = despotism
+				elections_allowed = no
+				long_name = SAR_Anthony_despotism_party_long
+   	 			name = SAR_Anthony_despotism_party
+			}
+		}
+		every_state = {
+			limit = {
+				OR = {
+					state = 1210
+					state = 1211
+					state = 1212
+				}
+			}
+			add_core_of = SAR
+			transfer_state_to = SAR
+		}
+		news_event = {
+			id = news.312
+		}
+	}
+	option = {
+		name = sar.1.b
+		SAR = {
+			drop_cosmetic_tag = yes
+			set_cosmetic_tag = SAR_MacBryan
+			add_country_leader_role = {
+				character = "SAR_MacBryan"
+				country_leader = {
+					ideology = personalist_dictatorship
+					expire = "1965.1.1.1"
+				}
+				promote_leader = yes
+			}
+			set_politics = {
+				ruling_party = despotism
+				elections_allowed = no
+				long_name = SAR_MacBryan_despotism_party_long
+   	 			name = SAR_MacBryan_despotism_party
+			}
+		}
+		every_state = {
+			limit = {
+				OR = {
+					state = 1210
+					state = 1211
+					state = 1212
+				}
+			}
+			add_core_of = SAR
+			transfer_state_to = SAR
+		}
+		news_event = {
+			id = news.313
+		}
+	}
+}

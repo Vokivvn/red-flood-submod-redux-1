@@ -1,0 +1,27 @@
+state= {
+	id=796
+	name="STATE_796"
+	manpower = 372235
+
+	state_category = town
+
+	history=
+	{
+		owner = DEN
+		victory_points = {
+			6364 3
+		}
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+		}
+		add_core_of = DEN
+		add_claim_by = GER
+		add_claim_by = PRS
+		add_claim_by = ICE
+	}
+	provinces=
+	{
+		332 11251
+	}
+}

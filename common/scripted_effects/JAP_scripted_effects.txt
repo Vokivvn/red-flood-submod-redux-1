@@ -1,0 +1,798 @@
+JAP_civil_war = {
+	set_global_flag = JAP_revolution
+	every_state = {
+		limit = {
+			OR = {
+				state = 536
+				state = 282
+				state = 904
+				state = 903
+				state = 908
+				state = 907
+				state = 531
+				state = 532
+			}
+		}
+		add_core_of = JPR
+	}
+	every_state = {
+		limit = {
+			is_core_of = JPR
+		}
+		JPR  = { transfer_state = PREV }
+	}
+	JPR = {
+		declare_war_on = {
+			target = JAP
+			type = annex_everything
+		}
+		hidden_effect = {
+			set_country_flag = red_sun_rising 
+			inherit_technology = JAP
+			set_province_controller = 6994 #Small error log fix to stop JPR unit in JAP territory being flagged
+
+			### Templates ###
+			division_template = {
+				name = "Red Guard"
+				division_names_group = JAP_INF_01
+			
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 0 y = 2 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+					infantry = { x = 1 y = 2 }
+				}
+			}
+			division_template = {
+				name = "Mounted Police Defectors" 				# Cavalry
+				division_names_group = JAP_CAV_01
+				regiments = {
+					cavalry = { x = 0 y = 0 }
+					cavalry = { x = 0 y = 1 }
+					cavalry = { x = 0 y = 2 }
+					cavalry = { x = 0 y = 2 }
+					cavalry = { x = 1 y = 0 }
+				}
+				support = {
+					military_police = { x = 0 y = 0 }
+				}
+			}
+			division_template = {
+				name = "Red Sailors" 				# Marines
+				division_names_group = JAP_INF_01
+				regiments = {
+					marine = { x = 0 y = 0 }
+					marine = { x = 0 y = 1 }
+					marine = { x = 0 y = 2 }
+					marine = { x = 0 y = 3 }
+				}
+			}
+
+			### Units ###
+			random_owned_controlled_state = {
+				prioritize = { 1288 }
+				create_unit = {
+					division = "name = \"Yokosuka Sailors\" division_template = \"Red Sailors\" start_experience_factor = 0.20 start_equipment_factor = 1.0"
+					prioritize_location = 9998 #Yokohama
+					owner = JPR
+					allow_spawning_on_enemy_provs = yes
+				}
+				create_unit = {
+					division = "division_template = \"Red Guard\" start_experience_factor = 0.1 start_equipment_factor = 0.7"
+					prioritize_location = 9998 #Yokohama
+					owner = JPR
+					count = 6
+					allow_spawning_on_enemy_provs = yes
+				}
+			}
+			random_owned_controlled_state = {
+				prioritize = { 282 }
+				create_unit = {
+					division = "division_template = \"Mounted Police Defectors\" start_experience_factor = 0.1 start_equipment_factor = 1.0"
+					prioritize_location = 1182 #tokyo
+					owner = JPR
+					count = 2
+					allow_spawning_on_enemy_provs = yes
+				}
+				create_unit = {
+					division = "division_template = \"Red Guard\" start_experience_factor = 0.1 start_equipment_factor = 0.7"
+					prioritize_location =  1182 #tokyo
+					owner = JPR
+					count = 6
+					allow_spawning_on_enemy_provs = yes
+				}
+				create_unit = {
+					division = "name = \"Tokyo Sailors\" division_template = \"Red Sailors\" start_experience_factor = 0.25 start_equipment_factor = 0.8"
+					prioritize_location = 1182 #tokyo
+					owner = JPR
+					allow_spawning_on_enemy_provs = yes
+				}
+			}
+			random_owned_controlled_state = {
+				prioritize = { 1286 }
+				create_unit = {
+					division = "division_template = \"Mounted Police Defectors\" start_experience_factor = 0.1 start_equipment_factor = 1.0"
+					prioritize_location =  10125 #nagoya
+					owner = JPR
+					allow_spawning_on_enemy_provs = yes
+				}
+				create_unit = {
+					division = "division_template = \"Red Guard\" start_experience_factor = 0.1 start_equipment_factor = 0.7"
+					prioritize_location =  10125 #nagoya
+					owner = JPR
+					allow_spawning_on_enemy_provs = yes
+				}
+			}
+			random_owned_controlled_state = {
+				prioritize = { 531 }
+				create_unit = {
+					division = "division_template = \"Mounted Police Defectors\" start_experience_factor = 0.1 start_equipment_factor = 1.0"
+					prioritize_location =  7072 #Osaka
+					owner = JPR
+					allow_spawning_on_enemy_provs = yes
+				}
+				create_unit = {
+					division = "division_template = \"Red Guard\" start_experience_factor = 0.1 start_equipment_factor = 0.7"
+					prioritize_location =  7072 #Osaka
+					owner = JPR
+					allow_spawning_on_enemy_provs = yes
+				}
+				create_unit = {
+					division = "name = \"Osaka Sailors\" division_template = \"Red Sailors\" start_experience_factor = 0.25 start_equipment_factor = 0.8"
+					prioritize_location =  7072 #Osaka
+					owner = JPR
+					allow_spawning_on_enemy_provs = yes
+				}
+			}
+			random_owned_controlled_state = {
+				prioritize = { 908 }
+				create_unit = {
+					division = "division_template = \"Mounted Police Defectors\" start_experience_factor = 0.1 start_equipment_factor = 1.0"
+					prioritize_location =  11949 #Kagoshima
+					owner = JPR
+					allow_spawning_on_enemy_provs = yes
+				}
+				create_unit = {
+					division = "division_template = \"Red Guard\" start_experience_factor = 0.1 start_equipment_factor = 0.7"
+					prioritize_location =  4102	#Kagoshima
+					owner = JPR
+					count = 2
+					allow_spawning_on_enemy_provs = yes
+				}
+			}
+			random_owned_controlled_state = {
+				prioritize = { 1276 }
+				create_unit = {
+					division = "division_template = \"Mounted Police Defectors\" start_experience_factor = 0.1 start_equipment_factor = 1.0"
+					prioritize_location =  1092 #Hirsoshima
+					owner = JPR
+					allow_spawning_on_enemy_provs = yes
+				}
+				create_unit = {
+					division = "division_template = \"Red Guard\" start_experience_factor = 0.1 start_equipment_factor = 0.7"
+					prioritize_location =  1092 #Hirsoshima
+					owner = JPR
+					count = 3
+					allow_spawning_on_enemy_provs = yes
+				}
+			}
+			random_owned_controlled_state = {
+				prioritize = { 1290 }
+				create_unit = {
+					division = "division_template = \"Red Guard\" start_experience_factor = 0.1 start_equipment_factor = 0.7"
+					prioritize_location =  4000 #maebashi
+					owner = JPR
+					count = 2
+					allow_spawning_on_enemy_provs = yes
+				}
+			}
+			random_owned_controlled_state = {
+				prioritize = { 532 }
+				create_unit = {
+					division = "division_template = \"Red Guard\" start_experience_factor = 0.1 start_equipment_factor = 0.7"
+					prioritize_location =  7087 #shizuoka
+					owner = JPR
+					count = 2
+					allow_spawning_on_enemy_provs = yes
+				}
+			}
+			random_owned_controlled_state = {
+				prioritize = { 532 }
+				create_unit = {
+					division = "division_template = \"Red Guard\" start_experience_factor = 0.1 start_equipment_factor = 0.7"
+					prioritize_location =  6994 #aomori
+					owner = JPR
+					allow_spawning_on_enemy_provs = yes
+				}
+				create_unit = {
+					division = "name = \"Aomori Sailors\" division_template = \"Red Sailors\" start_experience_factor = 0.25 start_equipment_factor = 0.8"
+					prioritize_location =  9859 #aomori-mutsu
+					owner = JPR
+					allow_spawning_on_enemy_provs = yes
+				}
+			}
+			random_owned_controlled_state = {
+				prioritize = { 536 }
+				create_unit = {
+					division = "division_template = \"Red Guard\" start_experience_factor = 0.1 start_equipment_factor = 0.7"
+					prioritize_location =  3962 #hakodate
+					owner = JPR
+					allow_spawning_on_enemy_provs = yes
+				}
+			}
+			random_owned_controlled_state = {
+				prioritize = { 536 }
+				create_unit = {
+					division = "division_template = \"Red Guard\" start_experience_factor = 0.1 start_equipment_factor = 0.7"
+					prioritize_location =  12421 #asahikawa
+					owner = JPR
+					count = 2
+					allow_spawning_on_enemy_provs = yes
+				}
+				create_unit = {
+					division = "division_template = \"Red Guard\" start_experience_factor = 0.1 start_equipment_factor = 0.7"
+					prioritize_location =  10444 #sapporo
+					owner = JPR
+					allow_spawning_on_enemy_provs = yes
+				}
+				create_unit = {
+					division = "division_template = \"Mounted Police Defectors\" start_experience_factor = 0.1 start_equipment_factor = 1.0"
+					prioritize_location =  1092 #Hirsoshima
+					owner = JPR
+					allow_spawning_on_enemy_provs = yes
+				}
+				create_unit = {
+					division = "name = \"Aomori Sailors\" division_template = \"Red Sailors\" start_experience_factor = 0.25 start_equipment_factor = 0.8"
+					prioritize_location =  9859 #aomori-mutsu
+					owner = JPR
+					allow_spawning_on_enemy_provs = yes
+				}
+			}
+			#load_oob = "JPR_civil_war"
+			every_state = {
+				limit = {
+					is_owned_by = JAP
+					is_core_of = JAP
+				}
+				add_core_of = JPR
+			}
+		}
+	}
+	JAP = {
+		every_country = {
+			limit = {
+				OR = {
+					tag = KOR
+					tag = MAN
+					tag = DAI
+					tag = MRS
+				}
+			}
+			JAP = {
+				set_autonomy = {
+					target = PREV
+					autonomy_state = autonomy_free
+				}
+			}
+		}
+		every_country = {
+			limit = {
+				OR = {
+					tag = MAN
+					tag = BYJ
+					tag = KOR
+					tag = SMC
+				}
+			}
+			diplomatic_relation = {
+				country = PREV
+				relation = military_access
+				active = yes
+			}
+		}
+		#Capital ships
+		transfer_ship = {
+			type = battleship
+			target = JPR
+		}
+		transfer_ship = {
+			type = battle_cruiser
+			target = JPR
+		}
+		transfer_ship = {
+			type = battleship
+			target = JPR
+		}
+		transfer_ship = {
+			type = battleship
+			target = JPR
+		}
+		transfer_ship = {
+			type = battleship
+			target = JPR
+		}
+		transfer_ship = {
+			type = battleship
+			target = JPR
+		}
+		#HCs
+		transfer_ship = {
+			type = heavy_cruiser
+			target = JPR
+		}
+		transfer_ship = {
+			type = heavy_cruiser
+			target = JPR
+		}
+		transfer_ship = {
+			type = heavy_cruiser
+			target = JPR
+		}
+		transfer_ship = {
+			type = heavy_cruiser
+			target = JPR
+		}
+		#LCs
+		transfer_ship = {
+			type = light_cruiser
+			target = JPR
+		}
+		transfer_ship = {
+			type = light_cruiser
+			target = JPR
+		}
+		transfer_ship = {
+			type = light_cruiser
+			target = JPR
+		}
+		transfer_ship = {
+			type = light_cruiser
+			target = JPR
+		}
+		transfer_ship = {
+			type = light_cruiser
+			target = JPR
+		}
+		transfer_ship = {
+			type = light_cruiser
+			target = JPR
+		}
+		transfer_ship = {
+			type = light_cruiser
+			target = JPR
+		}
+		transfer_ship = {
+			type = light_cruiser
+			target = JPR
+		}
+		transfer_ship = {
+			type = light_cruiser
+			target = JPR
+		}
+		transfer_ship = {
+			type = light_cruiser
+			target = JPR
+		}
+		transfer_ship = {
+			type = light_cruiser
+			target = JPR
+		}
+		transfer_ship = {
+			type = light_cruiser
+			target = JPR
+		}
+		#destroyers
+		transfer_ship = {
+			type = destroyer
+			target = JPR
+		}
+		transfer_ship = {
+			type = destroyer
+			target = JPR
+		}
+		transfer_ship = {
+			type = destroyer
+			target = JPR
+		}
+		transfer_ship = {
+			type = destroyer
+			target = JPR
+		}
+		transfer_ship = {
+			type = destroyer
+			target = JPR
+		}
+		transfer_ship = {
+			type = destroyer
+			target = JPR
+		}
+		transfer_ship = {
+			type = destroyer
+			target = JPR
+		}
+		transfer_ship = {
+			type = destroyer
+			target = JPR
+		}
+		transfer_ship = {
+			type = destroyer
+			target = JPR
+		}
+		transfer_ship = {
+			type = destroyer
+			target = JPR
+		}
+		transfer_ship = {
+			type = destroyer
+			target = JPR
+		}
+		transfer_ship = {
+			type = destroyer
+			target = JPR
+		}
+		transfer_ship = {
+			type = destroyer
+			target = JPR
+		}
+		transfer_ship = {
+			type = destroyer
+			target = JPR
+		}
+		transfer_ship = {
+			type = destroyer
+			target = JPR
+		}
+		transfer_ship = {
+			type = destroyer
+			target = JPR
+		}
+		transfer_ship = {
+			type = destroyer
+			target = JPR
+		}
+		transfer_ship = {
+			type = destroyer
+			target = JPR
+		}
+		transfer_ship = {
+			type = destroyer
+			target = JPR
+		}
+		transfer_ship = {
+			type = destroyer
+			target = JPR
+		}
+		transfer_ship = {
+			type = destroyer
+			target = JPR
+		}
+		transfer_ship = {
+			type = destroyer
+			target = JPR
+		}
+		transfer_ship = {
+			type = destroyer
+			target = JPR
+		}
+		transfer_ship = {
+			type = destroyer
+			target = JPR
+		}
+		transfer_ship = {
+			type = destroyer
+			target = JPR
+		}
+		transfer_ship = {
+			type = destroyer
+			target = JPR
+		}
+		transfer_ship = {
+			type = destroyer
+			target = JPR
+		}
+		transfer_ship = {
+			type = destroyer
+			target = JPR
+		}
+		transfer_ship = {
+			type = destroyer
+			target = JPR
+		}
+		transfer_ship = {
+			type = destroyer
+			target = JPR
+		}
+		transfer_ship = {
+			type = destroyer
+			target = JPR
+		}
+		transfer_ship = {
+			type = destroyer
+			target = JPR
+		}
+		transfer_ship = {
+			type = destroyer
+			target = JPR
+		}
+		transfer_ship = {
+			type = destroyer
+			target = JPR
+		}
+		transfer_ship = {
+			type = destroyer
+			target = JPR
+		}
+		transfer_ship = {
+			type = destroyer
+			target = JPR
+		}
+		transfer_ship = {
+			type = destroyer
+			target = JPR
+		}
+		transfer_ship = {
+			type = destroyer
+			target = JPR
+		}
+		transfer_ship = {
+			type = destroyer
+			target = JPR
+		}
+		transfer_ship = {
+			type = destroyer
+			target = JPR
+		}
+		transfer_ship = {
+			type = destroyer
+			target = JPR
+		}
+		transfer_ship = {
+			type = destroyer
+			target = JPR
+		}
+		transfer_ship = {
+			type = destroyer
+			target = JPR
+		}
+		transfer_ship = {
+			type = destroyer
+			target = JPR
+		}
+		transfer_ship = {
+			type = destroyer
+			target = JPR
+		}
+		transfer_ship = {
+			type = destroyer
+			target = JPR
+		}
+		transfer_ship = {
+			type = destroyer
+			target = JPR
+		}
+		transfer_ship = {
+			type = destroyer
+			target = JPR
+		}
+		transfer_ship = {
+			type = destroyer
+			target = JPR
+		}
+		transfer_ship = {
+			type = destroyer
+			target = JPR
+		}
+		transfer_ship = {
+			type = destroyer
+			target = JPR
+		}
+		transfer_ship = {
+			type = destroyer
+			target = JPR
+		}
+		transfer_ship = {
+			type = destroyer
+			target = JPR
+		}
+		transfer_ship = {
+			type = destroyer
+			target = JPR
+		}
+		transfer_ship = {
+			type = destroyer
+			target = JPR
+		}
+		transfer_ship = {
+			type = destroyer
+			target = JPR
+		}
+		transfer_ship = {
+			type = destroyer
+			target = JPR
+		}
+		transfer_ship = {
+			type = destroyer
+			target = JPR
+		}
+		transfer_ship = {
+			type = destroyer
+			target = JPR
+		}
+		#subs
+		transfer_ship = {
+			type = submarine
+			target = JPR
+		}
+		transfer_ship = {
+			type = submarine
+			target = JPR
+		}
+		transfer_ship = {
+			type = submarine
+			target = JPR
+		}
+		transfer_ship = {
+			type = submarine
+			target = JPR
+		}
+		transfer_ship = {
+			type = submarine
+			target = JPR
+		}
+		transfer_ship = {
+			type = submarine
+			target = JPR
+		}
+		transfer_ship = {
+			type = submarine
+			target = JPR
+		}
+		transfer_ship = {
+			type = submarine
+			target = JPR
+		}
+		transfer_ship = {
+			type = submarine
+			target = JPR
+		}
+		transfer_ship = {
+			type = submarine
+			target = JPR
+		}
+		transfer_ship = {
+			type = submarine
+			target = JPR
+		}
+		transfer_ship = {
+			type = submarine
+			target = JPR
+		}
+		transfer_ship = {
+			type = submarine
+			target = JPR
+		}
+		transfer_ship = {
+			type = submarine
+			target = JPR
+		}
+		transfer_ship = {
+			type = submarine
+			target = JPR
+		}
+		transfer_ship = {
+			type = submarine
+			target = JPR
+		}
+		transfer_ship = {
+			type = submarine
+			target = JPR
+		}
+		transfer_ship = {
+			type = submarine
+			target = JPR
+		}
+		transfer_ship = {
+			type = submarine
+			target = JPR
+		}
+		
+		#country_event = { #Event The Beijing peace emergency proposal				# EVENT HAS BEEN COMMENTED OUT
+		#	id = japan.21
+		#	hours = 3
+		#}
+		country_event = japan.22 #Event: peace between puppets and BYJ
+		country_event = {
+			id = japan.23 #Event: colonies break away
+			hours = 12
+		}
+	}
+	DAI = {
+		drop_cosmetic_tag = yes
+		remove_ideas = DAI_acolonialstate
+		remove_ideas = DAI_united
+		country_event = {
+			id = dainam.1
+			days = 10
+		}
+	}
+	country_event = { days = 7 id = japan.25 }
+	KOR = {
+		country_event = {
+			id = kor.100
+			days = 14
+		}
+	}
+}
+
+JAP_interservice_rivalry_towards_army = {
+	
+	if = {
+		limit = {  has_idea = JAP_interservice_rivalry_army_strengthened }
+		swap_ideas = {
+			remove_idea = JAP_interservice_rivalry_army_strengthened
+			add_idea = JAP_interservice_rivalry_army_dominant
+		}
+	}
+
+	if = {
+		limit = { has_idea = JAP_interservice_rivalry_balanced }
+		swap_ideas = {
+			remove_idea = JAP_interservice_rivalry_balanced
+			add_idea = JAP_interservice_rivalry_army_strengthened
+		}
+	}
+
+	if = {
+		limit = { has_idea = JAP_interservice_rivalry_navy_strengthened }
+		swap_ideas = {
+			remove_idea = JAP_interservice_rivalry_navy_strengthened
+			add_idea = JAP_interservice_rivalry_balanced
+		}
+	}
+
+	if = {
+		limit = { has_idea = JAP_interservice_rivalry_navy_dominant }
+		swap_ideas = {
+			remove_idea = JAP_interservice_rivalry_navy_dominant
+			add_idea = JAP_interservice_rivalry_navy_strengthened
+		}
+	}
+
+}
+
+JAP_interservice_rivalry_towards_navy = {
+
+	if = {
+		limit = { has_idea = JAP_interservice_rivalry_navy_strengthened }
+		swap_ideas = {
+			remove_idea = JAP_interservice_rivalry_navy_strengthened
+			add_idea = JAP_interservice_rivalry_navy_dominant
+		}
+	}	
+	if = {
+		limit = { has_idea = JAP_interservice_rivalry_balanced }
+		swap_ideas = {
+			remove_idea = JAP_interservice_rivalry_balanced
+			add_idea = JAP_interservice_rivalry_navy_strengthened
+		}
+	}
+	if = {
+		limit = { has_idea = JAP_interservice_rivalry_army_strengthened }
+		swap_ideas = {
+			remove_idea = JAP_interservice_rivalry_army_strengthened
+			add_idea = JAP_interservice_rivalry_balanced
+		}
+	}
+	if = {
+		limit = { has_idea = JAP_interservice_rivalry_army_dominant }
+		swap_ideas = {
+			remove_idea = JAP_interservice_rivalry_army_dominant
+			add_idea = JAP_interservice_rivalry_army_strengthened
+		}
+	}
+	
+	
+	
+}

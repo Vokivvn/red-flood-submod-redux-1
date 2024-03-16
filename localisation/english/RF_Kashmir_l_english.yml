@@ -1,0 +1,39 @@
+﻿l_english:
+#COUNTRY NAME#
+
+#PARTIES#
+KSM_vanguard_socialism_party:0 "CPoI - L"
+KSM_popular_socialism_party:0 "CPoI - S"
+KSM_anarchism_party:0 "Anarchist Factions"
+KSM_revisionist_socialism_party:0 "Agrarian Factions"
+KSM_progressivism_party:0 "JKNC - S"
+KSM_liberalism_party:0 "JKNC - L"
+KSM_conservatism_party:0 "AJKMC"
+KSM_right_authoritarianism_party:0 "ML"
+KSM_despotism_party:0 "Konstantin's Clique"
+KSM_reactionism_party:0 "AK"
+KSM_accelerationism_party:0 "KRA"
+
+KSM_vanguard_socialism_party_long:0 "Communist Party of India - Leninist"
+KSM_popular_socialism_party_long:0 "Communist Party of India - Spartakist"
+KSM_anarchism_party_long:0 "Anarchist Factions"
+KSM_revisionist_socialism_party_long:0 "Agrarian Factions"
+KSM_progressivism_party_long:0 "Jammu & Kashmir National Conference - Socialist"
+KSM_liberalism_party_long:0 "Jammu & Kashmir National Conference Liberal"
+KSM_conservatism_party_long:0 "All Jammu and Kashmir Muslim Conference"
+KSM_right_authoritarianism_party_long:0 "Maharaja Loyalists"
+KSM_despotism_party_long:0 "Kashmir Military Government"
+KSM_reactionism_party_long:0 "Azad Kashmir"
+KSM_accelerationism_party_long:0 "Kashmiri Revival Association"
+#LEADER DESCRIPTIONS#
+POLITICS_Konstantin_Petrovich_Nechaev_DESC:0 "Konstantin Petrovich Nechaev travelled a long and dangerous path to become the military dictator and undisputed ruler of Jammu and Kashmir. Originally an officer of the Imperial Russian Army, it wasnt long until he and his band of merry men defected to the other side of the gun barrel in Harbin. It would be pointless trying to add some ideological or moral justification to that decision however, as Konstantin eventually found service under various militias and companies that had enough to spare to fund his presence. Seeing great opportunity in the ongoing conflict in China, he and his mercenary following amassed from spoils of war soon discovered a great ally in the late warlord Yan Xishan who had need for every man in the struggle against Zhang Zuolin. The Russians proved themselves useful, bringing Yan closer to his eventual takeover of the Beiyang government. Such effort shouldnt go unrewarded, but Konstantin had a more valuable offer than a warm spot in the republics bureocracy. Bidding Yan Xishan farewell, he left all the way through Asia for the Princely state of Jammu Kashmir. Seeing how weak the Princes authority was after the withdrawal of british force, the mercenaries faced little opposition in claiming the land as their own. Now with Kashmir under his firm control, Konstantin hopes to further his need for wealth and glory through any (albeit lot of times questionable) means. After all why not? It doesnt look like anyone who could ruin his little bandit kingdom will be showing up soon. Externally that is..."
+#IDEAS#
+RAJ_shared_economy:0 "Collapse of the Raj"
+RAJ_shared_economy_desc:0 "The Collapse of the British Raj has seen chaos and strife reign supreme in India as the Princely realms have disintegrated and warlordism replace it. Famine, disease, conflict and anarchy make mustering an army a challenge."
+KSM_religious_division:0 "Religious Divisions"
+KSM_religious_division_desc:0 "Kashmir is a country with significant numbers of both Hindus and Muslims. The politicisation of Indian religious identity has made the country unstable, as the people are drawn more and more towards the national sentiments of their brothers and sisters in faith, as opposed to the regional fraternity with their neighbours."
+KSM_mountain_fortress:0 "Mountain Fortress"
+KSM_mountain_fortress_desc:0 "Kashmir's natural defences make it a difficult region to conquer, mountains and narrow passes dominate the region, and the altitude makes intruders from low-lying areas tire more quickly than the hardy locals."
+#CUSTOM TOOLTIPS AND FLAGS#
+#DECISIONS (1.5 Update)#
+#FOCUSES#

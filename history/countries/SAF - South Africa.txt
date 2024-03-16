@@ -1,0 +1,109 @@
+﻿capital = 953
+set_research_slots = 3 
+set_convoys = 175
+
+oob = "SAF"
+if = { limit = { has_dlc = "By Blood Alone" } set_air_oob = "SAF_air" }
+if = { limit = {  NOT = { has_dlc = "By Blood Alone" } }  set_air_oob = "SAF_air_legacy" }
+
+set_technology = {
+infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1		
+	tech_recon = 1
+	tech_engineers = 1
+	tech_trucks =1
+	motorised_infantry = 1
+	gw_artillery = 1
+	fuel_silos = 1
+}
+if = {
+	limit = { has_dlc = "No Step Back" }
+	set_technology = {
+		gwtank_chassis = 1
+	}
+}
+if = {
+	limit = { NOT = { has_dlc = "No Step Back" } }
+	set_technology = {
+		basic_light_tank = 1
+	}
+}
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+	set_technology = {
+		iw_small_airframe = 1
+		aa_lmg = 1
+		aa_cannon_1 = 1
+		early_bombs = 1
+		engines_1 = 1
+	}
+}
+if = {
+	limit = { NOT = { has_dlc = "By Blood Alone" } }
+	set_technology = {
+		early_fighter = 1
+		CAS1 = 1
+	}
+}
+if = {
+	limit = {
+		not = { has_dlc = "Man the Guns" }
+	}
+	set_technology = {
+		early_destroyer = 1
+		transport = 1
+	}
+}
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_technology = {
+		early_ship_hull_light = 1
+		basic_battery = 1
+		basic_torpedo = 1
+		mtg_transport = 1
+	}
+}
+
+add_to_tech_sharing_group = anglo_technology
+
+set_politics = {
+	ruling_party = conservatism
+	last_election = "1932.2.10"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	vanguard_socialism = 0
+	popular_socialism = 0
+	anarchism = 0
+	revisionist_socialism = 9
+	progressivism = 18
+	liberalism = 22
+	conservatism = 30
+	right_authoritarianism = 21
+	despotism = 0
+	reactionism = 0
+	accelerationism = 0
+}
+
+recruit_character = SAF_Roos
+recruit_character = SAF_Madeley
+recruit_character = SAF_Smuts
+recruit_character = SAF_Havenga
+recruit_character = SAF_Edwin
+recruit_character = SAF_Eddie
+recruit_character = SAF_Kadalie
+recruit_character = SAF_Sobhuza
+recruit_character = SAF_George
+recruit_character = SAF_Brink
+recruit_character = SAF_Ryneveld
+recruit_character = SAF_Byers
+recruit_character = SAF_Klopper
+recruit_character = SAF_du_Toit
+
+
+
+

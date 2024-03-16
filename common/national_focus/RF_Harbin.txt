@@ -1,0 +1,429 @@
+##################
+#####-HARBIN-#####
+####-REWORKED-####
+##################
+focus_tree = {
+	id = HAR
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = HAR
+		}
+	}
+	
+	continuous_focus_position = { x = 2000 y = 0 }
+	
+	focus = {
+		id = HAR_walking_in_the_ashes
+		icon = GFX_HAR_walking_in_the_ashes
+		cost = 5
+		
+		x = 10
+		y = 0
+		
+		completion_reward = { 
+			add_political_power = -50
+			set_country_flag = organize_mongolia
+			add_stability = -0.15
+		}
+	}
+	focus = {
+		id = HAR_most_unlikely_alliance
+		icon = GFX_HAR_most_unlikely_alliance
+		cost = 5
+		relative_position_id = HAR_walking_in_the_ashes
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = HAR_walking_in_the_ashes
+		}
+		completion_reward = { 
+			add_popularity = {
+				ideology = popular_socialism
+				popularity = 0.10
+			}
+			add_popularity = {
+				ideology = anarchism
+				popularity = 0.10
+			}
+			country_event = HAR.30
+		}
+	}
+	focus = {
+		id = HAR_anarchy_mother_of_order
+		icon = GFX_HAR_anarchy_mother_of_order
+		cost = 5
+		relative_position_id = HAR_most_unlikely_alliance
+		x = 0
+		y = 2
+		prerequisite = {
+			focus = HAR_most_unlikely_alliance
+		}
+		completion_reward = { 
+			add_ideas = HAR_emergent_order_1
+			add_stability = 0.10
+		}
+	}
+	focus = {
+		id = HAR_no_limits_to_creativity
+		icon = GFX_HAR_no_limits_to_creativity
+		cost = 5
+		relative_position_id = HAR_anarchy_mother_of_order
+		x = -1
+		y = 1
+		prerequisite = {
+			focus = HAR_anarchy_mother_of_order
+		}
+		completion_reward = { 
+			if = {
+				limit = {
+					has_idea = HAR_emergent_order_1
+				}
+				swap_ideas = {
+					add_idea = HAR_emergent_order_2
+					remove_idea = HAR_emergent_order_1
+				}
+			}
+			else = {
+				swap_ideas = {
+					add_idea = HAR_emergent_order_3
+					remove_idea = HAR_emergent_order_2
+				}	
+			}
+		}
+	}
+	focus = {
+		id = HAR_everyone_but_parasites
+		icon = GFX_HAR_everyone_but_parasites
+		cost = 5
+		relative_position_id = HAR_anarchy_mother_of_order
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = HAR_anarchy_mother_of_order
+		}
+		completion_reward = { 
+			if = {
+				limit = {
+					has_idea = HAR_emergent_order_1
+				}
+				swap_ideas = {
+					add_idea = HAR_emergent_order_2
+					remove_idea = HAR_emergent_order_1
+				}
+			}
+			else = {
+				swap_ideas = {
+					add_idea = HAR_emergent_order_3
+					remove_idea = HAR_emergent_order_2
+				}	
+			}
+		}
+	}
+	focus = {
+		id = HAR_perfection_without_center
+		icon = GFX_HAR_perfection_without_center
+		cost = 5
+		relative_position_id = HAR_everyone_but_parasites
+		x = -1
+		y = 1
+		prerequisite = {
+			focus = HAR_everyone_but_parasites
+		}
+		prerequisite = {
+			focus = HAR_no_limits_to_creativity
+		}
+		completion_reward = { 
+			swap_ideas = {
+				add_idea = HAR_emergent_order_4
+				remove_idea = HAR_emergent_order_3
+			}
+			add_offsite_building = { 
+				type = industrial_complex 
+				level = 2
+			}
+			add_offsite_building = { 
+				type = arms_factory 
+				level = 2
+			}
+		}
+	}
+	focus = {
+		id = HAR_union_man
+		icon = GFX_HAR_union_man
+		cost = 0
+		relative_position_id = HAR_most_unlikely_alliance
+		x = -3
+		y = 1
+		prerequisite = {
+			focus = HAR_most_unlikely_alliance
+		}
+		available = { 
+			has_country_leader = { 
+				character = HAR_alexei_gastev
+				ruling_only = yes 
+			}
+		}
+		mutually_exclusive = {
+			focus = HAR_business_woman
+		}
+		completion_reward = { 
+		}
+	}
+	focus = {
+		id = HAR_beauty_of_class_struggle
+		icon = GFX_HAR_beauty_of_class_struggle
+		cost = 5
+		relative_position_id = HAR_union_man
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = HAR_union_man
+		}
+		completion_reward = { 
+			add_popularity = {
+				ideology = popular_socialism
+				popularity = 0.15
+			}
+			add_stability = 0.15
+			add_ideas = HAR_class_struggle
+		}
+	}
+	focus = {
+		id = HAR_creative_market
+		icon = GFX_HAR_creative_market
+		cost = 5
+		relative_position_id = HAR_beauty_of_class_struggle
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = HAR_beauty_of_class_struggle
+		}
+		completion_reward = { 
+			add_ideas = HAR_new_market
+		}
+	}
+	focus = {
+		id = HAR_ceaseless_speed_of_industry
+		icon = GFX_HAR_ceaseless_speed_of_industry
+		cost = 5
+		relative_position_id = HAR_union_man
+		x = -2
+		y = 1
+		prerequisite = {
+			focus = HAR_union_man
+		}
+		completion_reward = { 
+			add_ideas = HAR_mechanical_speed
+		}
+	}
+	focus = {
+		id = HAR_siberian_fantasy
+		icon = GFX_HAR_siberian_fantasy
+		cost = 5
+		relative_position_id = HAR_creative_market
+		x = -1
+		y = 1
+		prerequisite = {
+			focus = HAR_creative_market
+		}
+		prerequisite = {
+			focus = HAR_ceaseless_speed_of_industry
+		}
+		completion_reward = { 
+			add_offsite_building = { 
+				type = industrial_complex 
+				level = 1
+			}
+			add_offsite_building = { 
+				type = arms_factory 
+				level = 1
+			}
+			add_ideas = HAR_extraction
+		}
+	}
+	focus = {
+		id = HAR_revolution_everywhere
+		icon = GFX_HAR_revolution_everywhere
+		cost = 5
+		relative_position_id = HAR_siberian_fantasy
+		x = 4
+		y = 1
+		prerequisite = {
+			focus = HAR_siberian_fantasy
+			focus = HAR_anarchy_action
+		}
+		prerequisite = {
+			focus = HAR_perfection_without_center
+		}
+		will_lead_to_war_with = GUK
+		will_lead_to_war_with = MNS
+		will_lead_to_war_with = PRI
+		will_lead_to_war_with = PSL
+		will_lead_to_war_with = ARC
+		will_lead_to_war_with = FCR
+		completion_reward = { 
+			create_wargoal = {
+				type = annex_everything
+				target = GUK
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = MNS
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = PRI
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = PSL
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = ARC
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = FCR
+			}
+		}
+	}
+	focus = {
+		id = HAR_push_north
+		icon = GFX_HAR_push_north
+		cost = 5
+		relative_position_id = HAR_revolution_everywhere
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = HAR_revolution_everywhere
+		}
+		available = {
+			owns_state = 978
+			owns_state = 408 
+			owns_state = 560 
+			owns_state = 761
+			owns_state = 561
+		}
+		completion_reward = { 
+			add_political_power = 50
+			custom_effect_tooltip = HAR_we_have_highground
+			unlock_decision_category_tooltip = Russian_unification_decisions_socialist
+		}
+	}
+	focus = {
+		id = HAR_liberate_homeland
+		icon = GFX_HAR_liberate_homeland
+		cost = 5
+		relative_position_id = HAR_push_north
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = HAR_push_north
+		}
+		available = {
+			owns_state = 195
+			owns_state = 221
+			owns_state = 574
+			owns_state = 570
+			owns_state = 590
+			owns_state = 652
+			owns_state = 234
+		}
+		completion_reward = { 
+			add_war_support = 0.3
+			add_stability = 0.3
+			add_research_slot = 1
+			unlock_decision_tooltip = Unification_unify_russia_socialist
+		}
+	}
+	focus = {
+		id = HAR_business_woman
+		icon = GFX_HAR_business_woman
+		cost = 5
+		relative_position_id = HAR_most_unlikely_alliance
+		x = 3
+		y = 1
+		available = { 
+			has_country_leader = { 
+				character = HAR_alisa_rosenbaum
+				ruling_only = yes 
+			}
+		}
+		prerequisite = {
+			focus = HAR_most_unlikely_alliance
+		}
+		mutually_exclusive = {
+			focus = HAR_union_man
+		}
+		completion_reward = { 
+			
+		}
+	}
+	focus = {
+		id = HAR_against_crony_capitalism
+		icon = GFX_HAR_against_crony_capitalism
+		cost = 5
+		relative_position_id = HAR_business_woman
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = HAR_business_woman
+		}
+		completion_reward = { 
+			add_ideas = HAR_boston_style
+		}
+	}
+	focus = {
+		id = HAR_let_markets_eat_rich
+		icon = GFX_HAR_let_markets_eat_rich
+		cost = 5
+		relative_position_id = HAR_against_crony_capitalism
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = HAR_against_crony_capitalism
+		}
+		completion_reward = { 
+			add_popularity = { 
+				ideology = anarchism
+				popularity = 0.15
+			}
+			add_stability = 0.15
+		}
+	}
+	focus = {
+		id = HAR_anarchy_action
+		icon = GFX_HAR_anarchy_action
+		cost = 5
+		relative_position_id = HAR_let_markets_eat_rich
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = HAR_let_markets_eat_rich
+		}
+		prerequisite = {
+			focus = HAR_society_of_heroes
+		}
+		completion_reward = { 
+			add_ideas = HAR_anarchism_of_action
+		}
+	}
+	focus = {
+		id = HAR_society_of_heroes
+		icon = GFX_HAR_society_of_heroes
+		cost = 5
+		relative_position_id = HAR_business_woman
+		x = 2
+		y = 1
+		prerequisite = {
+			focus = HAR_business_woman
+		}
+		completion_reward = { 
+			add_ideas = HAR_heroes_of_anarchism
+		}
+	}
+}
+#End of foci

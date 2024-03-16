@@ -1,0 +1,23 @@
+guiTypes = {
+	containerWindowType = {
+		name = "defname"
+		position = { x = 10 y = 80 }
+		
+		iconType = {
+			name = "thebg"
+			position = { x = -850 y = -32 }
+			alwaystransparent = yes
+			spriteType = "GFX_defname_box"
+		}
+		instantTextboxType = {
+			name = "thename"
+			position = { x = 0 y = 0 }
+			font = "hoi_16mbs"
+			text = "[ROOT.GetNameDefCap]"
+			maxWidth = 3000
+			maxHeight = 20
+			format = left
+			alwaystransparent = yes
+		}
+	}
+} 

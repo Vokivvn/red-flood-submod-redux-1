@@ -1,0 +1,1041 @@
+characters = {
+	KAV_vladimir_mayakovsky = {
+		name = "Vladimir Mayakovsky"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/KAV/Portrait_Vladimir_Mayakovsky.png"
+			}
+		}
+		country_leader = {
+			desc = KAV_vladimir_mayakovsky_desc
+			ideology = futurism
+			expire = "1965.1.1.1"
+			traits = { KAV_demigod_of_poetry }
+		}
+	}
+
+	KAV_Velimir_Khlebnikov = {
+		name = "Velimir Khlebnikov"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/KAV/Portrait_Velimir_Khlebnikov.png"
+			}
+		}
+		country_leader = {
+			desc = KAV_Velimir_Khlebnikov_desc
+			expire = "1965.1.1"
+			ideology = futurism
+			traits = {
+				KAV_the_idealist
+			}
+		}
+	}
+	KAV_dmitry_mirsky = {
+		name = "Dmitry Mirsky"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/KAV/Portrait_Dmitry_Mirsky.png"
+			}
+		}
+		country_leader = {
+			desc = KAV_dmitry_mirsky_desc
+			expire = "1965.1.1"
+			ideology = national_rejuvenatism
+			traits = {
+				KAV_the_red_count
+			}
+		}
+	}
+	KAV_igor_severyanin = {
+		name = "Igor Severyanin"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/KAV/Portrait_Igor_Severyanin.png"
+			}
+		}
+		country_leader = {
+			desc = KAV_igor_severyanin_desc
+			ideology = futurism
+			expire = "1965.1.1.1"
+		}
+	}
+	KAV_iosif_stalin = {
+		name = "Iosif Stalin"
+		portraits = {
+			army = {
+				large = "gfx/leaders/KAV/General_Iosif_Stalin.png"
+				small = "gfx/interface/ministers/KAV/KAV_Iosif_Stalin.png"
+			}
+			civilian = {
+				large = "gfx/leaders/KAV/Portrait_Iosif_Stalin.png"
+				small = "gfx/interface/ministers/KAV/KAV_Iosif_Stalin.png"
+			}
+		}
+		country_leader = {
+			desc = KAV_iosif_stalin_desc
+			ideology = vperedism
+			expire = "1965.1.1.1"
+		}
+		advisor = {
+			slot = head_of_intel
+			idea_token = KAV_iosif_stalin_int
+			allowed = {
+				original_tag = KAV
+			}
+			available = {
+				OR = {
+					has_country_leader = {
+						character = KAV_vladimir_mayakovsky
+						ruling_only = yes
+					}
+					has_completed_focus = KAV_the_red_princes_dream
+				}
+			}
+			traits = {
+				sec_prince_of_terror
+			}
+		}
+		field_marshal = {
+			traits = {
+				politically_connected
+			}
+			skill = 3
+			attack_skill = 3
+			defense_skill = 1
+			planning_skill = 3
+			logistics_skill = 2
+		}
+	}
+	KAV_Kazimir_Malevich = {
+		name = "Kazimir Malevich"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/KAV/KAV_Kazimir_Malevich.png"
+			}
+		}
+	}
+	
+	#ADVISORS
+	
+	#MAYAKOVSKY
+	
+	KAV_Osip_Brik = {
+		name = "Osip Brik"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/KAV/KAV_Osip_Brik.png"
+			}
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = KAV_Osip_Brik_hog
+			allowed = {
+				original_tag = KAV
+			}
+			available = {
+				has_country_leader = {
+					character = KAV_vladimir_mayakovsky
+					ruling_only = yes
+				}
+			}
+			traits = {
+				hog_political_protege
+			}
+		}
+	}
+	KAV_Aleksandr_Rodchenko = {
+		name = "Aleksandr Rodchenko"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/KAV/KAV_Aleksandr_Rodchenko.png"
+			}
+		}
+		advisor = {
+			slot = foreign_minister
+			idea_token = KAV_Aleksandr_Rodchenko_for
+			allowed = {
+				original_tag = KAV
+			}
+			available = {
+				has_country_leader = {
+					character = KAV_vladimir_mayakovsky
+					ruling_only = yes
+				}
+			}
+			traits = {
+				for_ideological_crusader
+			}
+		}
+	}
+	KAV_Grigory_Malenkov = {
+		name = "Grigory Malenkov"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/KAV/KAV_Grigory_Malenkov.png"
+			}
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = KAV_Grigory_Malenkov_eco
+			allowed = {
+				original_tag = KAV
+			}
+			available = {
+				has_country_leader = {
+					character = KAV_vladimir_mayakovsky
+					ruling_only = yes
+				}
+			}
+			traits = {
+				eco_resource_industrialist
+			}
+		}
+	}
+	KAV_Vladimir_Tatlin = {
+		name = "Vladimir Tatlin"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/KAV/KAV_Vladimir_Tatlin.png"
+			}
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = KAV_Vladimir_Tatlin_sec
+			allowed = {
+				original_tag = KAV
+			}
+			available = {
+				has_country_leader = {
+					character = KAV_vladimir_mayakovsky
+					ruling_only = yes
+				}
+			}
+			traits = {
+				sec_man_of_the_people
+			}
+		}
+	}
+	
+	#MIRSKY
+	
+	KAV_Pyotr_Arapov = {
+		name = "Pyotr Arapov"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/KAV/KAV_Pyotr_Arapov.png"
+			}
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = KAV_Pyotr_Arapov_hog
+			allowed = {
+				original_tag = KAV
+			}
+			available = {
+				has_completed_focus = KAV_the_red_princes_dream
+			}
+			traits = {
+				hog_silent_workhorse
+			}
+		}
+	}
+	KAV_Alexei_Tolstoy = {
+		name = "Alexei Tolstoy"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/KAV/KAV_Alexei_Tolstoy.png"
+			}
+		}
+		advisor = {
+			slot = foreign_minister
+			idea_token = KAV_Alexei_Tolstoy_for
+			allowed = {
+				original_tag = KAV
+			}
+			available = {
+				OR = {
+					has_completed_focus = KAV_the_red_princes_dream
+					has_completed_focus = KAV_the_transmutation_of_koba
+				}
+			}
+			traits = {
+				for_biased_intellectual
+			}
+		}
+	}
+	KAV_Pavel_Florensky = {
+		name = "Pavel Florensky"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/KAV/KAV_Pavel_Florensky.png"
+			}
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = KAV_Pavel_Florensky_eco
+			allowed = {
+				original_tag = KAV
+			}
+			available = {
+				has_completed_focus = KAV_the_red_princes_dream
+			}
+			traits = {
+				eco_theoretical_scientist
+			}
+		}
+	}
+	KAV_Konstantin_Chkheidze = {
+		name = "Konstantin Chkheidze"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/KAV/KAV_Konstantin_Chkheidze.png"
+			}
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = KAV_Konstantin_Chkheidze_sec
+			allowed = {
+				original_tag = KAV
+			}
+			available = {
+				has_completed_focus = KAV_the_red_princes_dream
+			}
+			traits = {
+				sec_compassionate_gentleman
+			}
+		}
+	}
+	
+	#KHLEBNIKOV
+	
+	KAV_Burliuk = {
+		name = KAV_Burliuk_hog
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/KAV/KAV_David_Burliuk.png"
+			}
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = KAV_Burliuk_hog
+			allowed = {
+				original_tag = KAV
+			}
+			available = {
+				has_completed_focus = KAV_enter_king_of_time
+			}
+			traits = {
+				hog_flamboyant_tough_guy
+			}
+		}
+	}
+	KAV_Vasily_Kandinsky = {
+		name = "Vasily Kandinsky"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/KAV/KAV_Vasily_Kandinsky.png"
+			}
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = KAV_Vasily_Kandinsky_eco
+			allowed = {
+				original_tag = KAV
+			}
+			available = {
+				has_completed_focus = KAV_enter_king_of_time
+			}
+			traits = {
+				eco_reformer
+			}
+		}
+	}
+	KAV_Ryurik_Ivnev = {
+		name = "Ryurik Ivnev"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/KAV/KAV_Ryurik_Ivnev.png"
+			}
+		}
+		advisor = {
+			slot = foreign_minister
+			idea_token = KAV_Ryurik_Ivnev_for
+			allowed = {
+				original_tag = KAV
+			}
+			available = {
+				has_completed_focus = KAV_enter_king_of_time
+			}
+			traits = {
+				for_the_cloak_n_dagger_schemer
+			}
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = KAV_Ryurik_Ivnev_sec
+			allowed = {
+				original_tag = KAV
+			}
+			available = {
+				has_completed_focus = KAV_the_king_of_poets
+			}
+			traits = {
+				sec_crime_fighter
+			}
+		}
+	}
+	KAV_Aleksei_Kruchyonykh = {
+		name = "Aleksei Kruchyonykh"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/KAV/KAV_Aleksei_Kruchyonykh.png"
+			}
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = KAV_Aleksei_Kruchyonykh_sec
+			allowed = {
+				original_tag = KAV
+			}
+			available = {
+				has_completed_focus = KAV_enter_king_of_time
+			}
+			traits = {
+				sec_media_magnate
+			}
+		}
+	}
+	KAV_Graal_Aralsky = {
+		name = "Graal Aralsky"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/KAV/KAV_Graal_Aralsky.png"
+			}
+		}
+		advisor = {
+			slot = head_of_intel
+			idea_token = KAV_Graal_Aralsky_int
+			allowed = {
+				original_tag = KAV
+			}
+			available = {
+				has_completed_focus = KAV_enter_king_of_time
+			}
+			traits = {
+				int_logistics_specialist
+			}
+		}
+	}
+	
+	#SEVERYANIN
+	KAV_Nikolay_Gumilyov = {
+		name = "Nikolay Gumilyov"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/KAV/KAV_Nikolay_Gumilyov.png"
+			}
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = KAV_Nikolay_Gumilyov_hog
+			allowed = {
+				original_tag = KAV
+			}
+			available = {
+				has_completed_focus = KAV_the_king_of_poets
+			}
+			traits = {
+				hog_respected_war_hero
+			}
+		}
+	}
+	KAV_Georgy_Ivanov = {
+		name = "Georgy Ivanov"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/KAV/KAV_Georgy_Ivanov.png"
+			}
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = KAV_Georgy_Ivanov_eco
+			allowed = {
+				original_tag = KAV
+			}
+			available = {
+				has_completed_focus = KAV_the_king_of_poets
+			}
+			traits = {
+				eco_construction_magnate
+			}
+		}
+	}
+	KAV_Vadim_Shershenevich = {
+		name = "Vadim Shershenevich"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/KAV/KAV_Vadim_Shershenevich.png"
+			}
+		}
+		advisor = {
+			slot = foreign_minister
+			idea_token = KAV_Vadim_Shershenevich_for
+			allowed = {
+				original_tag = KAV
+			}
+			available = {
+				has_completed_focus = KAV_the_king_of_poets
+			}
+			traits = {
+				for_ideological_crusader
+			}
+		}
+	}
+	KAV_Anna_Akhmatova = {
+		name = "Anna Akhmatova"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/KAV/KAV_Anna_Akhmatova.png"
+			}
+		}
+		advisor = {
+			slot = head_of_intel
+			idea_token = KAV_Anna_Akhmatova_int
+			allowed = {
+				original_tag = KAV
+			}
+			available = {
+				has_completed_focus = KAV_the_king_of_poets
+			}
+			traits = {
+				int_dismal_enigma
+			}
+		}
+	}
+		
+	
+	
+	#STALIN
+	
+	KAV_Sergei_Kirov = {
+		name = "Sergei Kirov"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/KAV/KAV_Sergei_Kirov.png"
+			}
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = KAV_Sergei_Kirov_hog
+			allowed = {
+				original_tag = KAV
+			}
+			available = {
+				has_completed_focus = KAV_the_transmutation_of_koba
+			}
+			traits = {
+				hog_ambitious_union_boss
+			}
+		}
+	}
+	KAV_Sergo_Ordzhonikidze = {
+		name = "Sergo Ordzhonikidze"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/KAV/KAV_Sergo_Ordzhonikidze.png"
+			}
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = KAV_Sergo_Ordzhonikidze_eco
+			allowed = {
+				original_tag = KAV
+			}
+			available = {
+				has_completed_focus = KAV_the_transmutation_of_koba
+			}
+			traits = {
+				eco_industrialiser
+			}
+		}
+	}
+	KAV_Anastas_Mikoyan = {
+		name = "Anastas Mikoyan"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/KAV/KAV_Anastas_Mikoyan.png"
+			}
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = KAV_Anastas_Mikoyan_sec
+			allowed = {
+				original_tag = KAV
+			}
+			available = {
+				has_completed_focus = KAV_the_transmutation_of_koba
+			}
+			traits = {
+				sec_compassionate_gentleman
+			}
+		}
+	}
+	KAV_Kamo = {
+		name = "Kamo"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/KAV/KAV_Kamo.png"
+			}
+		}
+		advisor = {
+			slot = head_of_intel
+			idea_token = KAV_Kamo_int
+			allowed = {
+				original_tag = KAV
+			}
+			available = {
+				has_completed_focus = KAV_the_transmutation_of_koba
+			}
+			traits = {
+				int_civilian_specialist
+			}
+		}
+	}
+		
+	
+	#OFFICER CORPS
+	
+	KAV_Slavorossov = {
+		name = KAV_Slavorossov_sec
+		portraits = {
+			army = {
+				small = "GFX_idea_KAV_minister_Slavorossov"
+			}
+		}
+		advisor = {
+			slot = air_chief
+			idea_token = KAV_Slavorossov_coaf
+			allowed = {
+				original_tag = KAV
+			}
+			traits = { 
+				air_chief_reform_2
+			}
+		}
+	}
+	KAV_Shakhovskaya = {
+		name = KAV_Shakhovskaya_coaf
+		portraits = {
+			army = {
+				small = "GFX_idea_KAV_coaf_Shakhovskaya"
+			}
+		}
+		advisor = {
+			slot = air_chief
+			idea_token = KAV_Shakhovskaya_coaf
+			allowed = {
+				original_tag = KAV
+			}
+			traits = { 
+				cair_battlefield_support_doctrine
+			}
+		}
+	}
+	
+	#GENERALS
+	
+	KAV_mikhail_velikanov = {
+		name = "Mikhail Velikanov"
+		portraits = {
+			army = {
+				large = "gfx/leaders/KAV/General_Mikhail_Velikanov.png"
+			}
+		}
+		corps_commander = {
+			traits = { infantry_officer }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	KAV_ivan_bagramyan = {
+		name = "Ivan Bagramyan"
+		portraits = {
+			army = {
+				large = "gfx/leaders/KAV/General_Ivan_Begramyan.png"
+				small = "GFX_idea_KAV_minister_Bagramyan"
+			}
+		}
+		corps_commander = {
+			traits = {
+				inflexible_strategist
+			}
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+		}
+		advisor = {
+			slot = theorist
+			idea_token = KAV_Bagramyan_theorist
+			allowed = {
+				original_tag = KAV
+			}
+			traits = { 
+				mobile_warfare_expert
+			}
+		}
+	}
+	KAV_anatoliy_gekker = {
+		name = "Anatoliy Gekker"
+		portraits = {
+			army = {
+				large = "gfx/leaders/KAV/General_Anatoliy_Gekker.png"
+				small = "GFX_idea_KAV_theorist_Gekker"
+			}
+		}
+		corps_commander = {
+			traits = {
+				cavalry_officer
+			}
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+		}
+		advisor = {
+			slot = theorist
+			idea_token = KAV_Gekker_theorist
+			allowed = {
+				original_tag = KAV
+			}
+			traits = { 
+				mass_assault_expert
+			}
+		}
+	}
+	KAV_giorgi_mazniev = {
+		name = "Giorgi Mazniev"
+		portraits = {
+			army = {
+				large = "gfx/leaders/KAV/General_Giorgi_Mazniev.png"
+			}
+		}
+		corps_commander = {
+			traits = {
+				brilliant_strategist
+			}
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 2
+		}
+	}
+	KAV_kaikhosro_chelokayev = {
+		name = "Kaikhosro Chelokayev"
+		portraits = {
+			army = {
+				large = "gfx/leaders/KAV/General_Kaikhosro_Chelokayev.png"
+			}
+		}
+		corps_commander = {
+			traits = {
+				harsh_leader
+			}
+			skill = 3
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 1
+		}
+	}
+	KAV_valiko_jugheli = {
+		name = "Valiko Jugheli"
+		portraits = {
+			army = {
+				large = "gfx/leaders/KAV/General_Valiko_Jugheli.png"
+			}
+		}
+		corps_commander = {
+			traits = {
+				media_personality
+			}
+			skill = 3
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 1
+		}
+	}
+	KAV_aleksandr_chkheidze = {
+		name = "Aleksandr Chkheidze"
+		portraits = {
+			army = {
+				large = "gfx/leaders/KAV/General_Aleksandr_Chkheidze.png"
+				small = "GFX_idea_KAV_coa_Chkheidze"
+			}
+		}
+		corps_commander = {
+			traits = {
+				career_officer
+			}
+			skill = 3
+			attack_skill = 1
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = KAV_Chkheidze_coa
+			allowed = {
+				original_tag = KAV
+			}
+			traits = {
+				carm_elastic_defence_doctrine
+			}
+		}
+	}
+	KAV_aleksandr_andronikov = {
+		name = "Aleksandr Andronikov"
+		portraits = {
+			army = {
+				large = "gfx/leaders/KAV/General_Aleksandr_Andronikov.png"
+			}
+		}
+		corps_commander = {
+			traits = {
+				career_officer
+			}
+			skill = 4
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 3
+		}
+	}
+	KAV_avel_makaev = {
+		name = "Avel Makaev"
+		portraits = {
+			army = {
+				large = "gfx/leaders/KAV/General_Avel_Makaev.png"
+				small = "GFX_idea_KAV_coa_Makaev"
+			}
+		}
+		corps_commander = {
+			traits = {
+				cavalry_officer
+			}
+			skill = 4
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 3
+		}
+		advisor = {
+			slot = high_command
+			idea_token = KAV_avel_makaev_hc
+			allowed = {
+				original_tag = KAV
+			}
+			traits = {
+				army_regrouping_2
+			}
+		}
+	}
+	KAV_giorgi_kvinitadze = {
+		name = "Giorgi Kvinitadze"
+		portraits = {
+			army = {
+				large = "gfx/leaders/KAV/General_Giorgi_Kvanitadze.png"
+				small = "GFX_idea_KAV_minister_Kvinitadze"
+			}
+		}
+		corps_commander = {
+			traits = {
+				war_hero
+			}
+			skill = 4
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+
+	KAV_mikhail_frunze = {
+		name = "Mikhail Frunze"
+		portraits = {
+			army = {
+				large = "gfx/leaders/KAV/General_Mikhail_Frunze.png"
+				small = "gfx/interface/ministers/KAV/KAV_minister_mikhail_frunze.dds"
+			}
+		}
+		field_marshal = {
+			traits = {
+				thorough_planner war_hero
+			}
+			skill = 4
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 5
+			logistics_skill = 3
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = KAV_mikhail_frunze_coa
+			allowed = {
+				original_tag = KAV
+			}
+			traits = {
+				army_chief_planning_3
+			}
+		}
+	}
+	KAV_sergei_bunyachenko = {
+		name = "Sergei Bunyachenko"
+		portraits = {
+			army = {
+				large = "gfx/leaders/KAV/KAV_Sergei_Bunyachenko.png"
+				small = "gfx/interface/ministers/KAV/KAV_Sergei_Bunyachenko.png"
+			}
+		}
+		corps_commander = {
+			traits = {
+				trait_engineer infantry_leader
+			}
+			skill = 3
+			attack_skill = 2
+			defense_skill = 4
+			planning_skill = 2
+			logistics_skill = 3
+		}
+		advisor = {
+			slot = high_command
+			idea_token = KAV_sergei_bunyachenko_hc
+			allowed = {
+				original_tag = KAV
+			}
+			traits = {
+				army_infantry_2
+			}
+		}
+	}
+	KAV_nestor_makhno = {
+		name = "Nestor Makhno"
+		portraits = {
+			army = {
+				large = "gfx/leaders/KAV/General_Nestor_Makhno.png"
+				small = "gfx/interface/ministers/KAV/KAV_Nestor_Makhno.png"
+			}
+		}
+		corps_commander = {
+			traits = {
+				adaptable scavenger
+			}
+			skill = 4
+			attack_skill = 2
+			defense_skill = 4
+			planning_skill = 4
+			logistics_skill = 3
+		}
+		advisor = {
+			slot = high_command
+			idea_token = KAV_nestor_makhno_hc
+			allowed = {
+				original_tag = KAV
+			}
+			traits = {
+				army_concealment_2
+			}
+		}
+	}
+	
+	KAV_Semyon_Budyonny={
+		name= "Semyon Budyonny"
+		portraits={
+			army={
+				large="gfx/leaders/KAV/General_Semyon_Budyonny.png"
+			    small="gfx/interface/ministers/KAV/KAV_Semyon_Budyonny.tga"
+		    }
+		}
+		corps_commander = {
+			traits = { cavalry_officer old_guard}
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+		advisor = {
+			slot = high_command
+			idea_token = KAV_Semyon_Budyonny_hc
+			allowed = {
+				original_tag = KAV
+			}
+			traits = {
+				army_cavalry_1
+			}
+		}
+	}
+
+	KAV_ivan_rogov = {
+		name = "Ivan Rogov"
+		portraits = {
+			navy = {
+				large = "gfx/leaders/KAV/Admiral_Ivan_Rogov.png"
+				small = "GFX_idea_KAV_minister_Rogov"
+			}
+		}
+		navy_leader = {
+			traits = { aviation_enthusiast }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			maneuvering_skill = 3
+			coordination_skill = 2
+		}
+		advisor = {
+			slot = navy_chief
+			idea_token = KAV_Rogov_con
+			allowed = {
+				original_tag = KAV
+			}
+			traits = { 
+				cnav_open_seas_doctrine
+			}
+		}
+	}
+	KAV_lev_vladimirsky = {
+		name = "Lev Vladimirsky"
+		portraits = {
+			navy = {
+				large = "gfx/leaders/KAV/Admiral_Lev_Vladimirsky.png"
+				small = "GFX_idea_KAV_con_Vladimirsky"
+			}
+		}
+		navy_leader = {
+			traits = { career_officer }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			maneuvering_skill = 2
+			coordination_skill = 3
+		}
+		advisor = {
+			slot = navy_chief
+			idea_token = KAV_Vladimirsky_con
+			allowed = {
+				original_tag = KAV
+			}
+			traits = { 
+				cnav_power_projection_doctrine
+			}
+		}
+	}
+}

@@ -1,0 +1,402 @@
+characters = {
+	JKR_ugaki_kazushige = {
+		name = "Ugaki Kazushige"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/IKR/Portrait_Ugaki_Kazushige_civie.png"
+			}
+		}
+		country_leader = {
+			ideology = military_dictatorship
+			expire = "1965.1.1.1"
+		}
+	}
+	JKR_syngman_rhee = {
+		name = "Syngman Rhee"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/JKR/Portrait_Syngman_Rhee.png"
+			}
+		}
+		country_leader = {
+			ideology = anocracy
+			expire = "1965.1.1.1"
+		}
+	}
+	JKR_ahn_changho = {
+		name = "Ahn Changho"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/JKR/Portrait_Ahn_Changho.png"
+			}
+		}
+		country_leader = {
+			ideology = national_conservatism
+			expire = "1965.1.1.1"
+		}
+	}
+	JKR_kim_koo = {
+		name = "Kim Koo"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/JKR/Portrait_Kim_Koo.png"
+			}
+		}
+		country_leader = {
+			ideology = libertarian_capitalism
+			expire = "1965.1.1.1"
+		}
+	}
+	JKR_yuh_woon_hyung = {
+		name = "Yuh Woon-hyung"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/JKR/Portrait_Yuh_Woon_hyung.png"
+			}
+		}
+		country_leader = {
+			ideology = social_nationalism
+			expire = "1965.1.1.1"
+		}
+	}
+	JKR_choe_chang_ik = {
+		name = "Choe Chang-ik"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/JKR/Portrait_Choe_Chiang_ik.png"
+			}
+			army = {
+				small = "GFX_idea_Choi_Chang_ik"
+			}
+		}
+		country_leader = {
+			ideology = spartakism
+			expire = "1965.1.1.1"
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = JKR_choe_chang_ik_eco
+			allowed = {
+				original_tag = JKR
+			}
+			available = {
+				tag = JKR
+			}
+			visible = {
+				has_completed_focus = JKR_revolution
+			}
+			traits = {
+				economy_minister
+				eco_planned_economy_proponent
+			}
+		}
+	}
+	JKR_cho_man_sik = {
+		name = "Cho Man-sik"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/JKR/Portrait_Cho_Man_sik.png"
+			}
+			army = {
+				small = "GFX_idea_Cho_Man_sik"
+			}
+		}
+		country_leader = {
+			ideology = agrarian_socialism
+			expire = "1965.1.1.1"
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = JKR_cho_man_sik_hog
+			allowed = {
+				original_tag = JKR
+			}
+			available = {
+				OR = {
+					has_government = popular_socialism
+					has_government = vanguard_socialism
+					has_government = accelerationism
+					has_government = progressivism
+				}
+			}
+			visible = {
+				has_completed_focus = JKR_revolution
+			}
+			traits = {
+				head_of_government
+				hog_silent_workhorse
+			}
+		}
+	}
+	JKR_kim_chwa_chin = {
+		name = "Kim Chwa-chin"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/JKR/Portrait_Kim_Chwa_Chin.png"
+			}
+			army = {
+				small = "GFX_idea_Kim_Jwa_jin"
+			}
+		}
+		country_leader = {
+			ideology = social_anarchism
+			expire = "1965.1.1.1"
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = JKR_kim_chwa_chin_hog
+			allowed = {
+				original_tag = JKR
+			}
+			available = {
+				OR = {
+					has_government = popular_socialism
+					has_government = accelerationism
+				}
+			}
+			visible = {
+				has_completed_focus = JKR_revolution
+			}
+			traits = {
+				head_of_government
+				hog_naive_optimist
+			}
+		}
+	}
+	JKR_pak_hon_yong = {
+		name = "Pak Hon-yong"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/JKR/Portrait_Pak_Hon_Yong.png"
+			}
+			army = {
+				small = "GFX_idea_Pak_Hon_yong"
+			}
+		}
+		country_leader = {
+			ideology = leninism
+			expire = "1965.1.1.1"
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = KOR_pak_hon_yong_hog
+			allowed = {
+				original_tag = JKR
+			}
+			available = {
+				OR = {
+					has_government = popular_socialism
+					has_government = revisionist_socialism
+					has_government = accelerationism
+					has_government = progressivism
+				}
+			}
+			visible = {
+				has_completed_focus = JKR_revolution
+			}
+			traits = {
+				head_of_government
+				hog_backroom_backstabber
+			}
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = KOR_pak_hon_yong_sec
+			allowed = {
+				original_tag = JKR
+			}
+			available = {
+				tag = JKR
+				OR = {
+					has_government = popular_socialism
+					has_government = revisionist_socialism
+					has_government = accelerationism
+					has_government = anarchism
+				}
+			}
+			visible = {
+				has_completed_focus = JKR_revolution
+			}
+			traits = {
+				security_minister
+				sec_secret_police_chief
+			}
+		}
+	}
+	JKR_sin_chaeho = {
+		name = "Sin Chaeho"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/JKR/Portrait_Sin_Chaeho_accel.png"
+			}
+			army = {
+				large = "gfx/leaders/JKR/Portrait_Sin_Chaeho_general.png"
+			}
+		}
+		country_leader = {
+			ideology = national_rejuvenatism
+			expire = "1965.1.1.1"
+		}
+	}
+
+	JKR_yamanashi_hanzo = {
+		name = "Yamanashi Hanzō"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/JKR/Portrait_Yamanashi_Hanzo.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_YAMANASHI_HANZO_DESC"
+			expire = "1965.1.1"
+			ideology = constitutional_dictatorship
+		}
+	}
+	JKR_Lee_Beom_seok = {
+		name = "Lee Beom-seok"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/JKR/Portrait_Lee_Beom_seok.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_LEE_BEOM_SEOK_DESC"
+			expire = "1965.1.1"
+			ideology = oligarchy
+		}
+	}
+
+
+	JKR_kim_won_bong = {
+		name = "Kim Won-bong"
+		portraits = {
+			army = {
+				large = "gfx/leaders/JKR/Portrait_Kim_Won_bong.png"
+			}
+		}
+		corps_commander = {
+			traits = { politically_connected }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 2
+		}
+		advisor = {
+			slot = high_command
+			idea_token = JKR_kim_wong_bong_cof
+			allowed = {
+				original_tag = JKR
+			}
+			available = {
+				tag = JKR
+			}
+			traits = {
+				cos_school_of_mass_combat
+			}
+		}
+	}
+	JKR_kim_chaek = {
+		name = "Kim Chaek"
+		portraits = {
+			army = {
+				large = "gfx/leaders/JKR/Portrait_Kim_Chaek.png"
+			}
+		}
+		corps_commander = {
+			traits = { politically_connected }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+		}
+	}
+	
+	JKR_kang_kon = {
+		name = "Kang Kon"
+		portraits = {
+			army = {
+				large = "gfx/leaders/JKR/Portrait_Kang_Kon.png"
+			}
+		}
+		corps_commander = {
+			traits = { }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 1
+			
+			visible = {
+				has_completed_focus = JKR_promote_partisan_leaders
+			}
+		}
+	}
+	
+	JKR_kim_il_sung = {
+		name = "Kim Il-Sung"
+		portraits = {
+			army = {
+				large = "gfx/leaders/JKR/Portrait_Kim_Il_sung.png"
+			}
+		}
+		corps_commander = {
+			traits = { politically_connected }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+			
+			visible = {
+				has_completed_focus = JKR_promote_partisan_leaders
+			}
+		}
+	}
+
+	JKR_choe_yong_gon = {
+		name = "Choe Yong-gon"
+		portraits = {
+			army = {
+				large = "gfx/leaders/JKR/Portrait_Choe_Yong_gon.png"
+				small = "GFX_idea_Choe_Yong_gon"
+			}
+		}
+		corps_commander = {
+			traits = { politically_connected }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 3
+			logistics_skill = 3
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = KOR_choe_yong_gon_coa
+			allowed = {
+				original_tag = JKR
+			}
+			available = {
+				tag = JKR
+			}
+			traits = {
+				carm_elastic_defence_doctrine
+			}
+		}
+	}
+	JKR_y = {
+		name = KOR_y_int
+		advisor = {
+			slot = head_of_intel
+			idea_token = KOR_y_int
+			allowed = {
+				original_tag = JKR
+			}
+			traits = {
+				head_of_intel
+				int_dismal_enigma
+			}
+		}
+	}
+}

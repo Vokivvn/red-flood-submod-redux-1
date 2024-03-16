@@ -1,0 +1,64 @@
+Germany_goebbels = {
+	name = "SPD(O)"
+	desc = "SPD(O)"
+
+	enable = {
+		original_tag = GER
+		OR = {
+			AND = {
+				has_game_rule = {
+					rule = GER_ai_route
+					option = SPD
+				}
+				GER = {
+					has_completed_focus = GER_a_socialism_of_our_own
+				}
+			}
+			GER = {
+				has_completed_focus = GER_a_socialism_of_our_own
+			}
+		}
+	}
+	abort = {
+	
+	}
+
+	ai_national_focuses = {
+	}
+
+	research = {
+		infantry_weapons = 50.0
+		infantry_tech = 15.0
+		cat_light_armor = 20.0
+		artillery = 8.0
+		support_tech = 6.5
+	}
+
+	ideas = {
+
+	}
+
+	traits = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = light_armor
+		value = 10
+	}
+
+	focus_factors = {
+		
+	}
+
+}

@@ -1,0 +1,38 @@
+characters = {
+	ASM_syed_muhammad_saadula = {
+		name = "Syed Muhammad Saadula"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/ASM/Portrait_ASM_Seyd_Saadula.png"
+			}
+		}
+		country_leader = {
+			ideology = social_conservatism
+			expire = "1955.1.1.1"
+		}
+	}
+	ASM_kuladhar_chaliha = {
+		name = "Kuladhar Chaliha"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/ASM/Portrait_ASM_Kuladhar_Chaliha.png"
+			}
+		}
+		country_leader = {
+			ideology = left_populism
+			expire = "1963.1.1.1"
+		}
+	}
+	ASM_gopinath_bordoloi = {
+		name = "Gopinath Bordoloi"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/ASM/Portrait_ASM_Gopinath_Bordoloi.png"
+			}
+		}
+		country_leader = {
+			ideology = social_liberalism
+			expire = "1950.1.1.1"
+		}
+	}
+}

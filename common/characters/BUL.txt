@@ -1,0 +1,910 @@
+characters = {
+	BUL_aleksandar_stamboliyski = {
+		name = "Aleksandar Stamboliyski"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/BUL/Portrait_BUL_Aleksandar_Stamboliyski.png"
+			}
+		}
+		country_leader = {
+			ideology = agrarian_socialism
+			expire = "1965.1.1.1"
+			desc = "POLITICS_Stamboliyski_DESC"
+		}
+	}
+
+	BUL_hristo_botev = {
+		name = "Hristo Botev"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/BUL/Portrait_BUL_Hristo_Botev.png"
+			}
+			army = {
+				large="gfx/leaders/BUL/Portrait_BUL_Hristo_Botev_General.png"
+				small="gfx/interface/ministers/BUL/BUL_Hristo_Botev.png"
+			}
+		}
+		country_leader = {
+			ideology = national_anarchism
+			expire = "1965.1.1.1"
+			desc = "POLITICS_Botev_DESC"
+		}
+		corps_commander = {
+			traits = { war_hero }
+			skill=1
+			attack_skill=1
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=1
+		}
+		advisor = {
+			slot = high_command
+			idea_token = BUL_hristo_botev_hc
+			allowed = {
+				OR = {
+					original_tag = BUL
+					original_tag = YUG
+				}
+			}
+			traits = { army_commando_1 }
+			available = {
+			}
+		}
+		advisor = { 
+		    idea_token = SIB_innokentiy_smolin_theo
+			slot = theorist
+		    traits = { military_theorist }
+		}
+	}
+
+	BUL_hristo_smirnenski = {
+		name = "Hristo Smirnenski"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/BUL/Portrait_BUL_Hristo_Smirnenski.png"
+			}
+		}
+		country_leader = {
+			ideology = leninism
+			expire = "1965.1.1.1"
+			desc = "POLITICS_Smirnenski_DESC"
+		}
+	}
+
+	BUL_rayko_daskalov = {
+		name = "Rayko Daskalov"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/BUL/Portrait_BUL_Rayko_Daskalov.png"
+				small = "gfx/interface/ministers/BUL/BUL_Rayko_Daskalov.png"
+			}
+			army = {
+				large="gfx/leaders/BUL/Portrait_BUL_Rayko_Daskalov_General.png"
+			}
+		}
+		country_leader = {
+			ideology = agrarian_socialism
+			expire = "1965.1.1.1"
+			desc = "POLITICS_Daskalov_DESC"
+		}
+		corps_commander = {
+			traits = { politically_connected }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+		}
+		advisor = {
+			slot = head_of_government
+		    idea_token = BUL_Rayko_Daskalov
+			available = {
+				OR = {
+				has_country_leader = {
+					character = BUL_aleksandar_stamboliyski
+					}
+				has_country_leader = {
+					character = BUL_rayko_daskalov
+				}
+			}
+			}
+		    traits = { hog_flamboyant_tough_guy }
+		}
+		advisor = {
+			slot = head_of_intel
+		    idea_token = BUL_Rayko_Daskalov
+			available = {
+				OR = {
+				has_country_leader = {
+					character = BUL_aleksandar_stamboliyski
+					}
+				has_country_leader = {
+					character = BUL_rayko_daskalov
+				}
+				has_country_leader = {
+					character = BUL_peter_deunov
+				}
+			}
+			}
+		    traits = { int_logistics_specialist }
+		}
+	}
+
+	BUL_Bogdan_Filov = {
+		name = "Bogdan Filov"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/BUL/Filov.png"
+				small = "gfx/interface/ministers/BUL/BUL_Bogdan_Filov.png"
+			}
+		}
+		country_leader = {
+			ideology = national_democracy
+			expire = "1965.1.1.1"
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = BUL_Bogdan_Filov
+			allowed = {
+				original_tag = BUL
+			}
+			available = {
+				has_country_leader = {
+				character = BUL_nayden_shaytanov
+				}
+			}
+			traits = { hog_flamboyant_tough_guy }
+		}
+	}
+
+	BUL_Yordan_Batev = {
+		name = "Yordan Batev"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/BUL/BUL_Yordan_Batev.png"
+			}
+		}
+		advisor = {
+			slot = foreign_minister
+			idea_token = BUL_Yordan_Batev
+			allowed = {
+				original_tag = BUL
+			}
+			available = {
+				has_country_leader = {
+				character = BUL_nayden_shaytanov
+				}
+			}
+			traits = { for_ideological_crusader }
+		}
+	}
+
+	BUL_Ivan_Bogdanov = {
+		name = "Ivan Bogdanov"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/BUL/BUL_Ivan_Bogdanov.png"
+			}
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = BUL_Ivan_Bogdanov
+			allowed = {
+				original_tag = BUL
+			}
+			available = {
+				has_country_leader = {
+				character = BUL_nayden_shaytanov
+				}
+			}
+			traits = { eco_laissez_faire_capitalist }
+		}
+	}
+
+	BUL_Simeon_Andreev = {
+		name = "Simeon Andreev"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/BUL/BUL_Simeon_Andreev.png"
+			}
+		}
+		advisor = {
+			slot = head_of_intel
+			idea_token = BUL_Simeon_Andreev
+			allowed = {
+				original_tag = BUL
+			}
+			available = {
+				has_country_leader = {
+				character = BUL_nayden_shaytanov
+				}
+			}
+			traits = { int_political_specialist }
+		}
+	}
+
+	BUL_Vangelia_Gushterova = {
+		name = "Vangelia Gushterova"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/BUL/BUL_Vangelia_Gushterova.png"
+			}
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = BUL_Vangelia_Gushterova
+			allowed = {
+				original_tag = BUL
+			}
+			available = {
+				has_country_leader = {
+				character = BUL_peter_deunov
+				}
+			}
+			traits = { hog_spiritual_leader }
+		}
+	}
+
+	BUL_Omraam_Aivanhov = {
+		name = "Omraam Aïvanhov"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/BUL/BUL_Omraam_Aivanhov.png"
+			}
+		}
+		advisor = {
+			slot = foreign_minister
+			idea_token = BUL_Omraam_Aivanhov
+			allowed = {
+				original_tag = BUL
+			}
+			available = {
+				has_country_leader = {
+				character = BUL_peter_deunov
+				}
+			}
+			traits = { for_great_compromiser }
+		}
+	}
+
+	BUL_Yordan_Kovachev = {
+		name = "Yordan Kovachev"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/BUL/BUL_Yordan_Kovachev.png"
+			}
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = BUL_Yordan_Kovachev
+			allowed = {
+				original_tag = BUL
+			}
+			available = {
+				has_country_leader = {
+				character = BUL_peter_deunov
+				}
+			}
+			traits = { eco_planned_economy_proponent }
+		}
+	}
+
+	BUL_Boyan_Boev = {
+		name = "Boyan Boev"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/BUL/BUL_Boyan_Boev.png"
+			}
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = BUL_Boyan_Boev
+			allowed = {
+				original_tag = BUL
+			}
+			available = {
+				has_country_leader = {
+				character = BUL_peter_deunov
+				}
+			}
+			traits = { sec_man_of_the_people }
+		}
+	}
+
+	BUL_Simeon_Petrov = {
+		name = "Simeon Petrov"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/BUL/BUL_air_Simeon_Petrov.tga"
+			}
+		}
+		advisor = { 
+		    idea_token = BUL_Simeon_Petrov
+			slot = air_chief
+		    traits = { cair_vertical_envelopment_doctrine }
+			allowed = {
+				OR = {
+					original_tag = BUL
+					original_tag = YUG
+				}
+			}
+		}
+		advisor = { 
+		    idea_token = BUL_Petrov
+			slot = theorist
+		    traits = { air_warfare_theorist }
+			allowed = {
+				OR = {
+					original_tag = BUL
+					original_tag = YUG
+				}
+			}
+		}
+	}
+
+	BUL_Dimitar_Dobrev={
+		name="Dimitar Dobrev"
+		portraits={
+			civilian={
+				small="gfx/interface/ministers/BUL/BUL_hog_Dimitar_Dobrev.png"
+			}
+			army={ 
+				large="gfx/leaders/BUL/Portrait_BUL_Dobrev.png"
+			    small="gfx/interface/ministers/BUL/BUL_nav_Dimitar_Dobrev.tga"
+			}
+		}
+		advisor = {
+		    slot = navy_chief
+			idea_token = BUL_Dimitar_Dobrev
+			traits = { cnav_decisive_battle_doctrine }
+			allowed = {
+				OR = {
+					original_tag = BUL
+					original_tag = YUG
+				}
+			}
+
+		}
+		advisor = { 
+		    idea_token = BUL_Dobrev_cnav
+			slot = theorist
+		    traits = { naval_theorist }
+			allowed = {
+				OR = {
+					original_tag = BUL
+					original_tag = YUG
+				}
+			}
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = BUL_Dobrev_hog
+			allowed = {
+				original_tag = BUL
+			}
+			available = {
+				has_country_leader = {
+					character = BUL_Hristo_Smirnenski
+				}
+			}
+			traits = { hog_ambitious_union_boss }
+		}
+	}
+
+	BUL_Elisaveta_Bagryana = {
+		name = "Elisaveta Bagryana"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/BUL/BUL_Elisaveta_Bagryana.png"
+			}
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = BUL_Elisaveta_Bagryana
+			allowed = {
+				original_tag = BUL
+			}
+			available = {
+				has_country_leader = {
+				character = BUL_nayden_shaytanov
+				}
+			}
+			traits = { sec_man_of_the_people }
+		}
+	}
+
+	BUL_Mihail_Gerdzikhov = {
+		name = "Mihail Gerdzikhov"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/BUL/BUL_Mihail_Gerdzikhov.png"
+			}
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = BUL_Mihail_Gerdzikhov
+			allowed = {
+				original_tag = BUL
+			}
+			available = {
+				has_country_leader = {
+				character = BUL_hristo_botev
+				}
+			}
+			traits = { hog_local_tyrant }
+		}
+	}
+
+	BUL_Ivan_Nikolov = {
+		name = "Ivan Nikolov"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/BUL/BUL_Ivan_Nikolov.png"
+			}
+		}
+		advisor = {
+			slot = foreign_minister
+			idea_token = BUL_Ivan_Nikolov
+			allowed = {
+				original_tag = BUL
+			}
+			available = {
+				has_country_leader = {
+				character = BUL_hristo_botev
+				}
+			}
+			traits = { for_ideological_crusader }
+		}
+	}
+
+	BUL_Manol_Vasev = {
+		name = "Manol Vasev"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/BUL/BUL_Manol_Vasev.png"
+			}
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = BUL_Manol_Vasev
+			allowed = {
+				original_tag = BUL
+			}
+			available = {
+				has_country_leader = {
+				character = BUL_hristo_botev
+				}
+			}
+			traits = { eco_military_entrepreneur }
+		}
+	}
+
+	BUL_Pavel_Shatev = {
+		name = "Pavel Shatev"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/BUL/BUL_Pavel_Shatev.png"
+			}
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = BUL_Pavel_Shatev
+			allowed = {
+				original_tag = BUL
+			}
+			available = {
+				has_country_leader = {
+				character = BUL_hristo_botev
+				}
+			}
+			traits = { sec_prince_of_terror }
+		}
+	}
+
+	BUL_Todor_Angelov = {
+		name = "Todor Angelov"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/BUL/BUL_Todor_Angelov.png"
+			}
+		}
+		advisor = {
+			slot = head_of_intel
+			idea_token = BUL_Todor_Angelov
+			allowed = {
+				original_tag = BUL
+			}
+			available = {
+				has_country_leader = {
+				character = BUL_hristo_botev
+				}
+			}
+			traits = { int_logistics_specialist }
+		}
+	}
+
+	BUL_peter_deunov = {
+		name = "Peter Deunov"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/BUL/Portrait_BUL_Peter_Deunov.png"
+			}
+		}
+		country_leader = {
+			ideology = esoteric_reactionism
+			expire = "1965.1.1.1"
+			desc = "POLITICS_Deunov_DESC"
+		}
+	}
+
+	BUL_nayden_shaytanov = {
+		name = "Nayden Shaytanov"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/BUL/Portrait_BUL_Nayden_Shaytanov.png"
+			}
+		}
+		country_leader = {
+			ideology = zadrugism
+			expire = "1965.1.1.1"
+			desc = "POLITICS_Shaytanov_DESC"
+		}
+	}
+
+	BUL_Valko_Chervenkov = {
+		name = "Valko Chervenkov"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/BUL/BUL_Valko_Chervenkov.png"
+			}
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = BUL_Valko_Chervenkov
+			allowed = {
+				original_tag = BUL
+			}
+			available = {
+				has_country_leader = {
+					character = BUL_Hristo_Smirnenski
+				}
+			}
+			traits = { eco_resource_industrialist }
+		}
+	}
+
+	BUL_Khristo_Kabakhchiev = {
+		name = "Khristo Kabakhchiev"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/BUL/BUL_Khristo_Kabakhchiev.png"
+			}
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = BUL_Khristo_Kabakhchiev
+			allowed = {
+				original_tag = BUL
+			}
+			available = {
+				has_country_leader = {
+					character = BUL_Hristo_Smirnenski
+				}
+			}
+			traits = { sec_back_stabber }
+		}
+	}
+
+	BUL_Kimon_Georgiev = {
+		name = "Kimon Georgiev"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/BUL/BUL_Kimon_Georgiev.png"
+			}
+		}
+		advisor = {
+			slot = head_of_intel
+			idea_token = BUL_Kimon_Georgiev
+			allowed = {
+				original_tag = BUL
+			}
+			available = {
+				has_country_leader = {
+					character = BUL_Hristo_Smirnenski
+				}
+			}
+			traits = { int_political_specialist }
+		}
+	}
+
+	BUL_Vasil_Kolarov = {
+		name = "Vasil Kolarov"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/BUL/BUL_Vasil_Kolarov.png"
+			}
+		}
+		advisor = {
+			slot = foreign_minister
+			idea_token = BUL_Vasil_Kolarov
+			allowed = {
+				original_tag = BUL
+			}
+			available = {
+				has_country_leader = {
+					character = BUL_Hristo_Smirnenski
+				}
+			}
+			traits = { for_biased_intellectual }
+		}
+	}
+	
+	BUL_marko_turlakov = {
+		name = "Marko Turlakov"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/BUL/BUL_Marko_Turlakov.png"
+			}
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = BUL_marko_turlakov
+			allowed = {
+				original_tag = BUL
+			}
+			available = {
+				OR = {
+				has_country_leader = {
+					character = BUL_aleksandar_stamboliyski
+					}
+				has_country_leader = {
+					character = BUL_rayko_daskalov
+				}
+			}
+			}
+			traits = { hog_flamboyant_tough_guy }
+		}
+	}
+
+	BUL_nikola_petkov = {
+		name = "Nikola Petkov"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/BUL/BUL_Nikola_Petkov.png"
+			}
+		}
+		advisor = {
+			slot = foreign_minister
+			idea_token = BUL_nikola_petkov
+			available = {
+				OR = {
+				has_country_leader = {
+					character = BUL_aleksandar_stamboliyski
+					}
+				has_country_leader = {
+					character = BUL_rayko_daskalov
+				}
+			}
+			}
+			traits = { for_great_compromiser }
+		}
+	}
+
+	BUL_georgi_dimitrov = {
+		name = "Georgi Dimitrov"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/BUL/BUL_Georgi_Dimitrov.png"
+			}
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = BUL_georgi_dimitrov
+			allowed = {
+				original_tag = BUL
+			}
+			available = {
+				OR = {
+				has_country_leader = {
+					character = BUL_aleksandar_stamboliyski
+					}
+				has_country_leader = {
+					character = BUL_rayko_daskalov
+				}
+			}
+			}
+			traits = { eco_mixed_economy }
+		}
+	}
+
+	BUL_georgi_traikov = {
+		name = "Georgi Traikov"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/BUL/BUL_Georgi_Traikov.png"
+			}
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = BUL_georgi_traikov
+			allowed = {
+				original_tag = BUL
+			}
+			available = {
+				OR = {
+				has_country_leader = {
+					character = BUL_aleksandar_stamboliyski
+					}
+				has_country_leader = {
+					character = BUL_rayko_daskalov
+				}
+			}
+			}
+			traits = { sec_man_of_the_people }
+		}
+	}
+
+	BUL_dimitar_gichev = {
+		name = "Dimitar Gichev"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/BUL/BUL_Dimitar_Gichev.png"
+			}
+		}
+		advisor = {
+			slot = head_of_intel
+			idea_token = BUL_dimitar_gichev
+			allowed = {
+				original_tag = BUL
+			}
+			available = {
+				OR = {
+				has_country_leader = {
+					character = BUL_aleksandar_stamboliyski
+					}
+				has_country_leader = {
+					character = BUL_rayko_daskalov
+				}
+			}
+			}
+			traits = { int_civilian_specialist }
+		}
+	}
+	
+	BUL_Ferdinand_Kozovski = {	
+		name="Ferdinand Kozovski"
+		portraits={
+			army={
+				large="gfx/leaders/BUL/Portrait_BUL_Ferdinand_Kozovski.png"
+				small = "gfx/interface/ministers/BUL/BUL_Ferdinand_Kozovski.png"
+			}
+		}
+		field_marshal={
+			traits={ logistics_wizard politically_connected }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=4
+		}
+		advisor = {
+			slot = high_command
+			idea_token = BUL_Ferdinand_Kozovski_hc
+			allowed = {
+				OR = {
+					original_tag = BUL
+					original_tag = YUG
+				}
+			}
+			traits = { army_infantry_1 }
+			available = {
+			}
+		}
+	}
+
+	BUL_Vladimir_Zaimov = {	
+		name="Vladimir Zaimov"
+		portraits={
+			army={
+				small = "gfx/interface/ministers/BUL/BUL_Vladimir_Zaimov.png"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = BUL_Vladimir_Zaimov_hc
+			allowed = {
+				OR = {
+					original_tag = BUL
+					original_tag = YUG
+				}
+			}
+			traits = { army_concealment_1 }
+			available = {
+			}
+		}
+	}
+
+	BUL_Vladimir_Stoychev = {
+		name= "Vladimir Stoychev"
+		portraits={
+			army={
+				large = "gfx/leaders/BUL/Portrait_BUL_Vladimir_Stoychev.png"
+				small = "gfx/interface/ministers/BUL/BUL_Vladimir_Stoychev.png"
+			}
+		}
+		corps_commander = {
+			traits = { media_personality cavalry_officer }
+			skill=3
+			attack_skill=3
+			defense_skill=1
+			planning_skill=4
+			logistics_skill=3
+		}
+		advisor = {	
+			slot = army_chief
+			idea_token = BUL_Vladimir_Stoychev_carm
+			allowed = {
+				OR = {
+					original_tag = BUL
+					original_tag = YUG
+				}
+			}
+			traits = { carm_guns_and_butter_doctrine }
+			available = {
+			}
+		}
+	}
+
+	BUL_Aleksandar_Protogerov = {
+		name= "Aleksandar Protogerov"
+		portraits={
+			army={
+				small = "gfx/interface/ministers/BUL/BUL_Aleksandar_Protogerov.png"
+			}
+		}
+		advisor = {	
+			slot = army_chief
+			idea_token = BUL_Aleksandar_Protogerov_carm
+			allowed = {
+				OR = {
+					original_tag = BUL
+					original_tag = YUG
+				}
+			}
+			traits = { carm_elastic_defence_doctrine }
+			available = {
+			}
+		}
+	}
+
+	BUL_Kiril_Halachev = {
+		name="Kiril Halachev"
+		portraits={
+			army={
+				large="gfx/leaders/BUL/Portrait_BUL_Kiril_Halachev.png"
+				small = "gfx/interface/ministers/BUL/BUL_Kiril_Halachev.png"
+			}
+		}
+		navy_leader ={
+			traits={ fleet_protector }
+			skill=3
+			attack_skill=2
+			defense_skill=3
+			maneuvering_skill = 2
+			coordination_skill = 5
+		}
+		advisor = {	
+			slot = navy_chief
+			idea_token = BUL_Kiril_Halachev_cnav
+			allowed = {
+				OR = {
+					original_tag = BUL
+					original_tag = YUG
+				}
+			}
+			traits = { navy_chief_decisive_battle_2 }
+			available = {
+			}
+		}
+	}
+}

@@ -1,0 +1,84 @@
+﻿instant_effect = {
+	create_equipment_variant = {
+		name = "Do 23"
+		type = medium_plane_airframe_0
+		modules = {
+			fixed_main_weapon_slot = medium_bomb_bay
+			fixed_auxiliary_weapon_slot_1 = empty
+			fixed_auxiliary_weapon_slot_2 = empty
+			fixed_auxiliary_weapon_slot_3 = empty
+			engine_type_slot = engine_1_2x
+			special_type_slot_1 = empty
+			special_type_slot_2 = empty
+			special_type_slot_3 = empty
+			special_type_slot_4 = empty
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Ju 86"
+		type = medium_plane_airframe_0
+		modules = {
+			fixed_main_weapon_slot = medium_bomb_bay
+			fixed_auxiliary_weapon_slot_1 = empty
+			fixed_auxiliary_weapon_slot_2 = empty
+			fixed_auxiliary_weapon_slot_3 = empty
+			engine_type_slot = engine_2_2x
+			special_type_slot_1 = lmg_defense_turret_2x
+			special_type_slot_2 = fuel_tanks_medium
+			special_type_slot_3 = empty
+			special_type_slot_4 = empty
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "He 51" #also covers Ar 68
+		type = small_plane_airframe_0
+		modules = {
+			fixed_main_weapon_slot = light_mg_2x
+			engine_type_slot = engine_1_1x
+			special_type_slot_1 = empty
+		}
+		obsolete = yes
+	}
+}
+
+### Air oob
+air_wings = {
+
+	### II. Luftkreiskommando -- Berlin ###
+	763 = {
+		# Jagdgeschwader 132 'Richtofen'		
+		small_plane_airframe_0 =  {		# Ar 68
+			owner = "PRS" 
+			amount = 40
+			version_name = "He 51"
+		}
+		name = "Jagdgeschwader 132"
+		# TODO: REMOVE THIS LATER ???
+		transport_plane_equipment_1 = {
+			owner = "PRS" 
+			amount = 4
+		}
+		# Kampfgeschwader 153		
+		medium_plane_airframe_0 = {		# Do 23
+			owner = "PRS" 
+			amount = 80
+			version_name = "Do 23"
+		}
+	}
+	5 = {
+		# Jagdgeschwader 132 'Richtofen'		
+		small_plane_airframe_0 =  {		# Ar 68
+			owner = "PRS" 
+			amount = 40
+			version_name = "He 51"
+		}
+		medium_plane_airframe_0 = {		# Ju 86
+			owner = "PRS" 
+			amount = 40
+			version_name = "Ju 86"
+		}
+		name = "Kampfgeschwader 153"
+	}
+}

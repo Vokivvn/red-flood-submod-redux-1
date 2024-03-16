@@ -1,0 +1,42 @@
+autonomy_state = {
+	id = autonomy
+	
+    use_overlord_color = yes
+
+	min_freedom_level = 0.7
+	
+	manpower_influence = 0.00
+	
+	rule = {
+		can_not_declare_war = yes
+		can_decline_call_to_war = no
+	}
+	
+	modifier = {
+
+	}
+	
+	ai_subject_wants_higher = {
+		factor = 0.0
+	}
+	
+	ai_overlord_wants_lower = {
+		factor = 1.0
+	}
+
+	ai_overlord_wants_garrison = {
+		always = no
+	}
+
+	allowed = {
+
+	}
+
+	can_take_level = {
+		always = no
+	}
+
+	can_lose_level = {
+		always = no
+	}
+}

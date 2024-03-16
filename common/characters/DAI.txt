@@ -1,0 +1,53 @@
+characters = {
+	DAI_Nam_Hung_Nhat = {
+		name = "Nam-Hùng"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/DAI/Portrait_DAI_Nam_Hung_Nhat.png"
+				small = "gfx/interface/ministers/DAI/DAI_Nam_Hung_I.png"
+			}
+		}
+		country_leader = {
+			ideology = absolute_monarchy
+			expire = "1965.1.1.1"
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = DAI_Nam_Hung_I
+			allowed = {
+				original_tag = DAI
+			}
+			traits = {
+				hog_backroom_backstabber
+			}
+		}
+	}
+	DAI_Khoi = {
+		name = "Ngô Đình Khôi"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/DAI/Portrait_DAI_Ngo_Dinh_Khoi.png"
+			}
+		}
+		country_leader = {
+			ideology = national_democracy
+			expire = "1965.1.1.1"
+		}
+	}
+	DAI_Hideki_Tojo = {
+		name = "Hideki Tōjō"
+		portraits = {
+			civilian={
+				large="gfx/leaders/DAI/Portrait_DAI_Hideki_Tojo.png"
+			}
+		}
+	}
+	DAI_Bao_Dai = {
+		name = "Bao Đai"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/DAI/Portrait_DAI_Bao_Dai.png"
+			}
+		}
+	}
+}

@@ -1,0 +1,183 @@
+﻿capital = 1065
+set_convoys = 10
+
+oob = "CAL"
+set_naval_oob = "CAL_naval"
+set_air_oob = "CAL_air"
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	support_weapons = 1
+	tech_support = 1
+	tech_recon = 1
+	tech_engineers = 1
+	tech_trucks =1
+	motorised_infantry = 1
+	gw_artillery = 1
+	marines = 1
+	paratroopers = 1
+	tech_mountaineers = 1
+	tech_special_forces = 1
+	fuel_silos = 1
+}
+#NSB
+if = {
+	limit = { NOT = { has_dlc = "No Step Back" } }
+	set_technology = {
+		gwtank = 1
+		basic_light_tank = 1
+	}
+}
+if = {
+	limit = { has_dlc = "No Step Back" }
+	set_technology = {
+		gwtank_chassis = 1
+		basic_light_tank_chassis = 1
+		engine_tech_1 = 1
+	}
+}
+
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	set_technology = {
+		early_submarine = 1
+		basic_submarine = 1
+		early_destroyer = 1
+		early_light_cruiser = 1
+		basic_light_cruiser = 1
+		early_heavy_cruiser = 1
+		early_battleship = 1
+		early_battlecruiser = 1
+		early_carrier = 1
+		basic_carrier = 1
+		transport = 1
+	}
+}
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		early_ship_hull_light = 1
+		basic_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		early_ship_hull_cruiser = 1
+		basic_ship_hull_cruiser = 1
+		early_ship_hull_heavy = 1
+		early_ship_hull_carrier = 1
+		basic_ship_hull_carrier = 1
+		basic_battery = 1
+		basic_light_battery = 1
+		basic_medium_battery = 1
+		basic_heavy_battery = 1
+		basic_torpedo = 1
+		sonar = 1
+		basic_depth_charges = 1
+		basic_cruiser_armor_scheme = 1
+		basic_heavy_armor_scheme = 1
+		mtg_transport = 1
+		improved_airplane_launcher = 1
+		basic_dp_light_battery = 1
+	}
+}
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+	set_technology = {
+		iw_small_airframe = 1
+		basic_small_airframe = 1
+		iw_medium_airframe = 1
+		basic_medium_airframe = 1
+		engines_1 = 1
+		engines_2 = 1
+		aa_lmg = 1
+		early_bombs = 1
+		aircraft_construction = 1
+	}
+}
+if = {
+	limit = { NOT = { has_dlc = "By Blood Alone" } }
+	set_technology = {
+		early_fighter = 1
+		cv_early_fighter = 1
+		cv_naval_bomber1 = 1
+		cv_CAS1 = 1
+		naval_bomber1 = 1
+		CAS1 = 1
+		early_bomber = 1
+	}
+}
+
+set_popularities = {
+	accelerationism = 0
+	reactionism = 0
+	despotism = 20
+	right_authoritarianism = 0
+	conservatism = 20
+	liberalism = 30
+	progressivism = 20
+	popular_socialism = 0
+	vanguard_socialism = 0
+	anarchism = 10
+}
+
+set_politics = {
+	ruling_party = right_authoritarianism
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+recruit_character = CAL_riverside_council
+#recruit_character = CAL_edward_longstreet_bodin
+recruit_character = CAL_upton_sinclair
+recruit_character = CAL_upton_sinclair_moderate
+recruit_character = CAL_culbert_olson
+recruit_character = CAL_earl_warren
+recruit_character = CAL_robert_tryon_frederick
+recruit_character = CAL_john_george_agar_jr
+recruit_character = CAL_alex_xydias
+recruit_character = CAL_elisha_cook_jr
+recruit_character = CAL_john_william_finn
+recruit_character = CAL_john_mcmaster
+recruit_character = CAL_ernest_norman
+recruit_character = CAL_dorothy_martin
+recruit_character = CAL_israel_regardie
+recruit_character = CAL_frank_l_shaw
+recruit_character = CAL_john_f_shelley
+recruit_character = CAL_frank_allyn_edwards
+recruit_character = CAL_robert_a_heinlein
+recruit_character = CAL_mother_ruth
+recruit_character = CAL_karl_johannes_germer
+recruit_character = CAL_melech_epstein
+recruit_character = CAL_george_christopher
+recruit_character = CAL_lyndon_b_johnson
+recruit_character = CAL_arthur_leo_zagat
+recruit_character = CAL_paul_twitchell
+recruit_character = CAL_bishop_nekona
+recruit_character = CAL_grady_louis_mcmurtry
+recruit_character = CAL_norman_thomas
+recruit_character = CAL_ellis_e_patterson
+recruit_character = CAL_arthur_bell
+recruit_character = CAL_ruth_norman
+recruit_character = CAL_elesha
+recruit_character = CAL_kenneth_anger
+recruit_character = CAL_sara_northtrup_hollister
+recruit_character = CAL_JBS_hardman
+recruit_character = CAL_norris_poulson
+recruit_character = CAL_pat_brown
+recruit_character = CAL_theodore_tinsley
+recruit_character = CAL_jack_parsons
+recruit_character = CAL_brother_charles
+recruit_character = CAL_john_j_ballam
+recruit_character = CAL_fletcher_bowron
+recruit_character = CAL_kenneth_j_houghton
+recruit_character = CAL_raymond_murray
+recruit_character = CAL_jack_hendrick_taylor
+recruit_character = CAL_brooke_nihart
+recruit_character = CAL_ted_w_lawson
+recruit_character = CAL_Spiritualist_Party_Council
+recruit_character = CAL_L_Ron_Hubbard
+recruit_character = CAL_Archangel_Uriel
+recruit_character = CAL_Krishna_Venta

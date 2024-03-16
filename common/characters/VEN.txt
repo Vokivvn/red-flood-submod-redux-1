@@ -1,0 +1,38 @@
+characters={
+	VEN_vicente_lecuna={
+		name="Vicente Lecuna"
+		portraits={
+			civilian={
+				large="gfx/leaders/VEN/Portrait_VEN_Vicente_Lecuna.png"
+			}
+		}
+		country_leader={
+			desc="POLITICS_Vicente_Lecuna_DESC"
+			ideology=social_nationalism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	VEN_romulo_betancourt={
+		name="Rómulo Betancourt"
+		portraits={
+			civilian={
+				large="gfx/leaders/VEN/Portrait_VEN_Romulo_Betancourt.png"
+			}
+		}
+		country_leader={
+			desc="POLITICS_Rómulo_Betancourt_DESC"
+			ideology=democratic_socialism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	VEN_alberto_adriani={
+		name="Alberto Adriani"
+		portraits={
+			civilian={
+				large="gfx/leaders/VEN/Portrait_VEN_Alberto_Adriani.png"
+			}
+		}
+	}
+}

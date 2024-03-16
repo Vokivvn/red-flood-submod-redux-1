@@ -1,0 +1,57 @@
+characters = {
+	KSM_konstantin_petrovich_nechaev = {
+		name = "Konstantin Petrovich Nechaev"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/RUS/Portrait_RUS_Konstantin_Nechaev.png"
+			}
+		}
+		country_leader = {
+			ideology = military_dictatorship
+			expire = "1965.1.1.1"
+		}
+	}
+	KSM_hari_singh = {
+		name = "Hari Singh"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/KSM/KSM_Hari_Singh.png"
+			}
+		}
+		country_leader = {
+			ideology = oligarchy
+			expire = "1965.1.1.1"
+		}
+	}
+	KSM_Sheikh_Abdullah = {
+		name = "Sheikh Mohammad Abdullah"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/KSM/KSM_Sheikh_Abdullah.png"
+			}
+		}
+		country_leader = {
+			ideology = left_populism
+			expire = "1982.1.1.1"
+		}
+	}
+	KSM_Chaudhry_Ghulam_Abbas = {
+		name = "Chaudhry Ghulam Abbas"
+	}
+	KSM_Prem_Nath_Bazaz = {
+		name = "Prem Nath Bazaz"
+
+	}
+	KSM_Mirwaiz_Yusuf_Shah = {
+		name = "Mirwaiz Yusuf Shah"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/KSM/KSM_Mirwaiz_Yusuf_Shah.png"
+			}
+		}
+		country_leader = {
+			ideology = social_conservatism
+			expire = "1968.1.1.1"
+		}
+	}
+}

@@ -1,0 +1,776 @@
+focus_tree = {
+	id = RF_Ireland
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = IRE
+		}
+	}
+	continuous_focus_position = { x = 50 y = 3200 }
+	focus = {
+		id = IRE_where_did_i_put_those_damn_books
+		icon = GFX_IRE_where_did_i_put_those_damn_books
+		x = 2
+		y = 0
+		cost = 2
+		available_if_capitulated = yes
+		available = {
+			has_country_flag = IRE_books
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_political_power = -100
+		}
+	}
+	focus = {
+		id = IRE_strange
+		icon = GFX_IRE_strange
+		x = 2
+		y = 1
+		cost = 2
+		prerequisite = {
+			focus = IRE_where_did_i_put_those_damn_books
+		}
+		allow_branch = {
+			hidden_trigger = {
+				has_country_flag = IRE_books
+			}
+		}
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_political_power = 200
+		}
+	}
+	focus = {
+		id = IRE_fascinating
+		icon = GFX_IRE_fascinating
+		x = 2
+		y = 2
+		cost = 2
+		prerequisite = {
+			focus = IRE_strange
+		}
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_stability = -.0192
+		}
+	}
+	focus = {
+		id = IRE_incredible
+		icon = GFX_IRE_incredible
+		x = 2
+		y = 3
+		cost = 2
+		prerequisite = {
+			focus = IRE_fascinating
+		}
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_stability = .4200
+		}
+	}
+	focus = {
+		id = IRE_a_little_experiment
+		icon = GFX_IRE_a_little_experiment
+		x = 2
+		y = 4
+		cost = 2
+		prerequisite = {
+			focus = IRE_incredible
+		}
+		available_if_capitulated = yes 
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			hidden_effect = {
+				set_country_flag = IRE_magic
+				mark_focus_tree_layout_dirty = yes
+				promote_character = IRE_William_Butler_Yeats
+				country_event = {
+					id = april_fools.12
+				}
+			}
+			custom_effect_tooltip = "IRE_MAGIC_TOOLTIP"
+		}
+	}
+	focus = {
+		id = IRE_oh_hell_yeah
+		icon = GFX_IRE_oh_hell_yeah
+		x = 2
+		y = 5
+		cost = 2
+		prerequisite = {
+			focus = IRE_a_little_experiment
+		}
+		available_if_capitulated = yes
+		allow_branch = {
+			hidden_trigger = {
+				has_country_flag = IRE_magic
+			}
+		}
+		available = {
+			has_country_flag = IRE_magic
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_manpower = 100000
+		}
+	}
+	focus = {
+		id = IRE_skeletons_to_sweep
+		icon = GFX_IRE_skeletons_to_sweep
+		x = 1
+		y = 6
+		cost = 2
+		prerequisite = {
+			focus = IRE_oh_hell_yeah
+		}
+		available_if_capitulated = yes 
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_manpower = -1
+		}
+	}
+	focus = {
+		id = IRE_zombies_to_cook
+		icon = GFX_IRE_zombies_to_cook
+		x = 3
+		y = 6
+		cost = 2
+		prerequisite = {
+			focus = IRE_oh_hell_yeah
+		}
+		available_if_capitulated = yes 
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			custom_effect_tooltip = IRE_ZOMBIE_TOOLTIP
+			add_political_power = -50
+		}
+	}
+	focus = {
+		id = IRE_power_corrupts
+		icon = GFX_IRE_power_corrupts
+		x = 2
+		y = 7
+		cost = 2
+		prerequisite = {
+			focus = IRE_skeletons_to_sweep
+		}
+		prerequisite = {
+			focus = IRE_zombies_to_cook
+		}
+		available_if_capitulated = yes 
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			hidden_effect = {
+				set_country_flag = IRE_horn
+				mark_focus_tree_layout_dirty = yes
+				promote_character = IRE_Dark_Lord_Yeats
+			}
+			custom_effect_tooltip = "IRE_HORN_TOOLTIP"
+		}
+	}
+	focus = {
+		id = IRE_one_people_under_the_horns_shadow
+		icon = GFX_IRE_one_people_under_the_horns_shadow
+		x = 2
+		y = 8
+		cost = 2
+		prerequisite = {
+			focus = IRE_power_corrupts
+		}
+		available_if_capitulated = yes
+		allow_branch = {
+			hidden_trigger = {
+				has_country_flag = IRE_horn
+			}
+		}
+		available = {
+			has_country_flag = IRE_horn
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = accelerationism
+				popularity = 1
+			}
+			add_war_support = 1
+			add_stability = 1
+		}
+	}
+	focus = {
+		id = IRE_their_leaders_in_thrall
+		icon = GFX_IRE_their_leaders_in_thrall
+		x = 0
+		y = 9
+		cost = 2
+		prerequisite = {
+			focus = IRE_one_people_under_the_horns_shadow
+		}
+		available_if_capitulated = yes 
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			promote_character = IRE_Eamon_Dead_Valera
+			promote_character = IRE_Michael_Zombie_Collins
+		}
+	}
+	focus = {
+		id = IRE_catholic_vampire_priests
+		icon = GFX_IRE_catholic_vampire_priests
+		x = 2
+		y = 9
+		cost = 2
+		prerequisite = {
+			focus = IRE_one_people_under_the_horns_shadow
+		}
+		available_if_capitulated = yes 
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+		
+			hidden_effect ={
+				ENG ={
+					transfer_ship = {
+						type = heavy_cruiser
+						target = IRE
+					}
+					transfer_ship = {
+						type = heavy_cruiser
+						target = IRE
+					}
+					transfer_ship = {
+						type = heavy_cruiser
+						target = IRE
+					}
+					transfer_ship = {
+						type = heavy_cruiser
+						target = IRE
+					}
+					transfer_ship = {
+						type = heavy_cruiser
+						target = IRE
+					}
+					transfer_ship = {
+						type = battleship
+						target = IRE
+					}
+					transfer_ship = {
+						type = battleship
+						target = IRE
+					}
+					transfer_ship = {
+						type = battleship
+						target = IRE
+					}
+					transfer_ship = {
+						type = battleship
+						target = IRE
+					}
+					transfer_ship = {
+						type = battleship
+						target = IRE
+					}
+					transfer_ship = {
+						type = light_cruiser
+						target = IRE
+					}
+					transfer_ship = {
+						type = light_cruiser
+						target = IRE
+					}
+					transfer_ship = {
+						type = light_cruiser
+						target = IRE
+					}
+					transfer_ship = {
+						type = light_cruiser
+						target = IRE
+					}
+					transfer_ship = {
+						type = light_cruiser
+						target = IRE
+					}
+					transfer_ship = {
+						type = destroyer
+						target = IRE
+					}
+					transfer_ship = {
+						type = destroyer
+						target = IRE
+					}
+					transfer_ship = {
+						type = destroyer
+						target = IRE
+					}
+					transfer_ship = {
+						type = destroyer
+						target = IRE
+					}
+					transfer_ship = {
+						type = destroyer
+						target = IRE
+					}
+					transfer_ship = {
+						type = destroyer
+						target = IRE
+					}
+					transfer_ship = {
+						type = destroyer
+						target = IRE
+					}
+					transfer_ship = {
+						type = destroyer
+						target = IRE
+					}
+				}
+				JPR ={
+					transfer_ship = {
+						type = heavy_cruiser
+						target = IRE
+					}
+					transfer_ship = {
+						type = heavy_cruiser
+						target = IRE
+					}
+					transfer_ship = {
+						type = heavy_cruiser
+						target = IRE
+					}
+					transfer_ship = {
+						type = heavy_cruiser
+						target = IRE
+					}
+					transfer_ship = {
+						type = heavy_cruiser
+						target = IRE
+					}
+					transfer_ship = {
+						type = battleship
+						target = IRE
+					}
+					transfer_ship = {
+						type = battleship
+						target = IRE
+					}
+					transfer_ship = {
+						type = battleship
+						target = IRE
+					}
+					transfer_ship = {
+						type = light_cruiser
+						target = IRE
+					}
+					transfer_ship = {
+						type = light_cruiser
+						target = IRE
+					}
+					transfer_ship = {
+						type = light_cruiser
+						target = IRE
+					}
+					transfer_ship = {
+						type = light_cruiser
+						target = IRE
+					}
+					transfer_ship = {
+						type = light_cruiser
+						target = IRE
+					}
+					transfer_ship = {
+						type = destroyer
+						target = IRE
+					}
+					transfer_ship = {
+						type = destroyer
+						target = IRE
+					}
+					transfer_ship = {
+						type = destroyer
+						target = IRE
+					}
+					transfer_ship = {
+						type = destroyer
+						target = IRE
+					}
+					transfer_ship = {
+						type = destroyer
+						target = IRE
+					}
+					transfer_ship = {
+						type = destroyer
+						target = IRE
+					}
+					transfer_ship = {
+						type = destroyer
+						target = IRE
+					}
+					transfer_ship = {
+						type = destroyer
+						target = IRE
+					}
+				}
+				JAP ={
+					transfer_ship = {
+						type = heavy_cruiser
+						target = IRE
+					}
+					transfer_ship = {
+						type = heavy_cruiser
+						target = IRE
+					}
+					transfer_ship = {
+						type = heavy_cruiser
+						target = IRE
+					}
+					transfer_ship = {
+						type = heavy_cruiser
+						target = IRE
+					}
+					transfer_ship = {
+						type = heavy_cruiser
+						target = IRE
+					}
+					transfer_ship = {
+						type = battleship
+						target = IRE
+					}
+					transfer_ship = {
+						type = battleship
+						target = IRE
+					}
+					transfer_ship = {
+						type = battleship
+						target = IRE
+					}
+					transfer_ship = {
+						type = light_cruiser
+						target = IRE
+					}
+					transfer_ship = {
+						type = light_cruiser
+						target = IRE
+					}
+					transfer_ship = {
+						type = light_cruiser
+						target = IRE
+					}
+					transfer_ship = {
+						type = light_cruiser
+						target = IRE
+					}
+					transfer_ship = {
+						type = light_cruiser
+						target = IRE
+					}
+					transfer_ship = {
+						type = destroyer
+						target = IRE
+					}
+					transfer_ship = {
+						type = destroyer
+						target = IRE
+					}
+					transfer_ship = {
+						type = destroyer
+						target = IRE
+					}
+					transfer_ship = {
+						type = destroyer
+						target = IRE
+					}
+					transfer_ship = {
+						type = destroyer
+						target = IRE
+					}
+					transfer_ship = {
+						type = destroyer
+						target = IRE
+					}
+					transfer_ship = {
+						type = destroyer
+						target = IRE
+					}
+					transfer_ship = {
+						type = destroyer
+						target = IRE
+					}
+				}
+				GER ={
+					transfer_ship = {
+						type = heavy_cruiser
+						target = IRE
+					}
+					transfer_ship = {
+						type = heavy_cruiser
+						target = IRE
+					}
+					transfer_ship = {
+						type = heavy_cruiser
+						target = IRE
+					}
+					transfer_ship = {
+						type = heavy_cruiser
+						target = IRE
+					}
+					transfer_ship = {
+						type = heavy_cruiser
+						target = IRE
+					}
+					transfer_ship = {
+						type = battleship
+						target = IRE
+					}
+					transfer_ship = {
+						type = battleship
+						target = IRE
+					}
+					transfer_ship = {
+						type = battleship
+						target = IRE
+					}
+					transfer_ship = {
+						type = light_cruiser
+						target = IRE
+					}
+					transfer_ship = {
+						type = light_cruiser
+						target = IRE
+					}
+					transfer_ship = {
+						type = light_cruiser
+						target = IRE
+					}
+					transfer_ship = {
+						type = light_cruiser
+						target = IRE
+					}
+					transfer_ship = {
+						type = light_cruiser
+						target = IRE
+					}
+					transfer_ship = {
+						type = destroyer
+						target = IRE
+					}
+					transfer_ship = {
+						type = destroyer
+						target = IRE
+					}
+					transfer_ship = {
+						type = destroyer
+						target = IRE
+					}
+					transfer_ship = {
+						type = destroyer
+						target = IRE
+					}
+					transfer_ship = {
+						type = destroyer
+						target = IRE
+					}
+					transfer_ship = {
+						type = destroyer
+						target = IRE
+					}
+					transfer_ship = {
+						type = destroyer
+						target = IRE
+					}
+					transfer_ship = {
+						type = destroyer
+						target = IRE
+					}
+				}
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_1
+				amount = 30000
+			}
+		}
+	}
+	focus = {
+		id = IRE_shamble_for_ireland
+		icon = GFX_IRE_shamble_for_ireland
+		x = 4
+		y = 9
+		cost = 2
+		prerequisite = {
+			focus = IRE_one_people_under_the_horns_shadow
+		}
+		available_if_capitulated = yes 
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_ideas = {
+				IRE_spooky_scary_skellingtons
+			}
+			#custom_effect_tooltip = IRE_SKELLINGTONS_TOOLTIP
+			#hidden_effect = {
+			#	set_technology = {
+			#		popup = no
+			#		IRE_skellingtons_tech = 1
+			#		#IRE_skellingtons_stage_two_tech = 1
+			#	}
+			#}
+		}
+	}
+	focus = {
+		id = IRE_not_a_red_flood
+		icon = GFX_IRE_not_a_red_flood
+		x = 2
+		y = 10
+		cost = 2
+		prerequisite = {
+			focus = IRE_their_leaders_in_thrall
+		}
+		prerequisite = {
+			focus = IRE_catholic_vampire_priests
+		}
+		prerequisite = {
+			focus = IRE_shamble_for_ireland
+		}
+		available_if_capitulated = yes 
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_political_power = 25
+			add_stability = 0.02
+			custom_effect_tooltip = IRE_KAISERREICH_TOOLTIP
+		}
+	}
+	focus = {
+		id = IRE_but_a_shamrock_tsunami
+		icon = GFX_IRE_but_a_shamrock_tsunami
+		x = 2
+		y = 11
+		cost = 2
+		prerequisite = {
+			focus = IRE_not_a_red_flood
+		}
+		available_if_capitulated = yes 
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = IRE_spooky_scary_skellingtons
+				add_idea = IRE_spookier_scarier_skellingtons
+			}
+			custom_effect_tooltip = IRE_SKELLINGTONS_STAGE_TWO_TOOLTIP
+			#hidden_effect = {
+			#	set_technology = {
+			#		popup = no
+			#		IRE_skellingtons_stage_two_tech = 1
+			#	}
+			#}
+		}
+	}
+	focus = {
+		id = IRE_tonight_we_dine_on_anglo_rump_steaks
+		icon = GFX_IRE_tonight_we_dine_on_anglo_rump_steaks
+		x = 2
+		y = 12
+		cost = 2
+		prerequisite = {
+			focus = IRE_but_a_shamrock_tsunami
+		}
+		available_if_capitulated = yes 
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			hidden_effect = {
+				declare_war_on = {
+					type = annex_everything
+					target = ENG
+				}
+				ENG = {
+					remove_from_faction = IRE
+					end_puppet = IRE
+				}
+				every_state = {
+					limit = {
+						is_core_of = ENG
+					}
+					add_core_of = IRE
+				}
+			}
+			custom_effect_tooltip = IRE_CORE_TOOLTIP
+		}
+	}
+	focus = {
+		id = IRE_the_doot_doot_foundries
+		icon = GFX_IRE_the_doot_doot_foundries
+		x = 2
+		y = 13
+		cost = 2
+		prerequisite = {
+			focus = IRE_tonight_we_dine_on_anglo_rump_steaks
+		}
+		available_if_capitulated = yes 
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_offsite_building = { type = industrial_complex level = 100 }
+			add_offsite_building = { type = arms_factory level = 50 }
+			swap_ideas = {
+				remove_idea = IRE_spookier_scarier_skellingtons
+				add_idea = IRE_spooky_scary_speedy_skellingtons
+			}
+		}
+	}
+	focus = {
+		id = IRE_the_second_cooming
+		icon = GFX_IRE_the_second_cooming
+		x = 2
+		y = 14
+		cost = 2
+		prerequisite = {
+			focus = IRE_the_doot_doot_foundries
+		}
+		available_if_capitulated = yes 
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			hidden_effect = {
+				every_country = {
+					declare_war_on = {
+						type = annex_everything
+						target = ROOT
+					}
+				}
+			}
+			custom_effect_tooltip = IRE_DEATH_TOOLTIP
+		}
+	}
+}

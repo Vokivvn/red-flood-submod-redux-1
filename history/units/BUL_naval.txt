@@ -1,0 +1,30 @@
+instant_effect = {
+	# Submarines #
+	create_equipment_variant = {
+		name = "Podvodnik Class"				
+		type = ship_hull_submarine_2
+		name_group = YUG_SS_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_torpedo_slot = ship_torpedo_sub_1
+			fixed_ship_engine_slot = sub_ship_engine_1
+			rear_1_custom_slot = empty
+		}
+	}
+}
+units= {
+
+	##### NAVAL UNITS #####
+	###### Kraljevska Jugoslovenska Ratna Mornarica (KJRM) ######
+	fleet = {
+		name = "Kraljevska Mornarica"			
+		naval_base = 9783 # Varna
+		task_force = {				
+			name = "Kraljevska Mornarica"			
+			location = 9783 # Varna
+			ship = { name = "Podvodnik No. 18" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = BUL version_name = "Podvodnik Class" } } }				
+			ship = { name = "Podvodnik No. 19" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = BUL version_name = "Podvodnik Class" } } }				
+			ship = { name = "Podvodnik No. 20" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = BUL version_name = "Podvodnik Class" } } }							
+		}				
+	}
+} 

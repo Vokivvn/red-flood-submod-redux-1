@@ -1,0 +1,635 @@
+focus_tree = {
+	id = PUR_aprilfools
+	country = {
+		factor = 0
+		modifier = { #loaded via event if gamerule is selected
+			add = 0
+			tag = PUR
+		}
+	}
+	#Focus for City Slickers Coup
+	focus = {
+		id = PUR_city_slickers_coup
+		icon = GFX_PUR_city_slickers_coup-91544
+		x = 13
+		y = 1
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = PUR_the_visit }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			always = no
+		}
+	}
+
+	#Focus for Secure American Made Cars
+	focus = {
+		id = PUR_secure_american_made_cars
+		icon = GFX_PUR_secure_american_made_cars-91553
+		x = 9
+		y = 3
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = PUR_the_sign_is_a_subtle_reference }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {		 
+			add_stability = 0.15
+			add_political_power= 100
+		}
+	}
+
+	#Focus for Ban Tomacco
+	focus = {
+		id = PUR_ban_tomacco
+		icon = GFX_PUR_ban_tomacco-91555
+		x = 9
+		y = 4
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = PUR_secure_american_made_cars }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	 
+			add_popularity = {
+				ideology = accelerationism
+				popularity = -0.2
+			}
+		}
+	}
+
+	#Focus for Suck and Fuck the World
+	focus = {
+		id = PUR_suck_and_fuck_the_world
+		icon = GFX_PUR_suck_and_fuck_the_world-91560
+		x = 8
+		y = 5
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = PUR_seize_plutonium 
+		}
+		prerequisite = { 
+			focus = PUR_ban_tomacco 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			custom_effect_tooltip = "PUR_Chuck"
+		}
+	}
+
+	#Focus for Zorroan Spirit
+	focus = {
+		id = PUR_zorroan_spirit
+		icon = GFX_PUR_zorroan_spirit-91562
+		x = 14
+		y = 2
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = PUR_city_slickers_coup }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_war_support = 0.03
+		}
+	}
+
+	#Focus for I Believe in Good Grooming
+	focus = {
+		id = PUR_i_believe_in_good_grooming
+		icon = GFX_PUR_i_believe_in_good_grooming-91563
+		x = 14
+		y = 3
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = PUR_zorroan_spirit }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {		 
+			add_stability = -0.05
+			add_war_support = 0.05
+		}
+	}
+
+	#Focus for Mass Produce Tomacco
+	focus = {
+		id = PUR_mass_produce_tomacco
+		icon = GFX_PUR_mass_produce_tomacco-91567
+		x = 12
+		y = 3
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = PUR_prepare_the_atoms }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	 
+			add_popularity = {
+				ideology = accelerationism
+				popularity = 0.2
+			}
+		}
+	}
+
+	#Focus for ...and sell it
+	focus = {
+		id = PUR_and_sell_it
+		icon = GFX_PUR_and_sell_it-91564
+		x = 12
+		y = 4
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = PUR_mass_produce_tomacco }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = { 
+			add_political_power= 1000
+		}
+	}
+
+	#Focus for Buy Shoes from a Hobo
+	focus = {
+		id = PUR_buy_shoes_from_a_hobo
+		icon = GFX_PUR_buy_shoes_from_a_hobo-91568
+		x = 14
+		y = 4
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = PUR_i_believe_in_good_grooming }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power = 100
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Focus for Involve Ourselves
+	focus = {
+		id = PUR_involve_ourselves
+		icon = GFX_war_plan_sword
+		x = 8
+		y = 6
+		cost = 1
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = PUR_this_car_was_made_in_guatemala 
+			focus = PUR_god_bless_the_sneedclave 
+			focus = PUR_suck_and_fuck_the_world 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			set_cosmetic_tag = PUR_Sneed
+			add_manpower = 12000
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_1
+				amount = 1000
+				producer = USA
+			}
+		}
+	}
+
+	#Focus for Conquer our Neighbours
+	focus = {
+		id = PUR_conquer_our_neighbours
+		icon = GFX_militarizethesouth
+		x = 8
+		y = 7
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = PUR_involve_ourselves }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_subject = no
+		}
+		completion_reward = {
+			create_wargoal = {
+				target = PHX
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = NAV
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = MCO
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = OKL
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = DAK
+				type = annex_everything
+			}
+		}
+	}
+
+	#Focus for Payout City Slickers
+	focus = {
+		id = PUR_payout_city_slickers
+		icon = GFX_PUR_payout_city_slickers-91548
+		x = 2
+		y = 2
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = PUR_officially_sneeds }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	#Focus for Align Flynn
+	focus = {
+		id = PUR_align_flynn
+		icon = GFX_PUR_align_flynn-91545
+		x = 2
+		y = 3
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = PUR_payout_city_slickers }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_manpower = 5000
+			add_opinion_modifier = { target = USA modifier = large_increase }
+			USA = { add_opinion_modifier = { target = PUR modifier = large_increase } }
+		}
+	}
+
+	#Focus for Steady as she goes...
+	focus = {
+		id = PUR_steady_as_she_goes
+		icon = GFX_PUR_steady_as_she_goes-91546
+		x = 2
+		y = 4
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = PUR_align_flynn }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power = 150
+		}
+	}
+
+	#Focus for God Bless the Sneedclave
+	focus = {
+		id = PUR_god_bless_the_sneedclave
+		icon = GFX_PUR_god_bless_the_sneedclave-91551
+		x = 3
+		y = 5
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = PUR_pay_out_the_farmers 
+		}
+		prerequisite = { 
+			focus = PUR_steady_as_she_goes 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			custom_effect_tooltip = "PUR_Sneedtooltip"
+		}
+	}
+
+	#Focus for The Visit
+	focus = {
+		id = PUR_the_visit
+		icon = GFX_PUR_the_visit-91541
+		x = 8
+		y = 0
+		cost = 1
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 10
+			country_event = {
+				id = april_fools.3
+				days = 5
+			}
+			set_cosmetic_tag = "PUR_sneed"
+		}
+	}
+
+	#Focus for Officially Sneeds
+	focus = {
+		id = PUR_officially_sneeds
+		icon = GFX_PUR_officially_sneeds-91542
+		x = 3
+		y = 1
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = PUR_the_visit }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			always = no
+		}
+	}
+
+	#Focus for Gummies for All
+	focus = {
+		id = PUR_gummies_for_all
+		icon = GFX_PUR_gummies_for_all-91549
+		x = 4
+		y = 2
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = PUR_officially_sneeds }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability = 0.03
+			add_war_support = 0.02
+		}
+	}
+
+	#Focus for The Chuck Restoration
+	focus = {
+		id = PUR_the_chuck_restoration
+		icon = GFX_PUR_the_chuck_restoration-91543
+		x = 8
+		y = 1
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = PUR_the_visit }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			always = no
+		}
+	}
+
+	#Focus for Grow Boring Tomatoes
+	focus = {
+		id = PUR_grow_boring_tomatoes
+		icon = GFX_PUR_grow_boring_tomatoes-91547
+		x = 4
+		y = 3
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = PUR_gummies_for_all }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_war_support = 0.20
+			add_stability = 0.10
+		}
+	}
+
+	#Focus for Troll the Chapos
+	focus = {
+		id = PUR_troll_the_chapos
+		icon = GFX_PUR_troll_the_chapos-91558
+		x = 7
+		y = 3
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = PUR_purge_the_city_slickers }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {			 
+			add_popularity = {
+			ideology = vanguard_socialism
+			popularity = -0.10
+			}
+			add_popularity = {
+			ideology = revisionist_socialism
+			popularity = -0.15
+			}
+			add_popularity = {
+			ideology = progressivism
+			popularity = -0.05
+			}
+			add_popularity = {
+			ideology = popular_socialism
+			popularity = -0.05
+			}
+		}
+	}
+
+	#Focus for Purge the City Slickers
+	focus = {
+		id = PUR_purge_the_city_slickers
+		icon = GFX_PUR_purge_the_city_slickers-91557
+		x = 7
+		y = 2
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = PUR_the_chuck_restoration }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {			 
+			add_popularity = {
+			ideology = accelerationism
+			popularity = -0.05
+			}
+		}
+	}
+
+	#Focus for Pay out the Farmers
+	focus = {
+		id = PUR_pay_out_the_farmers
+		icon = GFX_PUR_pay_out_the_farmers-91550
+		x = 4
+		y = 4
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = PUR_grow_boring_tomatoes }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	#Focus for Seize Plutonium
+	focus = {
+		id = PUR_seize_plutonium
+		icon = GFX_PUR_seize_plutonium-91559
+		x = 7
+		y = 4
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = PUR_troll_the_chapos }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_war_support = -0.07
+			add_political_power = 20
+			add_research_slot = 1
+		}
+	}
+
+	#Focus for The Sign is a Subtle Reference
+	focus = {
+		id = PUR_the_sign_is_a_subtle_reference
+		icon = GFX_PUR_the_sign_is_a_subtle_reference-91552
+		x = 9
+		y = 2
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = PUR_the_chuck_restoration }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power = 150
+		}
+	}
+
+	#Focus for Prepare the Atoms
+	focus = {
+		id = PUR_prepare_the_atoms
+		icon = GFX_PUR_prepare_the_atoms-91561
+		x = 12
+		y = 2
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = PUR_city_slickers_coup }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_research_slot = 1
+			add_stability = -0.20
+			add_popularity = {
+				ideology = accelerationism
+				popularity = 0.15
+			}
+		}
+	}
+
+	#Focus for This Car was Made in Guatemala
+	focus = {
+		id = PUR_this_car_was_made_in_guatemala
+		icon = GFX_PUR_this_car_was_made_in_guatemala-91565
+		x = 13
+		y = 5
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = PUR_and_sell_it 
+		}
+		prerequisite = { 
+			focus = PUR_buy_shoes_from_a_hobo 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			custom_effect_tooltip = "PUR_City_Slicker"
+		}
+	}
+
+	#Focus for The Sneed Empire
+	focus = {
+		id = PUR_the_sneed_empire
+		icon = GFX_glorytotherepublic
+		x = 8
+		y = 8
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = PUR_conquer_our_neighbours }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			create_wargoal = {
+				target = TEX
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = USA
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = DIX
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = NEE
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = NYC
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = MOS
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = KNW
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = LOU
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = OKL
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = DST
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = WYO
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = SEG
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = CAL
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = JEF
+				type = annex_everything
+			}
+		}
+	}

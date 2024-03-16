@@ -1,0 +1,895 @@
+characters = {
+	ISR_avraham_stern = {
+		name = "Avraham Stern"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ISR/ISR_yair.png"
+				small = "GFX_idea_ISR_Avraham_Stern_minister"
+			}
+		}
+		country_leader = {
+			ideology = zadrugism
+			expire = "1965.1.1.1"
+			traits = { ISR_stern_leader }
+		}
+		corps_commander = {
+			traits = { commando }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = ISR_stern_hog
+			allowed = {
+				original_tag = ISR
+			}
+			available = {
+				has_government = accelerationism
+				has_completed_focus = ISR_asternruleinzion
+			}
+			traits = {
+				hog_flamboyant_tough_guy
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = ISR_stern_cos
+			allowed = {
+				original_tag = ISR
+			}
+			available = {
+				has_government = accelerationism
+			}
+			traits = { 
+				cos_school_of_psychology
+			}
+		}
+	}
+
+	ISR_zeev_jabotinsky = {
+		name = "Ze'ev Jabotinsky"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ISR/ISR_jabotinski.png"
+			}
+			army = {
+				large = "gfx/leaders/ISR/ISR_jabotinski_general.png"
+			}
+		}
+		country_leader = {
+			ideology = praetorian_oligarchy
+			expire = "1965.1.1.1"
+			traits = { ISR_jabo_leader }
+		}
+		corps_commander = {
+			traits = {desert_fox}
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+
+	ISR_david_ben_gurion = {
+		name = "David Ben-Gurion"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ISR/ISR_bengurion.png"
+			}
+			army = {
+				small = "GFX_idea_ISR_David_Ben_Gurion_minister"
+			}
+		}
+		country_leader = {
+			ideology = left_populism
+			expire = "1965.1.1.1"
+			traits = { ISR_ben_gurion_leader }
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = ISR_gurion_hog
+			allowed = {
+				original_tag = ISR
+			}
+			available = {
+				has_government = progressivism
+				has_completed_focus = ISR_bengurionascendstopower
+			}
+			traits = {
+				hog_pragmatic_statesman
+			}
+		}
+		advisor = {
+			slot = foreign_minister
+			idea_token = ISR_gurion_for
+			allowed = {
+				original_tag = ISR
+			}
+			available = {
+				AND = {
+					NOT = {
+						has_country_leader = {
+						   character = ISR_david_ben_gurion
+						   ruling_only = yes
+						}
+					}
+					OR = {
+						has_government = revisionist_socialism
+						has_government = liberalism
+						has_government = popular_socialism
+						has_government = progressivism
+					}
+				}
+			}
+			traits = {
+				for_great_compromiser
+			}
+		}
+	}
+	ISR_abba_gordin = {
+		name = "Abba Gordin"
+		country_leader = {
+			ideology = social_anarchism
+			expire = "1965.1.1.1"
+		}
+	}
+
+	ISR_wizman = {
+		name = ISR_wizman_hog
+		portraits = {
+			army = {
+				small = "GFX_idea_ISR_Chaim_Weizman_minister"
+			}
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = ISR_wizman_hog
+			allowed = {
+				original_tag = ISR
+			}
+			traits = {
+				hog_pragmatic_statesman
+			}
+		}
+	}
+	ISR_einstein = { 
+		name = "Albert Einstein"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ISR/ISR_einstein.png"
+			}
+			army = {
+				small = "GFX_idea_ISR_Albert_Einstein_minister"
+			}
+		}
+		country_leader={
+			ideology=spartakism
+			expire="1965.1.1.1"
+			id=-1
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = ISR_einstein_hog
+			allowed = {
+				original_tag = ISR
+			}
+			available = {
+				OR = {
+					has_government = revisionist_socialism
+					has_government = popular_socialism
+					has_government = vanguard_socialism
+				}
+			}
+			visible = {
+				has_completed_focus = ISR_einsteinarrivesfromgermany
+			}
+			traits = {
+				hog_happy_amateur
+			}
+		}
+	}
+	ISR_katznelson = {
+		name = ISR_katznelson_hog
+		portraits = {
+			army = {
+				small = "GFX_idea_ISR_Berl_Katznelson_minister"
+			}
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = ISR_katznelson_hog
+			allowed = {
+				original_tag = ISR
+			}
+			available = {
+				OR = {
+					has_government = revisionist_socialism
+					has_government = popular_socialism
+					has_government = vanguard_socialism
+				}
+			}
+			traits = {
+				hog_reformist_soldier
+			}
+		}
+	}
+	ISR_tabenkin = {
+		name = ISR_tabenkin_hog
+		portraits = {
+			army = {
+				small = "GFX_idea_ISR_Yitzhak_Tabenkin_minister"
+			}
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = ISR_tabenkin_hog
+			allowed = {
+				original_tag = ISR
+			}
+			available = {
+				OR = {
+					has_government = revisionist_socialism
+					has_government = popular_socialism
+					has_government = vanguard_socialism
+				}
+			}
+			traits = {
+				hog_pragmatic_statesman
+			}
+		}
+	}
+	ISR_begin = {
+		name = ISR_begin_hog
+		portraits = {
+			army = {
+				small = "GFX_idea_ISR_Menachem_Begin_minister"
+			}
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = ISR_begin_hog
+			allowed = {
+				original_tag = ISR
+			}
+			available = {
+				OR = {
+					has_government = right_authoritarianism
+					has_government = accelerationism
+				}
+				OR = {
+					has_completed_focus = ISR_jabotinskytakesover
+					has_completed_focus = ISR_asternruleinzion
+				}
+			}
+			traits = {
+				hog_reformist_soldier
+			}
+		}
+	}
+	ISR_rothschild = {
+		name = ISR_rothschild_hog
+		portraits = {
+			army = {
+				small = "GFX_idea_ISR_Maurice_de_Rothschild_minister"
+			}
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = ISR_rothschild_hog
+			allowed = {
+				original_tag = ISR
+			}
+			visible = {
+				always = no
+			}
+			available = {
+				has_government = liberalism
+			}
+			traits = {
+				hog_corporate_suit
+			}
+		}
+	}
+	ISR_allon = {
+		name = ISR_allon_for
+		portraits = {
+			army = {
+				small = "GFX_idea_ISR_Yigal_Allon_minister"
+			}
+		}
+		advisor = {
+			slot = foreign_minister
+			idea_token = ISR_allon_for
+			allowed = {
+				original_tag = ISR
+			}
+			available = {
+				OR = {
+					has_government = revisionist_socialism
+					has_government = liberalism
+					has_government = popular_socialism
+					has_government = progressivism
+				}
+			}
+			traits = {
+				for_great_compromiser
+			}
+		}
+	}
+	ISR_shamir = {
+		name = ISR_shamir_for
+		portraits = {
+			army = {
+				small = "GFX_idea_ISR_Yitzhak_Shamir_minister"
+			}
+		}
+		advisor = {
+			slot = foreign_minister
+			idea_token = ISR_shamir_for
+			allowed = {
+				original_tag = ISR
+			}
+			available = {
+				OR = {
+					has_government = accelerationism
+					has_government = right_authoritarianism
+				}
+			}
+			traits = {
+				for_general_staffer
+			}
+		}
+	}
+	ISR_meir = {
+		name = ISR_meir_for
+		portraits = {
+			army = {
+				small = "GFX_idea_ISR_Golda_Meir_minister"
+			}
+		}
+		advisor = {
+			slot = foreign_minister
+			idea_token = ISR_meir_for
+			allowed = {
+				original_tag = ISR
+			}
+			available = {
+				OR = {
+					has_government = revisionist_socialism
+					has_government = popular_socialism
+					has_government = progressivism
+				}
+			}
+			traits = {
+				for_biased_intellectual
+			}
+		}
+	}
+
+	ISR_hilferding = {
+		name = ISR_hilferding_econ
+		portraits = {
+			army = {
+				small = "GFX_idea_ISR_Rudolf_Hilferding_minister"
+			}
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = ISR_hilferding_econ
+			allowed = {
+				original_tag = ISR
+			}
+			visible = {
+				has_government = popular_socialism
+			}
+			available = {
+				has_government = popular_socialism
+			}
+			traits = {
+				eco_administrative_genius
+			}
+		}
+	}
+	ISR_bernstein = {
+		name = ISR_bernstein_econ
+		portraits = {
+			army = {
+				small = "GFX_idea_ISR_Peretz_Bernstein_minister"
+			}
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = ISR_bernstein_econ
+			allowed = {
+				original_tag = ISR
+			}
+			available = {
+				OR = {
+					has_government = right_authoritarianism
+					has_government = accelerationism
+				}
+			}
+			traits = {
+				eco_industrialiser
+			}
+		}
+	}
+
+	ISR_kaplan = {
+		name = ISR_kaplan_econ
+		portraits = {
+			army = {
+				small = "GFX_idea_ISR_Eliezer_Kaplan_minister"
+			}
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = ISR_kaplan_econ
+			allowed = {
+				original_tag = ISR
+			}
+			available = {
+				OR = {
+					has_government = progressivism
+				}
+			}
+			traits = {
+				eco_mixed_economy
+			}
+		}
+	}
+	ISR_yosef = {
+		name = ISR_yosef_econ
+		portraits = {
+			army = {
+				small = "GFX_idea_ISR_Dov_Yosef_minister"
+			}
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = ISR_yosef_econ
+			allowed = {
+				original_tag = ISR
+			}
+			available = {
+				OR = {
+					has_government = right_authoritarianism
+					has_government = progressivism
+					has_government = accelerationism
+				}
+			}
+			traits = {
+				eco_planned_economy_proponent
+			}
+		}
+	}
+	ISR_bohm = {
+		name = ISR_bohm_int
+		portraits = {
+			army = {
+				small = "GFX_idea_ISR_David_Bohm_minister"
+			}
+		}
+		advisor = {
+			slot = head_of_intel
+			idea_token = ISR_bohm_int
+			allowed = {
+				original_tag = ISR
+			}
+			available = {
+				OR = {
+					has_government = revisionist_socialism
+					has_government = popular_socialism
+					has_government = progressivism
+				}
+			}
+			traits = {
+				int_dismal_enigma
+			}
+		}
+	}
+	ISR_gruenbaum = {
+		name = ISR_gruenbaum_int
+		portraits = {
+			army = {
+				small = "GFX_idea_ISR_Yitzhak_Gruenbaum_minister"
+			}
+		}
+		advisor = {
+			slot = head_of_intel
+			idea_token = ISR_gruenbaum_int
+			allowed = {
+				original_tag = ISR
+			}
+			available = {
+				OR = {
+					has_government = right_authoritarianism
+					has_government = progressivism
+				}
+			}
+			traits = {
+				int_industrial_specialist
+			}
+		}
+	}
+	ISR_bar_yehuda = {
+		name = ISR_bar_yehuda_int
+		portraits = {
+			army = {
+				small = "GFX_idea_ISR_Yisrael_Bar_Yehuda_minister"
+			}
+		}
+		advisor = {
+			slot = head_of_intel
+			idea_token = ISR_bar_yehuda_int
+			allowed = {
+				original_tag = ISR
+			}
+			available = {
+				has_government = progressivism
+			}
+			traits = {
+				int_technical_specialist
+			}
+		}
+	}
+	ISR_rokach = {
+		name = ISR_rokach_int
+		portraits = {
+			army = {
+				small = "GFX_idea_ISR_Israel_Rokach_minister"
+			}
+		}
+		advisor = {
+			slot = head_of_intel
+			idea_token = ISR_rokach_int
+			allowed = {
+				original_tag = ISR
+			}
+			available = {
+				OR = {
+					has_government = right_authoritarianism
+					has_government = liberalism
+				}
+			}
+			traits = {
+				int_logistics_specialist
+			}
+		}
+	}
+	ISR_yellin_mor = {
+		name = ISR_yellin_mor_int
+		portraits = {
+			army = {
+				small = "GFX_idea_ISR_Nathan_Yellin_Mor_minister"
+			}
+		}
+		advisor = {
+			slot = head_of_intel
+			idea_token = ISR_yellin_mor_int
+			allowed = {
+				original_tag = ISR
+			}
+			available = {
+				has_government = accelerationism
+			}
+			traits = {
+				int_political_specialist
+			}
+		}
+	}
+
+	ISR_shiloah = {
+		name = ISR_shiloah_sec
+		portraits = {
+			army = {
+				small = "GFX_idea_ISR_Reuven_Shiloah_minister"
+			}
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = ISR_shiloah_sec
+			allowed = {
+				original_tag = ISR
+			}
+			traits = {
+				sec_silent_lawyer
+			}
+		}
+	}
+
+	ISR_dori = {
+		name = ISR_dori_cos
+		portraits = {
+			army = {
+				small = "GFX_idea_ISR_ISR_dori"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = ISR_dori_cos
+			allowed = {
+				original_tag = ISR
+			}
+			available = {
+				OR = {
+					has_government = popular_socialism
+					has_government = progressivism
+					has_government = right_authoritarianism
+				}
+			}
+			traits = { 
+				cos_school_of_psychology
+			}
+		}
+	}
+	ISR_meridor = {
+		name = ISR_meridor_coa
+		portraits = {
+			army = {
+				small = "GFX_idea_ISR_Yaakov_Meridor_minister"
+			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = ISR_meridor_coa
+			allowed = {
+				original_tag = ISR
+			}
+			traits = {
+				carm_commando_doctrine
+			}
+		}
+	}
+	ISR_monash = {
+		name = ISR_monash_coa
+		portraits = {
+			army = {
+				small = "GFX_idea_ISR_John_Monash_minister"
+			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = ISR_monash_coa
+			allowed = {
+				original_tag = ISR
+			}
+			available = {
+				OR = {
+					has_government = accelerationism
+					has_government = right_authoritarianism
+					has_government = liberalism
+				}
+			}
+			traits = {
+				carm_elastic_defence_doctrine
+			}
+		}
+	}
+	ISR_tehom = {
+		name = ISR_tehom_coa
+		portraits = {
+			army = {
+				small = "GFX_idea_ISR_Avraham_Tehomi_minister"
+			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = ISR_tehom_coa
+			allowed = {
+				original_tag = ISR
+			}
+			available = {
+				has_government = accelerationism
+			}
+			traits = {
+				carm_doctrine_of_autonomy
+			}
+		}
+	}
+
+	ISR_shulman = {
+		name = ISR_shulman_con
+		portraits = {
+			army = {
+				small = "GFX_idea_ISR_Paul_Shulman_minister"
+			}
+		}
+		advisor = {
+			slot = navy_chief
+			idea_token = ISR_shulman_con
+			allowed = {
+				original_tag = ISR
+			}
+			traits = { 
+				cnav_power_projection_doctrine
+			}
+		}
+	}
+
+	ISR_beckhardt = {
+		name = ISR_beckhardt_coaf
+		portraits = {
+			army = {
+				small = "GFX_idea_ISR_Fritz_Beckhardt_minister"
+			}
+		}
+		advisor = {
+			slot = air_chief
+			idea_token = ISR_beckhardt_coaf
+			allowed = {
+				original_tag = ISR
+			}
+			available = {
+				NOT = {
+					has_government = accelerationism
+				}
+			}
+			traits = { 
+				cair_carpet_bombing_doctrine
+			}
+		}
+	}
+	ISR_lenart = {
+		name = ISR_lenart_coaf
+		advisor = {
+			slot = air_chief
+			idea_token = ISR_lenart_coaf
+			allowed = {
+				original_tag = ISR
+			}
+			traits = { 
+				cair_battlefield_support_doctrine
+			}
+		}
+	}
+
+	ISR_teller = {
+		name = ISR_teller_theorist
+		portraits = {
+			army = {
+				small = "GFX_idea_ISR_Edward_Teller_minister"
+			}
+		}
+		advisor = {
+			slot = theorist
+			idea_token = ISR_teller_theorist
+			allowed = {
+				original_tag = ISR
+			}
+			traits = { 
+				nuclear_theorist
+			}
+			research_bonus = {
+				nuclear = 0.1
+			}
+		}
+	}
+	ISR_magnes = {
+		name = ISR_magnes_theorist
+		portraits = {
+			army = {
+				small = "GFX_idea_ISR_Judah_Leon_Magnes_minister"
+			}
+		}
+		advisor = {
+			slot = theorist
+			idea_token = ISR_magnes_theorist
+			allowed = {
+				original_tag = ISR
+			}
+			traits = { 
+				mass_assault_expert
+			}
+		}
+	}
+
+	ISR_baerwald = {
+		name = ISR_baerwald_theorist
+		portraits = {
+			army = {
+				small = "GFX_idea_ISR_Alexander_Baerwald_minister"
+			}
+		}
+		advisor = {
+			slot = theorist
+			idea_token = ISR_baerwald_theorist
+			allowed = {
+				original_tag = ISR
+			}
+			traits = { 
+				mobile_warfare_expert
+			}
+		}
+	}
+	ISR_moshe_dayan = {
+		name = "Moshe Dayan"
+		portraits = {
+			army = {
+				large = "gfx/leaders/ISR/ISR_dayan.png"
+				small = "GFX_idea_ISR_ISR_dayan"
+			}
+		}
+		field_marshal = {
+			traits = { defensive_doctrine media_personality organizer }
+			skill = 3 
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 4
+		}
+		advisor = {
+			slot = high_command
+			idea_token = ISR_dayan_cos
+			allowed = {
+				original_tag = ISR
+			}
+			traits = { 
+				cos_school_of_mass_combat
+			}
+		}
+	}
+	ISR_yigal_yadin = {
+		name = "Yigal Yadin"
+		portraits = {
+			army = {
+				large = "gfx/leaders/ISR/ISR_Yadin.png"
+				small = "GFX_idea_ISR_Yigael_Yadin_minister"
+			}
+		}
+		corps_commander = {
+			traits = {organizer}
+			skill = 2
+			attack_skill = 4
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 2
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = ISR_yadin_coa
+			allowed = {
+				original_tag = ISR
+			}
+			available = {
+				NOT = {
+					has_government = accelerationism
+				}
+			}
+			traits = {
+				carm_commando_doctrine
+			}
+		}
+	}
+	ISR_sadeh = {
+		name = ISR_sadeh_theorist
+		portraits = {
+			army = {
+				small = "GFX_idea_ISR_Yitzhak_Sadeh_minister"
+				large = "gfx/leaders/ISR/ISR_sadeh.png"
+			}
+		}
+		advisor = {
+			slot = theorist
+			idea_token = ISR_sadeh_theorist
+			allowed = {
+				original_tag = ISR
+			}
+			traits = { 
+				superior_firepower_expert
+			}
+		}
+		corps_commander = {
+			traits = {small_elite_leader aggressive_assaulter}
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+}

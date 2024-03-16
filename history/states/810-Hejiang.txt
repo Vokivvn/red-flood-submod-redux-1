@@ -1,0 +1,35 @@
+state={
+	id=810
+	name="STATE_810"
+	manpower=2624721
+
+	state_category = large_town
+
+	history={
+		owner = ZHR
+		add_core_of = ZHR
+		victory_points = {
+			10463 5
+		}
+		victory_points = {
+			12342 3
+		}
+		victory_points = {
+			10503 5
+		}
+		victory_points = {
+			4551 3
+		}
+		buildings = {
+			infrastructure = 2
+            industrial_complex = 2
+			arms_factory = 1
+		}
+
+	}
+
+	provinces={
+		810 1571 3791 3815 3843 4551 5427 6811 6863 7569 7670 9623 9798 10215 10376 10463 10519 10521 11906 12342 12443 12500 12355 12482 10503
+	}
+	buildings_max_level_factor=1.000
+}

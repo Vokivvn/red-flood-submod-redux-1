@@ -1,0 +1,19 @@
+state={
+	id = 1072
+	name = "STATE_1072"
+	manpower = 14188
+	
+	state_category = enclave
+	
+	history={
+		owner = SAN
+		add_core_of = SAN
+		victory_points = { 13336 10 }
+		buildings = {
+			infrastructure = 2
+		}
+	}
+	provinces={
+		13336
+	}
+}

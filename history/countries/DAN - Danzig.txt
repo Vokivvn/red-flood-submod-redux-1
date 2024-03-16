@@ -1,0 +1,123 @@
+capital = 848
+
+oob = "DAN_1936"
+
+set_research_slots = 2
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1
+	tech_recon = 1
+	tech_engineers = 1
+	tech_trucks =1
+	motorised_infantry = 1
+	early_fighter = 1
+	CAS1 = 1
+	gwtank = 1
+	gw_artillery = 1
+
+}
+country_lock_all_division_template = yes
+
+country_event = { id = danzig.1 days = 530 }
+
+#NSB
+if = {
+	limit = {
+		NOT = { has_dlc = "No Step Back" }
+	}
+	set_technology = {
+		gwtank = 1
+		basic_light_tank = 1
+	}
+}
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	set_technology = {
+		gwtank_chassis = 1
+		basic_light_tank_chassis = 1
+		engine_tech_1 = 1
+	}
+}
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	set_technology = {
+		early_destroyer = 1
+		early_submarine = 1	
+	}
+}
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		early_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		basic_ship_hull_light = 1
+		basic_battery = 1
+		basic_torpedo = 1
+		basic_depth_charges = 1
+	}
+}
+
+
+
+
+set_politics = {
+	ruling_party = revisionist_socialism
+	last_election = "1933.10.25"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	vanguard_socialism = 8
+	popular_socialism = 11
+	anarchism = 2
+	revisionist_socialism = 19
+	progressivism = 10
+	liberalism = 3
+	conservatism = 2
+	right_authoritarianism = 12
+	despotism = 21
+	reactionism = 9
+	accelerationism = 3
+}
+
+recruit_character = DAN_Julius_Gehl_demsoc
+recruit_character = DAN_Julius_Gehl_anar
+recruit_character = DAN_Julius_Gehl_popsoc
+recruit_character = DAN_Julius_Gehl_prog
+recruit_character = DAN_Julius_Gehl_vansoc
+recruit_character = DAN_Arthur_Greisser_despotism
+recruit_character = DAN_Arthur_Greisser_reactionism
+recruit_character = DAN_dreszer_acc
+recruit_character = DAN_dreszer_rwa
+recruit_character = DAN_dreszer_rwa2
+recruit_character = DAN_dreszer_military
+
+give_military_access = POL
+give_military_access = GER
+GER = {
+	diplomatic_relation = {
+		country = DAN
+		relation = docking_rights
+		active = yes
+	}
+}
+POL = {
+	diplomatic_relation = {
+		country = DAN
+		relation = docking_rights
+		active = yes
+	}
+}
+
+add_ideas = {
+	DAN_amber_baltic_sea
+	DAN_marshals_gaze
+}

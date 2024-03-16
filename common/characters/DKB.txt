@@ -1,0 +1,753 @@
+characters = {
+	DKB_mikhail_grabbe = {
+		name = "Mikhail Grabbe"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/DKB/Portrait_DKB_Mikhail_Grabbe.png"
+			}
+			army = {
+				large="gfx/leaders/DKB/Portrait_DKB_Mikhail_Grabbe.png"
+			}
+		}
+		country_leader = {
+			ideology = military_dictatorship
+			expire = "1965.1.1.1"
+		}
+		corps_commander = {
+			traits = { old_guard cavalry_leader }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 1
+		}
+	}
+	DKB_alexei_kaledin = {
+		name = "Alexei Kaledin"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/DKB/Portrait_DKB_Alexei_Kaledin.png"
+			}
+			army = {
+				large="gfx/leaders/DKB/Portrait_DKB_Alexei_Kaledin.png"
+			}
+		}
+		country_leader = {
+			ideology = military_dictatorship
+			expire = "1965.1.1.1"
+		}
+		field_marshal = {
+			traits = { trait_cautious old_guard cavalry_leader }
+			skill = 4
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 5
+			logistics_skill = 2
+		}
+	}
+	DKB_mykola_ryabovil = {
+		name = "Nikolai Ryabovol"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/DKB/DKB_Nikolai_Ryabovol_RWA.png"
+			}
+			army = {
+				large="gfx/leaders/DKB/DKB_Nikolai_Ryabovol_General.png"
+				small = "GFX_idea_DKB_Mykola_Ryabovil_cos"
+			}
+		}
+		country_leader = {
+			ideology = anocracy
+			expire = "1965.1.1.1"
+		}
+		corps_commander = {
+			traits = { trait_cautious }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
+	DKB_pavel_gorgulov = {
+		name = "Pavel Gorgulov"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/DKB/Portrait_DKB_Pavel_Gorgulov.png"
+				small = "GFX_idea_DKB_Pavel_Gorgulov_hog"
+			}
+		}
+		country_leader = {
+			ideology = reactionary_populism
+			expire = "1965.1.1.1"
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = DKB_pavel_gorgulov
+			allowed = {
+				original_tag = DKB
+			}
+			available = {
+				has_completed_focus = DKB_gorgulov_at_stage
+			}
+			traits = {
+				hog_local_tyrant
+			}
+		}
+	}
+	DKB_Anatol_Furst_von_Lieven = {
+		name = "Anatol Furst von Lieven"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/WRU/Portrait_WRU_Anatol_von_Lieven_kommissar.png"
+			}
+		}
+		country_leader = {
+			expire = "1965.1.1"
+			ideology = national_rejuvenatism
+		}
+	}
+
+	DKB_pyotr_polovtsov = {
+		name = "Pyotr Polovtsov"
+		portraits = {
+			army = {
+				large="gfx/leaders/DKB/Portrait_DKB_Pyotr_Polovtsov.png"
+				small = "GFX_idea_DKB_Pyotr_Polovtsov_carm"
+			}
+		}
+		corps_commander = {
+			traits = { trait_cautious }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = DKB_pyotr_polovtsov_carm
+			allowed = {
+				original_tag = DKB
+			}
+			traits = {
+				carm_doctrine_of_autonomy
+			}
+		}
+	}
+	DKB_pshemakho_kotsev = {
+		name = "Pshemakho Kotsev"
+		portraits = {
+			army = {
+				large="gfx/leaders/DKB/Portrait_DKB_Pshemakho_Kotsev.png"
+				small="gfx/interface/ministers/DKB/DKB_pshemakho_kotsev.tga"
+			}
+		}
+		corps_commander = {
+			traits = { infantry_leader }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+		}
+		advisor = {
+			slot = high_command
+			idea_token = DKB_pshemakho_kotsev_hc
+			allowed = {
+				original_tag = DKB
+			}
+			traits = {
+				army_chief_drill_2
+			}
+		}
+	}
+	DKB_vladimir_tolstov = {
+		name = "Vladimir Tolstov"
+		portraits = {
+			army = {
+				large="gfx/leaders/DKB/Portrait_DKB_Vladimir_Tolstov.png"
+				small = "gfx/interface/ministers/DKB/DKB_Vladimir_Tolstov.png"
+			}
+		}
+		corps_commander = {
+			traits = { organizer }
+			skill = 3
+			attack_skill = 1
+			defense_skill = 3
+			planning_skill = 1
+			logistics_skill = 2
+		}
+		advisor = {
+			slot = high_command
+			idea_token = DKB_vladimir_tolstov_hc
+			allowed = {
+				original_tag = DKB
+			}
+			traits = {
+				army_commando_2
+			}
+		}
+	}
+	DKB_oka_gorogovikov = {
+		name = "Oka Gorodovikov"
+		portraits = {
+			army = {
+				large="gfx/leaders/DKB/Portrait_DKB_Oka_Gorodovikov.png"
+			}
+		}
+		corps_commander = {
+			traits = { infantry_leader }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 1
+		}
+	}
+	DKB_aleksey_avtonomov = {
+		name = "Aleksey Avtonomov"
+		portraits = {
+			army = {
+				large="gfx/leaders/DKB/Portrait_DKB_Aleksey_Avtonomov.png"
+			}
+		}
+		corps_commander = {
+			traits = { trickster }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+		}
+	}
+	DKB_sergei_toporkov_astrakhansky = {
+		name = "Sergei Toporkov-Astrakhansky"
+		portraits = {
+			army = {
+				large="gfx/leaders/Europe/Portrait_Generic_Europe_authoritarian_3.png"
+			}
+		}
+		corps_commander = {
+			traits = { winter_specialist }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	DKB_sergei_toporkov_tsaritsynsky = {
+		name = "Sergei Toporkov-Tsaritsynsky"
+		portraits = {
+		}
+		corps_commander = {
+			traits = { trait_engineer }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+		}
+	}
+	DKB_pyotr_krasnov = {
+		name = "Pyotr Krasnov"
+		portraits = {
+			army = {
+				large="gfx/leaders/DKB/Portrait_DKB_Pyotr_Krasnov.png"
+			}
+		}
+		corps_commander = {
+			traits = { trait_mountaineer }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+		}
+	}
+	DKB_georgy_bicherakhov = {
+		name = "Georgy Bicherakhov"
+		portraits = {
+		}
+		corps_commander = {
+			traits = { adaptable }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 1
+		}
+	}
+	DKB_mykhail_sablin = {
+		name = "Mykhail Sablin"
+		portraits = {
+			navy = {
+				small = "GFX_idea_DKB_Mykhail_Sablin_cnav"
+			}
+		}
+		navy_leader = {
+			traits = { spotter ironside }
+			skill = 2
+			attack_skill = 3
+			defense_skill = 2
+			maneuvering_skill = 1
+			coordination_skill = 2
+		}
+		advisor = {
+			slot = navy_chief
+			idea_token = DKB_mykhail_sablin
+			allowed = {
+				original_tag = DKB
+			}
+			traits = {
+				cnav_open_seas_doctrine
+			}
+		}
+	}
+	DKB_dmitriy_nenyukov = {
+		name = "Dmitriy Nenyukov"
+		portraits = {
+			navy = {
+				large="gfx/leaders/DKB/Portrait_DKB_Dmitriy_Nenyukov.png"
+				small = "GFX_idea_DKB_Dmitriy_Nenyukov_cnav"
+			}
+		}
+		navy_leader = {
+			traits = { old_guard_navy bold }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			maneuvering_skill = 3
+			coordination_skill = 1
+		}
+		advisor = {
+			slot = navy_chief
+			idea_token = DKB_dmitriy_nenyukov
+			allowed = {
+				original_tag = DKB
+			}
+			traits = {
+				cnav_base_control_doctrine
+			}
+		}
+	}
+	
+	DKB_luka_bych = {
+		name = "Luka Bych"
+		portraits = {
+			army = {
+				small = "GFX_idea_DKB_Luka_Bych_hog"
+			}
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = DKB_luka_bych
+			allowed = {
+				original_tag = DKB
+			}
+			available = {
+				OR = {
+					has_completed_focus = DKB_chernomortsy_victorious
+					has_completed_focus = DKB_kaledin_marches_forward
+				}
+			}
+			traits = {
+				hog_silent_workhorse
+			}
+		}
+	}
+	DKB_afrikan_bogayevsky = {
+		name = "Afrikan Bogayevsky"
+		portraits = {
+			army = {
+				small = "GFX_idea_DKB_Afrikan_Bogayevsky_hog"
+			}
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = DKB_afrikan_bogayevsky
+			allowed = {
+				original_tag = DKB
+			}
+			available = {
+				OR = {
+					has_completed_focus = DKB_lineytsy_victorious
+					has_completed_focus = DKB_kaledin_marches_forward
+				}
+			}
+			traits = {
+				hog_old_general
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = DKB_afrikan_bogayevsky_hc
+			allowed = {
+				original_tag = DKB
+			}
+			traits = {
+				army_chief_morale_2
+			}
+		}
+	}
+	DKB_fedir_shcherbyna = {
+		name = "Fedir Shcherbyna"
+		portraits = {
+			army = {
+				small = "GFX_idea_DKB_Fedir_Shcherbyna_for"
+			}
+		}
+		advisor = {
+			slot = foreign_minister
+			idea_token = DKB_fedir_shcherbyna
+			allowed = {
+				original_tag = DKB
+			}
+			available = {
+				OR = {
+					has_completed_focus = DKB_chernomortsy_victorious
+					has_completed_focus = DKB_kaledin_marches_forward
+				}
+			}
+			traits = {
+				for_great_compromiser
+			}
+		}
+	}
+	DKB_fyodor_bekovich_cherkassky = {
+		name = "Fyodor Bekovich Cherkassky"
+		portraits = {
+			army = {
+				small = "GFX_idea_DKB_Fyodor_Bekovich_Cherkassky_for"
+			}
+		}
+		advisor = {
+			slot = foreign_minister
+			idea_token = DKB_fyodor_bekovich_cherkassky
+			allowed = {
+				original_tag = DKB
+			}
+			available = {
+				OR = {
+					has_completed_focus = DKB_lineytsy_victorious
+					has_completed_focus = DKB_kaledin_marches_forward
+				}
+			}
+			traits = {
+				for_general_staffer
+			}
+		}
+		advisor = {
+			slot = theorist
+			idea_token = DKB_fyodor_bekovich_cherkassky_theorist
+			allowed = {
+				original_tag = DKB
+			}
+			traits = {
+				military_theorist
+			}
+		}
+	}
+	DKB_konstantin_chkheidze = {
+		name = "Konstantin Chkheidze"
+		portraits = {
+			army = {
+				small = "GFX_idea_DKB_Konstantin_Chkheidze_for"
+			}
+		}
+		advisor = {
+			slot = foreign_minister
+			idea_token = DKB_konstantin_chkheidze
+			allowed = {
+				original_tag = DKB
+			}
+			available = {
+				has_completed_focus = DKB_gorgulov_at_stage
+			}
+			traits = {
+				for_ideological_crusader
+			}
+		}
+	}
+	DKB_vasyl_ivanis = {
+		name = "Vasyl Ivanis"
+		portraits = {
+			army = {
+				small = "GFX_idea_DKB_Vasyl_Ivanis_eco"
+			}
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = DKB_vasyl_ivanis
+			allowed = {
+				original_tag = DKB
+			}
+			available = {
+				OR = {
+					has_completed_focus = DKB_chernomortsy_victorious
+					has_completed_focus = DKB_kaledin_marches_forward
+				}
+			}
+			traits = {
+				eco_administrative_genius
+			}
+		}
+	}
+	DKB_pavel_kudinov = {
+		name = "Pavel Kudinov"
+		portraits = {
+			army = {
+				small = "GFX_idea_DKB_Pavel_Kudinov_eco"
+			}
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = DKB_pavel_kudinov
+			allowed = {
+				original_tag = DKB
+			}
+			available = {
+				OR = {
+					has_completed_focus = DKB_lineytsy_victorious
+					has_completed_focus = DKB_kaledin_marches_forward
+				}
+			}
+			traits = {
+				eco_infantry_proponent
+			}
+		}
+	}
+	DKB_galina_kuznetsova = {
+		name = "Galina Kuznetsova"
+		portraits = {
+			army = {
+				small = "GFX_idea_DKB_Galina_Kuznetsova_eco"
+			}
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = DKB_galina_kuznetsova
+			allowed = {
+				original_tag = DKB
+			}
+			available = {
+				has_completed_focus = DKB_gorgulov_at_stage
+			}
+			traits = {
+				eco_mixed_economy
+			}
+		}
+	}
+	DKB_oleksandr_filimonov = {
+		name = "Oleksandr Filimonov"
+		portraits = {
+			army = {
+				small = "GFX_idea_DKB_Oleksandr_Filimonov_sec"
+			}
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = DKB_oleksandr_filimonov
+			allowed = {
+				original_tag = DKB
+			}
+			available = {
+				OR = {
+					has_completed_focus = DKB_chernomortsy_victorious
+					has_completed_focus = DKB_kaledin_marches_forward
+				}
+			}
+			traits = {
+				sec_crime_fighter
+			}
+		}
+	}
+	DKB_pyotr_popov = {
+		name = "Pyotr Popov"
+		portraits = {
+			army = {
+				small = "GFX_idea_DKB_Pyotr_Popov_sec"
+			}
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = DKB_pyotr_popov
+			allowed = {
+				original_tag = DKB
+			}
+			available = {
+				OR = {
+					has_completed_focus = DKB_lineytsy_victorious
+					has_completed_focus = DKB_kaledin_marches_forward
+				}
+			}
+			traits = {
+				sec_health_and_safety
+			}
+		}
+	}
+	DKB_bora_berduko = {
+		name = "Bora Berduko"
+		portraits = {
+			army = {
+				small = "GFX_idea_DKB_Bora_Berduko_sec"
+			}
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = DKB_bora_berduko
+			allowed = {
+				original_tag = DKB
+			}
+			available = {
+				has_completed_focus = DKB_gorgulov_at_stage
+			}
+			traits = {
+				sec_prince_of_terror
+			}
+		}
+	}
+	DKB_mykola_bukretov = {
+		name = "Nikolai Bukretov"
+		portraits = {
+			army = {	
+				small = "GFX_idea_DKB_Mykola_Bukretov_int"
+			}
+		}
+		advisor = {
+			slot = head_of_intel
+			idea_token = DKB_mykola_bukretov
+			allowed = {
+				original_tag = DKB
+			}
+			available = {
+				OR = {
+					has_completed_focus = DKB_chernomortsy_victorious
+					has_completed_focus = DKB_kaledin_marches_forward
+				}
+			}
+			traits = {
+				int_logistics_specialist
+			}
+		}
+		advisor = {
+			slot = theorist
+			idea_token = DKB_mykola_bukretov_theorist
+			allowed = {
+				original_tag = DKB
+			}
+			traits = {
+				grand_battle_plan_expert
+			}
+		}
+	}
+	DKB_svyatoslav_denisov = {
+		name = "Svyatoslav Denisov"
+		portraits = {
+			army = {
+				small = "GFX_idea_DKB_Svyatoslav_Denisov_int"
+			}
+		}
+		advisor = {
+			slot = head_of_intel
+			idea_token = DKB_svyatoslav_denisov
+			allowed = {
+				original_tag = DKB
+			}
+			available = {
+				OR = {
+					has_completed_focus = DKB_lineytsy_victorious
+					has_completed_focus = DKB_kaledin_marches_forward
+				}
+			}
+			traits = {
+				int_technical_specialist
+			}
+		}
+	}
+	DKB_vladimir_sidorin = {
+		name = "Vladimir Sidorin"
+		portraits = {
+			army = {
+				small = "GFX_idea_DKB_Vladimir_Sidorin_int"
+			}
+		}
+		advisor = {
+			slot = head_of_intel
+			idea_token = DKB_vladimir_sidorin
+			allowed = {
+				original_tag = DKB
+			}
+			available = {
+				has_completed_focus = DKB_gorgulov_at_stage
+			}
+			traits = {
+				int_political_specialist
+			}
+		}
+	}
+	DKB_andrey_shkuro = {
+		name = "Andrei Shkuro"
+		portraits = {
+			army = {
+				small = "GFX_idea_DKB_Andrey_Shkuro_carm"
+				large = "gfx/leaders/DKB/DKB_andrei_grigoriyevich_shkuro.png"
+			}
+		}
+		corps_commander = {
+			traits = { commando }
+			skill = 3
+			attack_skill = 4
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = DKB_andrey_shkuro
+			allowed = {
+				original_tag = DKB
+			}
+			traits = {
+				carm_armoured_spearhead_doctrine
+			}
+		}
+	}
+	DKB_aleksandr_utin = {
+		name = "Aleksandr Utin"
+		portraits = {
+			army = {
+				small = "GFX_idea_DKB_Aleksandr_Utin_cair"
+			}
+		}
+		advisor = {
+			slot = air_chief
+			idea_token = DKB_aleksandr_utin
+			allowed = {
+				original_tag = DKB
+			}
+			traits = {
+				cair_air_superiority_doctrine
+			}
+		}
+	}
+	DKB_vasily_bibikov = {
+		name = "Vasily Bibikov"
+		portraits = {
+			army = {
+				small = "GFX_idea_DKB_Vasily_Bibikov_cair"
+			}
+		}
+		advisor = {
+			slot = air_chief
+			idea_token = DKB_vasily_bibikov
+			allowed = {
+				original_tag = DKB
+			}
+			traits = {
+				cair_carpet_bombing_doctrine
+			}
+		}
+	}
+}

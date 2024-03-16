@@ -1,0 +1,28 @@
+state={
+	id=777
+	name="STATE_777"
+
+	history={
+		owner = WAF
+		add_core_of = WAF
+		victory_points = {
+			13444 3
+		}
+		buildings = {
+			infrastructure = 2
+			13444 = {
+				naval_base = 1
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		1951 12843 13212  13441 13442 13443 13444
+	}
+	manpower=1101346
+	buildings_max_level_factor=1.000
+	state_category=town
+}

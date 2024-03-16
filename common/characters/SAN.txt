@@ -1,0 +1,72 @@
+characters={
+	SAN_benito_mussolini={
+		name="Benito Mussolini"
+		portraits={
+			civilian={
+				large="gfx/leaders/SAN/Portrait_SAN_Punished_Mussolini.png"
+			}
+		}
+		country_leader={
+			desc="POLITICS_BENITO_MUSSOLINI_DESC"
+			ideology=revolutionary_nationalism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	SAN_benito_mussolini_revsoc={
+		name="Benito Mussolini"
+		portraits={
+			civilian={
+				large="gfx/leaders/SAN/Portrait_SAN_Pasta_Farmer_Mussolini.png"
+			}
+		}
+		country_leader={
+			desc="POLITICS_BENITO_MUSSOLINI_DESC"
+			ideology=agrarian_socialism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	SAN_benito_mussolini_anarkkkiddy={
+		name="Benito Mussolini"
+		portraits={
+			civilian={
+				large="gfx/leaders/SAN/Portrait_SAN_Salo_Pilled_Mussolini.png"
+			}
+		}
+		country_leader={
+			desc="POLITICS_BENITO_MUSSOLINI_DESC"
+			ideology=individualist_anarchism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	SAN_benito_mussolini_trvdoid={
+		name="Benito Mussolini"
+		portraits={
+			civilian={
+				large="gfx/leaders/SAN/Portrait_SAN_Trad_Mode_Mussolini.png"
+			}
+		}
+		country_leader={
+			desc="POLITICS_BENITO_MUSSOLINI_DESC"
+			ideology=reactionary_populism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	SAN_benito_mussolini_fvstpilled={
+		name="Benito Mussolini"
+		portraits={
+			civilian={
+				large="gfx/leaders/SAN/Portrait_SAN_Fast_As_Fuck_Mussolini.png"
+			}
+		}
+		country_leader={
+			desc="POLITICS_BENITO_MUSSOLINI_DESC"
+			ideology=futurism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+}

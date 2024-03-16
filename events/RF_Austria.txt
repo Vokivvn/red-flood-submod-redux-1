@@ -1,0 +1,750 @@
+###########################
+#Austrian Events
+###########################
+
+add_namespace = austria
+
+	country_event = {
+		id = austria.1
+		title = austria.1.t
+		desc = austria.1.desc
+		picture = GFX_hofburg
+		is_triggered_only = yes
+		fire_only_once = yes
+	
+		option = {
+			name = austria.1.a
+			news_event = {
+				id = news.3
+			}
+			add_stability = -0.2
+			kill_country_leader = yes
+			set_country_flag = AUS_karl
+			mark_focus_tree_layout_dirty = yes
+			hidden_effect = {
+				add_country_leader_role = {
+					character = AUS_imperial_council
+					promote_leader = yes
+					country_leader = {
+						ideology = social_conservatism
+						expire = "1965.1.1.1"
+					}
+				}
+				activate_advisor = AUS_Johannes_Schober_int
+			}
+		}
+	}
+
+	# do we increase security
+	country_event = {
+		id = austria.2
+		immediate = { log = "[GetDateText]: [Root.GetName]: event austria.2" }
+		title = austria.2.t
+		desc = austria.2.desc
+
+		#fire_only_once = yes
+		is_triggered_only = yes
+
+		option = {
+			name = austria.2.a
+			add_political_power = -25
+			set_country_flag = AUS_ASDAP_suppressed
+			swap_ideas = {
+				remove_idea = AUS_red_threat
+				add_idea = AUS_red_threat_worse
+			}
+			ai_chance = {
+				base = 40
+				modifier = {
+					factor = 10000
+					has_game_rule = {
+						rule = AUS_ai_route
+						option = KARL
+					}
+				}
+			}
+		}
+		option = {
+			name = austria.2.b
+			add_stability = -0.05
+			add_political_power = 15
+			ai_chance = {
+				base = 40
+				modifier = {
+					factor = 10000
+					OR = {
+						has_game_rule = {
+							rule = AUS_ai_route
+							option = MISES
+						}
+						has_game_rule = {
+							rule = AUS_ai_route
+							option = POLZL
+						}
+					}
+				}
+			}
+		}
+	}
+
+	# Empty Event
+	country_event = {
+		id = austria.3
+		immediate = { log = "[GetDateText]: [Root.GetName]: event austria.3" }
+		title = austria.3.t
+		desc = austria.3.desc
+		
+		is_triggered_only = yes
+		fire_only_once = yes
+
+		option = {
+			name = austria.3.a
+			retire_country_leader = yes
+			add_country_leader_role = {
+				character = AUS_Karl_I2
+				promote_leader = yes
+				country_leader = {
+					ideology = social_conservatism
+					expire = "1965.1.1.1"
+				}
+			}
+			set_country_leader_description = {
+				desc = POLITICS_Karl_DESC
+			}
+			effect_tooltip = {
+				country_event = {
+					id = austria.4
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = { has_country_flag = AUS_ASDAP_suppressed }
+					country_event = {
+						id = austria.5
+						days = 4
+					}
+				}
+				else = {
+					country_event = {
+						id = austria.6
+						days = 4
+					}
+				}
+			}
+		}
+	}
+
+	#Fakeout liberal event
+	country_event = {
+		id = austria.4
+		immediate = { log = "[GetDateText]: [Root.GetName]: event austria.4" }
+		title = austria.4.t
+		desc = austria.4.desc
+
+		is_triggered_only = yes
+
+		option = {
+			name = austria.4.a
+			
+		}
+		option = {
+			name = austria.4.b
+		}
+	}
+
+	country_event = {#Bullet whiffs Karl
+		id = austria.5
+		immediate = { log = "[GetDateText]: [Root.GetName]: event austria.5" }
+		title = austria.5.t
+		desc = austria.5.desc
+
+		is_triggered_only = yes
+		option = {
+			name = austria.5.a
+			add_stability = -0.10
+			news_event = {
+				id = news.2
+			}
+			hidden_effect = {
+				set_country_flag = AUS_karl_lives
+				retire_country_leader = yes
+				mark_focus_tree_layout_dirty = yes
+			}
+			set_politics = {
+				ruling_party = despotism
+			}
+		}
+	}
+	country_event = {#Oh damn Karl got shot xd
+		id = austria.6
+		immediate = { log = "[GetDateText]: [Root.GetName]: event austria.6" }
+		title = austria.6.t
+		desc = austria.6.desc
+
+		is_triggered_only = yes
+		
+		option = {
+			name = austria.6.a
+			kill_country_leader = yes
+			add_stability = -0.20
+			news_event = {
+				id = news.2
+			}
+			set_politics = {
+				ruling_party = despotism
+			}
+			hidden_effect = {
+				set_country_flag = AUS_karl_dead
+				retire_character = AUS_Karl_I
+				mark_focus_tree_layout_dirty = yes
+			}
+			add_country_leader_role = {
+				character = AUS_Otto_I_von_Habsburg_Lothringen
+				country_leader = {
+					ideology = constitutional_monarchy
+					expire = "1965.1.1.1"
+				}
+				promote_leader = yes
+			}
+			set_country_leader_description = {
+				desc = POLITICS_Otto_DESC
+			}
+		}
+	}
+	
+	#karl lives intro
+	
+	country_event = {
+		id = austria.101
+		title = austria.101.t
+		desc = austria.101.desc
+		is_triggered_only = yes
+		option = {
+			name = austria.101.a
+		}
+	}
+	
+	#karl dies intro
+	
+	country_event = {	#mises vs hitler 1
+		id = austria.201
+		title = austria.201.t
+		desc = austria.201.desc
+		is_triggered_only = yes
+		option = {
+			name = austria.201.a
+			custom_effect_tooltip = "AUS_increase_mises_influence_tooltip"
+			ai_chance = {
+				base = 40
+				modifier = {
+					factor = 10000
+					has_game_rule = {
+						rule = AUS_ai_route
+						option = MISES
+					}
+				}
+			}
+			add_to_variable = {
+				var = AUS_mises_influence
+				value = 1
+			}
+		}
+		option = {
+			name = austria.201.b
+			custom_effect_tooltip = "AUS_increase_hitler_influence_tooltip"
+			ai_chance = {
+				base = 40
+				modifier = {
+					factor = 10000
+					has_game_rule = {
+						rule = AUS_ai_route
+						option = POLZL
+					}
+				}
+			}
+			add_to_variable = {
+				var = AUS_hitler_influence
+				value = 1
+			}
+		}
+	}
+	
+	country_event = {	#mises vs hitler 2
+		id = austria.202
+		title = austria.202.t
+		desc = austria.202.desc
+		is_triggered_only = yes
+		option = {
+			name = austria.202.a
+			custom_effect_tooltip = "AUS_increase_mises_influence_tooltip"
+			ai_chance = {
+				base = 40
+				modifier = {
+					factor = 10000
+					has_game_rule = {
+						rule = AUS_ai_route
+						option = MISES
+					}
+				}
+			}
+			add_to_variable = {
+				var = AUS_mises_influence
+				value = 1
+			}
+		}
+		option = {
+			name = austria.202.b
+			custom_effect_tooltip = "AUS_increase_hitler_influence_tooltip"
+			ai_chance = {
+				base = 40
+				modifier = {
+					factor = 10000
+					has_game_rule = {
+						rule = AUS_ai_route
+						option = POLZL
+					}
+				}
+			}
+			add_to_variable = {
+				var = AUS_hitler_influence
+				value = 1
+			}
+		}
+	}
+	country_event = {	#mises vs hitler 3
+		id = austria.203
+		title = austria.203.t
+		desc = austria.203.desc
+		is_triggered_only = yes
+		option = {
+			name = austria.203.a
+			custom_effect_tooltip = "AUS_increase_mises_influence_tooltip"
+			ai_chance = {
+				base = 40
+				modifier = {
+					factor = 10000
+					has_game_rule = {
+						rule = AUS_ai_route
+						option = MISES
+					}
+				}
+			}
+			add_to_variable = {
+				var = AUS_mises_influence
+				value = 1
+			}
+		}
+		option = {
+			name = austria.203.b
+			custom_effect_tooltip = "AUS_increase_hitler_influence_tooltip"
+			ai_chance = {
+				base = 40
+				modifier = {
+					factor = 10000
+					has_game_rule = {
+						rule = AUS_ai_route
+						option = POLZL
+					}
+				}
+			}
+			add_to_variable = {
+				var = AUS_hitler_influence
+				value = 1
+			}
+		}
+	}
+	country_event = {	#mises vs hitler 4
+		id = austria.204
+		title = austria.204.t
+		desc = austria.204.desc
+		is_triggered_only = yes
+		option = {
+			name = austria.204.a
+			custom_effect_tooltip = "AUS_increase_mises_influence_tooltip"
+			ai_chance = {
+				base = 40
+				modifier = {
+					factor = 10000
+					has_game_rule = {
+						rule = AUS_ai_route
+						option = MISES
+					}
+				}
+			}
+			add_to_variable = {
+				var = AUS_mises_influence
+				value = 1
+			}
+		}
+		option = {
+			name = austria.204.b
+			custom_effect_tooltip = "AUS_increase_hitler_influence_tooltip"
+			ai_chance = {
+				base = 40
+				modifier = {
+					factor = 10000
+					has_game_rule = {
+						rule = AUS_ai_route
+						option = POLZL
+					}
+				}
+			}
+			add_to_variable = {
+				var = AUS_hitler_influence
+				value = 1
+			}
+		}
+	}	
+	country_event = {	#mises vs hitler 5
+		id = austria.205
+		title = austria.205.t
+		desc = austria.205.desc
+		is_triggered_only = yes
+		option = {
+			name = austria.205.a
+			custom_effect_tooltip = "AUS_increase_mises_influence_tooltip_final"
+			ai_chance = {
+				base = 40
+				modifier = {
+					factor = 10000
+					has_game_rule = {
+						rule = AUS_ai_route
+						option = MISES
+					}
+				}
+			}
+			add_to_variable = {
+				var = AUS_mises_influence
+				value = 1
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						check_variable = {
+							AUS_mises_influence > AUS_hitler_influence
+						}
+					}
+					country_event = {
+						id = austria.206
+						days = 3
+					}
+				}
+				else = {
+					country_event = {
+						id = austria.207
+						days = 3
+					}
+				}
+			}
+		}
+		option = {
+			name = austria.205.b
+			custom_effect_tooltip = "AUS_increase_hitler_influence_tooltip_final"
+			ai_chance = {
+				base = 40
+				modifier = {
+					factor = 10000
+					has_game_rule = {
+						rule = AUS_ai_route
+						option = POLZL
+					}
+				}
+			}
+			add_to_variable = {
+				var = AUS_hitler_influence
+				value = 1
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						check_variable = {
+							AUS_mises_influence > AUS_hitler_influence
+						}
+					}
+					country_event = {
+						id = austria.206
+						days = 3
+					}
+				}
+				else = {
+					country_event = {
+						id = austria.207
+						days = 3
+					}
+				}
+			}
+		}
+	}
+	country_event = {	#mises winner
+		id = austria.206
+		title = austria.206.t
+		desc = austria.206.desc
+		is_triggered_only = yes
+		option = {
+			name = austria.206.a
+			set_country_flag = AUS_misesia
+			mark_focus_tree_layout_dirty = yes
+			clear_variable = AUS_mises_influence
+			clear_variable = AUS_hitler_influence
+			hidden_effect = {
+				remove_dynamic_modifier = {
+					modifier = AUS_rush_of_vengeance
+				}
+			}
+		}
+	}
+	country_event = {	#hitler winner
+		id = austria.207
+		title = austria.207.t
+		desc = austria.207.desc
+		is_triggered_only = yes
+		option = {
+			name = austria.207.a
+			set_country_flag = AUS_polzl_epicwin
+			mark_focus_tree_layout_dirty = yes
+			clear_variable = AUS_mises_influence
+			clear_variable = AUS_hitler_influence
+			hidden_effect = {
+				remove_dynamic_modifier = {
+					modifier = AUS_rush_of_vengeance
+				}
+			}
+		}
+	}
+	
+	#despot karl
+	
+	country_event = {	#blessed ascendency
+		id = austria.301
+		title = austria.301.t
+		desc = austria.301.desc
+		is_triggered_only = yes
+		option = {
+			name = austria.301.a	#is he despot here yet or still con - needs despot popularity here regardless
+			add_popularity = {
+				ideology = despotism
+				popularity = 0.2
+			}
+		}
+	}
+	country_event = {	#seitz ministership
+		id = austria.302
+		title = austria.302.t
+		desc = austria.302.desc
+		is_triggered_only = yes
+		option = {
+			name = austria.302.a
+			activate_advisor = AUS_karl_seitz_sec
+		}
+	}
+	country_event = {	#kalergi ministership
+		id = austria.303
+		title = austria.303.t
+		desc = austria.303.desc
+		is_triggered_only = yes
+		option = {
+			name = austria.303.a
+			activate_advisor = AUS_Richard_von_Coudenhove_Kalergi_hog
+
+		}
+	}
+	
+	#mises
+	
+	country_event = {
+		id = austria.401
+		title = austria.401.t
+		desc = austria.401.desc
+		is_triggered_only = yes
+		option = {
+			name = austria.401.a
+		}
+	}
+	
+	country_event = {
+		id = austria.402
+		title = austria.402.t
+		desc = austria.402.desc
+		is_triggered_only = yes
+		option = {
+			name = austria.402.a
+			add_political_power = 25 
+			add_stability = -0.025
+		}
+	}
+	
+	country_event = {
+		id = austria.403
+		title = austria.403.t
+		desc = austria.403.desc
+		is_triggered_only = yes
+		option = {
+			name = austria.403.a
+		}
+	}
+	
+	country_event = {
+		id = austria.404
+		title = austria.404.t
+		desc = austria.404.desc
+		is_triggered_only = yes
+		option = {
+			name = austria.404.a
+		}
+	}
+	country_event = { #compromise
+		id = austria.405
+		title = austria.405.t
+		desc = austria.405.desc
+		is_triggered_only = yes
+		option = {
+			name = austria.405.a
+		}
+	}
+	country_event = {
+		id = austria.407 #byebye otto
+		title = austria.407.t
+		desc = austria.407.desc
+		is_triggered_only = yes
+		option = {
+			name = austria.407.a
+			 add_country_leader_role = {
+				character = "AUS_ludwig_von_mises"
+				country_leader = {
+					ideology = libertarian_capitalism
+					desc = POLITICS_Mises_DESC
+					expire = "1965.3.1.1"
+				}
+				promote_leader = yes 
+			}
+			set_cosmetic_tag = AUS_UEGA
+		}
+	}
+	country_event = { #mises joins britain
+		id = austria.408
+		title = austria.408.t
+		desc = austria.408.desc
+		is_triggered_only = yes
+		option = {
+			name = austria.408.a
+			ai_chance = {
+				base = 10000
+			}
+			ENG = {	
+				add_to_faction = AUS
+			}
+			add_political_power = -10
+			news_event = {
+				id = news.314
+			}
+		}
+		option = {
+			name = austria.408.b
+			add_war_support = -0.015
+		}
+	}
+	country_event = { #britain said yes
+		id = austria.409
+		title = austria.409.t
+		desc = austria.409.desc
+		is_triggered_only = yes
+		option = {
+			name = austria.409.a
+		}
+	}
+	country_event = { #britain said no
+		id = austria.410
+		title = austria.410.t
+		desc = austria.410.desc
+		is_triggered_only = yes
+		option = {
+			name = austria.410.a
+		}
+	}
+	
+	
+	#hitler
+	
+	
+	country_event = {
+		id = austria.502 #fuhrerprinzip
+		title = austria.502.t
+		desc = austria.502.desc
+		is_triggered_only = yes
+		option = {
+			name = austria.502.a
+		}
+	}
+	
+	country_event = {
+		id = austria.503 #jew gets pwned
+		title = austria.503.t
+		desc = austria.503.desc
+		is_triggered_only = yes
+		option = {
+			name = austria.503.a
+		}
+	}
+	
+	country_event = {
+		id = austria.504 #wholesome Hitler
+		title = austria.504.t
+		desc = austria.504.desc
+		is_triggered_only = yes
+		option = {
+			name = austria.504.a
+		}
+	}
+	
+	country_event = {
+		id = austria.505 #religion
+		title = austria.505.t
+		desc = austria.505.desc
+		is_triggered_only = yes
+		option = {
+			name = austria.505.a
+		}
+	}
+	
+	country_event = {
+		id = austria.506 #fuck reds!
+		title = austria.506.t
+		desc = austria.506.desc
+		is_triggered_only = yes
+		option = {
+			name = austria.506.a
+		}
+	}
+	
+	
+	
+	
+	#karl fakeout
+	
+	country_event = {#a nation of samaritans
+		id = austria.601
+		title = austria.601.t
+		desc = austria.601.desc
+		is_triggered_only = yes
+		option = {
+			name = austria.601.a
+		}
+	}
+	country_event = {#our brothers of the book
+		id = austria.602
+		title = austria.602.t
+		desc = austria.602.desc
+		is_triggered_only = yes
+		option = {
+			name = austria.602.a
+		}
+	}
+	country_event = {#gott erhalte, gott beschutze
+		id = austria.603
+		title = austria.603.t
+		desc = austria.603.desc
+		is_triggered_only = yes
+		option = {
+			name = austria.603.a
+		}
+	}

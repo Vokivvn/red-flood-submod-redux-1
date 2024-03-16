@@ -1,0 +1,24 @@
+state={
+	id=1227
+	name="STATE_1227"
+	manpower = 383700
+
+	state_category = town
+
+	history = {
+		owner = DEI
+		victory_points = { #Teloekbetoeng
+			4361 3
+		}
+		add_core_of = DEI
+		buildings = {
+			infrastructure = 2
+			4361 = {
+				naval_base = 3
+			}
+		}
+	}
+	provinces={
+		4361 1342 4320 12165 1313 4276
+	}
+}

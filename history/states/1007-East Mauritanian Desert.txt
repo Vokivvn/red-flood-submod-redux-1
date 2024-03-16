@@ -1,0 +1,16 @@
+state={
+	id=1007
+	name="East Mauritanian Desert"
+
+	state_category = wasteland
+
+	history={
+		owner = SEN
+		add_core_of = SEN
+	}
+	impassable = yes
+	provinces={
+		 1962
+	}
+	manpower=6210
+}

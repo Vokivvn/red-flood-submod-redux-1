@@ -1,0 +1,22 @@
+add_namespace = GUK
+
+country_event = {
+	id = GUK.1
+	title = GUK.1.t
+	desc = GUK.1.desc
+	is_triggered_only = yes
+	
+	option = {
+		name = GUK.1.a
+		set_politics = { 
+			ruling_party = progressivism
+		}
+		set_country_flag = soc_dems_are_socialists
+	}
+	option = {
+		name = GUK.1.b
+		set_politics = { 
+			ruling_party = reactionism
+		}
+	}
+}

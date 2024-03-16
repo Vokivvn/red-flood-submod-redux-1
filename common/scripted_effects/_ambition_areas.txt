@@ -1,0 +1,300 @@
+###
+### Ambition Areas
+###
+### Each country has a list of states/regions which it will take in a peace conference even if it
+### doesn't have claims/cores. Other countries in their faction will let them take these areas unless there's a conflict.
+### If they're a minor, or they're in a faction but not the leader, they won't expand outside of this ambition area unless
+### there's no-one involved in the peace conference who can take the land.
+###
+### If a country is NOT in this list, then it only takes cores/claims.
+###
+
+create_ambition_areas = {
+	# ENG = United Kingdom
+	if = {
+		limit = {
+			OR = {
+				is_british_colonial_claim = yes
+				is_core_of = ENG
+				is_claimed_by = ENG
+				#Europe
+				region = 4 #Ireland
+				region = 5 #Lowlands
+				#Africa
+				region = 128 #Egypt
+				#region = 216 #Upper Nile
+				#region = 217 #Lake Victoria
+				#region = 223 #Zambezi
+				#region = 139 #South Africa
+				#region = 215 #Nambibia
+				#Middle East
+				region = 232 #Levant
+				region = 28 #Middle East
+				region = 679 #Hejaz
+				region = 236 #South Arabia
+				region = 238 #East Arabia
+				
+				region = 239 #Alborz
+				region = 240 #Zagros
+				region = 116 #Central Iranian
+				region = 241 #Khorasan
+				region = 162 #Afghanistan
+				region = 190 #
+				region = 251 #
+				region = 153 #
+				region = 254 #
+				region = 253 #
+				region = 31 #
+				region = 231 #
+				region = 230 #
+				region = 141 #
+				region = 189 #
+				region = 188 #Malaya
+				state = 333 #Sarawak
+				state = 1210 #Brunei
+				state = 1211 #Sabah
+				state = 1212 #Sandakan
+				state = 726 #Samoa
+				state = 635 #New Caledonia
+				state = 523 #Papua
+				
+				region = 193 #Australia
+				region = 195 #
+				region = 156 #
+				region = 194 #
+				region = 157 #
+
+				region = 122 #Yukon
+				region = 235 #
+				region = 221 #
+				region = 212 #Manitoba
+				region = 234 #Ontario
+				region = 222 #Northern Canada
+				region = 233 #Quebec
+				region = 121 #Eastern Canada
+				region = 213 #Maritimes
+				region = 220 #Labrador and Newfoundland
+			}
+		}
+		set_variable = { ambition_area_@ENG = 1 }
+	}
+	# SWE = Sweden
+	if = {
+		limit = {
+			OR = {
+				is_core_of = SWE
+				is_claimed_by = SWE
+				region = 11 #Southern Norway
+				region = 191 #Northern Norway
+				region = 12 #Northern Scandinavia
+				region = 13 #Finland
+				region = 265 #East Karelia
+				state = 99 #Jutland
+				state = 37 #Sjaelland
+				state = 796 #Northern Schleswig
+				state = 58 #Schleswig-Holstein
+				state = 337 #Faroe Islands
+				region = 161 #Iceland
+				region = 36 #Greenland
+				region = 37 #Baltics
+				region = 39 #Prussia
+			}
+		}
+		set_variable = { ambition_area_@SWE = 1 }
+	}
+	# ICE = Iceland
+	if = {
+		limit = {
+			OR = {
+				is_core_of = ICE
+				is_claimed_by = ICE
+				state = 99 #Jutland
+				state = 37 #Sjaelland
+				state = 796 #Northern Schleswig
+				state = 58 #Schleswig-Holstein
+			}
+		}
+		set_variable = { ambition_area_@ICE = 1 }
+	}
+	# HOL = Netherlands
+	if = {
+		limit = {
+			OR = {
+				is_core_of = HOL
+				is_claimed_by = HOL
+				region = 5 #Lowlands
+				
+				region = 187 #Sumatra
+				region = 158 #Sunda Islands
+				state = 835 #
+				state = 1242 #
+				state = 1232 #
+				state = 334 #
+				state = 1243 #
+				state = 1233 #
+				state = 1244 #
+				region = 93 #Java Sea
+				region = 91 #Arafura Sea
+				state = 1260 #Vogelkop Peninsula
+				state = 1261 #
+				state = 669 #
+				state = 1259 #
+				state = 1249 #
+				state = 832 #
+			}
+		}
+		set_variable = { ambition_area_@HOL = 1 }
+	}
+	# POL = Poland
+	if = {
+		limit = {
+			OR = {
+				is_core_of = POL
+				is_claimed_by = POL
+				region = 37 #Baltics
+				region = 131 #Bobruysk
+				region = 130 #Ukraine
+			}
+		}
+		set_variable = { ambition_area_@POL = 1 }
+	}
+	# ITA = Italian
+	if = {
+		limit = {
+			OR = {
+				is_italian_colonial_claim = yes
+				is_core_of = ITA
+				is_claimed_by = ITA
+				region = 276 #Istria-Karst
+				region = 24 #Western Balkans
+			}
+		}
+		set_variable = { ambition_area_@ITA = 1 }
+		set_variable = { ambition_area_@FIU = 1 }
+	}
+	# JAP = Japan
+	if = {
+		limit = {
+			OR = {
+				is_japanese_colonial_claim = yes
+				is_core_of = JAP
+				is_claimed_by = JAP
+			}
+		}
+		set_variable = { ambition_area_@JAP = 1 }
+	}
+	# AUS = Austria
+	if = {
+		limit = {
+			OR = {
+				is_core_of = AUS
+				is_claimed_by = AUS
+				region = 22 #Bohemia and Slovakia
+				region = 27 #Northern Balkans
+				region = 24 #Western Balkans
+				region = 276 #Istria-Karst
+				region = 26 #Eastern Balkans
+			}
+		}
+		set_variable = { ambition_area_@AUS = 1 }
+	}
+	# GER = Germany
+	if = {
+		limit = {
+			OR = {
+				is_core_of = GER
+				is_claimed_by = GER
+				region = 12 #Northern France
+				region = 20 #Southern France
+				region = 208 #Western France
+				region = 5 #Lowlands
+				
+				state = 69 #Sudetenland
+				state = 74 #Eastern Sudetenland
+				state = 913 #South Sudetenland
+				state = 9 #Bohemia
+				state = 75 #Moravia
+				
+				state = 3 #Central Switzerland
+				state = 151 #Eastern Switzerland
+				state = 153 #Tirol
+				state = 152 #
+				state = 4 #
+				state = 901 #Burgenland
+				state = 102 #
+				state = 1265 #
+				state = 736 #
+				state = 39 #Alto Adige
+				state = 1200 #
+			}
+		}
+		set_variable = { ambition_area_@GER = 1 }
+		set_variable = { ambition_area_@PRS = 1 }
+	}
+	# YUG = Yugoslavia
+	if = {
+		limit = {
+			OR = {
+				is_core_of = YUG
+				is_claimed_by = YUG
+				region = 24
+				region = 276
+				state = 1062
+				state = 48
+				state = 812
+				state = 212
+				state = 211
+				state = 77
+				state = 1059
+				region = 25
+				region = 275
+			}
+		}
+		set_variable = { ambition_area_@YUG = 1 }
+	}
+	# HUN = Hungary
+	if = {
+		limit = {
+			OR = {
+				is_core_of = HUN
+				is_claimed_by = HUN
+				state = 103
+				state = 163
+				state = 736
+				region = 27
+				state = 764
+				state = 1201
+				state = 109
+				state = 104
+				state = 921
+				state = 922
+				state = 899
+			}
+		}
+		set_variable = { ambition_area_@HUN = 1 }
+	}
+	# USA = United States of America
+	if = {
+		limit = {
+			OR = {
+				is_core_of = USA
+				is_claimed_by = USA
+				region = 122 #Yukon
+				region = 235 #
+				region = 221 #
+				region = 212 #Manitoba
+				region = 234 #Ontario
+				region = 222 #Northern Canada
+				region = 233 #Quebec
+				region = 121 #Eastern Canada
+				region = 213 #Maritimes
+				region = 220 #Labrador and Newfoundland
+				
+				region = 204 #Sierra Madre
+				region = 123 #
+				region = 205 #
+			}
+		}
+		set_variable = { ambition_area_@USA = 1 }
+	}
+}

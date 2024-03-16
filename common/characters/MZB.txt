@@ -1,0 +1,14 @@
+characters = {
+	MZB_Armindo_Montero = {
+		name = "Armindo Montero"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MZB/Portrait_Armindo_Monteiro.png"
+			}
+		}
+		country_leader = {
+			ideology = colonial_government
+			expire = "1965.1.1.1"
+		}
+	}
+}

@@ -1,0 +1,27 @@
+
+state={
+	id=1296
+	name="STATE_1296"
+	manpower = 4597
+	state_category = pastoral
+	resources = {
+	}
+
+	history={
+		owner = GBN
+		add_core_of = GBN
+		buildings = {
+			infrastructure = 1
+			2115 ={
+				naval_base = 3
+			}
+		}
+		victory_points = {
+			2115 5
+		}
+	}
+
+	provinces={
+		2115
+	}
+}

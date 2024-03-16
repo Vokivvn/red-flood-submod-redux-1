@@ -1,0 +1,111 @@
+# Used to check if a nation...wait for it...uses generic concerns! Wow!
+uses_generic_concerns = {
+	NOT = {
+		#major
+		original_tag = USA
+		original_tag = FRA
+		original_tag = JAP
+		original_tag = JPR
+		original_tag = ENG
+		original_tag = ITA
+		original_tag = FIU
+
+		# Rus
+		original_tag = RUS
+		original_tag = SRU
+		original_tag = DKB 
+		original_tag = ORE 
+		original_tag = SIB 
+		original_tag = KCK 
+		original_tag = HAR 
+		original_tag = PRI 
+		original_tag = ARC 
+		original_tag = FCR 
+		original_tag = PSL 
+		original_tag = KAV 
+		original_tag = ZHR 
+		original_tag = HAR
+
+		
+		#Intermarium
+		original_tag = UKR
+		
+		# rest
+		original_tag = ATU
+		original_tag = TUA
+
+		original_tag = AUS
+		original_tag = KOR
+		original_tag = IKR
+		original_tag = JKR
+		original_tag = DAI
+	}
+}
+is_a_russian_unifier = {
+	OR = {
+		original_tag = RUS
+		original_tag = SRU
+		original_tag = ZHR
+		original_tag = KAV
+		AND = {
+			original_tag = SIB
+			has_completed_focus = SIB_third_power
+		}
+		AND = {
+			original_tag = ORE
+			OR = {
+				has_government = right_authoritarianism
+				has_government = reactionism
+			}
+		}
+		AND = {
+			original_tag = DKB
+			has_government = reactionism
+		}
+		AND = {
+			original_tag = BLR
+			OR = {
+				has_completed_focus = BLR_pale_horse
+				has_completed_focus = BLR_foreign_clique
+			}
+		}
+		AND = {
+			original_tag = HAR
+		}
+		AND = {
+			original_tag = FCR
+		}
+		AND = {
+			original_tag = PSL
+		}
+		AND = {
+			original_tag = OLN
+		}
+		AND = {
+			original_tag = ARC
+		}
+		AND = {
+			original_tag = PRI
+		}
+		AND = {
+			original_tag = KCK
+			has_completed_focus = KCK_continuation_of_starks_rule
+		}
+		AND = {
+			original_tag = ALT
+			OR = {
+				has_completed_focus = ALT_the_red_merlin
+				has_completed_focus = ALT_the_red_faust
+			}
+		}
+	}
+}
+has_reached_division_limit = {
+	OR = {
+		AND = {
+			original_tag = ITA
+			num_divisions > 44
+			FIU = { exists = yes }
+		}
+	}
+}

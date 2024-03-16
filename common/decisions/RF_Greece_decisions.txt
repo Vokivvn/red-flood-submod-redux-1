@@ -1,0 +1,113 @@
+GRE_megali = {
+	GRE_puppet_turkey = {
+		activation = {
+			OR = {
+				has_government = liberalism
+				has_government = despotism
+				has_government = revisionist_socialism
+			}
+			owns_state = 49
+			TUR = { exists = no }
+			MAR = { exists = no }
+		}
+		available = {
+			NOT = {
+				OR = {
+					has_government = liberalism
+					has_government = despotism
+					has_government = revisionist_socialism
+				}
+				owns_state = 49
+				TUR = { exists = no }
+				MAR = { exists = no }
+			}
+		}
+		days_mission_timeout = 7
+		is_good = yes
+		timeout_effect = {
+			every_state = {
+				limit = {
+					OR = {
+						state = 1124
+						state = 976
+						state = 340
+						state = 1125
+
+						state = 339
+						state = 1126
+						state = 1127
+					}
+				}
+				GRE = { add_state_core = PREV }
+			}
+			set_cosmetic_tag = GRE_megali
+			
+			if = {
+				limit = {
+					OR = {
+						has_government = liberalism
+						has_government = revisionist_socialism
+					}
+				}
+				TUR = {
+					add_country_leader_role = {
+						character = "TUR_Sahabetti"
+						country_leader = {
+							ideology = constitutional_dictatorship
+							expire = "1965.1.1.1"
+						}
+						promote_leader = yes
+					}
+				}
+			}
+			if = {
+				limit = { has_government = despotism }
+				every_state = {
+					limit = {
+						OR = {
+							state = 342
+							state = 347
+							state = 356
+							state = 355
+							state = 354
+						}
+					}
+					add_core_of = GRE
+				}
+				TUR = {
+					set_cosmetic_tag = TUR_metaxas
+					add_country_leader_role = {
+						character = "TUR_Rallis"
+						country_leader = {
+							ideology = military_dictatorship
+							expire = "1965.1.1.1"
+						}
+						promote_leader = yes
+					}
+				}
+			}
+			
+			every_owned_state = {
+				limit = {
+					is_core_of = TUR
+					is_not_claim_or_core_of_ROOT = yes
+				}
+				TUR = { transfer_state = PREV }
+			}
+			set_temp_variable = { tag_to_release = TUR }
+			puppet_released_tag = yes
+
+			TUR = {
+				set_politics  = { ruling_party = despotism }
+				add_popularity = { ideology = despotism popularity = 0.4 }
+			}
+
+			if = {
+				limit = { has_government = liberalism }
+				news_event = { 
+					id = news.249
+				}
+			}
+		}
+	}
+}

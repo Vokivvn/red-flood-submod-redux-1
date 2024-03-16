@@ -1,0 +1,509 @@
+defined_text = {
+	name = toggle_renaming_button_tooltip_loc
+	text = {
+		trigger = {
+			NOT = {
+				has_global_flag = allowrenaming_flag
+			}
+		}
+		localization_key = toggle_renaming_button_tooltip_enable
+	}
+	text = {
+		trigger = {
+			has_global_flag = allowrenaming_flag
+		}
+		localization_key = toggle_renaming_button_tooltip_disable
+	}
+}
+defined_text = {
+	name = toggle_renaming_button_tooltip_desc_loc
+	text = {
+		trigger = {
+			has_global_flag = is_mp
+		}
+		localization_key = toggle_renaming_button_tooltip_mp
+	}
+	text = {
+		trigger = {
+			NOT = {
+				has_global_flag = is_mp
+				has_global_flag = allowrenaming_flag
+			}
+		}
+		localization_key = toggle_renaming_button_tooltip_enable_desc
+	}
+	text = {
+		trigger = {
+			NOT = { has_global_flag = is_mp }
+			has_global_flag = allowrenaming_flag
+		}
+		localization_key = toggle_renaming_button_tooltip_disable_desc
+	}
+}
+defined_text = {
+	name = toggle_news_button_tooltip_loc
+	text = {
+		trigger = {
+			has_global_flag = is_mp
+		}
+		localization_key = toggle_news_button_tooltip_mp
+	}
+	text = {
+		trigger = {
+			has_global_flag = NEWS_ALL
+			NOT = { has_global_flag = is_mp }
+		}
+		localization_key = toggle_news_button_tooltip_all
+	}
+	text = {
+		trigger = {
+			has_global_flag = NEWS_SOME
+			NOT = { has_global_flag = is_mp }
+		}
+		localization_key = toggle_news_button_tooltip_some
+	}
+	text = {
+		trigger = {
+			NOT = {
+				has_global_flag = NEWS_ALL
+				has_global_flag = NEWS_SOME
+				has_global_flag = is_mp
+			}
+		}
+		localization_key = toggle_news_button_tooltip_none
+	}
+}
+defined_text = {
+	name = toggle_news_button_tooltip_desc_loc
+	text = {
+		trigger = {
+			has_global_flag = is_mp
+		}
+		localization_key = ""
+	}
+	text = {
+		trigger = {
+			has_global_flag = NEWS_ALL
+			NOT = { has_global_flag = is_mp }
+		}
+		localization_key = toggle_news_button_tooltip_all_desc
+	}
+	text = {
+		trigger = {
+			has_global_flag = NEWS_SOME
+			NOT = { has_global_flag = is_mp }
+		}
+		localization_key = toggle_news_button_tooltip_some_desc
+	}
+	text = {
+		trigger = {
+			NOT = {
+				has_global_flag = NEWS_ALL
+				has_global_flag = NEWS_SOME
+				has_global_flag = is_mp
+			}
+		}
+		localization_key = toggle_news_button_tooltip_none_desc
+	}
+}
+defined_text = {
+	name = toggle_news_text_loc
+	text = {
+		trigger = {
+			has_global_flag = NEWS_ALL
+		}
+		localization_key = toggle_news_text_all
+	}
+	text = {
+		trigger = {
+			has_global_flag = NEWS_SOME
+		}
+		localization_key = toggle_news_text_regional
+	}
+	text = {
+		trigger = {
+			NOT = {
+				has_global_flag = NEWS_ALL
+				has_global_flag = NEWS_SOME
+			}
+		}
+		localization_key = toggle_news_text_none
+	}
+}
+
+### Party Popularity ###
+defined_text = {
+	name = GetPopIcon
+	text = {
+		trigger = {
+			has_variable = political_power_ideology
+		}
+		localization_key = "[GetPopIconFrame_Variable]"
+	}
+	text = {
+		localization_key = "[GetPopIconFrame_RulingParty]"
+	}
+}
+defined_text = {
+	name = GetPopIconFrame_Variable
+	text = {
+		trigger = {
+			check_variable = { political_power_ideology = token:vanguard_socialism }
+		}
+		localization_key = "GFX_vanguard_socialism_small"
+	}
+	text = {
+		trigger = {
+			check_variable = { political_power_ideology = token:popular_socialism }
+		}
+		localization_key = "GFX_popular_socialism_small"
+	}
+	text = {
+		trigger = {
+			check_variable = { political_power_ideology = token:revisionist_socialism }
+		}
+		localization_key = "GFX_revisionist_socialism_small"
+	}
+	text = {
+		trigger = {
+			check_variable = { political_power_ideology = token:anarchism }
+		}
+		localization_key = "GFX_anarchism_small"
+	}
+	text = {
+		trigger = {
+			check_variable = { political_power_ideology = token:progressivism }
+		}
+		localization_key = "GFX_progressivism_small"
+	}
+	text = {
+		trigger = {
+			check_variable = { political_power_ideology = token:liberalism }
+		}
+		localization_key = "GFX_liberalism_small"
+	}
+	text = {
+		trigger = {
+			check_variable = { political_power_ideology = token:conservatism }
+		}
+		localization_key = "GFX_conservatism_small"
+	}
+	text = {
+		trigger = {
+			check_variable = { political_power_ideology = token:right_authoritarianism }
+		}
+		localization_key = "GFX_right_authoritarianism_small"
+	}
+	text = {
+		trigger = {
+			check_variable = { political_power_ideology = token:reactionism }
+		}
+		localization_key = "GFX_reactionism_small"
+	}
+	text = {
+		trigger = {
+			check_variable = { political_power_ideology = token:despotism }
+		}
+		localization_key = "GFX_despotism_small"
+	}
+	text = {
+		trigger = {
+			check_variable = { political_power_ideology = token:accelerationism }
+		}
+		localization_key = "GFX_accelerationism_small"
+	}
+}
+defined_text = {
+	name = GetPopIconFrame_RulingParty
+	text = {
+		trigger = {
+			has_government = vanguard_socialism
+		}
+		localization_key = "GFX_vanguard_socialism_small"
+	}
+	text = {
+		trigger = {
+			has_government = popular_socialism
+		}
+		localization_key = "GFX_popular_socialism_small"
+	}
+	text = {
+		trigger = {
+			has_government = anarchism
+		}
+		localization_key = "GFX_anarchism_small"
+	}
+	text = {
+		trigger = {
+			has_government = revisionist_socialism
+		}
+		localization_key = "GFX_revisionist_socialism_small"
+	}
+	text = {
+		trigger = {
+			has_government = progressivism
+		}
+		localization_key = "GFX_progressivism_small"
+	}
+	text = {
+		trigger = {
+			has_government = liberalism
+		}
+		localization_key = "GFX_liberalism_small"
+	}
+	text = {
+		trigger = {
+			has_government = conservatism
+		}
+		localization_key = "GFX_conservatism_small"
+	}
+	text = {
+		trigger = {
+			has_government = right_authoritarianism
+		}
+		localization_key = "GFX_right_authoritarianism_small"
+	}
+	text = {
+		trigger = {
+			has_government = reactionism
+		}
+		localization_key = "GFX_reactionism_small"
+	}
+	text = {
+		trigger = {
+			has_government = despotism
+		}
+		localization_key = "GFX_despotism_small"
+	}
+	text = {
+		trigger = {
+			has_government = accelerationism
+		}
+		localization_key = "GFX_accelerationism_small"
+	}
+}
+defined_text = {
+	name = GetPopularityTooltip
+	text = {
+		trigger = {
+			has_government = vanguard_socialism
+		}
+		localization_key = vanguard_socialism_topbar_tooltip
+	}
+	text = {
+		trigger = {
+			has_government = popular_socialism
+		}
+		localization_key = popular_socialism_topbar_tooltip
+	}
+	text = {
+		trigger = {
+			has_government = anarchism
+		}
+		localization_key = anarchism_topbar_tooltip
+	}
+	text = {
+		trigger = {
+			has_government = revisionist_socialism
+		}
+		localization_key = revisionist_socialism_topbar_tooltip
+	}
+	text = {
+		trigger = {
+			has_government = progressivism
+		}
+		localization_key = progressivism_topbar_tooltip
+	}
+	text = {
+		trigger = {
+			has_government = liberalism
+		}
+		localization_key = liberalism_topbar_tooltip
+	}
+	text = {
+		trigger = {
+			has_government = conservatism
+		}
+		localization_key = conservatism_topbar_tooltip
+	}
+	text = {
+		trigger = {
+			has_government = right_authoritarianism
+		}
+		localization_key = right_authoritarianism_topbar_tooltip
+	}
+	text = {
+		trigger = {
+			has_government = reactionism
+		}
+		localization_key = reactionism_topbar_tooltip
+	}
+	text = {
+		trigger = {
+			has_government = despotism
+		}
+		localization_key = despotism_topbar_tooltip
+	}
+	text = {
+		trigger = {
+			has_government = accelerationism
+		}
+		localization_key = accelerationism_topbar_tooltip
+	}
+}
+defined_text = {
+	name = GetPopularityTooltipDesc
+	text = {
+		trigger = {
+			has_government = vanguard_socialism
+		}
+		localization_key = vanguard_socialism_subtype_desc
+	}
+	text = {
+		trigger = {
+			has_government = popular_socialism
+		}
+		localization_key = popular_socialism_subtype_desc
+	}
+	text = {
+		trigger = {
+			has_government = anarchism
+		}
+		localization_key = anarchism_subtype_desc
+	}
+	text = {
+		trigger = {
+			has_government = revisionist_socialism
+		}
+		localization_key = revisionist_socialism_subtype_desc
+	}
+	text = {
+		trigger = {
+			has_government = progressivism
+		}
+		localization_key = progressivism_subtype_desc
+	}
+	text = {
+		trigger = {
+			has_government = liberalism
+		}
+		localization_key = liberalism_subtype_desc
+	}
+	text = {
+		trigger = {
+			has_government = conservatism
+		}
+		localization_key = conservatism_subtype_desc
+	}
+	text = {
+		trigger = {
+			has_government = right_authoritarianism
+		}
+		localization_key = right_authoritarianism_subtype_desc
+	}
+	text = {
+		trigger = {
+			has_government = reactionism
+		}
+		localization_key = reactionism_subtype_desc
+	}
+	text = {
+		trigger = {
+			has_government = despotism
+		}
+		localization_key = despotism_subtype_desc
+	}
+	text = {
+		trigger = {
+			has_government = accelerationism
+		}
+		localization_key = accelerationism_subtype_desc
+	}
+}
+defined_text = {
+	name = GetPopularityPercent
+	text = {
+		localization_key = "[?party_popularity@ruling_party|%0]"
+	}
+}
+
+### MAP MODE STUFF
+
+defined_text = {
+	name = GetCoreMapModeTooltip
+
+	text = {
+		trigger = {
+			is_core_of = ROOT
+		}
+		localization_key = core_map_mode_tt_core
+	}
+	text = {
+		trigger = {
+			is_claimed_by = ROOT
+		}
+		localization_key = core_map_mode_tt_claimed
+	}
+	text = {
+		trigger = {
+			is_owned_by = ROOT
+		}
+		localization_key = core_map_mode_tt_owned
+	}
+	text = {
+		trigger = {
+			is_controlled_by = ROOT
+		}
+		localization_key = core_map_mode_tt_occupied
+	}
+	text = {
+		trigger = {
+			always = yes
+		}
+		localization_key = ""
+	}
+}
+
+defined_text = {
+	name = GetCoreMapModeTooltipDelayed
+
+	text = {
+		trigger = {
+			is_owned_by = ROOT
+			NOT = { is_controlled_by = ROOT }
+		}
+		localization_key = core_map_mode_tt_occupied_by_enemy
+	}
+	text = {
+		trigger = {
+			is_core_of = ROOT
+			NOT = { is_owned_by = ROOT }
+			is_controlled_by = ROOT
+		}
+		localization_key = core_map_mode_tt_core_not_owned_but_controlled
+	}
+	text = {
+		trigger = {
+			OR = {
+				is_core_of = ROOT
+				is_claimed_by = ROOT
+			}
+			NOT = { is_owned_by = ROOT }
+			NOT = { is_controlled_by = ROOT }
+		}
+		localization_key = core_map_mode_tt_core_not_owned
+	}
+	text = {
+		trigger = {
+			is_controlled_by = ROOT
+			NOT = { is_owned_by = ROOT }
+		}
+		localization_key = core_map_mode_tt_occupied_info
+	}
+	text = {
+		trigger = {
+			always = yes
+		}
+		localization_key = ""
+	}
+}

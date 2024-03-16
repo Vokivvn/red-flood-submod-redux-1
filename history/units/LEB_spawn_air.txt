@@ -1,0 +1,11 @@
+
+air_wings = {
+	553 = {
+		small_plane_cas_airframe_0 =  {
+			owner = "SYR" 
+			amount = 35
+			creator = "ENG"
+			version_name = "Fairey Gordon"
+		}
+	}
+}

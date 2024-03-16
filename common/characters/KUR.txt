@@ -1,0 +1,14 @@
+characters = {
+	KUR_Mustafa_Yamulki = {
+		name = "Mustafa Pasha"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/KUR/Portrait_KUR_Mustafa_Yamulki.png"
+			}
+		}
+		country_leader = {
+			ideology = provisional_government
+			expire = "1965.1.1.1"
+		}
+	}
+}

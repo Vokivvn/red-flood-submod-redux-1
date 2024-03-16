@@ -1,0 +1,14 @@
+characters = {
+	ACQ_pinto_aleixo={
+		name = "Renato Onofre Pinto Aleixo"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/ACQ/Portrait_Pinto_Aleixo.png"
+			}
+		}
+		country_leader = {
+			ideology = constitutional_dictatorship
+			expire = "1965.1.1.1"
+		}
+	}
+}

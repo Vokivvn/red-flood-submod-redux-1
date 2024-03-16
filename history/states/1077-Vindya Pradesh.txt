@@ -1,0 +1,25 @@
+
+state={
+	id=1077
+	name="STATE_1077"
+	manpower = 6211000
+
+	state_category = rural
+
+	history={
+		owner = UPI
+		add_core_of = UPI
+		victory_points = {
+			7938 3
+		}
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+
+	}
+
+	provinces={
+		2005 4045 4410 5040 5096 7938 10332
+	}
+}

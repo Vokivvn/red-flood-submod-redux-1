@@ -1,0 +1,14 @@
+characters = {
+	KNW_matthew_m_neely = {
+		name = "Matthew M. Neely"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/KNW/portrait_matthew_neely.png"
+			}
+		}
+		country_leader = {
+			ideology = social_conservatism
+			expire = "1965.1.1.1"
+		}
+	}
+}

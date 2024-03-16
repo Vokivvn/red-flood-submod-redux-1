@@ -1,0 +1,138 @@
+#Bhutan - annexation_BHU_CONQ
+can_release_bhutan = {
+	state = 324 #Bhutan
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			tag = NEP
+			has_country_flag = BHU_CONQ
+			country_exists = BHU
+		}
+	}
+}
+
+#Ceylon - annexation_CEY_CONQ
+can_release_ceylon = {
+	state = 422 #Ceylon
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			has_country_flag = CEY_CONQ
+			country_exists = CEY
+		}
+	}
+}
+
+#India - annexation_IND_CONQ
+can_release_india = {
+	OR = {
+		state = 427 #Hyderabad
+		state = 431 #West Bengal
+		state = 439 #Delhi
+	}
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			tag = ARY
+			tag = UPI
+			tag = BIH
+			tag = MAD
+			tag = RSR
+			has_country_flag = IND_CONQ
+			country_exists = ARY
+			country_exists = UPI
+			country_exists = BIH
+			country_exists = MAD
+			country_exists = RSR
+		}
+	}
+}
+
+#Nepal - annexation_NEP_CONQ
+can_release_nepal = {
+	state = 323 #Nepal
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			has_country_flag = NEP_CONQ
+			country_exists = NEP
+		}
+	}
+}
+#Travancore - annexation_TRA_CONQ
+can_release_travancore = {
+	state = 936 #
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			has_country_flag = TRA_CONQ
+			country_exists = TRA
+			tag = UPI
+		}
+	}
+}
+#Mysore - annexation_MYS_CONQ
+can_release_mysore = {
+	state = 425 #
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			has_country_flag = MYS_CONQ
+			country_exists = MYS
+			tag = UPI
+		}
+	}
+}
+
+#Hyderabad - annexation_HYD_CONQ
+can_release_hyderabad = {
+	state = 427 #
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			has_country_flag = HYD_CONQ
+			country_exists = HYD
+			tag = UPI
+		}
+	}
+}
+
+#Bangistan - annexation_BNG_CONQ
+can_release_bangladesh = {
+	state = 430 #
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			has_country_flag = BNG_CONQ
+			country_exists = BNG
+			tag = UPI
+		}
+	}
+}
+
+#Bharat - annexation_ARY_CONQ
+can_release_bharat = {
+	state = 439 #
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			has_country_flag = ARY_CONQ
+			country_exists = ARY
+			tag = UPI
+		}
+	}
+}
+
+#Bihar - annexation_BIH_CONQ
+can_release_bihar = {
+	state = 431 #
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			has_country_flag = BIH_CONQ
+			country_exists = BIH
+			tag = UPI
+		}
+	}
+}
+

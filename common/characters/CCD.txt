@@ -1,0 +1,15 @@
+characters = {
+	
+	CCD_al_arsuzi = {
+		name = "Zaki al-Arsuzi"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/CCD/Portrait_Zaki_Al_Arsuzi.png"
+			}
+		}
+		country_leader = {
+			ideology = social_republicanism
+			expire = "1965.1.1.1"
+		}
+	}
+}

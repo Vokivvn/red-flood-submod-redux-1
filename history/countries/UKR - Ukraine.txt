@@ -1,0 +1,191 @@
+﻿capital = 202
+set_research_slots = 3 
+set_convoys = 175
+set_stability = 0.5
+
+oob = "UKR"
+set_naval_oob = "UKR_naval"
+set_air_oob = "UKR_air"
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_recon = 1
+	tech_support = 1
+	tech_engineers = 1
+	tech_trucks =1
+	motorised_infantry = 1
+	gw_artillery = 1
+	interwar_antiair = 1
+	interwar_antitank = 1
+}
+
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+	set_technology = {
+		iw_small_airframe = 1
+		iw_medium_airframe = 1
+		iw_large_airframe = 1
+		aa_lmg = 1
+		aa_cannon_1 = 1
+		early_bombs = 1
+		engines_1 = 1
+	}
+}
+if = {
+	limit = { NOT = { has_dlc = "By Blood Alone" } }
+	set_technology = {
+		early_fighter = 1
+		early_bomber = 1
+		CAS1 = 1
+	}
+}
+
+if = {
+	limit = { NOT = { has_dlc = "No Step Back" } }
+	set_technology = {
+		gwtank = 1
+		basic_light_tank = 1
+	}
+}
+if = {
+	limit = { has_dlc = "No Step Back" }
+	set_technology = {
+		gwtank_chassis = 1
+		basic_light_tank_chassis = 1
+	}
+}
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	set_technology = {
+		early_submarine = 1
+		basic_submarine = 1
+		early_destroyer = 1
+		early_light_cruiser = 1
+		early_heavy_cruiser = 1
+		early_battleship = 1
+		early_battlecruiser = 1
+		transport = 1
+	}
+}
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	set_technology = {
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		early_ship_hull_light = 1
+		early_ship_hull_cruiser = 1
+		early_ship_hull_heavy = 1
+		mtg_transport = 1
+		basic_battery = 1
+		basic_torpedo = 1
+	}
+}
+
+set_politics = {
+	ruling_party = conservatism
+	last_election = "1933.10.25"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	vanguard_socialism = 12
+	popular_socialism = 0
+	anarchism = 0
+	revisionist_socialism = 12
+	progressivism = 15
+	liberalism = 10
+	conservatism = 21
+	right_authoritarianism = 0
+	despotism = 15
+	reactionism = 0
+	accelerationism = 15
+}
+
+
+UKR = {
+	add_opinion_modifier = {
+		target = LIT
+		modifier = intermarium_friendship
+	}
+	add_opinion_modifier = {
+		target = BLR
+		modifier = intermarium_friendship
+	}
+	add_opinion_modifier = {
+		target = POL
+		modifier = intermarium_friendship
+	}
+}
+
+recruit_character = UKR_symon_petliura
+recruit_character = UKR_volodymyr_vynnychenko
+recruit_character = UKR_mykola_mikhnovsky
+recruit_character = UKR_lazar_kaganovich
+recruit_character = UKR_bohdan_ihor_antonych
+recruit_character = UKR_semen_man
+recruit_character = UKR_batko_nash
+recruit_character = UKR_dmytro_levytsky
+recruit_character = UKR_dmytro_doroshenko
+recruit_character = UKR_mykola_livytskyi 
+recruit_character = UKR_vyacheslav_lypynsky
+recruit_character = UKR_ilarion_ohienko
+recruit_character = UKR_sergey_gerbel
+recruit_character = UKR_andriy_livytsky
+recruit_character = UKR_borys_martos
+recruit_character = UKR_serhiy_ostapenko
+recruit_character = UKR_isaak_mazepa
+recruit_character = UKR_volodomyr_kedrovsky
+recruit_character = UKR_yulian_shpol
+recruit_character = UKR_heo_shkurupii
+recruit_character = UKR_mykhailo_volobuyev
+recruit_character = UKR_nikita_khrushchev
+recruit_character = UKR_mykola_kulish
+recruit_character = UKR_andrei_bubnov
+recruit_character = UKR_mykola_skyrpnyk
+recruit_character = UKR_viktor_novozhilov
+recruit_character = UKR_anton_makarenko
+recruit_character = UKR_stanisław_kosior
+recruit_character = UKR_yaroslav_stetsko
+recruit_character = UKR_dmytro_dontsov
+recruit_character = UKR_dmytro_klyachkivsky
+recruit_character = UKR_mykola_lebed
+recruit_character = UKR_volodymyr_shayan
+recruit_character = UKR_yevhen_yulii 
+recruit_character = UKR_vasyl_kurhut
+recruit_character = UKR_ulas_samchuk
+recruit_character = UKR_lev_rebet 
+recruit_character = UKR_pavlo_skoropadskyi
+recruit_character = UKR_ivan_poltavets
+recruit_character = UKR_petro_bolbochan
+recruit_character = UKR_hnat_vasylchenko
+recruit_character = UKR_oleksandr_lignau
+recruit_character = UKR_andriy_vovk
+recruit_character = UKR_serhiy_dyadyusha
+recruit_character = UKR_volodymyr_oskilko
+recruit_character = UKR_oleksandr_hrekiv
+recruit_character = UKR_oleksandr_slyvynskyi
+recruit_character = UKR_levko_drozdovskyi
+recruit_character = UKR_mykola_kakurin
+recruit_character = UKR_mykhailo_omelyanovychpavlenko
+recruit_character = UKR_ivan_omelyanovychpavlenko
+recruit_character = UKR_yevhen_myshkovskyi
+recruit_character = UKR_svyatoslav_shramchenko
+recruit_character = UKR_andriy_pokrovskyi
+recruit_character = UKR_mykhailo_bilynskyi
+recruit_character = UKR_oleksandr_hadd
+recruit_character = UKR_borys_guber
+recruit_character = UKR_levko_matsiyevych
+recruit_character = UKR_petro_franko
+
+add_ideas = {
+	UKR_szlachta
+	UKR_for_the_ukrainian_race
+	UKR_spirit
+}
+activate_advisor = UKR_dmytro_doroshenko_hog
+activate_advisor = UKR_mykola_livytskyi_for
+activate_advisor = UKR_vyacheslav_lypynsky_eco
+activate_advisor = UKR_ilarion_ohienko_sec
+activate_advisor = UKR_sergey_gerbel_int
+

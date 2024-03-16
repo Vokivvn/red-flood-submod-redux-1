@@ -1,0 +1,24 @@
+
+state={
+	id=328
+	name="STATE_328" # Kirin
+	manpower = 264251
+
+	state_category = large_town
+
+	history={
+		owner = MAN
+		add_core_of = MAN
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+		victory_points = {
+			4572 20
+		}
+	}
+
+	provinces={
+		1567 4572
+	}
+}

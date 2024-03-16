@@ -1,0 +1,31 @@
+state={
+	id=976
+	name="STATE_976"
+	manpower = 276989
+	resources={
+		chromium= 10
+	}
+
+	state_category = large_town
+
+	history={
+		owner = MAR
+		victory_points = {
+			3879 3
+	    }
+		victory_points = {
+			849 3
+	    }
+		buildings = {
+			infrastructure = 3
+		}
+
+		add_core_of = MAR
+		add_core_of = GRE
+		add_core_of = TUR
+	}
+
+	provinces={
+		6895 3879 849
+	}
+}

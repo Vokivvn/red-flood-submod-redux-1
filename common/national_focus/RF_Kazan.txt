@@ -1,0 +1,1930 @@
+focus_tree = {
+	id = ORE
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = ORE
+		}
+	}
+	continuous_focus_position = { x = 150 y = 2000 }
+	#Focus for Dutov's Duty
+	focus = {
+		id = Orenburg_dutovs_duty
+		icon = GFX_focus_dutovs_duty
+		x = 11
+
+		y = 0
+		cost = 3
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 20
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+	#Focus for An Anonymous Letter
+	focus = {
+		id = Orenburg_an_anonymous_letter
+		icon = GFX_focus_ORE_an_anonymous_letter
+		x = 0
+		y = 1
+		cost = 3
+		relative_position_id = Orenburg_dutovs_duty
+		available_if_capitulated = yes
+		prerequisite = { focus = Orenburg_dutovs_duty }
+		ai_will_do = {
+			factor = 20
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			add_stability = -0.05
+			hidden_effect = {
+				country_event = {
+					id = ore.1
+				}
+			}
+
+		}
+	}
+	#Focus for Things Get Ugly
+	focus = {
+		id = Orenburg_things_get_ugly
+		icon = GFX_focus_things_get_ugly
+		x = 0
+		y = 1
+		cost = 3
+		relative_position_id = Orenburg_an_anonymous_letter
+		available_if_capitulated = yes
+		prerequisite = { focus = Orenburg_an_anonymous_letter }
+		ai_will_do = {
+			factor = 20
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			add_war_support = -0.1
+			hidden_effect = {
+				country_event = {
+					id = ore.2
+				}
+			}
+		}
+	}
+	#Focus for Eurasian Ideocracy
+	focus = {
+		id = Orenburg_eurasian_ideocracy
+		icon = GFX_focus_eurasian_ideocracy
+		x = -8
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		available = {
+			has_country_flag = ORE_eurasianists
+		}
+		relative_position_id = Orenburg_things_get_ugly
+		prerequisite = { focus = Orenburg_things_get_ugly }
+		mutually_exclusive = { 
+			
+			focus = Orenburg_dutov_asserts_dominance
+			focus = ORE_rasputins_conspiracy
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = accelerationism
+				popularity = 0.2
+			}
+			set_politics = {
+				ruling_party = accelerationism
+				elections_allowed = no
+			}
+			remove_ideas = RUS_warlord_indifference
+			#unlock ministers
+			RUS = {
+				end_puppet = ORE
+			}
+			hidden_effect = {
+				ORE = {
+					drop_cosmetic_tag = yes
+				}
+				RUS = {
+				end_puppet = ORE
+				}
+			}
+		}
+	}
+	# Rasputin's Conspiracy
+	focus = {
+		id = ORE_rasputins_conspiracy
+		icon = GFX_ORE_rasputins_conspiracy
+		cost = 5
+		relative_position_id = Orenburg_things_get_ugly
+		x = 0
+		y = 1
+		mutually_exclusive = {
+			focus = Orenburg_dutov_asserts_dominance
+		}
+		mutually_exclusive = {
+			focus = Orenburg_eurasian_ideocracy
+		}
+		mutually_exclusive = {
+			
+		}
+		prerequisite = {
+			focus = Orenburg_things_get_ugly
+		}
+		available = {
+			has_country_flag = ORE_rasputin_conspiracy
+		}
+		completion_reward = {
+			add_ideas = ORE_rasputins_rule
+			add_stability = -0.05
+			add_popularity = {
+				ideology = reactionism
+				popularity = 0.1
+			}
+			remove_ideas = RUS_warlord_indifference
+			RUS = {
+				end_puppet = ORE
+			}
+			hidden_effect = {
+				ORE = {
+					drop_cosmetic_tag = yes
+				}
+				RUS = {
+				end_puppet = ORE
+				}
+			}
+			set_politics = {
+				ruling_party = reactionism
+			}
+		 }
+	}
+	#Focus for Dutov Asserts Dominance
+	focus = {
+		id = Orenburg_dutov_asserts_dominance
+		icon = GFX_focus_dutovs_asserts_dominance
+		x = 8
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		relative_position_id = Orenburg_things_get_ugly
+		available = {
+			has_country_flag = ORE_dutovlives
+		}
+		prerequisite = { focus = Orenburg_things_get_ugly }
+		mutually_exclusive = { 
+			 
+		}
+		mutually_exclusive = { 
+			focus = Orenburg_eurasian_ideocracy 
+		}
+		mutually_exclusive = {
+			focus = ORE_rasputins_conspiracy
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		completion_reward = {
+			add_political_power = -50
+			add_stability = 0.05
+			#ministers unlocked
+		}
+	}
+	#First focuses of Eurasians
+	#Focus for Leading Selection
+	focus = {
+		id = Orenburg_leading_selection
+		icon = GFX_focus_leading_selection
+		x = -2
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		relative_position_id = Orenburg_eurasian_ideocracy
+		prerequisite = { focus = Orenburg_eurasian_ideocracy }
+		ai_will_do = {
+			factor = 20
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			add_political_power = 50
+			add_ideas = {
+				ORE_meritocracy
+			}
+		}
+	}
+	#Focus for Idea-Ruler
+	focus = {
+		id = Orenburg_idearuler
+		icon = GFX_focus_idea_ruler
+		x = -1
+		y = 1
+		cost = 5
+		relative_position_id = Orenburg_leading_selection
+		available_if_capitulated = yes
+		prerequisite = { focus = Orenburg_leading_selection }
+		ai_will_do = {
+			factor = 20
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			add_political_power = 100
+			add_ideas = {
+				ORE_ideya_pravitelnitsa
+			}
+		}
+	}
+	#Focus for Ruling Class
+	focus = {
+		id = Orenburg_ruling_class
+		icon = GFX_focus_ruling_class
+		x = 1
+		y = 1
+		cost = 5
+		relative_position_id = Orenburg_leading_selection
+		available_if_capitulated = yes
+		prerequisite = { focus = Orenburg_leading_selection }
+		ai_will_do = {
+			factor = 20
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			add_ideas = {
+				ORE_ruling_class
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	#Focus for People's Self-Governance
+	focus = {
+		id = Orenburg_peoples_selfgovernance
+		icon = GFX_focus_peoples_self_governance
+		x = 0
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		relative_position_id = Orenburg_idearuler
+		prerequisite = { 
+			focus = Orenburg_idearuler 
+		}
+		prerequisite = { 
+			focus = Orenburg_ruling_class 
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			add_political_power = 50
+			add_ideas = {
+				ORE_self_governance
+			}
+		}
+	}
+	#Focus for Mixed Economy
+	focus = {
+		id = Orenburg_mixed_economy
+		icon = GFX_focus_mixed_economy
+		x = 0
+		y = 1
+		cost = 5
+		relative_position_id = Orenburg_ruling_class
+		available_if_capitulated = yes
+		prerequisite = { focus = Orenburg_ruling_class }
+		ai_will_do = {
+			factor = 20
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			add_political_power = 25
+			add_stability = 0.1
+			add_research_slot = 1
+			add_ideas = {
+				ORE_mixed_economy
+			}
+		}
+	}
+	#Focus for Formula of Identity
+	focus = {
+		id = Orenburg_formula_of_identity
+		icon = GFX_focus_formula_of_identity
+		x = 2
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		relative_position_id = Orenburg_eurasian_ideocracy
+		prerequisite = { focus = Orenburg_eurasian_ideocracy }
+		ai_will_do = {
+			factor = 20
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.05
+			add_war_support = 0.05
+			add_popularity = {
+				ideology = accelerationism
+				popularity = 0.15
+			}
+			add_ideas = {
+				ORE_mestorazvitiye
+			}
+		}
+	}
+	#Focus for We are Russians
+	focus = {
+		id = Orenburg_we_are_russians
+		icon = GFX_focus_we_are_russians
+		x = -1
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		relative_position_id = Orenburg_formula_of_identity
+		prerequisite = { focus = Orenburg_formula_of_identity }
+		mutually_exclusive = { focus = Orenburg_we_are_eurasians }
+		ai_will_do = {
+			factor = 20
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			add_stability = 0.05
+			add_ideas = {
+				ORE_continuous_russification
+			}
+		}
+	}
+	#Focus for We are Eurasians
+	focus = {
+		id = Orenburg_we_are_eurasians
+		icon = GFX_focus_we_are_eurasians
+		x = 1
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		relative_position_id = Orenburg_formula_of_identity
+		prerequisite = { focus = Orenburg_formula_of_identity }
+		mutually_exclusive = { focus = Orenburg_we_are_russians }
+		ai_will_do = {
+			factor = 20
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			add_war_support = 0.1
+			add_ideas = {
+				ORE_eurasian_identity
+			}
+		}
+	}
+	#Focus for Promote One Language
+	focus = {
+		id = Orenburg_promote_one_language
+		icon = GFX_focus_promote_one_language
+		x = 0
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		relative_position_id = Orenburg_we_are_russians
+		prerequisite = { 
+			focus = Orenburg_we_are_russians 
+			focus = Orenburg_we_are_eurasians 
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			add_political_power = 25
+			add_stability = 0.05
+			add_war_support = 0.05
+		}
+	}
+	#Focus for Between Europa and Asia
+	focus = {
+		id = Orenburg_between_europa_and_asia
+		icon = GFX_focus_ORE_between_europe_and_asia
+		x = 0
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		relative_position_id = Orenburg_we_are_eurasians
+		prerequisite = { 
+			focus = Orenburg_we_are_eurasians 
+			focus = Orenburg_we_are_russians 
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			army_experience = 10
+			swap_ideas = {
+				remove_idea = ORE_mestorazvitiye
+				add_idea = ORE_mestorazvitiye1
+			}
+		}
+	}
+	#Focus for The Demotic State
+	focus = {
+		id = Orenburg_the_demotic_state
+		icon = GFX_focus_ORE_a_demotic_state
+		x = 0
+		y = 4
+		cost = 3
+		available_if_capitulated = yes
+		relative_position_id = Orenburg_eurasian_ideocracy
+		prerequisite = { 
+			focus = Orenburg_peoples_selfgovernance 
+		}
+		prerequisite = { 
+			focus = Orenburg_mixed_economy 
+		}
+		prerequisite = { 
+			focus = Orenburg_between_europa_and_asia 
+		}
+		prerequisite = { 
+			focus = Orenburg_promote_one_language 
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = accelerationism
+				popularity = 0.1
+			}
+			add_political_power = 150
+		}
+	}
+	#Frists Focuses of the lover of Russian queen
+	#The Enchanted court
+	focus = {
+		id = ORE_enchanted_court
+		icon = GFX_ORE_enchanted_court
+		cost = 5
+		relative_position_id = ORE_rasputins_conspiracy
+		x = -2
+		y = 1
+		prerequisite = {
+			focus = ORE_rasputins_conspiracy
+		}
+		
+		completion_reward = { 
+			add_stability = 0.05
+			add_political_power = 70
+		}
+	}
+	#Rhe good floks of the Tsaristas
+	focus = {
+		id = ORE_tsaritsas_good_folk
+		icon = GFX_ORE_tsaritsas_good_folk
+		cost = 5
+		relative_position_id = ORE_rasputins_conspiracy
+		x = 2
+		y = 1
+		prerequisite = {
+			focus = ORE_rasputins_conspiracy
+		}
+		
+		completion_reward = { 
+			add_manpower = 14521
+			add_ideas = ORE_empires_good_men
+		}
+	}
+	#Crown the white Queen
+	focus = {
+		id = ORE_crown_white_queen
+		icon = GFX_ORE_crown_white_queen
+		cost = 5
+		relative_position_id = ORE_enchanted_court
+		x = -1
+		y = 1
+		prerequisite = {
+			focus = ORE_enchanted_court
+		}
+		
+		completion_reward = { 
+			#crown the queen???
+			add_political_power = 75
+			country_event = {
+				id = ore.8
+			}
+		}
+	}
+	#Whispers behind doors
+	focus = {
+		id = ORE_whispers_behind_doors
+		icon = GFX_ORE_whispers_behind_doors
+		cost = 5
+		relative_position_id = ORE_enchanted_court
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = ORE_enchanted_court
+		}
+		
+		completion_reward = { 
+			swap_ideas = {
+				remove_idea = ORE_rasputins_rule
+				add_idea = ORE_rasputins_rule1
+			}
+			add_popularity = {
+				ideology = reactionism
+				popularity = 0.1
+			}
+		}
+	}
+	#New Koshtshey
+	focus = {
+		id = ORE_new_koschtshey
+		icon = GFX_ORE_new_koschtshey
+		cost = 5
+		relative_position_id = ORE_crown_white_queen
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = ORE_crown_white_queen
+		}
+		
+		completion_reward = { 
+			add_ideas = ORE_saint_devil
+		}
+	}
+	#Forbidden Sorcery
+	focus = {
+		id = ORE_forbidden_sorcery
+		icon = GFX_ORE_forbidden_sorcery
+		cost = 5
+		relative_position_id = ORE_whispers_behind_doors
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = ORE_whispers_behind_doors
+		}
+		
+		completion_reward = { 
+			add_ideas = ORE_forbidden_sorcery_idea
+			country_event = ore.10
+		}
+	}
+	#The People's Faith
+	focus = {
+		id = ORE_peoples_faith
+		icon = GFX_ORE_peoples_faith
+		cost = 5
+		relative_position_id = ORE_tsaritsas_good_folk
+		x = -1
+		y = 1
+		prerequisite = {
+			focus = ORE_tsaritsas_good_folk
+		}
+		
+		completion_reward = { 
+			add_popularity = {
+				ideology = reactionism
+				popularity = 0.1
+			}
+			add_stability = 0.05
+			add_war_support = 0.05
+			country_event = ore.9
+		}
+	}
+	#Russian Messianism
+	focus = {
+		id = ORE_russian_messianism
+		icon = GFX_ORE_russian_messianism
+		cost = 5
+		relative_position_id = ORE_tsaritsas_good_folk
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = ORE_tsaritsas_good_folk
+		}
+		
+		completion_reward = { 
+			add_ideas = ORE_golden_heart
+		}
+	}
+	#The Modern Bogatyrs 
+	focus = {
+		id = ORE_modern_bogatyrs
+		icon = GFX_ORE_modern_bogatyrs
+		cost = 5
+		relative_position_id = ORE_russian_messianism
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = ORE_russian_messianism
+		}
+		
+		completion_reward = { 
+			add_ideas = ORE_grandiose_courage
+		}
+	}
+	#The Promised Kingdom
+	focus = {
+		id = ORE_promised_kingdom
+		icon = GFX_ORE_promised_kingdom
+		cost = 5
+		relative_position_id = ORE_peoples_faith
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = ORE_peoples_faith
+		}
+		
+		completion_reward = { 
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			country_event = ore.11
+		}
+	}
+	#Return to myth
+	focus = {
+		id = ORE_return_to_myth
+		icon = GFX_ORE_return_to_myth
+		cost = 5
+		relative_position_id = ORE_rasputins_conspiracy
+		x = 0
+		y = 4
+		prerequisite = {
+			focus = ORE_promised_kingdom
+		}
+		prerequisite = {
+			focus = ORE_forbidden_sorcery
+		}
+		prerequisite = {
+			focus = ORE_modern_bogatyrs
+		}
+		prerequisite = {
+			focus = ORE_new_koschtshey
+		}
+		completion_reward = {
+			add_stability = 0.05
+			add_war_support = 0.05
+			add_ideas = ORE_retvrn
+		}
+	}
+	#Dutov sus ????
+	#Focus for The Spider's Web of Politics
+	focus = {
+		id = Orenburg_the_spiders_web_of_politics
+		icon = GFX_focus_the_spider_web_of_politics
+		x = -2
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		relative_position_id = Orenburg_dutov_asserts_dominance
+		prerequisite = { focus = Orenburg_dutov_asserts_dominance }
+		ai_will_do = {
+			factor = 20
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			add_opinion_modifier = {
+				target = RUS
+				modifier = large_increase
+			}
+			add_opinion_modifier = {
+				target = SRU
+				modifier = large_increase
+			}
+			add_opinion_modifier = {
+				target = SIB
+				modifier = large_increase
+			}
+			RUS = {
+				end_puppet = ORE
+			}
+			add_political_power = 75
+			add_stability = 0.05
+		}
+	}
+	#Focus for Getting Out of Hospital
+	focus = {
+		id = Orenburg_getting_out_of_hospital
+		icon = GFX_focus_getting_out_of_hospital
+		x = 2
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		relative_position_id = Orenburg_dutov_asserts_dominance
+		prerequisite = { focus = Orenburg_dutov_asserts_dominance }
+		ai_will_do = {
+			factor = 20
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			add_political_power = 80
+		}
+	}
+	#Focus for Accuse Kornilov of Republicanism
+	focus = {
+		id = Orenburg_accuse_kornilov_of_republicanism
+		icon = GFX_focus_ORE_accuse_kornilov_of_republicanism
+		x = 1
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		relative_position_id = Orenburg_the_spiders_web_of_politics
+		prerequisite = { focus = Orenburg_the_spiders_web_of_politics }
+		mutually_exclusive = { focus = Orenburg_accuse_kaledin_of_separatism }
+		ai_will_do = {
+			factor = 20
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			add_political_power = 25
+			add_war_support = -0.04
+			#add_opinion_modifier = {
+			#	target = STE
+			#	modifier = huge_decrease
+			#}
+		}
+	}
+	#Focus for Accuse Kaledin of Separatism
+	focus = {
+		id = Orenburg_accuse_kaledin_of_separatism
+		icon = GFX_focus_ORE_accuse_kaledin_of_separatism
+		x = -1
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		relative_position_id = Orenburg_the_spiders_web_of_politics
+		prerequisite = { focus = Orenburg_the_spiders_web_of_politics }
+		mutually_exclusive = { focus = Orenburg_accuse_kornilov_of_republicanism }
+		ai_will_do = {
+			factor = 20
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			add_political_power = 25
+			add_stability = -0.03
+		}
+	}
+	#Focus for Find the Source
+	focus = {
+		id = Orenburg_find_the_source
+		icon = GFX_focus_find_the_source
+		x = 0
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		relative_position_id = Orenburg_accuse_kaledin_of_separatism
+		prerequisite = { 
+			focus = Orenburg_accuse_kornilov_of_republicanism 
+			focus = Orenburg_accuse_kaledin_of_separatism 
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = revisionist_socialism
+				popularity = -0.05
+			}
+		}
+	}
+	#Focus for You Have Carte Blanche, Reactionaries
+	focus = {
+		id = Orenburg_you_have_carte_blanche_reactionaries
+		icon = GFX_focus_you_have_carte_blanche_reactionaries
+		x = 0
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		relative_position_id = Orenburg_accuse_kornilov_of_republicanism
+		prerequisite = { 
+			focus = Orenburg_accuse_kornilov_of_republicanism 
+			focus = Orenburg_accuse_kaledin_of_separatism 
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			add_stability = -0.1
+			add_popularity = {
+				ideology = liberalism
+				popularity = -0.05
+			}
+			add_popularity = {
+				ideology = conservatism
+				popularity = -0.05
+			}
+			add_popularity = {
+				ideology = progressivism
+				popularity = -0.05
+			}
+		}
+	}
+	#Focus for Matters of the Army
+	focus = {
+		id = Orenburg_matters_of_the_army
+		icon = GFX_focus_matters_of_the_army
+		x = -1
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		relative_position_id = Orenburg_getting_out_of_hospital
+		prerequisite = { focus = Orenburg_getting_out_of_hospital }
+		ai_will_do = {
+			factor = 20
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			add_political_power = 70
+			army_experience = 20
+		}
+	}
+	#Focus for Matters of Industry
+	focus = {
+		id = Orenburg_matters_of_industry
+		icon = GFX_focus_matters_of_the_industry
+		x = 1
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		relative_position_id = Orenburg_getting_out_of_hospital
+		prerequisite = { focus = Orenburg_getting_out_of_hospital }
+		ai_will_do = {
+			factor = 20
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			add_stability = 0.1
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	#Focus for Cheap Loans from Patriotic Bourgeoisie
+	focus = {
+		id = Orenburg_cheap_loans_from_patriotic_bourgeoisie
+		icon = GFX_focus_ORE_cheap_loans_from_patriotic_bourgoisie
+		x = 0
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		relative_position_id = Orenburg_matters_of_the_army
+		prerequisite = { 
+			focus = Orenburg_matters_of_industry 
+		}
+		prerequisite = { 
+			focus = Orenburg_matters_of_the_army 
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = conservatism
+				popularity = -0.05
+			}
+			add_stability = 0.15
+			add_ideas = {
+				ORE_corporative_industrialism
+			}
+		}
+	}
+	#Focus for 1st Orenburg Cossack Tank Regiment
+	focus = {
+		id = Orenburg_1st_orenburg_cossack_tank_regiment
+		icon = GFX_focus_ORE_1st_orenburg_cossack_tank_regiment
+		x = 0
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		relative_position_id = Orenburg_matters_of_industry
+		prerequisite = { 
+			focus = Orenburg_matters_of_industry 
+		}
+		prerequisite = { 
+			focus = Orenburg_matters_of_the_army 
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = light_tank_chassis_0
+				amount = 100
+				producer = RUS
+				variant_name = "T-27"
+			}
+		}
+	}
+	#Focus for A Letter from Drozdovsky
+	focus = {
+		id = Orenburg_a_letter_from_drozdovsky
+		icon = GFX_focus_ORE_a_letter_from_drozdovsky
+		x = 0
+		y = 4
+		cost = 3
+		available_if_capitulated = yes
+		relative_position_id = Orenburg_dutov_asserts_dominance
+		prerequisite = { 
+			focus = Orenburg_1st_orenburg_cossack_tank_regiment 
+		}
+		prerequisite = { 
+			focus = Orenburg_cheap_loans_from_patriotic_bourgeoisie 
+		}
+		prerequisite = { 
+			focus = Orenburg_you_have_carte_blanche_reactionaries 
+		}
+		prerequisite = { 
+			focus = Orenburg_find_the_source 
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			add_political_power = 100
+			#event
+		}
+	}
+	#Focus for News from the Homeland
+	focus = {
+		id = Orenburg_news_from_the_homeland
+		icon = GFX_focus_news_from_the_homeland
+		x = 0
+		y = 6
+		cost = 5
+		relative_position_id = Orenburg_things_get_ugly
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = Orenburg_the_demotic_state 
+			focus = Orenburg_a_letter_from_drozdovsky 
+			focus = ORE_return_to_myth
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		available = {
+		}
+		completion_reward = {
+			add_political_power = 100
+			if = {
+					limit = {
+							ORE = {
+								has_country_leader = {
+					 				character = ORE_aleksandr_dutov
+					  				ruling_only = yes
+								}
+							}
+							DKB = {
+								has_country_leader = {
+					 				character = DKB_pavel_gorgulov
+					  				ruling_only = yes
+								}
+							}
+					}
+					country_event = {
+					id = ore.12
+					}
+				}
+		}
+	}
+	#Eurasians Expension
+	#Focus for Eurasian Geopolitics
+	focus = {
+		id = Orenburg_eurasian_geopolitics
+		icon = GFX_focus_eurasian_geopolitics
+		x = -8
+		y = 1
+		cost = 8
+		relative_position_id = Orenburg_news_from_the_homeland
+		available_if_capitulated = yes
+		prerequisite = { focus = Orenburg_news_from_the_homeland }
+		ai_will_do = {
+			factor = 20
+		}
+		available = {
+			has_completed_focus = Orenburg_eurasian_ideocracy
+		}
+		completion_reward = {
+			add_political_power = 100
+			add_war_support = 0.1
+			unlock_decision_category_tooltip = Russian_unification_decisions_nationalist
+			set_country_flag = integrate_mongolia
+		}
+	}
+	#Focus for Western Expedition
+	focus = {
+		id = Orenburg_western_expedition
+		icon = GFX_focus_western_expedition
+		x = -2
+		y = 1
+		cost = 3
+		available_if_capitulated = yes
+		relative_position_id = Orenburg_eurasian_geopolitics
+		prerequisite = { focus = Orenburg_eurasian_geopolitics }
+		ai_will_do = {
+			factor = 20
+		}
+		available = { 
+			is_subject = no
+		}
+		bypass = {
+			DKB = {
+				exists = no
+			}
+		}
+		will_lead_to_war_with = DKB
+		completion_reward = {
+			unlock_decision_tooltip = Unification_invade_seu_nationalist
+			set_country_flag = invade_seu
+		}
+	}
+	#Focus for Establish Western Strategic Frontier
+	focus = {
+		id = Orenburg_establish_western_strategic_frontier
+		icon = GFX_focus_establish_western_strategic_frontier
+		x = -1
+		y = 1
+		cost = 3
+		available_if_capitulated = yes
+		relative_position_id = Orenburg_western_expedition
+		prerequisite = { focus = Orenburg_western_expedition }
+		ai_will_do = {
+			factor = 20
+		}
+		bypass = {
+			KAV = {
+				exists = no
+			}
+			ARM = {
+				exists = no
+			}
+		}
+		available = {
+			is_subject = no
+		}
+		will_lead_to_war_with = KAV
+		will_lead_to_war_with = ARM
+		completion_reward = {
+			unlock_decision_tooltip = Unification_invade_kav_nationalist
+			unlock_decision_tooltip = Unification_invade_armenia_nationalist
+			set_country_flag = invade_kavkaz
+			set_country_flag = invade_armenia
+		}
+	}
+	#Focus for Secure Russia
+	focus = {
+		id = Orenburg_secure_russia
+		icon = GFX_focus_russian_heartland
+		x = 1
+		y = 1
+		cost = 3
+		available_if_capitulated = yes
+		relative_position_id = Orenburg_western_expedition
+		prerequisite = { focus = Orenburg_western_expedition }
+		ai_will_do = {
+			factor = 20
+		}
+		available = {
+			is_subject = no
+			owns_state = 218 
+			owns_state = 231
+		}
+		bypass = {
+			RUS = {
+				exists = no
+			}
+			SRU = {
+				exists = no
+			}
+		}
+		will_lead_to_war_with = SRU
+		will_lead_to_war_with = RUS
+		completion_reward = {
+			unlock_decision_tooltip = Unification_invade_russia_nationalist
+			set_country_flag = invade_russia
+		}
+	}
+	#Focus for Expand Western Strategic Frontier
+	focus = {
+		id = Orenburg_expand_western_strategic_frontier
+		icon = GFX_focus_expand_western_strategic_frontier
+		x = 0
+		y = 2
+		cost = 3
+		available_if_capitulated = yes
+		relative_position_id = Orenburg_western_expedition
+		prerequisite = { 
+			focus = Orenburg_establish_western_strategic_frontier 
+		}
+		prerequisite = { 
+			focus = Orenburg_secure_russia 
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		bypass = {
+			FIN = {
+				exists = no
+			}
+			FIR = {
+				exists = no
+			}
+			WRR = {
+				exists = no
+			}
+			WRT = {
+				exists = no
+			}
+			WRU = {
+				exists = no
+			}
+			EST = {
+				exists = no
+			}
+			LAT = {
+				exists = no
+			}
+		}
+		will_lead_to_war_with = FIN
+		will_lead_to_war_with = FIR
+		will_lead_to_war_with = WRR
+		will_lead_to_war_with = WRU
+		will_lead_to_war_with = WRT
+		will_lead_to_war_with = EST
+		will_lead_to_war_with = LAT
+		available = {
+			RUS = {
+				exists = no
+			}
+			SRU = {
+				exists = no
+			}
+			is_subject = no
+		}
+		completion_reward = {
+			unlock_decision_tooltip = Unification_invade_baltics_nationalist
+			unlock_decision_tooltip = Unification_invade_finland_nationalist
+			set_country_flag = invade_baltics
+			set_country_flag = invade_finland
+		}
+	}
+	#Focus for Eastern Expedition
+	focus = {
+		id = Orenburg_eastern_expedition
+		icon = GFX_focus_eastern_expedition
+		x = 2
+		y = 1
+		cost = 3
+		available_if_capitulated = yes
+		relative_position_id = Orenburg_eurasian_geopolitics
+		prerequisite = { focus = Orenburg_eurasian_geopolitics }
+		ai_will_do = {
+			factor = 20
+		}
+		available = { 
+			is_subject = no
+			owns_state = 218 
+			owns_state = 231
+		}
+		bypass = {
+		}
+		will_lead_to_war_with = SIB
+		completion_reward = {
+			unlock_decision_tooltip = Unification_invade_siberia_nationalist
+			set_country_flag = invade_turkestan
+		}
+	}
+	#Focus for Secure Siberia
+	focus = {
+		id = Orenburg_secure_siberia
+		icon = GFX_focus_siberian_heartland
+		x = -1
+		y = 1
+		cost = 3
+		available_if_capitulated = yes
+		relative_position_id = Orenburg_eastern_expedition
+		prerequisite = { focus = Orenburg_eastern_expedition }
+		ai_will_do = {
+			factor = 20
+		}
+		available = {
+			KAV = {
+				exists = no
+			}
+			is_subject = no
+		}
+		bypass = {
+			SIB = {
+				exists = no
+			}
+		}
+		completion_reward = {
+			unlock_decision_tooltip = Unification_invade_kck_nationalist
+			set_country_flag = invade_siberia
+		}
+	}
+	#Focus for Establish Eastern Strategic Frontier
+	focus = {
+		id = Orenburg_establish_eastern_strategic_frontier
+		icon = GFX_focus_establish_eastern_strategic_frontier
+		x = 1
+		y = 1
+		cost = 3
+		available_if_capitulated = yes
+		relative_position_id = Orenburg_eastern_expedition
+		prerequisite = { focus = Orenburg_eastern_expedition }
+		ai_will_do = {
+			factor = 20
+		}
+		available = {
+			is_subject = no
+		}
+		bypass = {
+			TUK = {
+				exists = no
+			}
+			BKR = {
+				exists = no
+			}
+			TUC = {
+				exists = no
+			}
+			KHW = {
+				exists = no
+			}
+		}
+		will_lead_to_war_with = ALT
+		will_lead_to_war_with = TAN
+		will_lead_to_war_with = MO2
+		will_lead_to_war_with = MON
+		completion_reward = {
+			unlock_decision_tooltip = Unification_invade_mongolia_nationalist
+		}
+	}
+	#Focus for Expand Eastern Strategic Frontier
+	focus = {
+		id = Orenburg_expand_eastern_strategic_frontier
+		icon = GFX_focus_expand_eastern_strategic_frontier
+		x = 0
+		y = 2
+		cost = 3
+		available_if_capitulated = yes
+		relative_position_id = Orenburg_eastern_expedition
+		prerequisite = { 
+			focus = Orenburg_establish_eastern_strategic_frontier 
+		}
+		prerequisite = { 
+			focus = Orenburg_secure_siberia 
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		will_lead_to_war_with = ZHR
+		will_lead_to_war_with = ARC
+		will_lead_to_war_with = PRI
+		will_lead_to_war_with = MNS
+		will_lead_to_war_with = PSL
+		will_lead_to_war_with = GUK
+		will_lead_to_war_with = FCR
+		bypass = {
+			ZHR = {
+				exists = no
+			}
+			KCK = {
+				exists = no
+			}
+			PRI = {
+				exists = no
+			}
+			GUK = {
+				exists = no
+			}
+			MNS = {
+				exists = no
+			}
+			HAR = {
+				exists = no
+			}
+			FCR = {
+				exists = no
+			}
+			PSL = {
+				exists = no
+			}
+			ARC = {
+				exists = no
+			}
+			ALT = {
+				exists = no
+			}
+			TAN = {
+				exists = no
+			}
+			MO2 = {
+				exists = no
+			}
+		}
+		available = {
+			SIB = {
+				exists = no
+			}
+			is_subject = no
+		}
+		completion_reward = {
+			unlock_decision_tooltip = Unification_invade_zhr_nationalist
+			set_country_flag = invade_zhelto
+			set_country_flag = invade_mongolia
+			set_country_flag = invade_yakutia
+		}
+	}
+	#Focus for Protective Belt Against Atlanticism
+	focus = {
+		id = Orenburg_protective_belt_against_atlanticism
+		icon = GFX_focus_protective_belt_against_atlanticism
+		x = 0
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		relative_position_id = Orenburg_eurasian_geopolitics
+		prerequisite = { 
+			focus = Orenburg_expand_western_strategic_frontier 
+		}
+		prerequisite = { 
+			focus = Orenburg_expand_eastern_strategic_frontier 
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		available = {
+			has_global_flag = united_russia
+		}
+		completion_reward = {
+			add_war_support = 0.3
+			add_stability = 0.3
+			add_research_slot = 1
+			add_opinion_modifier = {
+				target = ENG
+				modifier = medium_decrease
+			}
+			add_opinion_modifier = {
+				target = USA
+				modifier = medium_decrease
+			}
+			news_event = {
+				id = news.68
+			}
+			set_cosmetic_tag = ORE_eurasia
+			Unification_unify_russia_effects = yes
+			set_capital = {
+				state = 219
+			}
+			hidden_effect = {
+				every_owned_state = {
+					limit = {
+						has_variable = is_russian_state
+					}
+					add_core_of = ORE
+					remove_core_of = RUS
+					remove_core_of = SRU
+					remove_core_of = FIN
+					remove_core_of = FIR
+					remove_core_of = WRR
+					remove_core_of = WRT 
+					remove_core_of = WRU 
+					remove_core_of = EST 
+					remove_core_of = LAT 
+					# 
+					remove_core_of = DKB 
+					remove_core_of = ARM 
+					remove_core_of = TRK 
+					remove_core_of = KHW 
+					remove_core_of = SIB 
+					remove_core_of = KCK 
+					remove_core_of = FCR 
+					remove_core_of = ZHR
+					remove_core_of = KAV
+					remove_core_of = TAN 
+					remove_core_of = MO2 
+					remove_core_of = MO4 
+					
+					remove_core_of = TUK 
+					remove_core_of = TUC 
+					remove_core_of = BKR
+					remove_core_of = GUK 
+					remove_core_of = PRI 
+					remove_core_of = HAR 
+					remove_core_of = MNS 
+					remove_core_of = ARC
+					remove_core_of = PSL 
+					remove_core_of = OLN
+					remove_claim_by = RUS
+					remove_claim_by = SRU
+					remove_claim_by = FIN
+					remove_claim_by = FIR
+					remove_claim_by = WRR
+					remove_claim_by = WRT 
+					remove_claim_by = WRU 
+					remove_claim_by = EST 
+					remove_claim_by = LAT 
+					# 
+					remove_claim_by = DKB 
+					remove_claim_by = ARM 
+					remove_claim_by = ORE 
+					remove_claim_by = TRK 
+					remove_claim_by = KHW 
+					remove_claim_by = SIB 
+					remove_claim_by = KCK 
+					remove_claim_by = FCR 
+					remove_claim_by = ZHR
+					remove_claim_by = TAN 
+					remove_claim_by = MO2 
+					remove_claim_by = MO4 
+					
+					remove_claim_by = TUK 
+					remove_claim_by = TUC 
+					remove_claim_by = BKR
+					remove_claim_by = GUK 
+					remove_claim_by = PRI 
+					remove_claim_by = HAR 
+					remove_claim_by = MNS 
+					remove_claim_by = ARC
+					remove_claim_by = PSL 
+					remove_claim_by = OLN
+					remove_claim_by = KAV
+				}
+			}
+		}
+	}
+	#Geopolitics of Ra-ra-rasputin
+	#Smite the Zhmey
+	focus = {
+		id = ORE_smite_zhmey
+		icon = GFX_ORE_smite_zhmey
+		cost = 5
+		relative_position_id = Orenburg_news_from_the_homeland
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = Orenburg_news_from_the_homeland
+		}
+		available = {
+			has_country_flag = ORE_rasputin_conspiracy
+			is_subject = no
+			has_war = no
+		}		
+		completion_reward = { 
+			add_war_support = 0.2
+			swap_ideas = {
+				remove_idea = ORE_grandiose_courage
+				add_idea = ORE_smite_the_zhmey
+			}
+			unlock_decision_category_tooltip = Russian_unification_decisions_nationalist
+		}
+	}
+	#Subdue the Cossacks
+	focus = {
+		id = ORE_subdue_cossacks
+		icon = GFX_ORE_subdue_cossacks
+		cost = 3
+		relative_position_id = ORE_smite_zhmey
+		x = -1
+		y = 1
+		prerequisite = {
+			focus = ORE_smite_zhmey
+		}
+		available = { 
+			is_subject = no
+			has_war = no
+		}
+		will_lead_to_war_with = DKB
+		will_lead_to_war_with = KAV
+		will_lead_to_war_with = ARM
+		completion_reward = { 
+			unlock_decision_tooltip = Unification_invade_seu_nationalist
+			unlock_decision_tooltip = Unification_invade_kav_nationalist
+			unlock_decision_tooltip = Unification_invade_armenia_nationalist
+			set_country_flag = invade_seu
+			set_country_flag = invade_kavkaz
+			set_country_flag = invade_armenia
+		}
+	}
+	#Empire of the north
+	focus = {
+		id = ORE_empire_of_north
+		icon = GFX_ORE_empire_of_north
+		cost = 3
+		relative_position_id = ORE_smite_zhmey
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = ORE_smite_zhmey
+		}
+		available = { 
+			is_subject = no
+			has_war = no
+		}
+		will_lead_to_war_with = SIB
+		will_lead_to_war_with = KCK
+		will_lead_to_war_with = ZHR
+		will_lead_to_war_with = ARC
+		will_lead_to_war_with = PRI
+		will_lead_to_war_with = MNS
+		will_lead_to_war_with = PSL
+		will_lead_to_war_with = GUK
+		will_lead_to_war_with = FCR
+		completion_reward = { 
+			unlock_decision_tooltip = Unification_invade_siberia_nationalist
+			unlock_decision_tooltip = Unification_invade_kck_nationalist
+			unlock_decision_tooltip = Unification_invade_zhr_nationalist
+			set_country_flag = invade_siberia
+			set_country_flag = invade_yakutia
+			set_country_flag = invade_zhelto
+		}
+	}
+	#Rule the Steppes
+	focus = {
+		id = ORE_rule_steppes
+		icon = GFX_ORE_rule_steppes
+		cost = 3
+		relative_position_id = ORE_empire_of_north
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = ORE_empire_of_north
+		}
+		available = { 
+			is_subject = no
+			has_war = no
+			
+		}
+		will_lead_to_war_with = MO2
+		will_lead_to_war_with = TAN
+		will_lead_to_war_with = MON
+		will_lead_to_war_with = ALT
+		completion_reward = {
+			unlock_decision_tooltip = Unification_invade_mongolia_nationalist
+			set_country_flag = invade_mongolia
+		}
+	}
+	#Walk into the Kremlin
+	focus = {
+		id = ORE_walk_into_kremlin
+		icon = GFX_ORE_walk_into_kremlin
+		cost = 3
+		relative_position_id = ORE_subdue_cossacks
+		x = 0
+		y = 1
+		
+		prerequisite = {
+			focus = ORE_subdue_cossacks
+		}
+		available = { 
+			is_subject = no
+			has_war = no
+		}
+		completion_reward = { 
+			unlock_decision_tooltip = Unification_invade_russia_nationalist
+			unlock_decision_tooltip = Unification_invade_baltics_nationalist
+			unlock_decision_tooltip = Unification_invade_finland_nationalist
+			set_country_flag = invade_russia
+			set_country_flag = invade_baltics
+			set_country_flag = invade_finland
+		}
+	}
+	#Peace in Holy Rus
+	focus = {
+		id = ORE_peace_holy_rus
+		icon = GFX_ORE_peace_holy_rus
+		cost = 3
+		relative_position_id = ORE_smite_zhmey
+		x = 0
+		y = 3
+		prerequisite = {
+			focus = ORE_walk_into_kremlin
+		}
+		prerequisite = {
+			focus = ORE_rule_steppes
+		}
+		available = {
+			has_global_flag = united_russia
+		}
+		completion_reward = { 
+			add_war_support = 0.3
+			add_stability = 0.3
+			add_research_slot = 1
+			news_event = {
+				id = news.164
+			}
+			set_cosmetic_tag = ORE_uni
+			Unification_unify_russia_effects = yes
+			set_capital = {
+				state = 219
+			}
+			hidden_effect = {
+				every_owned_state = {
+				limit = {
+					has_variable = is_russian_state
+				}
+				add_core_of = ORE
+				remove_core_of = RUS
+				remove_core_of = SRU
+				remove_core_of = FIN
+				remove_core_of = FIR
+				remove_core_of = WRR
+				remove_core_of = WRT 
+				remove_core_of = WRU 
+				remove_core_of = EST 
+				remove_core_of = LAT 
+				# 
+				remove_core_of = DKB 
+				remove_core_of = ARM 
+				remove_core_of = TRK 
+				remove_core_of = KHW 
+				remove_core_of = SIB 
+				remove_core_of = KCK 
+				remove_core_of = FCR 
+				remove_core_of = ZHR
+				remove_core_of = KAV
+				remove_core_of = TAN 
+				remove_core_of = MO2 
+				remove_core_of = MO4 
+				
+				remove_core_of = TUK 
+				remove_core_of = TUC 
+				remove_core_of = BKR
+				remove_core_of = GUK 
+				remove_core_of = PRI 
+				remove_core_of = HAR 
+				remove_core_of = MNS 
+				remove_core_of = ARC
+				remove_core_of = PSL 
+				remove_core_of = OLN
+				remove_claim_by = RUS
+				remove_claim_by = SRU
+				remove_claim_by = FIN
+				remove_claim_by = FIR
+				remove_claim_by = WRR
+				remove_claim_by = WRT 
+				remove_claim_by = WRU 
+				remove_claim_by = EST 
+				remove_claim_by = LAT 
+				# 
+				remove_claim_by = DKB 
+				remove_claim_by = ARM 
+				remove_claim_by = ORE 
+				remove_claim_by = TRK 
+				remove_claim_by = KHW 
+				remove_claim_by = SIB 
+				remove_claim_by = KCK 
+				remove_claim_by = FCR 
+				remove_claim_by = ZHR
+				remove_claim_by = TAN 
+				remove_claim_by = MO2 
+				remove_claim_by = MO4 
+				
+				remove_claim_by = TUK 
+				remove_claim_by = TUC 
+				remove_claim_by = BKR
+				remove_claim_by = GUK 
+				remove_claim_by = PRI 
+				remove_claim_by = HAR 
+				remove_claim_by = MNS 
+				remove_claim_by = ARC
+				remove_claim_by = PSL 
+				remove_claim_by = OLN
+				remove_claim_by = KAV
+			}
+			}
+		}	
+	}
+	#I said that Dutov was sus
+	#Focus for This War Is Our War
+	focus = {
+		id = Orenburg_this_war_is_our_war
+		icon = GFX_focus_this_war_is_our_war
+		x = 8
+		y = 1
+		cost = 1
+		available_if_capitulated = yes
+		relative_position_id = Orenburg_news_from_the_homeland
+		prerequisite = { focus = Orenburg_news_from_the_homeland }
+		ai_will_do = {
+			factor = 20
+		}
+		available = {
+			has_completed_focus = Orenburg_dutov_asserts_dominance
+			RUS = {
+				has_war_with = SRU
+			}
+		}
+		completion_reward = {
+			hidden_effect={
+				SRU={
+					add_state_core = 652
+					add_state_core = 582
+					add_state_core = 572
+					add_state_core = 732
+					add_state_core = 406
+					add_state_core = 402
+					add_state_core = 587
+					add_state_core = 852
+					add_state_core = 1043
+				}
+			}
+			remove_ideas = RUS_warlord_indifference
+			declare_war_on = {
+			target = SRU
+			type = annex_everything
+			}
+			}
+		}
+	#Focus for Dutov-Drozdovsky Deal
+	focus = {
+		id = Orenburg_dutovdrozdovsky_deal
+		icon = GFX_focus_dutov_drozdovsky_deal
+		x = -2
+		y = 1
+		cost = 1
+		available_if_capitulated = yes
+		relative_position_id = Orenburg_this_war_is_our_war
+		prerequisite = { focus = Orenburg_this_war_is_our_war }
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+	#Focus for Loyalty to Russia
+	focus = {
+		id = Orenburg_loyalty_to_russia
+		icon = GFX_focus_loyalty_to_russia
+		x = 0
+		y = 1
+		cost = 1
+		available_if_capitulated = yes
+		relative_position_id = Orenburg_this_war_is_our_war
+		prerequisite = { focus = Orenburg_this_war_is_our_war }
+		completion_reward = {
+			add_stability = 0.075
+		}
+	}
+	#Focus for A Privileged District
+	focus = {
+		id = Orenburg_a_privileged_district
+		icon = GFX_focus_ORE_a_privliged_district
+		x = 2
+		y = 1 
+		cost = 1
+		available_if_capitulated = yes
+		relative_position_id = Orenburg_this_war_is_our_war
+		prerequisite = { focus = Orenburg_this_war_is_our_war }
+		completion_reward = {
+			add_war_support = 0.1
+		}
+	}
+	#Focus for Join Our Brothers
+	focus = {
+		id = Orenburg_join_our_brothers
+		icon = GFX_focus_join_our_brothers
+		x = 0
+		y = 1
+		cost = 1
+		available_if_capitulated = yes
+		relative_position_id = Orenburg_loyalty_to_russia
+		prerequisite = { focus = Orenburg_a_privileged_district }
+		prerequisite = { focus = Orenburg_loyalty_to_russia }
+		prerequisite = { focus = Orenburg_dutovdrozdovsky_deal }
+		ai_will_do = {
+			factor = 20
+		}
+		available = {
+			date > 1939.01.01
+			RUS = {
+				exists = yes
+			}
+			ORE = {
+				has_war = no
+			}
+		}
+		completion_reward = {
+			#ORE annexed by RUS, tag to RUS
+			RUS = {
+				add_state_core = 852
+			 	add_state_core = 1043
+			}
+			RUS = {
+				change_tag_from = ORE
+			}
+			every_state = {
+				limit = {
+					is_core_of = ORE
+				}
+				add_core_of = RUS
+			}
+			RUS = {
+				annex_country = {
+					target = ORE
+					transfer_troops = yes
+				}
+				ORE = {
+					every_unit_leader = {
+						set_nationality = RUS
+					}
+				}
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+	}
+
+}

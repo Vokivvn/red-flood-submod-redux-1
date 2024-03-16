@@ -1,0 +1,41 @@
+KCK_foreign_policy = {
+	KCK_decision_treaty_of_cooperation = {
+		icon = eng_trade_unions_support
+		fire_only_once = yes
+		ai_will_do = { factor = 100 }
+		visible = {
+			has_government = progressivism
+			has_completed_focus = KCK_european_culture
+		}
+		available = {
+			SIB = { has_completed_focus = SIB_sign_a_treaty }
+		}
+		complete_effect  = {
+			SIB = { add_to_faction = KCK }
+		}
+	}
+}
+
+KCK_internal_policy = {
+	KCK_decision_create_magadan = {
+		icon = generic_nationalism
+		cost = 100
+		ai_will_do = { factor = 100 }
+		visible = { has_country_flag = magadan_city_KCK }
+		fire_only_once = yes
+		days_remove = 90
+		complete_effect = {
+			add_victory_points = {
+				province = 12683
+				value = 5
+			}
+			set_province_name = {
+				id = 12683
+				name = KCK_decision_KCK_decision_create_magadan_province_12683
+			}
+		}
+	}
+}
+
+KCK_remilitarize = {
+}

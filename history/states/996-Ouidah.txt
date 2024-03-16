@@ -1,0 +1,21 @@
+state={
+	id=996
+	name="STATE_996"
+	manpower = 3900
+	
+	state_category = rural
+	
+	history={
+		owner = POR
+		buildings = {
+			infrastructure = 2
+			13362 = {
+			    naval_base = 2
+			}
+		}
+	}
+
+	provinces={
+		13362
+	}
+}

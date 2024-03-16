@@ -1,0 +1,29 @@
+
+state={
+	id=1223
+	name="STATE_1223" # Coimbatore
+	manpower = 3057500
+
+	state_category = town
+
+	resources={
+	
+	}
+
+	history={
+		owner = MAD
+		add_core_of = MAD
+		add_claim_by = ORS
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+		}
+		victory_points = {
+			12275 3
+		}
+	}
+
+	provinces={
+		7363 10130 10274 12275
+	}
+}

@@ -1,0 +1,338 @@
+SIB_european_union = {
+	SIB_ratify_treaty = {
+		cost = 200
+		fire_only_once = yes
+		days_remove = 140
+		remove_effect  = {
+			set_country_flag = SIB_ratify_treaty
+			every_country = {
+				limit = {
+					is_in_faction_with = SIB
+				}
+				add_ideas = SIB_member_of_the_eu_1
+			}
+		}
+	}
+	SIB_draft_renovation_project = {
+		cost = 300
+		fire_only_once = yes
+		days_remove = 140
+		remove_effect = {
+			every_country = {
+				limit = {
+					is_in_faction_with = SIB
+				}
+				every_owned_state = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+					}
+				}
+			}
+		}
+	}
+	SIB_collective_defence_charter = {
+		cost = 300
+		fire_only_once = yes
+		days_remove = 140
+		remove_effect = {
+			every_country = {
+				limit = {
+					is_in_faction_with = SIB
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 10000
+					producer = SIB
+				}
+				army_experience = 100
+			}
+		}
+	}
+	SIB_sign_free_trade_zone_charter = {
+		cost = 300
+		fire_only_once = yes
+		days_remove = 140
+		available = {
+			has_idea = SIB_member_of_the_eu_1
+		}
+		remove_effect = {
+			every_country = {
+				limit = {
+					is_in_faction_with = SIB
+				}
+				swap_ideas = {
+					remove_idea = SIB_member_of_the_eu_1
+					add_idea = SIB_member_of_the_eu_2
+				}
+			}
+		}
+	}
+}
+SIB_invite_refugees = {
+	SIB_invite_jewish_refugees = {
+		cost = 100
+		fire_only_once = yes
+		days_remove = 140
+		remove_effect = {
+			set_country_flag = SIB_invite_jewish_refugees
+			country_event = sib.50
+		}
+	}
+	SIB_invite_ukrainian_refugees = {
+		cost = 100
+		fire_only_once = yes
+		days_remove = 140
+		remove_effect = {
+			set_country_flag = SIB_invite_ukrainian_refugees
+			country_event = sib.50
+		}
+	}
+	SIB_invite_polish_refugees = {
+		cost = 100
+		fire_only_once = yes
+		days_remove = 140
+		remove_effect = {
+			country_event = sib.50
+		}
+	}
+	SIB_invite_baltic_refugees = {
+		cost = 100
+		fire_only_once = yes
+		days_remove = 140
+		remove_effect = {
+			country_event = sib.50
+		}
+	}
+	SIB_invite_finnish_refugees = {
+		cost = 100
+		fire_only_once = yes
+		days_remove = 140
+		remove_effect = {
+			country_event = sib.50
+		}
+	}
+	SIB_invite_russian_refugees = {
+		cost = 100
+		fire_only_once = yes
+		days_remove = 140
+		remove_effect = {
+			country_event = sib.50
+		}
+	}
+	SIB_invite_persian_refugees = {
+		cost = 100
+		fire_only_once = yes
+		days_remove = 140
+		remove_effect = {
+			country_event = sib.50
+		}
+	}
+	SIB_invite_romanian_refugees = {
+		cost = 100
+		fire_only_once = yes
+		days_remove = 140
+		remove_effect = {
+			country_event = sib.50
+		}
+	}
+	SIB_invite_german_refugees = {
+		cost = 100
+		fire_only_once = yes
+		days_remove = 140
+		remove_effect = {
+			country_event = sib.50
+		}
+	}
+	SIB_invite_american_refugees = {
+		cost = 100
+		fire_only_once = yes
+		days_remove = 140
+		remove_effect = {
+			country_event = sib.50
+		}
+	}
+	SIB_invite_canadian_refugees = {
+		cost = 100
+		fire_only_once = yes
+		days_remove = 140
+		remove_effect = {
+			country_event = sib.50
+		}
+	}
+	SIB_invite_chinese_refugees = {
+		cost = 100
+		fire_only_once = yes
+		days_remove = 140
+		remove_effect = {
+			country_event = sib.50
+		}
+	}
+	SIB_invite_korean_refugees = {
+		cost = 100
+		fire_only_once = yes
+		days_remove = 140
+		remove_effect = {
+			country_event = sib.50
+		}
+	}
+	SIB_invite_japanese_refugees = {
+		cost = 100
+		fire_only_once = yes
+		days_remove = 140
+		remove_effect = {
+			country_event = sib.50
+		}
+	}
+}
+
+SIB_liberation = {
+	SIB_liberate_altai = {
+		cost = 20
+		fire_only_once = yes
+		visible = {
+			has_completed_focus = SIB_europe_of_our_own
+			country_exists = ALT
+		}
+		available = {
+			is_neighbor_of = ALT
+		}
+		war_with_on_remove = ALT
+		remove_effect = {
+			declare_war_on = {
+				type = annex_everything
+				target = ALT
+			}
+		}	
+	}
+	SIB_liberate_tuva_baikal = {
+		cost = 40
+		fire_only_once = yes
+		visible = {
+			has_completed_focus = SIB_europe_of_our_own
+			OR = {
+				country_exists = TAN
+				country_exists = MO2
+			}
+		}
+		available = {
+			OR = {
+				is_neighbor_of = TAN
+				is_neighbor_of = MO2
+			}
+		}
+		war_with_on_remove = TAN
+		war_with_on_remove = MO2
+		remove_effect = {
+			every_country = {
+				limit = {
+					OR = {
+						tag = TAN
+						tag = MO2
+					}
+				}
+				SIB = {
+					declare_war_on = {
+						type = annex_everything
+						target = PREV
+					}
+				}
+			}
+		}	
+	}
+	SIB_liberate_far_east = {
+		cost = 30
+		fire_only_once = yes
+		visible = {
+			has_completed_focus = SIB_europe_of_our_own
+			country_exists = KCK
+		}
+		available = {
+			is_neighbor_of = KCK
+		}
+		war_with_on_remove = KCK
+		remove_effect = {
+			declare_war_on = {
+				type = annex_everything
+				target = KCK
+			}
+		}
+	}
+	SIB_liberate_zhelto = {
+		cost = 50
+		fire_only_once = yes
+		visible = {
+			has_completed_focus = SIB_europe_of_our_own
+			country_exists = ZHR
+			country_exists = PRI
+			country_exists = GUK
+			country_exists = HAR
+			country_exists = ARC
+			country_exists = PSL
+			country_exists = FCR
+			country_exists = MNS
+		}
+		available = {
+			OR = {
+				is_neighbor_of = ZHR
+				is_neighbor_of = PRI
+				is_neighbor_of = GUK
+				is_neighbor_of = HAR
+				is_neighbor_of = ARC
+				is_neighbor_of = PSL
+				is_neighbor_of = FCR
+				is_neighbor_of = MNS
+			}
+		}
+		war_with_on_remove = ZHR
+		war_with_on_remove = ARC
+		war_with_on_remove = MNS
+		war_with_on_remove = PSL
+		war_with_on_remove = GUK
+		war_with_on_remove = FCR
+		war_with_on_remove = HAR
+		war_with_on_remove = PRI
+		remove_effect = {
+			every_country = {
+				limit = {
+					OR = {
+						tag = ZHR
+						tag = PRI
+						tag = GUK
+						tag = HAR
+						tag = ARC
+						tag = PSL
+						tag = FCR
+						tag = MNS
+					}
+				}
+				SIB = {
+					declare_war_on = {
+						type = annex_everything
+						target = PREV
+					}
+				}
+			}
+		}
+	}
+	SIB_liberate_the_steppes = {
+		cost = 50
+		fire_only_once = yes
+		visible = {
+			has_completed_focus = SIB_europe_of_our_own
+			country_exists = SIB
+		}
+		available = {
+			is_neighbor_of = SIB
+		}
+		war_with_on_remove = ORE
+		remove_effect = {
+			declare_war_on = {
+				type = annex_everything
+				target = ORE
+			}
+		}
+	}
+}
+SIB_unification = {
+}

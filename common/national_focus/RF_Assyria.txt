@@ -1,0 +1,1608 @@
+focus_tree = {
+	id = ASY
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = ASY
+		}
+	}
+	continuous_focus_position = { x = 150 y = 2000 }
+	focus = {
+		id = ASY_oldest_homeland
+		icon = GFX_focus_ASY_oldest_homeland
+		cost = 2
+		x = 4
+		y = 0
+
+		completion_reward = {
+			hidden_effect = {
+				country_event = {
+				id = asy.1
+				days = 50
+				}
+			}
+			custom_effect_tooltip = "ASY_oldest_homeland_TT"
+		}
+	}
+	focus = {
+		id = ASY_brothers_of_jacob_chaldea
+		icon = GFX_focus_ASY_brothers_of_jacob_chaldea
+		relative_position_id = ASY_oldest_homeland
+		cost = 2
+		x = -2
+		y = 1
+		prerequisite = {
+			focus = ASY_oldest_homeland
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = "ASY_brothers_of_jacob_chaldea_TT"
+		}
+	}
+	focus = {
+		id = ASY_the_snake_in_the_garden
+		icon = GFX_focus_ASY_the_snake_in_the_garden
+		relative_position_id = ASY_oldest_homeland 
+		cost = 2
+		x = 2
+		y = 1
+		prerequisite = {
+			focus = ASY_oldest_homeland
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = "ASY_the_snake_in_the_garden_TT"
+		}
+	}
+	focus = {
+		id = ASY_last_sigh_of_relief
+		icon = GFX_focus_ASY_last_sigh_of_relief
+		relative_position_id = ASY_oldest_homeland
+		x = 0
+		y = 2
+		prerequisite = {
+			focus =  ASY_the_snake_in_the_garden
+		}
+		prerequisite = {
+			focus =  ASY_brothers_of_jacob_chaldea
+		}
+		cost = 2
+		available = {
+			always = no
+		}
+		completion_reward = {
+			custom_effect_tooltip = "ASY_last_sigh_of_relief_TT"
+		}
+	}
+	focus = {
+		id = ASY_long_live_mar_shimun
+		icon = GFX_focus_ASY_long_live_mar_shimun
+		relative_position_id = ASY_last_sigh_of_relief
+		x = -6
+		y = 1
+		cost = 1
+		prerequisite = {
+			focus = ASY_last_sigh_of_relief
+		}
+		mutually_exclusive = {
+			focus = ASY_for_a_free_assyria
+		}
+		completion_reward = {
+			country_event = { id = asy.3 }
+		}
+		available = {
+			always = no
+		}
+	}
+	focus = {
+		id = ASY_thorn_in_our_side
+		icon = GFX_focus_ASY_thorn_in_our_side
+		relative_position_id = ASY_long_live_mar_shimun
+		cost = 5
+		x = 2
+		y = 1
+		prerequisite = {
+			focus = ASY_long_live_mar_shimun
+		}
+
+		completion_reward = {
+			add_stability = -0.05
+			807 = { 
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			1051 = { 
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = ASY_thorn_in_our_minds
+		icon = GFX_focus_ASY_thorn_in_our_minds
+		relative_position_id = ASY_long_live_mar_shimun
+		cost = 5
+		x = -2
+		y = 1
+		prerequisite = {
+			focus = ASY_long_live_mar_shimun
+		}
+
+		completion_reward = {
+			add_popularity = {
+			    ideology = despotism
+				popularity = 0.15
+			}
+		}
+	}
+	focus = {
+		id = ASY_the_good_patriarch
+		icon = GFX_focus_ASY_the_good_patriarch
+		relative_position_id = ASY_long_live_mar_shimun
+		cost = 5
+		x = 0
+		y = 2
+		prerequisite = {
+			focus = ASY_thorn_in_our_side
+		}
+		prerequisite = {
+			focus = ASY_thorn_in_our_minds
+		}
+
+		completion_reward = {
+			add_country_leader_trait = ASY_the_good_patriarch
+		}
+	}
+	focus = {
+		id = ASY_primacy_of_shimun_line
+		icon = GFX_focus_ASY_primacy_of_shimun_line
+		relative_position_id = ASY_the_good_patriarch
+		cost = 5
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = ASY_the_good_patriarch
+		}
+
+		completion_reward = {
+			add_political_power = 25
+			add_ideas = ASY_shimun_line
+		}
+	}
+	focus = {
+		id = ASY_to_bind_divided_faith
+		icon = GFX_focus_ASY_to_bind_divided_faith
+		relative_position_id = ASY_the_good_patriarch
+		cost = 5
+		x = -3
+		y = 1
+		prerequisite = {
+			focus = ASY_the_good_patriarch
+		}
+
+		completion_reward = {
+			add_ideas = ASY_continued_talks
+		}
+	}
+	focus = {
+		id = ASY_to_bind_divided_people
+		icon = GFX_focus_ASY_to_bind_divided_people
+		relative_position_id = ASY_the_good_patriarch
+		cost = 5
+		x = 3
+		y = 1
+		prerequisite = {
+			focus = ASY_the_good_patriarch
+		}
+
+		completion_reward = {
+			add_popularity = {
+				ideology = despotism
+				popularity = 0.10
+			}
+			add_political_power = 50
+			create_corps_commander = {
+				name = "Yusuf Malek"
+				picture = "Portrait_Assyria_Yusuf_Malek.png"
+				traits = { politically_connected }
+				skill = 2
+			}
+		}
+	}
+	focus = {
+		id = ASY_chieftains_to_landlords
+		icon = GFX_focus_ASY_chieftains_to_landlords
+		relative_position_id = ASY_to_bind_divided_people
+		cost = 5
+		x = -1
+		y = 1
+		prerequisite = {
+			focus = ASY_to_bind_divided_people
+		}
+		prerequisite = {
+			focus = ASY_primacy_of_shimun_line
+		}
+
+
+		completion_reward = {
+			add_ideas = ASY_detribalisation
+		}
+	}
+	focus = {
+		id = ASY_infidels_to_brethen
+		icon = GFX_focus_ASY_infidels_to_brethen
+		relative_position_id = ASY_primacy_of_shimun_line
+		cost = 5
+		x = -2
+		y = 1
+		prerequisite = {
+			focus = ASY_to_bind_divided_faith
+		}
+		prerequisite = {
+			focus = ASY_primacy_of_shimun_line
+		}
+
+		completion_reward = {
+			add_ideas = ASY_forced_conversion
+		}
+	}
+	focus = {
+		id = ASY_nicene_niceness
+		icon = GFX_focus_ASY_nicene_niceness
+		relative_position_id = ASY_primacy_of_shimun_line
+		cost = 5
+		x = 0
+		y = 2
+		prerequisite = {
+			focus = ASY_chieftains_to_landlords
+		}
+		prerequisite = {
+			focus = ASY_infidels_to_brethen
+		}
+
+		completion_reward = {
+			add_stability = 0.1
+			add_opinion_modifier = {
+				target = ARM
+				modifier = ASY_brothers_in_faith
+			}
+			add_opinion_modifier = {
+				target = LEO
+				modifier = ASY_brothers_in_faith
+			}
+			add_opinion_modifier = {
+				target = RUS
+				modifier = ASY_brothers_in_faith
+			}
+			add_opinion_modifier = {
+				target = AUS
+				modifier = ASY_brothers_in_faith
+			}
+			add_opinion_modifier = {
+				target = GER
+				modifier = ASY_brothers_in_faith
+			}
+			add_opinion_modifier = {
+				target = SRU
+				modifier = ASY_brothers_in_faith
+			}
+			ARM = {
+				add_opinion_modifier = {
+					target = ASY
+					modifier = ASY_brothers_in_faith
+				}
+			}
+			LEO = {
+				add_opinion_modifier = {
+					target = ASY
+					modifier = ASY_brothers_in_faith
+				}
+			}
+			RUS = {
+				add_opinion_modifier = {
+					target = ASY
+					modifier = ASY_brothers_in_faith
+				}
+			}
+			AUS = {
+				add_opinion_modifier = {
+					target = ASY
+					modifier = ASY_brothers_in_faith
+				}
+			}
+			GER = {
+				add_opinion_modifier = {
+					target = ASY
+					modifier = ASY_brothers_in_faith
+				}
+			}
+			SRU = {
+				add_opinion_modifier = {
+					target = ASY
+					modifier = ASY_brothers_in_faith
+				}
+			}
+			country_event = {
+				id = asy.16
+			}
+		}
+	}
+	focus = {
+		id = ASY_charity_not_socialism
+		icon = GFX_focus_ASY_charity_not_socialism
+		relative_position_id = ASY_nicene_niceness
+		cost = 5
+		x = 2
+		y = 1
+		prerequisite = {
+			focus = ASY_nicene_niceness
+		}
+
+		completion_reward = {
+			add_ideas = ASY_for_the_poor
+		}
+	}
+	focus = {
+		id = ASY_help_from_the_bear
+		icon = GFX_focus_ASY_help_from_the_bear
+		relative_position_id = ASY_nicene_niceness
+		cost = 5
+		x = -2
+		y = 1
+		prerequisite = {
+			focus = ASY_nicene_niceness
+		}
+
+		completion_reward = {
+			add_ideas = ASY_veterans_of_the_caucasian_volunteer_army
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = ASY_enlightened_theocracy
+		icon = GFX_focus_ASY_enlightened_theocracy
+		relative_position_id = ASY_nicene_niceness
+		cost = 5
+		x = 0
+		y = 2
+		prerequisite = {
+			focus = ASY_charity_not_socialism
+		}
+		prerequisite = {
+			focus = ASY_help_from_the_bear
+		}
+
+		completion_reward = {
+			add_war_support = 0.1
+			add_popularity = {
+				ideology = despotism
+				popularity = 0.15
+			}
+			add_popularity = {
+				ideology = reactionism
+				popularity = 0.15
+			}
+			add_research_slot = 1
+		}
+	}
+	focus = {
+		id = ASY_for_a_free_assyria
+		icon = GFX_focus_ASY_for_a_free_assyria
+		relative_position_id = ASY_last_sigh_of_relief
+		cost = 5
+		x = 6
+		y = 1
+		prerequisite = {
+			focus = ASY_last_sigh_of_relief
+		}
+		mutually_exclusive = {
+			focus = ASY_long_live_mar_shimun
+		}
+		available = {
+			always = no
+		}
+
+		completion_reward = {
+			set_cosmetic_tag = ASY_democracy
+			set_politics = {
+				ruling_party = right_authoritarianism
+			}
+		}
+	}
+	focus = {
+		id = ASY_birthing_pains_of_democracy
+		icon = GFX_focus_ASY_birthing_pains_of_democracy
+		relative_position_id = ASY_for_a_free_assyria
+		cost = 5
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = ASY_for_a_free_assyria
+		}
+
+		completion_reward = {
+			country_event = {
+				id = asy.7
+			}
+		}
+	}
+	focus = {
+		id = ASY_ascendance_of_petros
+		icon = GFX_focus_ASY_ascendance_of_petros
+		relative_position_id = ASY_birthing_pains_of_democracy
+		cost = 5
+		x = -2
+		y = 1
+		available = {
+			always = no
+		}
+		prerequisite = {
+			focus = ASY_birthing_pains_of_democracy
+		}
+
+		completion_reward = {
+			add_popularity = { 
+			    ideology = accelerationism
+				popularity = 0.3
+			}
+			add_popularity = { 
+			    ideology = conservatism
+				popularity = 0.15
+			}
+			add_popularity = { 
+			    ideology = liberalism
+				popularity = 0.05
+			}
+			add_stability = 0.05
+			set_politics = {
+				ruling_party = accelerationism
+			}
+			ASY_agha_petros = {
+				promote_leader = yes
+				set_portraits = {
+					civilian = {
+						large="gfx/leaders/ASY/Portrait_Assyria_Agha_Petros.png"
+						small = "gfx/interface/ministers/ASY/ASY_Agha_Petros.png"
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = ASY_to_renew_spirit
+		icon = GFX_focus_ASY_to_renew_spirit
+		relative_position_id = ASY_ascendance_of_petros
+		cost = 5
+		x = -2
+		y = 1
+		prerequisite = {
+			focus = ASY_ascendance_of_petros
+		}
+
+		completion_reward = {
+			add_ideas = ASY_new_asyrian
+			country_event = {
+				id = asy.12
+			}
+		}
+	}
+	focus = {
+		id = ASY_from_the_old_to_might_of_new
+		icon = GFX_focus_ASY_from_the_old_to_might_of_new
+		relative_position_id = ASY_to_renew_spirit
+		cost = 5
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = ASY_to_renew_spirit
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ASY_new_asyrian
+				add_idea = ASY_new_asyrian2
+			}
+		}
+	}
+	focus = {
+		id = ASY_new_library_of_nineveh
+		icon = GFX_focus_ASY_new_library_of_nineveh
+		relative_position_id = ASY_from_the_old_to_might_of_new
+		cost = 5
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = ASY_from_the_old_to_might_of_new
+		}
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	focus = {
+		id = ASY_principles_of_modern_assyrian
+		icon = GFX_focus_ASY_principles_of_modern_assyrian
+		relative_position_id = ASY_from_the_old_to_might_of_new
+		cost = 5
+		x = -2
+		y = 1
+		prerequisite = {
+			focus = ASY_from_the_old_to_might_of_new
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ASY_new_asyrian2
+				add_idea = ASY_new_asyrian3
+			}
+		}
+	}
+	focus = {
+		id = ASY_sons_of_ashur_undivided
+		icon = GFX_focus_ASY_sons_of_ashur_undivided
+		relative_position_id = ASY_principles_of_modern_assyrian
+		cost = 5
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = ASY_principles_of_modern_assyrian
+		}
+		prerequisite = {
+			focus = ASY_new_library_of_nineveh
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ASY_new_asyrian3
+				add_idea = ASY_new_asyrian4
+			}
+		}
+	}
+	focus = {
+		id = ASY_to_conquer_matter
+		icon = GFX_focus_ASY_to_conquer_matter
+		relative_position_id = ASY_ascendance_of_petros
+		cost = 5
+		x = 2
+		y = 1
+		prerequisite = {
+			focus = ASY_ascendance_of_petros
+		}
+
+		completion_reward = {
+			807 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = ASY_the_masters_of_iron
+		icon = GFX_focus_ASY_the_masters_of_iron
+		relative_position_id = ASY_to_conquer_matter
+		cost = 5
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = ASY_to_conquer_matter
+		}
+
+		completion_reward = {
+			807 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_resource = {
+					type = steel
+					amount = 8
+				}
+			}
+		}
+	}
+	focus = {
+		id = ASY_blessing_of_black_gold
+		icon = GFX_focus_ASY_blessing_of_black_gold
+		relative_position_id = ASY_the_masters_of_iron
+		cost = 5
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = ASY_the_masters_of_iron
+		}
+
+		completion_reward = {
+			add_timed_idea = { idea = ASY_reaping_the_black_gold  days = 365 }
+			807 = {
+				add_resource = {
+					type = oil
+					amount = 5
+				}
+			}
+		}
+	}
+	focus = {
+		id = ASY_french_industrial_deals
+		icon = GFX_focus_ASY_french_industrial_deals
+		relative_position_id = ASY_the_masters_of_iron
+		cost = 5
+		x = 2
+		y = 1
+		prerequisite = {
+			focus = ASY_the_masters_of_iron
+		}
+
+		completion_reward = {
+			add_ideas = FRA_league_observer
+			add_opinion_modifier = {
+				target = FRA
+				modifier = huge_increase
+			}
+			FRA = {
+				add_opinion_modifier = {
+					target = ASY
+					modifier = huge_increase
+				}
+			}
+			country_event = {
+				id = asy.13
+			}
+		}
+	}
+	focus = {
+		id = ASY_modern_economic_solution
+		icon = GFX_focus_ASY_modern_economic_solution
+		relative_position_id = ASY_blessing_of_black_gold
+		cost = 5
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = ASY_blessing_of_black_gold
+		}
+		prerequisite = {
+			focus = ASY_french_industrial_deals
+		}
+
+		completion_reward = {
+			add_ideas = ASY_a_modern_economy
+		}
+	}
+	focus = {
+		id = ASY_civilisation_coming_home
+		icon = GFX_focus_ASY_civilisation_coming_home
+		relative_position_id = ASY_new_library_of_nineveh
+		cost = 5
+		x = 2
+		y = 1
+		prerequisite = {
+			focus = ASY_new_library_of_nineveh
+		}
+		prerequisite = {
+			focus = ASY_blessing_of_black_gold
+		}
+
+		completion_reward = {
+			add_ideas = ASY_civilisation_coming
+		}
+	}
+	focus = {
+		id = ASY_second_ashurbanipal
+		icon = GFX_focus_ASY_second_ashurbanipal
+		relative_position_id = ASY_civilisation_coming_home
+		cost = 5
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = ASY_sons_of_ashur_undivided
+		}
+		prerequisite = {
+			focus =  ASY_modern_economic_solution
+		}
+		prerequisite = {
+			focus = ASY_civilisation_coming_home
+		}
+
+		completion_reward = {
+			add_country_leader_trait = ASY_second_ashurbanipal
+		}
+	}
+	focus = {
+		id = ASY_visions_of_freydun_the_assyrian
+		icon = GFX_focus_ASY_visions_of_freydun_the_assyrian
+		relative_position_id = ASY_birthing_pains_of_democracy
+		cost = 5
+		x = 8
+		y = 1
+		available = {
+			always = no
+		}
+		prerequisite = {
+			focus = ASY_birthing_pains_of_democracy
+		}
+
+		completion_reward = {
+			add_popularity = { 
+			    ideology = revisionist_socialism
+				popularity = 0.3
+			}
+			add_popularity = { 
+			    ideology = popular_socialism
+				popularity = 0.15
+			}
+			add_popularity = { 
+			    ideology = progressivism
+				popularity = 0.05
+			}
+			add_popularity = { 
+			    ideology = vanguard_socialism
+				popularity = 0.05
+			}
+			set_politics = {
+				ruling_party = revisionist_socialism
+			}
+			drop_cosmetic_tag = yes
+			ASY_freydun_atturaya = {
+				add_corps_commander_role = {
+					traits = { politically_connected organizer }
+					skill = 3
+					attack_skill = 2
+					defense_skill = 3
+					planning_skill = 3
+					logistics_skill = 5
+				}
+			}
+		}
+	}
+	focus = {
+		id = ASY_the_institution_of_socialism
+		icon = GFX_focus_ASY_the_institution_of_socialism
+		relative_position_id = ASY_visions_of_freydun_the_assyrian
+		cost = 5
+		x = -2
+		y = 1
+		prerequisite = {
+			focus = ASY_visions_of_freydun_the_assyrian
+		}
+
+		completion_reward = {
+			add_ideas = ASY_a_socialist_republic
+		}
+	}
+	focus = {
+		id = ASY_land_to_all
+		icon = GFX_focus_ASY_land_to_all
+		relative_position_id = ASY_the_institution_of_socialism
+		cost = 5
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = ASY_the_institution_of_socialism
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ASY_a_socialist_republic
+				add_idea = ASY_a_socialist_republic2
+			}
+		}
+	}
+	focus = {
+		id = ASY_first_steps_to_modernity
+		icon = GFX_focus_ASY_first_steps_to_modernity
+		relative_position_id = ASY_land_to_all
+		cost = 5
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = ASY_land_to_all
+		}
+
+		completion_reward = {
+			add_popularity = {
+				ideology = revisionist_socialism
+				popularity = 0.1
+			}
+			swap_ideas = {
+				remove_idea = ASY_a_socialist_republic2
+				add_idea = ASY_a_socialist_republic3
+			}
+		}
+	}
+	focus = {
+		id = ASY_let_the_poor_breathe
+		icon = GFX_focus_ASY_let_the_poor_breathe
+		relative_position_id = ASY_land_to_all
+		cost = 5
+		x = -2
+		y = 1
+		prerequisite = {
+			focus = ASY_land_to_all
+		}
+
+		completion_reward = {
+			807 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = ASY_moving_on_to_the_next_stage
+		icon = GFX_focus_ASY_moving_on_to_the_next_stage
+		relative_position_id = ASY_let_the_poor_breathe
+		cost = 5
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = ASY_first_steps_to_modernity
+		}
+		prerequisite = {
+			focus = ASY_let_the_poor_breathe
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ASY_a_socialist_republic3
+				add_idea = ASY_a_socialist_republic4
+			}
+			country_event = {
+				id = asy.14
+			}
+		}
+	}
+	focus = {
+		id = ASY_progressive_constitution
+		icon = GFX_focus_ASY_progressive_constitution
+		relative_position_id = ASY_visions_of_freydun_the_assyrian
+		cost = 5
+		x = 2
+		y = 1
+		prerequisite = {
+			focus = ASY_visions_of_freydun_the_assyrian
+		}
+
+		completion_reward = {
+			add_ideas = ASY_new_constitution
+		}
+	}
+	focus = {
+		id = ASY_liberty_to_all
+		icon = GFX_focus_ASY_liberty_to_all
+		relative_position_id = ASY_progressive_constitution
+		cost = 5
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = ASY_progressive_constitution
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ASY_new_constitution
+				add_idea = ASY_new_constitution2
+			}
+		}
+	}
+	focus = {
+		id = ASY_our_ancient_heritage
+		icon = GFX_focus_ASY_our_ancient_heritage
+		relative_position_id = ASY_liberty_to_all
+		cost = 5
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = ASY_liberty_to_all
+		}
+
+		completion_reward = {
+			add_stability = -0.05
+			add_popularity = {
+				ideology = popular_socialism
+				popularity = 0.15
+			}
+			add_popularity = {
+				ideology = accelerationism
+				popularity = 0.05
+			}
+			country_event = {
+				id = asy.15
+			}
+		}
+	}
+	focus = {
+		id = ASY_program_of_marx_engels
+		icon = GFX_focus_ASY_program_of_marx_engels
+		relative_position_id = ASY_liberty_to_all
+		cost = 5
+		x = 2
+		y = 1
+		prerequisite = {
+			focus = ASY_liberty_to_all
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ASY_new_constitution2
+				add_idea = ASY_new_constitution3
+			}
+		}
+	}
+	focus = {
+		id = ASY_arise_new_assyria
+		icon = GFX_focus_ASY_arise_new_assyria
+		relative_position_id = ASY_our_ancient_heritage
+		cost = 5
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = ASY_our_ancient_heritage
+		}
+		prerequisite = {
+			focus = ASY_program_of_marx_engels
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ASY_new_constitution3
+				add_idea = ASY_new_constitution4
+			}
+		}
+	}
+	focus = {
+		id = ASY_glory_to_the_liberator
+		icon = GFX_focus_ASY_glory_to_the_liberator
+		relative_position_id = ASY_first_steps_to_modernity
+		cost = 5
+		x = 2
+		y = 1
+		prerequisite = {
+			focus = ASY_first_steps_to_modernity
+		}
+		prerequisite = {
+			focus = ASY_our_ancient_heritage
+		}
+
+		completion_reward = {
+			add_country_leader_trait = ASY_the_liberator
+		}
+	}
+	focus = {
+		id = ASY_under_red_flag
+		icon = GFX_focus_ASY_under_red_flag
+		relative_position_id = ASY_glory_to_the_liberator
+		cost = 5
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = ASY_glory_to_the_liberator
+		}
+		prerequisite = {
+			focus = ASY_moving_on_to_the_next_stage
+		}
+		prerequisite = {
+			focus = ASY_arise_new_assyria
+		}
+
+		completion_reward = {
+			add_ideas = ASY_red_flag_waves
+			add_research_slot = 1
+		}
+	}
+	focus = {
+		id = ASY_iron_age_mindset
+		icon = GFX_focus_ASY_iron_age_mindset
+		cost = 5
+		x = 25
+		y = 0
+		available = {
+			has_completed_focus = ASY_ascendance_of_petros
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 1000
+				has_global_flag = TUR_civil_war_started
+			}
+		}
+		mutually_exclusive = {
+			focus = ASY_promises_of_urmia
+			focus = ASY_revenge_for_saifo
+		}
+
+		completion_reward = {
+			add_war_support = 0.05
+			add_political_power = 25
+		}
+	}
+	focus = {
+		id = ASY_beyond_the_euphrates
+		icon = GFX_focus_ASY_beyond_the_euphrates
+		relative_position_id = ASY_iron_age_mindset
+		cost = 5
+		x = -2
+		y = 1
+		prerequisite = {
+			focus = ASY_iron_age_mindset
+		}
+		will_lead_to_war_with = SYR
+		will_lead_to_war_with = SNP
+		will_lead_to_war_with = CCD
+		available = {
+			NOT = { has_war = yes }
+		}
+		ai_will_do = {
+			base = 0 
+			modifier = {
+				add = 1
+				has_completed_focus = ASY_second_ashurbanipal
+			}
+		}
+		completion_reward = {
+			create_wargoal = {
+				type = take_claimed_state
+				target = var:680.owner
+			}
+			add_state_core = 680
+			add_state_claim = 1052
+			add_state_claim = 677
+			add_state_claim = 1085
+		}
+	}
+	focus = {
+		id = ASY_tame_northern_barbarians
+		icon = GFX_focus_ASY_tame_northern_barbarians
+		relative_position_id = ASY_iron_age_mindset
+		cost = 5
+		x = 2
+		y = 1
+		prerequisite = {
+			focus = ASY_iron_age_mindset
+		}
+		ai_will_do = {
+			base = 5000
+		}
+		available = {
+			has_global_flag = TUR_civil_war_started
+		}
+		available = {
+			NOT = { has_war = yes }
+		}
+		will_lead_to_war_with = KUR
+		completion_reward = {
+			declare_war_on = {
+				type = annex_everything
+				target = KUR
+			}
+			add_state_core = 889
+			add_state_core = 352
+			add_state_claim = 350
+			add_state_claim = 1131
+			add_state_claim = 1132
+		}
+	}
+	focus = {
+		id = ASY_triumph_in_babylon
+		icon = GFX_focus_ASY_triumph_in_babylon
+		relative_position_id = ASY_tame_northern_barbarians
+		cost = 5
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = ASY_tame_northern_barbarians
+		}
+		will_lead_to_war_with = IRQ
+		available = {
+			has_army_manpower = {
+   				size > 35000
+			}
+			NOT = { has_war = yes }
+		}
+		completion_reward = {			
+			IRQ = {
+				leave_faction = yes
+				separate_peace_all_wars = yes
+			}
+			ENG = {
+				end_puppet = IRQ
+			}
+			declare_war_on = {
+				target = IRQ
+				type = take_state_focus
+				generator = { 675 }
+			}
+			add_state_core = 675
+			add_state_claim = 676
+			add_state_claim = 291
+			add_state_claim = 1087
+		}
+	}
+	focus = {
+		id = ASY_pansyrianism
+		icon = GFX_focus_ASY_pansyrianism
+		relative_position_id = ASY_beyond_the_euphrates
+		cost = 5
+		x = -1
+		y = 1
+		prerequisite = {
+			focus = ASY_beyond_the_euphrates
+		}
+		mutually_exclusive = {
+			focus = ASY_reashurisation
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = ASY_pansyrianism_TT
+		}
+	}
+	focus = {
+		id = ASY_reashurisation
+		icon = GFX_focus_ASY_reashurisation
+		relative_position_id = ASY_beyond_the_euphrates
+		cost = 5
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = ASY_beyond_the_euphrates
+		}
+		mutually_exclusive = {
+			focus = ASY_pansyrianism
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = ASY_reashurisation_TT
+		}
+	}
+	focus = {
+		id = ASY_footsteps_of_sargon
+		icon = GFX_focus_ASY_footsteps_of_sargon
+		relative_position_id = ASY_beyond_the_euphrates
+		cost = 5
+		x = 0
+		y = 2
+		prerequisite = {
+			focus = ASY_pansyrianism
+			focus = ASY_reashurisation
+		}
+		will_lead_to_war_with = ALW
+		will_lead_to_war_with = LEB
+		available = {
+			NOT = { has_war = yes }
+			OR = {
+				is_neighbor_of = ALW
+				is_neighbor_of = LEB
+			}
+		}
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = ALW
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = LEB
+			}
+			add_state_claim = 1086
+			add_state_claim = 553
+		}
+	}
+	focus = {
+		id = ASY_kings_of_the_universe
+		icon = GFX_focus_ASY_kings_of_the_universe
+		relative_position_id = ASY_iron_age_mindset
+		cost = 5
+		x = 0
+		y = 4
+		prerequisite = {
+			focus = ASY_footsteps_of_sargon
+		}
+		prerequisite = {
+			focus = ASY_triumph_in_babylon
+		}
+		available = { 
+			ASY = {
+				owns_state = 291
+				#owns_state = 1130
+				owns_state = 1086
+				owns_state = 1085
+			}
+		}
+
+		completion_reward = {
+			set_cosmetic_tag = ASY_GREATER
+		}
+	}
+	focus = {
+		id = ASY_promises_of_urmia
+		icon = GFX_focus_ASY_promises_of_urmia
+		relative_position_id = ASY_iron_age_mindset
+		cost = 5
+		x = 8
+		y = 0
+		available = {
+			has_completed_focus = ASY_visions_of_freydun_the_assyrian
+		}
+		mutually_exclusive = {
+			focus = ASY_iron_age_mindset
+			focus = ASY_revenge_for_saifo
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 1000
+				has_global_flag = TUR_civil_war_started
+			}
+		}
+		completion_reward = {
+			add_war_support = 0.05
+			add_political_power = 25
+			add_state_core = 352
+			add_state_core = 889
+			add_state_core = 680
+			add_state_claim = 675
+		}
+	}
+	focus = {
+		id = ASY_against_british_imperialism
+		icon = GFX_focus_ASY_against_british_imperialism
+		relative_position_id = ASY_promises_of_urmia
+		cost = 5
+		x = -2
+		y = 1
+		prerequisite = {
+			focus = ASY_promises_of_urmia
+		}
+		available = {
+			has_army_manpower = {
+   				size > 35000
+			}
+			NOT = { has_war = yes }
+		}
+		ai_will_do = {
+			base = 0 
+			modifier = {
+				add = 1
+				has_completed_focus = ASY_under_red_flag
+			}
+		}
+		will_lead_to_war_with = IRQ
+		completion_reward = {
+			IRQ = {
+				leave_faction = yes
+				separate_peace_all_wars = yes
+			}
+			ENG = {
+				end_puppet = IRQ
+			}
+			declare_war_on = {
+				target = IRQ
+				type = take_state_focus
+				generator = { 675 }
+			}
+		}
+	}
+	focus = {
+		id = ASY_against_kurd_cruelty
+		icon = GFX_focus_ASY_against_kurd_cruelty
+		relative_position_id = ASY_promises_of_urmia
+		cost = 5
+		x = 2
+		y = 1
+		prerequisite = {
+			focus = ASY_promises_of_urmia
+		}
+		available = {
+			NOT = { has_war = yes }
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 1000
+				has_global_flag = TUR_civil_war_started
+			}
+		}
+		completion_reward = {
+			add_timed_idea = {
+				idea = ASY_against_the_kurds
+				days = 215
+			}
+		}
+	}
+	focus = {
+		id = ASY_take_our_northern_lands
+		icon = GFX_focus_ASY_take_our_northern_lands
+		relative_position_id = ASY_against_kurd_cruelty
+		cost = 5
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = ASY_against_kurd_cruelty
+		}
+		will_lead_to_war_with = KUR
+		ai_will_do = {
+			base = 5000
+		}
+		available = {
+			has_global_flag = TUR_civil_war_started
+		}
+		completion_reward = {
+			declare_war_on = {
+				type = annex_everything
+				target = KUR
+			}
+		}
+	}
+	focus = {
+		id = ASY_keep_out_the_west
+		icon = GFX_focus_ASY_keep_out_the_west
+		relative_position_id = ASY_against_british_imperialism
+		cost = 5
+		x = -1
+		y = 1
+		prerequisite = {
+			focus = ASY_against_british_imperialism
+		}
+		mutually_exclusive = {
+			focus = ASY_to_the_suffering_brethen
+		}
+
+		completion_reward = {
+			add_ideas = {
+				ASY_fortress_assyria
+			}
+		}
+	}
+	focus = {
+		id = ASY_to_the_suffering_brethen
+		icon = GFX_focus_ASY_to_the_suffering_brethen
+		relative_position_id = ASY_against_british_imperialism
+		cost = 5
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = ASY_against_british_imperialism
+		}
+		mutually_exclusive = {
+			focus = ASY_keep_out_the_west
+		}
+        available = {
+			has_completed_focus = ASY_under_red_flag
+		}
+		completion_reward = {
+			add_ideas = {
+				GER_rotfront_observer
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 500
+				producer = GER
+			}
+		}
+	}
+	focus = {
+		id = ASY_united_and_free
+		icon = GFX_focus_ASY_united_and_free
+		relative_position_id = ASY_to_the_suffering_brethen
+		cost = 5
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = ASY_to_the_suffering_brethen
+			focus = ASY_keep_out_the_west
+		}
+		prerequisite = {
+			focus = ASY_take_our_northern_lands
+		}
+
+		completion_reward = {
+			every_owned_state = {
+				limit = {
+					is_core_of = ASY
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = ASY_revenge_for_saifo
+		icon = GFX_focus_ASY_revenge_for_saifo
+		relative_position_id = ASY_iron_age_mindset
+		cost = 5
+		x = 14
+		y = 0
+		available = {
+			has_completed_focus = ASY_long_live_mar_shimun
+		}
+		mutually_exclusive = {
+			focus = ASY_iron_age_mindset
+			focus = ASY_promises_of_urmia
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 1000
+				has_global_flag = TUR_civil_war_started
+			}
+		}
+		completion_reward = {
+			add_war_support = 0.05
+			add_political_power = 25
+		}
+	}
+	focus = {
+		id = ASY_peace_in_the_south
+		icon = GFX_focus_ASY_peace_in_the_south
+		relative_position_id = ASY_revenge_for_saifo
+		cost = 5
+		x = -1
+		y = 1
+		prerequisite = {
+			focus = ASY_revenge_for_saifo
+		}
+		ai_will_do = {
+			base = 0 
+			modifier = {
+				add = 1
+				has_completed_focus = ASY_enlightened_theocracy
+			}
+		}
+		completion_reward = {
+			807 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = {
+						all_provinces = yes
+						limit_to_border = yes
+					}
+				}
+			}
+			1051 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = {
+						all_provinces = yes
+						limit_to_border = yes
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = ASY_armenian_ties
+		icon = GFX_focus_ASY_armenian_ties
+		relative_position_id = ASY_revenge_for_saifo
+		cost = 5
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = ASY_revenge_for_saifo
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 1000
+				has_global_flag = TUR_civil_war_started
+			}
+		}
+		completion_reward = {
+			diplomatic_relation = {
+				country = ARM
+				relation = non_aggression_pact
+				active = yes
+			}
+		}
+	}
+	focus = {
+		id = ASY_friendship_of_two_lions
+		icon = GFX_focus_ASY_friendship_of_two_lions
+		relative_position_id = ASY_peace_in_the_south
+		cost = 5
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = ASY_peace_in_the_south
+		}
+
+		completion_reward = {
+			add_opinion_modifier = {
+				target = ISR
+				modifier = offered_support
+			}
+			ISR = {
+				add_opinion_modifier = {
+					target = ASY
+					modifier = offered_support
+				}
+			}
+			ISR = {
+				diplomatic_relation = {
+					country = ASY
+					relation = non_aggression_pact
+					active = yes
+				}
+			}
+			add_political_power = 50
+		}
+	}
+	focus = {
+		id = ASY_strike_the_caliphate
+		icon = GFX_focus_ASY_strike_the_caliphate
+		relative_position_id = ASY_armenian_ties
+		cost = 5
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = ASY_armenian_ties
+		}
+		will_lead_to_war_with = KUR
+		ai_will_do = {
+			base = 5000
+		}
+		available = {
+			has_global_flag = TUR_civil_war_started
+		}
+		completion_reward = {
+			declare_war_on = {
+				type = annex_everything
+				target = KUR
+			}
+		}
+	}
+	focus = {
+		id = ASY_triumph_of_the_cross
+		icon = GFX_focus_ASY_triumph_of_the_cross
+		relative_position_id = ASY_revenge_for_saifo
+		cost = 5
+		x = 0
+		y = 3
+		prerequisite = {
+			focus = ASY_strike_the_caliphate
+		}
+		prerequisite = {
+			focus = ASY_friendship_of_two_lions
+		}
+
+		completion_reward = {
+			add_ideas = {
+				ASY_assyria_exultant
+			}
+		}
+	}
+}

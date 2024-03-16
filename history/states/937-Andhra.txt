@@ -1,0 +1,28 @@
+state={
+	id=937
+	name="STATE_937"
+	manpower = 4520100
+
+	state_category = rural
+
+	resources={
+		steel=25 # was: 44
+	}
+
+	history={
+		owner = MAD
+		add_claim_by = ORS
+		add_core_of = MAD
+		buildings = {
+			infrastructure = 2
+			arms_factory = 1
+		}
+		victory_points = {
+			10255 3
+		}
+	}
+
+	provinces={
+		4237 10001 10255 
+	}
+}

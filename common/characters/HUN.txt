@@ -1,0 +1,128 @@
+characters = {
+	HUN_kun = {
+		name = "Kun Bela"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/HUN/Portrait_HUN_Bela_Kun.png"
+			}
+		}
+		country_leader = {
+			ideology = leninism
+			expire = "1965.1.1.1"
+		}
+	}
+	HUN_Joseph_August_von_Habsburg_Lothringen = {
+		name = "Joseph August von Habsburg-Lothringen"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/AUS/AUS_joseph.png"
+			}
+		}
+	}
+	HUN_George_Obrenovic = {
+		name = "George Obrenović"
+	}
+	HUN_rakosi = {
+		name = "Rákosi Mátyás"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/HUN/Portrait_HUN_Matyas_Rakosi.png"
+			}
+		}
+	}
+	HUN_Miklos_Horthy = {		
+		name = "Miklós Horthy"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/HUN/Portrait_HUN_Horthy.png"
+			}
+			army = {
+				large = "gfx/leaders/HUN/Portrait_HUN_Horthy_general.png"
+			}
+		}
+		country_leader = {
+			ideology = anocracy
+			expire = "1965.1.1.1"
+		}
+	}
+	HUN_béla_miklós = {
+		name = "Béla Miklós"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/HUN/Portrait_HUN_Béla_Miklós.png"
+			}
+		}
+		field_marshal = {
+			traits = { fast_planner offensive_doctrine }
+			skill = 3
+			attack_skill = 4
+			defense_skill = 1
+			planning_skill = 3
+			logistics_skill = 2
+		}
+	}
+	HUN_ferenc_szombathelyi = {
+		name = "Ferenc Szombathelyi"
+		portraits = {
+			army = {
+				large = "gfx/leaders/HUN/Portrait_Ferenc_Szombathelyi.png"
+			}
+		}
+		field_marshal = {
+			traits = { war_hero organisational_leader}
+			skill = 4
+			attack_skill = 2
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 5
+		}
+	}
+	HUN_jozsef_cserny = {
+		name = "Jozsef Cserny"
+		portraits = {
+			army = {
+				large = "gfx/leaders/HUN/Portrait_HUN_Jozsef_Cserny.png"
+			}
+		}
+		corps_commander = {
+			traits = { war_hero infantry_leader }
+			skill = 2
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
+	HUN_lakatos_geza = {
+		name = "Lakatos Geza"
+		portraits = {
+			army = {
+				large = "gfx/leaders/HUN/Portrait_Lakatos_Geza.png"
+			}
+		}
+		corps_commander = {
+			traits = { panzer_leader }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 1
+			planning_skill = 3
+			logistics_skill = 3
+		}
+	}
+	HUN_gusztav_jany = {
+		name = "Gusztav Jany"
+		portraits = {
+			army = {
+				large = "gfx/leaders/HUN/Portrait_Gusztav_Jany.png"
+			}
+		}
+		corps_commander = {
+			traits = { career_officer cavalry_leader}
+			skill = 3
+			attack_skill = 2
+			defense_skill = 4
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+}

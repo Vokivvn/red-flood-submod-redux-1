@@ -1,0 +1,123 @@
+characters = {
+	JGJ_feng_yuxiang = {
+		name = "Feng Yuxiang"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/JGJ/Portrait_Feng_Yuxiang.png"
+			}
+			army = {
+				large = "gfx/leaders/JGJ/Portrait_Feng_Yuxiang_g.png"
+			}
+		}
+		country_leader = {
+			ideology = religious_socialism
+			expire = "1965.1.1.1"
+			desc = POLITICS_YUXIANG_DESC
+		}
+		corps_commander = {
+			traits = { }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	JGJ_han_fuju = {
+		name = "Han Fuju"
+		portraits = {
+			army = {
+				large = "gfx/leaders/JGJ/Portrait_Han_Fuju.png"
+			}
+		}
+		corps_commander = {
+			
+			traits = { }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 2
+		}
+	}
+	JGJ_shi_yousan = {
+		name = "Shi Yousan"
+		portraits = {
+			army = {
+				large = "gfx/leaders/JGJ/Portrait_Shi_Yousan.png"
+			}
+		}
+		corps_commander = {
+			traits = { }
+			skill = 1
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
+	JGJ_sun_yue = {
+		name = "Sun Yue"
+		portraits = {
+			army = {
+				large = "gfx/leaders/JGJ/Portrait_Sun_Yue.png"
+			}
+		}
+		corps_commander = {
+			traits = { }
+			skill = 2
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 1
+		}
+	}
+	JGJ_zhang_zhijiang = {
+		name = "Zhang Zhijiang"
+		portraits = {
+			army = {
+				large = "gfx/leaders/JGJ/Portrait_Zhang_Zhijiang.png"
+			}
+		}
+		corps_commander = {
+			traits = { }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	JGJ_yang_hucheng = {
+		name = "Yang Hucheng"
+		portraits = {
+			army = {
+				large = "gfx/leaders/JGJ/Portrait_Yang_Hucheng.png"
+			}
+		}
+		corps_commander = {
+			traits = { }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+		}
+	}
+	JGJ_song_zheyuan = {
+		name = "Song Zheyuan"
+		portraits = {
+			army = {
+				large = "gfx/leaders/JGJ/Portrait_Song_Zheyuan.png"
+			}
+		}
+		corps_commander = {
+			traits = { }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 2
+		}
+	}
+}

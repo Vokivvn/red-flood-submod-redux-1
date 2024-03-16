@@ -1,0 +1,104 @@
+characters = {
+	LUX_zenon_bernard = {
+		name = "Zenon Bernard"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/LUX/Portrait_Zenon_Bernard.png"
+			}
+		}
+		country_leader = {
+			ideology = spartakism
+			expire = "1965.1.1.1"
+		}
+	}
+	LUX_dominique_urbany = {
+		name = "Dominique Urbany"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/LUX/Portrait_Dominique_Urbany.png"
+			}
+		}
+		country_leader = {
+			ideology = religious_socialism
+			expire = "1965.1.1.1"
+		}
+	}
+	LUX_charles_marx = {
+		name = "Charles Marx"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/LUX/Portrait_Charles_Marx.png"
+			}
+			army = {
+				large = "gfx/leaders/LUX/Portrait_Charles_Marx_g.png"
+			}
+		}
+		country_leader = {
+			ideology = leninism
+			expire = "1965.1.1.1"
+		}
+		corps_commander = {
+			traits = { }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+		}
+	}
+	LUX_michel_stoffel = {
+		name = "Michel Stoffel"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/LUX/Portrait_Michel_Stoffel.png"
+			}
+			#army = {
+			#	large = "gfx/leaders/LUX/Portrait_Michel_Stoffel_g.png"
+			#}
+		}
+		country_leader = {
+			ideology = futurism
+			expire = "1965.1.1.1"
+		}
+		#corps_commander = {
+		#	traits = { }
+		#	skill = 2
+		#	attack_skill = 2
+		#	defense_skill = 1
+		#	planning_skill = 1
+		#	logistics_skill = 2
+		#}
+	}
+	LUX_emile_speller = {
+		name = "Emile Speller"
+		portraits = {
+			army = {
+				large = "gfx/leaders/LUX/Portrait_Emile_Speller.png"
+			}
+		}
+		corps_commander = {
+			traits = { }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	LUX_nik_bausch = {
+		name = "Nik Bausch"
+		portraits = {
+			army = {
+				large = "gfx/leaders/LUX/Portrait_Nik_Bausch.png"
+			}
+		}
+		corps_commander = {
+			traits = { }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+}

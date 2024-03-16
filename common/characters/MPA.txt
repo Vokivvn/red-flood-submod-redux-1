@@ -1,0 +1,51 @@
+characters = {
+	MPA_damdin_sukhbaatar = {
+		name = "Damdin Sükhbaatar"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MPA/Sukhbaatar.png"
+			}
+			army = {
+				large = "gfx/leaders/MPA/Sukhbaatar_General.png"
+			}
+		}
+		country_leader = {
+			ideology = stratocratic_socialism
+			expire = "1965.1.1.1"
+		}
+		field_marshal = {
+			traits = {
+				politically_connected
+			}
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	MPA_ivan_yefremov = {
+		name = "Ivan Yefremov"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MPA/Portrait_Yefremov.tga"
+			}
+		}
+		country_leader = {
+			ideology = vperedism
+			expire = "1965.1.1.1"
+		}
+	}
+	MPA_dogsomyn_bodoo = {
+		name = "Dogsomyn Bodoo"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MPA/Portrait_Bodoo.tga"
+			}
+		}
+		country_leader = {
+			ideology = religious_socialism
+			expire = "1965.1.1.1"
+		}
+	}
+}

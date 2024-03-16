@@ -1,0 +1,1676 @@
+focus_tree = {
+	id = TAN_Focus
+	country = { 
+		factor = 0 
+		modifier = { 
+			add = 10 
+			tag = TAN 
+		} 
+	}
+	default = no
+	continuous_focus_position = { x = 5 y = 1300 }
+
+	#Focus for War of Faiths
+	focus = { 
+		id = TAN_waroffaiths
+		icon = GFX_focus_waroffaiths
+		x = 19
+		y = 3
+		cost = 4
+		available_if_capitulated = yes 
+		prerequisite = { focus = TAN_promoteonmerit } 
+		ai_will_do = { 
+		 factor = 40
+		} 
+		completion_reward = { 
+			swap_ideas = {
+				remove_idea = TAN_guerilla_army
+				add_idea = TAN_guerilla_army2
+			}	
+		} 
+
+	} 
+	#Focus for Teutonic Discipline
+	focus = { 
+		id = TAN_teutonicdiscipline
+		icon = GFX_focus_teutonicdiscipline
+		x = 17
+		y = 4
+		cost = 4
+		available_if_capitulated = yes 
+		prerequisite = { focus = TAN_traderoads } 
+		prerequisite = { focus = TAN_waroffaiths } 
+		ai_will_do = { 
+		 factor = 40
+		} 
+		completion_reward = { 
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 2
+				category = land_doctrine
+			}
+		} 
+	}
+	#Focus for Mahakala Awakens
+	focus = { 
+		id = TAN_mahakalaawakens
+		icon = GFX_focus_mahakalaawakens
+		x = 6
+		y = 0
+		cost = 2
+		available_if_capitulated = yes 
+		ai_will_do = { 
+		 factor = 40
+		} 
+		completion_reward = { 
+			add_political_power = 150
+			country_event = {
+				id = mongolia.3
+			}
+		} 
+	} 
+	#Focus for Congress of Mongolia
+	focus = { 
+		id = TAN_congressofmongolia
+		icon = GFX_focus_congressofmongolia
+		x = 6
+		y = 1
+		cost = 5
+		available_if_capitulated = yes 
+		prerequisite = { focus = TAN_mahakalaawakens } 
+		ai_will_do = { 
+		 factor = 40
+		} 
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = TAN_divided_tribes
+				add_idea = TAN_divided_tribes2
+			}
+		} 
+	} 
+	#Focus for Russian Banners
+	focus = { 
+		id = TAN_russianbanners
+		icon = GFX_focus_russianbanners
+		x = 8
+		y = 1
+		cost = 5
+		available_if_capitulated = yes 
+		prerequisite = { focus = TAN_mahakalaawakens } 
+		ai_will_do = { 
+		 factor = 40
+		} 
+		completion_reward = { 
+			add_timed_idea = {
+				idea = TAN_Russian_Banners
+				days = 1460
+			} 
+		}
+	} 
+	#Focus for War Industry
+	focus = { 
+		id = TAN_warindustry
+		icon = GFX_focus_warindustry
+		x = 19
+		y = 0
+		cost = 4
+		available_if_capitulated = yes 
+		ai_will_do = { 
+		 factor = 40
+		} 
+		completion_reward = { 
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	#Focus for Give Money back to the People
+	focus = { 
+		id = TAN_givemoneybacktothepeople
+		icon = GFX_focus_givemoneybacktothepeople
+		x = 15
+		y = 0
+		cost = 4
+		available_if_capitulated = yes 
+		ai_will_do = { 
+		 factor = 40
+		} 
+		completion_reward = { 
+			329 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		} 
+	} 
+	#Focus for Pan-Asian Society
+	focus = { 
+		id = TAN_panasiansociety
+		icon = GFX_focus_panasiansociety
+		x = 4
+		y = 1
+		cost = 5
+		available_if_capitulated = yes 
+		prerequisite = { focus = TAN_mahakalaawakens } 
+		ai_will_do = { 
+		 factor = 40
+		} 
+		completion_reward = { 
+			add_ideas = {
+				TAN_Mahakala_Path
+			}
+		} 
+	} 
+	#Focus for Russian Authority
+	focus = { 
+		id = TAN_russianauthority
+		icon = GFX_focus_russianauthority
+		x = 11
+		y = 1
+		cost = 5
+		available_if_capitulated = yes 
+		prerequisite = { focus = TAN_mahakalaawakens } 
+		ai_will_do = { 
+		 factor = 40
+		} 
+		available = { 
+			is_subject = no
+		}
+		completion_reward = {
+			every_country = {
+				limit = {
+					OR = {
+						tag = RUS
+						tag = SRU
+						tag = SIB
+					}
+				}
+				diplomatic_relation = {
+					country = TAN
+					relation = non_aggression_pact
+					active = yes
+				}
+			}
+			hidden_effect = {
+				every_country = {
+					limit = {
+						OR = {
+							tag = RUS
+							tag = SRU
+							tag = SIB
+							tag = KCK
+							tag = ORE
+							tag = FIN
+							tag = WRU
+							tag = DKB
+							tag = TRK
+						}
+					}
+					TAN = {
+						add_opinion_modifier = {
+							target = PREV
+							modifier = aided_cause
+						}
+					}
+				}
+			}
+		}
+	}
+	#Focus for Support of Mongols
+	focus = { 
+		id = TAN_supportofmongols
+		icon = GFX_focus_supportofmongols
+		x = 1
+		y = 1
+		cost = 5
+		available_if_capitulated = yes 
+		prerequisite = { focus = TAN_mahakalaawakens } 
+		ai_will_do = { 
+			factor = 40
+		}
+		bypass = {
+			NOT = { country_exists = KHU }
+		}
+		completion_reward = { 
+			diplomatic_relation = {
+				country = KHU
+				relation = non_aggression_pact
+				active = yes
+			}
+			KHU = {
+				give_military_access = TAN
+			}
+		} 
+	}
+	#Focus for Embrace the Rising Sun
+	focus = { 
+		id = TAN_embracetherisingsun
+		icon = GFX_focus_embracetherisingsun
+		x = 26
+		y = 0
+		cost = 4
+		available_if_capitulated = yes 
+		ai_will_do = { 
+		 	factor = 100
+		}
+		available = { 
+			is_subject = no
+			NOT = {
+				TAN = {
+					is_in_faction_with = RUS
+				}
+			}
+		}
+		bypass = { 
+			NOT = { country_exists = JAP }
+		}
+		completion_reward = { 
+			diplomatic_relation = {
+				country = JAP
+				relation = non_aggression_pact
+				active = yes
+			}
+			add_opinion_modifier = {
+				target = JAP
+				modifier = aided_cause
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 300
+				producer = JAP
+			}
+		}
+	} 
+	#Focus for Alliance with Kazakhs
+	focus = {
+		id = TAN_alliancewithkazakhs
+		icon = GFX_focus_alliancewithkazakhs
+		x = 0
+		y = 1
+		cost = 4
+		available_if_capitulated = yes 
+		relative_position_id = TAN_embracetherisingsun
+		prerequisite = { focus = TAN_embracetherisingsun }
+		ai_will_do = { 
+		 	factor = 100
+		}
+		available = {
+			is_subject = no
+			has_war = no
+		}
+		will_lead_to_war_with = ALT
+		completion_reward = {
+			add_manpower = 7500
+			division_template = {
+				name = "Kazakh Volunteer Corps"
+				regiments = {
+					cavalry = { x = 0 y = 0 }
+					cavalry = { x = 0 y = 1 }
+					cavalry = { x = 1 y = 0 }
+					cavalry = { x = 1 y = 1 }
+					cavalry = { x = 2 y = 0 }
+					cavalry = { x = 2 y = 1 }
+				}
+			}
+			hidden_effect = {
+				329 = {
+					create_unit = {
+						division = "name = \"Kazakh Volunteer Corps\" division_template = \"Kazakh Volunteer Corps\" start_experience_factor = 0.75 start_equipment_factor = 0.75"
+						owner = TAN
+					}
+				}
+			}
+			if = {
+				limit = { country_exists = ALT }
+				create_wargoal = {
+					type = annex_everything
+					target = ALT
+				}
+			}
+			every_state = {
+				limit = {
+					OR = {
+						state = 654
+						state = 838
+						state = 898
+						state = 618
+						state = 793
+					}
+				}
+				add_core_of = TAN
+			}
+		}
+	}
+
+	#Focus for Expulsion of the Anhui Clique
+	focus = { 
+		id = TAN_expulsionoftheanhuiclique
+		icon = GFX_focus_expulsionoftheanhuiclique
+		x = 26
+		y = 2
+		cost = 4
+		available_if_capitulated = yes 
+		prerequisite = { focus = TAN_alliancewithkazakhs } 
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			is_subject = no
+			has_war = no
+			OR = {
+				is_neighbor_of = var:915.owner
+				owns_state = 915
+			}
+		}
+		will_lead_to_war_with = MPA
+		completion_reward = { 
+			if = {
+				limit = {
+					NOT = { owns_state = 915 }
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = MPA
+				}
+			}
+			add_state_core = 1149
+			add_state_core = 915
+		} 
+	} 
+	#Focus for Deal with Cossack Traitors
+	focus = { 
+		id = TAN_dealwithcossacktraitors
+		icon = GFX_focus_dealwithcossacktraitors
+		x = 26
+		y = 3
+		cost = 4
+		available_if_capitulated = yes 
+		prerequisite = { focus = TAN_expulsionoftheanhuiclique } 
+		ai_will_do = { 
+		 factor = 100
+		}
+		available = { 
+			is_subject = no
+			has_war = no
+		}
+		will_lead_to_war_with = MON
+		will_lead_to_war_with = MO2
+		completion_reward = { 
+			every_country = {
+				limit = {
+					OR = {
+						tag = MON
+						tag = MO2
+					}
+				}
+				TAN = {
+					create_wargoal = {
+						type = annex_everything
+						target = PREV
+					}
+				}
+			}
+			every_state = {
+				limit = {
+					OR = {
+						state = 793
+						#MON
+						state = 915
+						state = 330
+						state = 914
+						state = 612
+						state = 1149
+						state = 1150
+						state = 1151
+						state = 564
+						state = 563
+					}
+				}
+				add_core_of = TAN
+			}
+		}
+	} 
+	#Focus for Embrace Buddhist State
+	focus = { 
+		id = TAN_embracebuddhiststate
+		icon = GFX_focus_embracebuddhiststate
+		x = 26
+		y = 4
+		cost = 4
+		available_if_capitulated = yes 
+		prerequisite = { focus = TAN_dealwithcossacktraitors } 
+		ai_will_do = { 
+		 factor = 4000
+		}
+		available = { 
+			is_subject = no
+			owns_state = 612
+			owns_state = 329
+			owns_state = 330
+			owns_state = 563
+			NOT = { country_exists = ALT }
+			NOT = { country_exists = MPA }
+			NOT = { country_exists = MON }
+			NOT = { country_exists = KHU }
+			NOT = { country_exists = MO2 }
+		}
+		completion_reward = {
+			custom_effect_tooltip = TAN_UNI_TT
+			hidden_effect = {
+				every_state = {
+					remove_claim_by = ALT 
+					remove_claim_by = MPA 
+					remove_claim_by = MO2 
+					remove_claim_by = MON
+					remove_claim_by = KHU
+					remove_core_of = ALT 
+					remove_core_of = MPA 
+					remove_core_of = MO2 
+					remove_core_of = MON 
+					remove_core_of = KHU
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						country_exists = KHU
+					}
+					annex_country = {
+						target = KHU
+						transfer_troops = yes
+					}
+				}
+				KHU = {
+					every_unit_leader = {
+						set_nationality = TAN
+					}
+				}
+				every_state = {
+					limit = {
+						OR = {
+							state = 654
+							state = 838
+							state = 898
+							state = 618
+							state = 793
+							state = 915
+							state = 330
+							state = 914
+							state = 612
+							state = 1149
+							state = 1150
+							state = 1151
+							state = 564
+							state = 563
+						}
+					}
+					add_core_of = TAN
+				}
+				every_country = {
+					limit = {
+						OR = {
+							tag = BUR
+							tag = TIB
+							tag = SIA
+						}
+					}
+					country_event = { id = mongolia.2 }
+					diplomatic_relation = {
+						country = TAN
+						relation = non_aggression_pact
+						active = yes
+					}
+					TAN = {
+						add_opinion_modifier = {
+							target = PREV
+							modifier = aided_cause
+						}
+					}
+				}
+
+				set_capital = { state = 330 }
+				news_event = {
+					id = news.339
+					days = 1
+				}
+			}
+		}
+	}
+
+	#Focus for Remove Republican Threat
+	focus = {
+		id = TAN_removerepublicanthreat
+		icon = GFX_focus_removerepublicanthreat
+		x = 26
+		y = 5
+		cost = 4
+		available_if_capitulated = yes
+		prerequisite = { focus = TAN_embracebuddhiststate }
+		ai_will_do = { 
+			factor = 100
+		}
+		available = {
+			is_subject = no
+			has_war = no
+		}
+		will_lead_to_war_with = ZHR
+		completion_reward = { 
+			every_country = {
+				limit = {
+					OR = {
+						tag = ZHR
+						tag = MNS
+						tag = FCR
+						tag = PSL
+						tag = ARC
+						tag = HAR
+						tag = PRI
+						tag = GUK
+					}
+				}
+				TAN = {
+					declare_war_on = {
+						type = annex_everything
+						target = PREV
+					}
+				}
+			}
+		} 
+	}
+
+	#Focus for Union with Tibet
+	focus = { 
+		id = TAN_unionwithtibet
+		icon = GFX_focus_unionwithtibet
+		x = 24
+		y = 6
+		cost = 4
+		available_if_capitulated = yes 
+		prerequisite = { focus = TAN_removerepublicanthreat } 
+		ai_will_do = { 
+		 factor = 40
+		} 
+		available = { 
+			is_subject = no
+			OR = {
+				is_neighbor_of = TIB
+				owns_state = 322
+			}
+			owns_state = 978
+		}
+		completion_reward = { 
+			create_faction = "Holy Alliance"
+			if = {
+				limit = { country_exists = TIB }
+				annex_country = {
+					target = TIB
+					transfer_troops = yes
+				}
+			}
+			hidden_effect = {
+				every_state = {
+					limit = {
+						OR = {
+							state = 758
+							state = 322
+							state = 604
+							state = 601
+							state = 757
+							state = 434
+						}
+					}
+					add_core_of = TAN
+				}
+				TIB = {
+					every_unit_leader = {
+						set_nationality = TAN
+					}
+				}
+			}
+		}
+	} 
+	#Focus for Order in West China
+	focus = { 
+		id = TAN_orderinwestchina
+		icon = GFX_focus_orderinwestchina
+		x = 26
+		y = 6
+		cost = 4
+		available_if_capitulated = yes 
+		prerequisite = { focus = TAN_removerepublicanthreat } 
+		ai_will_do = { 
+			factor = 40
+		}
+		available = {
+			owns_state = 978
+			is_subject = no
+			has_war = no
+		}
+		will_lead_to_war_with = SIK
+		will_lead_to_war_with = XSM
+		completion_reward = { 
+			every_country = {
+				limit = {
+					OR = {
+						tag = SIK
+						tag = XSM
+					}
+				}
+				TAN = {
+					create_wargoal = {
+						type = annex_everything
+						target = PREV
+					}
+				}
+			}
+			every_state = {
+				limit = {
+					OR = {
+						state = 287
+						state = 616
+						state = 617
+						state = 619
+						state = 752
+						state = 753
+						state = 754
+						state = 755
+						state = 759
+						state = 760
+						state = 794
+						state = 843
+						state = 935
+					}
+				}
+				add_core_of = TAN
+			}
+		} 
+	} 
+
+	#Focus for Bring Peace to China
+	focus = { 
+		id = TAN_bringpeacetochina
+		icon = GFX_focus_bringpeacetochina
+		x = 28
+		y = 6
+		cost = 4
+		available_if_capitulated = yes 
+		prerequisite = { focus = TAN_removerepublicanthreat } 
+		ai_will_do = { 
+		 factor = 40
+		}
+		available = {
+			is_subject = no
+			has_war = no
+			owns_state = 978
+		}
+		will_lead_to_war_with = BYJ
+		will_lead_to_war_with = SHA
+		will_lead_to_war_with = XIA
+		will_lead_to_war_with = YUN
+		will_lead_to_war_with = GDP
+		will_lead_to_war_with = FJN
+		will_lead_to_war_with = KMT
+		will_lead_to_war_with = MAN
+		will_lead_to_war_with = SZC
+		will_lead_to_war_with = JGJ
+		will_lead_to_war_with = MNG
+		completion_reward = {
+			every_country = {
+				limit = {
+					OR = {
+						tag = BYJ
+						tag = SHA
+						tag = XIA
+						tag = YUN
+						tag = GDP
+						tag = FJN
+						tag = KMT
+						tag = MAN
+						tag = SZC
+						tag = JGJ
+						tag = MNG
+					}
+				}
+				TAN = {
+					create_wargoal = {
+						type = annex_everything
+						target = PREV
+					}
+				}
+			}
+		} 
+	} 
+
+	#Focus for Himalayan Campaign
+	focus = { 
+		id = TAN_himalayancampaign
+		icon = GFX_focus_himalayancampaign
+		x = 26
+		y = 7
+		cost = 4
+		available_if_capitulated = yes 
+		prerequisite = { focus = TAN_bringpeacetochina } 
+		prerequisite = { focus = TAN_unionwithtibet } 
+		prerequisite = { focus = TAN_orderinwestchina }
+		ai_will_do = { 
+			factor = 40
+		}
+		available = {
+			owns_state = 322
+			owns_state = 758
+			owns_state = 601
+			owns_state = 604
+			is_subject = no
+			has_war = no
+		}
+		bypass = {
+			NOT = { country_exists = NEP }
+			NOT = { country_exists = KSM }
+			NOT = { country_exists = BHU }
+			NOT = { country_exists = ASM }
+		}
+		will_lead_to_war_with = NEP
+		will_lead_to_war_with = KSM
+		will_lead_to_war_with = ASM
+		will_lead_to_war_with = BHU
+		completion_reward = { 
+			every_country = {
+				limit = {
+					OR = {
+						tag = NEP
+						tag = KSM
+						tag = ASM
+						tag = BHU
+					}
+				}
+				TAN = {
+					create_wargoal = {
+						type = annex_everything
+						target = PREV
+					}
+				}
+			}
+		} 
+	}
+
+	#Focus for Realm of Living Buddha
+	focus = { 
+		id = TAN_realmoflivingbuddha
+		icon = GFX_focus_realmoflivingbuddha
+		x = 26
+		y = 8
+		cost = 4
+		available_if_capitulated = yes 
+		prerequisite = { focus = TAN_himalayancampaign } 
+		ai_will_do = { 
+		 factor = 40
+		}
+		available = {
+			owns_state = 757
+			owns_state = 883
+			owns_state = 324
+			owns_state = 882
+			owns_state = 323
+			is_subject = no
+			has_war = no
+		}
+		bypass = {
+			NOT = { country_exists = AFG }
+			NOT = { country_exists = BKR }
+			NOT = { country_exists = TUK }
+			NOT = { country_exists = KHW }
+			NOT = { country_exists = TUC }
+		}
+		will_lead_to_war_with = AFG
+		will_lead_to_war_with = BKR
+		will_lead_to_war_with = TUK
+		will_lead_to_war_with = KHW
+		will_lead_to_war_with = TUC
+		completion_reward = {
+			every_country = {
+				limit = {
+					OR = {
+						tag = AFG
+						tag = BKR
+						tag = TUK
+						tag = KHW
+						tag = TUC
+					}
+				}
+				TAN = {
+					create_wargoal = {
+						type = annex_everything
+						target = PREV
+					}
+				}
+			}
+		}
+	} 
+#Focus for Learn from Japan
+	focus = { 
+		id = TAN_learnfromjapan
+		icon = GFX_focus_learnfromjapan
+		x = 19
+		y = 1
+		cost = 4
+		available_if_capitulated = yes 
+		prerequisite = { focus = TAN_warindustry } 
+		ai_will_do = { 
+		 factor = 40
+		}
+		bypass = {
+			NOT = { country_exists = JAP }
+		}
+		completion_reward = { 
+			add_tech_bonus = {
+				bonus = 0.75
+				uses = 2
+				category = motorized_equipment
+				category = support_tech
+			}
+		} 
+	} 
+#Focus for Army of Eurasian Conquest
+	focus = {
+		id = TAN_armyofeurasianconquest
+		icon = GFX_focus_armyofeurasianconquest
+		x = 17
+		y = 7
+		cost = 4
+		available_if_capitulated = yes 
+		prerequisite = { focus = TAN_romanunity } 
+		ai_will_do = {
+		 factor = 40
+		} 
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = TAN_guerilla_army3
+				add_idea = TAN_eurasian_army
+			}
+		}
+	}
+#Focus for Roman Unity
+	focus = {
+		id = TAN_romanunity
+		icon = GFX_focus_romanunity
+		x = 17
+		y = 6
+		cost = 4
+		available_if_capitulated = yes 
+		prerequisite = { focus = TAN_mongolbrutality } 
+		ai_will_do = {
+		 factor = 40
+		}
+		available = { 
+			is_subject = no
+		}
+		completion_reward = {
+			custom_effect_tooltip = TAN_roman_unity_cores #Himalayas - Amur
+			hidden_effect = {
+				every_state = {
+					limit = {
+						OR = {
+							#KSM
+							state = 441
+							state = 787
+							state = 798
+							#NEP
+							state = 882
+							state = 323
+							state = 883
+							state = 324
+							#BYJ
+							state = 611
+							state = 621
+							#ASM
+							state = 434
+							#KOK
+							state = 1041
+							#TUK
+							state = 1042
+							state = 585
+							state = 405
+							#BKR
+							state = 742
+							state = 840
+							state = 1038
+							state = 851
+							#TUC
+							state = 850
+							state = 584
+							state = 1037
+							#AQT
+							state = 587
+							#KHW
+							state = 849
+							state = 1039
+							state = 1040
+							#TRK
+							state = 852
+							state = 1043
+							#STE
+							state = 571
+							state = 583
+							state = 590
+							state = 588
+							state = 404
+							state = 589
+							state = 842
+							state = 794
+							state = 586
+							#ORE
+							state = 582
+							state = 652
+							state = 402
+							state = 406
+							state = 732
+							state = 572
+						}
+					}
+					add_core_of = TAN
+				}
+			}
+		}
+	} 
+#Focus for Mongol Brutality
+	focus = {
+		id = TAN_mongolbrutality
+		icon = GFX_focus_mongolbrutality
+		x = 17
+		y = 5
+		cost = 4
+		available_if_capitulated = yes 
+		prerequisite = { focus = TAN_teutonicdiscipline } 
+		ai_will_do = { 
+			factor = 40
+		} 
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 2
+				category = recon_tech
+				category = military_police_tech
+			}
+			swap_ideas = {
+				remove_idea = TAN_guerilla_army2
+				add_idea = TAN_guerilla_army3
+			}
+		} 
+	}
+#Focus for Trade Roads
+	focus = {
+		id = TAN_traderoads
+		icon = GFX_focus_traderoads
+		x = 15
+		y = 3
+		cost = 4
+		available_if_capitulated = yes 
+		prerequisite = { focus = TAN_protectthepoor } 
+		ai_will_do = { 
+		 factor = 40
+		} 
+		completion_reward = {
+			every_owned_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 4
+					instant_build = yes
+				}
+			}
+		} 
+	} 
+#Focus for Protect the Poor
+	focus = { 
+		id = TAN_protectthepoor
+		icon = GFX_focus_protectthepoor
+		x = 15
+		y = 2
+		cost = 6
+		available_if_capitulated = yes 
+		prerequisite = { focus = TAN_persecutethefatcatsandparasites } 
+		ai_will_do = { 
+		 factor = 40
+		} 
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = TAN_industrial_dinosaur2
+				add_idea = TAN_industrial_dinosaur3
+			}
+		}
+	} 
+#Focus for Persecute the Fat Cats and Parasites
+	focus = { 
+		id = TAN_persecutethefatcatsandparasites
+		icon = GFX_focus_persecutethefatcatsandparasites
+		x = 15
+		y = 1
+		cost = 6
+		available_if_capitulated = yes 
+		prerequisite = { focus = TAN_givemoneybacktothepeople } 
+		ai_will_do = { 
+		 factor = 40
+		} 
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = TAN_industrial_dinosaur
+				add_idea = TAN_industrial_dinosaur2
+			}
+		} 
+	} 
+#Focus for Nirvana on Earth
+	focus = { 
+		id = TAN_nirvanaonearth
+		icon = GFX_focus_nirvanaonearth
+		x = 11
+		y = 7
+		cost = 6
+		available_if_capitulated = yes 
+		prerequisite = { focus = TAN_divinemandate } 
+		ai_will_do = { 
+		 factor = 40
+		} 
+		completion_reward = { 
+			swap_ideas = {
+				remove_idea = TAN_synod2
+				add_idea = TAN_synod3
+			}
+		} 
+	} 
+#Focus for Divine Mandate
+	focus = { 
+		id = TAN_divinemandate
+		icon = GFX_focus_divinemandate
+		x = 11
+		y = 6
+		cost = 5
+		available_if_capitulated = yes 
+		prerequisite = { focus = TAN_powerofthetsar } 
+		prerequisite = { focus = TAN_orderofpeasants } 
+		ai_will_do = { 
+		 factor = 40
+		} 
+		completion_reward = { 
+			swap_ideas = {
+				remove_idea = TAN_synod
+				add_idea = TAN_synod2
+			}
+		} 
+	} 
+#Focus for Power of the Tsar
+	focus = { 
+		id = TAN_powerofthetsar
+		icon = GFX_focus_powerofthetsar
+		x = 12
+		y = 5
+		cost = 5
+		available_if_capitulated = yes 
+		prerequisite = { focus = TAN_disciplinethearistocracy } 
+		ai_will_do = { 
+		 factor = 40
+		} 
+		completion_reward = { 
+			add_ideas = {
+				TAN_synod
+			}
+		} 
+	} 
+#Focus for Order of Peasants
+	focus = { 
+		id = TAN_orderofpeasants
+		icon = GFX_focus_orderofpeasants
+		x = 10
+		y = 5
+		cost = 5
+		available_if_capitulated = yes 
+		prerequisite = { focus = TAN_disciplinethearistocracy } 
+		ai_will_do = { 
+		 factor = 40
+		} 
+		completion_reward = { 
+			every_owned_state = {
+				add_extra_state_shared_building_slots = 1
+			}
+		} 
+	} 
+#Focus for Discipline the Aristocracy
+	focus = { 
+		id = TAN_disciplinethearistocracy
+		icon = GFX_focus_disciplinethearistocracy
+		x = 11
+		y = 4
+		cost = 5
+		available_if_capitulated = yes 
+		prerequisite = { focus = TAN_promotepatrioticguilds } 
+		ai_will_do = { 
+		 factor = 40
+		} 
+		completion_reward = { 
+			add_war_support = 0.1
+			add_political_power = -50
+		} 
+	} 
+#Focus for Promote Patriotic Guilds
+	focus = { 
+		id = TAN_promotepatrioticguilds
+		icon = GFX_focus_promotepatrioticguilds
+		x = 11
+		y = 3
+		cost = 5
+		available_if_capitulated = yes 
+		prerequisite = { focus = TAN_restoreimperialinstitutions } 
+		ai_will_do = { 
+		 factor = 40
+		} 
+		completion_reward = { 
+			add_research_slot = 1
+		} 
+	} 
+#Focus for Restore Imperial Institutions
+	focus = { 
+		id = TAN_restoreimperialinstitutions
+		icon = GFX_focus_restoreimperialinstitutions
+		x = 11
+		y = 2
+		cost = 5
+		available_if_capitulated = yes 
+		prerequisite = { focus = TAN_russianauthority } 
+		ai_will_do = { 
+		 factor = 40
+		} 
+		completion_reward = { 
+			random_owned_controlled_state = {
+				limit = {
+					industrial_complex > 0
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			} 
+		}
+	} 
+#Focus for Baron's Men
+	focus = { 
+		id = TAN_baronsmen
+		icon = GFX_focus_baronsmen
+		x = 1
+		y = 7
+		cost = 6
+		available_if_capitulated = yes 
+		prerequisite = { focus = TAN_ungernexpress } 
+		ai_will_do = { 
+		 factor = 40
+		} 
+		completion_reward = { 
+			add_ideas = {
+				TAN_Barons_Men3
+			}
+		} 
+	} 
+#Focus for Buddhist Schools
+	focus = { 
+		id = TAN_buddhistschools
+		icon = GFX_focus_buddhistschools
+		x = 2
+		y = 5
+		cost = 5
+		available_if_capitulated = yes 
+		prerequisite = { focus = TAN_lawsofthesteppe } 
+		ai_will_do = { 
+		 factor = 40
+		} 
+		completion_reward = { 
+			add_ideas = {
+				TAN_Barons_Men2
+			}
+			add_political_power = 25
+		} 
+	} 
+#Focus for Put Lamas in Charge
+	focus = { 
+		id = TAN_putlamasincharge
+		icon = GFX_focus_putlamasincharge
+		x = 0
+		y = 5
+		cost = 5
+		available_if_capitulated = yes 
+		prerequisite = { focus = TAN_lawsofthesteppe } 
+		ai_will_do = { 
+		 factor = 40
+		} 
+		completion_reward = { 
+			add_tech_bonus = {
+				name = industry_bonus
+				bonus = 0.5
+				uses = 2
+				category = industry		
+			}
+		} 
+	} 
+#Focus for Laws of the Steppe
+	focus = { 
+		id = TAN_lawsofthesteppe
+		icon = GFX_focus_lawsofthesteppe
+		x = 1
+		y = 4
+		cost = 5
+		available_if_capitulated = yes 
+		prerequisite = { focus = TAN_councilofkhans } 
+		ai_will_do = { 
+		 factor = 40
+		} 
+		completion_reward = { 
+			add_stability = 0.2
+		} 
+	} 
+#Focus for Council of Khans
+	focus = { 
+		id = TAN_councilofkhans
+		icon = GFX_focus_councilofkhans
+		x = 1
+		y = 3
+		cost = 5
+		available_if_capitulated = yes 
+		prerequisite = { focus = TAN_tribalautonomy } 
+		ai_will_do = { 
+		 factor = 40
+		} 
+		completion_reward = { 
+			add_ideas = {
+				TAN_Barons_Men
+			}
+		}
+	} 
+#Focus for Tribal Autonomy
+	focus = { 
+		id = TAN_tribalautonomy
+		icon = GFX_focus_tribalautonomy
+		x = 1
+		y = 2
+		cost = 5
+		available_if_capitulated = yes 
+		prerequisite = { focus = TAN_supportofmongols } 
+		ai_will_do = { 
+		 factor = 40
+		} 
+		completion_reward = { 
+			add_popularity = {
+				ideology = reactionism
+				popularity = 0.2
+			}
+			add_war_support = -0.05
+		} 
+	} 
+#Focus for Hurrah for the Baron!
+	focus = { 
+		id = TAN_hurrahforthebaron
+		icon = GFX_focus_hurrahforthebaron
+		x = 6
+		y = 6
+		cost = 6
+		available_if_capitulated = yes 
+		prerequisite = { focus = TAN_governmenttruth }
+		prerequisite = { focus = TAN_russiansunderbaronsbanner }
+		prerequisite = { focus = TAN_divinetruth } 
+		ai_will_do = { 
+		 factor = 40
+		} 
+		completion_reward = { 
+			add_political_power = 150
+		} 
+	} 
+#Focus for Russians under Baron's Banner
+	focus = {
+		id = TAN_russiansunderbaronsbanner
+		icon = GFX_focus_russiansunderbaronsbanner
+		x = 8
+		y = 5
+		cost = 6
+		available_if_capitulated = yes 
+		prerequisite = { focus = TAN_hirerussianrefugees } 
+		ai_will_do = { 
+		 factor = 40
+		} 
+		completion_reward = {
+			division_template = {
+					name = "Barons Bannermen"
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 2 y = 0 }
+						infantry = { x = 2 y = 1 }
+					}
+					support = { 
+						military_police = { x = 0 y = 0 }
+						recon = { x = 0 y = 1 }
+					} 
+			}
+			random_owned_controlled_state = {
+				prioritize = { 329 }
+				create_unit = {
+					division = "name = \"Barons Bannermen\" division_template = \"Barons Bannermen\" start_experience_factor = 0.75"
+					owner = TAN
+				}
+			}
+			hidden_effect = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 600
+					producer = RUS
+				}
+			}
+		} 
+	} 
+#Focus for Hire Russian Refugees
+	focus = {
+		id = TAN_hirerussianrefugees
+		icon = GFX_focus_hirerussianrefugees
+		x = 8
+		y = 4
+		cost = 5
+		available_if_capitulated = yes 
+		prerequisite = { focus = TAN_invitejapaneseinvestors } 
+		ai_will_do = {
+		 factor = 40
+		} 
+		completion_reward = {
+			add_ideas = {
+				TAN_welcome_all
+			}
+		}
+	}
+#Focus for Invite Japanese Investors
+	focus = {
+		id = TAN_invitejapaneseinvestors
+		icon = GFX_focus_invitejapaneseinvestors
+		x = 8
+		y = 3
+		cost = 5
+		available_if_capitulated = yes 
+		prerequisite = { focus = TAN_russianminingcompany } 
+		ai_will_do = {
+		 factor = 40
+		} 
+		available = {
+			JAP = {
+				exists = yes
+			}
+		}
+		bypass = {
+			NOT = { country_exists = JAP }
+		}
+		completion_reward = {
+			add_ideas = {
+				TAN_Mahakala_Path2
+			}
+			329 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+#Focus for Government Truth
+	focus = { 
+		id = TAN_governmenttruth
+		icon = GFX_focus_governmenttruth
+		x = 6
+		y = 5
+		cost = 5
+		available_if_capitulated = yes 
+		prerequisite = { focus = TAN_unitethetribes } 
+		ai_will_do = {
+		 factor = 40
+		} 
+		completion_reward = {
+			add_ideas = {
+				TAN_Propaganda
+			}
+		}
+	}
+#Focus for Freedom of all Faiths
+	focus = { 
+		id = TAN_freedomofallfaiths
+		icon = GFX_focus_freedomofallfaiths
+		x = 4
+		y = 2
+		cost = 5
+		available_if_capitulated = yes 
+		prerequisite = { focus = TAN_panasiansociety } 
+		ai_will_do = {
+		 factor = 40
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = TAN_religious_tensions
+				add_idea = TAN_religious_tensions2
+			}
+		}
+	}
+#Focus for Militarise Mongol Youth
+	focus = { 
+		id = TAN_militarisemongolyouth
+		icon = GFX_focus_militarisemongolyouth
+		x = 6
+		y = 3
+		cost = 5
+		available_if_capitulated = yes 
+		prerequisite = { focus = TAN_formpanmongolgovernment } 
+		ai_will_do = {
+		 factor = 40
+		}
+		completion_reward = {
+			add_ideas = {
+				TAN_Mongol_Training
+			}
+			add_manpower = 4500
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -50
+				producer = TAN
+			}
+			country_event = {
+				id = mongolia.1
+			}
+		}
+	}
+#Focus for Form Pan-Mongol Government
+	focus = {
+		id = TAN_formpanmongolgovernment
+		icon = GFX_focus_formpanmongolgovernment
+		x = 6
+		y = 2
+		cost = 5
+		available_if_capitulated = yes 
+		available_if_capitulated = yes 
+		prerequisite = { focus = TAN_congressofmongolia } 
+		ai_will_do = {
+		 factor = 40
+		}
+		completion_reward = {
+			add_stability = 0.07
+			add_popularity = {
+				ideology = reactionism
+				popularity = 0.1
+			}
+		}
+	}
+#Focus for Divine Truth
+	focus = {
+		id = TAN_divinetruth
+		icon = GFX_focus_divinetruth
+		x = 4
+		y = 5
+		cost = 4
+		available_if_capitulated = yes 
+		prerequisite = { focus = TAN_christrisenintheeast } 
+		ai_will_do = {
+		 factor = 40
+		}
+		completion_reward = {
+			remove_ideas = TAN_religious_tensions3
+			add_political_power = -25
+			add_stability = 0.05
+		}
+	}
+#Focus for Christ Risen in the East
+	focus = {
+		id = TAN_christrisenintheeast
+		icon = GFX_focus_christrisenintheeast
+		x = 4
+		y = 4
+		cost = 5
+		available_if_capitulated = yes 
+		prerequisite = { focus = TAN_islamicbrotherhood } 
+		ai_will_do = {
+		 factor = 40
+		} 
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = TAN_religious_tensions2
+				add_idea = TAN_religious_tensions3
+			}
+		}
+	}
+#Focus for Islamic Brotherhood
+	focus = {
+		id = TAN_islamicbrotherhood
+		icon = GFX_focus_islamicbrotherhood
+		x = 4
+		y = 3
+		cost = 5
+		available_if_capitulated = yes 
+		prerequisite = { focus = TAN_freedomofallfaiths } 
+		ai_will_do = {
+		 factor = 40
+		} 
+		completion_reward = {
+			add_ideas = {
+				TAN_Uyighur_defectors
+			}
+		} 
+	} 
+#Focus for Unite the Tribes
+	focus = {
+		id = TAN_unitethetribes
+		icon = GFX_focus_unitethetribes
+		x = 6
+		y = 4
+		cost = 4
+		available_if_capitulated = yes 
+		prerequisite = { focus = TAN_militarisemongolyouth } 
+		ai_will_do = {
+		 factor = 40
+		} 
+		completion_reward = {
+			remove_ideas = {
+				TAN_divided_tribes2
+			}
+			add_political_power = 25
+		}
+	}
+#Focus for Russian Mining Company
+	focus = {
+		id = TAN_russianminingcompany
+		icon = GFX_focus_russianminingcompany
+		x = 8
+		y = 2
+		cost = 5
+		available_if_capitulated = yes 
+		prerequisite = { focus = TAN_russianbanners }
+		ai_will_do = {
+			factor = 40
+		}
+		completion_reward = {
+			add_resource = {
+				type = steel
+				amount = 20
+				state = 329
+			}
+		}
+	}
+#Focus for Ungern Express
+	focus = {
+		id = TAN_ungernexpress
+		icon = GFX_focus_ungernexpress
+		x = 1
+		y = 6
+		cost = 5
+		available_if_capitulated = yes 
+		prerequisite = { focus = TAN_buddhistschools } 
+		prerequisite = { focus = TAN_putlamasincharge } 
+		ai_will_do = {
+		 factor = 40
+		}
+		completion_reward = {
+			build_railway = {
+				path = { 10649 4690 10646 10627 1877 7773 10669 4777 7799 }
+			}
+			962 = {
+				add_building_construction = {
+					type = supply_node
+					level = 1
+					province = 7799
+					instant_build = yes
+				}
+			}
+			961 = {
+				add_building_construction = {
+					type = supply_node
+					level = 1
+					province = 10649
+					instant_build = yes
+				}
+			}
+			add_ideas = {
+				TAN_express
+			}
+		}
+	}
+#Focus for Promote on Merit
+	focus = {
+		id = TAN_promoteonmerit
+		icon = GFX_focus_promoteonmerit
+		x = 19
+		y = 2
+		cost = 4
+		available_if_capitulated = yes 
+		prerequisite = { focus = TAN_learnfromjapan } 
+		ai_will_do = {
+		 factor = 40
+		} 
+		completion_reward = {
+			army_experience = 50
+			air_experience = 50
+		}
+	}
+#End of focuses 
+}

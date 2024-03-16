@@ -1,0 +1,28 @@
+state={
+	id=687
+	name="STATE_687"
+	manpower = 230900
+	
+	state_category = pastoral
+	
+	resources={
+		aluminium=52 # was: 112
+	}
+
+	history={
+		owner = ENG
+		buildings = {
+			infrastructure = 1
+			4982 = {
+				naval_base = 1
+			}
+		}
+		victory_points = {
+			13525 1
+		}
+	}
+	
+	provinces={
+		4982 13532 13533 13534 13535
+	}
+}

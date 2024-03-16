@@ -1,0 +1,154 @@
+characters = {
+	MAD_gogineni_ranga_nayukulu = {
+		name = "Gogineni Ranga Nayukulu"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MAD/Portrait_Gogineni_Ranga_Nayukulu.png"
+			}
+		}
+		country_leader = {
+			ideology = classical_liberalism
+			expire = "1965.1.1.1"
+		}
+	}
+	MAD_lord_john_erskine = {
+		name = "John Erskine"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MAD/Portrait_MAD_John_Erskine.png"
+			}
+		}
+		country_leader = {
+			ideology = colonial_government
+			expire = "1965.1.1.1"
+		}
+	}
+	MAD_philip_chetwode = {
+		name = "Philip Chetwode"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MAD/Portrait_MAD_Philip_Chetwode.png"
+			}
+		}
+		field_marshal = {
+			traits = { old_guard organisational_leader}
+			skill = 4
+			attack_skill = 2
+			defense_skill = 4
+			planning_skill = 4
+			logistics_skill = 4
+		}
+	}
+	MAD_ord_wingate = {
+		name = "Orde Wingate"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MAD/Portrait_MAD_Orde_Wingate.png"
+			}
+		}
+		corps_commander = {
+			traits = { career_officer commando adaptable}
+			skill = 3
+			attack_skill = 4
+			defense_skill = 1
+			planning_skill = 3
+			logistics_skill = 2
+		}
+	}
+	MAD_george_vasey = {
+		name = "George Vasey"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MAD/Portrait_MAD_George_Vasey.png"
+			}
+		}
+		corps_commander = {
+			traits = { career_officer trickster }
+			skill = 2
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 1
+		}
+	}
+	MAD_frank_messervy = {
+		name = "Frank Messervy"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MAD/Portrait_MAD_Frank_Messervy.png"
+			}
+		}
+		corps_commander = {
+			traits = { cavalry_leader }
+			skill = 2
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 3
+		}
+	}
+	MAD_paramasiva_kumaramangalam = {
+		name = "Paramasiva Kumaramangalam"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MAD/Portrait_MAD_Paramasiva_Kumaramangalam.png"
+			}
+		}
+		corps_commander = {
+			traits = { infantry_officer }
+			skill = 2
+			attack_skill = 3
+			defense_skill = 1
+			planning_skill = 3
+			logistics_skill = 1
+		}
+	}
+	MAD_gopal_gurunath_bewoor = {
+		name = "Gopal Gurunath Bewoor"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MAD/Portrait_MAD_Gopal_Gurunath_Bewoor.png"
+			}
+		}
+		corps_commander = {
+			traits = { trait_cautious infantry_leader}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	MAD_Chakravarti_Rajagopalachari = {
+		name = "Chakravarti Rajagopalachari"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MAD/Portrait_C_Rajagopalachari.png"
+			}
+		}
+	}
+	MAD_Seshadri_Srinivasa_Iyengar = {
+		name = "Seshadri Srinivasa Iyengar"
+	}
+	MAD_Sundara_Sastri_Satyamurti = {
+		name = "Sundara Sastri Satyamurti"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MAD/Portrait_MAD_Satyamurti.png"
+			}
+		}
+		country_leader = {
+			ideology = left_populism
+			expire = "1965.1.1.1"
+		}
+	}
+	MAD_Tanguturi_Prakasam_Panthulu = {
+		name = "Tanguturi Prakasam Panthulu"
+	}
+	MAD_Kumaraswami_Kamaraj = {
+		name = "Kumaraswami Kamaraj"
+	}
+	MAD_Ramakrishna_Ranga_Rao = {
+		name = "Ramakrishna Ranga Rao"
+	}
+}

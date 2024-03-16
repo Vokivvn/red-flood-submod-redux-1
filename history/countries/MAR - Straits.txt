@@ -1,0 +1,106 @@
+﻿capital = 1124
+
+oob = "MAR"
+
+set_research_slots = 3 
+
+set_convoys = 175
+
+set_cosmetic_tag = MAR_citystate
+
+add_ideas = {
+	limited_conscription
+	free_trade
+}
+
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_mountaineers = 1
+	tech_recon = 1
+	tech_support = 1
+	gw_artillery = 1
+	interwar_antiair = 1
+	early_fighter = 1
+	early_bomber = 1
+	gwtank = 1
+}
+
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	set_technology = {
+		early_submarine = 1
+		early_destroyer = 1
+		early_light_cruiser = 1
+		early_battleship = 1
+		early_battlecruiser = 1
+		transport = 1
+	}
+}
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	set_technology = {
+		basic_naval_mines = 1
+		early_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		early_ship_hull_cruiser = 1
+		early_ship_hull_heavy = 1
+		basic_battery = 1
+		basic_light_battery = 1
+		basic_torpedo = 1
+		coastal_defense_ships = 1
+		mtg_transport = 1
+	}
+}
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+	set_technology = {
+		iw_small_airframe = 1
+		aa_lmg = 1
+		aa_cannon_1 = 1
+		early_bombs = 1
+		engines_1 = 1
+	}
+}
+if = {
+	limit = { NOT = { has_dlc = "By Blood Alone" } }
+	set_technology = {
+		early_fighter = 1
+		CAS1 = 1
+	}
+}
+
+set_politics = {
+	ruling_party = despotism
+	last_election = "1933.10.25"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	accelerationism = 4
+	anarchism = 5
+	vanguard_socialism = 2
+	popular_socialism = 1
+	revisionist_socialism = 1
+	progressivism = 10
+	liberalism = 4
+	conservatism = 15
+	right_authoritarianism = 1
+	despotism = 55
+	reactionism = 2
+}
+
+set_stability = 0.6
+
+recruit_character = MAR_abdulmecid_ii
+
+give_military_access = ITA 
+give_military_access = ENG 
+give_military_access = RUS 
+give_military_access = GRE
+
+country_event = {
+	id = mar.1
+	days = 480
+}

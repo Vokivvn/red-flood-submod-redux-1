@@ -1,0 +1,114 @@
+characters={
+	SZC_liu_xiang={
+		name="Liu Xiang"
+		portraits={
+			civilian={
+				large="gfx/leaders/SZC/Portrait_Liu_Xiang.png"
+			}
+		}
+		country_leader={
+			ideology=anocracy
+			expire="1965.1.1.1"
+			desc = POLITICS_XIANG_DESC
+			id=-1
+		}
+	}
+	SZC_zeng_qi={
+		name="Zeng Qi"
+		portraits={
+			civilian={
+				large="gfx/leaders/SZC/Portrait_Zeng_Qi.png"
+			}
+		}
+		country_leader={
+			ideology=national_rejuvenatism
+			expire="1965.1.1.1"
+			desc = POLITICS_QI_DESC
+		}
+	}
+	SZC_li_huang={
+		name="Li Huang"
+		portraits={
+			civilian={
+				large="gfx/leaders/SZC/Portrait_Li_Huang.png"
+			}
+		}
+	}
+	SZC_li_jiayu={
+		name="Li Jiayu"
+		portraits={
+			army={
+				large="gfx/leaders/SZC/Portrait_Li_Jiayu.png"
+				small="gfx/interface/ministers/SZC/SZC_li_jiayu.png"
+			}
+		}
+		corps_commander = {
+			traits = { career_officer }
+			skill = 2
+			attack_skill = 3
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 3
+		}
+	}
+	SZC_tian_songyao = {
+		name = "Tian Songyao"
+		portraits={
+			army={
+				large="gfx/leaders/SZC/Tian_Songyao.png"
+				small="gfx/interface/ministers/SZC/SZC_tian_songyao.png"
+			}
+		}
+		corps_commander = {
+			traits = {
+				politically_connected
+			}
+			skill = 1
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	SZC_liu_wenhui = {
+		name = "Liu Wenhui"
+		portraits={
+			civilian = {
+				large="gfx/leaders/SZC/Portrait_Liu_Wenhui.png"
+			}
+			army={
+				large="gfx/leaders/SZC/Portrait_Liu_Wenhui_general.png"
+				small="gfx/interface/ministers/SZC/SZC_liu_wenhui.png"
+			}
+		}
+		corps_commander = {
+			traits = {
+				politically_connected
+			}
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+		}
+	}
+	SZC_yang_sen = {
+		name = "Yang Sen"
+		portraits={
+			army={
+				#large="gfx/leaders/SZC/.png"
+				small="gfx/interface/ministers/SZC/SZC_yang_sen.png"
+			}
+		}
+		corps_commander = {
+			traits = {
+				politically_connected
+			}
+			skill = 3
+			attack_skill = 1
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+}

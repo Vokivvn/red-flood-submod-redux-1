@@ -1,0 +1,661 @@
+characters = {
+	SIB_alexei_grishin_almazov_despot = {
+		name = "Alexei Grishin-Almazov"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SIB/Portrait_SIB_Alexei_Grishin_Almazov.png"
+			}
+			army = {
+				large = "gfx/leaders/SIB/Portrait_SIB_Alexei_Grishin_Almazov.png"
+			}
+		}
+		country_leader = {
+			ideology = military_dictatorship
+			expire = "1949.1.1.1"
+		}
+		field_marshal = {
+			traits = { organizer politically_connected }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+		}
+	}
+	SIB_ivan_serebrennikov = {
+		name = "Ivan Serebrennikov"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SIB/Portrait_SIB_Ivan_Serebrennikov.png"
+				small = "gfx/interface/ministers/SIB/Serebrennikov_portrait.png"
+			}
+		}
+		country_leader = {
+			ideology = left_populism
+			expire = "1953.1.1.1"
+		}
+		advisor = { 
+			idea_token = SIB_ivan_serebrennikov_hog
+			slot = head_of_government
+			cost = 50
+			available = { 
+			   has_completed_focus = SIB_compromise_with_autonomists
+			}
+			traits = {  
+			   hog_pragmatic_statesman
+			}
+		}
+	}
+	SIB_pepelyayev = {
+		name = "Anatoly Pepelyayev"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SIB/Portrait_SIB_Anatoly_Pepelyayev_Lib.png"
+				small = "gfx/interface/ministers/SIB/anatoly_pepelyayev.png"
+			}
+			army = {
+				large = "gfx/leaders/SIB/Portrait_SIB_Anatoly_Pepelyayev.png"
+				small = "gfx/interface/ministers/SIB/anatoly_pepelyayev.png"
+			}
+		}
+		country_leader = {
+			ideology = social_liberalism
+			expire = "1953.1.1.1"
+		}
+		corps_commander = {
+			traits = { war_hero }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	SIB_alexei_grishin_almazov_populist = {
+		name = "Alexei Grishin-Almazov"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SIB/Portrait_SIB_Aleksey_Grishin_Almazov_socdem.png"
+			}
+		}
+		country_leader = {
+			ideology = left_populism
+			expire = "1965.1.1.1"
+			desc = "POLITICS_ALEXEI_II_DESC"
+		}
+	}
+	SIB_nikolai_anov = {
+		name = "Nikolai Anov"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SIB/Portrait_SIB_Nikolai_Anov.png"
+			}
+		}
+		country_leader = {
+			ideology = technocracy
+			expire = "1965.1.1.1"
+		}
+	}
+	SIB_pyotr_derber = {
+		name = "Pyotr Derber"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SIB/Portrait_SIB_Pyotr_Derber.png"
+			}
+		}
+		country_leader = {
+			ideology = democratic_socialism
+			expire = "1950.1.1.1"
+		}
+	}
+	SIB_Kupetsky = {
+		name = "Grigoriy Kupetsky"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SIB/SIB_Kupetsky.png"
+			}
+		}
+		country_leader = {
+			ideology = military_dictatorship
+			expire = "1950.1.1.1"
+		}
+	}
+	SIB_alexander_iv = {
+		name = "Alexander IV"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SIB/Portrait_SIB_Alexander_IV.png"
+			}
+		}
+	}
+	SIB_andrey_vlasov = {
+		name = "Andrey Vlasov"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SIB/Portrait_SIB_Andrey_Vlasov.png"
+			}
+			army = {
+				large = "gfx/leaders/SIB/Portrait_SIB_Andrey_Vlasov_General.png"
+				small = "gfx/interface/ministers/SIB/Vlasov_portrait.png"
+			}
+		}
+		country_leader = {
+			ideology = anocracy
+			expire = "1965.1.1.1"
+		}
+		field_marshal = {
+			traits = { adaptable }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 1
+			logistics_skill = 2
+			visible = { has_completed_focus = SIB_third_power
+			}
+		}	
+		advisor = { 
+			idea_token = SIB_andrey_vlasov_army
+			slot = army_chief
+			cost = 50
+			traits = { 
+			   carm_decisive_battle_doctrine
+			}
+		}
+		advisor = { 
+			idea_token = SIB_andrey_vlasov_theo
+			slot = theorist
+			cost = 50
+			traits = { 
+			   military_theorist
+			}
+		}
+	}
+	##Solidarists##
+	SIB_victor_baydalakov = {
+		name = "Viktor Baydalakov"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SIB/Portrait_SIB_Viktor_Baydalakov.png"
+				small = "gfx/interface/ministers/SIB/Baydalakov_minister.png"
+			}
+		}
+		advisor = { 
+			idea_token = SIB_victor_baydalakov_hog
+			slot = head_of_government
+			cost = 50
+			available = { 
+				OR = {
+					has_country_leader = { 
+						character = SIB_victor_baydalakov
+						ruling_only = yes
+					}
+					has_country_leader = { 
+						character = SIB_alexander_iv
+						ruling_only = yes
+					}
+					has_country_leader = { 
+						character = SIB_andrey_vlasov
+						ruling_only = yes
+					}
+				}
+			}
+			traits = { 
+			   hog_ambitious_union_boss
+			}
+		}
+	}
+	SIB_alexander_trushnovich = {
+		name = "Alexander Trushnovich"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/SIB/Trushnov_minister.png"
+			}
+		}
+		advisor = { 
+			idea_token = SIB_alexander_trushnovich_for
+			slot = foreign_minister
+			cost = 50
+			available = { 
+				OR = {
+					has_country_leader = { 
+						character = SIB_victor_baydalakov
+						ruling_only = yes
+					}
+					has_country_leader = { 
+						character = SIB_alexander_iv
+						ruling_only = yes
+					}
+					has_country_leader = { 
+						character = SIB_andrey_vlasov
+						ruling_only = yes
+					}
+				}
+			}
+			traits = { 
+			   for_apologetic_clerk
+			}
+		}
+	}
+	SIB_georgiy_gins = {
+		name = "Georgiy Gins"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/SIB/Gins_minister.png"
+			}
+		}
+		advisor = { 
+			idea_token = SIB_georgiy_gins_eco
+			slot = economy_minister
+			cost = 50
+			available = { 
+				OR = {
+					has_country_leader = { 
+						character = SIB_victor_baydalakov
+						ruling_only = yes
+					}
+					has_country_leader = { 
+						character = SIB_alexander_iv
+						ruling_only = yes
+					}
+					has_country_leader = { 
+						character = SIB_andrey_vlasov
+						ruling_only = yes
+					}
+				}
+			}
+			traits = { 
+			   eco_administrative_genius
+			}
+		}
+	}
+	SIB_arkadiy_stolypin = {
+		name = "Arkadiy Stolypin"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/SIB/Stolypin_minister.png"
+			}
+		}
+		advisor = { 
+			idea_token = SIB_arkadiy_stolypin_sec
+			slot = security_minister
+			cost = 50
+			available = { 
+				OR = {
+					has_country_leader = { 
+						character = SIB_victor_baydalakov
+						ruling_only = yes
+					}
+					has_country_leader = { 
+						character = SIB_alexander_iv
+						ruling_only = yes
+					}
+					has_country_leader = { 
+						character = SIB_andrey_vlasov
+						ruling_only = yes
+					}
+				}
+			}
+			traits = { 
+			   sec_compassionate_gentleman
+			}
+		}
+	}
+	SIB_kirill_vergun = {
+		name = "Kirill Vergun"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/SIB/Kirill_minister.png"
+			}
+		}
+		advisor = { 
+			idea_token = SIB_kirill_vergun_intel
+			slot = head_of_intel
+			cost = 50
+			available = { 
+				OR = {
+					has_country_leader = { 
+						character = SIB_victor_baydalakov
+						ruling_only = yes
+					}
+					has_country_leader = { 
+						character = SIB_alexander_iv
+						ruling_only = yes
+					}
+					has_country_leader = { 
+						character = SIB_andrey_vlasov
+						ruling_only = yes
+					}
+				}
+			}
+			traits = { 
+			   int_dismal_enigma
+			}
+		}
+	}
+	##Autonomists##
+	SIB_nikolai_gondatti = {
+		name = "Nikolai Gondatti"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/SIB/SIB_Nikolay_Gondatti_for.tga"
+			}
+		}
+		advisor = { 
+			idea_token = SIB_nikolai_gondatti_for
+			slot = foreign_minister
+			cost = 50
+			available = { 
+			   has_completed_focus = SIB_compromise_with_autonomists
+			}
+			traits = { 
+			   for_great_compromiser
+			}
+		}
+	}
+	SIB_nikolai_kozmin = {
+		name = "Nikolai Kozmin"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/SIB/SIB_Nikolay_Kozmin_eco.tga"
+			}
+		}
+		advisor = { 
+			idea_token = SIB_nikolai_kozmin_eco
+			slot = economy_minister
+			cost = 50
+			available = { 
+			   has_completed_focus = SIB_compromise_with_autonomists
+			}
+			traits = { 
+			   eco_balanced_budget_economy
+			}
+		}
+	}
+	SIB_aleksander_novosyolov = {
+		name = "Aleksander Novosyolov"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/SIB/SIB_Aleksandr_Novosyolov_sec.tga"
+			}
+		}
+		advisor = { 
+			idea_token = SIB_aleksander_novosyolov_sec
+			slot = security_minister
+			cost = 50
+			available = { 
+			   has_completed_focus = SIB_compromise_with_autonomists
+			}
+			traits = { 
+			   sec_man_of_the_people
+			}
+		}
+	}
+	SIB_pavel_kandidov = {
+		name = "Pavel Kandidov"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/SIB/SIB_Pavel_Kandidov_inl.tga"
+			}
+		}
+		advisor = { 
+			idea_token = SIB_pavel_kandidov_int
+			slot = head_of_intel
+			cost = 50
+			available = { 
+			   has_completed_focus = SIB_compromise_with_autonomists
+			}
+			traits = { 
+			   int_technical_specialist
+			}
+		}
+	}
+	##Black Hundreds##
+	
+	SIB_ivan_mikhailov = {
+		name = "Ivan Mikhailov"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/SIB/SIB_Ivan_Mikhailov_hog.tga"
+			}
+		}
+		advisor = { 
+			idea_token = SIB_ivan_mikhailov_hog
+			slot = head_of_government
+			cost = 50
+			available = { 
+			   has_completed_focus = SIB_black_hundreds_in_siberian_duma
+			}
+			traits = { 
+			   hog_backroom_backstabber
+			}
+		}
+	}
+	SIB_pyotr_gran = {
+		name = "Pyotr Gran"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/SIB/SIB_Pyotr_Gran_for.tga"
+			}
+		}
+		advisor = { 
+			idea_token = SIB_pyotr_gran_for
+			slot = foreign_minister
+			cost = 50
+			available = { 
+			   has_completed_focus = SIB_black_hundreds_in_siberian_duma
+			}
+			traits = { 
+			   for_ideological_crusader
+			}
+		}
+	}
+	SIB_vladimir_dudinsky = {
+		name = "Vladimir Dudinsky"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/SIB/SIB_Vladimir_Dudinsky_sec.tga"
+			}
+		}
+		advisor = { 
+			idea_token = SIB_vladimir_dudinsky_sec
+			slot = security_minister
+			cost = 50
+			available = { 
+			   has_completed_focus = SIB_black_hundreds_in_siberian_duma
+			}
+			traits = { 
+			   sec_crime_fighter
+			}
+		}
+	}
+	SIB_karl_von_nolken = {
+		name = "Karl von Nolken"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/SIB/SIB_Karl_von_Nolken_int.tga"
+			}
+		}
+		advisor = { 
+			idea_token = SIB_karl_von_nolken_int
+			slot = head_of_intel
+			cost = 50
+			available = { 
+			   has_completed_focus = SIB_black_hundreds_in_siberian_duma
+			}
+			traits = { 
+			   int_political_specialist
+			}
+		}
+	}
+	
+	SIB_ilya_mazuriuk = {
+		name = "Ilya Mazuriuk"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/SIB/SIB_Ilya_Mazuruk_air.tga"
+			}
+		}
+		advisor = { 
+			idea_token = SIB_ilya_mazuriuk_air
+			slot = air_chief
+			cost = 50
+			traits = { 
+			   cair_air_superiority_doctrine
+			}
+		}
+		advisor = { 
+			idea_token = SIB_ilya_mazuriuk_theo
+			slot = theorist
+			cost = 50
+			traits = { 
+			   assault_avaition
+			}
+		}
+	}
+	SIB_mark_shevelyov = {
+		name = "Mark Shevelyov"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/SIB/SIB_Mark_Shevelyov_air.tga"
+			}
+		}
+		advisor = { 
+			idea_token = SIB_mark_shevelyov_air
+			slot = air_chief
+			cost = 50
+			traits = { 
+			   cair_carpet_bombing_doctrine
+			}
+		}
+	}
+	
+	SIB_vyacheslav_volkov = {
+		name = "Vyacheslav Volkov"
+		portraits = {
+			army = {
+				large = "gfx/leaders/SIB/Portrait_SIB_Vyacheslav_Volkov.png"
+				small = "gfx/interface/ministers/SIB/SIB_Vyacheslav_Volkov_chf.tga"
+			}
+		}
+		corps_commander = {
+			traits = { inflexible_strategist cavalry_officer }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 1
+		}
+		advisor = { 
+			idea_token = SIB_vyacheslav_volkov_hc
+			slot = high_command
+			cost = 50
+			traits = { 
+			   army_cavalry_2
+			}
+		}
+	}
+	SIB_ivan_krasilnikov = {
+		name = "Ivan Krasilnikov"
+		portraits = {
+			army = {
+				large = "gfx/leaders/SIB/Portrait_SIB_Ivan_Krasilnikov.png"
+				small = "gfx/interface/ministers/SIB/SIB_Ivan_Kraslinikov_eco.tga"
+			}
+		}
+		corps_commander = {
+			traits = { ambusher cavalry_officer }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+		}
+		advisor = { 
+			idea_token = SIB_ivan_krasilnikov_eco
+			slot = economy_minister
+			cost = 50
+			available = { 
+			   has_completed_focus = SIB_black_hundreds_in_siberian_duma
+			}
+			traits = { 
+			   eco_industrialiser
+			}
+		}
+		advisor = { 
+			idea_token = SIB_ivan_krasilnikov_cos
+			slot = high_command
+			cost = 50
+			traits = { 
+			   army_concealment_2
+			}
+		}
+	}
+	SIB_mikhail_khanzin = {
+		name = "Mikhail Khanzhin"
+		portraits = {
+			army = {
+				large = "gfx/leaders/SIB/Portrait_SIB_Mikhail_Khanzhin.png"
+				small = "gfx/interface/ministers/SIB/SIB_Mikhail_Khanzhin_arm.tga"
+			}
+		}
+		corps_commander = {
+			traits = { trait_reckless infantry_officer }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 1
+		}
+		advisor = { 
+			idea_token = SIB_mikhail_khanzin_army
+			slot = army_chief
+			cost = 50
+			traits = { 
+			   carm_static_defence_doctrine
+			}
+		}
+		advisor = { 
+			idea_token = SIB_mikhail_khanzin_hc
+			slot = high_command
+			cost = 50
+			traits = { 
+			   army_infantry_2
+			}
+		}
+	}
+	SIB_pavel_ivanov_rinov = {
+		name = "Pavel Ivanov-Rinov"
+		portraits = {
+			army = {
+				large = "gfx/leaders/SIB/Portrait_SIB_Pavel_Ivanov_Rinov.png"
+				small = "gfx/interface/ministers/SIB/SIB_Pavel_Ivanov_Rinov_arm.tga"
+			}
+		}
+		corps_commander = {
+			traits = { brilliant_strategist cavalry_officer }
+			skill = 3
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 1
+		}
+		advisor = { 
+			idea_token = SIB_pavel_ivanov_rinov_army
+			slot = army_chief
+			cost = 50
+			traits = { 
+			   carm_commando_doctrine
+			}
+		}
+		advisor = { 
+			idea_token = SIB_pavel_ivanov_rinov_com
+			slot = high_command
+			cost = 50
+			traits = { 
+			   army_commando_2
+			}
+		}
+	}
+	
+}
+

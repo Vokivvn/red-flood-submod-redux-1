@@ -1,0 +1,193 @@
+﻿capital = 266
+set_research_slots = 3 
+set_stability = 0.3
+
+oob = "PER"
+set_naval_oob = "PER_naval"
+if = { limit = { has_dlc = "By Blood Alone" } set_air_oob = "PER_air" }
+if = { limit = {  NOT = { has_dlc = "By Blood Alone" } }  set_air_oob = "PER_air_legacy" }
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1		
+	tech_recon = 1
+	tech_engineers = 1
+	tech_trucks =1
+	motorised_infantry = 1
+	fuel_silos = 1
+}
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	set_technology = {
+		early_submarine = 1
+		early_destroyer = 1
+		early_light_cruiser = 1
+		early_heavy_cruiser = 1
+		early_battleship = 1
+		early_battlecruiser = 1
+		early_carrier = 1
+	}
+}
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		early_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		early_ship_hull_cruiser = 1
+		early_ship_hull_heavy = 1
+		early_ship_hull_carrier = 1
+		basic_battery = 1
+		basic_light_battery = 1
+		basic_medium_battery = 1
+		basic_heavy_battery = 1
+		basic_torpedo = 1
+		sonar = 1
+		smoke_generator = 1
+		basic_depth_charges = 1
+		basic_light_battery = 1
+		basic_cruiser_armor_scheme = 1
+		basic_heavy_armor_scheme = 1
+		basic_fire_control_system = 1
+	}
+}
+
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+	set_technology = {
+		iw_small_airframe = 1
+		aa_lmg = 1
+		aa_cannon_1 = 1
+		early_bombs = 1
+		engines_1 = 1
+	}
+}
+if = {
+	limit = { NOT = { has_dlc = "By Blood Alone" } }
+	set_technology = {
+		early_fighter = 1
+		CAS1 = 1
+	}
+}
+
+give_military_access = ENG 
+
+set_country_flag = PER_starting_mechanic_flag
+
+add_to_variable = { PER_debts_to_ENG = 0.05 }
+clamp_variable = {
+	var = PER_debts_to_ENG
+	min = 0
+	max = 1
+}
+
+set_variable = { PER_commitment_to_FGW = 0 }
+clamp_variable = {
+	var = PER_commitment_to_FGW
+	min = 0
+	max = 1
+}
+
+set_variable = { PER_commitment_to_fiw = 0 }
+clamp_variable = {
+	var = PER_commitment_to_fiw
+	min = 0
+	max = 1
+}
+
+set_variable = { PER_commitment_to_ZHR = 0 }
+clamp_variable = {
+	var = PER_commitment_to_ZHR
+	min = 0
+	max = 1
+}
+
+set_variable = { PER_commitment_to_spain = 0 }
+clamp_variable = {
+	var = PER_commitment_to_spain
+	min = 0
+	max = 1
+}
+
+add_ideas = {
+	PER_APOC
+	PER_starting_denbts
+}
+
+set_politics = {
+	ruling_party = right_authoritarianism
+	last_election = "1933.10.25"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	vanguard_socialism = 10
+	popular_socialism = 10
+	anarchism = 0
+	revisionist_socialism = 0
+	progressivism = 0
+	liberalism = 0
+	conservatism = 10
+	right_authoritarianism = 50
+	despotism = 10
+	reactionism = 10
+	accelerationism = 0
+}
+
+#leaders
+recruit_character = PER_reza_shah_pahlavi
+recruit_character = PER_mohammad_mosaddegh
+recruit_character = PER_ahmad_qavam
+recruit_character = PER_john_cadman
+recruit_character = PER_mohammed_reza_pahlavi
+recruit_character = PER_Sayyed_Zia_Tabatabai
+recruit_character = PER_reza_radmanesh
+recruit_character = PER_Mirza_Kuchik_Khan
+recruit_character = PER_abol_ghasem_kashani
+
+#white
+recruit_character = PER_Eric_Carlberg
+recruit_character = PER_Anders_Anden
+recruit_character = PER_Per_Glimstedt
+recruit_character = PER_Arthur_Sullivan
+recruit_character = PER_John_Le_Rougetel
+recruit_character = PER_Neville_Gass
+recruit_character = PER_Edgar_Myles
+recruit_character = PER_Thomas_Riversdale
+recruit_character = PER_Edgar_Ludlow_Hewitt_coaf
+recruit_character = PER_Boris_Moller
+recruit_character = PER_William_Fraser
+recruit_character = PER_hasan_arfa
+recruit_character = PER_Hassan_Pakravan
+recruit_character = PER_Gholamali_Bayandor
+recruit_character = PER_Rudolf_Burmester
+recruit_character = PER_Effat_Tejaratchi_coaf
+recruit_character = PER_fazlollah_zahedi
+recruit_character = PER_Amanullah_Jahanbani
+recruit_character = PER_Hossein_Ala
+recruit_character = PER_hassan_alavikia
+recruit_character = PER_mohammad_ali_foroughi
+recruit_character = PER_mahmoud_djam
+recruit_character = PER_firouz_nosrat_ed_dowleh_iii
+recruit_character = PER_sayyed_hassan_taghizadeh
+recruit_character = PER_ali_akbar_davar
+recruit_character = PER_mohammad_hosayn_aryom
+recruit_character = PER_ali_khan_mansur
+recruit_character = PER_ahmad_amir_ahmadi
+recruit_character = PER_assadollah_hosseinpour
+recruit_character = PER_karim_buzarjomehri
+
+#red
+#recruit_character = PER_Mohammad_Bahrami
+#recruit_character = PER_Iraj_Eskandari
+#recruit_character = PER_Jafar_Pishevari
+#recruit_character = PER_Ehsanollah_Khan
+#recruit_character = PER_Haydar_Khan
+#recruit_character = PER_Alexei_Dombrowski
+#recruit_character = PER_Soleiman_Eskandari
+#recruit_character = PER_Heshmat_Taleqani
+#recruit_character = PER_Fereydoun_Keshavarz
+#recruit_character = PER_Abdossamad_Kambakhsh
+#recruit_character = PER_Noureddin_Alamouti

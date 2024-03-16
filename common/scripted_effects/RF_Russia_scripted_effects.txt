@@ -1,0 +1,357 @@
+PREV_annex_CURRENT_warlord = {
+	every_unit_leader = {
+		set_nationality = FROM #Country doing the annexation
+	}
+	PREV = { #Country doing the annexation
+		change_tag_from = FROM #Country doing the annexation
+		annex_country = {
+			target = PREV #Country being annexed
+			transfer_troops = yes
+		}
+	}
+}
+
+core_machine_rassiya = {
+	every_state = {
+		limit = {
+			has_variable = is_russian_state
+		}
+		every_country = {
+			limit = {
+				NOT = {
+					tag = ROOT
+					tag = ARM
+					tag = EST
+					tag = LAT
+					tag = UKR
+					tag = AZR
+					tag = BLR
+					tag = FIN
+					tag = FIR
+				}
+			}
+			remove_state_core = PREV
+			remove_state_claim = PREV
+		}
+	}	
+}
+
+enter_smuta = {
+	PREV= {
+		set_variable = { smuta_surrender_limit = -0.30 }
+		set_variable = { smuta_min_export = -0.8 }
+		set_variable = { smuta_tef = -0.8 }
+		add_dynamic_modifier = { modifier = second_smuta }
+	}
+}
+
+
+
+Unification_unify_russia_effects = {
+	clr_country_flag = is_russian_warlord
+	set_global_flag = united_russia
+	save_global_event_target_as = russian_unification
+	add_ideas = ROS_recently_reunited
+	activate_mission = ROS_idea_swap_times_one
+	
+	if = {
+		limit = {
+			OR = {
+				tag = PSL
+				tag = ALT
+				tag = HAR
+				tag = KAV
+				tag = ZHR
+				tag = FCR
+			}
+		}
+		Unification_unify_russia_socialist_effects = yes
+		log = "[GetDateText]: [Root.GetName]: Unification_unify_russia_socialist_effects"
+	}
+	else_if = {
+		limit = {
+			OR = {
+				tag = KCK
+				tag = DKB
+				tag = ORE
+				tag = SIB
+				tag = ARC
+				tag = PRI
+			}
+		}
+		Unification_unify_russia_nationalist_effects = yes
+	}
+	
+	hidden_effect = {
+		if = {
+			limit = {
+				NOT = {
+					tag = DKB
+					tag = HAR
+					tag = PRI
+				}
+			}
+			every_state = {
+				limit = { has_variable = is_russian_state }
+				remove_core_of = WRT #Baltics
+				remove_core_of = WRU
+				remove_core_of = WRR
+				remove_core_of = RUS #Russia Proper
+				remove_core_of = SRU
+				remove_core_of = DKB #Ciscaucasia
+				remove_core_of = KAV #Caucasus
+				remove_core_of = ORE #Kazakhstan
+				remove_core_of = TRK #Central Asia
+				remove_core_of = KHW
+				remove_core_of = TUK
+				remove_core_of = TUC
+				remove_core_of = BKR
+				remove_core_of = ALT #Mongolia
+				remove_core_of = TAN
+				remove_core_of = MO2
+				remove_core_of = SIB #Siberia
+				remove_core_of = MO4
+				remove_core_of = KCK #Far East
+				remove_core_of = ZHR #Yellow Russia
+				remove_core_of = ARC
+				remove_core_of = FCR
+				remove_core_of = GUK
+				remove_core_of = HAR
+				remove_core_of = MNS
+				remove_core_of = OLN
+				remove_core_of = PRI
+				remove_core_of = PSL
+				
+
+				remove_claim_by = WRT #Baltics
+				remove_claim_by = WRU
+				remove_claim_by = WRR
+				remove_claim_by = RUS #Russia Proper
+				remove_claim_by = SRU
+				remove_claim_by = DKB #Ciscaucasia
+				remove_claim_by = KAV #Caucasus
+				remove_claim_by = ORE #Kazakhstan
+				remove_claim_by = TRK #Central Asia
+				remove_claim_by = KHW
+				remove_claim_by = TUK
+				remove_claim_by = TUC
+				remove_claim_by = BKR
+				remove_claim_by = ALT #Mongolia
+				remove_claim_by = TAN
+				remove_claim_by = MO2
+				remove_claim_by = SIB #Siberia
+				remove_claim_by = MO4
+				remove_claim_by = KCK #Far East
+				remove_claim_by = ZHR #Yellow Russia
+				remove_claim_by = ARC
+				remove_claim_by = FCR
+				remove_claim_by = GUK
+				remove_claim_by = HAR
+				remove_claim_by = MNS
+				remove_claim_by = OLN
+				remove_claim_by = PRI
+				remove_claim_by = PSL
+				
+				add_core_of = ROOT
+			}
+		}
+	}
+	recheck_annexations = yes
+}
+Unification_unify_russia_nationalist_effects = {
+	if = {
+		limit = { tag = DKB }
+		complete_national_focus = DKB_agony_of_intermarium
+	}
+	else_if = {
+		limit = { tag = ORE }
+		if = { 
+			limit = { 
+				has_completed_focus = ORE_rasputins_conspiracy
+				#MNS = { owns_state = 978 }
+		 	} 
+		 	complete_national_focus = ORE_peace_holy_rus
+		}	
+
+		
+		else_if = { 
+			limit = { 
+				tag = ORE
+				#MNS = { owns_state = 978 }
+			}	
+			complete_national_focus = Orenburg_protective_belt_against_atlanticism
+		}
+	}
+	else_if = {
+		limit = { tag = SIB }
+		if = {
+			limit = { MNS = { owns_state = 978 } }
+			complete_national_focus = SIB_nation_under_sacred_trident
+		}
+		set_capital = { state = 219 }
+		news_event = {
+			id = news.66
+			days = 3
+		}
+	}
+	else_if = {
+		limit = { tag = KCK }
+		add_war_support = 0.3
+		add_stability = 0.3
+		add_research_slot = 1
+		set_capital = { state = 219 }
+		set_cosmetic_tag = KCK_russia
+		complete_national_focus = KCK_fourth_rome_ascendant
+		add_ideas = KCK_rome_iv_back_for_more
+		news_event = news.153
+	}
+	else_if = {
+		limit = { tag = PRI }
+		set_cosmetic_tag = PRI_national_republic
+		set_capital = { state = 219 }
+		add_war_support = 0.3
+		add_stability = 0.3
+		add_research_slot = 1
+		news_event = {
+			id = news.177
+			days = 3
+		}
+	}
+}
+
+Unification_unify_russia_socialist_effects = {
+	if = {
+		limit = { tag = KAV }
+		add_war_support = 0.3
+		add_stability = 0.3
+		add_research_slot = 1
+		if = {
+			limit = { has_completed_focus = KAV_i_mayakovsky }
+			set_province_name = {
+				id = 3734
+				name = RUS_scripted_effect_Unification_unify_russia_socialist_effects_province_3734
+			}
+			234 = { set_state_name = RUS_scripted_effect_state_234_Krasnodar }
+			set_province_name = {
+				id = 3529
+				name = RUS_scripted_effect_Unification_unify_russia_socialist_effects_province_3529
+			}
+			217 = { set_state_name = RUS_scripted_effect_state_217_Volgograd }
+			set_province_name = {
+				id = 7274
+				name = RUS_scripted_effect_Unification_unify_russia_socialist_effects_province_7274
+			}
+			570 = { set_state_name = RUS_scripted_effect_state_570_Novosibirsk }
+			set_province_name = {
+				id = 3151
+				name = RUS_scripted_effect_Unification_unify_russia_socialist_effects_province_3151
+			}
+			195 = { set_state_name = RUS_scripted_effect_state_195_Krasnograd_1 }
+			set_cosmetic_tag = "KAV_greater_utopia"
+			news_event = news.159
+			hidden_effect = { set_capital = { state = 219 } }
+		}
+		else_if = {
+			limit = {
+				has_completed_focus = KAV_the_king_of_poets
+				NOT = { has_completed_focus = KAV_the_transmutation_of_koba }
+			}
+			set_cosmetic_tag = "KAV_severyanin"
+			news_event = news.325
+			set_province_name = {
+				id = 3151
+				name = RUS_scripted_effect_Unification_unify_russia_socialist_effects_KAV_severyanin_province_3151
+			}
+			195 = { set_state_name = RUS_scripted_effect_state_195_Severyanin }
+			hidden_effect = { set_capital = { state = 195 } }
+		}
+		else_if = {
+			limit = { has_completed_focus = KAV_the_red_princes_dream }
+			set_cosmetic_tag = "KAV_greater_eurasia"
+			news_event = news.160
+			hidden_effect = { set_capital = { state = 219 } }
+		}
+		else_if = {
+			limit = { has_completed_focus = KAV_enter_king_of_time }
+			set_province_name = {
+				id = 3529
+				name = RUS_scripted_effect_Unification_unify_russia_socialist_effects_KAV_greater_eurasia_province_3529
+			}
+			217 = { set_state_name = RUS_scripted_effect_state_217_Stalingrad_1 }
+			set_province_name = {
+				id = 3151
+				name = RUS_scripted_effect_Unification_unify_russia_socialist_effects_KAV_greater_eurasia_province_3151
+			}
+			195 = { set_state_name = RUS_scripted_effect_state_195_Krasnograd_2 }
+			set_cosmetic_tag = "KAV_state_of_time"
+			#country_event = {
+			#	id = kav.13
+			#}
+			news_event = news.161
+			hidden_effect = { set_capital = { state = 236 } }
+		}
+		else_if = {
+			limit = { has_completed_focus = KAV_the_transmutation_of_koba }
+			set_province_name = {
+				id = 3529
+				name = RUS_scripted_effect_Unification_unify_russia_socialist_effects_KAV_the_transmutation_of_koba_province_3529
+			}
+			217 = { set_state_name = RUS_scripted_effect_state_217_Stalingrad_2 }
+			set_province_name = {
+				id = 3151
+				name = RUS_scripted_effect_Unification_unify_russia_socialist_effects_KAV_the_transmutation_of_koba_province_3151
+			}
+			195 = { set_state_name = RUS_scripted_effect_state_195_Mayakovsk }
+			set_cosmetic_tag = "KAV_stalin"
+			news_event = news.326
+			hidden_effect = { set_capital = { state = 219 } }
+		}
+	}
+	else_if = {
+		limit = { tag = HAR }
+		set_cosmetic_tag = HAR_uni
+		news_event = news.65
+		set_capital = { state = 219 }
+	}
+	else_if = {
+		limit = { tag = ALT }
+		set_cosmetic_tag = ALT_SHMN
+		if = {
+			limit = { has_government = revisionist_socialism }
+			news_event = news.163
+		}
+		else = { news_event = news.162 }
+		set_capital = { state = 219 }
+		add_research_slot = 1
+	}
+	else_if = {
+		limit = { tag = PSL }
+		set_cosmetic_tag = PSL_uni
+		news_event = news.356
+		set_capital = { state = 219 }
+	}
+}
+
+Unification_core_territory_effects = {
+	if = {
+		limit = { has_country_flag = integrate_mongolia }
+		every_owned_state = {
+			limit = {
+				AND = {
+					NOT = { is_core_of = ROOT }
+					has_variable = is_mongolian_state
+				}
+			}
+			add_core_of = ROOT
+		}
+	}
+	every_owned_state = {
+		limit = { 
+			AND = {
+				NOT = { is_core_of = ROOT }
+				has_variable = is_russian_state
+			}
+		}
+		add_core_of = ROOT
+	}
+}

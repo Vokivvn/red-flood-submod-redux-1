@@ -1,0 +1,17 @@
+characters={
+	ZAN_Evelyn_Baring={
+		name="Evelyn Baring"
+		portraits={
+			civilian={
+				large="gfx/leaders/ZAN/Portrait_Evelyn_Baring.png"
+			}
+		}
+		country_leader={
+			
+			ideology=colonial_government
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	
+}

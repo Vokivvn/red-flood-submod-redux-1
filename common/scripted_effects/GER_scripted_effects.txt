@@ -1,0 +1,59 @@
+GER_yug_ita_renaming = {
+	39 = { set_state_name = GER_39_Rename }
+	set_province_name = {
+		id = 11598
+		name = GER_11598_VP_Rename
+	}
+
+	if = { #Name Yugoslavic
+		limit = {
+			var:103.owner = { #INCLUDE BULGARIA WITH YUG CHECKS
+				OR = {
+					tag = BUL
+					tag = YUG
+				}
+				NOT = { has_government = reactionism }
+			}
+		}
+		163 = { set_state_name = YUG_163_Rename }
+		736 = { set_state_name = YUG_736_Rename }
+		1265 = { set_state_name = YUG_1265_Rename }
+		set_province_name = {
+			id = 11901
+			name = YUG_11901_VP_Rename #Zara
+		}
+		set_province_name = {
+			id = 11564
+			name = YUG_11564_VP_Rename #Fiume
+		}
+		set_province_name = {
+			id = 6626
+			name = YUG_6626_VP_Rename #Trieste
+		}
+		set_province_name = {
+			id = 13617
+			name = YUG_13617_VP_Rename #Pula
+		}
+	}
+	else_if = { #Name Germanic and Italic
+		limit = {
+			GER = { has_completed_focus = GER_pangermanic_rhetoric }
+		}
+		ITA = { set_country_flag = ITA_pan_german_renaming }
+		163 = { set_state_name = GER_163_Rename }
+		736 = { set_state_name = GER_736_Rename }
+		1265 = { set_state_name = GER_1265_Rename }
+		set_province_name = {
+			id = 11564
+			name = GER_11564_VP_Rename #Fiume
+		}
+		set_province_name = {
+			id = 6626
+			name = GER_6626_VP_Rename #Trieste
+		}
+		set_province_name = {
+			id = 13617
+			name = GER_13617_VP_Rename #Pula
+		}
+	}
+}

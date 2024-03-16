@@ -1,0 +1,103 @@
+################################
+#materiel_manufacturer##############
+################################
+DAI_DAI_marsenal_organization = {
+	include = generic_infantry_equipment_organization
+	icon = GFX_idea_DAI_marsenal
+	allowed = {
+		original_tag = DAI 
+	}
+}
+DAI_DAI_pxarmory_organization = {
+	include = generic_infantry_equipment_organization
+	icon = GFX_idea_DAI_pxarmory
+	allowed = {
+		original_tag = DAI 
+	}
+}
+DAI_DAI_hgarsenal_organization = {
+	include = generic_infantry_equipment_organization
+	icon = GFX_idea_DAI_hgartillery
+	allowed = {
+		original_tag = DAI 
+	}
+}
+DAI_DAI_tokyo_arsenal_organization = {
+	include = generic_support_equipment_organization
+	icon = GFX_idea_tokyo_arsenal
+	allowed = {
+		original_tag = DAI 
+	}
+}
+################################
+#tank_manufacturer##############
+################################
+DAI_DAI_hgtank_organization = {
+	include = generic_tank_organization
+	icon = GFX_idea_DAI_hgtank
+	allowed = {
+		original_tag = DAI 
+	}
+}
+DAI_DAI_imperialtank_organization = {
+	include = generic_tank_organization
+	icon = GFX_idea_DAI_hoaxa
+	allowed = {
+		original_tag = DAI 
+	}
+}
+DAI_DAI_stai_organization = {
+	include = generic_tank_organization
+	icon = GFX_idea_DAI_stai
+	allowed = {
+		original_tag = DAI 
+	}
+}
+DAI_DAI_bainnier_organization = {
+	include = generic_tank_organization
+	icon = GFX_idea_DAI_bainnier
+	allowed = {
+		original_tag = DAI 
+	}
+}
+DAI_DAI_nissan_motor_organization = {
+	include = generic_motorized_mechanized_organization
+	icon = GFX_idea_nissan
+	allowed = {
+		original_tag = DAI 
+	}
+}
+################################
+#naval_manufacturer##############
+################################
+DAI_DAI_basonport_organization = {
+	include = generic_task_force_ship_organization
+	icon = GFX_idea_DAI_bason
+	allowed = {
+		original_tag = DAI 
+	}
+}
+DAI_DAI_hgport_organization = {
+	include = generic_task_force_ship_organization
+	icon = GFX_idea_DAI_hgjunk
+	allowed = {
+		original_tag = DAI 
+	}
+}
+DAI_DAI_kure_organization = {
+	include = generic_task_force_ship_organization
+	icon = GFX_idea_kure_naval_arsenal
+	allowed = {
+		original_tag = DAI 
+	}
+}
+################################
+#aircraft_manufacturer##############
+################################
+DAI_DAI_mitsubishi_organization = {
+	include = generic_multi_role_aircraft_organization
+	icon = GFX_idea_mitsubishi
+	allowed = {
+		original_tag = DAI 
+	}
+}

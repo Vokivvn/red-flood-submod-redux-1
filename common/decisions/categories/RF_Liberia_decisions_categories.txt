@@ -1,0 +1,12 @@
+LIB_foreign_policy = {
+	allowed = {
+		tag = LIB
+	}
+	visible = {
+		OR = {
+			has_completed_focus = LIB_liberateafrica
+			has_completed_focus = LIB_anewrepublic
+		}
+	}
+	priority = 100
+}

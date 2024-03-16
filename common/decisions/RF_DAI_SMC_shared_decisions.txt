@@ -1,0 +1,637 @@
+DAI_SMC_resource_extraction = { #The exact amounts here are all open to some tweaking - maybe break the aluminium down into 4 blocks or something? 
+    central_highland_aluminium_I = {
+		cost = 50
+        available = {
+            owns_state = 1109
+			has_tech = excavation1
+			num_of_civilian_factories_available_for_projects > 2
+        }
+		visible = {
+			OR = {
+				tag = DAI
+				tag = SMC
+			}
+		}
+		fire_only_once = yes
+		days_remove = 90
+
+		modifier = {
+			civilian_factory_use = 3
+			political_power_cost = 0.3
+		}
+
+		remove_effect = {
+			1109 ={
+				add_resource = {
+					type = aluminium
+					amount = 12
+				}
+			}
+		}	
+     }
+    central_highland_aluminium_II = {
+		cost = 50
+        available = {
+            owns_state = 1109
+			has_tech = excavation2
+			num_of_civilian_factories_available_for_projects > 2
+        }
+        visible = {
+            has_tech = excavation1
+		}
+		fire_only_once = yes
+		days_remove = 90
+
+		modifier = {
+			civilian_factory_use = 3
+			political_power_cost = 0.4
+		}
+
+		remove_effect = {
+			1109 ={
+				add_resource = {
+					type = aluminium
+					amount = 12
+				}
+			}
+		}	
+     }
+    central_highland_aluminium_III = {
+		cost = 50
+        available = {
+            owns_state = 1109
+			has_tech = excavation3
+			num_of_civilian_factories_available_for_projects > 3
+        }
+        visible = {
+            has_tech = excavation2
+		}
+		fire_only_once = yes
+		days_remove = 90
+
+		modifier = {
+			civilian_factory_use = 4
+			political_power_cost = 0.5
+		}
+
+		remove_effect = {
+			1109 ={
+				add_resource = {
+					type = aluminium
+					amount = 12
+				}
+			}
+		}	
+     }
+    central_highland_aluminium_IV = {
+		cost = 50
+        available = {
+            owns_state = 1109
+			has_tech = excavation4
+			num_of_civilian_factories_available_for_projects > 3
+        }
+        visible = {
+            has_tech = excavation3
+		}
+		fire_only_once = yes
+		days_remove = 90
+
+		modifier = {
+			civilian_factory_use = 4
+			political_power_cost = 0.6
+		}
+
+		remove_effect = {
+			1109 ={
+				add_resource = {
+					type = aluminium
+					amount = 12
+				}
+			}
+		}	
+     }
+	 
+    thach_khe_iron_I = {
+		cost = 50
+        available = {
+            owns_state = 1111
+			has_tech = excavation1
+			num_of_civilian_factories_available_for_projects > 2
+        }
+		fire_only_once = yes
+		days_remove = 90
+
+		modifier = {
+			civilian_factory_use = 3
+			political_power_cost = 0.3
+		}
+
+		remove_effect = {
+			1111 ={
+				add_resource = {
+					type = steel
+					amount = 8
+				}
+			}
+		}	
+     }
+    thach_khe_iron_II = {
+		cost = 50
+        available = {
+            owns_state = 1111
+			has_tech = excavation2
+			num_of_civilian_factories_available_for_projects > 3
+        }
+        visible = {
+            has_tech = excavation1
+		}
+		fire_only_once = yes
+		days_remove = 90
+
+		modifier = {
+			civilian_factory_use = 4
+			political_power_cost = 0.4
+		}
+
+		remove_effect = {
+			1111 ={
+				add_resource = {
+					type = steel
+					amount = 8
+				}
+			}
+		}	
+     }
+    thach_khe_iron_III = {
+		cost = 50
+        available = {
+            owns_state = 1111
+			has_tech = excavation3
+			num_of_civilian_factories_available_for_projects > 3
+        }
+        visible = {
+            has_tech = excavation2
+		}
+		fire_only_once = yes
+		days_remove = 90
+
+		modifier = {
+			civilian_factory_use = 4
+			political_power_cost = 0.5
+		}
+
+		remove_effect = {
+			1111 ={
+				add_resource = {
+					type = steel
+					amount = 8
+				}
+			}
+		}	
+     }
+    thach_khe_iron_IV = {
+		cost = 50
+        available = {
+            owns_state = 1111
+			has_tech = excavation4
+			num_of_civilian_factories_available_for_projects > 4
+        }
+        visible = {
+            has_tech = excavation3
+		}
+		fire_only_once = yes
+		days_remove = 90
+
+		modifier = {
+			civilian_factory_use = 5
+			political_power_cost = 0.6
+		}
+
+		remove_effect = {
+			1111 ={
+				add_resource = {
+					type = steel
+					amount = 8
+				}
+			}
+		}	
+     }
+	 
+	 
+    lao_cai_iron_I = {
+		cost = 50
+        available = {
+            owns_state = 1115
+			has_tech = excavation1
+			num_of_civilian_factories_available_for_projects > 2
+        }
+		visible = {
+			OR = {
+				tag = DAI
+				tag = SMC
+			}
+		}
+		fire_only_once = yes
+		days_remove = 90
+		modifier = {
+			civilian_factory_use = 3
+			political_power_cost = 0.3
+		}
+
+		remove_effect = {
+			1115 ={
+				add_resource = {
+					type = steel
+					amount = 8
+				}
+			}
+		}	
+    }
+    lao_cai_iron_II = {
+		cost = 50
+        available = {
+            owns_state = 1115
+			has_tech = excavation2
+			num_of_civilian_factories_available_for_projects > 3
+        }
+        visible = {
+            has_tech = excavation1
+		}
+		fire_only_once = yes
+		days_remove = 90
+
+		modifier = {
+			civilian_factory_use = 4
+			political_power_cost = 0.4
+		}
+
+		remove_effect = {
+			1115 ={
+				add_resource = {
+					type = steel
+					amount = 8
+				}
+			}
+		}	
+    }
+    lao_cai_iron_III = {
+		cost = 50
+        available = {
+            owns_state = 1115
+			has_tech = excavation3
+			num_of_civilian_factories_available_for_projects > 3
+        }
+        visible = {
+            has_tech = excavation2
+		}
+		fire_only_once = yes
+		days_remove = 90
+
+		modifier = {
+			civilian_factory_use = 4
+			political_power_cost = 0.5
+		}
+
+		remove_effect = {
+			1115 ={
+				add_resource = {
+					type = steel
+					amount = 8
+				}
+			}
+		}	
+    }
+    lao_cai_iron_IV = {
+		cost = 50
+        available = {
+            owns_state = 1115
+			has_tech = excavation4
+			num_of_civilian_factories_available_for_projects > 4
+        }
+        visible = {
+            has_tech = excavation3
+		}
+		fire_only_once = yes
+		days_remove = 90
+			modifier = {
+				civilian_factory_use = 5
+				political_power_cost = 0.6
+			}
+
+		remove_effect = {
+			1115 ={
+				add_resource = {
+					type = steel
+					amount = 8
+				}
+			}
+		}	
+    }
+	
+	
+    DAI_rubber_line_proposal = {
+		cost = 50
+		visible = {
+			OR = {
+				tag = DAI
+				tag = SMC
+			}
+		}
+		fire_only_once = yes
+		days_remove = 120
+
+		complete_effect = {
+			country_event = dainam.10
+		}
+		
+		remove_effect = {
+			build_railway = {
+				level = 1
+				path = { 4401 7238 7347 12150 }
+			}
+		}	
+    }	
+    binh_duong_rubber_I = {
+		cost = 50
+        available = {
+            owns_state = 1104
+			has_tech = excavation1
+			num_of_civilian_factories_available_for_projects > 2
+        }
+		visible = {
+			OR = {
+				tag = DAI
+				tag = SMC
+			}
+		}
+		fire_only_once = yes
+		days_remove = 90
+
+		modifier = {
+			civilian_factory_use = 3
+			political_power_cost = 0.3
+		}
+
+		remove_effect = {
+			1104 ={
+				add_resource = {
+					type = rubber
+					amount = 12
+				}
+			}
+		}	
+    }
+    binh_duong_rubber_II = {
+		cost = 50
+        available = {
+            owns_state = 1104
+			has_tech = excavation2
+			num_of_civilian_factories_available_for_projects > 2
+        }
+        visible = {
+            has_tech = excavation1
+		}
+		fire_only_once = yes
+		days_remove = 90
+
+			modifier = {
+				civilian_factory_use = 3
+				political_power_cost = 0.4
+			}
+
+		remove_effect = {
+			1104 ={
+				add_resource = {
+					type = rubber
+					amount = 12
+				}
+			}
+		}	
+    }
+    binh_duong_rubber_III = {
+		cost = 50
+        available = {
+            owns_state = 1104
+			has_tech = excavation3
+			num_of_civilian_factories_available_for_projects > 3
+        }
+        visible = {
+            has_tech = excavation2
+		}
+		fire_only_once = yes
+		days_remove = 90
+
+			modifier = {
+				civilian_factory_use = 4
+				political_power_cost = 0.5
+			}
+
+		remove_effect = {
+			1104 ={
+				add_resource = {
+					type = rubber
+					amount = 12
+				}
+			}
+		}	
+    }
+	
+	
+    makitton_rubber_I = {
+		cost = 50
+        available = {
+            owns_state = 286
+			has_tech = excavation1
+			num_of_civilian_factories_available_for_projects > 2
+        }
+		visible = {
+			OR = {
+				tag = DAI
+				tag = SMC
+			}
+		}
+		fire_only_once = yes
+		days_remove = 90
+
+			modifier = {
+				civilian_factory_use = 3
+				political_power_cost = 0.3
+			}
+
+		remove_effect = {
+			286 ={
+				add_resource = {
+					type = rubber
+					amount = 12
+				}
+			}
+		}	
+    }
+    makitton_rubber_II = {
+		cost = 50
+        available = {
+            owns_state = 286
+			has_tech = excavation2
+			num_of_civilian_factories_available_for_projects > 2
+        }
+        visible = {
+            has_tech = excavation1
+		}
+		fire_only_once = yes
+		days_remove = 90
+
+			modifier = {
+				civilian_factory_use = 3
+				political_power_cost = 0.4
+			}
+
+		remove_effect = {
+			286 ={
+				add_resource = {
+					type = rubber
+					amount = 12
+				}
+			}
+		}	
+    }
+    makitton_rubber_III = {
+		cost = 50
+        available = {
+            owns_state = 286
+			has_tech = excavation3
+			num_of_civilian_factories_available_for_projects > 3
+        }
+        visible = {
+            has_tech = excavation2
+		}
+		fire_only_once = yes
+		days_remove = 90
+
+			modifier = {
+				civilian_factory_use = 4
+				political_power_cost = 0.5
+			}
+
+		remove_effect = {
+			286 ={
+				add_resource = {
+					type = rubber
+					amount = 12
+				}
+			}
+		}	
+    }
+	
+}
+DAI_SMC_fending_off_japan_white = {
+	DAI_SMC_japan_white_white_peace = {
+		cost = 30
+		days_remove = 30
+		visible = {
+			ROOT = {
+				has_defensive_war_with = JAP
+			}
+		}
+		available = {
+			controls_state = 1106
+			controls_state = 982
+			controls_state = 979
+			controls_state = 286
+			controls_state = 820
+			controls_state = 1110
+			controls_state = 817
+			controls_state = 822
+			controls_state = 1111
+			controls_state = 816
+			controls_state = 983
+			controls_state = 880
+			JAP = {
+				casualties > 300000
+			}
+		}
+		remove_effect  = {
+			JAP = {
+				white_peace = {
+					tag = ROOT
+				}
+				set_truce = {
+					target = ROOT
+					days = 365
+				}
+			}
+			every_country = {
+				limit = {
+					is_in_faction_with = JAP
+				}
+				white_peace = {
+					tag = ROOT
+				}
+				set_truce = {
+					target = ROOT
+					days = 365
+				}
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+DAI_SMC_fending_off_japan_red = {
+	DAI_SMC_japan_red_white_peace = {
+		cost = 30
+		days_remove = 30
+		visible = {
+			ROOT = {
+				has_defensive_war_with = JPR
+			}
+		}
+		available = {
+			controls_state = 1106
+			controls_state = 982
+			controls_state = 979
+			controls_state = 286
+			controls_state = 820
+			controls_state = 1110
+			controls_state = 817
+			controls_state = 822
+			controls_state = 1111
+			controls_state = 816
+			controls_state = 983
+			controls_state = 880
+			JPR = {
+				casualties > 300000
+			}
+		}
+		remove_effect  = {
+			JPR = {
+				white_peace = {
+					tag = ROOT
+				}
+				set_truce = {
+					target = ROOT
+					days = 365
+				}
+			}
+			every_country = {
+				limit = {
+					is_in_faction_with = JPR
+				}
+				white_peace = {
+					tag = ROOT
+				}
+				set_truce = {
+					target = ROOT
+					days = 365
+				}
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

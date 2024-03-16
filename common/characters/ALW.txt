@@ -1,0 +1,14 @@
+characters = {
+	ALW_allah_surya_bashar = {
+		name = "Ali Sulayman al-Assad"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/ALW/Portrait_al_assad.png"
+			}
+		}
+		country_leader = {
+			ideology = left_populism
+			expire = "1965.1.1.1"
+		}
+	}
+}

@@ -1,0 +1,2634 @@
+focus_tree = {
+	id = PER_MAIN
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = PER
+		}
+	}
+	continuous_focus_position = { x = 500 y = 2000 }
+	#Focus for Tamadon-e bozorg
+	focus = {
+		id = PER_tamadone_bozorg
+		icon = GFX_focus_tamadane_bozorg
+		x = 5
+		y = 8
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = PER_create_savak 
+		}
+		prerequisite = { 
+			focus = PER_pearsa_braa_aaranaan 
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			410 = {
+				add_extra_state_shared_building_slots = 1
+			}
+			411 = {
+				add_extra_state_shared_building_slots = 1
+			}
+			412 = {
+				add_extra_state_shared_building_slots = 1
+			}
+			413 = {
+				add_extra_state_shared_building_slots = 1
+			}
+			417 = {
+				add_extra_state_shared_building_slots = 1
+			}
+			421 = {
+				add_extra_state_shared_building_slots = 1
+			}
+			add_political_power = 150
+		}
+	}
+
+	#Focus for Open the Private Army Market
+	focus = {
+		id = PER_open_the_private_army_market
+		icon = GFX_focus_open_the_pmc_market
+		x = 26
+		y = 10
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = PER_keeping_war_off_our_shore }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			add_ideas = {
+				PER_private_armies
+			}
+		}
+	}
+
+	#Focus for Free Market Shiite Practises
+	focus = {
+		id = PER_free_market_shiite_practises
+		icon = GFX_focus_free_market_shiite_practices
+		x = 16
+		y = 7
+		cost = 8
+		available_if_capitulated = yes
+		available_if_capitulated = yes
+		prerequisite = { focus = PER_the_praxeology_of_empire }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			266 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			417 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			413 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Focus for Shah's Rule Restored
+	focus = {
+		id = PER_shahs_rule_restored
+		icon = GFX_focus_shahs_rule_restored
+		x = 11
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = PER_shall_never_die 
+		}
+		prerequisite = { 
+			focus = PER_apoc_mercenaries_assistance 
+		}
+		prerequisite = { 
+			focus = PER_terrorise_disloyal_lands 
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			RPR = {
+				exists = no
+			}
+			has_war = no
+		}
+		completion_reward = {
+			add_stability = 0.05
+			country_event = {
+				id = per.5
+			}
+			hidden_effect = {
+				266 = {
+					remove_core_of = RPR
+				}
+				888 = {
+					remove_core_of = RPR
+				}
+				889 = {
+					remove_core_of = RPR
+				}
+				955 = {
+					remove_core_of = RPR
+				}
+				419 = {
+					remove_core_of = RPR
+				}
+				420 = {
+					remove_core_of = RPR
+				}
+				417 = {
+					remove_core_of = RPR
+				}
+				421 = {
+					remove_core_of = RPR
+				}
+				413 = {
+					remove_core_of = RPR
+				}
+				411 = {
+					remove_core_of = RPR
+				}
+				412 = {
+					remove_core_of = RPR
+				}
+				410 = {
+					remove_core_of = RPR
+				}
+				414 = {
+					remove_core_of = RPR
+				}
+				418 = {
+					remove_core_of = RPR
+				}
+				416 = {
+					remove_core_of = RPR
+				}
+				419 = {
+					remove_claim_by = RPR
+				}
+				420 = {
+					remove_claim_by = RPR
+				}
+			}
+		}
+	}
+
+	#Focus for Pearsa braa aaranaan
+	focus = {
+		id = PER_pearsa_braa_aaranaan
+		icon = GFX_focus_pearse_braa_iran
+		x = 4
+		y = 7
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = PER_nationalise_apoc }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			set_cosmetic_tag = "PER_Iran"
+		}
+	}
+
+	#Focus for APOC Mercenaries Assistance
+	focus = {
+		id = PER_apoc_mercenaries_assistance
+		icon = GFX_focus_APOC_mercs
+		x = 13
+		y = 2
+		cost = 2
+		available_if_capitulated = yes
+		prerequisite = { focus = PER_british_officers_teachings }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			#gain oob for bri'ish mercs
+			custom_effect_tooltip = "PER_APOC_mercs1_tooltip"
+			hidden_effect = {
+				### Templates ###
+				division_template = {
+					name = "Mercenary Brigade"			# Infantry Brigade
+				
+					division_names_group = ENG_INF_01
+				
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 1 y = 2 }
+						infantry = { x = 2 y = 0 }
+						infantry = { x = 2 y = 1 }
+						infantry = { x = 2 y = 2 }
+					}
+				}
+				division_template = {
+					name = "Mercenary Cavalry Brigade"			# Cavalry Brigade
+				
+					division_names_group = ENG_CAV_01
+				
+					regiments = {
+						cavalry = { x = 0 y = 0 }
+						cavalry = { x = 0 y = 1 }
+						cavalry = { x = 0 y = 2 }
+						cavalry = { x = 1 y = 0 }
+						cavalry = { x = 1 y = 1 }
+						cavalry = { x = 1 y = 2 }
+					}
+				}
+				### Units ###
+				random_owned_controlled_state = {
+					prioritize = { 413 }
+					create_unit = {
+						division = "name = \"APOC Mercenary Brigade\" division_template = \"Mercenary Brigade\" start_experience_factor = 0.20 start_equipment_factor = 0.7"
+						prioritize_location = 5005
+						owner = PER
+						count = 2
+						allow_spawning_on_enemy_provs = yes
+					}
+					create_unit = {
+						division = "division_template = \"Mercenary Cavalry Brigade\" start_experience_factor = 0.1 start_equipment_factor = 0.7"
+						prioritize_location = 5005
+						owner = PER
+						allow_spawning_on_enemy_provs = yes
+					}
+				}
+				#load_oob = "PER_APOC_mercs1"
+			}
+		}
+	}
+
+	#Focus for A New Shah For a New Age
+	focus = {
+		id = PER_a_new_shah_for_a_new_age
+		icon = GFX_focus_new_shah_new_age
+		x = 5
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = PER_shahs_rule_restored }
+		mutually_exclusive = { focus = PER_knockknock_mr_pahlavi }
+		ai_will_do = {
+			factor = 300
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			country_event = {
+				id = per.51
+			}
+			set_politics = {
+				ruling_party = despotism
+			}
+			add_country_leader_role = {
+				character = PER_mohammed_reza_pahlavi
+				country_leader = {
+					ideology = absolute_monarchy
+					desc = "SHAH_JNR_DESC"
+					expire = "1965.1.1.1"
+				}
+				promote_leader = yes
+			}
+		}
+	}
+
+	#Focus for Knock-knock Mr. Pahlavi
+	focus = {
+		id = PER_knockknock_mr_pahlavi
+		icon = GFX_focus_knock_knock_mr_pahlavi
+		x = 18
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = PER_shahs_rule_restored }
+		mutually_exclusive = { focus = PER_a_new_shah_for_a_new_age }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			#put APOC in power
+			country_event = {
+				id = per.52
+			}
+		}
+	}
+
+	#Focus for British Officer's Teachings
+	focus = {
+		id = PER_british_officers_teachings
+		icon = GFX_focus_british_teachings
+		x = 13
+		y = 1
+		cost = 1
+		available_if_capitulated = yes
+		prerequisite = { focus = PER_persia_shall_not_fall }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			army_experience = 25
+			add_command_power = 25
+		}
+	}
+
+	#Focus for Soul of Loyalty
+	focus = {
+		id = PER_soul_of_loyalty
+		icon = GFX_focus_soul_of_loyalty
+		x = 11
+		y = 1
+		cost = 1
+		available_if_capitulated = yes
+		prerequisite = { focus = PER_persia_shall_not_fall }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			division_template = {
+				name = "Loyalist Militias"
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+					infantry = { x = 2 y = 0 }
+					infantry = { x = 2 y = 1 }
+				}
+			}
+			random_owned_controlled_state = {
+				prioritize = { 266 }
+				create_unit = {
+					division = "name = \"Loyalist Militias\" division_template = \"Loyalist Militias\" start_experience_factor = 0.75"
+					owner = PER
+				}
+			}
+			random_owned_controlled_state = {
+				prioritize = { 266 }
+				create_unit = {
+					division = "name = \"Loyalist Militias\" division_template = \"Loyalist Militias\" start_experience_factor = 0.75"
+					owner = PER
+				}
+			}
+		}
+	}
+
+	#Focus for Persia Shall Not Fall
+	focus = {
+		id = PER_persia_shall_not_fall
+		icon = GFX_focus_persia_shall_not_fall
+		x = 11
+		y = 0
+		cost = 1
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			add_war_support = 0.1
+			add_stability = -0.05
+			add_command_power = 50
+			add_manpower = 2500
+		}
+	}
+
+	#Focus for Raise Patriotic Spirit in the People
+	focus = {
+		id = PER_raise_patriotic_spirit_in_the_people
+		icon = GFX_focus_raise_patriotic_spirit
+		x = 9
+		y = 1
+		cost = 1
+		available_if_capitulated = yes
+		prerequisite = { focus = PER_persia_shall_not_fall }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = despotism
+				popularity = 0.12
+			}
+			add_political_power = 50
+			add_timed_idea = {
+				idea = PER_white_terror
+				days = 365
+			}
+		}
+	}
+
+	#Focus for Terrorise Disloyal Lands
+	focus = {
+		id = PER_terrorise_disloyal_lands
+		icon = GFX_focus_terrorise_disloyal_lands
+		x = 9
+		y = 2
+		cost = 2
+		available_if_capitulated = yes
+		prerequisite = { focus = PER_raise_patriotic_spirit_in_the_people }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			#adds malus idea to reds
+			RPR = {
+				add_timed_idea = {
+					idea = PER_RPR_white_terror
+					days = 365
+				}
+			}
+		}
+	}
+
+	#Focus for ...Shall Never Die
+	focus = {
+		id = PER_shall_never_die
+		icon = GFX_focus_shall_never_die
+		x = 11
+		y = 2
+		cost = 2
+		available_if_capitulated = yes
+		prerequisite = { focus = PER_soul_of_loyalty }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			#gains royal guard in Tehran
+			division_template = {
+				name = "Royal Guard"
+				regiments = {
+					cavalry = { x = 0 y = 0 }
+					cavalry = { x = 0 y = 1 }
+					cavalry = { x = 1 y = 0 }
+					cavalry = { x = 1 y = 1 }
+					cavalry = { x = 2 y = 0 }
+					cavalry = { x = 2 y = 1 }
+				}
+			}
+			random_owned_controlled_state = {
+				prioritize = { 266 }
+				create_unit = {
+					division = "name = \"Royal Guard\" division_template = \"Royal Guard\" start_experience_factor = 0.95"
+					owner = PER
+				}
+			}
+			random_owned_controlled_state = {
+				prioritize = { 266 }
+				create_unit = {
+					division = "name = \"Royal Guard\" division_template = \"Royal Guard\" start_experience_factor = 0.95"
+					owner = PER
+				}
+			}
+		}
+	}
+
+	#Focus for Get the Hell out of Here
+	focus = {
+		id = PER_get_the_hell_out_of_here
+		icon = GFX_focus_get_the_hell_out_of_here
+		x = 4
+		y = 5
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = PER_a_new_shah_for_a_new_age }
+		ai_will_do = {
+			factor = 500
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = right_authoritarianism
+				popularity = -0.15
+			}
+			add_political_power = 50
+			add_stability = 0.05
+			delete_unit_template_and_units = {
+				division_template = "Mercenary Brigade"
+			}
+			delete_unit_template_and_units = {
+				division_template = "Mercenary Cavalry Brigade"
+			}
+			promote_character = PER_mohammed_reza_pahlavi
+			hidden_effect = {
+				remove_ideas = PER_starting_denbts
+				remove_ideas = PER_more_denbts
+			}
+			
+		}
+	}
+
+	#Focus for Nationalise APOC
+	focus = {
+		id = PER_nationalise_apoc
+		icon = GFX_focus_nationalise_APOC
+		x = 4
+		y = 6
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = PER_get_the_hell_out_of_here }
+		ai_will_do = {
+			factor = 500
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			add_opinion_modifier = {
+				target = ENG
+				modifier = huge_decrease
+			}
+			add_stability = 0.12
+			if = {
+				limit = {
+					has_idea = PER_APOC
+				}
+				remove_ideas = {
+					PER_APOC
+				}
+			}
+			if = {
+				limit = {
+					has_idea = PER_APOC_MOAR
+				}
+				remove_ideas = {
+					PER_APOC_MOAR
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_resource = {
+				type = oil
+				amount = -4
+				state = 412
+			}
+			add_resource = {
+				type = oil
+				amount = -8
+				state = 413
+			}
+		}
+	}
+
+	#Focus for Restore Persian National Council
+	focus = {
+		id = PER_restore_persian_national_council
+		icon = GFX_focus_restore_the_national_council
+		x = 6
+		y = 5
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = PER_a_new_shah_for_a_new_age }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			add_political_power = 150
+			add_stability = 0.1
+			add_popularity = {
+				ideology = right_authoritarianism
+				popularity = 0.1
+			}
+		}
+	}
+
+	#Focus for Create SAVAK
+	focus = {
+		id = PER_create_savak
+		icon = GFX_focus_SAVAK
+		x = 6
+		y = 7
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = PER_only_the_rastakhiz_party }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			add_ideas = {
+				PER_SAVAK
+			}
+		}
+	}
+
+	#Focus for Only the Rastakhiz Party
+	focus = {
+		id = PER_only_the_rastakhiz_party
+		icon = GFX_focus_only_the_shahs_party
+		x = 6
+		y = 6
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = PER_restore_persian_national_council }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = despotism
+				popularity = 0.12
+			}
+			add_popularity = {
+				ideology = popular_socialism
+				popularity = -0.12
+			}
+			add_political_power = -75
+			set_party_name = {
+				ideology = vanguard_socialism 
+				long_name = PER_vanguard_socialism_party_long_banned
+				name = PER_vanguard_socialism_party_banned
+			}
+			set_party_name = {
+				ideology = popular_socialism 
+				long_name = PER_popular_socialism_party_long_banned
+				name = PER_popular_socialism_party_banned
+			}
+			set_party_name = {
+				ideology = anarchism 
+				long_name = PER_anarchism_party_long_banned
+				name = PER_anarchism_party_banned
+			}
+			set_party_name = {
+				ideology = revisionist_socialism 
+				long_name = PER_revisionist_socialism_party_long_banned
+				name = PER_revisionist_socialism_party_banned
+			}
+			set_party_name = {
+				ideology = accelerationism 
+				long_name = PER_accelerationism_party_long_banned
+				name = PER_accelerationism_party_banned
+			}
+		}
+	}
+
+	#Focus for Persian Modernisation
+	focus = {
+		id = PER_persian_modernisation
+		icon = GFX_focus_persian_modernisation
+		x = 9
+		y = 5
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = PER_a_new_shah_for_a_new_age }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 3
+				category = industry
+			}
+		}
+	}
+
+	#Focus for Latinise Farsi
+	focus = {
+		id = PER_latinise_farsi
+		icon = GFX_focus_latinise_farsi
+		x = 8
+		y = 6
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = PER_persian_modernisation }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			#research bonuses
+			#licence purchase reduction with Italy, Turkey, Austria? Greece? 
+			add_opinion_modifier = {
+				target = ITA
+				modifier = large_increase
+			}
+			add_opinion_modifier = {
+				target = FIU
+				modifier = large_increase
+			}
+			add_opinion_modifier = {
+				target = ALB
+				modifier = large_increase
+			}
+			add_opinion_modifier = {
+				target = ENG
+				modifier = large_increase
+			}
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = industry
+			}
+			add_tech_bonus = {
+				bonus = 0.75
+				uses = 1
+				category = electronics
+			}
+			add_stability = -0.07
+			add_political_power = -50
+			add_popularity = {
+				ideology = reactionism
+				popularity = 0.05
+			}
+		}
+	}
+
+	#Focus for State Secularisation
+	focus = {
+		id = PER_state_secularisation
+		icon = GFX_focus_state_secularisation
+		x = 8
+		y = 7
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = PER_latinise_farsi }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			add_political_power = -25
+			add_ideas = {
+				PER_farsi_kemalism
+			}
+			add_popularity = {
+				ideology = reactionism
+				popularity = 0.05
+			}
+		}
+	}
+
+	#Focus for A New Armed Forces
+	focus = {
+		id = PER_a_new_armed_forces
+		icon = GFX_focus_a_new_armed_forces
+		x = 1
+		y = 5
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = PER_a_new_shah_for_a_new_age }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			#mil tech bonuses
+			army_experience = 35
+			add_tech_bonus = { bonus = 0.5 uses = 2 category = mountaineers_tech }
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 2
+				category = land_doctrine
+			}
+		}
+	}
+
+	#Focus for Artsh pearsa - artsh mdrn
+	focus = {
+		id = PER_artsh_pearsa__artsh_mdrn
+		icon = GFX_focus_artsh_pearsa_artsh_mdrn
+		x = 1
+		y = 7
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = PER_adopt_european_doctrines 
+		}
+		prerequisite = { 
+			focus = PER_fund_the_imperial_air_force 
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			#more army tech stuff - motor/tanks?
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = motorized_equipment
+			}
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = cat_light_armor
+			}
+		}
+	}
+
+	#Focus for Adopt European Doctrines
+	focus = {
+		id = PER_adopt_european_doctrines
+		icon = GFX_focus_adopt_euro_strategies
+		x = 2
+		y = 6
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = PER_a_new_armed_forces }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			#doctrine bonuses
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.50
+				uses = 4
+				category = land_doctrine
+				category = air_doctrine
+				category = naval_doctrine
+			}
+		}
+	}
+
+	#Focus for Wfadar fqt bh aaran
+	focus = {
+		id = PER_wfadar_fqt_bh_aaran
+		icon = GFX_focus_wfadar_fqt_bh_iran
+		x = 2
+		y = 8
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = PER_artsh_pearsa__artsh_mdrn }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			add_ideas = {
+				PER_loyal_army
+			}
+		}
+	}
+
+	#Focus for Build an Empire of Our Own
+	focus = {
+		id = PER_build_an_empire_of_our_own
+		icon = GFX_focus_an_empire_of_our_own
+		x = 6
+		y = 12
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = PER_unite_the_middle_east }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			#unlock decisions to go East
+			custom_effect_tooltip = "PER_build_an_empire"
+		}
+	}
+
+	#Focus for Industry of the New Iran
+	focus = {
+		id = PER_industry_of_the_new_iran
+		icon = GFX_focus_industry_of_the_new_iran
+		x = 9
+		y = 9
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = PER_secure_the_white_revolution }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			#bunch of infra a factories
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Focus for Shah's New Railway Expansion
+	focus = {
+		id = PER_shahs_new_railway_expansion
+		icon = GFX_focus_shahs_railway_expansion
+		x = 11
+		y = 9
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = PER_secure_the_white_revolution }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			has_full_control_of_state = 266
+			has_full_control_of_state = 412
+			has_full_control_of_state = 413
+			has_full_control_of_state = 417
+			has_full_control_of_state = 419
+			has_full_control_of_state = 420
+		}
+		completion_reward = {
+			build_railway = {
+				path = { 7982 4959 12832 10797 5089 5005 }
+			}
+			build_railway = {
+				path = { 1896 4825 10454 }
+			}
+			build_railway = {
+				path = { 4637 7969 10837 }
+			}
+			266 = {
+				add_building_construction = {
+					type = supply_node
+					level = 1
+					province = 4637
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Focus for Eliminate Internal Threats
+	focus = {
+		id = PER_eliminate_internal_threats
+		icon = GFX_focus_eliminate_internal_threats
+		x = 7
+		y = 9
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = PER_create_savak 
+		}
+		prerequisite = { 
+			focus = PER_secure_the_white_revolution 
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			add_political_power = -30
+			add_popularity = {
+				ideology = despotism
+				popularity = -0.07
+			}
+			add_timed_idea = {
+				idea = PER_SAVAK_operation_persopolis
+				days = 180
+			}
+		}
+	}
+
+	#Focus for Great Aryamehr
+	focus = {
+		id = PER_great_aryamehr
+		icon = GFX_focus_great_aryamehr
+		x = 5
+		y = 9
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = PER_tamadone_bozorg }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			create_faction = "PER_aryamehr"
+		}
+	}
+
+	#Focus for Take Back What Was Lost
+	focus = {
+		id = PER_take_back_what_was_lost
+		icon = GFX_focus_take_back_what_was_lost
+		x = 5
+		y = 10
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = PER_great_aryamehr }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			#unlock decisions to retake KUR, AZR, Urmia etc.
+			custom_effect_tooltip = "PER_take_back_lost"
+			
+		}
+	}
+
+	#Focus for Unite the Middle East
+	focus = {
+		id = PER_unite_the_middle_east
+		icon = GFX_focus_unite_the_middle_east
+		x = 5
+		y = 11
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = PER_take_back_what_was_lost }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			num_divisions > 21
+		}
+		completion_reward = {
+			#decisions to take out Iraq, ALJ and incite rebellion in Kuwait and Oman
+			custom_effect_tooltip = "PER_unite_ME"
+			
+		}
+	}
+
+	#Focus for Strike Back at the Empire
+	focus = {
+		id = PER_strike_back_at_the_empire
+		icon = GFX_focus_strike_back_at_the_empire
+		x = 4
+		y = 12
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = PER_unite_the_middle_east }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			has_navy_size = {
+				size > 9
+				type = screen_ship
+			}
+		}
+		completion_reward = {
+			#decisions to fight the UK for control in the Gulf
+			custom_effect_tooltip = "PER_ESB"
+			
+		}
+	}
+
+	#Focus for What We Need is OIL
+	focus = {
+		id = PER_what_we_need_is_oil
+		icon = GFX_focus_what_we_need_is_OIL
+		x = 18
+		y = 5
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = PER_knockknock_mr_pahlavi }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			add_resource = {
+				type = oil
+				amount = 7
+				state = 411
+			}
+			add_resource = {
+				type = oil
+				amount = 6
+				state = 412
+			}
+			add_resource = {
+				type = oil
+				amount = 9
+				state = 413
+			}
+		}
+	}
+
+	#Focus for Expand Oil Industry in Southern Persia
+	focus = {
+		id = PER_expand_oil_industry_in_southern_persia
+		icon = GFX_focus_expand_southern_oil_industry
+		x = 20
+		y = 6
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = PER_what_we_need_is_oil }
+		ai_will_do = {
+			factor = 500
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			#new refineries and silos, lose manpower and stab
+			add_manpower = -15432
+			add_stability = -0.07
+			413 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = fuel_silo
+					level = 1
+					instant_build = yes
+				}
+			}
+			412 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = fuel_silo
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Focus for Start Exploration in the North
+	focus = {
+		id = PER_start_exploration_in_the_north
+		icon = GFX_focus_start_northern_exploration
+		x = 19
+		y = 8
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = PER_repay_the_revolution }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			#gain oil exploration decisions in the north
+			add_resource = {
+				type = oil
+				amount = 2
+				state = 416
+			}
+			add_resource = {
+				type = oil
+				amount = 2
+				state = 266
+			}
+			custom_effect_tooltip = PER_northern_exploration_tooltip
+		}
+	}
+
+	#Focus for Social Lubrication
+	focus = {
+		id = PER_social_lubrication
+		icon = GFX_focus_social_lubrication
+		x = 21
+		y = 8
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = PER_found_oil }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			add_ideas = {
+				PER_oil_serfs
+			}
+		}
+	}
+
+	#Focus for Liberalise Labour Policies
+	focus = {
+		id = PER_liberalise_labour_policies
+		icon = GFX_focus_liberalise_labour_policies
+		x = 21
+		y = 9
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = PER_social_lubrication }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			#Really?
+			swap_ideas = {
+				remove_idea = PER_oil_serfs
+				add_idea = PER_oil_serfs2
+			}
+		}
+	}
+
+	#Focus for Disband the Persian Army
+	focus = {
+		id = PER_disband_the_persian_army
+		icon = GFX_focus_disband_the_persian_army
+		x = 25
+		y = 5
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = PER_knockknock_mr_pahlavi }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			#remove Persian units, only APOC remains
+			delete_unit_template_and_units = {
+				division_template = "Dastebandi Savareh"
+			}
+			delete_unit_template_and_units = {
+				division_template = "Dastebandi Sarbaze Piyade"
+			}
+			remove_unit_leader = 1355
+			remove_unit_leader = 1356
+			remove_unit_leader = 1357
+		}
+	}
+
+	#Focus for Integrate British-Trained Soldiers
+	focus = {
+		id = PER_integrate_britishtrained_soldiers
+		icon = GFX_focus_integrate_british_soldiers
+		x = 26
+		y = 6
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = PER_disband_the_persian_army }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			#more mercs, better mercs
+			custom_effect_tooltip = "PER_APOC_mercs2_tooltip"
+			hidden_effect = {
+				load_oob = "PER_APOC_mercs2"
+			}
+			create_corps_commander = {
+				name = "Arthur Sullivan"
+				picture = "Portrait_Arthur_Sullivan.png"
+				traits = {  }
+				skill = 2
+				attack_skill = 2
+				defense_skill = 2
+				planning_skill = 2
+				logistics_skill = 2
+			}
+			create_corps_commander = {
+				name = "Edgar Kinghorn-Myles"
+				picture = "Portrait_Edgar_Kinghorn_Myles.png"
+				traits = { trait_reckless }
+				skill = 2
+				attack_skill = 3
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+			}
+			create_corps_commander = {
+				name = "Thomas-Coyler Fergusson"
+				picture = "Portrait_Thomas_Coyler_Fergusson.png"
+				traits = { brilliant_strategist politically_connected }
+				skill = 2
+				attack_skill = 3
+				defense_skill = 3
+				planning_skill = 2
+				logistics_skill = 2
+			}
+		}
+	}
+
+	#Focus for Found "O.I.L."
+	focus = {
+		id = PER_found_oil
+		icon = GFX_focus_found_OIL
+		x = 21
+		y = 7
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = PER_expand_oil_industry_in_southern_persia }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			#MORE OIL
+			add_resource = {
+				type = oil
+				amount = 6
+				state = 413
+			}
+			add_resource = {
+				type = oil
+				amount = 6
+				state = 412
+			}
+			add_political_power = 75
+		}
+	}
+
+	#Focus for Begin Diversification
+	focus = {
+		id = PER_begin_diversification
+		icon = GFX_focus_begin_diversification
+		x = 20
+		y = 10
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = PER_market_dominance 
+		}
+		prerequisite = { 
+			focus = PER_liberalise_labour_policies 
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			#big economic buff at expense of certain economy stats and pop growth
+			add_ideas = {
+				PER_APOC_profit
+			}
+		}
+	}
+
+	#Focus for "Liberate" Baku Oil Fields
+	focus = {
+		id = PER_liberate_baku_oil_fields
+		icon = GFX_focus_liberate_the_baku_oil_fields
+		x = 19
+		y = 11
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = PER_begin_diversification }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			#decision to attack CCD/owner of Baku
+			custom_effect_tooltip = "PER_liberate_baku"
+			set_country_flag = PER_baku_oil_fields_flag
+		}
+	}
+
+	#Focus for Ask London for Complete Gulf Monopoly
+	focus = {
+		id = PER_ask_london_for_complete_gulf_monopoly
+		icon = GFX_focus_ask_london_for_gulf_monopoly
+		x = 21
+		y = 11
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = PER_begin_diversification }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			#event - ask UK for control over the gulf states
+			ENG = {
+				country_event = {
+					id = per.53
+				}
+			}
+		}
+	}
+
+	#Focus for Sell to Whoever Can Pay
+	focus = {
+		id = PER_sell_to_whoever_can_pay
+		icon = GFX_focus_sell_to_whoever_can_pay
+		x = 23
+		y = 11
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = PER_begin_diversification }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			#export economy
+			#resources to market
+			#ideology relation thingy
+			add_ideas = {
+				free_trade
+			}
+			
+		}
+	}
+
+	#Focus for In Europe
+	focus = {
+		id = PER_in_europe
+		icon = GFX_focus_in_europe
+		x = 22
+		y = 12
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = PER_sell_to_whoever_can_pay }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			#trade relations decisions with euros
+			custom_effect_tooltip = "APOC_decisions_europe"
+		}
+	}
+
+	#Focus for In the Americas
+	focus = {
+		id = PER_in_the_americas
+		icon = GFX_focus_in_the_americas
+		x = 24
+		y = 12
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = PER_sell_to_whoever_can_pay }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			#trade relations decisions with Americans
+			custom_effect_tooltip = "APOC_decisions_americas"
+		}
+	}
+
+	#Focus for In Asia
+	focus = {
+		id = PER_in_asia
+		icon = GFX_focus_in_asia
+		x = 26
+		y = 12
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = PER_sell_to_whoever_can_pay }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			#trade relations decisions with Asians
+			custom_effect_tooltip = "APOC_decisions_asia"
+		}
+	}
+
+	#Focus for Excelsior!
+	focus = {
+		id = PER_excelsior
+		icon = GFX_focus_excelsior
+		x = 20
+		y = 13
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = PER_in_europe 
+		}
+		prerequisite = { 
+			focus = PER_in_the_americas 
+		}
+		prerequisite = { 
+			focus = PER_in_asia 
+		}
+		prerequisite = { 
+			focus = PER_gulf_exploration 
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			#Big money
+			#Big oil
+			#Big PP
+			#Big build cost reductions
+			add_ideas = {
+				PER_OILgarchy
+			}
+		}
+	}
+
+	#Focus for Protect Against Foreign Interests
+	focus = {
+		id = PER_protect_against_foreign_interests
+		icon = GFX_focus_protect_against_foreign_interests
+		x = 10
+		y = 11
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = PER_diversify_the_economy }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			add_ideas = {
+				PER_protect_against_OSS
+			}
+			add_stability = 0.05
+		}
+	}
+
+	#Focus for The Eye of Cyrus
+	focus = {
+		id = PER_the_eye_of_cyrus
+		icon = GFX_focus_the_eye_of_cyrus
+		x = 10
+		y = 12
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = PER_protect_against_foreign_interests }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			date > 1944.01.01
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				category = nuclear
+				bonus = 0.75
+				uses = 2
+			}
+		}
+	}
+
+	#Focus for Remove Uncooperative Diplomats
+	focus = {
+		id = PER_remove_uncooperative_diplomats
+		icon = GFX_focus_remove_uncooperative_diplomats
+		x = 7
+		y = 10
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = PER_eliminate_internal_threats }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			add_political_power = 100
+			add_stability = 0.05
+			add_opinion_modifier = {
+				target = USA
+				modifier = medium_decrease
+			}
+			USA = {
+				add_opinion_modifier = {
+					target = PER
+					modifier = medium_decrease
+				}
+			}
+			add_opinion_modifier = {
+				target = EGY
+				modifier = medium_decrease
+			}
+			EGY = {
+				add_opinion_modifier = {
+					target = PER
+					modifier = medium_decrease
+				}
+			}
+			if = {
+				limit = {
+					RUS = {
+						exists = yes
+					}
+				}
+				add_opinion_modifier = {
+					target = RUS
+					modifier = medium_decrease
+				}
+				RUS = {
+					add_opinion_modifier = {
+						target = PER
+						modifier = medium_decrease
+					}
+				}
+			}
+			if = {
+				limit = {
+					SRU = {
+						exists = yes
+					}
+				}
+				add_opinion_modifier = {
+					target = SRU
+					modifier = medium_decrease
+				}
+				SRU = {
+					add_opinion_modifier = {
+						target = PER
+						modifier = medium_decrease
+					}
+				}
+			}
+		}
+	}
+
+	#Focus for Negotiate a New Paradigm
+	focus = {
+		id = PER_negotiate_a_new_paradigm
+		icon = GFX_focus_negotiate_a_new_paradigm
+		x = 7
+		y = 11
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = PER_remove_uncooperative_diplomats }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			ISR = {
+				exists = yes
+				NOT = {
+					is_in_faction = yes
+				}
+			}
+		}
+		completion_reward = {
+			ISR = {
+				country_event = {
+					id = per.46
+				}
+			}
+		}
+	}
+
+	#Focus for Secure the White Revolution
+	focus = {
+		id = PER_secure_the_white_revolution
+		icon = GFX_focus_secure_the_white_revolution
+		x = 9
+		y = 8
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = PER_state_secularisation 
+		}
+		prerequisite = { 
+			focus = PER_denounce_the_reactionaries 
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			add_political_power = 75
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = industry
+			}
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 3
+				category = electronics
+			}
+		}
+	}
+
+	#Focus for Advance Women's Rights
+	focus = {
+		id = PER_advance_womens_rights
+		icon = GFX_focus_advance_womens_rights
+		x = 10
+		y = 6
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = PER_persian_modernisation }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			add_ideas = {
+				PER_womens_rights
+			}
+			add_popularity = {
+				ideology = reactionism
+				popularity = 0.05
+			}
+		}
+	}
+
+	#Focus for Denounce the Reactionaries
+	focus = {
+		id = PER_denounce_the_reactionaries
+		icon = GFX_focus_denounce_reactionaries
+		x = 10
+		y = 7
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = PER_advance_womens_rights }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			country_event = {
+				id = per.47
+			}
+			add_stability = -0.05
+		}
+	}
+
+	#Focus for Guard the Straits of Hormuz
+	focus = {
+		id = PER_guard_the_straits_of_hormuz
+		icon = GFX_focus_guard_the_straits_of_hormuz
+		x = 1
+		y = 9
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = PER_fortify_the_gulf 
+		}
+		prerequisite = { 
+			focus = PER_wfadar_fqt_bh_aaran 
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					has_dlc = "Man the Guns"
+				}
+				add_tech_bonus = {
+					bonus = 0.5
+					uses = 2
+					category = naval_mines
+				}
+			}
+			else = {
+				add_tech_bonus = {
+					bonus = 0.5
+					uses = 2
+					category = dd_tech
+				}
+			}
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = ss_tech
+			}
+		}
+	}
+
+	#Focus for Fund the Imperial Air Force
+	focus = {
+		id = PER_fund_the_imperial_air_force
+		icon = GFX_focus_fund_the_imperial_air_force
+		x = 0
+		y = 6
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = PER_a_new_armed_forces }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			413 = {
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}
+			266 = {
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}
+			air_experience = 50
+		}
+	}
+
+	#Focus for Feed the Furnaces
+	focus = {
+		id = PER_feed_the_furnaces
+		icon = GFX_focus_feed_the_furnaces
+		x = 24
+		y = 10
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = PER_keeping_war_off_our_shore }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			has_full_control_of_state = 266
+		}
+		completion_reward = {
+			266 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+			add_resource = {
+				type = steel
+				amount = 6
+				state = 266
+			}
+		}
+	}
+
+	#Focus for Bread and Circuses
+	focus = {
+		id = PER_bread_and_circuses
+		icon = GFX_focus_bread_and_circuses
+		x = 15
+		y = 9
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = PER_lessons_from_ford }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			add_stability = 0.1
+			add_war_support = 0.05
+			add_political_power = -50
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Focus for The Praxeology of Empire
+	focus = {
+		id = PER_the_praxeology_of_empire
+		icon = GFX_focus_the_praxeology_of_empire
+		x = 16
+		y = 6
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = PER_what_we_need_is_oil }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = right_authoritarianism
+				popularity = 0.05
+			}
+			add_political_power = 50
+		}
+	}
+
+	#Focus for Neo-Hessians
+	focus = {
+		id = PER_neohessians
+		icon = GFX_focus_neo_hessians
+		x = 23
+		y = 8
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = PER_soldiers_of_fortune }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			custom_effect_tooltip = "PER_neo_hessians_tooltip"
+			hidden_effect = {
+				load_oob = "PER_neo_hessians"
+			}
+		}
+	}
+
+	#Focus for Russian Mercenaries
+	focus = {
+		id = PER_russian_mercenaries
+		icon = GFX_focus_russian_mercs
+		x = 27
+		y = 8
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = PER_soldiers_of_fortune }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			custom_effect_tooltip = "PER_russian_mercs_tooltip"
+			hidden_effect = {
+				load_oob = "PER_russian_mercs"
+			}
+		}
+	}
+
+	#Focus for Keeping War off Our Shore
+	focus = {
+		id = PER_keeping_war_off_our_shore
+		icon = GFX_focus_keeping_war_off_our_shore
+		x = 25
+		y = 9
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = PER_desert_tigers 
+		}
+		prerequisite = { 
+			focus = PER_neohessians 
+		}
+		prerequisite = { 
+			focus = PER_russian_mercenaries 
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			add_ideas = {
+				PER_volunteers_idea
+			}
+			hidden_effect = {
+				set_country_flag = PER_fire_on_the_world
+			}
+			custom_effect_tooltip = "PER_FIRE_ON_THE_WORLD_TOOLTIP"
+		}
+	}
+
+	#Focus for Market Dominance
+	focus = {
+		id = PER_market_dominance
+		icon = GFX_focus_market_dominance
+		x = 19
+		y = 9
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = PER_start_exploration_in_the_north }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			#resources to market
+			add_ideas = {
+				PER_market_dominance_idea
+			}
+		}
+	}
+
+	#Focus for Repay the Revolution
+	focus = {
+		id = PER_repay_the_revolution
+		icon = GFX_focus_repay_the_revolution
+		x = 19
+		y = 7
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = PER_expand_oil_industry_in_southern_persia }
+		ai_will_do = {
+			factor = 500
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			remove_ideas = {
+				PER_more_denbts
+			}
+			add_political_power = 150
+		}
+	}
+
+	#Focus for Open up Local Governments
+	focus = {
+		id = PER_open_up_local_governments
+		icon = GFX_focus_open_up_local_government
+		x = 17
+		y = 11
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = PER_new_propaganda_drives }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	#Focus for Stable Authority
+	focus = {
+		id = PER_stable_authority
+		icon = GFX_focus_stable_authority
+		x = 16
+		y = 12
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = PER_open_up_local_governments 
+		}
+		prerequisite = { 
+			focus = PER_sell_shares_to_local_elites 
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			country_event = {
+				id = per.522
+			}
+			retire_country_leader = yes
+			promote_character = PER_Sayyed_Zia_Tabatabai
+
+			set_cosmetic_tag = PER_republic
+		}
+	}
+
+	#Focus for Sell Shares to Local Elites
+	focus = {
+		id = PER_sell_shares_to_local_elites
+		icon = GFX_focus_sell_shares_to_local_elites
+		x = 15
+		y = 11
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = PER_engineering_civl_service }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = right_authoritarianism
+				popularity = 0.1
+			}
+			add_political_power = -50
+		}
+	}
+
+	#Focus for Engineering Civl Service
+	focus = {
+		id = PER_engineering_civl_service
+		icon = GFX_focus_engineering_civil_service
+		x = 15
+		y = 10
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = PER_bread_and_circuses }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_political_power = 50
+			add_stability = 0.05
+			add_tech_bonus = {
+				bonus = 1
+				uses = 2
+				category = industry
+			}
+		}
+	}
+
+	#Focus for Lessons From Ford
+	focus = {
+		id = PER_lessons_from_ford
+		icon = GFX_focus_lessons_from_ford
+		x = 15
+		y = 8
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = PER_free_market_shiite_practises }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 2
+				category = motorized_equipment
+			}
+		}
+	}
+
+	#Focus for Education According to Plan
+	focus = {
+		id = PER_education_according_to_plan
+		icon = GFX_focus_education_according_to_plan
+		x = 17
+		y = 8
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = PER_free_market_shiite_practises }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			add_ideas = {
+				PER_anglo_persian_education
+			}
+		}
+	}
+
+	#Focus for Native Offices
+	focus = {
+		id = PER_native_offices
+		icon = GFX_focus_native_offices
+		x = 17
+		y = 9
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = PER_education_according_to_plan }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			add_political_power = 50
+			411 = {
+				add_extra_state_shared_building_slots = 1
+			}
+			412 = {
+				add_extra_state_shared_building_slots = 1
+			}
+			413 = {
+				add_extra_state_shared_building_slots = 1
+			}
+			417 = {
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+
+	#Focus for New Propaganda Drives
+	focus = {
+		id = PER_new_propaganda_drives
+		icon = GFX_focus_new_propaganda_drives
+		x = 17
+		y = 10
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = PER_native_offices }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			add_political_power = -50
+			add_stability = 0.05
+			add_popularity = {
+				ideology = right_authoritarianism
+				popularity = 0.05
+			}
+		}
+	}
+
+	#Focus for Gulf Exploration
+	focus = {
+		id = PER_gulf_exploration
+		icon = GFX_focus_gulf_exploration
+		x = 20
+		y = 12
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = PER_liberate_baku_oil_fields 
+		}
+		prerequisite = { 
+			focus = PER_ask_london_for_complete_gulf_monopoly 
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			add_resource = {
+				type = oil
+				amount = 3
+				state = 656
+			}
+			add_resource = {
+				type = oil
+				amount = 3
+				state = 765
+			}
+			add_resource = {
+				type = oil
+				amount = 3
+				state = 658
+			}
+		}
+	}
+
+	#Focus for Pay off Royalists
+	focus = {
+		id = PER_pay_off_royalists
+		icon = GFX_focus_pay_off_royalists
+		x = 24
+		y = 6
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = PER_disband_the_persian_army }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			army_experience = 10
+			add_manpower = 10500
+			add_political_power = -75
+		}
+	}
+
+	#Focus for Soldiers of Fortune
+	focus = {
+		id = PER_soldiers_of_fortune
+		icon = GFX_focus_soldiers_of_fortune
+		x = 25
+		y = 7
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = PER_integrate_britishtrained_soldiers 
+		}
+		prerequisite = { 
+			focus = PER_pay_off_royalists 
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			#merc idea, reduce training time, lose pp gain
+			add_ideas = {
+				PER_soldiers_of_fortune_idea
+			}			
+		}
+	}
+
+	#Focus for Desert Tigers
+	focus = {
+		id = PER_desert_tigers
+		icon = GFX_focus_desert_tigers
+		x = 25
+		y = 8
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = PER_soldiers_of_fortune }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			custom_effect_tooltip = "PER_desert_tigers_tooltip"
+			hidden_effect = {
+				load_oob = "PER_desert_tigers"
+			}
+		}
+	}
+
+	#Focus for Investigate Strategic Deterrence
+	focus = {
+		id = PER_investigate_strategic_deterrence
+		icon = GFX_focus_investigate_stratgetic_defences
+		x = 25
+		y = 11
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = PER_feed_the_furnaces 
+		}
+		prerequisite = { 
+			focus = PER_open_the_private_army_market 
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			date > 1944.01.01
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				category = nuclear
+				bonus = 0.5
+				uses = 2
+			}
+		}
+	}
+
+	#Focus for Fortify the Gulf
+	focus = {
+		id = PER_fortify_the_gulf
+		icon = GFX_focus_fortify_the_gulf
+		x = 0
+		y = 8
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = PER_artsh_pearsa__artsh_mdrn }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			navy_experience = 25
+			413 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker 
+					level = 2
+					instant_build = yes
+					province = 5005
+				}
+			}
+			412 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker 
+					level = 2
+					instant_build = yes
+					province = 12832
+				}
+				add_building_construction = {
+					type = coastal_bunker 
+					level = 2
+					instant_build = yes
+					province = 7982
+				}
+			}
+		}
+	}
+
+	#Focus for Diversify the Economy
+	focus = {
+		id = PER_diversify_the_economy
+		icon = GFX_focus_diversify_the_economy
+		x = 10
+		y = 10
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = PER_industry_of_the_new_iran 
+			focus = PER_shahs_new_railway_expansion 
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			add_resource = {
+				type = steel
+				amount = 10
+				state = 266
+			}
+			add_resource = {
+				type = rubber
+				amount = 3
+				state = 266
+			}
+			add_resource = {
+				type = tungsten
+				amount = 6
+				state = 266
+			}
+			add_stability = 0.1
+			add_political_power = 50
+			add_research_slot = 1
+		}
+	}
+
+#End of focuses 
+ }

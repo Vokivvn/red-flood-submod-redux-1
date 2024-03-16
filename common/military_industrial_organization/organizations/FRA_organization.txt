@@ -1,0 +1,75 @@
+################################
+#tank_manufacturer##############
+################################
+FRA_renault_fra_organization = {
+	include = generic_tank_organization
+	icon = GFX_idea_renault
+	allowed = {
+		original_tag = FRA 
+	}
+}
+FRA_groupe_matford_organization = {
+	include = generic_tank_organization
+	icon = GFX_idea_generic_tank_manufacturer_2
+	allowed = {
+		original_tag = FRA 
+	}
+}
+################################
+#materiel_manufacturer##############
+################################
+FRA_mas_organization = {
+	include = generic_infantry_equipment_organization
+	icon = GFX_idea_mas
+	allowed = {
+		original_tag = FRA 
+	}
+}
+FRA_schneider_organization = {
+	include = generic_infantry_equipment_organization
+	icon = GFX_idea_schneider
+	allowed = {
+		original_tag = FRA 
+	}
+}
+################################
+#naval_manufacturer##############
+################################
+FRA_fcm_organization = {
+	include = generic_task_force_ship_organization
+	icon = GFX_idea_fcm
+	allowed = {
+		original_tag = FRA 
+	}
+}
+################################
+#aircraft_manufacturer##############
+################################
+FRA_morane_saulnier_organization = {
+	include = generic_general_aircraft_organization
+	icon = GFX_idea_morane_saulnier
+	allowed = {
+		original_tag = FRA 
+	}
+}
+FRA_bloch_organization = {
+	include = generic_general_aircraft_organization
+	icon = GFX_idea_bloch
+	allowed = {
+		original_tag = FRA 
+	}
+}
+FRA_amiot_organization = {
+	include = generic_general_aircraft_organization
+	icon = GFX_idea_amiot
+	allowed = {
+		original_tag = FRA 
+	}
+}
+FRA_levasseur_organization = {
+	include = generic_general_aircraft_organization
+	icon = GFX_idea_levasseur
+	allowed = {
+		original_tag = FRA 
+	}
+}

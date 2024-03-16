@@ -1,0 +1,62 @@
+add_namespace = factions
+
+country_event = {
+	id = factions.1
+	title = factions.1.t
+	desc = factions.1.desc
+	#picture = GFX_report_event_BRA_pajama_coup
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = factions.1.a
+		ai_chance = {
+			base = 1
+		}
+		ATU = {
+			wp_total_count = yes
+		}
+		ISR = {
+			puppet = JOR
+			if = {
+				limit = {
+					has_war_with = SYR
+				}
+				white_peace = {
+					tag = SYR
+					message = ISR_syria_gurion_win_syr_tt
+				}
+			}
+			if = {
+				limit = {
+					has_war_with = SNP
+				}
+				white_peace = {
+					tag = SNP
+					message = ISR_syria_gurion_win_snp_tt
+				}
+			}
+			transfer_state = 1003
+			transfer_state = 1092
+		}
+		JOR = {
+			transfer_state = 455
+			transfer_state = 1089
+			set_cosmetic_tag = JOR_ISR
+			set_politics = {
+				ruling_party = right_authoritarianism
+				last_election = "1933.10.25"
+				election_frequency = 48
+				elections_allowed = no
+			}
+			set_popularities = {
+				right_authoritarianism = 100
+			}
+		}
+		
+		1091 = {
+			add_core_of = DRZ
+			transfer_state_to = DRZ
+		}
+	}
+}

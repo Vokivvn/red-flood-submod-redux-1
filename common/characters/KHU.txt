@@ -1,0 +1,14 @@
+characters = {
+	KHU_sambadondgiin = {
+		name = "Sambadondogiin Tserendorj"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/KHU/Portrait_KHU_Tserendorj.tga"
+			}
+		}
+		country_leader = {
+			ideology = religious_fundamentalism
+			expire = "1965.1.1.1"
+		}
+	}
+}

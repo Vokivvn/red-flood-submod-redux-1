@@ -1,0 +1,50 @@
+characters = {
+	CUB_gerardo_machado = {
+		name = "Gerardo Machado"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/CUB/Portrait_CUB_Gerado_Machado.png"
+			}
+		}
+		country_leader = {
+			ideology = classical_liberalism
+			expire = "1965.1.1.1"
+		}
+	}
+	CUB_carlos_saladrigas_zayaz = {
+		name = "Carlos Saladrigas Zayas"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/CUB/Portrait_Zayas.png"
+			}
+		}
+		country_leader = {
+			ideology = spartakism
+			expire = "1965.1.1.1"
+		}
+	}
+	CUB_ramón_grau_san_martín = {
+		name = "Ramón Grau San Martín"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/CUB/Portrait_CUB_Ramon_Grau_San_Martin.png"
+			}
+		}
+		country_leader = {
+			ideology = state_socialism
+			expire = "1965.1.1.1"
+		}
+	}
+	CUB_adrián_del_valle = {
+		name = "Adrián del Valle"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/CUB/Portrait_Adrian_del_Valle.png"
+			}
+		}
+		country_leader = {
+			ideology = social_anarchism
+			expire = "1965.1.1.1"
+		}
+	}
+}

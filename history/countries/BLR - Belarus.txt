@@ -1,0 +1,133 @@
+﻿capital = 206
+set_research_slots = 3
+set_stability = 0.5
+
+oob = "BLR"
+set_air_oob = "BLR_air"
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1
+	tech_recon = 1
+	tech_engineers = 1
+	tech_trucks =1
+	motorised_infantry = 1
+	gw_artillery = 1
+}
+#NSB
+if = {
+	limit = { NOT = { has_dlc = "No Step Back" } }
+	set_technology = {
+		gwtank = 1
+	}
+}
+if = {
+	limit = { has_dlc = "No Step Back" }
+	set_technology = {
+		gwtank_chassis = 1
+		engine_tech_1 = 1
+	}
+}
+
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+	set_technology = {
+		iw_small_airframe = 1
+		aa_lmg = 1
+		aa_cannon_1 = 1
+		early_bombs = 1
+		engines_1 = 1
+	}
+}
+if = {
+	limit = { NOT = { has_dlc = "By Blood Alone" } }
+	set_technology = {
+		early_fighter = 1
+		CAS1 = 1
+	}
+}
+
+# Events
+country_event = { id = belarus.31 days = 1158 }
+
+
+# Politics
+set_politics = {
+	ruling_party = despotism
+	last_election = "1933.10.25"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	vanguard_socialism = 0
+	popular_socialism = 0
+	anarchism = 0
+	revisionist_socialism = 5
+	progressivism = 10
+	liberalism = 10
+	conservatism = 10
+	right_authoritarianism = 0
+	despotism = 45
+	reactionism = 20
+	accelerationism = 0
+}
+
+add_opinion_modifier = { target = LIT modifier = intermarium_friendship }
+add_opinion_modifier = { target = POL modifier = intermarium_friendship }
+add_opinion_modifier = { target = UKR modifier = intermarium_friendship }
+
+recruit_character = BLR_stanislaw_bulak_balachowicz
+recruit_character = BLR_panteleimon_ponomarenko
+recruit_character = BLR_boris_savinkov
+recruit_character = BLR_vaclau_lastouski
+recruit_character = BLR_piotr_kreceuski
+recruit_character = BLR_vincent_hadleuski
+recruit_character = BLR_michal_vistuska
+recruit_character = BLR_kanstancin_jezawitau
+recruit_character = BLR_kyprian_kandratovich
+recruit_character = BLR_aliaksandr_prushinsky
+recruit_character = BLR_hassan_kanapatsky
+recruit_character = BLR_frants_kushal
+recruit_character = BLR_boris_permikin
+recruit_character = BLR_mikalay_dzyamidau
+recruit_character = BLR_michail_yaroslavtsev
+recruit_character = BLR_jan_sierada
+recruit_character = BLR_anton_luckievich
+recruit_character = BLR_roman_skirmunt
+recruit_character = BLR_juliusz_rommel
+recruit_character = BLR_leanard_zajac
+recruit_character = BLR_janka_bylina
+recruit_character = BLR_szymon_rak_michajlowski
+recruit_character = BLR_usevalad_ignatouski
+recruit_character = BLR_arkadz_smolicz
+recruit_character = BLR_brunon_kostecki
+recruit_character = BLR_sciapan_niekraszewicz
+recruit_character = BLR_kazimier_svajak
+recruit_character = BLR_jazep_liosik
+recruit_character = BLR_ivan_kraskouski
+recruit_character = BLR_paval_aliaksiuk
+recruit_character = BLR_aliaksandr_dalgarukau
+recruit_character = BLR_tomasz_hryb
+recruit_character = BLR_mikola_abramcyk
+recruit_character = BLR_kliment_dyadorau
+recruit_character = BLR_fabian_szantyr
+recruit_character = BLR_ivan_luckievich
+recruit_character = BLR_jakub_kolas
+recruit_character = BLR_jazep_mamonka
+recruit_character = BLR_eugeniusz_tinz
+recruit_character = BLR_paluta_badunova
+recruit_character = BLR_branislau_kaminski
+recruit_character = BLR_naval_research_institute_of_minsk
+recruit_character = BLR_river_patrol_central_command
+recruit_character = BLR_benjamin_adamowicz
+recruit_character = BLR_donat_makijonek
+recruit_character = BLR_Yevhgenia_Bosch
+recruit_character = BLR_dmytro
+
+recruit_character = BLR_Uladzimir_Kirylavic
+recruit_character = BLR_Uladzimir_I
+
+add_ideas = {
+
+}

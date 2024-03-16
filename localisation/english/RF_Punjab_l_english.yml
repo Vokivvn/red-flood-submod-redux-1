@@ -1,0 +1,42 @@
+﻿l_english:
+#COUNTRY NAME#
+PNJ_union_costag:0 "Union of India"
+PNJ_union_costag_DEF:0 "Union of India"
+PNJ_union_costag_ADJ:0 "Indian"
+#PARTIES#
+PNJ_vanguard_socialism_party_long:0 "Communist Party of India - Leninist"
+PNJ_popular_socialism_party_long:0 "Communist Party of India - Spartakist"
+PNJ_anarchism_party_long:0 "Anarchist factions"
+PNJ_revisionist_socialism_party_long:0 "Congress Socialist Party"
+PNJ_progressivism_party_long:0 "Indian National Congress - Socialist"
+PNJ_liberalism_party_long:0 "All-India Muslim League"
+PNJ_conservatism_party_long:0 "Unionist Party"
+PNJ_right_authoritarianism_party_long:0 "Shiromani Akali Dal"
+PNJ_despotism_party_long:0 "National Volunteer Organsation - Constitutionalists"
+PNJ_reactionism_party_long:0 "National Volunteer Organsation - Radicals"
+PNJ_accelerationism_party_long:0 "Association for Indian Renewal"
+
+PNJ_vanguard_socialism_party:0 "CPoI - L"
+PNJ_popular_socialism_party:0 "CPoI - S"
+PNJ_anarchism_party:0 "AF"
+PNJ_revisionist_socialism_party:0 "CSP"
+PNJ_progressivism_party:0 "INC - S"
+PNJ_liberalism_party:0 "AML"
+PNJ_conservatism_party:0 "UP"
+PNJ_right_authoritarianism_party:0 "SAD"
+PNJ_despotism_party:0 "NVO (RSS) Constitutionalists"
+PNJ_reactionism_party:0 "NVO (RSS) Radicals"
+PNJ_accelerationism_party:0 "AIR"
+
+#LEADER DESCRIPTIONS#
+POLITICS_Sikandar_Hayat_Khan_DESC:0 "Sir Sikandar Hayat Khan, previously governor, and now - Prime Minister of the small secular democracy in Punjab. His task is a difficult one as he attempts to balance the interests of the muslim nationalists and religious minorities in Punjab. Hindus and Sikhs left behind by the Fall of the Raj look to the Unionists for stability and peace."
+POLITICS_Tara_Singh_DESC:0 ""
+
+#IDEAS#
+PNJ_autoritarian_minority_rule:0 "Struggling Secularism"
+PNJ_autoritarian_minority_rule_desc:0 "The Unionists of Punjab were left with control of the province as the British retreated from ongoing riots and violence in 1934. The continued rule of the party has come to be seen by the people of West Punjab as an afront to the struggle for freedom. The majority muslim province is boiling over with nationalist agitation that threatens the tenuous peace between the religious groups of the province. Already many Hindus and Sikhs are attempting to flee."
+PNJ_elite_sikh_army:0 "Elite Sikh Troops"
+PNJ_elite_sikh_army_desc:0 "The battle-tested Sikh units of the British Indian Army fragmented during the Fall of the Raj. Some units defected whole-sale to defend their homes. These troops make up the backbone of Punjab's standing militia."
+#CUSTOM TOOLTIPS AND FLAGS#
+#DECISIONS (1.5 Update)#
+#FOCUSES#

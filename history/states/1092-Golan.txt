@@ -1,0 +1,20 @@
+state={
+	id=1092
+	name="STATE_1092" #Golan
+	manpower = 12797
+	
+	state_category = rural
+
+	history={
+		owner = SYR
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = SYR
+		add_claim_by = SNP
+	}
+
+	provinces={
+		1074
+	}
+}

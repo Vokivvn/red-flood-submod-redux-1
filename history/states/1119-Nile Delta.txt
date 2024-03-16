@@ -1,0 +1,27 @@
+state={
+	id=1119
+	name="STATE_1119"
+	manpower = 2286596
+
+	state_category = city
+
+	history={
+		owner = EGY #EGY
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+		}
+		victory_points = {
+			10073 3 #tanta
+		}
+		victory_points = {
+			10005 5 #damietta
+		}
+		add_core_of = EGY
+
+	}
+
+	provinces={
+		7091 10073 11964 10005
+	}
+}

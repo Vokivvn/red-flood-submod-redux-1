@@ -1,0 +1,14 @@
+characters = {
+	CEY_victor_lytton = {
+		name = "Victor Lytton"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/CEY/Portrait_CEY_guy.png"
+			}
+		}
+		country_leader = {
+			ideology = colonial_government
+			expire = "1965.1.1.1"
+		}
+	}
+}

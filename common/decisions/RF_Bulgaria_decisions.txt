@@ -1,0 +1,1111 @@
+BUL_yugoslav_mechanic = {
+	BUL_making_promises = {
+		cost = 25
+		priority = 9
+		days_re_enable = 14
+		complete_effect = {
+			add_to_variable = {
+				var = BUL_yugoslav_influence
+				value = 0.03
+			}
+			add_to_variable = {
+				var = YUG.YUG_yugoslav_influence
+				value = -0.03
+			}
+			clamp_variable = {
+				var = BUL_yugoslav_influence
+				min = 0
+				max = 1
+			}
+			clamp_variable = {
+				var = YUG.YUG_yugoslav_influence
+				min = 0
+				max = 1
+			}
+			custom_effect_tooltip = BUL_small_influence_tooltip
+		}
+		visible = {
+			has_country_flag = BUL_yugoslav_mechanic_begins
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	BUL_delivering_pork_barrel = {
+		cost = 25
+		priority = 7
+		days_re_enable = 42
+		complete_effect = {
+			add_timed_idea = {
+				idea = BUL_pork_barrel
+				days = 35
+			}
+			add_to_variable = {
+				var = BUL_yugoslav_influence
+				value = 0.08
+			}
+			add_to_variable = {
+				var = YUG.YUG_yugoslav_influence
+				value = -0.08
+			}
+			clamp_variable = {
+				var = BUL_yugoslav_influence
+				min = 0
+				max = 1
+			}
+			clamp_variable = {
+				var = YUG.YUG_yugoslav_influence
+				min = 0
+				max = 1
+			}
+			custom_effect_tooltip = BUL_large_influence_tooltip
+		}
+		visible = {
+			has_country_flag = BUL_yugoslav_mechanic_begins
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	BUL_swaying_uniforms = {
+		cost = 25
+		priority = 6
+		custom_cost_trigger = {
+			has_equipment = {
+				infantry_equipment_1 > 299
+			}
+		}
+		custom_cost_text = decision_cost_infantry_equipment_300
+		days_re_enable = 28
+		complete_effect = {
+			BUL = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = -300
+					producer = BUL
+				}
+			}
+			add_to_variable = {
+				var = YUG.YUG_yugoslav_influence
+				value = -0.05
+			}
+			add_to_variable = {
+				var = BUL_yugoslav_influence
+				value = 0.05
+			}
+			clamp_variable = {
+				var = BUL_yugoslav_influence
+				min = 0
+				max = 1
+			}
+			clamp_variable = {
+				var = YUG.YUG_yugoslav_influence
+				min = 0
+				max = 1
+			}
+			custom_effect_tooltip = BUL_moderate_rival_influence_tooltip
+		}
+		visible = {
+			has_country_flag = BUL_yugoslav_mechanic_begins
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	BUL_unite_yugoslavia = {
+		cost = 200
+		priority = 10
+		fire_only_once = yes
+
+		complete_effect = {
+			hidden_effect = {
+				if = {
+					limit = {
+						ALB = {
+							is_subject_of = YUG
+						}
+					}
+					BUL = {
+						puppet = ALB
+					}
+					ALB = {
+						set_politics = {
+							ruling_party = right_authoritarianism
+						}
+						set_cosmetic_tag = ALB_bulgar
+					}
+				}
+				if = {
+					limit = {
+						has_completed_focus = BUL_new_scythe_new_government
+					}
+					news_event = {
+						id = news.259
+					}
+				}
+				if = {
+					limit = {
+						has_completed_focus = BUL_total_war_for_bread
+					}
+					news_event = {
+						id = news.261
+					}
+				}
+				if = {
+					limit = {
+						has_completed_focus = BUL_laughter_and_tears
+					}
+					news_event = {
+						id = news.262
+					}
+				}
+				if = {
+					limit = {
+						has_completed_focus = BUL_touch_grass
+					}
+					news_event = {
+						id = news.263
+					}
+				}
+				if = {
+					limit = {
+						has_completed_focus = BUL_sound_of_golden_horn
+					}
+					news_event = {
+						id = news.264
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_idea = BUL_watchful_eye2
+				}
+				remove_ideas = {
+					BUL_watchful_eye2
+				}
+			}
+			if = {
+				limit = {
+					has_idea = BUL_watchful_eye3
+				}
+				remove_ideas = {
+					BUL_watchful_eye3
+				}
+			}
+			annex_country = {
+			    target = YUG
+			    transfer_troops = yes
+			}
+			YUG = {
+				every_unit_leader = {
+					set_nationality = BUL
+				}
+			}
+			custom_effect_tooltip = BUL_integration_cost
+			clr_country_flag = BUL_yugoslav_mechanic_begins
+			drop_cosmetic_tag = yes
+			set_cosmetic_tag = BUL_yugo_free
+			add_research_slot = 1
+			clear_variable = BUL_yugoslav_influence
+			clear_variable = YUG.YUG_yugoslav_influence
+		}
+		visible = {
+			has_country_flag = BUL_yugoslav_mechanic_begins
+		}
+		available = {
+			check_variable = {
+			    BUL_yugoslav_influence > 0.89
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	BUL_swaying_peasants = {
+		cost = 25
+		priority = 8
+		days_re_enable = 28
+		complete_effect = {
+			add_timed_idea = {
+				idea = BUL_propaganda_campaign
+				days = 21
+			}
+			add_to_variable = {
+				var = BUL_yugoslav_influence
+				value = 0.05
+			}
+			add_to_variable = {
+				var = YUG.YUG_yugoslav_influence
+				value = -0.05
+			}
+			clamp_variable = {
+				var = BUL_yugoslav_influence
+				min = 0
+				max = 1
+			}
+			clamp_variable = {
+				var = YUG.YUG_yugoslav_influence
+				min = 0
+				max = 1
+			}
+			custom_effect_tooltip = BUL_moderate_influence_tooltip
+		}
+		visible = {
+			has_country_flag = BUL_yugoslav_mechanic_begins
+			has_completed_focus = BUL_land_so_foreign
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	BUL_swaying_workers = {
+		cost = 25
+		priority = 8
+		days_re_enable = 28
+		complete_effect = {
+			add_timed_idea = {
+				idea = BUL_propaganda_campaign
+				days = 21
+			}
+			add_to_variable = {
+				var = BUL_yugoslav_influence
+				value = 0.05
+			}
+			add_to_variable = {
+				var = YUG.YUG_yugoslav_influence
+				value = -0.05
+			}
+			clamp_variable = {
+				var = BUL_yugoslav_influence
+				min = 0
+				max = 1
+			}
+			clamp_variable = {
+				var = YUG.YUG_yugoslav_influence
+				min = 0
+				max = 1
+			}
+			custom_effect_tooltip = BUL_moderate_influence_tooltip
+		}
+		visible = {
+			has_country_flag = BUL_yugoslav_mechanic_begins
+			has_completed_focus = BUL_red_blood_of_brothers
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	BUL_swaying_soldiers = {
+		cost = 25
+		priority = 8
+		days_re_enable = 28
+		complete_effect = {
+			add_timed_idea = {
+				idea = BUL_propaganda_campaign
+				days = 21
+			}
+			add_to_variable = {
+				var = BUL_yugoslav_influence
+				value = 0.05
+			}
+			add_to_variable = {
+				var = YUG.YUG_yugoslav_influence
+				value = -0.05
+			}
+			clamp_variable = {
+				var = BUL_yugoslav_influence
+				min = 0
+				max = 1
+			}
+			clamp_variable = {
+				var = YUG.YUG_yugoslav_influence
+				min = 0
+				max = 1
+			}
+			custom_effect_tooltip = BUL_moderate_influence_tooltip
+		}
+		visible = {
+			has_country_flag = BUL_yugoslav_mechanic_begins
+			has_completed_focus = BUL_farewell_old_bulgaria
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	BUL_swaying_intelligentsia = {
+		cost = 25
+		priority = 8
+		days_re_enable = 28
+		complete_effect = {
+			add_timed_idea = {
+				idea = BUL_propaganda_campaign
+				days = 21
+			}
+			add_to_variable = {
+				var = BUL_yugoslav_influence
+				value = 0.05
+			}
+			add_to_variable = {
+				var = YUG.YUG_yugoslav_influence
+				value = -0.05
+			}
+			clamp_variable = {
+				var = BUL_yugoslav_influence
+				min = 0
+				max = 1
+			}
+			clamp_variable = {
+				var = YUG.YUG_yugoslav_influence
+				min = 0
+				max = 1
+			}
+			custom_effect_tooltip = BUL_moderate_influence_tooltip
+		}
+		visible = {
+			has_country_flag = BUL_yugoslav_mechanic_begins
+			has_completed_focus = BUL_blessing_of_dyonisus
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	BUL_swaying_christians = {
+		cost = 25
+		priority = 8
+		days_re_enable = 28
+		complete_effect = {
+			add_timed_idea = {
+				idea = BUL_propaganda_campaign
+				days = 21
+			}
+			add_to_variable = {
+				var = BUL_yugoslav_influence
+				value = 0.05
+			}
+			add_to_variable = {
+				var = YUG.YUG_yugoslav_influence
+				value = -0.05
+			}
+			clamp_variable = {
+				var = BUL_yugoslav_influence
+				min = 0
+				max = 1
+			}
+			clamp_variable = {
+				var = YUG.YUG_yugoslav_influence
+				min = 0
+				max = 1
+			}
+			custom_effect_tooltip = BUL_moderate_influence_tooltip
+		}
+		visible = {
+			has_country_flag = BUL_yugoslav_mechanic_begins
+			has_completed_focus = BUL_you_cannot_talk_with_monsters
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+
+### FOREIGN POLICY ###
+
+BUL_foreign_policy = {
+	BUL_join_rotfront = {
+		fire_only_once = yes
+		cost = 25
+		priority = 10
+		available = {
+			date > 1939.3.1
+		}
+		complete_effect = {
+			GER = {
+				country_event = {
+					id = bulgaria.9
+					days = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	BUL_attack_albania = {
+		icon = generic_prepare_civil_war
+		cost = 50
+		fire_only_once = yes
+
+		days_remove = 14
+		remove_effect  = {
+			if = {
+				limit = {
+					AND = {
+						has_completed_focus = BUL_folk_king_wheat_throne
+						NOT = {
+							ALB = {
+								is_puppet_of = BUL
+							}
+						}
+					}
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = ALB
+				}
+				hidden_effect = {
+					add_state_claim = 811
+					add_state_claim = 44
+					add_state_claim = 942
+					add_state_claim = 941
+				}
+				custom_effect_tooltip = BUL_puppet_albania_warning
+			}
+			else = {
+				if = {
+					limit = {
+						ALB = {
+							is_puppet_of = BUL
+						}
+					}
+					annex_country = {
+						target = ALB
+						transfer_troops = yes
+					}
+				}
+				else = {
+					create_wargoal = {
+						type = annex_everything
+						target = ALB
+					}
+				}
+				add_state_core = 811
+				add_state_core = 44
+				add_state_core = 942
+				add_state_core = 941
+			}
+		}
+		visible = {
+			OR = {
+				NOT = {
+					has_completed_focus = BUL_folk_king_wheat_throne
+				}
+				AND = {
+					has_completed_focus = BUL_folk_king_wheat_throne
+					NOT = {
+						ALB = {
+							is_puppet_of = BUL
+						}
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	BUL_puppet_albania = {
+		fire_only_once = yes
+		allowed = { tag = BUL }
+		available = {
+			NOT = {
+				owns_state = 44
+				ALB = { 
+					exists = no
+				}
+			}
+		}
+		activation = {
+			has_completed_focus = BUL_folk_king_wheat_throne
+			owns_state = 44
+			ALB = { 
+				exists = no
+			}
+		}
+		is_good = yes
+		days_mission_timeout = 1
+		timeout_effect = {
+			every_state = {
+				limit = {
+					OR = {
+						state = 811
+						state = 44
+						state = 942
+						state = 941
+					}
+				}
+				transfer_state_to = ALB
+				remove_claim_by = BUL
+			}
+			BUL = {
+				puppet = ALB
+			}
+			ALB = {
+				set_politics = {
+					ruling_party = right_authoritarianism
+				}
+				promote_character = ALB_cenu_bej_kryeziu
+				add_popularity = {
+					ideology = right_authoritarianism
+					popularity = 0.30
+				}
+				set_cosmetic_tag = ALB_bulgar
+			}
+		}
+	}
+	BUL_attack_montenegro = {
+		icon = generic_prepare_civil_war
+		cost = 50
+		fire_only_once = yes
+
+		days_remove = 14
+		remove_effect  = {
+			create_wargoal = {
+    			type = annex_everything
+    			target = MNT
+			}
+		}
+		available = {
+			MNT = {
+				NOT = {
+					is_puppet_of = ITA
+				}
+			}
+			ITA = {
+				exists = no
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	BUL_attack_greece = {
+		icon = generic_prepare_civil_war
+		cost = 100
+		fire_only_once = yes
+
+		days_remove = 14
+		remove_effect  = {
+			hidden_effect = {
+				remove_state_claim = 731
+				remove_state_claim = 184
+				remove_state_claim = 341
+			}
+			if = {
+				limit = {
+					OR = {
+						has_completed_focus = BUL_folk_king_wheat_throne
+						has_completed_focus = BUL_anarchism_in_practice
+					}
+				}
+				add_state_core = 731
+				add_state_core = 184
+				add_state_core = 341
+				hidden_effect = {
+					add_state_claim = 185
+					add_state_claim = 47
+					add_state_claim = 186
+					add_state_claim = 187
+					add_state_claim = 182
+	
+					add_state_claim = 183
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = GRE
+				}
+				custom_effect_tooltip = BUL_puppet_greece_warning
+			}
+			else = {
+				add_state_core = 731
+				add_state_core = 184
+				add_state_core = 341
+
+				add_state_core = 185
+				add_state_core = 47
+				add_state_core = 186
+				add_state_core = 187
+				add_state_core = 182
+
+				add_state_core = 183
+
+				create_wargoal = {
+					type = annex_everything
+					target = GRE
+				}
+			}
+		}
+		available = {
+			owns_state = 736
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	BUL_puppet_greece = {
+		fire_only_once = yes
+		allowed = { tag = BUL }
+		available = {
+			NOT = {
+				owns_state = 47
+				GRE = { 
+					exists = no
+				}
+			}
+		}
+		activation = {
+			OR = {
+				has_completed_focus = BUL_folk_king_wheat_throne
+				has_completed_focus = BUL_anarchism_in_practice
+			}
+			owns_state = 47
+			GRE = { 
+				exists = no
+			}
+		}
+		is_good = yes
+		days_mission_timeout = 1
+		timeout_effect = {
+			every_state = {
+				limit = {
+					OR = {
+						state = 185
+						state = 47
+						state = 186
+						state = 187
+						state = 182
+						state = 183
+					}
+				}
+				transfer_state_to = GRE
+			}
+			if = {
+				limit = {
+					BUL = {
+						owns_state = 164
+					}
+				}
+				GRE = {
+					transfer_state = 164
+				}
+			}
+			BUL = {
+				puppet = GRE
+				hidden_effect = {
+					remove_state_claim = 185
+					remove_state_claim = 47
+					remove_state_claim = 186
+					remove_state_claim = 187
+					remove_state_claim = 182
+	
+					remove_state_claim = 183
+				}
+			}
+			GRE = {
+				set_politics = {
+					ruling_party = vanguard_socialism
+				}
+				set_cosmetic_tag = GRE_bulgar
+				add_country_leader_role = {
+					character = "GRE_Alexandros_Papanastasiou"
+					country_leader = {
+						ideology = stratocratic_socialism
+						expire = "1965.1.1.1"
+					}
+					promote_leader = yes
+				}
+				add_popularity = {
+					ideology = vanguard_socialism
+					popularity = 0.30
+				}
+			}
+		}
+	}
+	BUL_attack_fiume = {
+		icon = generic_prepare_civil_war
+		cost = 100
+		fire_only_once = yes
+		priority = 8
+
+		days_remove = 14
+		remove_effect = {
+			create_wargoal = {
+				type = take_state_focus
+				target = FIU
+			}
+		}
+		available = {
+			date > 1940.01.01
+			OR = {
+				is_in_faction_with = GER
+				NOT = {
+					GER = {
+						is_faction_leader = yes
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	BUL_attack_romania = {
+		icon = generic_prepare_civil_war
+		cost = 100
+		fire_only_once = yes
+		available = {
+			has_global_flag = united_romania
+		}
+		days_remove = 14
+		remove_effect  = {
+			hidden_effect = {
+				remove_state_claim = 77
+				remove_state_claim = 1059
+			}
+			if = {
+				limit = {
+					OR = {
+						has_completed_focus = BUL_folk_king_wheat_throne
+						has_completed_focus = BUL_anarchism_in_practice
+					}
+				}
+				add_state_core = 77
+				add_state_core = 1059
+
+				if = {
+					limit = {
+						country_exists = ROM
+					}
+					create_wargoal = {
+						type = annex_everything
+						target = ROM
+					}
+				}
+				if = {
+					limit = {
+						country_exists = MOL
+					}
+					create_wargoal = {
+						type = annex_everything
+						target = MOL
+					}
+				}
+				if = {
+					limit = {
+						AND = {
+							country_exists = TRS
+							TRS = {
+								NOT = {
+									is_in_faction_with = GER
+								}
+							}
+						}
+					}
+					create_wargoal = {
+						type = annex_everything
+						target = TRS
+					}
+				}
+				hidden_effect = {
+					add_state_claim = 46
+					add_state_claim = 81
+	
+					add_state_claim = 79
+					add_state_claim = 1193
+					add_state_claim = 80
+					add_state_claim = 78
+					add_state_claim = 766
+					add_state_claim = 1014
+	
+					add_state_claim = 82
+					add_state_claim = 84
+					add_state_claim = 1195
+					add_state_claim = 1194
+					add_state_claim = 76
+					add_state_claim = 83
+	
+					add_state_claim = 911
+					add_state_claim = 923
+				}
+				custom_effect_tooltip = BUL_puppet_romania_warning
+			}
+			else = {
+				add_state_core = 77
+				add_state_core = 1059
+
+				add_state_core = 46
+				add_state_core = 81
+
+				add_state_core = 79
+				add_state_core = 1193
+				add_state_core = 80
+				add_state_core = 78
+				add_state_core = 766
+				add_state_core = 1014
+
+				add_state_core = 82
+				add_state_core = 84
+				add_state_core = 1195
+				add_state_core = 1194
+				add_state_core = 76
+				add_state_core = 83
+
+				add_state_core = 911
+				add_state_core = 923
+
+				if = {
+					limit = {
+						country_exists = ROM
+					}
+					create_wargoal = {
+						type = annex_everything
+						target = ROM
+					}
+				}
+				if = {
+					limit = {
+						country_exists = MOL
+					}
+					create_wargoal = {
+						type = annex_everything
+						target = MOL
+					}
+				}
+				if = {
+					limit = {
+						AND = {
+							country_exists = TRS
+							TRS = {
+								NOT = {
+									is_in_faction_with = GER
+								}
+							}
+						}
+					}
+					create_wargoal = {
+						type = annex_everything
+						target = TRS
+					}
+				}
+			}
+		}
+		available = {
+			owns_state = 736
+		}
+		visible = {
+			OR = {
+				country_exists = ROM
+				country_exists = MOL
+				AND = {
+					country_exists = TRS
+					TRS = {
+						NOT = {
+							is_in_faction_with = GER
+						}
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	BUL_puppet_romania = {
+		fire_only_once = yes
+		allowed = { tag = BUL }
+		available = {
+			NOT = {
+				owns_state = 46
+				AND = {
+					ROM = { 
+						exists = no
+					}
+					MOL = { 
+						exists = no
+					}
+				}
+			}
+		}
+		activation = {
+			OR = {
+				has_completed_focus = BUL_folk_king_wheat_throne
+				has_completed_focus = BUL_anarchism_in_practice
+			}
+			owns_state = 46
+			AND = {
+				ROM = { 
+					exists = no
+				}
+				MOL = { 
+					exists = no
+				}
+			}
+		}
+		is_good = yes
+		days_mission_timeout = 1
+		timeout_effect = {
+			every_state = {
+				limit = {
+					OR = {
+						state = 46
+						state = 81
+
+						state = 79
+						state = 1193
+						state = 80
+						state = 78
+						state = 766
+						state = 1014
+					}
+				}
+				add_core_of = ROM
+				transfer_state_to = ROM
+			}
+			if = {
+				limit = {
+					NOT = {
+						country_exists = TRS
+					}
+				}
+				every_state = {
+					limit = {
+						OR = {
+							state = 82
+							state = 84
+							state = 1195
+							state = 1194
+							state = 76
+							state = 83
+						}
+					}
+					add_core_of = ROM
+					transfer_state_to = ROM
+				}
+			}
+			BUL = {
+				puppet = ROM
+				hidden_effect = {
+					remove_state_claim = 46
+					remove_state_claim = 81
+	
+					remove_state_claim = 79
+					remove_state_claim = 1193
+					remove_state_claim = 80
+					remove_state_claim = 78
+					remove_state_claim = 766
+					remove_state_claim = 1014
+	
+					remove_state_claim = 82
+					remove_state_claim = 84
+					remove_state_claim = 1195
+					remove_state_claim = 1194
+					remove_state_claim = 76
+					remove_state_claim = 83
+	
+					remove_state_claim = 911
+					remove_state_claim = 923
+				}
+			}
+			ROM = {
+				set_politics = {
+					ruling_party = revisionist_socialism
+				}
+				set_cosmetic_tag = ROM_bulgar
+				add_country_leader_role = {
+					character = "ROM_Gherea"
+					country_leader = {
+						ideology = agrarian_socialism
+						expire = "1965.1.1.1"
+					}
+					promote_leader = yes
+				}
+				add_popularity = {
+					ideology = revisionist_socialism
+					popularity = 0.30
+				}
+			}
+		}
+	}
+	BUL_attack_straits = {
+		icon = generic_prepare_civil_war
+		cost = 100
+		fire_only_once = yes
+
+		days_remove = 14
+		remove_effect  = {
+			add_state_core = 976
+			add_state_core = 1124
+			create_wargoal = {
+				type = annex_everything
+				target = var:1124.owner
+			}
+		}
+		available = {
+			AND = {
+				owns_state = 341
+				owns_state = 1059
+				owns_state = 736
+			}
+		}
+		visible = {
+			OR = {
+				has_completed_focus = BUL_day_of_liberation
+				has_completed_focus = BUL_haemimontus_invicta
+				has_completed_focus = BUL_solar_temple_over_earth
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	BUL_peace_straits = {
+		allowed = { tag = BUL }
+		activation = {
+			OR = {
+				has_completed_focus = BUL_day_of_liberation
+				has_completed_focus = BUL_haemimontus_invicta
+				has_completed_focus = BUL_solar_temple_over_earth
+			}
+			1124 = {
+				controller = {
+					BUL = {
+						has_war_with = PREV
+					}
+				}
+			}
+			BUL = {
+				controls_state = 976
+				controls_state = 1124
+			}
+		}
+		available = {
+			NOT = {
+				BUL = {
+					controls_state = 976
+					controls_state = 1124
+				}
+			}
+		}
+		is_good = yes
+		days_mission_timeout = 90
+		timeout_effect = {
+			hidden_effect = {
+				every_state = {
+					limit = {
+						OR = {
+							state = 976
+							state = 1124
+						}
+					}
+					transfer_state_to = BUL
+				}
+			}
+			1124 = {
+				controller = {
+					BUL = {
+						white_peace = PREV
+					}
+				}
+			}
+		}
+	}
+}

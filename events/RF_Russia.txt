@@ -1,0 +1,2114 @@
+###################
+# Russian Events #
+###################
+
+add_namespace = russia
+
+##Event: Planning for a Vacation
+country_event = {
+	id = russia.1
+	title = russia.1.t
+	desc = russia.1.d
+	picture = GFX_report_event_military_planning
+		
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	
+	
+	option = {
+		name = russia.1.a
+		ai_chance = {
+			factor = 1
+		}
+		hidden_effect = {
+			country_event = {
+				id = russia.3
+				days = 12
+			}
+		}
+	}
+}
+
+#Prince of Darkness
+country_event = {
+	id = russia.2
+	title = russia.2.t
+	desc = russia.2.d
+	picture = GFX_report_event_prince_of_darkness
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = russia.2.a
+		add_stability = 0.03
+	}
+	
+	option = {
+		name = russia.2.b
+	}
+}
+
+## Summer Coup Part two, Kolchack arrives
+country_event = {
+	id = russia.3
+	title = russia.3.t
+	desc = russia.3.desc
+	picture = GFX_report_event_military_planning
+		
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = russia.3.b
+		ai_chance = {
+			factor = 1
+		}
+		hidden_effect = {
+			dismantle_faction = yes
+			diplomatic_relation = {
+				   country = TAN
+				   relation = military_access
+				   active = no
+				}
+				diplomatic_relation = {
+				   country = TAN
+				   relation = non_aggression_pact
+				   active = no
+				}
+			TAN = {
+				drop_cosmetic_tag = yes 
+				leave_faction = yes
+				diplomatic_relation = {
+				   country = RUS
+				   relation = military_access
+				   active = no
+				}
+				diplomatic_relation = {
+				   country = RUS
+				   relation = non_aggression_pact
+				   active = no
+				}
+			}
+			country_event = {
+				id = russia.5
+				days = 2
+			}
+		}
+	}
+}
+## Kolchack Dies, Romanov Ivan Pavlovic carries on
+country_event = {
+	id = russia.4
+	title = russia.4.t
+	desc = russia.4.desc
+	picture = GFX_report_event_military_planning
+		
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	
+	
+	option = {
+		name = russia.4.a
+		ai_chance = {
+			factor = 1
+		}
+		hidden_effect = {
+			FIN = {
+				set_country_flag = FIN_storm
+			}
+			set_country_flag = RUS_kolchakdead
+		}
+		SRU = { 
+			transfer_state = 224 
+			transfer_state = 205
+			transfer_state = 222
+			transfer_state = 223
+			transfer_state = 219
+			transfer_state = 258
+			transfer_state = 254
+			transfer_state = 257
+			transfer_state = 260
+			retire_country_leader = yes
+			remove_ideas = RUS_warlord_indifference		
+		} 
+		set_autonomy = {
+			target = SRU
+			autonomy_state = autonomy_free
+		}
+		country_event = {
+			id = russia.6
+			days = 2
+		}
+	}
+}
+## Kolchack Survives and is miffed
+country_event = {
+	id = russia.5
+	title = russia.5.t
+	desc = russia.5.desc
+	picture = GFX_report_event_military_planning
+		
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	
+	
+	
+	option = {
+		name = russia.5.a
+		ai_chance = {
+			factor = 1
+		}
+		hidden_effect = {
+			FIN = {
+				set_country_flag = FIN_storm
+			}
+		}
+		SRU = {
+			transfer_state = 224 
+			transfer_state = 205
+			transfer_state = 222
+			transfer_state = 223
+			transfer_state = 219
+			transfer_state = 258
+			transfer_state = 254
+			transfer_state = 257
+			transfer_state = 260
+
+			 retire_country_leader = yes
+		  
+			remove_ideas = RUS_warlord_indifference
+		}
+		set_autonomy = {
+			target = SRU
+			autonomy_state = autonomy_free
+		}
+		country_event = {
+			id = russia.6
+			days = 2
+		}
+	}
+}
+## Summer Coup War
+country_event = {
+	id = russia.6
+	title = russia.6.t
+	desc = russia.6.desc
+	picture = GFX_report_event_military_planning
+		
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	
+	immediate = {
+		hidden_effect = {
+			clr_country_flag = RUS_start
+			mark_focus_tree_layout_dirty = yes
+			set_global_flag = summer_coup
+			dismantle_faction = yes
+			diplomatic_relation = {
+				country = TAN
+				relation = military_access
+				active = no
+			}
+			diplomatic_relation = {
+				country = TAN
+				relation = non_aggression_pact
+				active = no
+			}
+			TAN = {
+				drop_cosmetic_tag = yes 
+				leave_faction = yes
+				diplomatic_relation = {
+					country = RUS
+					relation = military_access
+					active = no
+				}
+			}
+			FIN = {
+				set_country_flag = FIN_storm
+			}
+			every_state = {
+				limit = {
+					is_owned_by = SRU
+					is_core_of = SRU
+				}
+				add_core_of = RUS
+			}
+			every_state = {
+				limit = {
+					is_owned_by = RUS
+					is_core_of = RUS
+				}
+				add_core_of = SRU
+			}
+			TRK = {
+				country_event = {
+					id = trk.1
+				}
+			}
+			ORE = {
+				country_event = {
+					id = ore.2
+				}
+			}
+			PRS = {
+				swap_ideas = {
+					remove_idea = PRS_help_from_the_bear
+					add_idea = PRS_our_patron_lost
+				}
+			}
+			news_event = {
+				id = news.6
+			}
+		}
+	}
+	
+	option = {
+		name = russia.6.a
+		ai_chance = {
+			factor = 1
+		}
+		
+		declare_war_on = {
+			target = SRU
+			type = annex_everything
+		}
+		SRU = { load_oob = SRU_Summer_Coup }
+	
+
+		custom_effect_tooltip = "rus_summer_war_condition_tt"
+	}
+	option = {
+		name = russia.6.b
+		ai_chance = {
+			factor = 1
+		}
+		
+		declare_war_on = {
+			target = SRU
+			type = annex_everything
+		}
+		SRU = { load_oob = SRU_Summer_Coup }
+		SRU = {
+			change_tag_from = ROOT 
+		}
+		
+		custom_effect_tooltip = "rus_summer_war_condition_tt"
+	}
+}
+
+## Summer Coup Victory - Drozdovsky
+#country_event = {
+#	id = russia.61
+#	title = russia.61.t
+#	desc = russia.61.desc
+#	picture = GFX_report_event_military_planning
+#		
+#	fire_only_once = yes
+#	
+#	trigger = {
+#		tag = SRU
+#		SRU = {
+#			#owns_state = #moscow
+#			#owns_state = #petrograd
+#			#owns_state = #crimea
+#			#owns_state = #dnipro/luhansk
+#		}
+#		RUS = {
+#			exists = no
+#		}
+#	}
+#	
+#	option = {
+#		name = russia.61.a
+#		ai_chance = {
+#			factor = 1
+#		}
+#		set_country_flag = "rus_coup_one_victory"
+#	}
+#}
+
+## Summer Coup Victory - Kolchakists
+#country_event = {
+#	id = russia.62
+#	title = russia.62.t
+#	desc = russia.62.desc
+#	picture = GFX_report_event_military_planning
+#		
+#	fire_only_once = yes
+#	
+#	trigger = {
+#		tag = RUS
+#		RUS = {
+#			#owns_state = #moscow
+#			#owns_state = #petrograd
+#			#owns_state = #crimea
+#			#owns_state = #dnipro/luhansk/yuzovka
+#		}
+#		SRU = {
+#			exists = no
+#		}
+#	}
+#	
+#	option = {
+#		name = russia.62.a
+#		ai_chance = {
+#			factor = 1
+#		}
+#		set_country_flag = "rus_coup_one_victory"
+#	}
+#}
+#the purge -> coups pt1
+country_event = {
+	id = russia.101
+	title = russia.101.t
+	desc = russia.101.desc
+	picture = GFX_report_event_military_planning
+		
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = russia.101.a
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 1000
+				OR = {
+					has_game_rule = {
+						rule = RUS_ai_route
+						option = MLADOROSSI
+					}
+					has_game_rule = {
+						rule = RUS_ai_route
+						option = DITERIKHS
+					}
+				}
+			}
+		}
+		ROOT = {
+			country_event = {
+				id = russia.100
+				days = 7
+			}	
+		}
+	}
+	option = {
+		name = russia.101.b
+		ai_chance = {
+			base = 3
+			modifier = {
+				factor = 1000
+				OR = {
+					has_game_rule = {
+						rule = RUS_ai_route
+						option = LIBERALIZATION
+					}
+					has_game_rule = {
+						rule = RUS_ai_route
+						option = BLACKBLOCK
+					}
+				}
+			}
+		}
+		ROOT = {
+			country_event = {
+				id = russia.102
+				days = 7
+			}
+		}
+	}
+}
+
+#Diterikhs/Mlad event
+country_event = {
+	id = russia.100
+	title = russia.100.t
+	desc = russia.100.desc
+	picture = GFX_report_event_military_planning
+		
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = russia.100.a
+		ai_chance = {
+			base = 5
+			modifier = {
+				factor = 1000
+				has_game_rule = {
+					rule = RUS_ai_route
+					option = DITERIKHS
+				}
+			}
+		}
+		retire_country_leader = yes
+		news_event = {
+			id = news.330
+			days = 1
+		}
+		set_country_flag = RUS_diterikhs 
+		clr_country_flag = RUS_classic_kolchad_w
+		clr_country_flag = RUS_scw_over
+		clr_country_flag = RUS_drodz_w
+		mark_focus_tree_layout_dirty = yes
+		set_politics = {
+			ruling_party = reactionism
+		}
+		
+		
+	}
+	
+	option = {
+		name = russia.100.b
+		ai_chance = {
+			base = 5
+			modifier = {
+				factor = 1000
+				has_game_rule = {
+					rule = RUS_ai_route
+					option = MLADOROSSI
+				}
+			}
+		}
+		retire_country_leader = yes
+		set_politics = {
+			ruling_party = despotism
+		}
+		news_event = {
+			id = news.329
+			days = 1
+		}
+		set_cosmetic_tag = RUS_mlads
+		set_country_flag = RUS_mlads_victory
+		clr_country_flag = RUS_classic_kolchad_w
+		clr_country_flag = RUS_scw_over
+		clr_country_flag = RUS_drodz_w
+		mark_focus_tree_layout_dirty = yes
+		promote_character = RUS_kazembek
+		set_party_name = { 
+				ideology = despotism 
+				long_name = "Soyuz Mladorossov"
+				name = "Mladorossi"
+			}
+	}
+	
+}
+
+#purge successful, radicals contained
+country_event = {
+	id = russia.102
+	title = russia.102.t
+	desc = russia.102.desc
+	picture = GFX_report_event_military_planning
+		
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = russia.102.a
+		ai_chance = {
+			factor = 50
+		}
+		add_timed_idea = {
+			idea = RUS_successful_purge
+			days = 365
+		}
+	}
+	
+}
+
+#November Strikes
+country_event = {
+	id = russia.7
+	title = russia.7.t
+	desc = russia.7.desc
+	#picture = GFX_report_event_prince_of_darkness
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = russia.7.a
+		add_timed_idea = {
+			idea = november_harsh_repression
+			days = 180
+		}
+	}
+	
+	option = {
+		name = russia.7.b
+		add_timed_idea = {
+			idea = november_soft_repression
+			days = 180
+		}
+	}
+}
+#Republican-Striker Connection
+country_event = {
+	id = russia.8
+	title = russia.8.t
+	desc = russia.8.desc
+	#picture = GFX_report_event_prince_of_darkness
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = russia.8.a
+		add_stability = -0.05
+		add_popularity = {
+				ideology = progressivism
+				popularity = -0.03
+			}
+		add_popularity = {
+				ideology = liberalism
+				popularity = -0.03
+			}
+		add_popularity = {
+				ideology = conservatism
+				popularity = -0.03
+			}
+	}
+	
+	option = {
+		name = russia.8.b
+		add_popularity = {
+				ideology = liberalism
+				popularity = -0.02
+			}
+	}
+}
+#9th Duma Elections
+country_event = {
+	id = russia.9
+	title = russia.9.t
+	desc = russia.9.desc
+	picture = GFX_trollface
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = russia.9.a
+		#every_country = {
+		#	create_country_leader = {
+		#		name = "Bat'ko Epstein"
+		#		#desc = ""
+		#		picture = "gfx/leaders/EPS/Portrait_Epstein_revan.png"
+		#		expire = "1965.1.1"
+		#		ideology = social_anarchism
+		#		traits = {
+		#		}
+		#	}
+		#	create_country_leader = {
+		#		name = "Glorious Leader Epstein"
+		#		#desc = ""
+		#		picture = "gfx/leaders/EPS/Portrait_Epstein_vansoc.png"
+		#		expire = "1965.1.1"
+		#		ideology = state_socialism
+		#		traits = {
+		#		}
+		#	}
+		#	create_country_leader = {
+		#		name = "Comrade Epstein"
+		#		#desc = ""
+		#		picture = "gfx/leaders/EPS/Portrait_Epstein_libmarx.png"
+		#		expire = "1965.1.1"
+		#		ideology = spartakism
+		#		traits = {
+		#		}
+		#	}
+		#	create_country_leader = {
+		#		name = "Chairman Epstein"
+		#		#desc = ""
+		#		picture = "gfx/leaders/EPS/Portrait_Epstein_revsoc.png"
+		#		expire = "1965.1.1"
+		#		ideology = democratic_socialism
+		#		traits = {
+		#		}
+		#	}
+		#	create_country_leader = {
+		#		name = "Senator Epstein"
+		#		#desc = ""
+		#		picture = "gfx/leaders/EPS/Portrait_Epstein_socdem.png"
+		#		expire = "1965.1.1"
+		#		ideology = progressive_democracy
+		#		traits = {
+		#		}
+		#	}
+		#	create_country_leader = {
+		#		name = "CEO Jeffery Epstein"
+		#		#desc = ""
+		#		picture = "gfx/leaders/EPS/Portrait_Epstein_lib.png"
+		#		expire = "1965.1.1"
+		#		ideology = libertarian_capitalism
+		#		traits = {
+		#		}
+		#	}
+		#	create_country_leader = {
+		#		name = "Father Epstein"
+		#		#desc = ""
+		#		picture = "gfx/leaders/EPS/Portrait_Epstein_con.png"
+		#		expire = "1965.1.1"
+		#		ideology = national_conservatism
+		#		traits = {
+		#		}
+		#	}
+		#	create_country_leader = {
+		#		name = "El Presidente Epstein"
+		#		#desc = ""
+		#		picture = "gfx/leaders/EPS/Portrait_Epstein_rwauth.png"
+		#		expire = "1965.1.1"
+		#		ideology = oligarchy
+		#		traits = {
+		#		}
+		#	}
+		#	create_country_leader = {
+		#		name = "General Epstein"
+		#		#desc = ""
+		#		picture = "gfx/leaders/EPS/Portrait_Epstein_desp.png"
+		#		expire = "1965.1.1"
+		#		ideology = military_dictatorship
+		#		traits = {
+		#		}
+		#	}
+		#	create_country_leader = {
+		#		name = "King Jeffery I"
+		#		#desc = ""
+		#		picture = "gfx/leaders/EPS/Portrait_Epstein_reac.png"
+		#		expire = "1965.1.1"
+		#		ideology = reactionary_populism
+		#		traits = {
+		#		}
+		#	}
+		#	create_country_leader = {
+		#		name = "Marquis de Epstein"
+		#		#desc = ""
+		#		picture = "gfx/leaders/EPS/Portrait_Epstein_accel.png"
+		#		expire = "1965.1.1"
+		#		ideology = futurism
+		#		traits = {
+		#		}
+		#	}
+		#}
+	}
+}
+
+###KOLCHAK FOCUS TREE###
+
+#Imperial Puppet
+
+country_event = {
+	id = russia.10
+	title = russia.10.t
+	desc = russia.10.desc
+	#picture = GFX_report_event_prince_of_darkness
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = russia.10.a
+	
+	if = {
+		limit = {
+			tag = RUS
+		}
+		add_country_leader_role = {
+			character = RUS_vselovod_despot
+			country_leader = {
+				ideology = absolute_monarchy
+				expire = "1965.1.1.1"
+			}
+			promote_leader = yes
+		}
+		add_country_leader_role = {
+			character = RUS_vselovod_rwa
+			country_leader = {
+				ideology = oligarchy
+				expire = "1965.1.1.1"
+			}
+			promote_leader = yes
+		}
+	}
+	if = {
+		limit = {
+			tag = SRU
+		}
+		add_country_leader_role = {
+			character = SRU_vselovod_despot
+			country_leader = {
+				ideology = absolute_monarchy
+				expire = "1965.1.1.1"
+			}
+			promote_leader = yes
+		}
+		add_country_leader_role = {
+			character = SRU_vselovod_rwa
+			country_leader = {
+				ideology = oligarchy
+				expire = "1965.1.1.1"
+			}
+			promote_leader = yes
+		}
+	}
+	}
+	option = {
+		name = russia.10.b
+		if = {
+			limit = {
+				tag = RUS
+			}
+			add_country_leader_role = {
+				character = RUS_andrei_despot
+				country_leader = {
+					ideology = absolute_monarchy
+					expire = "1965.1.1.1"
+				}
+				promote_leader = yes
+			}
+			add_country_leader_role = {
+				character = RUS_andrei_rwa
+				country_leader = {
+					ideology = oligarchy
+					expire = "1965.1.1.1"
+				}
+				promote_leader = yes
+			}
+		}
+		if = {
+			limit = {
+				tag = SRU
+			}
+			add_country_leader_role = {
+				character = SRU_andrei_despot
+				country_leader = {
+					ideology = absolute_monarchy
+					expire = "1965.1.1.1"
+				}
+				promote_leader = yes
+			}
+			add_country_leader_role = {
+				character = SRU_andrei_rwa
+				country_leader = {
+					ideology = oligarchy
+					expire = "1965.1.1.1"
+				}
+				promote_leader = yes
+			}
+		}
+	}
+	#option = {
+	#	name = russia.10.d
+	#	if = {
+	#		limit = {
+	#			tag = RUS
+	#		}
+	#		add_country_leader_role = {
+	#			character = RUS_sergei_despot
+	#			country_leader = {
+	#				ideology = absolute_monarchy
+	#				expire = "1965.1.1.1"
+	#			}
+	#			promote_leader = yes
+	#		}
+	#		add_country_leader_role = {
+	#			character = RUS_sergei_rwa
+	#			country_leader = {
+	#				ideology = oligarchy
+	#				expire = "1965.1.1.1"
+	#			}
+	#			promote_leader = yes
+	#		}
+	#	}
+	#	if = {
+	#		limit = {
+	#			tag = SRU
+	#		}
+	#		add_country_leader_role = {
+	#			character = SRU_sergei_despot
+	#			country_leader = {
+	#				ideology = absolute_monarchy
+	#				expire = "1965.1.1.1"
+	#			}
+	#			promote_leader = yes
+	#		}
+	#		add_country_leader_role = {
+	#			character = SRU_sergei_rwa
+	#			country_leader = {
+	#				ideology = oligarchy
+	#				expire = "1965.1.1.1"
+	#			}
+	#			promote_leader = yes
+	#		}
+	#	}
+	}
+	#option = {
+	#	name = russia.10.e
+	#	create_country_leader = {
+	#		name = "Alexander IV"
+	#		desc = "POLITICS_ALEXANDER_I_DESC"
+	#		picture = "Obolensky_despot.png"
+	#		expire = "1965.1.1"
+	#		ideology = absolute_monarchy
+	#		traits = {
+	#			
+	#		}
+		#}
+	#	create_country_leader = {
+	#		name = "Alexander IV"
+	#		desc = "POLITICS_ALEXANDER_I_DESC"
+	#		picture = "Obolensky_right_auth.png"
+	#		expire = "1965.1.1"
+	#		ideology = oligarchy
+	#		traits = {
+	#			
+	#		}
+		#}
+	#}
+
+
+country_event = {
+	id = russia.11
+	title = russia.11.t
+	desc = russia.11.desc
+	#picture = GFX_report_event_prince_of_darkness
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = russia.12.a
+		set_country_flag = RUS_classic_kolchad_w
+		clr_country_flag = RUS_scw_over
+		mark_focus_tree_layout_dirty = yes
+	}
+}
+country_event = {
+	id = russia.12
+	title = russia.12.t
+	desc = russia.12.desc
+	#picture = GFX_report_event_prince_of_darkness
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = russia.12.a
+		set_country_flag = RUS_drodz_w
+		clr_country_flag = RUS_scw_over
+		mark_focus_tree_layout_dirty = yes
+	}
+}
+
+# Drozdovsky - zemsky sobor
+country_event = {
+	id = russia.15
+	title = russia.15.t
+	desc = russia.10.desc
+	#picture = GFX_report_event_prince_of_darkness
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = russia.10.a
+
+		if = {
+			limit = {
+				tag = RUS
+			}
+			add_country_leader_role = {
+				character = RUS_vselovod_despot
+				country_leader = {
+					ideology = absolute_monarchy
+					expire = "1965.1.1.1"
+				}
+				promote_leader = yes
+			}
+			
+		}
+		if = {
+			limit = {
+				tag = SRU
+			}
+			add_country_leader_role = {
+				character = SRU_vselovod_despot
+				country_leader = {
+					ideology = absolute_monarchy
+					expire = "1965.1.1.1"
+				}
+				promote_leader = yes
+			}
+			
+		}
+	}
+	option = {
+		name = russia.10.b
+
+		if = {
+			limit = {
+				tag = RUS
+			}
+			add_country_leader_role = {
+				character = RUS_andrei_despot
+				country_leader = {
+					ideology = absolute_monarchy
+					expire = "1965.1.1.1"
+				}
+				promote_leader = yes
+			}
+			
+		}
+		if = {
+			limit = {
+				tag = SRU
+			}
+			add_country_leader_role = {
+				character = SRU_andrei_despot
+				country_leader = {
+					ideology = absolute_monarchy
+					expire = "1965.1.1.1"
+				}
+				promote_leader = yes
+			}
+		
+		}
+	}
+}
+	#option = {
+	#	name = russia.10.d
+
+	#	if = {
+	#		limit = {
+	#			tag = RUS
+	#		}
+	#		add_country_leader_role = {
+	#			character = RUS_sergei_despot
+	#			country_leader = {
+	#				ideology = absolute_monarchy
+	#				expire = "1965.1.1.1"
+	#			}
+	#			promote_leader = yes
+	#		}
+	#		
+	#	}
+	#	if = {
+	#		limit = {
+	#			tag = SRU
+	#		}
+	#		add_country_leader_role = {
+	#			character = SRU_sergei_despot
+	#			country_leader = {
+	#				ideology = absolute_monarchy
+	#				expire = "1965.1.1.1"
+	#			}
+	#			promote_leader = yes
+	#		}
+	#		
+	#	}
+
+	#option = {
+	#	name = russia.10.e
+#
+#		create_country_leader = {
+#			name = "Alexander IV"
+#			desc = "POLITICS_ALEXANDER_I_DESC"
+#			picture = "Obolensky_despot.png"
+#			expire = "1965.1.1"
+#			ideology = absolute_monarchy
+#			traits = {
+#				
+#			}
+#		}
+#	}
+
+
+# Drozdovsky - IX duma
+country_event = {
+	id = russia.16
+	title = russia.16.t
+	desc = russia.16.desc
+	#picture = GFX_report_event_prince_of_darkness
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = russia.16.a
+		add_stability = -0.02
+		add_popularity = {
+			ideology = despotism
+			popularity = 0.10
+		}
+		add_popularity = {
+			ideology = right_authoritarianism
+			popularity = 0.05
+		}
+	}
+	option = {
+		name = russia.16.b
+		add_stability = 0.02
+		add_popularity = {
+			ideology = liberalism
+			popularity = 0.10
+		}
+		add_popularity = {
+			ideology = conservatism
+			popularity = 0.05
+		}
+	}
+}
+
+# Mladorossi - ultimatum to warlords
+country_event = {
+	id = russia.13
+	title = russia.13.t
+	desc = russia.13.desc
+	#picture = GFX_report_event_prince_of_darkness
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = russia.13.a
+		RUS = {
+			annex_country = {
+				target = ROOT
+				transfer_troops = yes
+			}
+		}
+		every_state = {
+			limit = {
+				is_core_of = ROOT
+			}
+			add_core_of = RUS
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = {
+		name = russia.13.b
+		RUS = {
+			end_puppet = ROOT
+			create_wargoal = {
+				type = annex_everything
+				target = ROOT
+			}
+		}
+		every_state = {
+			limit = {
+				is_core_of = ROOT
+			}
+			add_core_of = RUS
+		}
+		ai_chance = {
+			base = 3
+			modifier = {
+				OR = {
+					original_tag = WRU
+					original_tag = FIN
+					original_tag = SIB
+					original_tag = KCK
+				}
+				factor = 20
+			}
+		}
+	}
+}
+
+# Diterikhs - zemsky sobor
+country_event = {
+	id = russia.14
+	title = russia.14.t
+	desc = russia.10.desc
+	#picture = GFX_report_event_prince_of_darkness
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = russia.10.a
+
+		if = {
+			limit = {
+				tag = RUS
+			}
+			add_country_leader_role = {
+				character = RUS_vselovod_react
+				country_leader = {
+					ideology = religious_fundamentalism
+					expire = "1965.1.1.1"
+				}
+				promote_leader = yes
+			}
+			
+		}
+		if = {
+			limit = {
+				tag = SRU
+			}
+			add_country_leader_role = {
+				character = SRU_vselovod_react
+				country_leader = {
+					ideology = religious_fundamentalism
+					expire = "1965.1.1.1"
+				}
+				promote_leader = yes
+			}
+			
+			
+		}
+	}
+	option = {
+		name = russia.10.b
+
+		if = {
+			limit = {
+				tag = RUS
+			}
+			add_country_leader_role = {
+				character = RUS_andrei_react
+				country_leader = {
+					ideology = religious_fundamentalism
+					expire = "1965.1.1.1"
+				}
+				promote_leader = yes
+			}
+			
+		}
+		if = {
+			limit = {
+				tag = SRU
+			}
+			add_country_leader_role = {
+				character = SRU_andrei_react
+				country_leader = {
+					ideology = religious_fundamentalism
+					expire = "1965.1.1.1"
+				}
+				promote_leader = yes
+			}
+			
+			
+		}
+	}
+	#option = {
+	#	name = russia.10.d
+#
+#		if = {
+#			limit = {
+#				tag = RUS
+#			}
+#			add_country_leader_role = {
+#				character = RUS_sergei_react
+#				country_leader = {
+#					ideology = religious_fundamentalism
+#					expire = "1965.1.1.1"
+#				}
+#				promote_leader = yes
+#			}
+#			
+#		}
+#		if = {
+#			limit = {
+#				tag = SRU
+#			}
+#			add_country_leader_role = {
+#				character = SRU_sergei_react
+#				country_leader = {
+#					ideology = religious_fundamentalism
+#					expire = "1965.1.1.1"
+#				}
+#				promote_leader = yes
+#			}
+			
+			
+#		}
+	}
+	#option = {
+	#	name = russia.10.e
+#
+#		create_country_leader = {
+#			name = "Alexander IV"
+#			desc = "POLITICS_ALEXANDER_I_DESC"
+#			picture = "Obolensky_react.png"
+#			expire = "1965.1.1"
+#			ideology = religious_fundamentalism
+#			traits = {
+#				
+#			}
+ #	   }
+
+#Jewish Emigration#
+country_event = {
+	id = russia.17
+	title = russia.17.t
+	desc = russia.17.desc
+	#picture = GFX_report_event_prince_of_darkness
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = russia.17.a
+		
+	}
+}
+#Jewish Emigration 2#
+country_event = {
+	id = russia.18
+	title = russia.18.t
+	desc = russia.18.desc
+	#picture = GFX_report_event_prince_of_darkness
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = russia.18.a
+	}
+}
+
+# Civil war Victory #
+
+#Kolchak Victory
+country_event = {
+	id = russia.19
+	title = russia.19.t
+	desc = russia.19.d
+	#picture = GFX_report_event_military_planning
+	fire_only_once = yes
+	is_triggered_only = no
+	
+	trigger = {
+		tag = RUS
+		OR = {
+			has_country_flag = bypass_below_checks
+			AND = {
+				date > 1937.03.10
+				RUS = {
+					controls_state = 219
+					has_war_with = SRU
+				}
+			}
+		}
+	}
+
+	mean_time_to_happen = { days = 1 }
+	
+	option = {
+		name = russia.19.a
+		clr_country_flag = bypass_below_checks
+		news_event = {
+			id = news.328
+			days = 1
+		}
+		SRU = {
+		 	transfer_navy = {
+			  	target = RUS
+			}
+		}
+		annex_country = {
+			target = SRU
+			transfer_troops = no
+		}
+		every_state = {
+			limit = {
+				is_core_of = SRU
+			}
+			add_core_of = RUS
+			remove_core_of = SRU
+		}
+		mark_focus_tree_layout_dirty = yes
+		set_country_flag = RUS_scw_over
+		set_country_flag = RUS_scw_over_bodge
+	}
+}
+#Drozdovsky Victory
+country_event = {
+	id = russia.20
+	title = russia.20.t
+	desc = russia.20.d
+	#picture = GFX_report_event_military_planning
+	fire_only_once = yes
+	is_triggered_only = no
+	
+	trigger = {
+		tag = SRU
+		OR = {
+			has_country_flag = bypass_below_checks
+			AND = {
+				date > 1937.03.10
+				SRU = {
+					controls_state = 219
+					has_war_with = RUS
+				}
+			}
+		}
+	}
+
+	mean_time_to_happen = { days = 1 }
+	
+	option = {
+		name = russia.20.a
+		clr_country_flag = bypass_below_checks
+		RUS = {
+		 	transfer_navy = { target = SRU }
+		}
+		annex_country = {
+			target = RUS
+			transfer_troops = no
+		}
+		every_state = {
+			limit = { is_core_of = RUS }
+			add_core_of = SRU
+			remove_core_of = RUS
+		}
+		news_event = {
+			id = news.327
+			days = 1
+		}
+		set_capital = { state = 195 }
+		set_cosmetic_tag = SRU_drozd
+		load_focus_tree = RF_Russia
+		mark_focus_tree_layout_dirty = yes
+		set_country_flag = RUS_scw_over 
+		set_country_flag = RUS_scw_over_bodge
+		hidden_effect = {
+			RUS = {
+				every_character = {
+					limit = {
+						OR = {
+							is_character = RUS_vasily_shulgin
+							is_character = RUS_alexander_nechvolodov
+							is_character = RUS_alexander_guchkov
+							is_character = RUS_pyotr_balashov
+							is_character = RUS_nikolay_markov
+							is_character = RUS_vladimir_vostokov
+							is_character = RUS_vladimir_kappel
+							is_character = RUS_pavel_peorgievsky
+							is_character = RUS_sergei_taboritsky
+							is_character = RUS_ivan_solonevich
+							is_character = RUS_kirill_elita_vilchkovsky
+							is_character = RUS_mikhail_braykevich
+							is_character = RUS_pyotr_b_struve
+							is_character = RUS_vladimir_zaleski
+							is_character = RUS_sergei_bulgakov
+							is_character = RUS_vladimir_krasinsky
+							is_character = RUS_mikhail_a_taube
+							is_character = RUS_nikolay_muratov
+							is_character = RUS_nikolai_a_maklakov
+							is_character = RUS_pyotr_gendrikov
+							is_character = RUS_georgy_graf
+							is_character = RUS_nikolay_astrov
+							is_character = RUS_nikolay_batyushin
+							is_character = RUS_vladimir_vitkovsky
+							is_character = RUS_sergei_obolensky
+							is_character = RUS_pavel_shatilov
+							is_character = RUS_alexsandr_lukomsky
+							is_character = RUS_mikhail_kvetsinsky
+							is_character = RUS_mikhail_levitov
+							is_character = RUS_mitrofan_nazhenstev
+							is_character = RUS_nikolay_timanovsky
+							is_character = RUS_yavgeny_miller
+							is_character = RUS_abram_dragomirov
+							is_character = RUS_ivan_romanovsky
+							is_character = RUS_nikolai_n_dukhonin
+							is_character = RUS_sergei_markov
+							is_character = RUS_pyotr_wrangel
+							is_character = RUS_mikhail_berens
+							is_character = RUS_nestor_monastyrev
+							is_character = RUS_mikhail_kedrov
+							is_character = RUS_dimitri_nenyukov
+							is_character = RUS_nikolay_kolomeytsev
+							is_character = RUS_vasily_kanin
+							is_character = RUS_aleksandr_kutepov
+							is_character = RUS_vyacheslav_tkachov
+						}
+					}
+					set_nationality = {
+						target_country = SRU
+						character = THIS
+					}
+				}
+			}
+		}
+	}
+}
+
+#Victory Day celebration
+country_event = {
+	id = russia.21
+	title = russia.21.t
+	desc = russia.21.d
+	picture = GFX_report_event_RUS_victoryday
+	fire_only_once = yes
+	is_triggered_only = no
+	
+	trigger = {
+		date > 1938.10.25
+		OR = {
+			tag = RUS
+			tag = SRU
+		}
+		NOT = {
+			OR = {
+				has_completed_focus = RUS_eternal_regent
+				has_completed_focus = RUS_elect_mew_Duma
+			}
+		}
+	}
+	
+	option = {
+		name = russia.21.a
+	}
+}
+
+# Drozdovsky - ultimatum to warlords
+country_event = {
+	id = russia.22
+	title = russia.22.t
+	desc = russia.22.desc
+	#picture = GFX_report_event_prince_of_darkness
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = russia.22.a
+		SRU = {
+			annex_country = {
+				target = ROOT
+				transfer_troops = yes
+			}
+		}
+		ROOT = {
+			every_unit_leader = {
+				set_nationality = SRU
+			}
+		}
+		every_state = {
+			limit = {
+				is_core_of = ROOT
+			}
+			add_core_of = SRU
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = {
+		name = russia.22.b
+		SRU = {
+			end_puppet = ROOT
+			create_wargoal = {
+				type = annex_everything
+				target = ROOT
+			}
+		}
+		every_state = {
+			limit = {
+				is_core_of = ROOT
+			}
+			add_core_of = SRU
+		}
+		ai_chance = {
+			base = 2
+		}
+	}
+}
+
+# Kolchak warlords
+country_event = {
+	id = russia.23
+	title = russia.23.t
+	desc = russia.23.desc
+	#picture = GFX_report_event_prince_of_darkness
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = russia.23.a
+		RUS = {
+			annex_country = {
+				target = ROOT
+				transfer_troops = yes
+			}
+		}
+		ROOT = {
+			every_unit_leader = {
+				set_nationality = RUS
+			}
+		}
+		every_state = {
+			limit = {
+				is_core_of = ROOT
+			}
+			add_core_of = RUS
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = {
+		name = russia.23.b
+		RUS = {
+			end_puppet = ROOT
+			create_wargoal = {
+				type = annex_everything
+				target = ROOT
+			}
+		}
+		every_state = {
+			limit = {
+				is_core_of = ROOT
+			}
+			add_core_of = RUS
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+# The party #
+country_event = {
+	id = russia.24
+	title = russia.24.t
+	desc = russia.24.desc
+	#picture = GFX_report_event_prince_of_darkness
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = russia.24.a
+	}
+}
+# The party #
+country_event = {
+	id = russia.25
+	title = russia.25.t
+	desc = russia.25.desc
+	#picture = GFX_report_event_RUS_oprichnik
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = russia.25.a
+	}
+}
+
+#Patriarch
+country_event = {
+	id = russia.480
+	title = russia.480.t
+	desc = russia.480.desc
+	#picture = GFX_report_event_military_planning
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = russia.480.a
+		add_ideas = {
+			RUS_shtabs_benjamin
+		}
+	}
+	option = {
+		name = russia.480.b
+		add_ideas = {
+			RUS_shtabs_andronik
+		}
+	}
+	option = {
+		name = russia.480.c
+		add_ideas = {
+			RUS_shtabs_sergius
+		}
+	}
+	option = {
+		name = russia.480.d
+		add_ideas = {
+			RUS_shtabs_alexius
+		}
+	}
+}
+country_event = {
+	id = russia.481
+	title = russia.481.t
+	desc = russia.481.desc
+	#picture = GFX_report_event_military_planning
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = russia.481.a
+		country_event = {
+		id = russia.482
+		}
+	}
+	option = {
+		name = russia.481.b
+		country_event = {
+		id = russia.483
+		}
+	}
+}
+country_event = {
+	id = russia.482
+	title = russia.482.t
+	desc = russia.482.desc
+	#picture = GFX_report_event_military_planning
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = russia.482.a
+		add_manpower = -1
+	}
+}
+country_event = {
+	id = russia.483
+	title = russia.483.t
+	desc = russia.483.desc
+	#picture = GFX_report_event_military_planning
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = russia.483.a
+		add_manpower = -3
+	}
+}
+
+
+# Realm of Truth becomes a puppet
+country_event = {
+	id = russia.98
+	title = russia.98.t
+	desc = russia.98.desc
+	#picture = GFX_report_event_military_planning
+	fire_only_once = no
+	is_triggered_only = yes
+	
+	option = {
+		name = russia.98.a
+		if = {
+			limit = {
+				RUS = { exists = yes }
+			}
+			RUS = {
+				puppet = WRT
+			}
+			set_autonomy = {
+				target = WRT
+				autonomy_state = autonomy
+			}
+			set_politics = {
+				ruling_party = reactionism
+			}
+		}
+		else_if = {
+			limit = {
+				SRU = { exists = yes }
+			}
+			SRU = {
+				puppet = WRT
+			}
+			set_autonomy = {
+				target = WRT
+				autonomy_state = autonomy
+			}
+			set_politics = {
+				ruling_party = reactionism
+			}
+		}
+	}
+}
+
+
+#Altai-Kavkaz uni
+country_event = {
+	id = russia.200
+	title = russia.200.t
+	desc = russia.200.desc
+	#picture = GFX_report_event_military_planning
+	fire_only_once = no
+	is_triggered_only = yes
+	
+	option = {
+		name = russia.200.a
+		ai_chance = {
+			factor = 9
+		}
+		KAV = {
+			annex_country = {
+				target = ALT
+				transfer_troops = yes
+			}
+		}
+		ALT = {
+			every_unit_leader = {
+				set_nationality = KAV
+			}
+		}
+	}
+	option = {
+		name = russia.200.b
+		ai_chance = {
+			factor = 1
+		}
+		ALT = {
+			annex_country = {
+				target = KAV
+				transfer_troops = yes
+			}
+		}
+		KAV = {
+			every_unit_leader = {
+				set_nationality = ALT
+			}
+		}
+	}
+}
+
+#Zhelto-Kavkaz uni
+country_event = {
+	id = russia.201
+	title = russia.201.t
+	desc = russia.201.desc
+	#picture = GFX_report_event_military_planning
+	fire_only_once = no
+	is_triggered_only = yes
+	
+	option = {
+		name = russia.201.a
+		ai_chance = {
+			factor = 10
+		}
+		KAV = {
+			annex_country = {
+				target = ZHR
+				transfer_troops = yes
+			}
+		}
+		ZHR = {
+			every_unit_leader = {
+				set_nationality = KAV
+			}
+		}
+	}
+	option = {
+		name = russia.201.b
+		ai_chance = {
+			factor = 10
+		}
+		ZHR = {
+			annex_country = {
+				target = KAV
+				transfer_troops = yes
+			}
+		}
+		KAV = {
+			every_unit_leader = {
+				set_nationality = ZHR
+			}
+		}
+	}
+}
+
+#Zhelto-Altai uni
+country_event = {
+	id = russia.202
+	title = russia.202.t
+	desc = russia.202.desc
+	#picture = GFX_report_event_military_planning
+	fire_only_once = no
+	is_triggered_only = yes
+	
+	option = {
+		name = russia.202.a
+		ai_chance = {
+			factor = 1
+		}
+		ALT = {
+			annex_country = {
+				target = ZHR
+				transfer_troops = yes
+			}
+		}
+		ZHR = {
+			every_unit_leader = {
+				set_nationality = ALT
+			}
+		}
+	}
+	option = {
+		name = russia.202.b
+		ai_chance = {
+			factor = 10
+		}
+		ZHR = {
+			annex_country = {
+				target = ALT
+				transfer_troops = yes
+			}
+		}
+		ALT = {
+			every_unit_leader = {
+				set_nationality = ZHR
+			}
+		}
+	}
+}
+
+#Orenburg-Altai uni
+country_event = {
+	id = russia.203
+	title = russia.203.t
+	desc = russia.203.desc
+	#picture = GFX_report_event_military_planning
+	fire_only_once = no
+	is_triggered_only = yes
+	
+	option = {
+		name = russia.203.a
+		ai_chance = {
+			factor = 1
+		}
+		ALT = {
+			annex_country = {
+				target = ORE
+				transfer_troops = yes
+			}
+		}
+		ORE = {
+			every_unit_leader = {
+				set_nationality = ALT
+			}
+		}
+	}
+	option = {
+		name = russia.203.b
+		ai_chance = {
+			factor = 10
+		}
+		ORE = {
+			annex_country = {
+				target = ALT
+				transfer_troops = yes
+			}
+		}
+		ALT = {
+			every_unit_leader = {
+				set_nationality = ORE
+			}
+		}
+	}
+}
+
+#Kavkaz-harbin uni 
+country_event = {
+	id = russia.204
+	title = russia.204.t
+	desc = russia.204.desc
+	#picture = GFX_report_event_military_planning
+	fire_only_once = no
+	is_triggered_only = yes
+	
+	option = {
+		name = russia.204.a
+		ai_chance = {
+			factor = 10
+		}
+		KAV = {
+			annex_country = {
+				target = HAR
+				transfer_troops = yes
+			}
+		}
+		HAR = {
+			every_unit_leader = {
+				set_nationality = KAV
+			}
+		}
+	}
+	option = {
+		name = russia.204.b
+		ai_chance = {
+			factor = 10
+		}
+		HAR = {
+			annex_country = {
+				target = KAV
+				transfer_troops = yes
+			}
+		}
+		KAV = {
+			every_unit_leader = {
+				set_nationality = HAR
+			}
+		}
+	}
+}
+
+#Kavkaz-Creatorium uni 
+country_event = {
+	id = russia.205
+	title = russia.205.t
+	desc = russia.205.desc
+	#picture = GFX_report_event_military_planning
+	fire_only_once = no
+	is_triggered_only = yes
+	
+	option = {
+		name = russia.205.a
+		ai_chance = {
+			factor = 10
+		}
+		KAV = {
+			annex_country = {
+				target = FCR
+				transfer_troops = yes
+			}
+		}
+		FCR = {
+			every_unit_leader = {
+				set_nationality = KAV
+			}
+		}
+	}
+	option = {
+		name = russia.205.b
+		ai_chance = {
+			factor = 10
+		}
+		FCR = {
+			annex_country = {
+				target = KAV
+				transfer_troops = yes
+			}
+		}
+		KAV = {
+			every_unit_leader = {
+				set_nationality = FCR
+			}
+		}
+	}
+}
+
+#rodz-RUS uni
+country_event = {
+	id = russia.206
+	title = russia.206.t
+	desc = russia.206.desc
+	#picture = GFX_report_event_military_planning
+	fire_only_once = no
+	is_triggered_only = yes
+	
+	option = {
+		name = russia.206.a
+		ai_chance = {
+			factor = 90
+		}
+		RUS = {
+			annex_country = {
+				target = ARC
+				transfer_troops = yes
+			}
+		}
+		ARC = {
+			every_unit_leader = {
+				set_nationality = RUS
+			}
+		}
+	}
+	option = {
+		name = russia.206.b
+		ai_chance = {
+			factor = 10
+		}
+		ARC = {
+			annex_country = {
+				target = RUS
+				transfer_troops = yes
+			}
+		}
+		RUS = {
+			every_unit_leader = {
+				set_nationality = ARC
+			}
+		}
+	}
+}
+
+#rodz-SRU uni
+country_event = {
+	id = russia.207
+	title = russia.207.t
+	desc = russia.207.desc
+	#picture = GFX_report_event_military_planning
+	fire_only_once = no
+	is_triggered_only = yes
+	
+	option = {
+		name = russia.207.a
+		ai_chance = {
+			factor = 90
+		}
+		SRU = {
+			annex_country = {
+				target = ARC
+				transfer_troops = yes
+			}
+		}
+		ARC = {
+			every_unit_leader = {
+				set_nationality = RUS
+			}
+		}
+	}
+	option = {
+		name = russia.207.b
+		ai_chance = {
+			factor = 10
+		}
+		ARC = {
+			annex_country = {
+				target = SRU
+				transfer_troops = yes
+			}
+		}
+		SRU = {
+			every_unit_leader = {
+				set_nationality = ARC
+			}
+		}
+	}
+}

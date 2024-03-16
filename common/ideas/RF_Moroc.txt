@@ -1,0 +1,36 @@
+ideas = {
+	country = {
+		MRS_brave_army = {
+			allowed = {
+				original_tag = MRS
+			}
+			modifier = {
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
+				experience_gain_army_factor = 0.05
+				conscription = 0.005
+			}
+		}
+		MRS_dependent_economy = {
+			allowed = {
+				original_tag = MRS
+			}
+			modifier = {
+				production_speed_buildings_factor = -0.25
+				stability_factor = -0.05
+				production_factory_max_efficiency_factor = -0.2
+				consumer_goods_expected_value = 0.3
+			}
+		}
+		MRS_unrecognized = {
+			allowed = {
+				original_tag = MRS
+			}
+			modifier = {
+				trade_opinion_factor = -1
+				faction_trade_opinion_factor = 2
+				stability_factor = -0.1
+			}
+		}
+	}
+} 

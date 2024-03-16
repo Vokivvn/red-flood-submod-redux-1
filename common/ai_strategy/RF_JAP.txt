@@ -1,0 +1,812 @@
+
+JAP_stock_up_on_trains_before_china = {
+	allowed = {
+		OR = {
+			original_tag = JAP
+			original_tag = JPR
+		}
+	}
+
+	enable = {
+		has_war = no
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = min_wanted_supply_trains
+		value = 100
+	}
+}
+
+less_trucks_4_u_JAP = {
+	allowed = {
+		OR = {
+			original_tag = JAP
+			original_tag = JPR
+		}
+	}
+	enable = {
+		date < 1939.1.1
+	}
+	abort = {
+		date > 1939.1.1
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = infantry
+		value = 80
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = garrison
+		value = 12
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = motorized
+		value = -80
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = cavalry
+		value = -80
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = mountaineers
+		value = -80
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = infantry
+		value = 100
+	}
+
+	ai_strategy = {
+		type = equipment_production_factor
+		id = fighter
+		value = 20
+	}
+
+	ai_strategy = {
+		type = equipment_production_factor
+		id = infantry
+		value = 5 #10 to 5
+	}
+
+	ai_strategy = {
+		type = equipment_production_factor
+		id = artillery
+		value = 20 #From 40 to 20
+	}
+		ai_strategy = {
+		type = equipment_production_min_factories
+		id = artillery
+		value = 5
+	}
+}
+
+JAP_build_some_factories_jeez = {
+	allowed = {
+		OR = {
+			original_tag = JAP
+			original_tag = JPR
+		}
+	}
+	enable = {
+		date > 1939.1.2
+	}
+	abort = {
+		num_of_military_factories > 50
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = infantry
+		value = 80
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = garrison
+		value = 12
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = motorized
+		value = -80
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = armor
+		value = -10
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = armor
+		value = -80
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = cavalry
+		value = -80
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = mountaineers
+		value = -80
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = infantry
+		value = 100
+	}
+
+	ai_strategy = {
+		type = equipment_production_factor
+		id = fighter
+		value = 20
+	}
+
+	ai_strategy = {
+		type = equipment_production_factor
+		id = infantry
+		value = 5 #10 to 5
+	}
+
+	ai_strategy = {
+		type = equipment_production_factor
+		id = artillery
+		value = 20 #From 40 to 20
+	}
+
+	ai_strategy = {
+		type = equipment_variant_production_factor
+		id = light_tank_chassis
+		value = -50
+	}
+
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = artillery
+		value = 5
+	}
+
+	ai_strategy = {
+		type = added_military_to_civilian_factory_ratio
+		value = 15
+	}
+}
+
+JAP_glorious_nippon_steel_has_triumphed = {
+	allowed = {
+		OR = {
+			original_tag = JAP
+			original_tag = JPR
+		}
+	}
+	enable = {
+		num_of_military_factories > 50
+	}
+	abort = { always = no }
+
+	ai_strategy = {
+		type = role_ratio
+		id = infantry
+		value = 80
+	}
+
+	# Old garrison system against resistance
+	# ai_strategy = {
+	# 	type = role_ratio
+	# 	id = suppression
+	# 	value = 8
+	# }
+
+	ai_strategy = {
+		type = role_ratio
+		id = marines
+		value = 1
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = motorized
+		value = -80
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = armor
+		value = 1
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = armor
+		value = 5
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = cavalry
+		value = -80
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = mountaineers
+		value = -80
+	}
+	ai_strategy = {
+		type = template_prio
+		id = infantry
+		value = 100
+	}
+
+	ai_strategy = {
+		type = equipment_production_factor
+		id = fighter
+		value = 30
+	}
+
+	ai_strategy = {
+		type = equipment_production_factor
+		id = infantry
+		value = 5 #10 to 5
+	}
+
+	ai_strategy = {
+		type = equipment_production_factor
+		id = tactical_bomber
+		value = -80
+	}
+
+	ai_strategy = {
+		type = equipment_production_factor
+		id = artillery
+		value = 20 #From 40 to 20
+	}
+
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = artillery
+		value = 5
+	}
+}
+
+chinese_war = {
+	allowed = {
+		OR = {
+			original_tag = JAP
+			original_tag = JPR
+		}
+	}
+	enable = {
+		OR = {
+			country_exists = BYJ
+			country_exists = MNG
+			country_exists = JGJ
+			country_exists = KMT
+			country_exists = FJN
+			country_exists = SZC
+			country_exists = XIA
+		}
+	}
+	abort = {
+		NOT = {
+			OR = {
+				country_exists = BYJ
+				country_exists = MNG
+				country_exists = JGJ
+				country_exists = KMT
+				country_exists = FJN
+				country_exists = SZC
+				country_exists = XIA
+			}
+		}
+	}
+
+	ai_strategy = {
+		type = antagonize
+		id = "BYJ"
+		value = 200
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "MNG"
+		value = 200
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "JGJ"
+		value = 200
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "KMT"
+		value = 200
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "FJN"
+		value = 200
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "SZC"
+		value = 200
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "XIA"
+		value = 200
+	}
+}
+
+JAP_template_design = {
+	allowed = {
+		OR = {
+			original_tag = JAP
+			original_tag = JPR
+		}
+	}
+	enable = {
+		date > 1940.1.1
+	}
+	abort = { always = no }
+	ai_strategy = {
+		type = template_prio
+		id = infantry
+		value = -10
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = motorized
+		value = 10
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = cavalry
+		value = -100
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = light_armor
+		value = -10
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = medium_armor
+		value = 40
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = modern_armor
+		value = 50
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = heavy_armor
+		value = -100
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = paratroopers
+		value = -10
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = mechanized
+		value = 10
+	}
+}
+
+jap_china_is_weak = {
+	allowed = {
+		OR = {
+			original_tag = JAP
+			original_tag = JPR
+		}
+	}
+
+	enable = {
+		date < 1939.10.1
+		NOT = { has_war_with = BYJ } # only underestimate the japanese before the war
+	}
+
+	abort = {
+		OR = {
+			date > 1939.10.1
+			has_war_with = BYJ # only underestimate the japanese before the war
+		}
+	}
+
+	ai_strategy = {
+		type = consider_weak
+		id = "BYJ"
+		value = 50
+	}
+}
+
+
+jap_building_boats_is_great = {
+	allowed = {
+		OR = {
+			original_tag = JAP
+			original_tag = JPR
+		}
+	}
+	enable = {
+		num_of_civilian_factories_available_for_projects > 15
+	}
+
+	abort = { always = no }
+
+	ai_strategy = {
+		type = dockyard_to_military_factory_ratio
+		value = 40  #aim for a 2-1 ratio on naval factories
+	}
+}
+
+JAP_naval_role_ratios_historical = {
+	allowed = {
+		has_dlc = "Man the Guns"
+		OR = {
+			original_tag = JAP
+			original_tag = JPR
+		}
+	}
+	enable = {
+		always = yes
+	}
+	abort = {
+		num_of_naval_factories > 60
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_capital_bb
+		value = -120
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_capital_shbb
+		value = 3
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_carrier_light
+		value = 5
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_carrier
+		value = 15
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_submarine
+		value = 50
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_screen
+		value = 110
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_escort
+		value = 30
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_cruiser_light
+		value = 35
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_cruiser_heavy
+		value = -50
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_mine_sweeper
+		value = 5
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_mine_layer
+		value = 5
+	}
+	# general building directives
+	ai_strategy = {
+		type = unit_ratio
+		id = capital_ship
+		value = 2
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = carrier
+		value = 4
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = submarine
+		value = 5
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = screen_ship
+		value = 45
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = convoy
+		value = 20
+	}
+}
+
+JAP_naval_role_ratios_historical_late = {
+	allowed = {
+		OR = {
+			original_tag = JAP
+			original_tag = JPR
+		}
+		has_dlc = "Man the Guns"
+	}
+	enable = {
+		num_of_naval_factories > 60
+	}
+	abort = { always = no }
+	ai_strategy = {
+		type = role_ratio
+		id = naval_capital_bb
+		value = -120
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_capital_shbb
+		value = 1
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_carrier_light
+		value = 5
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_carrier
+		value = 15
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_submarine
+		value = 50
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_screen
+		value = 130
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_escort
+		value = 30
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_cruiser_light
+		value = 30
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_cruiser_heavy
+		value = 5
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_mine_sweeper
+		value = 5
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_mine_layer
+		value = 5
+	}
+	# general building directives
+	ai_strategy = {
+		type = unit_ratio
+		id = capital_ship
+		value = 3
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = carrier
+		value = 4
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = submarine
+		value = 5
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = screen_ship
+		value = 60
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = convoy
+		value = 20
+	}
+}
+
+jap_doesnt_care_about_relation = {
+	allowed = {
+		OR = {
+			original_tag = JAP
+			original_tag = JPR
+		}
+	}
+	enable = {
+		OR = {
+			has_war = yes
+			date < 1940.1.1
+		}
+	}
+
+	abort = {
+		has_war = no
+		date > 1940.1.1
+	}
+
+	ai_strategy = {
+		type = pp_spend_priority
+		id = relation
+		value = -99
+	}
+}
+
+JAP_area_priority = {
+	allowed = {
+		OR = {
+			original_tag = JAP
+			original_tag = JPR
+		}
+	}
+	enable = {
+		always = yes
+	}
+	abort = { always = no }
+	ai_strategy = {
+		type = area_priority
+		id = europe
+		value = -30
+	}
+
+	ai_strategy = {
+		type = area_priority
+		id = scandinavia
+		value = -30
+	}
+
+	ai_strategy = {
+		type = area_priority
+		id = north_america
+		value = 0
+	}
+
+	ai_strategy = {
+		type = area_priority
+		id = south_america
+		value = 0
+	}
+
+	ai_strategy = {
+		type = area_priority
+		id = asia
+		value = 150
+	}
+
+	ai_strategy = {
+		type = area_priority
+		id = middle_east
+		value = 30
+	}
+	ai_strategy = {
+		type = area_priority
+		id = suez
+		value = 0
+	}
+
+	ai_strategy = {
+		type = area_priority
+		id = africa
+		value = -60
+	}
+
+	ai_strategy = {
+		type = area_priority
+		id = pacific
+		value = 80
+	}
+
+	ai_strategy = {
+		type = area_priority
+		id = oceania
+		value = 80
+	}
+}
+
+JAP_USA_we_love_islands = {
+	allowed = {
+		OR = {
+			original_tag = JAP
+			original_tag = JPR
+			original_tag = USA
+		}
+	}
+	enable = {
+		OR = {
+			JAP = { has_war_with = USA }
+			BYJ = { is_subject_of = JAP }
+		}
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = area_priority
+		id = pacific
+		value = 140
+	}
+}

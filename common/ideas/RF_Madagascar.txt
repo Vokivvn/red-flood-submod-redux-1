@@ -1,0 +1,173 @@
+ideas = {
+
+#################
+# Country ideas #
+#################
+
+	country = {
+		mag_jazz_kings_new_swing = {
+			modifier = {
+				war_support_factor = 0.10
+				surrender_limit = 0.10
+				army_morale = 0.5
+			}
+			picture = MAG_jazz_kings_new_swing
+		}
+		mag_the_new_rising_sun = {
+			modifier = {
+				stability_factor = 0.05
+				political_power_gain = 0.05
+				production_factory_efficiency_gain_factor = 0.05
+			}
+			picture = MAG_the_new_rising_sun
+		}
+		mag_footprint_of_colonials = {
+			modifier = {
+				stability_factor = -0.05
+				conscription_factor = -0.02
+			}
+			picture = MAG_footprint_of_colonials
+		}
+		mag_the_lighthouses_gaze = {
+			modifier = {
+				weekly_manpower = 500
+				custom_modifier_tooltip = MAG_the_lighthouses_gaze
+			}
+			picture = MAG_the_lighthouses_gaze
+		}
+		mlg_republican_to_our_bones = {
+			modifier = {
+				surrender_limit = 0.10
+			}
+			targeted_modifier = {
+				tag = MAG
+				attack_bonus_against = 0.1
+			}
+			picture = MLG_republican_to_our_bones
+		}
+		mlg_broad_popular_front = {
+			modifier = {
+				stability_factor = -0.05
+				political_power_gain = 0.05
+			}
+			picture = MLG_broad_popular_front
+		}
+		mlg_pallbearers_of_prrrs = {
+			modifier = {
+				stability_factor = 0.10
+				war_support_factor = 0.10
+			}
+			picture = MLG_pallbearers_of_prrrs
+		}
+		mlg_our_personal_babel = {
+			modifier = {
+				stability_factor = -0.05
+				war_support_factor = -0.05
+				army_org_factor = -0.1
+			}
+			picture = MLG_our_personal_babel
+		}
+	}
+	industrial_concern = {
+		JIRAMA = {
+			allowed = {
+				original_tag = MAG
+			}
+			available = {
+				original_tag = MAG
+			}
+			traits = {
+				electronics_manufacturer
+			}
+			modifier = {
+				production_speed_radar_station_factor = 0.07
+				production_speed_industrial_complex_factor = 0.1
+			}
+			equipment_bonus = {
+	
+			}
+			research_bonus = {
+				electronics = 0.15
+			}
+		}
+		Magarail = {
+			allowed = {
+				original_tag = MAG
+			}
+			available = {
+				original_tag = MAG
+			}
+			traits = {
+				industrial_manufacturer
+			}
+			modifier = {
+				production_speed_infrastructure_factor = 0.10
+			}
+			equipment_bonus = {
+	
+			}
+			research_bonus = {
+				industry = 0.1
+			}
+		}
+		}
+	tank_manufacturer = {
+		designer = yes
+		Karenjy = {
+			allowed = {
+				original_tag = MAG
+			}
+			available = {
+				original_tag = MAG
+			}
+			traits = {
+				motorised_equipment_producer_offense_1
+			}
+			modifier = {
+				
+			}
+			research_bonus = {
+				motorized_equipment = 0.1
+				}
+			}
+		}
+	
+	naval_manufacturer = {
+		designer = yes
+	}
+	
+	#### Air ####
+	aircraft_manufacturer = {
+		designer = yes
+		Air_Madagascar = {
+			allowed = {
+				original_tag = MAG
+			}
+			available = {
+				original_tag = MAG
+			}
+			traits = {
+				fighter_producer_offense_1
+			}
+			modifier = {
+				
+			}
+			equipment_bonus = {
+				
+			}
+			research_bonus = {
+				light_fighter = 0.1
+			}
+		}
+	}
+	
+	hidden_ideas = {	
+		MAG_getfucked = { 
+	        removal_cost = -1 
+			#picture = SPR_separatism
+			modifier = {  
+				forced_surrender_limit = -0.80
+			}
+		}
+	}
+}

@@ -1,0 +1,26 @@
+state={
+	id=1306
+	name="STATE_1306"
+	manpower=547350
+
+	state_category=pastoral
+	history={
+		owner = SIA
+		buildings = {
+			infrastructure = 1
+		}
+		victory_points = {
+			12373 1
+		}
+		victory_points = {
+			10384 1
+		}
+		add_core_of = SIA
+
+	}
+	provinces={
+		1357 12373 10384 12360 7516 4511 1535
+	}
+
+	buildings_max_level_factor=1.000
+}

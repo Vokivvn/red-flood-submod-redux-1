@@ -1,0 +1,15 @@
+﻿characters={
+	TRS_Sree_Sir_Chithira_Thirunal_Balarama_Varma = {
+		name="Sree Chithira Thirunal"
+		portraits={
+			civilian={
+				large="gfx/leaders/TRA/Chithira_Thirunal.png"
+			}
+		}
+		country_leader={
+			ideology = oligarchy
+			traits = { unpopular_monarch }
+		}
+	}
+	
+}

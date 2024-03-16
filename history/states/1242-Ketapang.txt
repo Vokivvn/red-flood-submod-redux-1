@@ -1,0 +1,21 @@
+state= {
+	id=1242
+	name="STATE_1242"
+	manpower = 87400
+
+	state_category = rural
+
+	history= {
+		owner = DEI
+		victory_points = { #Ketapang
+			10282 1
+		}
+		add_core_of = DEI
+		buildings = {
+			infrastructure = 1
+		}
+	}
+	provinces={
+		13589 13590 13591 10282 4409
+	}
+}

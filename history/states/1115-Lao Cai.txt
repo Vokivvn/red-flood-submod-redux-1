@@ -1,0 +1,24 @@
+state = {
+	id = 1115
+	name = "STATE_1115"
+
+	resources={
+		steel = 4 #massive metallurgical deposits 
+	}
+	history = {
+		owner = DAI
+		add_core_of = DAI
+		buildings = {
+			infrastructure = 1
+		}
+		victory_points = { 12319 1 }
+	}
+
+	provinces = {
+		12319 12008
+	}
+
+	manpower = 20000
+	buildings_max_level_factor = 1
+	state_category = rural
+}

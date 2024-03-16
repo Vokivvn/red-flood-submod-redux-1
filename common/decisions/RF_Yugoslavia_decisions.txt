@@ -1,0 +1,1073 @@
+YUG_foreign_policy = {
+
+	##### Always Available #####
+	
+	YUG_fortifyaustrianborder = {
+		icon = border_war
+		cost = 75
+		days_remove = 70
+		remove_effect  = {
+			109 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 3592
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 11581
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 9611
+					instant_build = yes
+				}
+			}
+			103 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 3601
+					instant_build = yes
+				}
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	YUG_fortifyhungarianborder = {
+		icon = border_war
+		cost = 75
+		days_remove = 70
+		remove_effect  = {
+			764 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 614
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 3614
+					instant_build = yes
+				}
+			}
+			107 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 11580
+					instant_build = yes
+				}
+			}
+			109 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 11577
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 6647
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 3627
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 11594
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 9611
+					instant_build = yes
+				}
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	##### Pre WW2 Conquests #####
+
+	YUG_liberatemontenegro = {
+		icon = generic_prepare_civil_war
+		cost = 100
+		days_remove = 14
+		remove_effect  = {
+			create_wargoal = {
+    			type = annex_everything
+    			target = MNT
+			}
+			add_state_core = 105
+		}
+		available = {
+			MNT = {
+				NOT = {
+					is_puppet_of = ITA
+				}
+				ITA = {
+					exists = no
+				}
+			}
+		}
+		visible = {
+			OR = {
+				has_completed_focus = YUG_slavicbrotherhood
+				has_completed_focus = YUG_secureadriatic
+			}
+			MNT = {
+				exists = yes
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	YUG_conqueralbania = {
+		icon = generic_prepare_civil_war
+		cost = 100
+		days_remove = 14
+		remove_effect  = {
+			if = {
+				limit = {
+					ALB = {
+						has_government = right_authoritarianism
+					}
+				}
+				annex_country = {
+					target = ALB
+					transfer_troops = yes
+				}
+			}
+			else = {
+				create_wargoal = {
+    				type = annex_everything
+    				target = ALB
+				}
+			}
+			add_state_core = 811
+			add_state_core = 44
+			add_state_core = 942
+			add_state_core = 941
+		}
+		visible = {
+			OR = {
+				has_completed_focus = YUG_betweenthreeseas
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	##### WW2 #####
+
+	YUG_destroyfiume = {
+		icon = generic_prepare_civil_war
+		cost = 100
+		days_remove = 14
+		remove_effect = {
+			create_wargoal = {
+				type = take_state_focus
+				target = FIU
+			}
+		}
+		available = {
+			if = {
+				limit = {
+					NOT = {
+						has_government = reactionism
+					}
+				}
+				AND = {
+					date > 1940.01.01
+					OR = {
+						is_in_faction_with = GER
+						NOT = {
+							GER = {
+								is_faction_leader = yes
+							}
+						}
+					}
+				}
+			}
+			else = {
+				OR = {
+					date > 1940.01.01
+					FIU = {
+						has_war_with = GER
+					}
+				}
+			}
+		}
+		visible = {
+			OR = {
+				has_completed_focus = YUG_secureadriatic
+				has_completed_focus = YUG_slavicbrotherhood
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	##### Post WW2 Conquests #####
+
+	YUG_liberategreekmacedonia = {
+		icon = generic_prepare_civil_war
+		cost = 100
+		days_remove = 14
+		remove_effect  = {
+			if = {
+				limit = {
+					OR = {
+						has_country_flag = YUG_tesla
+						has_country_flag = YUG_tin
+						has_country_flag = YUG_zbor
+					}
+				}
+				add_state_core = 731
+				add_state_core = 184
+				add_state_core = 341
+
+				create_wargoal = {
+					type = annex_everything
+					target = GRE
+				}
+				custom_effect_tooltip = YUG_puppet_greece_warning
+			}
+			else = {
+				add_state_core = 731
+				add_state_core = 184
+				add_state_core = 341
+
+				add_state_core = 185
+				add_state_core = 47
+				add_state_core = 186
+				add_state_core = 187
+				add_state_core = 182
+
+				add_state_core = 183
+
+				create_wargoal = {
+					type = annex_everything
+					target = GRE
+				}
+			}
+		}
+		available = {
+			owns_state = 736
+		}
+		visible = {
+			OR = {
+				has_completed_focus = YUG_betweenthreeseas
+				has_completed_focus = YUG_avengecarigrad
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	YUG_puppet_greece = {
+		fire_only_once = yes
+		allowed = { tag = YUG }
+		available = {
+			NOT = {
+				owns_state = 47
+				GRE = { 
+					exists = no
+				}
+			}
+		}
+		activation = {
+			OR = {
+				has_country_flag = YUG_tesla
+				has_country_flag = YUG_tin
+				has_country_flag = YUG_zbor
+			}
+			owns_state = 47
+			GRE = { 
+				exists = no
+			}
+		}
+		is_good = yes
+		days_mission_timeout = 7
+		timeout_effect = {
+			every_state = {
+				limit = {
+					OR = {
+						state = 185
+						state = 47
+						state = 186
+						state = 187
+						state = 182
+						state = 183
+					}
+				}
+				transfer_state_to = GRE
+			}
+			if = {
+				limit = {
+					YUG = {
+						owns_state = 164
+					}
+				}
+				GRE = {
+					transfer_state = 164
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = YUG_zbor
+				}
+				YUG = { puppet = GRE }
+				GRE = {
+					set_politics = {
+						ruling_party = reactionism
+					}
+					set_cosmetic_tag = GRE_yugo
+					add_country_leader_role = {
+						character = "GRE_Alexander_Karadordevic"
+						country_leader = {
+							ideology = religious_fundamentalism
+							expire = "1965.1.1.1"
+						}
+						promote_leader = yes
+					}
+					add_popularity = {
+						ideology = reactionism
+						popularity = 0.30
+					}
+				}
+			}
+			else = {
+				YUG = {
+					set_autonomy = {
+						target = GRE
+						autonomy_state = ayregion
+					}
+				}
+				GRE = {
+					set_politics = {
+						ruling_party = vanguard_socialism
+					}
+					set_cosmetic_tag = GRE_yugo
+					add_country_leader_role = {
+						character = "GRE_Alexandros_Papanastasiou"
+						country_leader = {
+							ideology = stratocratic_socialism
+							expire = "1965.1.1.1"
+						}
+						promote_leader = yes
+					}
+					add_popularity = {
+						ideology = vanguard_socialism
+						popularity = 0.30
+					}
+				}
+			}
+		}
+	}
+	YUG_conquerwallachia = {
+		icon = generic_prepare_civil_war
+		cost = 100
+		available = {
+			has_global_flag = united_romania
+		}
+		days_remove = 14
+		remove_effect = {
+			if = {
+				limit = {
+					OR = {
+						has_country_flag = YUG_tesla
+						has_country_flag = YUG_tin
+						has_country_flag = YUG_zbor
+					}
+				}
+				add_state_core = 77
+				add_state_core = 1059
+
+				if = {
+					limit = {
+						country_exists = ROM
+					}
+					create_wargoal = {
+						type = annex_everything
+						target = ROM
+					}
+				}
+				if = {
+					limit = {
+						country_exists = MOL
+					}
+					create_wargoal = {
+						type = annex_everything
+						target = MOL
+					}
+				}
+				if = {
+					limit = {
+						AND = {
+							country_exists = TRS
+							TRS = {
+								NOT = {
+									is_in_faction_with = GER
+								}
+							}
+						}
+					}
+					create_wargoal = {
+						type = annex_everything
+						target = TRS
+					}
+				}
+				custom_effect_tooltip = YUG_puppet_romania_warning
+			}
+			else = {
+				add_state_core = 77
+				add_state_core = 1059
+
+				add_state_core = 46
+				add_state_core = 81
+
+				add_state_core = 79
+				add_state_core = 1193
+				add_state_core = 80
+				add_state_core = 78
+				add_state_core = 766
+				add_state_core = 1014
+
+				add_state_core = 82
+				add_state_core = 84
+				add_state_core = 1195
+				add_state_core = 1194
+				add_state_core = 76
+				add_state_core = 83
+
+				add_state_core = 911
+				add_state_core = 923
+
+				if = {
+					limit = {
+						country_exists = ROM
+					}
+					create_wargoal = {
+						type = annex_everything
+						target = ROM
+					}
+				}
+				if = {
+					limit = {
+						country_exists = MOL
+					}
+					create_wargoal = {
+						type = annex_everything
+						target = MOL
+					}
+				}
+				if = {
+					limit = {
+						AND = {
+							country_exists = TRS
+							TRS = {
+								NOT = {
+									is_in_faction_with = GER
+								}
+							}
+						}
+					}
+					create_wargoal = {
+						type = annex_everything
+						target = TRS
+					}
+				}
+			}
+		}
+		available = {
+			owns_state = 736
+		}
+		visible = {
+			OR = {
+				has_completed_focus = YUG_betweenthreeseas
+				has_completed_focus = YUG_avengecarigrad
+			}
+			OR = {
+				country_exists = ROM
+				country_exists = MOL
+				AND = {
+					country_exists = TRS
+					TRS = {
+						NOT = {
+							is_in_faction_with = GER
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	YUG_puppet_romania = {
+		fire_only_once = yes
+		allowed = { tag = YUG }
+		available = {
+			NOT = {
+				owns_state = 46
+				AND = {
+					ROM = { 
+						exists = no
+					}
+					MOL = { 
+						exists = no
+					}
+				}
+			}
+		}
+		activation = {
+			OR = {
+				has_country_flag = YUG_tesla
+				has_country_flag = YUG_tin
+				has_country_flag = YUG_zbor
+			}
+			owns_state = 46
+			AND = {
+				ROM = { 
+					exists = no
+				}
+				MOL = { 
+					exists = no
+				}
+			}
+		}
+		is_good = yes
+		days_mission_timeout = 7
+		timeout_effect = {
+			every_state = {
+				limit = {
+					OR = {
+						state = 46
+						state = 81
+
+						state = 79
+						state = 1193
+						state = 80
+						state = 78
+						state = 766
+						state = 1014
+					}
+				}
+				add_core_of = ROM
+				transfer_state_to = ROM
+			}
+			if = {
+				limit = {
+					NOT = {
+						country_exists = TRS
+					}
+				}
+				every_state = {
+					limit = {
+						OR = {
+							state = 82
+							state = 84
+							state = 1195
+							state = 1194
+							state = 76
+							state = 83
+						}
+					}
+					add_core_of = ROM
+					transfer_state_to = ROM
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = YUG_zbor
+				}
+				YUG = { puppet = ROM }
+				ROM = {
+					set_politics = {
+						ruling_party = reactionism
+					}
+					set_cosmetic_tag = ROM_yugo
+					add_country_leader_role = {
+						character = "ROM_George_Karadordevic"
+						country_leader = {
+							ideology = religious_fundamentalism
+							expire = "1965.1.1.1"
+						}
+						promote_leader = yes
+					}
+					add_popularity = {
+						ideology = reactionism
+						popularity = 0.30
+					}
+				}
+			}
+			else = {
+				YUG = {
+					set_autonomy = {
+						target = ROM
+						autonomy_state = ayregion
+					}
+				}
+				ROM = {
+					set_politics = {
+						ruling_party = revisionist_socialism
+					}
+					set_cosmetic_tag = ROM_yugo
+					add_country_leader_role = {
+						character = "ROM_Gherea"
+						country_leader = {
+							ideology = agrarian_socialism
+							expire = "1965.1.1.1"
+						}
+						promote_leader = yes
+					}
+					add_popularity = {
+						ideology = revisionist_socialism
+						popularity = 0.30
+					}
+				}
+			}
+		}
+	}
+	YUG_peace_entente = {
+		allowed = { tag = YUG }
+		activation = {
+			has_war_with = GRE
+			has_war_with = ENG
+			YUG = {
+				has_country_flag = YUG_zbor
+
+				controls_state = 109
+				controls_state = 103
+				controls_state = 104
+				controls_state = 921
+				controls_state = 922
+				controls_state = 899
+				controls_state = 1201
+				controls_state = 764
+				controls_state = 107
+				controls_state = 108
+				controls_state = 1063
+				controls_state = 900
+				controls_state = 1064
+				controls_state = 106
+
+				controls_state = 1062
+				controls_state = 48
+				controls_state = 812
+				controls_state = 212
+				controls_state = 211
+
+				controls_state = 731
+				controls_state = 184
+				controls_state = 341
+				controls_state = 185
+				controls_state = 47
+				controls_state = 186
+			}
+		}
+		available = {
+			NOT = {
+				YUG = {
+					controls_state = 109
+					controls_state = 103
+					controls_state = 104
+					controls_state = 921
+					controls_state = 922
+					controls_state = 899
+					controls_state = 1201
+					controls_state = 764
+					controls_state = 107
+					controls_state = 108
+					controls_state = 1063
+					controls_state = 900
+					controls_state = 1064
+					controls_state = 106
+
+					controls_state = 1062
+					controls_state = 48
+					controls_state = 812
+					controls_state = 212
+					controls_state = 211
+
+					controls_state = 731
+					controls_state = 184
+					controls_state = 341
+					controls_state = 185
+					controls_state = 47
+					controls_state = 186
+				}
+			}
+		}
+		is_good = yes
+		days_mission_timeout = 90
+		timeout_effect = {
+			hidden_effect = {
+				YUG = {
+					annex_country = {
+						target = GRE
+					}
+				}
+			}
+			every_enemy_country = {
+				limit = {
+					is_in_faction_with = ENG
+				}
+				white_peace = {
+					tag = YUG
+				}
+			}
+			hidden_effect = {
+				MAD = {
+					white_peace = {
+						tag = YUG
+					}
+				}
+			}
+		}
+	}
+	YUG_attack_straits = {
+		icon = generic_prepare_civil_war
+		cost = 100
+		fire_only_once = yes
+
+		days_remove = 14
+		remove_effect  = {
+			add_state_core = 976
+			add_state_core = 1124
+			create_wargoal = {
+				type = annex_everything
+				target = var:1124.owner
+			}
+		}
+		available = {
+			AND = {
+				owns_state = 341
+				owns_state = 1059
+				owns_state = 736
+			}
+		}
+		visible = {
+			OR = {
+				AND = {
+					has_completed_focus = YUG_betweenthreeseas
+					has_country_flag = YUG_zenit
+				}
+				has_completed_focus = YUG_avengecarigrad
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	YUG_peace_straits = {
+		allowed = { tag = YUG }
+		activation = {
+			OR = {
+				has_country_flag = YUG_zenit
+				has_country_flag = YUG_zbor
+			}
+			1124 = {
+				owner = {
+					OR = {
+						YUG = {
+							has_war_with = PREV
+						}
+						tag = YUG
+					}
+				}
+			}
+			YUG = {
+				controls_state = 976
+				controls_state = 1124
+			}
+		}
+		available = {
+			NOT = {
+				YUG = {
+					controls_state = 976
+					controls_state = 1124
+				}
+			}
+		}
+		is_good = yes
+		days_mission_timeout = 90
+		timeout_effect = {
+			hidden_effect = {
+				every_state = {
+					limit = {
+						OR = {
+							state = 976
+							state = 1124
+						}
+					}
+					transfer_state_to = YUG
+				}
+				if = {
+					limit = {
+						YUG = {
+							has_government = reactionism
+						}
+					}
+					1124 = {
+						set_state_name = YUG_1124_Rename
+						set_province_name = {
+							id = 9833
+							name = YUG_9833_VP_Rename
+						}
+					}
+					set_cosmetic_tag = YUG_tsardom
+					news_event = {
+						id = news.345
+					}
+				}
+			}
+			1124 = {
+				owner = {
+					YUG = {
+						white_peace = PREV
+					}
+				}
+			}
+		}
+	}
+}
+YUG_yugoslav_mechanic = {
+	YUG_making_promises = {
+		cost = 50
+		priority = 9
+		days_re_enable = 14
+		complete_effect = {
+			add_to_variable = {
+				var = YUG_yugoslav_influence
+				value = 0.03
+			}
+			add_to_variable = {
+				var = BUL.BUL_yugoslav_influence
+				value = -0.03
+			}
+			clamp_variable = {
+				var = YUG_yugoslav_influence
+				min = 0
+				max = 1
+			}
+			clamp_variable = {
+				var = BUL.BUL_yugoslav_influence
+				min = 0
+				max = 1
+			}
+			custom_effect_tooltip = YUG_small_influence_tooltip
+		}
+		visible = {
+			has_country_flag = YUG_yugoslav_mechanic_begins
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	YUG_delivering_pork_barrel = {
+		cost = 25
+		priority = 7
+		days_re_enable = 42
+		complete_effect = {
+			add_timed_idea = {
+				idea = YUG_pork_barrel
+				days = 35
+			}
+			add_to_variable = {
+				var = YUG_yugoslav_influence
+				value = 0.08
+			}
+			add_to_variable = {
+				var = BUL.BUL_yugoslav_influence
+				value = -0.08
+			}
+			clamp_variable = {
+				var = YUG_yugoslav_influence
+				min = 0
+				max = 1
+			}
+			clamp_variable = {
+				var = BUL.BUL_yugoslav_influence
+				min = 0
+				max = 1
+			}
+			custom_effect_tooltip = YUG_large_influence_tooltip
+		}
+		visible = {
+			has_country_flag = YUG_yugoslav_mechanic_begins
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	YUG_swaying_uniforms = {
+		cost = 25
+		priority = 6
+		custom_cost_trigger = {
+			has_equipment = {
+				infantry_equipment_1 > 299
+			}
+		}
+		custom_cost_text = decision_cost_infantry_equipment_300
+		days_re_enable = 28
+		complete_effect = {
+			YUG = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = -300
+					producer = YUG
+				}
+			}
+			add_to_variable = {
+				var = BUL.BUL_yugoslav_influence
+				value = -0.05
+			}
+			add_to_variable = {
+				var = YUG_yugoslav_influence
+				value = 0.05
+			}
+			clamp_variable = {
+				var = YUG_yugoslav_influence
+				min = 0
+				max = 1
+			}
+			clamp_variable = {
+				var = BUL.BUL_yugoslav_influence
+				min = 0
+				max = 1
+			}
+			custom_effect_tooltip = YUG_moderate_rival_influence_tooltip
+		}
+		visible = {
+			has_country_flag = YUG_yugoslav_mechanic_begins
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	YUG_unite_yugoslavia = {
+		cost = 200
+		priority = 10
+		fire_only_once = yes
+
+		complete_effect = {
+			annex_country = {
+			    target = BUL
+			    transfer_troops = yes
+			}
+			clr_country_flag = YUG_yugoslav_mechanic_begins
+			BUL = {
+				clr_country_flag = BUL_yugoslav_mechanic_begins
+				drop_cosmetic_tag = yes
+				set_cosmetic_tag = BUL_yugo_free
+			}
+			BUL = {
+				every_unit_leader = {
+					set_nationality = YUG
+				}
+			}
+			custom_effect_tooltip = YUG_integration_cost
+			add_research_slot = 1
+		}
+		visible = {
+			has_country_flag = YUG_yugoslav_mechanic_begins
+		}
+		available = {
+			check_variable = {
+			    YUG_yugoslav_influence > 0.89
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	YUG_no_time_to_waste = {
+		cost = 100
+		priority = 11
+		fire_only_once = yes
+
+		complete_effect = {
+			end_puppet = BUL
+			BUL = {
+				if = {
+					limit = {
+						has_idea = BUL_watchful_eye2
+					}
+					remove_ideas = {
+						BUL_watchful_eye2
+					}
+				}
+				if = {
+					limit = {
+						has_idea = BUL_watchful_eye3
+					}
+					remove_ideas = {
+						BUL_watchful_eye3
+					}
+				}
+				clr_country_flag = BUL_yugoslav_mechanic_begins
+				drop_cosmetic_tag = yes
+				set_cosmetic_tag = BUL_yugo_revolt
+				clear_variable = BUL_yugoslav_influence
+				clear_variable = YUG.YUG_yugoslav_influence
+			}
+			declare_war_on = {
+				target = BUL
+				type = annex_everything
+			}
+			clr_country_flag = YUG_yugoslav_mechanic_begins
+			custom_effect_tooltip = YUG_win_get_slot
+			
+		}
+		visible = {
+			has_country_flag = YUG_yugoslav_mechanic_begins
+			has_country_flag = YUG_tesla
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 0
+				BUL = {
+					is_ai = no
+				}
+			}
+		}
+	}
+}

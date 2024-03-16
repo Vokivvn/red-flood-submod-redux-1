@@ -1,0 +1,21 @@
+state={
+	id=786
+	name="STATE_786" # West Mauritanian Desert
+	manpower = 117990
+	
+	state_category = wasteland
+
+
+	history={
+		owner = SEN
+		add_core_of = SEN
+		buildings = {
+			infrastructure = 2
+		}
+
+	}
+
+	provinces={
+		8035 10779 10838
+	}
+}

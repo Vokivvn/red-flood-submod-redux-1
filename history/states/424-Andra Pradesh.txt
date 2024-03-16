@@ -1,0 +1,31 @@
+
+state={
+	id=424
+	name="STATE_424" # Madras
+	manpower = 15791700
+	state_category = town
+
+
+	history={
+	  owner = MAD
+	  add_core_of = MAD
+	  add_claim_by = ORS
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+		victory_points = {
+			7340 3
+		}
+		victory_points = {
+			10756 3
+		}
+		victory_points = {
+			10152 3
+		}
+	}
+
+	provinces={
+		1228 1344 1430 4321 4365 4414 5032 7297 7310 7340 10152 10208 10296 10756 10897 12180 12779
+	}
+}

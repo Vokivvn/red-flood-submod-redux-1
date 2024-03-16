@@ -1,0 +1,10 @@
+################################
+#materiel_manufacturer##############
+################################
+LIB_Liberian_Arms_Company_organization = {
+	include = generic_infantry_equipment_organization
+	icon = GFX_idea_Liberian_Arms_Company
+	allowed = {
+		original_tag = LIB 
+	}
+}

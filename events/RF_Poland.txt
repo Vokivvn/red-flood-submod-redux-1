@@ -1,0 +1,1610 @@
+add_namespace = poland
+add_namespace = intermarium
+
+country_event = { #Pilsudski's absence
+	id = poland.1
+	title = poland.1.t
+	desc = poland.1.desc
+	picture = GFX_report_event_GFX_officers
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #The nation prays for him 
+		name = poland.1.a
+		ai_chance = {
+			base = 1
+		}
+		swap_ruler_traits = {
+			remove = POL_pilsudski_ubermensch
+			add = POL_pilsudski_goobermensch
+		}
+		swap_ruler_traits = {
+			remove = POL_pilsudski_demiurge
+			add = POL_pilsudski_demisludge
+		}
+		swap_ruler_traits = {
+			remove = POL_pilsudski_44
+			add = POL_pilsudski_404
+		}
+		swap_ruler_traits = {
+			remove = POL_pilsudski_titan
+			add = POL_pilsudski_tritan
+		}
+		swap_ideas = {
+			remove_idea = POL_heavy_hand_naczelnik
+			add_idea = POL_heavy_hand_naczelnik_2
+		}
+		hidden_effect = {
+			country_event = {
+				id = poland.2
+				days = 30
+			}
+		}
+	}
+}
+country_event = { #Death of the marshal
+	id = poland.2
+	title = poland.2.t
+	desc = poland.2.desc
+	picture = GFX_report_event_POL_marshal_death
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = poland.2.a
+		ai_chance = {
+			base = 1
+		}
+		custom_effect_tooltip = pilsudski_dies
+		set_country_flag = pilsudski_death
+		add_political_power = -50
+		hidden_effect = {
+			kill_country_leader = yes
+			add_country_leader_role = {
+				character = POL_temporary_government
+				promote_leader = yes
+				country_leader = {
+					desc = POLITICS_TEMPORARY_GOVERNMENT_DESC
+					expire = "1965.1.1"
+					ideology = national_rejuvenatism
+				}
+			}
+			country_event = {
+				id = poland.3
+				days = 6
+			}
+			remove_ideas = POL_heavy_hand_naczelnik_2
+		}
+	}
+}
+country_event = { #Pilsudski's funeral
+	id = poland.3
+	title = poland.3.t
+	desc = poland.3.desc
+	picture = GFX_report_event_POL_marshal_rest
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #May he rest in peace 
+		name = poland.3.a
+		ai_chance = {
+			base = 1
+		}
+		add_political_power = -15
+		hidden_effect = {
+			country_event = { #A controversial grave
+				id = poland.5
+				days = 60
+			}
+		}
+	}
+}
+country_event = { #Emergency meeting
+	id = poland.4
+	title = poland.4.t
+	desc = poland.4.desc
+	picture = GFX_report_event_POL_marshal_rest
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #Socdem 
+		name = poland.4.a
+		ai_chance = {
+			base = 5
+			modifier = {
+				factor = 1000
+				has_game_rule = {
+					rule = POL_ai_route
+					option = DASZYNSKI
+				}
+			}
+		}
+		set_country_flag = POL_socdem_path_unlock
+		hidden_effect= {
+			activate_advisor = POL_Puzak_hog
+			activate_advisor = POL_Leon_for
+			activate_advisor = POL_Kalecki_eco
+			activate_advisor = POL_Zofia_sec
+			activate_advisor = POL_Bartel_int
+		}
+	}
+	option = { #Accelerationist
+		name = poland.4.b
+		ai_chance = {
+			base = 5
+			modifier = {
+				factor = 1000
+				has_game_rule = {
+					rule = POL_ai_route
+					option = SZUKALSKI
+				}
+			}
+		}
+		set_country_flag = POL_natrej_path_unlock
+		hidden_effect= {
+			activate_advisor = POL_Piasecki_hog
+			activate_advisor = POL_Zielinski_for
+			activate_advisor = POL_Stachniuk_eco
+			activate_advisor = POL_Zeligowski_int
+			activate_advisor = POL_Koodziej_sec
+		}
+	}
+	option = { #Despotic
+		name = poland.4.c
+		ai_chance = {
+			base = 0
+			modifier = {
+				add = 5000
+				has_game_rule = {
+					rule = POL_ai_route
+					option = ZYMIERSKI
+				}
+			}
+		}
+		set_country_flag = POL_despotic_path_unlock
+		hidden_effect= {
+			activate_advisor = POL_Koc_hog
+			activate_advisor = POL_Jerzy_for
+			activate_advisor = POL_Eugeniusz_eco 
+			activate_advisor = POL_Rutkowski_sec
+			activate_advisor = POL_Zamorski_int
+		}
+	}
+}
+country_event = { #Controversial Grave
+	id = poland.5
+	title = poland.5.t
+	desc = poland.5.desc
+	picture = GFX_report_event_POL_controversialgrave
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #That doesn't bode well. 
+		name = poland.5.a
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+country_event = { #artist_riot
+	id = poland.6
+	title = poland.6.t
+	desc = poland.6.desc
+	picture = GFX_report_event_POL_artistriot
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = poland.6.a
+	}
+}
+country_event = { #artist riot acc
+	id = poland.7
+	title = poland.7.t
+	desc = poland.7.desc
+	picture = GFX_report_event_POL_artistriot
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = poland.7.a
+	}
+}
+country_event = { #nationalpantheon
+	id = poland.8
+	title = poland.8.t
+	desc = poland.8.desc
+	picture = GFX_report_event_POL_nationalpantheon
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = poland.8.a
+	}
+}
+country_event = { #dflr
+	id = poland.9
+	title = poland.9.t
+	desc = poland.9.desc
+	picture = GFX_report_event_GFX_democracy_1
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = poland.9.a
+	}
+}
+country_event = { #augustus
+	id = poland.10
+	title = poland.10.t
+	desc = poland.10.desc
+	picture = GFX_report_event_POL_augustus
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = poland.10.a
+	}
+}
+country_event = { #island
+	id = poland.11
+	title = poland.11.t
+	desc = poland.11.desc
+	picture = GFX_report_event_POL_islandofsages
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = poland.11.a
+	}
+}
+country_event = { #findings
+	id = poland.12
+	title = poland.12.t
+	desc = poland.12.desc
+	picture = GFX_report_event_POL_findingsinbiala
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = poland.12.a
+		trigger = {
+			NOT = {
+				OR = {
+					has_government = despotism
+					has_government = right_authoritarianism
+				}
+			}
+		}
+	}
+	option = {
+		name = poland.12.b
+		trigger = {
+			OR = {
+				has_government = despotism
+				has_government = right_authoritarianism
+			}
+		}
+	}
+}
+country_event = { #writing reform
+	id = poland.13
+	title = poland.13.t
+	desc = poland.13.desc
+	picture = GFX_report_event_POL_writingreform
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = poland.13.a
+	}
+}
+country_event = { #join faction
+	id = poland.14
+	title = poland.14.t
+	desc = poland.14.desc 
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = poland.14.a
+		POL = { add_to_faction = KAV }
+		ai_chance = {
+			base = 75
+		}
+	}
+	
+	option = {
+		name = poland.14.b
+		POL = {
+			country_event = {
+				id = poland.15
+			}
+		}
+		ai_chance = {
+			base = 25
+		}
+	}
+}
+country_event = {
+	id = poland.15
+	title = poland.15.t
+	desc = poland.15.desc 
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = poland.15.a
+		if = {
+			limit = {
+				YUG = {
+					NOT = {
+						has_government = reactionism
+					}
+				}
+			}
+			POL = {
+				give_guarantee = YUG
+			}
+		}
+	}
+}
+country_event = {
+	id = poland.16
+	title = poland.16.t
+	desc = poland.16.desc 
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_report_event_POL_dictionary
+
+	trigger = {
+		tag = POL
+		date > 1939.10.01
+		POL = {
+			has_government = accelerationism
+		}
+	}
+
+	option = {
+		name = poland.16.a
+	}
+}
+country_event = {
+	id = poland.17
+	title = poland.17.t
+	desc = poland.17.desc
+	fire_only_once = yes
+	picture = GFX_report_event_POL_dozynki
+
+	trigger = {
+		tag = POL
+		date > 1938.09.15
+		POL = {
+			has_government = accelerationism
+		}
+	}
+
+	option = {
+		name = poland.17.a
+	}
+}
+country_event = {
+	id = poland.18
+	title = poland.18.t
+	desc = poland.18.desc 
+	picture = GFX_report_event_fra_flying_v
+	fire_only_once = yes
+
+	trigger = {
+		date > 1938.11.8
+		tag = POL
+	}
+
+	option = {
+		name = poland.18.a
+		add_ace = {
+			name = "Klaudia"
+			surname = "Ziółkowska"
+			callsign = "Zmorka"
+			type = fighter_unique
+		}
+	}
+}
+country_event = {
+	id = poland.19
+	title = poland.19.t
+	desc = poland.19.desc 
+	picture = GFX_report_event_lacinka
+	fire_only_once = yes
+
+	trigger = {
+		has_government = despotism
+		owns_state = 206
+		tag = POL
+	}
+	mean_time_to_happen = {
+		days = 50
+	}
+
+	option = {
+		name = poland.19.a
+		add_political_power = -25
+		add_stability = 0.07
+	}
+}
+country_event = { #war with lithuania
+	id = poland.100
+	title = poland.100.t
+	desc = poland.100.desc
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #war
+		name = poland.100.a
+		POL = {
+			declare_war_on = {
+			    target = LIT
+			    type = annex_everything
+			}
+		}
+		ai_chance = {
+			base = 60
+		}
+	}
+	option = { #annex
+		name = poland.100.b
+		trigger = {
+			LIT = {
+				is_ai = yes
+			}
+		}
+		ai_chance = {
+			base = 40
+		}
+		POL = {
+			every_state = {
+				limit = {
+					is_core_of = LIT
+				}
+				add_core_of = POL
+			}
+			annex_country = {
+				target = LIT
+				transfer_troops = yes
+			}
+			LIT = {
+				every_unit_leader = {
+					set_nationality = POL
+				}
+			}
+		}
+	}
+}
+country_event = { #war with belarus
+	id = poland.101
+	title = poland.101.t
+	desc = poland.101.desc
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #war
+		name = poland.101.a
+		POL = {
+			declare_war_on = {
+    			target = BLR
+    			type = annex_everything
+			}
+		}
+		ai_chance = {
+			base = 80
+		}
+	}
+	option = { #annex
+		name = poland.101.b
+		trigger = {
+			BLR = {
+				is_ai = yes
+			}
+		}
+		POL = {
+			every_state = {
+				limit = {
+					is_core_of = BLR
+				}
+				add_core_of = POL
+			}
+			annex_country = {
+				target = BLR
+				transfer_troops = yes
+			}
+			BLR = {
+				every_unit_leader = {
+					set_nationality = POL
+				}
+			}
+		}
+		ai_chance = {
+			base = 20
+		}
+	}
+}
+country_event = {
+	id = poland.50
+	title = poland.50.t
+	desc = poland.50.desc 
+	picture = GFX_report_event_POL_bunt
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = poland.50.a
+	}
+}
+country_event = {
+	id = poland.51
+	title = poland.51.t
+	desc = poland.51.desc 
+	picture = GFX_report_event_POL_endlesssky
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = poland.51.a
+	}
+}
+
+country_event = { # Puppeting Russia
+	id = poland.52
+
+	hidden = yes
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		days = 3
+	}
+
+	trigger = {
+		tag = POL
+		OR = {
+			AND = {
+				POL = {
+					has_government = despotism
+				}
+				RUS = {
+					is_puppet_of = POL
+				}
+			}
+			AND = {
+				POL = {
+					has_government = despotism
+				}
+				SRU = {
+					is_puppet_of = POL
+				}
+			}
+			AND = {
+				RUS = {
+					exists = no
+				}
+				SRU = {
+					exists = no
+				}
+				POL = {
+					has_government = despotism
+					OR = {
+						controls_state = 147
+						controls_state = 195
+						controls_state = 208
+						controls_state = 213
+						controls_state = 214
+						controls_state = 215
+						controls_state = 216
+						controls_state = 219
+						controls_state = 244
+						controls_state = 246
+						controls_state = 247
+						controls_state = 248
+						controls_state = 249
+						controls_state = 250
+						controls_state = 251
+						controls_state = 252
+						controls_state = 253
+						controls_state = 254
+						controls_state = 255
+						controls_state = 256
+						controls_state = 262
+						controls_state = 263
+						controls_state = 264
+						controls_state = 351
+						controls_state = 397					
+						controls_state = 398
+						controls_state = 399
+						controls_state = 400
+						controls_state = 573
+						controls_state = 581
+						controls_state = 651
+						controls_state = 653
+						controls_state = 722
+						controls_state = 804
+					}
+				}
+			}
+		}
+	}
+
+	immediate = {
+		RUS = {
+			if = {
+				limit = {
+					POL = {
+						controls_state = 213
+					}
+				}
+				transfer_state = 213
+			}
+			set_politics = {
+				ruling_party = despotism
+			}
+			set_party_name = { 
+				ideology = despotism 
+				long_name = RUS_despotism_party_alt_long 
+				name = RUS_despotism_party_alt 
+			}
+			add_country_leader_role = {
+				character = POL_temporary_government
+				promote_leader = yes
+				country_leader = {
+					expire = "1965.1.1"
+					ideology = military_dictatorship
+				}
+			}
+			set_cosmetic_tag = "RUS_POLISH_PUPPET"
+			if = {
+				limit = {
+					POL = {
+						controls_state = 147
+					}
+				}
+				transfer_state = 147
+			}
+			if = {
+				limit = {
+					POL = {
+						controls_state = 195
+					}
+				}
+				transfer_state = 195
+			}
+			if = {
+				limit = {
+					POL = {
+						controls_state = 208
+					}
+				}
+				transfer_state = 208
+			}
+			if = {
+				limit = {
+					POL = {
+						controls_state = 214
+					}
+				}
+				transfer_state = 214
+			}
+			if = {
+				limit = {
+					POL = {
+						controls_state = 215
+					}
+				}
+				transfer_state = 215
+			}
+			if = {
+				limit = {
+					POL = {
+						controls_state = 216
+					}
+				}
+				transfer_state = 216
+			}
+			if = {
+				limit = {
+					POL = {
+						controls_state = 219
+					}
+				}
+				transfer_state = 219
+			}
+			if = {
+				limit = {
+					POL = {
+						controls_state = 244
+					}
+				}
+				transfer_state = 244
+			}
+			if = {
+				limit = {
+					POL = {
+						controls_state = 246
+					}
+				}
+				transfer_state = 246
+			}
+			if = {
+				limit = {
+					POL = {
+						controls_state = 247
+					}
+				}
+				transfer_state = 247
+			}
+			if = {
+				limit = {
+					POL = {
+						controls_state = 248
+					}
+				}
+				transfer_state = 248
+			}
+			if = {
+				limit = {
+					POL = {
+						controls_state = 249
+					}
+				}
+				transfer_state = 249
+			}
+			if = {
+				limit = {
+					POL = {
+						controls_state = 250
+					}
+				}
+				transfer_state = 250
+			}
+			if = {
+				limit = {
+					POL = {
+						controls_state = 251
+					}
+				}
+				transfer_state = 251
+			}
+			if = {
+				limit = {
+					POL = {
+						controls_state = 252
+					}
+				}
+				transfer_state = 252
+			}
+			if = {
+				limit = {
+					POL = {
+						controls_state = 253
+					}
+				}
+				transfer_state = 253
+			}
+			if = {
+				limit = {
+					POL = {
+						controls_state = 254
+					}
+				}
+				transfer_state = 254
+			}
+			if = {
+				limit = {
+					POL = {
+						controls_state = 255
+					}
+				}
+				transfer_state = 255
+			}
+			if = {
+				limit = {
+					POL = {
+						controls_state = 256
+					}
+				}
+				transfer_state = 256
+			}
+			if = {
+				limit = {
+					POL = {
+						controls_state = 262
+					}
+				}
+				transfer_state = 262
+			}
+			if = {
+				limit = {
+					POL = {
+						controls_state = 263
+					}
+				}
+				transfer_state = 263
+			}
+			if = {
+				limit = {
+					POL = {
+						controls_state = 264
+					}
+				}
+				transfer_state = 264
+			}
+			if = {
+				limit = {
+					POL = {
+						controls_state = 351
+					}
+				}
+				transfer_state = 351
+			}
+			if = {
+				limit = {
+					POL = {
+						controls_state = 397
+					}
+				}
+				transfer_state = 397
+			}
+			if = {
+				limit = {
+					POL = {
+						controls_state = 398
+					}
+				}
+				transfer_state = 398
+			}
+			if = {
+				limit = {
+					POL = {
+						controls_state = 399
+					}
+				}
+				transfer_state = 399
+			}
+			if = {
+				limit = {
+					POL = {
+						controls_state = 400
+					}
+				}
+				transfer_state = 400
+			}
+			if = {
+				limit = {
+					POL = {
+						controls_state = 573
+					}
+				}
+				transfer_state = 573
+			}
+			if = {
+				limit = {
+					POL = {
+						controls_state = 581
+					}
+				}
+				transfer_state = 581
+			}
+			if = {
+				limit = {
+					POL = {
+						controls_state = 651
+					}
+				}
+				transfer_state = 651
+			}
+			if = {
+				limit = {
+					POL = {
+						controls_state = 653
+					}
+				}
+				transfer_state = 653
+			}
+			if = {
+				limit = {
+					POL = {
+						controls_state = 722
+					}
+				}
+				transfer_state = 722
+			}
+			if = {
+				limit = {
+					POL = {
+						controls_state = 804
+					}
+				}
+				transfer_state = 804
+			}
+		}
+		POL = {
+			puppet = RUS
+		}
+	}
+}
+
+country_event = { 
+	id = poland.102
+	title = poland.102.t
+	desc = poland.102.desc
+	picture = GFX_report_event_GFX_officers
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { 
+		name = poland.102.a
+		ai_chance = {
+			base = 1
+		}
+		GER = { 
+			country_event = {
+				id = poland.103
+				days = 2
+			}
+		}
+	}
+}
+
+country_event = { 
+	id = poland.103
+	title = poland.103.t
+	desc = poland.103.desc
+	picture = GFX_report_event_GFX_officers
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { 
+		name = poland.103.a
+		ai_chance = {
+			base = 1
+		}
+		GER = { 
+			transfer_state = 763
+		}
+		763 = {
+			add_core_of = GER
+		}
+		LIT = { 
+			transfer_state = 188
+			transfer_state = 1297
+		}
+	}
+}
+
+country_event = { #poland release = monarchist russia
+	id = poland.1000
+	title = poland.1000.t
+	desc = poland.1000.desc
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = poland.1000.a
+		ai_chance = {
+			base = 1
+			modifier = {
+				AND = {
+					OR = {
+						tag = RUS
+						tag = SRU #idk which one has mlads lol
+					}
+					has_government = despotism
+					has_cosmetic_tag = RUS_mlads
+				}
+				
+				factor = 10000
+			}
+		}
+		POL = {
+				add_country_leader_role = {
+			character = POL_piasecki
+			promote_leader = yes
+			country_leader = { 
+				ideology = revolutionary_nationalism
+				expire = "1965.1.1.1"
+			}
+		}
+		set_politics = {
+			ruling_party = despotism
+			name = POL_piasecki_party
+			long_name = POL_piasecki_party_long
+		}
+		add_popularity = {
+			ideology = despotism
+			popularity = 0.30
+		}
+		}
+	
+	}
+
+	option = {
+		name = poland.1000.b
+		ai_chance = {
+			base = 1
+		}
+		POL = {
+			add_country_leader_role = {
+			character = POL_cybichowski
+			promote_leader = yes
+			country_leader = { 
+				ideology = reactionary_populism
+				expire = "1965.1.1.1"
+			}
+		}
+		set_politics = {
+			ruling_party = reactionism
+			name = POL_cybichowski_party
+			long_name = POL_cybichowski_party_long
+		}
+		add_popularity = {
+			ideology = reactionism
+			popularity = 0.30
+		}
+		}
+		
+	}
+
+	option = {
+		name = poland.1000.c
+		ai_chance = {
+			base = 1
+		}
+		POL = {
+			add_country_leader_role = {
+			character = POL_kozicki
+			promote_leader = yes
+			country_leader = { 
+				ideology = national_democracy
+				expire = "1965.1.1.1"
+			}
+		}
+		set_politics = {
+			ruling_party = right_authoritarianism
+			name = POL_kozicki_party
+			long_name = POL_kozicki_party_long
+		}
+		add_popularity = {
+			ideology = right_authoritarianism
+			popularity = 0.30
+		}
+		}
+		
+	}
+}
+
+country_event = { #poland release = dem russia
+	id = poland.1001
+	title = poland.1001.t
+	desc = poland.1001.desc
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = poland.1001.a
+		ai_chance = {
+			base = 1
+			modifier = { tag = SIB factor = 0 }
+		}
+		POL = {
+			add_country_leader_role = {
+			character = POL_arciszewski_rev
+			promote_leader = yes
+			country_leader = { 
+				ideology = democratic_socialism
+				expire = "1965.1.1.1"
+			}
+		}
+		set_politics = {
+			ruling_party = revisionist_socialism
+			name = POL_arciszewski_party
+			long_name = POL_arciszewski_party_long
+		}
+		add_popularity = {
+			ideology = revisionist_socialism
+			popularity = 0.30
+		}
+		set_cosmetic_tag = POL_third
+		}
+		
+	}
+
+	option = {
+		name = poland.1001.b
+		ai_chance = {
+			base = 1
+		}
+		POL = {
+			add_country_leader_role = {
+			character = POL_mikolajczyk
+			promote_leader = yes
+			country_leader = { 
+				ideology = left_populism
+				expire = "1965.1.1.1"
+			}
+		}
+		set_politics = {
+			ruling_party = progressivism
+			name = POL_mikolajczyk_party
+			long_name = POL_mikolajczyk_party_long
+		}
+		set_country_flag = soc_dems_are_socialists
+		add_popularity = {
+			ideology = progressivism
+			popularity = 0.30
+		}
+		set_country_leader_portrait = {
+				portrait = GFX_portrait_Portrait_POL_Stanislaw_Mikolajczyk_prog
+			}
+		set_cosmetic_tag = POL_third
+		}
+		
+	}
+
+	option = {
+		name = poland.1001.c
+		ai_chance = {
+			base = 1
+			modifier = { tag = KAV factor = 10000 }
+		}
+		POL = {
+			add_country_leader_role = {
+			character = POL_rybarski
+			promote_leader = yes
+			country_leader = { 
+				ideology = national_conservatism
+				expire = "1965.1.1.1"
+			}
+		}
+		set_politics = {
+			ruling_party = conservatism
+			name = POL_rybarski_party
+			long_name = POL_rybarski_party_long
+		}
+		add_popularity = {
+			ideology = conservatism
+			popularity = 0.30
+		}
+		set_country_leader_portrait = {
+				portrait = GFX_portrait_Portrait_POL_Roman_Rybarski_con
+			}
+		set_cosmetic_tag = POL_third
+		}
+		
+	}
+}
+
+country_event = { #poland release = socialist russia
+	id = poland.1002
+	title = poland.1002.t
+	desc = poland.1002.desc
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = poland.1002.a
+		ai_chance = {
+			base = 1
+		}
+		POL = {
+			add_country_leader_role = {
+			character = POL_peiper
+			promote_leader = yes
+			country_leader = { 
+				ideology = vperedism
+				expire = "1965.1.1.1"
+			}
+			}
+			set_politics = {
+			ruling_party = accelerationism
+			name = POL_peiper_party
+			long_name = POL_peiper_party_long
+			}
+			add_popularity = {
+			ideology = accelerationism
+			popularity = 0.30
+			}
+			set_cosmetic_tag = POL_socialist
+		}
+		
+	}
+
+	option = {
+		name = poland.1002.b
+		ai_chance = {
+			base = 1
+			modifier = {
+				AND = {
+					tag = ZHR
+					has_government = vanguard_socialism
+					has_cosmetic_tag = ZHR_russiansovietrepublic_kamenev
+				}
+				
+				factor = 10000
+			}
+		}
+		POL = {
+			add_country_leader_role = {
+			character = POL_moczar
+			promote_leader = yes
+			country_leader = { 
+				ideology = national_vanguardism
+				expire = "1965.1.1.1"
+			}
+		}
+		set_politics = {
+			ruling_party = vanguard_socialism
+			name = POL_moczar_party
+			long_name = POL_moczar_party_long
+		}
+		add_popularity = {
+			ideology = vanguard_socialism
+			popularity = 0.30
+		}
+		set_cosmetic_tag = POL_socialist
+		}
+
+	}
+
+	option = {
+		name = poland.1002.c
+		ai_chance = {
+			base = 1
+			modifier = { tag = KAV factor = 0 }
+		}
+		POL = {
+			add_country_leader_role = {
+			character = POL_cyrankiewicz
+			promote_leader = yes
+			country_leader = { 
+				ideology = spartakism
+				expire = "1965.1.1.1"
+			}
+		}
+		set_politics = {
+			ruling_party = popular_socialism
+			name = POL_cyrankiewicz_party
+			long_name = POL_cyrankiewicz_party_long
+		}
+		add_popularity = {
+			ideology = popular_socialism
+			popularity = 0.30
+		}
+		set_cosmetic_tag = POL_socialist
+		}
+		
+	}
+}
+
+country_event = { #poland release = green russia
+	id = poland.1003
+	title = poland.1003.t
+	desc = poland.1003.desc
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = poland.1003.a
+		ai_chance = {
+			base = 1
+		}
+		POL = {
+			add_country_leader_role = {
+			character = POL_bierut
+			promote_leader = yes
+			country_leader = { 
+				ideology = national_anarchism
+				expire = "1965.1.1.1"
+			}
+			}
+			set_politics = {
+			ruling_party = anarchism
+			name = POL_bierut_party
+			long_name = POL_bierut_party_long
+			}
+			add_popularity = {
+			ideology = anarchism
+			popularity = 0.30
+			}
+			set_cosmetic_tag = POL_green
+		}
+		
+	}
+
+	option = {
+		name = poland.1003.b
+		ai_chance = {
+			base = 1
+		}
+		POL = {
+			add_country_leader_role = {
+			character = POL_combat_wiejskiej_klasie
+			promote_leader = yes
+			country_leader = { 
+				ideology = agrarian_socialism
+				expire = "1965.1.1.1"
+			}
+		}
+		set_politics = {
+			ruling_party = revisionist_socialism
+			name = POL_debski_party
+			long_name = POL_debski_party_long
+		}
+		add_popularity = {
+			ideology = revisionist_socialism
+			popularity = 0.30
+		}
+		set_cosmetic_tag = POL_green
+		}
+
+	}
+
+	option = {
+		name = poland.1003.c
+		ai_chance = {
+			base = 1
+			modifier = { tag = ZHR factor = 0 }
+			modifier = { tag = HAR factor = 0 }
+		}
+		POL = {
+			add_country_leader_role = {
+			character = POL_zeligowski
+			promote_leader = yes
+			country_leader = { 
+				ideology = national_rejuvenatism
+				expire = "1965.1.1.1"
+			}
+		}
+		set_politics = {
+			ruling_party = accelerationism
+			name = POL_zeligowski_party
+			long_name = POL_zeligowski_party_long
+		}
+		add_popularity = {
+			ideology = accelerationism
+			popularity = 0.30
+		}
+		set_cosmetic_tag = POL_green
+		}
+		
+	}
+}
+
+country_event = {
+	id = intermarium.1
+	title = intermarium.1.t
+	desc = intermarium.1.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		trigger = {
+			UKR_ROS_peaceful_deal = yes
+		}
+		name = intermarium.1.a
+		ROS={ 
+			country_event={
+				id = intermarium.2
+				days = 3
+			}
+		}
+	}
+	option = {
+		trigger = {
+			UKR_ROS_peaceful_deal = no
+		}
+		name = intermarium.1.b
+		UKR={
+			country_event={
+				id = intermarium.4
+				days = 3
+			}
+		}
+	}
+}
+
+country_event = { 
+	id = intermarium.2
+	title = intermarium.2.t
+	desc = intermarium.2.desc
+	picture = GFX_report_event_GFX_officers
+	is_triggered_only = yes
+	fire_only_once = yes
+	immediate = {
+		hidden_effect = {
+		set_country_flag = intermarium_solved
+		if = {
+			limit = {
+				POL = {
+					is_subject = no
+				}
+			}
+			POL = {
+				country_event={
+					id = intermarium.9
+					days = 7
+				}
+			}
+		}
+		UKR = {
+			news_event = {
+			id = news.342
+			}
+		}
+		}
+	}
+	option = { 
+		name = intermarium.2.a
+		trigger = {
+			UKR = {
+				has_completed_focus = UKR_the_mother_of_all_omlettes
+			}
+		}
+		ai_chance = {
+			base = 10
+		}
+		puppet = UKR
+		set_autonomy = {
+  		target = UKR
+  		autonomy_state = socialistrepublic
+  		end_wars = no
+   		end_civil_wars = no
+		}
+		UKR = {
+			promote_character = UKR_lazar_kaganovich
+			set_politics = {
+				ruling_party = vanguard_socialism
+				elections_allowed = no
+			}
+		transfer_state = 854
+		transfer_state = 225 
+		transfer_state = 259
+		}
+	}
+
+	option = { 
+		name = intermarium.2.b
+		trigger = {
+			UKR = {
+				has_completed_focus = UKR_architects_of_the_new_brave_utopia
+			}
+		}
+		ai_chance = {
+			base = 10
+		}
+		puppet = UKR
+		set_autonomy = {
+  		target = UKR
+  		autonomy_state = socialistrepublic
+  		end_wars = no
+   		end_civil_wars = no
+		}
+		UKR = {
+			promote_character = UKR_semen_man
+			set_politics = {
+				ruling_party = accelerationism
+				elections_allowed = no
+			}
+		set_cosmetic_tag = UKR_semenko
+		transfer_state = 854
+		transfer_state = 225 
+		transfer_state = 259
+		}
+	}
+}
+
+country_event = { #intermarium invitation
+	id = intermarium.3
+	title = intermarium.3.t
+	desc = intermarium.3.desc
+	picture = GFX_report_event_GFX_officers
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { 
+		name = intermarium.3.a
+		ai_chance = {
+			base = 10
+		}
+		POL = {
+			add_to_faction = ROOT
+		}
+	}
+	option = { 
+		name = intermarium.3.b
+	}
+}
+
+country_event = { 
+	id = intermarium.4
+	title = intermarium.4.t
+	desc = intermarium.4.desc
+	picture = GFX_report_event_GFX_officers
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { 
+		name = intermarium.4.a
+		ai_chance = {
+			base = 1
+		}
+		declare_war_on = {
+			type = annex_everything
+			target = ROS
+		}
+		every_country = {
+			limit = {
+				is_in_faction_with = UKR
+			}
+			declare_war_on = {
+				type = annex_everything
+				target = ROS
+			}
+		}
+		news_event = {
+			id = news.341
+		}
+	}
+}
+
+country_event = { #intermarium invitation
+	id = intermarium.5
+	title = intermarium.5.t
+	desc = intermarium.5.desc
+	picture = GFX_report_event_GFX_officers
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { 
+		name = intermarium.5.a
+		ai_chance = {
+			base = 10
+		}
+		POL = {
+			add_to_faction = ROOT
+		}
+	}
+	option = { 
+		name = intermarium.5.b
+	}
+}
+
+country_event = { 
+	id = intermarium.9
+	title = intermarium.9.t
+	desc = intermarium.9.desc
+	picture = GFX_report_event_GFX_officers
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { 
+		name = intermarium.9.a
+		ai_chance = {
+			base = 10
+		}
+		declare_war_on = {
+			type = annex_everything
+			target = ROS
+		}
+		news_event = {
+			id = news.341
+		}
+	}
+}
+
+country_event = { #intermarium war alert for russia
+	id = intermarium.10
+	title = intermarium.10.t
+	desc = intermarium.10.desc
+	picture = GFX_report_event_GFX_officers
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { 
+		name = intermarium.10.a
+	}
+}

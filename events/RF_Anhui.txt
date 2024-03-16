@@ -1,0 +1,337 @@
+﻿#########################
+#	Anhui Events
+#########################
+
+	add_namespace = anhui
+
+	#Duan ded
+	country_event = {
+		id = anhui.1
+		title = anhui.1.t
+		desc = anhui.1.d
+		picture = GFX_report_event_asian_politicians
+		fire_only_once = yes
+		is_triggered_only = yes
+		
+		option = {
+			name = anhui.1.a
+			ai_chance = { factor = 1 }
+			add_stability = -0.05
+			add_war_support = -0.05
+		}
+	}
+	# Elections - Yitang sweeps to power
+	country_event = {
+		id = anhui.3
+		title = anhui.3.t
+		desc = anhui.3.d
+		picture = GFX_report_event_asian_politicians
+		fire_only_once = yes
+		is_triggered_only = yes
+		
+		option = {
+			name = anhui.3.a
+			ai_chance = { factor = 1 }
+			set_politics = {
+				ruling_party = conservatism
+				elections_allowed = yes
+			}
+			add_popularity = {
+				ideology = conservatism
+				popularity = 0.5
+			}
+			add_stability = 0.2
+		}
+	}
+	# Gov't Change Leader_2
+	country_event = {
+		id = anhui.2
+		title = anhui.2.t
+		desc = anhui.2.d
+		picture = GFX_report_event_asian_politicians
+		fire_only_once = yes
+		is_triggered_only = yes
+		
+		option = {
+			name = anhui.2.a
+			ai_chance = { factor = 1 }
+			set_politics = {
+				ruling_party = despotism
+				elections_allowed = no
+			}
+			add_popularity = {
+				ideology = despotism
+				popularity = 0.5
+			}
+			add_stability = 0.1
+			add_war_support = 0.05
+		}
+	}
+	#Chinese Economic Policy Choice
+	country_event = {
+		id = anhui.4
+		title = anhui.4.t
+		desc = anhui.4.d
+		picture = GFX_report_event_asian_politicians
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = anhui.4.a
+			add_ideas = {
+				MON_agrarianreform
+			}
+		}
+		option = {
+			name = anhui.4.b
+			add_ideas = {
+				MON_rapidindustrialisation
+			}
+		}
+		option = {
+			name = anhui.4.c
+			ai_chance = { factor = 1 }
+			add_ideas = {
+				MON_progressiveindustry
+			}
+		}
+	}
+	# Fengtian will get Anhui - MON
+	country_event = {
+		id = anhui.5
+		title = anhui.5.t
+		desc = anhui.5.d
+		picture = GFX_report_event_chinese_japanese_handshake
+		
+		is_triggered_only = yes
+		
+		option = { #
+			name = anhui.5.a
+			MAN = {
+				country_event = {
+					id = anhui.11
+					days = 7
+				}
+			}
+		}
+	}
+	# Shanxi will get Anhui - MON
+	country_event = {
+		id = anhui.6
+		title = anhui.6.t
+		desc = anhui.6.d
+		picture = GFX_report_event_chinese_japanese_handshake
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = anhui.6.a
+			BYJ = {
+				country_event = {
+					id = anhui.7
+					days = 7
+				}
+			}
+		}
+	}
+	# Shanxi gets Anhui - BYJ
+	country_event = {
+		id = anhui.7
+		title = anhui.7.t
+		desc = anhui.7.d
+		picture = GFX_report_event_chinese_japanese_handshake
+		
+		is_triggered_only = yes
+
+		option = {
+			name = anhui.7.a
+			BYJ = {
+				change_tag_from = MON
+			}
+			every_state = {
+				limit = {
+					is_owned_by = MON
+				}
+				BYJ = { add_state_core = PREV }
+			}
+			MON = {
+				every_unit_leader = {
+					set_nationality = BYJ
+				}
+			}
+			BYJ = {
+				annex_country = { target = MON transfer_troops = yes }
+			}
+			add_political_power = -50
+		}
+	}
+	# Fengtian gets Anhui - MAN
+	country_event = {
+		id = anhui.11
+		title = anhui.11.t
+		desc = anhui.11.d
+		picture = GFX_report_event_chinese_japanese_handshake
+		
+		is_triggered_only = yes
+		
+		option = { # 
+			name = anhui.11.a
+			MAN = {
+				change_tag_from = MON
+			}
+			every_state = {
+				limit = {
+					is_owned_by = MON
+				}
+				MAN = { add_state_core = PREV }
+			}
+			MON = {
+				every_unit_leader = {
+					set_nationality = MAN
+				}
+			}
+			MAN = {
+				annex_country = { target = MON transfer_troops = yes }
+			}
+			add_political_power = -50
+		}
+	}
+	# Zhili will get Anhui - MON
+	country_event = {
+		id = anhui.12
+		title = anhui.12.t
+		desc = anhui.12.d
+		picture = GFX_report_event_chinese_japanese_handshake
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = anhui.12.a
+			SHA = {
+				country_event = {
+					id = anhui.13
+					days = 7
+				}
+			}
+		}
+	}
+	# Zhili gets Anhui - SHA
+	country_event = {
+		id = anhui.13
+		title = anhui.13.t
+		desc = anhui.13.d
+		picture = GFX_report_event_chinese_japanese_handshake
+		
+		is_triggered_only = yes
+
+		option = {
+			name = anhui.13.a
+			SHA = {
+				change_tag_from = MON
+			}
+			every_state = {
+				limit = {
+					is_owned_by = MON
+				}
+				SHA = { add_state_core = PREV }
+			}
+			MON = {
+				every_unit_leader = {
+					set_nationality = SHA
+				}
+			}
+			SHA = {
+				annex_country = { target = MON transfer_troops = yes }
+			}
+			add_political_power = -50
+		}
+	}
+	#
+	
+	#zhr accord stuff#
+	country_event = {
+		id = anhui.100
+		title = anhui.100.t
+		desc = anhui.100.d
+		picture = GFX_report_event_chinese_japanese_handshake
+		
+		is_triggered_only = yes
+
+		option = {
+			name = anhui.100.a
+			ai_chance = { factor = 10 }
+			MON = {
+				country_event = {
+					id = anhui.101
+				}
+			}
+		}
+		option = {
+			name = anhui.100.b
+			ai_chance = { factor = 0 }
+			MON = {
+				country_event = {
+					id = anhui.102
+				}
+			}
+			
+		}
+	}
+	country_event = {
+		id = anhui.101
+		title = anhui.101.t
+		desc = anhui.101.d
+		picture = GFX_report_event_chinese_japanese_handshake
+		
+		is_triggered_only = yes
+
+		option = {
+			name = anhui.101.a
+			every_state = {
+				limit = {
+					OR = {
+						state = 563
+						state = 564
+						state = 1213
+					}
+				}
+				add_core_of = ZHR
+				remove_claim_by = MON
+			}
+			964 = { remove_claim_by = MON }
+			every_owned_state = {
+				limit = {
+					OR = {
+						state = 563
+						state = 564
+						state = 1213
+					}
+				}
+				transfer_state_to = ZHR
+			}
+			ZHR = {
+				add_opinion_modifier = {
+					target = MON
+					modifier = offered_support
+				}
+				diplomatic_relation = {
+					country = MON
+					relation = non_aggression_pact
+					active = yes
+				}
+			}
+		}
+	}
+	country_event = {
+		id = anhui.102
+		title = anhui.102.t
+		desc = anhui.102.d
+		picture = GFX_report_event_chinese_japanese_handshake
+		
+		is_triggered_only = yes
+
+		option = {
+			name = anhui.102.a
+			add_political_power = -10
+		}
+	}

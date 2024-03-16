@@ -1,0 +1,459 @@
+add_namespace = danzig
+
+country_event = {
+	id = danzig.1
+	title = danzig.1.t
+	desc = danzig.1.desc
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = danzig.1.a
+		ai_chance = {
+			base= 40
+			modifier = {
+				factor = 10000
+				OR = {
+					has_game_rule = {
+						rule = DAN_ai_route
+						option = DP
+					}
+					has_game_rule = {
+						rule = DAN_ai_route
+						option = DP_L
+					}
+					has_game_rule = {
+						rule = DAN_ai_route
+						option = POLES
+					}
+					has_game_rule = {
+						rule = DAN_ai_route
+						option = VINDI
+					}
+				}
+			}
+		}
+		country_event = { id = danzig.2 days = 7 }
+		news_event = {
+			id = news.278
+		}
+		set_politics = {
+			ruling_party = despotism
+			elections_allowed = no
+		}
+		add_popularity = {
+			ideology = despotism
+			popularity = 0.2
+		}
+		add_popularity = {
+			ideology = reactionism
+			popularity = 0.1
+		}
+	}
+	option = {
+		name = danzig.1.b
+		ai_chance = {
+			base= 60
+			modifier = {
+				factor = 10000
+				OR = {
+					has_game_rule = {
+						rule = DAN_ai_route
+						option = SPFHD_V
+					}
+					has_game_rule = {
+						rule = DAN_ai_route
+						option = SPFHD_L
+					}
+					has_game_rule = {
+						rule = DAN_ai_route
+						option = SPFHD_RF
+					}
+				}
+			}
+		}
+		country_event = { id = danzig.3 days = 270 }
+		news_event = {
+			id = news.277
+		}
+		set_politics = {
+			ruling_party = revisionist_socialism
+			elections_allowed = no
+		}
+		add_popularity = {
+			ideology = revisionist_socialism
+			popularity = 0.2
+		}
+		add_popularity = {
+			ideology = progressivism
+			popularity = 0.1
+		}
+		add_popularity = {
+			ideology = vanguard_socialism
+			popularity = 0.1
+		}
+		add_popularity = {
+			ideology = popular_socialism
+			popularity = 0.1
+		}
+	}
+}
+
+country_event = {
+	id = danzig.2
+	title = danzig.2.t
+	desc = danzig.2.desc
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = danzig.2.a
+		ai_chance = {
+			base= 40
+			modifier = {
+				factor = 10000
+				OR = {
+					has_game_rule = {
+						rule = DAN_ai_route
+						option = POLES
+					}
+					has_game_rule = {
+						rule = DAN_ai_route
+						option = VINDI
+					}
+				}
+			}
+		}
+		news_event = {
+			id = news.276
+		}
+		country_event = { id = danzig.4 days = 30 }
+		set_politics = {
+			ruling_party = right_authoritarianism
+			elections_allowed = no
+		}
+		add_popularity = {
+			ideology = right_authoritarianism
+			popularity = 0.2
+		}
+		POL = {
+			give_guarantee = DAN
+		}
+	}
+	option = {
+		name = danzig.2.b
+		ai_chance = {
+			base= 25
+			modifier = {
+				factor = 10000
+				has_game_rule = {
+					rule = DAN_ai_route
+					option = DP_L
+				}
+			}
+		}
+		news_event = {
+			id = news.281
+		}
+		set_politics = {
+			ruling_party = reactionism
+			elections_allowed = no
+		}
+		add_popularity = {
+			ideology = reactionism
+			popularity = 0.2
+		}
+		swap_ideas = {
+			remove_idea = DAN_marshals_gaze
+			add_idea = DAN_ist_deutsch
+		}
+		remove_ideas = DAN_amber_baltic_sea
+		set_cosmetic_tag = DAN_prussoid
+		PRS = {
+			give_guarantee = DAN
+		}
+		GER = {
+			diplomatic_relation = {
+				country = DAN
+				relation = guarantee
+				active = no
+			}
+			diplomatic_relation = {
+				country = DAN
+				relation = military_access
+				active = no
+			}
+		}
+		POL = {
+			diplomatic_relation = {
+				country = DAN
+				relation = military_access
+				active = no
+			}
+		}
+	}
+	option = {
+		name = danzig.2.c
+		ai_chance = {
+			base= 35
+			modifier = {
+				factor = 10000
+				has_game_rule = {
+					rule = DAN_ai_route
+					option = DP
+				}
+			}
+		}
+		news_event = {
+			id = news.282
+		}
+		add_popularity = {
+			ideology = despotism
+			popularity = 0.2
+		}
+		swap_ideas = {
+			remove_idea = DAN_marshals_gaze
+			add_idea = DAN_ist_deutsch
+		}
+		remove_ideas = DAN_amber_baltic_sea
+		set_cosmetic_tag = DAN_prussoid
+		PRS = {
+			give_guarantee = DAN
+		}
+		GER = {
+			diplomatic_relation = {
+				country = DAN
+				relation = guarantee
+				active = no
+			}
+			diplomatic_relation = {
+				country = DAN
+				relation = military_access
+				active = no
+			}
+		}
+		POL = {
+			diplomatic_relation = {
+				country = DAN
+				relation = military_access
+				active = no
+			}
+		}
+	}
+}
+
+country_event = {
+	id = danzig.3
+	title = danzig.3.t
+	desc = danzig.3.desc
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = danzig.3.a
+		ai_chance = {
+			base= 30
+			modifier = {
+				factor = 10000
+				has_game_rule = {
+					rule = DAN_ai_route
+					option = SPFHD_L
+				}
+			}
+		}
+		news_event = {
+			id = news.283
+		}
+		set_politics = {
+			ruling_party = progressivism
+			elections_allowed = no
+		}
+		add_popularity = {
+			ideology = progressivism
+			popularity = 0.2
+		}
+	}
+	option = {
+		name = danzig.3.b
+		ai_chance = {
+			base= 20
+			modifier = {
+				factor = 10000
+				has_game_rule = {
+					rule = DAN_ai_route
+					option = SPFHD_RF
+				}
+			}
+		}
+		news_event = {
+			id = news.284
+		}
+		set_politics = {
+			ruling_party = vanguard_socialism
+			elections_allowed = no
+		}
+		add_popularity = {
+			ideology = vanguard_socialism
+			popularity = 0.2
+		}
+		remove_ideas = DAN_amber_baltic_sea
+	}
+	option = {
+		name = danzig.3.c
+		ai_chance = {
+			base= 50
+			modifier = {
+				factor = 10000
+				has_game_rule = {
+					rule = DAN_ai_route
+					option = SPFHD_V
+				}
+			}
+		}
+		news_event = {
+			id = news.285
+		}
+		set_politics = {
+			ruling_party = popular_socialism
+			elections_allowed = no
+		}
+		add_popularity = {
+			ideology = popular_socialism
+			popularity = 0.2
+		}
+	}
+}
+
+country_event = {
+	id = danzig.4
+	title = danzig.4.t
+	desc = danzig.4.desc
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = danzig.4.a
+		ai_chance = {
+			base= 35
+			modifier = {
+				factor = 10000
+				has_game_rule = {
+					rule = DAN_ai_route
+					option = VINDI
+				}
+			}
+		}
+		news_event = {
+			id = news.279
+		}
+		set_politics = {
+			ruling_party = accelerationism
+			elections_allowed = no
+		}
+		add_popularity = {
+			ideology = accelerationism
+			popularity = 0.3
+		}
+		remove_ideas = DAN_amber_baltic_sea
+		set_province_name = { id = 362 name = DAN_event_danzig_4_a_province_362 }
+		848 = {
+			set_state_name = DAN_event_danzig_4_a_state_848
+		}
+	}
+	option = {
+		name = danzig.4.b
+		ai_chance = {
+			base= 65
+			modifier = {
+				factor = 10000
+				has_game_rule = {
+					rule = DAN_ai_route
+					option = POLES
+				}
+			}
+		}
+		news_event = {
+			id = news.280
+		}
+		POL = {
+			puppet = DAN
+		}
+		set_politics = {
+			ruling_party = right_authoritarianism
+			elections_allowed = no
+		}
+		add_popularity = {
+			ideology = right_authoritarianism
+			popularity = 0.5
+		}
+		add_popularity = {
+			ideology = popular_socialism
+			popularity = 0.2
+		}
+		add_popularity = {
+			ideology = revisionist_socialism
+			popularity = 0.2
+		}
+		add_popularity = {
+			ideology = progressivism
+			popularity = 0.2
+		}
+		add_popularity = {
+			ideology = despotism
+			popularity = 0.1
+		}
+		add_popularity = {
+			ideology = reactionism
+			popularity = 0.05
+		}
+		retire_character = DAN_dreszer_rwa
+		add_country_leader_role = {
+			character = "DAN_dreszer_rwa2"
+			country_leader = {
+				ideology = anocracy
+				traits = { }
+				expire= "1965.1.1.1"
+			}
+			promote_leader = yes
+		}
+		set_cosmetic_tag = DAN_pole
+		give_military_access = GER
+		GER = {
+			diplomatic_relation = {
+				country = DAN
+				relation = docking_rights
+				active = yes
+			}
+			give_guarantee = DAN
+		}
+		set_province_name = { id = 362 name = DAN_event_danzig_4_b_province_362 }
+		848 = {
+			set_state_name = DAN_event_danzig_4_b_state_848
+		}
+	}
+}
+
+country_event = {
+	id = danzig.7
+	title = danzig.7.t
+	desc = danzig.7.desc
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	option = {
+		name = danzig.7.a
+		PRS = {
+			transfer_state = 848 
+			add_state_core = 848
+		}
+		news_event = {
+			id = news.286
+		}
+		set_province_name = { id = 362 name = DAN_event_danzig_7_a_province_362 }
+		848 = {
+			set_state_name = DAN_event_danzig_7_a_state_848
+		}
+	}
+}

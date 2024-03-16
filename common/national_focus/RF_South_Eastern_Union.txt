@@ -1,0 +1,1640 @@
+focus_tree = {
+	id = RF_south_eastern_union
+	country = {
+		factor = 0
+		modifier = {
+			add = 100
+			original_tag = DKB
+		}
+	}
+	continuous_focus_position = { x = 50 y = 2500 }
+
+	focus = {
+		id = DKB_krug_gathering
+		icon = GFX_goal_DKB_krug_gathering
+		cost = 4
+		x = 10
+		y = 0
+		available = {
+		}
+		completion_reward = {
+			country_event = {
+				id = dkb.1
+			}
+		}
+	}
+
+	focus = {
+		id = DKB_chernomortsy_victorious
+		icon = GFX_goal_DKB_chernomortsy_victorious
+		cost = 1
+		relative_position_id = DKB_krug_gathering
+		x = -7
+		y = 1
+		available = {
+			has_country_flag = DKB_chernomortsy_alone
+		}
+		prerequisite = {
+			focus = DKB_krug_gathering
+		}
+		mutually_exclusive = {
+			focus = DKB_kaledin_marches_forward
+		}
+		mutually_exclusive = {
+			focus = DKB_lineytsy_victorious
+		}
+		mutually_exclusive = {
+			focus = DKB_gorgulov_at_stage
+		}
+		completion_reward = {
+			set_politics = {
+				ruling_party = right_authoritarianism
+			}
+			add_popularity = {
+				ideology = right_authoritarianism
+				popularity = 0.1
+			}
+		}
+	}
+	focus = {
+		id = DKB_kaledin_marches_forward
+		icon = GFX_goal_DKB_kaledin_marches_forward
+		cost = 1
+		relative_position_id = DKB_krug_gathering
+		x = 0
+		y = 1
+		available = {
+			has_country_flag = DKB_chernomortsy_lineytsy_coalition
+		}
+		prerequisite = {
+			focus = DKB_krug_gathering
+		}
+		mutually_exclusive = {
+			focus = DKB_chernomortsy_victorious
+		}
+		mutually_exclusive = {
+			focus = DKB_lineytsy_victorious
+		}
+		mutually_exclusive = {
+			focus = DKB_gorgulov_at_stage
+		}
+		completion_reward = {
+			hidden_effect = {
+				set_party_name = {
+					ideology = despotism
+					long_name = DKB_despotism_party_dynamic_long
+					name = DKB_despotism_party_dynamic
+				}
+				set_party_name = {
+					ideology = right_authoritarianism
+					long_name = DKB_despotism_party_dynamic_long
+					name = DKB_despotism_party_dynamic
+				}
+			}
+			add_popularity = {
+				ideology = despotism
+				popularity = 0.1
+			}
+		}
+	}
+	focus = {
+		id = DKB_lineytsy_victorious
+		icon = GFX_goal_DKB_lineytsy_victorious
+		cost = 1
+		relative_position_id = DKB_krug_gathering
+		x = 7
+		y = 1
+		available = {
+			OR = {
+				has_country_flag = DKB_lineytsy_alone
+				has_country_flag = DKB_grabbe_wins
+			}
+		}
+		prerequisite = {
+			focus = DKB_krug_gathering
+		}
+		mutually_exclusive = {
+			focus = DKB_chernomortsy_victorious
+		}
+		mutually_exclusive = {
+			focus = DKB_kaledin_marches_forward
+		}
+		mutually_exclusive = {
+			focus = DKB_gorgulov_at_stage
+		}
+		completion_reward = {
+			retire_country_leader = yes
+			add_popularity = {
+				ideology = despotism
+				popularity = 0.1
+			}
+		}
+	}
+
+	focus = {
+		id = DKB_gorgulov_at_stage
+		icon = GFX_goal_DKB_gorgulov_at_stage
+		cost = 5
+		relative_position_id = DKB_krug_gathering
+		x = 15
+		y = 1
+		available = {
+			OR = {
+				has_country_flag = DKB_scythists_alone
+				has_country_flag = DKB_gorgulov_wins
+			}
+		}
+		prerequisite = {
+			focus = DKB_krug_gathering
+		}
+		mutually_exclusive = {
+			focus = DKB_chernomortsy_victorious
+		}
+		mutually_exclusive = {
+			focus = DKB_kaledin_marches_forward
+		}
+		mutually_exclusive = {
+			focus = DKB_lineytsy_victorious
+		}
+		completion_reward = {
+			set_politics = {
+				ruling_party = reactionism
+			}
+			add_popularity = {
+				ideology = reactionism
+				popularity = 0.1
+			}
+			set_cosmetic_tag = "DKB_GREAT_SCYTHIA"
+			RUS = {
+				end_puppet = DKB
+			}
+			remove_ideas = RUS_warlord_indifference
+		}
+	}
+
+	### Chernomortsy ###
+
+	focus = {
+		id = DKB_officialize_ukrainian_education
+		icon = GFX_goal_DKB_officialize_ukrainian_education
+		cost = 5
+		relative_position_id = DKB_chernomortsy_victorious
+		x = -1
+		y = 1
+		prerequisite = {
+			focus = DKB_chernomortsy_victorious
+		}
+		completion_reward = {
+			UKR = { add_opinion_modifier = { target = DKB modifier = medium_increase } }
+			add_ideas = DKB_ukrainian_education
+		}
+	}
+	focus = {
+		id = DKB_print_hryvnia
+		icon = GFX_goal_DKB_print_hryvnia
+		cost = 3
+		relative_position_id = DKB_officialize_ukrainian_education
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = DKB_officialize_ukrainian_education
+		}
+		completion_reward = {
+			add_ideas = DKB_hryvnia_currency
+			add_stability = -0.05
+		}
+	}
+	focus = {
+		id = DKB_drift_away_from_russia
+		icon = GFX_goal_DKB_drift_away_from_russia
+		cost = 2
+		relative_position_id = DKB_print_hryvnia
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = DKB_print_hryvnia
+		}
+		completion_reward = {
+			UKR = { add_opinion_modifier = { target = DKB modifier = large_increase } }
+			swap_ideas = {
+				remove_idea = DKB_ukrainian_education
+				add_idea = DKB_ukrainian_education1
+			}
+			swap_ideas = {
+				remove_idea = DKB_hryvnia_currency
+				add_idea = DKB_hryvnia_currency1
+			}
+		}
+	}
+
+	focus = {
+		id = DKB_decentralize_military
+		icon = GFX_goal_DKB_decentralize_military
+		cost = 3
+		relative_position_id = DKB_chernomortsy_victorious
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = DKB_chernomortsy_victorious
+		}
+		completion_reward = {
+			add_war_support = -0.05
+			add_ideas = DKB_decentralized_army
+		}
+	}
+	focus = {
+		id = DKB_require_visa
+		icon = GFX_goal_DKB_require_visa
+		cost = 3
+		relative_position_id = DKB_decentralize_military
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = DKB_decentralize_military
+		}
+		completion_reward = {
+			add_ideas = DKB_legal_immigration
+		}
+	}
+	focus = {
+		id = DKB_land_of_freedom
+		icon = GFX_goal_DKB_land_of_freedom
+		cost = 3
+		relative_position_id = DKB_require_visa
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = DKB_require_visa
+		}
+		completion_reward = {
+			add_stability = 0.2
+			swap_ideas = {
+				remove_idea = DKB_legal_immigration
+				add_idea = DKB_legal_immigration1
+			}
+		}
+	}
+	focus = {
+		id = DKB_intensify_reforms
+		icon = GFX_goal_DKB_intensify_reforms
+		cost = 5
+		relative_position_id = DKB_land_of_freedom
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = DKB_drift_away_from_russia
+		}
+		prerequisite = {
+			focus = DKB_land_of_freedom
+		}
+		prerequisite = {
+			focus = DKB_open_to_europe
+		}
+		completion_reward = {
+			add_stability = 0.1
+			add_research_slot = 1
+			swap_ideas = {
+				remove_idea = DKB_legal_immigration1
+				add_idea = DKB_legal_immigration2
+			}
+			swap_ideas = {
+				remove_idea = DKB_hryvnia_currency1
+				add_idea = DKB_hryvnia_currency2
+			}
+			swap_ideas = {
+				remove_idea = DKB_decentralized_army
+				add_idea = DKB_decentralized_army1
+			}
+			swap_ideas = {
+				remove_idea = DKB_ukrainian_education1
+				add_idea = DKB_ukrainian_education2
+			}
+		}
+	}
+
+	##########
+
+	focus = {
+		id = DKB_free_trade_zone_of_taganrog
+		icon = GFX_goal_DKB_free_trade_zone_of_taganrog
+		cost = 7
+		relative_position_id = DKB_chernomortsy_victorious
+		x = 4
+		y = 1
+		prerequisite = {
+			focus = DKB_chernomortsy_victorious
+			focus = DKB_kaledin_marches_forward
+		}
+		completion_reward = {
+			218 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = DKB_expand_donbass_coal_trade
+		icon = GFX_goal_DKB_expand_donbass_coal_trade
+		cost = 7
+		relative_position_id = DKB_free_trade_zone_of_taganrog
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = DKB_free_trade_zone_of_taganrog
+		}
+		completion_reward = {
+			add_resource = {
+				type = oil
+				amount = 10
+				state = 218
+			}
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				technology = excavation1
+				technology = excavation2
+				technology = excavation3
+			}
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				technology = synth_oil_experiments
+				technology = oil_processing
+				technology = improved_oil_processing
+				technology = advanced_oil_processing
+			}
+		}
+	}
+	focus = {
+		id = DKB_open_to_europe
+		icon = GFX_goal_DKB_open_to_europe
+		cost = 2
+		relative_position_id = DKB_expand_donbass_coal_trade
+		x = -1
+		y = 1
+		available = {
+			has_completed_focus = DKB_chernomortsy_victorious
+		}
+		prerequisite = {
+			focus = DKB_expand_donbass_coal_trade
+		}
+		completion_reward = {
+			add_ideas = DKB_open_to_europe_idea
+			UKR = { add_opinion_modifier = { target = DKB modifier = medium_increase } }
+			add_opinion_modifier = { target = UKR modifier = medium_increase }
+			POL = { add_opinion_modifier = { target = DKB modifier = medium_increase } }
+			add_opinion_modifier = { target = POL modifier = medium_increase }
+			BLR = { add_opinion_modifier = { target = DKB modifier = medium_increase } }
+			add_opinion_modifier = { target = BLR modifier = medium_increase }
+			LIT = { add_opinion_modifier = { target = DKB modifier = medium_increase } }
+			add_opinion_modifier = { target = LIT modifier = medium_increase }
+			GER = { add_opinion_modifier = { target = DKB modifier = medium_increase } }
+			add_opinion_modifier = { target = GER modifier = medium_increase }
+			CZE = { add_opinion_modifier = { target = DKB modifier = medium_increase } }
+			add_opinion_modifier = { target = CZE modifier = medium_increase }
+			PRS = { add_opinion_modifier = { target = DKB modifier = medium_increase } }
+			add_opinion_modifier = { target = PRS modifier = medium_increase }
+			ROM = { add_opinion_modifier = { target = DKB modifier = medium_increase } }
+			add_opinion_modifier = { target = ROM modifier = medium_increase }
+			MOL = { add_opinion_modifier = { target = DKB modifier = medium_increase } }
+			add_opinion_modifier = { target = MOL modifier = medium_increase }
+			BUL = { add_opinion_modifier = { target = DKB modifier = medium_increase } }
+			add_opinion_modifier = { target = BUL modifier = medium_increase }
+		}
+	}
+	focus = {
+		id = DKB_guns_for_caucasian_tatars
+		icon = GFX_goal_DKB_guns_for_caucasian_tatars
+		cost = 2
+		relative_position_id = DKB_expand_donbass_coal_trade
+		x = 1
+		y = 1
+		available = {
+			has_completed_focus = DKB_kaledin_marches_forward
+		}
+		prerequisite = {
+			focus = DKB_expand_donbass_coal_trade
+		}
+		completion_reward = {
+			AZR = { add_opinion_modifier = { target = DKB modifier = medium_increase } }
+			add_opinion_modifier = { target = AZR modifier = medium_increase }
+			AZR = {
+				add_equipment_to_stockpile = {
+  					type = infantry_equipment
+   					amount = 3000
+					producer = DKB
+				}
+				add_war_support = 0.1
+			}
+		}
+	}
+
+	### Kaledin ###
+
+	focus = {
+		id = DKB_union_of_all_peoples
+		icon = GFX_goal_DKB_union_of_all_peoples
+		cost = 2
+		relative_position_id = DKB_kaledin_marches_forward
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = DKB_kaledin_marches_forward
+		}
+		completion_reward = {
+			add_stability = 0.2
+			add_ideas = DKB_federalism
+		}
+	}
+	focus = {
+		id = DKB_be_wary_of_change
+		icon = GFX_goal_DKB_be_wary_of_change
+		cost = 2
+		relative_position_id = DKB_union_of_all_peoples
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = DKB_union_of_all_peoples
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = despotism
+				popularity = 0.3
+			}
+			add_popularity = {
+				ideology = reactionism
+				popularity = -0.2
+			}
+			add_popularity = {
+				ideology = accelerationism
+				popularity = -0.2
+			}
+		}
+	}
+	focus = {
+		id = DKB_invest_in_all_education
+		icon = GFX_goal_DKB_invest_in_all_education
+		cost = 2
+		relative_position_id = DKB_be_wary_of_change
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = DKB_be_wary_of_change
+		}
+		completion_reward = {
+			add_research_slot = 1
+			add_stability = 0.05
+			add_ideas = DKB_pluralistic_education
+		}
+	}
+	focus = {
+		id = DKB_independent_diplomacy
+		icon = GFX_goal_DKB_independent_diplomacy
+		cost = 2
+		relative_position_id = DKB_invest_in_all_education
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = DKB_guns_for_caucasian_tatars
+		}
+		prerequisite = {
+			focus = DKB_invest_in_all_education
+		}
+		prerequisite = {
+			focus = DKB_open_to_world
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = DKB_open_to_world_idea
+				add_idea = DKB_open_to_world_idea1
+			}
+			add_political_power = 50
+		}
+	}
+
+	##########
+
+	focus = {
+		id = DKB_free_trade_zone_of_astrakhan
+		icon = GFX_goal_DKB_free_trade_zone_of_astrakhan
+		cost = 7
+		relative_position_id = DKB_lineytsy_victorious
+		x = -4
+		y = 1
+		prerequisite = {
+			focus = DKB_kaledin_marches_forward
+			focus = DKB_lineytsy_victorious
+		}
+		completion_reward = {
+			236 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			RUS = { add_opinion_modifier = { target = DKB modifier = small_increase } }
+			add_opinion_modifier = { target = RUS modifier = small_increase }
+		}
+	}
+	focus = {
+		id = DKB_expand_factory_tsaritsyn
+		icon = GFX_goal_DKB_expand_factory_tsaritsyn
+		cost = 7
+		relative_position_id = DKB_free_trade_zone_of_astrakhan
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = DKB_free_trade_zone_of_astrakhan
+		}
+		completion_reward = {
+			217 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 3
+				category = armor
+			}
+		}
+	}
+	focus = {
+		id = DKB_open_to_world
+		icon = GFX_goal_DKB_open_to_world
+		cost = 2
+		relative_position_id = DKB_expand_factory_tsaritsyn
+		x = -1
+		y = 1
+		available = {
+			has_completed_focus = DKB_kaledin_marches_forward
+		}
+		prerequisite = {
+			focus = DKB_expand_factory_tsaritsyn
+		}
+		completion_reward = {
+			add_ideas = DKB_open_to_world_idea
+			GER = { add_opinion_modifier = { target = DKB modifier = medium_increase } }
+			add_opinion_modifier = { target = GER modifier = medium_increase }
+			ITA = { add_opinion_modifier = { target = DKB modifier = medium_increase } }
+			add_opinion_modifier = { target = ITA modifier = medium_increase }
+			ENG = { add_opinion_modifier = { target = DKB modifier = medium_increase } }
+			add_opinion_modifier = { target = ENG modifier = medium_increase }
+			USA = { add_opinion_modifier = { target = DKB modifier = medium_increase } }
+			add_opinion_modifier = { target = USA modifier = medium_increase }
+			JAP = { add_opinion_modifier = { target = DKB modifier = medium_increase } }
+			add_opinion_modifier = { target = JAP modifier = medium_increase }
+			BRA = { add_opinion_modifier = { target = DKB modifier = medium_increase } }
+			add_opinion_modifier = { target = BRA modifier = medium_increase }
+			CAN = { add_opinion_modifier = { target = DKB modifier = medium_increase } }
+			add_opinion_modifier = { target = CAN modifier = medium_increase }
+		}
+	}
+	focus = {
+		id = DKB_open_to_russia
+		icon = GFX_goal_DKB_open_to_russia
+		cost = 2
+		relative_position_id = DKB_expand_factory_tsaritsyn
+		x = 1
+		y = 1
+		available = {
+			has_completed_focus = DKB_lineytsy_victorious
+		}
+		prerequisite = {
+			focus = DKB_expand_factory_tsaritsyn
+		}
+		completion_reward = {
+			add_ideas = DKB_open_to_russia_idea
+			RUS = { add_opinion_modifier = { target = DKB modifier = medium_increase } }
+			add_opinion_modifier = { target = RUS modifier = medium_increase }
+		}
+	}
+
+	### Lineytsy ###
+
+	focus = {
+		id = DKB_move_towards_centralism
+		icon = GFX_goal_DKB_move_towards_centralism
+		cost = 3
+		relative_position_id = DKB_lineytsy_victorious
+		x = -1
+		y = 1
+		prerequisite = {
+			focus = DKB_lineytsy_victorious
+		}
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.1
+		}
+	}
+	focus = {
+		id = DKB_officialize_russification
+		icon = GFX_goal_DKB_officialize_russification
+		cost = 5
+		relative_position_id = DKB_move_towards_centralism
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = DKB_move_towards_centralism
+		}
+		completion_reward = {
+			add_ideas = DKB_russification
+		}
+	}
+	focus = {
+		id = DKB_invite_settlers
+		icon = GFX_goal_DKB_invite_settlers
+		cost = 5
+		relative_position_id = DKB_officialize_russification
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = DKB_officialize_russification
+		}
+		completion_reward = {
+			add_ideas = DKB_russian_immigration
+			257 = { add_manpower = -35986 }
+			258 = { add_manpower = -40874 }
+			223 = { add_manpower = -23140 }
+
+			1056 = { add_manpower = 16523 }
+			235 = { add_manpower = 24891 }
+			217 = { add_manpower = 26046 }
+			407 = { add_manpower = 32540 }
+		}
+	}
+
+	focus = {
+		id = DKB_continue_using_ruble
+		icon = GFX_goal_DKB_continue_using_ruble
+		cost = 2
+		relative_position_id = DKB_lineytsy_victorious
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = DKB_lineytsy_victorious
+		}
+		completion_reward = {
+			add_ideas = DKB_ruble_currency
+		}
+	}
+	focus = {
+		id = DKB_unify_our_troops
+		icon = GFX_goal_DKB_unify_our_troops
+		cost = 3
+		relative_position_id = DKB_continue_using_ruble
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = DKB_continue_using_ruble
+		}
+		completion_reward = {
+			add_war_support = 0.15
+			add_ideas = DKB_centralized_army
+		}
+	}
+	focus = {
+		id = DKB_solve_separatist_problem
+		icon = GFX_goal_DKB_solve_separatist_problem
+		cost = 2
+		relative_position_id = DKB_unify_our_troops
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = DKB_unify_our_troops
+		}
+		completion_reward = {
+			add_political_power = -70
+			add_stability = 0.05
+			add_popularity = {
+				ideology = despotism
+				popularity = 0.25
+			}
+		}
+	}
+	focus = {
+		id = DKB_loyal_south_east
+		icon = GFX_goal_DKB_loyal_south_east
+		cost = 4
+		relative_position_id = DKB_invite_settlers
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = DKB_open_to_russia
+		}
+		prerequisite = {
+			focus = DKB_invite_settlers
+		}
+		prerequisite = {
+			focus = DKB_solve_separatist_problem
+		}
+		completion_reward = {
+			RUS = { add_opinion_modifier = { target = DKB modifier = large_increase } }
+			add_opinion_modifier = { target = RUS modifier = large_increase }
+			add_research_slot = 1
+			add_popularity = {
+				ideology = despotism
+				popularity = 0.1
+			}
+			swap_ideas = {
+				remove_idea = DKB_open_to_russia_idea
+				add_idea = DKB_open_to_russia_idea1
+			}
+		}
+	}
+
+	### Diplomacy ###
+
+	focus = {
+		id = DKB_stay_away_from_drozdovsky
+		icon = GFX_goal_DKB_stay_away_from_drozdovsky
+		cost = 2
+		relative_position_id = DKB_independent_diplomacy
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = DKB_intensify_reforms
+			focus = DKB_independent_diplomacy
+			focus = DKB_loyal_south_east
+		}
+		available = {
+			is_subject = no
+		}
+		completion_reward = {
+			diplomatic_relation = {
+				country = SRU
+				relation = non_aggression_pact
+  				active = yes
+			}
+			add_political_power = 50
+		}
+	}
+	focus = {
+		id = DKB_return_to_sich
+		icon = GFX_goal_DKB_return_to_sich
+		cost = 5
+		relative_position_id = DKB_stay_away_from_drozdovsky
+		x = -2
+		y = 1
+		available = {
+			date > 1939.01.01
+			has_completed_focus = DKB_chernomortsy_victorious
+			is_subject = no
+		}
+		prerequisite = {
+			focus = DKB_stay_away_from_drozdovsky
+		}
+		mutually_exclusive = {
+			focus = DKB_our_russian_cousins
+		}
+		mutually_exclusive = {
+			focus = DKB_our_russian_brothers
+		}
+		completion_reward = {
+			custom_effect_tooltip = "DKB_RETURN_TO_SICH_TT"
+		}
+	}
+	focus = {
+		id = DKB_our_russian_cousins
+		icon = GFX_goal_DKB_our_russian_cousins
+		cost = 5
+		relative_position_id = DKB_stay_away_from_drozdovsky
+		x = 0
+		y = 1
+		available = {
+			date > 1939.01.01
+			OR = {
+				has_completed_focus = DKB_kaledin_marches_forward
+				has_completed_focus = DKB_lineytsy_victorious
+			}
+			is_subject = no
+		}
+		prerequisite = {
+			focus = DKB_stay_away_from_drozdovsky
+		}
+		mutually_exclusive = {
+			focus = DKB_return_to_sich
+		}
+		mutually_exclusive = {
+			focus = DKB_our_russian_brothers
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					has_completed_focus = DKB_lineytsy_victorious
+				}
+				custom_effect_tooltip = "DKB_RUSSIAN_COUSINS_TT"
+			}
+			else = {
+				diplomatic_relation = {
+					country = RUS
+					relation = non_aggression_pact
+  					active = yes
+				}
+				give_guarantee = RUS
+				give_guarantee = SRU
+			}
+		}
+	}
+	focus = {
+		id = DKB_our_russian_brothers
+		icon = GFX_goal_DKB_our_russian_brothers
+		cost = 5
+		relative_position_id = DKB_stay_away_from_drozdovsky
+		x = 2
+		y = 1
+		available = {
+			date > 1939.01.01
+			has_completed_focus = DKB_lineytsy_victorious
+		}
+		prerequisite = {
+			focus = DKB_stay_away_from_drozdovsky
+		}
+		mutually_exclusive = {
+			focus = DKB_return_to_sich
+		}
+		mutually_exclusive = {
+			focus = DKB_our_russian_cousins
+		}
+		completion_reward = {
+			custom_effect_tooltip = "DKB_RUSSIAN_BROTHERS_TT"
+		}
+	}
+
+	### Gorgulov ###
+
+	focus = {
+		id = DKB_national_peasant_program
+		icon = GFX_goal_DKB_national_peasant_program
+		cost = 5
+		relative_position_id = DKB_gorgulov_at_stage
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = DKB_gorgulov_at_stage
+		}
+		ai_will_do = {
+			factor = 30
+		}
+		completion_reward = {
+			add_political_power = 100
+			set_country_flag = organize_mongolia
+			add_popularity = {
+				ideology = reactionism
+				popularity = 0.1
+			}
+			add_ideas = DKB_npp
+		}
+	}
+	focus = {
+		id = DKB_no_capitalists
+		icon = GFX_goal_DKB_no_capitalists
+		cost = 3
+		relative_position_id = DKB_national_peasant_program
+		x = -4
+		y = 1
+		ai_will_do = {
+			factor = 30
+		}
+		prerequisite = {
+			focus = DKB_national_peasant_program
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = reactionism
+				popularity = 0.05
+			}
+			add_manpower = -4912
+			234 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			841 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			855 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_ideas = DKB_chervonets_currency
+		}
+	}
+	focus = {
+		id = DKB_no_minorities
+		icon = GFX_goal_DKB_no_minorities
+		cost = 3
+		relative_position_id = DKB_national_peasant_program
+		x = -2
+		y = 1
+		prerequisite = {
+			focus = DKB_national_peasant_program
+		}
+		ai_will_do = {
+			factor = 30
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = reactionism
+				popularity = 0.05
+			}
+			add_stability = -0.02
+			add_ideas = DKB_slavic_scythian_supremacy
+		}
+	}
+	focus = {
+		id = DKB_no_jews
+		icon = GFX_goal_DKB_no_jews
+		cost = 3
+		relative_position_id = DKB_national_peasant_program
+		x = 0
+		y = 1
+		ai_will_do = {
+			factor = 30
+		}
+		prerequisite = {
+			focus = DKB_national_peasant_program
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = reactionism
+				popularity = 0.05
+			}
+			add_stability = -0.02
+			add_manpower = -157
+		}
+	}
+	focus = {
+		id = DKB_no_monarchists
+		icon = GFX_goal_DKB_no_monarchists
+		cost = 3
+		relative_position_id = DKB_national_peasant_program
+		x = 2
+		y = 1
+		ai_will_do = {
+			factor = 30
+		}
+		prerequisite = {
+			focus = DKB_national_peasant_program
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = reactionism
+				popularity = 0.05
+			}
+			add_stability = -0.02
+			add_manpower = -267
+			add_ideas = DKB_purge_of_russian_monarchists
+		}
+	}
+	focus = {
+		id = DKB_no_communists
+		icon = GFX_goal_DKB_no_communists
+		cost = 3
+		relative_position_id = DKB_national_peasant_program
+		x = 4
+		y = 1
+		ai_will_do = {
+			factor = 30
+		}
+		prerequisite = {
+			focus = DKB_national_peasant_program
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = reactionism
+				popularity = 0.05
+			}
+			add_manpower = -434
+			add_ideas = DKB_revolutionary_anti_communism
+		}
+	}
+	focus = {
+		id = DKB_rebirth_of_great_scythia
+		icon = GFX_goal_DKB_rebirth_of_great_scythia
+		cost = 3
+		relative_position_id = DKB_national_peasant_program
+		x = 0
+		y = 2
+		prerequisite = {
+			focus = DKB_no_capitalists
+		}
+		prerequisite = {
+			focus = DKB_no_minorities
+		}
+		prerequisite = {
+			focus = DKB_no_monarchists
+		}
+		prerequisite = {
+			focus = DKB_no_communists
+		}
+		prerequisite = {
+			focus = DKB_no_jews
+		}
+		ai_will_do = {
+			factor = 30
+		}
+		completion_reward = {
+			hidden_effect = {
+				remove_ideas = {
+					DKB_npp
+					DKB_chervonets_currency
+					DKB_slavic_scythian_supremacy
+					DKB_purge_of_russian_monarchists
+					DKB_revolutionary_anti_communism
+				}
+				add_ideas = DKB_scythian_rebirth
+			}
+			custom_effect_tooltip = "DKB_SCYTHIAN_REBIRTH_TOOLTIP"
+		}
+	}
+	focus = {
+		id = DKB_supremacy_of_scyths
+		icon = GFX_goal_DKB_supremacy_of_scyths
+		cost = 3
+		relative_position_id = DKB_rebirth_of_great_scythia
+		x = -2
+		y = 1
+		prerequisite = {
+			focus = DKB_rebirth_of_great_scythia
+		}
+		ai_will_do = {
+			factor = 30
+		}
+		completion_reward = {
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = DKB_blood_brotherhood
+		icon = GFX_goal_DKB_blood_brotherhood
+		cost = 3
+		relative_position_id = DKB_supremacy_of_scyths
+		x = -1
+		y = 1
+		prerequisite = {
+			focus = DKB_supremacy_of_scyths
+		}
+		ai_will_do = {
+			factor = 30
+		}
+		completion_reward = {
+			add_war_support = 0.05
+			add_manpower = 15000
+			add_ideas = DKB_brotherhood
+		}
+	}
+	focus = {
+		id = DKB_natural_orthodoxy
+		icon = GFX_goal_DKB_natural_orthodoxy
+		cost = 3
+		relative_position_id = DKB_supremacy_of_scyths
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = DKB_supremacy_of_scyths
+		}
+		ai_will_do = {
+			factor = 30
+		}
+		completion_reward = {
+			add_war_support = 0.1
+			234 = {
+				add_extra_state_shared_building_slots = 1
+			}
+			RUS = { add_opinion_modifier = { target = DKB modifier = DKB_scythian_barbarians } }
+			SRU = { add_opinion_modifier = { target = DKB modifier = DKB_scythian_barbarians } }
+			UKR = { add_opinion_modifier = { target = DKB modifier = DKB_scythian_barbarians } }
+			POL = { add_opinion_modifier = { target = DKB modifier = DKB_scythian_barbarians } }
+			KAV = { add_opinion_modifier = { target = DKB modifier = DKB_scythian_barbarians } }
+			GER = { add_opinion_modifier = { target = DKB modifier = DKB_scythian_barbarians } }
+			FRA = { add_opinion_modifier = { target = DKB modifier = DKB_scythian_barbarians } }
+			FIU = { add_opinion_modifier = { target = DKB modifier = DKB_scythian_barbarians } }
+			ITA = { add_opinion_modifier = { target = DKB modifier = DKB_scythian_barbarians } }
+			ENG = { add_opinion_modifier = { target = DKB modifier = DKB_scythian_barbarians } }
+		}
+	}
+	focus = {
+		id = DKB_crush_degeneracy
+		icon = GFX_goal_DKB_crush_degeneracy
+		cost = 3
+		relative_position_id = DKB_supremacy_of_scyths
+		x = 0
+		y = 2
+		ai_will_do = {
+			factor = 30
+		}
+		prerequisite = {
+			focus = DKB_blood_brotherhood
+		}
+		prerequisite = {
+			focus = DKB_natural_orthodoxy
+		}
+		completion_reward = {
+			add_stability = 0.10 
+			add_manpower = -5478
+			army_experience = 25
+		}
+	}
+	focus = {
+		id = DKB_supremacy_peasant_party
+		icon = GFX_goal_DKB_supremacy_peasant_party
+		cost = 3
+		relative_position_id = DKB_rebirth_of_great_scythia
+		x = 2
+		y = 1
+		ai_will_do = {
+			factor = 30
+		}
+		prerequisite = {
+			focus = DKB_rebirth_of_great_scythia
+		}
+		completion_reward = {
+		   add_ideas = DKB_peasant_society
+		}
+	}
+	focus = {
+		id = DKB_return_soil
+		icon = GFX_goal_DKB_return_soil
+		cost = 3
+		relative_position_id = DKB_supremacy_peasant_party
+		x = -1
+		y = 1
+		ai_will_do = {
+			factor = 30
+		}
+		prerequisite = {
+			focus = DKB_supremacy_peasant_party
+		}
+		completion_reward = {
+			add_manpower = 10000
+			add_ideas = DKB_heart_of_nature
+		}
+	}
+	focus = {
+		id = DKB_for_every_russian
+		icon = GFX_goal_DKB_for_every_russian
+		cost = 3
+		relative_position_id = DKB_supremacy_peasant_party
+		x = 1
+		y = 1
+		ai_will_do = {
+			factor = 30
+		}
+		prerequisite = {
+			focus = DKB_supremacy_peasant_party
+		}
+		completion_reward = {
+			add_ideas = DKB_all_russians
+		}
+	}
+	focus = { 
+		id = DKB_rise_of_barbarians
+		icon = GFX_goal_DKB_rise_of_barbarians
+		cost = 3
+		relative_position_id = DKB_supremacy_peasant_party
+		x = 0 
+		y = 2
+		ai_will_do = {
+			factor = 30
+		}
+		prerequisite = { 
+			focus = DKB_return_soil
+		}
+		prerequisite = { 
+			focus = DKB_for_every_russian 
+		}
+		completion_reward = { 
+			add_ideas = DKB_barbarian_warriors
+		}
+	}
+			
+	focus = {
+		id = DKB_violet_will_overthrow_machine
+		icon = GFX_goal_DKB_violet_will_overthrow_machine
+		cost = 3
+		relative_position_id = DKB_rebirth_of_great_scythia
+		x = 0
+		y = 4
+		ai_will_do = {
+			factor = 30
+		}
+		prerequisite = {
+			focus = DKB_crush_degeneracy
+		}
+		prerequisite = {
+			focus = DKB_rise_of_barbarians
+		}
+		completion_reward = {
+			add_ideas = DKB_chosen_of_vozhd
+		}
+	}
+	focus = {
+		id = DKB_we_are_scythians_we_are_asians
+		icon = GFX_goal_DKB_we_are_scythians_we_are_asians
+		cost = 5
+		relative_position_id = DKB_violet_will_overthrow_machine
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = DKB_violet_will_overthrow_machine
+		}
+		ai_will_do = {
+			factor = 30
+		}
+		available = {
+			is_subject = no
+		}
+		will_lead_to_war_with = KAV
+		will_lead_to_war_with = ARM
+		completion_reward = {
+			add_stability = 0.10
+			add_war_support = 0.10
+			unlock_decision_category_tooltip = Russian_unification_decisions_nationalist
+			unlock_decision_tooltip = Unification_invade_armenia_nationalist
+			unlock_decision_tooltip = Unification_invade_kav_nationalist
+		}
+	}
+	focus = {
+		id = DKB_bashkirs_shouldnt_exist
+		icon = GFX_goal_DKB_bashkirs_shouldnt_exist
+		cost = 5
+		relative_position_id = DKB_we_are_scythians_we_are_asians
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = DKB_we_are_scythians_we_are_asians
+		}
+		ai_will_do = {
+			factor = 30
+		}
+		available = {
+			OR = {
+				is_neighbor_of = ORE
+				ORE = { exists = no }
+			}
+			is_subject = no
+		}
+		will_lead_to_war_with = ORE
+		completion_reward = {
+			unlock_decision_tooltip = Unification_invade_ore_nationalist
+			set_country_flag = invade_kazan
+		}
+	}
+	focus = {
+		id = DKB_steppe_isnt_kirgiz
+		icon = GFX_goal_DKB_steppe_isnt_kirgiz
+		cost = 5
+		relative_position_id = DKB_bashkirs_shouldnt_exist
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = DKB_bashkirs_shouldnt_exist
+		}
+		ai_will_do = {
+			factor = 30
+		}
+		will_lead_to_war_with = SIB
+		completion_reward = {
+			unlock_decision_tooltip = Unification_invade_siberia_nationalist
+			set_country_flag = invade_siberia
+		}
+	}
+	focus = {
+		id = DKB_end_mongolian_treachery
+		icon = GFX_goal_DKB_end_mongolian_treachery
+		cost = 5
+		relative_position_id = DKB_steppe_isnt_kirgiz
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = DKB_steppe_isnt_kirgiz
+		}
+		ai_will_do = {
+			factor = 30
+		}
+		available = {
+			ORE = { exists = no }
+			#STE = { exists = no }
+			is_subject = no
+		}
+		will_lead_to_war_with = ZHR
+		will_lead_to_war_with = ARC
+		will_lead_to_war_with = PRI
+		will_lead_to_war_with = MNS
+		will_lead_to_war_with = PSL
+		will_lead_to_war_with = GUK
+		will_lead_to_war_with = FCR
+		will_lead_to_war_with = KCK
+		will_lead_to_war_with = ALT
+		will_lead_to_war_with = TAN
+		will_lead_to_war_with = MO2
+		will_lead_to_war_with = MON
+		completion_reward = {
+			custom_effect_tooltip = "DKB_MONGOLIA_CORES_TT"
+			unlock_decision_tooltip = Unification_invade_mongolia_nationalist
+			unlock_decision_tooltip = Unification_invade_kck_nationalist
+			unlock_decision_tooltip = Unification_invade_zhr_nationalist
+			set_country_flag = invade_mongolia
+			set_country_flag = invade_zhelto
+			set_country_flag = invade_yakutia
+		}
+	}
+	focus = {
+		id = DKB_burn_kolchaks_nest
+		icon = GFX_goal_DKB_burn_kolchaks_nest
+		cost = 5
+		relative_position_id = DKB_steppe_isnt_kirgiz
+		x = -1
+		y = 1
+		ai_will_do = {
+			factor = 30
+		}
+		prerequisite = {
+			focus = DKB_steppe_isnt_kirgiz
+		}
+		available = {
+			OR = {
+				is_neighbor_of = RUS
+				is_neighbor_of = SRU
+				owns_state = 219
+			}
+			is_subject = no
+		}
+		will_lead_to_war_with = RUS
+		will_lead_to_war_with = SRU
+		will_lead_to_war_with = FIN
+		will_lead_to_war_with = FIR
+		will_lead_to_war_with = WRR
+		will_lead_to_war_with = WRU
+		will_lead_to_war_with = WRT
+		will_lead_to_war_with = EST
+		will_lead_to_war_with = LAT
+		completion_reward = {
+			custom_effect_tooltip = "DKB_RUSSIA_CORES_TT"
+			unlock_decision_tooltip = Unification_invade_russia_nationalist
+			unlock_decision_tooltip = Unification_invade_baltics_nationalist
+			unlock_decision_tooltip = Unification_invade_finland_nationalist
+			set_country_flag = invade_russia
+			set_country_flag = invade_finland
+			set_country_flag = invade_baltics
+		}
+	}
+	focus = {
+		id = DKB_agony_of_intermarium
+		icon = GFX_goal_DKB_agony_of_intermarium
+		cost = 1
+		relative_position_id = DKB_burn_kolchaks_nest
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = DKB_end_mongolian_treachery
+		}
+		ai_will_do = {
+			factor = 30
+		}
+		will_lead_to_war_with = POL
+		will_lead_to_war_with = LIT
+		will_lead_to_war_with = BLR
+		will_lead_to_war_with = UKR
+		prerequisite = {
+			focus = DKB_burn_kolchaks_nest
+		}
+		available = {
+		   	has_global_flag = united_russia
+		}
+		completion_reward = {
+			news_event = {
+				id = news.67
+			}
+			set_global_flag = united_russia
+			set_cosmetic_tag = "DKB_SCYTHIAN_PROCLAMATION"
+			save_global_event_target_as = russian_unification
+			clr_country_flag = is_russian_warlord
+			set_capital = {
+				state = 219
+			}
+			add_war_support = 0.3
+			add_stability = 0.3
+			add_research_slot = 1
+			hidden_effect = {
+				every_state = {
+					limit = { has_variable = is_russian_state }
+					remove_core_of = WRT #Baltics
+					remove_core_of = WRU
+					remove_core_of = WRR
+					remove_core_of = RUS #Russia Proper
+					remove_core_of = SRU
+					remove_core_of = DKB #Ciscaucasia
+					remove_core_of = KAV #Caucasus
+					remove_core_of = ORE #Kazakhstan
+					remove_core_of = TRK #Central Asia
+					remove_core_of = KHW
+					remove_core_of = TUK
+					remove_core_of = TUC
+					remove_core_of = BKR
+					remove_core_of = ALT #Mongolia
+					remove_core_of = TAN
+					remove_core_of = MO2
+					remove_core_of = SIB #Siberia
+					remove_core_of = MO4
+					remove_core_of = KCK #Far East
+					remove_core_of = ZHR #Yellow Russia
+					remove_core_of = ARC
+					remove_core_of = FCR
+					remove_core_of = GUK
+					remove_core_of = HAR
+					remove_core_of = MNS
+					remove_core_of = OLN
+					remove_core_of = PRI
+					remove_core_of = PSL
+					
+
+					remove_claim_by = WRT #Baltics
+					remove_claim_by = WRU
+					remove_claim_by = WRR
+					remove_claim_by = RUS #Russia Proper
+					remove_claim_by = SRU
+					remove_claim_by = DKB #Ciscaucasia
+					remove_claim_by = KAV #Caucasus
+					remove_claim_by = ORE #Kazakhstan
+					remove_claim_by = TRK #Central Asia
+					remove_claim_by = KHW
+					remove_claim_by = TUK
+					remove_claim_by = TUC
+					remove_claim_by = BKR
+					remove_claim_by = ALT #Mongolia
+					remove_claim_by = TAN
+					remove_claim_by = MO2
+					remove_claim_by = SIB #Siberia
+					remove_claim_by = MO4
+					remove_claim_by = KCK #Far East
+					remove_claim_by = ZHR #Yellow Russia
+					remove_claim_by = ARC
+					remove_claim_by = FCR
+					remove_claim_by = GUK
+					remove_claim_by = HAR
+					remove_claim_by = MNS
+					remove_claim_by = OLN
+					remove_claim_by = PRI
+					remove_claim_by = PSL
+					
+					add_core_of = ROOT
+				}
+			}
+		}
+	}
+	focus = {
+		id = DKB_we_will_conquer_eurasia
+		icon = GFX_goal_DKB_we_will_conquer_eurasia
+		cost = 1
+		relative_position_id = DKB_agony_of_intermarium
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = DKB_agony_of_intermarium
+		}
+		ai_will_do = {
+			factor = 30
+		}
+		bypass = {
+			OR = {
+				has_war_with = POL 
+				has_war_with = UKR 
+			}
+		}
+		available = {
+			is_subject = no
+		}
+		will_lead_to_war_with = POL
+		will_lead_to_war_with = BLR
+		will_lead_to_war_with = LIT
+		will_lead_to_war_with = UKR
+		completion_reward = {
+			hidden_effect = {
+				if = {
+					limit = {
+						UKR = {
+							NOT = {
+								has_country_leader = {
+									character = UKR_batko_nash
+								}
+							}
+						}
+					}
+					news_event = {
+						id = news.341
+					}
+				}
+			}
+			declare_war_on = {
+				target = POL 
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = BLR
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = LIT
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = UKR
+				type = annex_everything
+			}
+		}
+	}
+	focus = {
+		id = DKB_and_go_beyond
+		icon = GFX_goal_DKB_and_go_beyond
+		cost = 1
+		relative_position_id = DKB_we_will_conquer_eurasia
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = DKB_we_will_conquer_eurasia
+		}
+		ai_will_do = {
+			factor = 30
+		}
+		available = {
+			is_subject = no
+			has_war = no
+			owns_state = 10
+		}
+		completion_reward = {
+			custom_effect_tooltip = "DKB_CONQUER_EURASIA_TT"
+			country_event = {
+				id = dkb.96
+			}
+		}
+	}
+
+}

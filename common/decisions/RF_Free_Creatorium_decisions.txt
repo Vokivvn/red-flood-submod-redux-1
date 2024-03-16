@@ -1,0 +1,40 @@
+FCR_diplomatic_decisions = {
+	FCR_join_kavkaz = {
+		days_remove = 14
+		ai_will_do = { factor = 10 }
+		icon = GFX_Russian_uni_socialist
+		fire_only_once = yes
+		visible = { 
+			is_neighbor_of = KAV
+			NOT = { has_country_flag = RUS_chose_wargoal }
+			FCR_KAV_peaceful_uni = yes
+			owns_state=570 
+			owns_state=574
+		}
+		available = { has_war = no }
+		complete_effect = {
+			set_country_flag = {
+              flag = RUS_chose_wargoal
+              days = 15
+              value = 1
+            }
+		}
+		remove_effect = {
+			if ={
+				limit ={ KAV = { is_ai = no } }
+				KAV = { FCR = { PREV_annex_CURRENT_warlord = yes } }
+			}
+			if = {
+				limit = { FCR = { is_ai = no } }
+				FCR = { KAV = { PREV_annex_CURRENT_warlord = yes } }
+			}
+			if = {
+				limit = {
+					FCR = { is_ai = yes }
+					KAV = { is_ai = yes }
+				}
+				country_event = russia.205
+		    }
+		}
+	}
+}

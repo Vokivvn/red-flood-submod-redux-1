@@ -1,0 +1,23 @@
+state = {
+	id = 880 # Lang Son
+	name = "STATE_880"
+
+	history = {
+		owner = DAI
+		add_core_of = DAI
+		victory_points = {
+			9948 5 # Lang Son
+		}
+		buildings = {
+			infrastructure = 2
+		}
+	}
+
+	provinces = {
+	 1157 7093 9948 4121
+	}
+
+	manpower = 3128000
+	buildings_max_level_factor = 1
+	state_category = rural
+}

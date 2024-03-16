@@ -1,0 +1,48 @@
+characters = {
+	SIK_ma_zhongying={
+		name="Ma Zhongying"
+		portraits={
+			civilian={
+				large="gfx/leaders/SIK/Portrait_SIK_Ma_Zhongying.png"
+			}
+		}
+		corps_commander={
+			traits={ trait_reckless media_personality }
+			skill=3
+			attack_skill=3
+			defense_skill=1
+			planning_skill=3
+			logistics_skill=3
+			legacy_id=-1
+		}
+		country_leader={
+			desc="POLITICS_MA_ZHONGYING_DESC"
+			ideology=military_dictatorship
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	SIK_sheng_shicai={
+		name="Sheng Shicai"
+		portraits={
+			civilian={
+				large="gfx/leaders/SIK/Portrait_SIK_Sheng_Shicai.png"
+			}
+		}
+		corps_commander={
+			traits={ trait_reckless }
+			skill=2
+			attack_skill=2
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=2
+			legacy_id=-1
+		}
+		country_leader={
+			desc="POLITICS_SHENG_SHICAI_DESC"
+			ideology=military_dictatorship
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+}

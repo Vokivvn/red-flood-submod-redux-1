@@ -1,0 +1,26 @@
+
+state={
+	id=839
+	name="STATE_839"
+
+	history={
+		owner = BYJ
+		buildings = {
+			infrastructure = 2
+			4205 = {
+				naval_base = 1
+			}
+		}
+		add_core_of = BYJ
+		victory_points = {
+			4205 10
+		}
+	}
+
+	provinces={
+		4205
+	}
+	manpower=147250
+	buildings_max_level_factor=1.000
+	state_category=enclave
+}

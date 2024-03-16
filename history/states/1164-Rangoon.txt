@@ -1,0 +1,31 @@
+state={
+	id=1164
+	name="STATE_1164"
+	resources={
+		rubber=4.000
+	}
+
+	history={
+		owner = BUR
+		victory_points = {
+			1330 15
+		}
+		add_core_of = BUR
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			air_base = 1
+			1330 = {
+				naval_base = 4
+
+			}
+		}
+	}
+
+	provinces={
+		1330 10154 10267 12197 
+	}
+	manpower=752500
+	buildings_max_level_factor=1.000
+	state_category=city
+}

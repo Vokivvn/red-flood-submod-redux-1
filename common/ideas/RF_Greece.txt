@@ -1,0 +1,122 @@
+###-Greece Ideas-###
+ideas = {
+	country = {
+		#Kingdom
+		GRE_anchor_of_crete = {
+			picture = GRE_anchor_of_crete
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				liberalism_drift = 0.05 
+				stability_factor = -0.1
+				war_support_factor = 0.1
+			}
+		}
+		GRE_century_of_morpheus = {
+			picture = GRE_century_of_morpheus
+			cancel = { has_country_flag = remove_idea }
+			modifier = { 
+				consumer_goods_expected_value = -0.05
+				production_factory_efficiency_gain_factor = -0.05
+				war_support_factor = -0.1
+			}
+		}
+		GRE_man_from_high_olympus = {
+			picture = GRE_man_from_high_olympus
+			cancel = { has_country_flag = remove_idea }
+			modifier = { 
+				stability_factor = -0.3
+				accelerationism_drift = 0.05
+				popular_socialism_drift = 0.05
+				vanguard_socialism_drift = 0.05
+				revisionist_socialism_drift = 0.05
+				liberalism_drift = 0.03
+			}
+		}
+		GRE_man_from_high_olympus2 = {
+			picture = GRE_man_from_high_olympus
+			cancel = { has_country_flag = remove_idea }
+			modifier = { 
+				stability_factor = -0.15
+				despotism_drift = 0.05
+				conservatism_drift = 0.03
+			}
+		}
+
+		GRE_George_II =		{
+			picture = GRE_George_II
+			cancel = { has_country_flag = remove_idea }
+			modifier = { 
+				conservatism_drift = 0.05
+				despotism_drift = 0.05
+				reactionism_drift = 0.05
+				stability_factor = 0.1
+				political_power_factor = 0.05
+			}
+		}
+
+		GRE_Alexander_I ={
+			picture = GRE_Alexander_I
+			cancel = { has_country_flag = remove_idea }
+			modifier = { 
+				liberalism_drift = 0.05
+				progressivism_drift = 0.05
+				stability_factor = 0.05
+				war_support_factor = 0.1
+			}
+
+		}
+
+
+		#Republic
+		GRE_filiki_eteria = {
+			picture = GRE_filiki_eteria
+			cancel = { has_country_flag = remove_idea }
+			modifier = { 
+				stability_factor = -0.15
+				accelerationism_drift = 0.05
+				popular_socialism_drift = 0.05
+				vanguard_socialism_drift = 0.05
+				revisionist_socialism_drift = 0.05
+				liberalism_drift = 0.03
+				weekly_manpower = -100
+			}
+		}
+		GRE_voice_from_cosmos = {
+			picture = GRE_voice_from_cosmos
+			cancel = { has_country_flag = remove_idea }
+			modifier = { 
+				stability_factor = -0.1
+				accelerationism_drift = 0.05
+				research_speed_factor = 0.1
+			}
+		}
+		GRE_orpheus_song = {
+			picture = GRE_orpheus_song
+			cancel = { has_country_flag = remove_idea }
+			modifier = { 
+				stability_factor = 0.1
+				revisionist_socialism_drift = 0.05
+				consumer_goods_expected_value = -0.1
+			}
+		}
+		GRE_dimokratiamos = {
+			picture = GRE_dimokratiamos
+			cancel = { has_country_flag = remove_idea }
+			modifier = { 
+				stability_factor = 0.1
+				vanguard_socialism_drift = 0.05
+				production_speed_buildings_factor = 0.1
+			}
+		}
+		GRE_road_to_socialism = {
+			picture = GRE_road_to_socialism
+			cancel = { has_country_flag = remove_idea }
+			modifier = { 
+				stability_factor = 0.1
+				popular_socialism_drift = 0.05
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
+			}
+		}
+	}
+}

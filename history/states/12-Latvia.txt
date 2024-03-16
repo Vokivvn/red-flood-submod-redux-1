@@ -1,0 +1,35 @@
+
+state={
+	id=12
+	name="STATE_12"
+	manpower = 684500
+	resources={
+		steel=2
+	}
+
+	state_category = town
+
+	history={
+		owner = WRU
+		buildings = {
+			infrastructure = 2
+			air_base = 3
+			industrial_complex = 1
+		}
+		victory_points = {
+			3388 5
+		}
+		victory_points = {
+			3296 5
+		}
+		victory_points = {
+			9240 3
+		}
+		add_core_of = LAT
+		add_core_of = WRU
+	}
+
+	provinces={
+		3298 3388 9240 9317 9501 10323 10493 11302
+	}
+}

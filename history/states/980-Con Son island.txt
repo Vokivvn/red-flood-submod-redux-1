@@ -1,0 +1,21 @@
+state={
+	id=980
+	name="STATE_980"
+
+	history={
+		owner = ENG
+		add_claim_by = DAI
+		buildings = {
+			infrastructure = 2
+			13353 = {
+				naval_base = 1
+			}
+		}
+	}
+
+	provinces={
+		13353
+	}
+	manpower=12375
+	state_category=small_island
+}

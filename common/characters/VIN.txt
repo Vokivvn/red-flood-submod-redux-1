@@ -1,0 +1,78 @@
+characters = {
+	VIN_Board_of_Supreme_Beings = {
+		name = "Thuong-Ngo Đai-Hoi-Đong"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/VIN/Portrait_VIN_Board_of_Supreme_Beings.png"
+			}
+		}
+		country_leader = {
+			ideology = social_nationalism
+			expire = "1965.1.1.1"
+		}
+	}
+	VIN_Truong = {
+		name = "Truong Tu Anh"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/VIN/Portrait_VIN_Truong_Tu_Anh.png"
+			}
+		}
+		country_leader = {
+			ideology = national_conservatism
+			expire = "1965.1.1.1"
+		}
+	}
+	VIN_Ngo_Dinh_Diem = {
+		name = "Ngô Đình Diem"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/VIN/Portrait_VIN_Ngo_Dinh_Diem.png"
+			}
+		}
+		country_leader = {
+			ideology = agrarian_socialism
+			expire = "1965.1.1.1"
+		}
+	}
+	VIN_Nguyen_Ai_Quoc = {
+		name = "Nguyen Ái Quoc"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/VIN/Portrait_VIN_Nguyen_Ai_Quoc.png"
+			}
+		}
+		country_leader = {
+			ideology = national_vanguardism
+			expire = "1965.1.1.1"
+		}
+	}
+	VIN_Tran_Quoc_Buu = {
+		name = "Tran Quoc Buu"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/VIN/Portrait_VIN_Tran_Quoc_Buu.png"
+			}
+		}
+		country_leader = {
+			ideology = national_syndicalism
+			expire = "1965.1.1.1"
+		}
+	}
+	VIN_Ngo_Dinh_Nhu = {
+		name = "Ngô Đình Nhu"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/VIN/Portrait_VIN_Ngo_Dinh_Nhu.png"
+			}
+		}
+	}
+	VIN_Nguyen_Thai_Hoc = {
+		name = "Nguyen Thái Hoc"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/VIN/Portrait_VIN_Nguyen_Thai_Hoc.png"
+			}
+		}
+	}
+}

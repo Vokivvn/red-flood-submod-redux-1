@@ -1,0 +1,25 @@
+
+state={
+	id=583
+	name="STATE_583" # Kustanay
+	manpower = 181384
+
+	state_category = town
+
+	history={
+		owner = ORE
+		buildings = {
+			infrastructure = 1
+			air_base = 4
+
+		}
+		add_core_of = ORE
+		victory_points={
+			12257 10
+		}
+	}
+
+	provinces={
+		1272 1276 1303 1331 1363 4337 4369 7357 10312 12115 12143 12257 12266 12285
+	}
+}

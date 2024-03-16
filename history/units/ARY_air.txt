@@ -1,0 +1,12 @@
+
+air_wings = {
+	439 = { 
+		# Consisted of 12 Hawker Nimrods
+		cv_small_plane_airframe_0 = {
+			owner = "ARY" 
+			amount = 26
+			creator = "ENG"
+			version_name = "Hawker Nimrod"
+		}
+	}
+}

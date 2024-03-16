@@ -1,0 +1,50 @@
+﻿capital = 495
+
+oob = "ASS"
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	gw_artillery = 1
+}
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+	set_technology = {
+		iw_small_airframe = 1
+		aa_lmg = 1
+		aa_cannon_1 = 1
+		early_bombs = 1
+		engines_1 = 1
+	}
+}
+if = {
+	limit = { NOT = { has_dlc = "By Blood Alone" } }
+	set_technology = {
+		early_fighter = 1
+		CAS1 = 1
+	}
+}
+
+set_popularities = {
+	accelerationism = 50
+	reactionism = 0
+	despotism = 40
+	right_authoritarianism = 0
+	conservatism = 0
+	liberalism = 5
+	progressivism = 0
+	popular_socialism = 0
+	vanguard_socialism = 0
+	anarchism = 5
+}
+
+set_politics = {
+	ruling_party = accelerationism
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+recruit_character = ASS_orlando_villas_boas
+recruit_character = ASS_peter_fleming
+recruit_character = ASS_carl_gustav_von_rosen

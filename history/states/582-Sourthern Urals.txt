@@ -1,0 +1,33 @@
+
+state={
+	id=582
+	name="STATE_582" # Orsk
+	manpower = 432498
+
+	state_category = large_town
+
+	resources={
+		steel=40 # was: 72
+		oil=6 # was: 12
+	}
+
+	history={
+		owner = ORE
+		victory_points = {
+			4261 10
+		}
+		victory_points = {
+			10329 5
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+
+		}
+		add_core_of = ORE
+	}
+
+	provinces={
+		1406 4261 4265 4311 4383 7300 7373 10185 12200 10329 10142 11223 12117
+	}
+}

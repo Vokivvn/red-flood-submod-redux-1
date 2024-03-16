@@ -1,0 +1,14 @@
+characters = {
+	NEE_howard_philips_lovecraft = {
+		name = "H. P. Lovecraft"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/NEE/Portrait_Lovecraft.png"
+			}
+		}
+		country_leader = {
+			ideology = national_rejuvenatism
+			expire = "1965.1.1.1"
+		}
+	}
+}

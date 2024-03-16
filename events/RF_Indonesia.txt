@@ -1,0 +1,72 @@
+add_namespace = ina
+
+country_event = {
+	id = ina.1
+	title = ina.1.t
+	desc = ina.1.desc
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = ina.1.a
+		INA = {
+			set_politics = {
+				ruling_party = accelerationism
+				elections_allowed = no
+			}
+			add_popularity = {
+				ideology = accelerationism
+				popularity = 0.5
+			}
+		}
+	}
+	option = {
+		name = ina.1.b
+		INA = {
+			set_politics = {
+				ruling_party = progressivism
+				elections_allowed = no
+			}
+			add_popularity = {
+				ideology = progressivism
+				popularity = 0.5
+			}
+		}
+	}
+	option = {
+		name = ina.1.c
+		INA = {
+			set_politics = {
+				ruling_party = reactionism
+				elections_allowed = no
+			}
+			add_popularity = {
+				ideology = reactionism
+				popularity = 0.5
+			}
+		}
+	}
+	option = {
+		name = ina.1.d
+		INA = {
+			add_country_leader_role = {
+				character = "INA_Dewantara"
+				country_leader = {
+					ideology = anocracy
+					expire = "1965.1.1.1"
+				}
+				promote_leader = yes
+			}
+			set_politics = {
+				ruling_party = right_authoritarianism
+				elections_allowed = no
+			}
+			set_cosmetic_tag = INA_Dewantara
+			add_popularity = {
+				ideology = right_authoritarianism
+				popularity = 0.5
+			}
+		}
+	}
+}

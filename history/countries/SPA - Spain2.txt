@@ -1,0 +1,129 @@
+﻿capital = 974
+
+set_stability = 0.55
+
+set_war_support = 0.85
+
+set_research_slots = 3
+
+set_convoys = 46
+
+add_ideas = {
+	extensive_conscription
+	limited_exports
+	partial_economic_mobilisation
+}
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_recon = 1
+	tech_support = 1		
+	tech_engineers = 1
+	tech_mountaineers = 1
+	gw_artillery = 1
+	interwar_antiair = 1
+	basic_train = 1
+}
+
+if = {
+	limit = { has_dlc = "Battle for the Bosporus" }
+	set_technology = { camelry = 1 }
+}
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+	set_technology = {
+		iw_small_airframe = 1
+		iw_medium_airframe = 1
+		iw_large_airframe = 1
+		aa_lmg = 1
+		aa_cannon_1 = 1
+		early_bombs = 1
+		engines_1 = 1
+	}
+}
+if = {
+	limit = { NOT = { has_dlc = "By Blood Alone" } }
+	set_technology = {
+		early_fighter = 1
+		early_bomber = 1
+		naval_bomber1 = 1
+		CAS1 = 1
+	}
+}
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	set_technology = {
+		early_submarine = 1
+		early_destroyer = 1
+		basic_destroyer = 1
+		early_light_cruiser = 1
+		early_heavy_cruiser = 1
+		basic_heavy_cruiser = 1
+		early_battleship = 1
+		transport = 1
+	}
+}
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		early_ship_hull_light = 1
+		basic_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		early_ship_hull_cruiser = 1
+		basic_ship_hull_cruiser = 1
+		early_ship_hull_heavy = 1
+		basic_battery = 1
+		basic_medium_battery = 1
+		basic_torpedo = 1
+		basic_depth_charges = 1
+		mtg_transport = 1
+	}
+}
+
+set_politics = {
+	ruling_party = accelerationism
+	last_election = "1933.3.5"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	vanguard_socialism = 1
+	popular_socialism = 22
+	anarchism = 0
+	revisionist_socialism = 0
+	progressivism = 3
+	liberalism = 0
+	conservatism = 7
+    	right_authoritarianism = 0
+	despotism = 26
+    	reactionism = 5
+    	accelerationism = 36
+}
+
+
+recruit_character = SPA_ramiro_ledesma_ramos
+recruit_character = SPA_ramón_gómez_de_la_serna
+recruit_character = SPA_josé_antonio_primo_de_rivera
+recruit_character = SPA_salvador_dali_base
+recruit_character = SPA_salvador_dali_surrealist
+recruit_character = SPA_salvador_dali_monarchist
+recruit_character = SPA_ernesto_gimenez_caballero
+recruit_character = SPA_ruiz_de_alda
+recruit_character = SPA_agustin_de_foxa
+recruit_character = SPA_dionisio_ridruejo
+recruit_character = SPA_emilo_mola
+recruit_character = SPA_jose_sanjurjo
+recruit_character = SPA_josé_enrique_varela
+recruit_character = SPA_gonzalo_queipo
+recruit_character = SPA_jose_moscardo
+recruit_character = SPA_juan_yague
+recruit_character = SPA_miguel_cabanellas_ferrer
+recruit_character = SPA_mohammed_ben_mizzian
+recruit_character = SPA_manuel_fal_conde
+recruit_character = SPA_agustín_aznar_gerner
+
+

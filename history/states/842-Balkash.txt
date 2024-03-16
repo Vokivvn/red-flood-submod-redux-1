@@ -1,0 +1,31 @@
+
+state={
+	id=842
+	name="STATE_842"
+
+	history={
+		owner = TRK
+		buildings = {
+			infrastructure = 1
+			air_base = 3
+
+		}
+		add_core_of = TRK
+        victory_points = {
+			7795 5
+		}
+		victory_points = {
+			12529 5
+		}
+		victory_points = {
+			10619 5
+		}
+	}
+
+	provinces={
+		4651 4773 7711 7795 7856 10146 10547 13148 10550 4845 10619 12529 13149 13197 10680 7784 12662
+	}
+	manpower=791400
+	buildings_max_level_factor=1.000
+	state_category=town
+}

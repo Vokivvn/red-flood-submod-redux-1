@@ -1,0 +1,27 @@
+
+state={
+	id=420
+	name="STATE_420"
+	manpower = 751399
+
+	state_category = rural
+
+	history={
+		set_demilitarized_zone = yes
+		set_resistance = 30
+		set_compliance = 30
+		owner = PER
+		buildings = {
+			infrastructure = 2
+		}
+		victory_points = {
+			10454 2
+		}
+		add_claim_by = PER
+		add_core_of = AZR
+	}
+
+	provinces={
+		4553 4609 4901 10454
+	}
+}

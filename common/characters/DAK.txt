@@ -1,0 +1,14 @@
+characters = {
+	DAK_william_langer = {
+		name = "Wild Bill Langer"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/DAK/Portrait_William_Langer.png"
+			}
+		}
+		country_leader = {
+			ideology = right_populism
+			expire = "1965.1.1.1"
+		}
+	}
+}

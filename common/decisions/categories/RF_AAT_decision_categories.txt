@@ -1,0 +1,28 @@
+AAT_chinese_reunification = {
+	allowed = {
+		original_tag = MNS
+	}
+	visible = {
+		has_completed_focus = MNS_heilong_clique
+	}
+	priority = 100
+}
+
+AAT_yakutia = {
+	priority = 100
+	allowed = {
+		original_tag = MNS
+	}
+	visible = {
+		is_subject = no
+		owns_state = 574
+		NOT = {
+			country_exists = ARC
+			country_exists = GUK
+			country_exists = PRI
+			country_exists = HAR
+			country_exists = PSL
+			country_exists = FCR
+		}
+	}
+}

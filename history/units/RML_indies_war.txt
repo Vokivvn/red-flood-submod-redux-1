@@ -1,0 +1,43 @@
+﻿division_template = {
+	name = "Indonesian Militia"
+	
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+}
+
+units = {
+	division = {
+		name = "1st Indonesian Militia"
+		location = 7673
+		division_template = "Indonesian Militia"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "2nd Indonesian Militia"
+		location = 12302
+		division_template = "Indonesian Militia"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "3rd Indonesian Militia"
+		location = 1277
+		division_template = "Indonesian Militia"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "4th Indonesian Militia"
+		location = 7463
+		division_template = "Indonesian Militia"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+	}
+}

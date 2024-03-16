@@ -1,0 +1,50 @@
+characters = {
+	SFR_marcel_déat = {
+		name = "Marcel Déat"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SFR/Portrait_Marcel_Déat.png"
+			}
+		}
+		country_leader = {
+			ideology = spartakism
+			expire = "1965.1.1.1"
+		}
+	}
+	SFR_henri_grouès = {
+		name = "Abbé Pierre"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SFR/Portrait_Pierre.png"
+			}
+		}
+		country_leader = {
+			ideology = religious_socialism
+			expire = "1965.1.1.1"
+		}
+	}
+	SFR_leonard_pelletier = {
+		name = "Louis-Robert Pelletier"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SFR/Portrait_Leonard_Pelletier.png"
+			}
+		}
+		country_leader = {
+			ideology = social_republicanism
+			expire = "1965.1.1.1"
+		}
+	}
+	SFR_simone_weil = {
+		name = "Simone Weil"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SFR/Portrait_Simone_Weil.png"
+			}
+		}
+		country_leader = {
+			ideology = social_anarchism
+			expire = "1965.1.1.1"
+		}
+	}
+}

@@ -1,0 +1,74 @@
+characters = {
+	FMO_francisco_franco = {
+		name = "Francisco Franco"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/FMO/Portrait_FMO_Francisco_Franco.png"
+			}
+		}
+		country_leader = {
+			ideology = military_dictatorship
+			expire = "1965.1.1.1"
+		}
+	}
+	FMO_fiesta_franco = {
+		name = "Fiesta Franco"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/FMO/FMO_Fiesta_Franco.png"
+			}
+		}
+		country_leader = {
+			ideology = futurism
+			expire = "1965.1.1.1"
+		}
+	}
+	FMO_bleppy_de_la_sauna = {
+		name = "Bleppy de la Sauna"
+		portraits = {
+			army = {
+				large="gfx/leaders/FMO/Soyjack.png"
+			}
+		}
+		corps_commander = {
+			traits = { media_personality }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	FMO_generalísimo_chadísimo = {
+		name = "Generalísimo Chadísimo"
+		portraits = {
+			army = {
+				large="gfx/leaders/FMO/Gigachad.png"
+			}
+		}
+		corps_commander = {
+			traits = { war_hero brilliant_strategist }
+			skill = 9
+			attack_skill = 9
+			defense_skill = 9
+			planning_skill = 9
+			logistics_skill = 9
+		}
+	}
+	FMO_coronel_don_gato = {
+		name = "Coronel Don Gato"
+		portraits = {
+			army = {
+				large="gfx/leaders/FMO/Gigacat.png"
+			}
+		}
+		corps_commander = {
+			traits = { }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 4
+		}
+	}
+}

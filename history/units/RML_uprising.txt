@@ -1,0 +1,69 @@
+﻿division_template = {
+	name = "Rebel Militia"
+	
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+}
+
+units = {
+	division = {
+		name = "1st Rebel Militia"
+		location = 13541
+		division_template = "Rebel Militia"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "2nd Rebel Militia"
+		location = 7427
+		division_template = "Rebel Militia"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "3rd Rebel Militia"
+		location = 7427
+		division_template = "Rebel Militia"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "4th Rebel Militia"
+		location = 4367
+		division_template = "Rebel Militia"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "5th Rebel Militia"
+		location = 4310
+		division_template = "Rebel Militia"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "6th Rebel Militia"
+		location = 4310
+		division_template = "Rebel Militia"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "7th Rebel Militia"
+		location = 1364
+		division_template = "Rebel Militia"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "8th Rebel Militia"
+		location = 1364
+		division_template = "Rebel Militia"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+	}
+}

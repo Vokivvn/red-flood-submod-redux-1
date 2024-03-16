@@ -1,0 +1,16 @@
+characters = {
+
+	MRT_Jurj_Batay = {
+		name = "Jurj-Batay, Alaafin of Mauritania"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MRT/Portrait_Tuareg_Bataille.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_BIATAYL_DESC"
+			ideology = futurism
+			expire = "1965.1.1"
+		}
+	}
+}

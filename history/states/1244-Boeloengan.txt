@@ -1,0 +1,24 @@
+state= {
+	id=1244
+	name="STATE_1244"
+	manpower = 102500
+
+	state_category = rural
+
+	history= {
+		owner = DEI
+		victory_points = { #Tandjoengselor
+			1404 1
+		}
+		add_core_of = DEI
+		buildings = {
+			infrastructure = 1
+			1404 = {
+				naval_base = 1
+			}
+		}
+	}
+	provinces={
+		12243 7415 1404 10325 4236 7231 10181
+	}
+}

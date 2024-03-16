@@ -1,0 +1,84 @@
+ideas = {
+     country = {
+	    CHI_shared_economy = {
+		
+		    removal_cost = -1
+            
+            picture = civil_war_economy
+            
+			allowed = {
+				original_tag = SZC
+				original_tag = FJN
+				original_tag = YUN
+				original_tag = XSM
+				original_tag = ETS
+				original_tag = JGJ
+				original_tag = BYJ
+				original_tag = SHA
+				original_tag = KMT
+				original_tag = GDP
+				original_tag = SIK
+				original_tag = GXC
+				original_tag = XIA
+				original_tag = MNG
+		    }
+			
+			modifier = {
+				surrender_limit = -0.1
+				production_factory_max_efficiency_factor = -0.1
+				production_speed_buildings_factor = -0.1
+				conscription_factor = -0.65
+				army_org_factor = -0.1
+				political_power_gain = -0.35
+			}
+		}
+		CHI_kmt_dejure = {
+			removal_cost = -1
+			picture = GMD_china_warlord
+			allowed = {
+				original_tag = SZC
+				original_tag = FJN
+				original_tag = YUN
+				original_tag = XSM
+				original_tag = ETS
+				original_tag = JGJ
+				original_tag = BYJ
+				original_tag = SHA
+				original_tag = KMT
+				original_tag = GDP
+				original_tag = SIK
+				original_tag = GXC
+				original_tag = XIA
+				original_tag = MNG
+				has_country_flag = CHI_is_kmt
+			}
+			modifier = {
+				
+			}
+		}
+		CHI_bej_dejure = {
+			removal_cost = -1
+			picture = BYJ_china_warlord
+			allowed = {
+				original_tag = SZC
+				original_tag = FJN
+				original_tag = YUN
+				original_tag = XSM
+				original_tag = ETS
+				original_tag = JGJ
+				original_tag = BYJ
+				original_tag = SHA
+				original_tag = KMT
+				original_tag = GDP
+				original_tag = SIK
+				original_tag = GXC
+				original_tag = XIA
+				original_tag = MNG
+				has_country_flag = CHI_is_bey
+			}
+			modifier = {
+				
+			}
+		}
+	}
+}

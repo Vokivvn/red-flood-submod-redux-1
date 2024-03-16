@@ -1,0 +1,78 @@
+characters = {
+	BOS_mehmed_spaho = {
+		name = "Mehmed Spaho"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/BOS/Portrait_BOS_Mehmed_Spaho.png"
+			}
+		}
+		country_leader = {
+			ideology = national_conservatism
+			expire = "1965.1.1.1"
+		}
+	}
+	BOS_halim_malkoc = {
+		name = "Halim Malkoč"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/BOS/Portrait_BOS_Halim_Malkoc_reactionary.png"
+			}
+			army = {
+				large="gfx/leaders/BOS/Portrait_BOS_Halim_Malkoc_general.png"
+			}
+		}
+		country_leader = {
+			ideology = esoteric_reactionism
+			expire = "1965.1.1.1"
+		}
+		corps_commander = {
+			traits = { brilliant_strategist commando politically_connected }
+			skill = 3
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 4
+		}
+	}
+	BOS_dimitrije_mitrinovic = {
+		name = "Dimitrije Mitrinović"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/BOS/Portrait_BOS_Dimitrije_Mitrinovic.png"
+			}
+		}
+		country_leader = {
+			ideology = national_rejuvenatism
+			expire = "1965.1.1.1"
+		}
+	}
+	BOS_abdullah_mahusilovic = {
+		name = "Abdullah Mahusilovic"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/BOS/Portrait_BOS_Abdullah_Mahusilovic.png"
+			}
+		}
+		corps_commander = {
+			traits = { infantry_officer politically_connected }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 3
+		}
+	}
+	BOS_gavrilo_princip = {
+		name = "Gavrilo Princip"
+		portraits = {
+		}
+		corps_commander = {
+			traits = { trait_engineer politically_connected }
+			skill = 2
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+}

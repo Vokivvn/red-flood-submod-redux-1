@@ -1,0 +1,126 @@
+﻿capital = 986
+
+oob = "KOR"
+
+set_research_slots = 3 
+
+set_convoys = 10
+
+add_ideas = {
+
+}
+
+set_technology = {
+	### ARMY ####
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1
+	gw_artillery = 1
+	gwtank = 1
+	basic_light_tank = 1
+	fuel_silos = 1
+}
+
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+	set_technology = {
+		iw_small_airframe = 1
+		aa_lmg = 1
+		aa_cannon_1 = 1
+		early_bombs = 1
+		engines_1 = 1
+	}
+}
+if = {
+	limit = { NOT = { has_dlc = "By Blood Alone" } }
+	set_technology = {
+		early_fighter = 1
+		CAS1 = 1
+	}
+}
+
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		basic_torpedo = 1
+		basic_battery = 1
+		basic_light_battery = 1
+		basic_heavy_battery = 1
+		basic_medium_battery = 1
+		improved_ship_torpedo_launcher = 1
+		early_ship_hull_submarine = 1
+		early_ship_hull_light = 1
+		early_ship_hull_cruiser = 1
+		basic_ship_hull_cruiser = 1
+		early_ship_hull_heavy = 1
+		basic_ship_hull_heavy = 1
+		early_ship_hull_carrier = 1
+		mtg_transport = 1
+		coastal_defense_ships = 1
+		basic_light_battery = 1
+		basic_depth_charges = 1
+		basic_cruiser_armor_scheme = 1
+		cruiser_submarines = 1
+	}
+}
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	set_technology = {
+		early_submarine = 1
+		early_destroyer = 1
+		early_light_cruiser = 1
+		basic_light_cruiser = 1
+		early_heavy_cruiser = 1
+		basic_heavy_cruiser = 1
+		early_battleship = 1
+		basic_battleship = 1
+		early_battlecruiser = 1
+		early_carrier = 1
+		transport = 1
+	}
+}
+
+set_politics = {
+	ruling_party = vanguard_socialism
+	elections_allowed = no
+}
+set_popularities = {
+	vanguard_socialism = 35
+	popular_socialism = 0
+	anarchism = 14
+	revisionist_socialism = 15
+	progressivism = 5
+	liberalism = 8
+	conservatism = 0
+	right_authoritarianism = 7
+	despotism = 0
+	reactionism = 0
+	accelerationism = 16
+}
+
+set_stability = 0.5
+
+recruit_character = JKR_ugaki_kazushige
+recruit_character = JKR_syngman_rhee
+recruit_character = JKR_ahn_changho
+recruit_character = JKR_kim_koo
+recruit_character = JKR_yuh_woon_hyung
+recruit_character = JKR_choe_chang_ik
+recruit_character = JKR_cho_man_sik
+recruit_character = JKR_kim_chwa_chin
+recruit_character = JKR_pak_hon_yong
+recruit_character = JKR_sin_chaeho
+recruit_character = JKR_kim_won_bong
+recruit_character = JKR_choe_yong_gon
+recruit_character = JKR_y
+recruit_character = JKR_kim_chaek
+
+recruit_character = JKR_kang_kon
+recruit_character = JKR_kim_il_sung
+
+recruit_character = JKR_yamanashi_hanzo
+recruit_character = JKR_Lee_Beom_seok

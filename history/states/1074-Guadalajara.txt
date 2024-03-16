@@ -1,0 +1,23 @@
+
+state={
+	id=1074
+	name="STATE_1074"
+	manpower = 203173
+
+	state_category = rural
+
+	history={
+		owner = SPR
+		add_core_of = SPR
+		buildings = {
+			infrastructure = 3
+		}
+		victory_points = {
+			3945 3
+		}
+	}
+
+	provinces={
+		888 942 3858 3891 3945 6841 6879 6993 9757 9785 9852 9933 11742 11870
+	}
+}

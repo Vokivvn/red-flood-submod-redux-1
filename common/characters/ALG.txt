@@ -1,0 +1,13 @@
+characters = {
+	ALG_amar_ouzegane = {
+		name = "Amar Ouzegane"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ALG/ALG_amar_ouzegane.png"
+			}
+		}
+		country_leader = {
+			ideology = national_vanguardism
+		}
+	}
+}

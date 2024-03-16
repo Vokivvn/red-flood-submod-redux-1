@@ -1,0 +1,2293 @@
+focus_tree = {
+	id = RPR
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = RPR
+		}
+	}
+	continuous_focus_position = { x = 500 y = 2000 }
+	#Focus for Remove the Brits, Remove the Monarchists
+	focus = {
+		id = RPR_remove_the_brits_remove_the_monarchists
+		icon = GFX_focus_remove_the_brits_remove_the_monarchists
+		x = 12
+		y = 6
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = RPR_leadership_from_rasht }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = right_authoritarianism
+				popularity = -0.1
+			}
+			add_popularity = {
+				ideology = despotism
+				popularity = -0.1
+			}
+			add_political_power = -75
+		}
+	}
+
+	#Focus for Establish the Red Wings
+	focus = {
+		id = RPR_establish_the_red_wings
+		icon = GFX_focus_establish_the_red_wings
+		x = 9
+		y = 11
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = RPR_in_the_skies }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			air_experience = 15
+			add_tech_bonus = { bonus = 0.5 uses = 2 category = light_air }
+			add_doctrine_cost_reduction = { cost_reduction = 0.25 uses = 2 category = air_doctrine }
+		}
+	}
+
+	#Focus for The Gulf Is Ours
+	focus = {
+		id = RPR_the_gulf_is_ours
+		icon = GFX_focus_the_gulf_is_ours
+		x = 11
+		y = 11
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = RPR_on_the_seas }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			navy_experience = 15
+			if = {
+				limit = {
+					has_dlc = "Man the Guns"
+				}
+				add_tech_bonus = {
+					bonus = 0.5
+					uses = 3
+					category = naval_mines
+				}
+			}
+			else = {
+				add_tech_bonus = {
+					bonus = 0.5
+					uses = 2
+					category = dd_tech
+				}
+			}
+		}
+	}
+
+	#Focus for Guarantee Future Security
+	focus = {
+		id = RPR_guarantee_future_security
+		icon = GFX_focus_guarantee_future_security
+		x = 10
+		y = 12
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = RPR_the_gulf_is_ours 
+		}
+		prerequisite = { 
+			focus = RPR_establish_the_red_wings 
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			date > 1944.01.01
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = nuclear
+			}
+		}
+	}
+
+	#Focus for Implement Egalitarianism
+	focus = {
+		id = RPR_implement_egalitarianism
+		icon = GFX_focus_implement_egalitarianism
+		x = 2
+		y = 7
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = RPR_socialist_education }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			add_ideas = {
+				RPR_tudeh_reform_egal
+			}
+		}
+	}
+
+	#Focus for Invite German Advisors
+	focus = {
+		id = RPR_invite_german_advisors
+		icon = GFX_focus_invite_german_advisors
+		x = 8
+		y = 8
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = RPR_begin_mass_unionisation }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			add_ideas = {
+				RPR_german_advisors
+			}
+		}
+	}
+
+	#Focus for Establish Rahbar
+	focus = {
+		id = RPR_establish_rahbar
+		icon = GFX_focus_establish_rahbar
+		x = 0
+		y = 8
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = RPR_jwanan_swsaalast }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			add_ideas = {
+				RPR_tudeh_reform_rahbar
+			}
+		}
+	}
+
+	#Focus for Reform the Judiciary
+	focus = {
+		id = RPR_reform_the_judiciary
+		icon = GFX_focus_reform_the_judiciary
+		x = 2
+		y = 8
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = RPR_implement_egalitarianism }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			add_ideas = {
+				RPR_tudeh_reform_judiciary
+			}
+		}
+	}
+
+	#Focus for Build Regional Councils
+	focus = {
+		id = RPR_build_regional_councils
+		icon = GFX_focus_build_regional_councils
+		x = 6
+		y = 8
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = RPR_establish_agrarian_syndicates }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			add_ideas = {
+				RPR_econ_reform_councils
+			}
+		}
+	}
+
+	#Focus for Anti-Imperialist Trade Pacts
+	focus = {
+		id = RPR_antiimperialist_trade_pacts
+		icon = GFX_focus_anti_imperialist_trade_pacts
+		x = 4
+		y = 8
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = RPR_moderate_industrialisation }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			add_ideas = {
+				RPR_land_reform_trade
+			}
+		}
+	}
+
+	#Focus for 2nd Session od the Worker's Council
+	focus = {
+		id = RPR_2nd_session_od_the_workers_council
+		icon = GFX_focus_2nd_session_of_the_workers_council
+		x = 4
+		y = 9
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = RPR_establish_rahbar 
+		}
+		prerequisite = { 
+			focus = RPR_reform_the_judiciary 
+		}
+		prerequisite = { 
+			focus = RPR_build_regional_councils 
+		}
+		prerequisite = { 
+			focus = RPR_antiimperialist_trade_pacts 
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			country_event = {
+				id = per.62
+			}
+			custom_effect_tooltip = "RPR_DECISIONS_TOOLTIP"
+			hidden_effect = {
+				set_country_flag = RPR_class_conflict_mechanic_flag
+			}
+		}
+	}
+
+	#Focus for Defend the Revolution
+	focus = {
+		id = RPR_defend_the_revolution
+		icon = GFX_focus_defend_the_revolution
+		x = 10
+		y = 9
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = RPR_seek_regional_allies 
+			focus = RPR_invite_german_advisors 
+		}
+		prerequisite = {
+			focus = RPR_artsh_kearguran_w_dhqanan 
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			army_experience = 15
+			air_experience = 15
+			navy_experience = 15
+			add_ideas = {
+				RPR_defence_of_the_rev
+			}
+		}
+	}
+
+	#Focus for In the Skies
+	focus = {
+		id = RPR_in_the_skies
+		icon = GFX_focus_in_the_skies
+		x = 9
+		y = 10
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = RPR_defend_the_revolution }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			add_doctrine_cost_reduction = { cost_reduction = 0.5 uses = 3 category = air_doctrine }
+			413 = {
+				add_building_construction = {
+					type = air_base
+					level = 4
+					instant_build = yes
+				}
+			}
+			266 = {
+				add_building_construction = {
+					type = air_base
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Focus for On the Seas
+	focus = {
+		id = RPR_on_the_seas
+		icon = GFX_focus_on_the_seas
+		x = 11
+		y = 10
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = RPR_defend_the_revolution }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			add_tech_bonus = { bonus = 1 uses = 1 category = cl_tech category = ca_tech }
+			add_tech_bonus = { bonus = 1 uses = 1 category = dd_tech }
+			add_tech_bonus = { bonus = 1 uses = 1 category = ss_tech }
+		}
+	}
+
+	#Focus for Revolution of the People
+	focus = {
+		id = RPR_revolution_of_the_people
+		icon = GFX_focus_revolution_of_the_people
+		x = 10
+		y = 0
+		cost = 1
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = vanguard_socialism
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = popular_socialism
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = revisionist_socialism
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = anarchism
+				popularity = 0.05
+			}
+			random_owned_controlled_state = {
+				prioritize = { 419 }
+				create_unit = {
+					division = "name = \"Revolutionary Gendarmerie\" division_template = \"Infantry Brigade\" start_experience_factor = 0.75"
+					owner = RPR
+				}
+			}
+			random_owned_controlled_state = {
+				prioritize = { 419 }
+				create_unit = {
+					division = "name = \"Revolutionary Gendarmerie\" division_template = \"Infantry Brigade\" start_experience_factor = 0.75"
+					owner = RPR
+				}
+			}
+			random_owned_controlled_state = {
+				prioritize = { 412 }
+				create_unit = {
+					division = "name = \"Revolutionary Gendarmerie\" division_template = \"Infantry Brigade\" start_experience_factor = 0.75"
+					owner = RPR
+				}
+			}
+			random_owned_controlled_state = {
+				prioritize = { 412 }
+				create_unit = {
+					division = "name = \"Revolutionary Gendarmerie\" division_template = \"Infantry Brigade\" start_experience_factor = 0.75"
+					owner = RPR
+				}
+			}
+		}
+	}
+
+	#Focus for Strangle the British Puppets
+	focus = {
+		id = RPR_strangle_the_british_puppets
+		icon = GFX_focus_strangle_the_british_puppets
+		x = 8
+		y = 1
+		cost = 1
+		available_if_capitulated = yes
+		prerequisite = { focus = RPR_revolution_of_the_people }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			#purge APOC people in Persia
+			add_stability = 0.1
+			add_war_support = 0.1
+			add_manpower = -2374
+			add_opinion_modifier = {
+				target = ENG
+				modifier = huge_decrease
+			}
+			ENG = {
+				add_opinion_modifier = {
+					target = RPR
+					modifier = huge_decrease
+				}
+			}
+		}
+	}
+
+	#Focus for Sabotage Their Navy
+	focus = {
+		id = RPR_sabotage_their_navy
+		icon = GFX_focus_sabotage_their_navy
+		x = 8
+		y = 2
+		cost = 2
+		available_if_capitulated = yes
+		prerequisite = { focus = RPR_strangle_the_british_puppets }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			PER = {
+				destroy_ships = {
+					type = destroyer
+					count = all
+				}
+			}
+		}
+	}
+
+	#Focus for Horn of Liberation
+	focus = {
+		id = RPR_horn_of_liberation
+		icon = GFX_focus_horn_of_liberation
+		x = 10
+		y = 1
+		cost = 1
+		available_if_capitulated = yes
+		prerequisite = { focus = RPR_revolution_of_the_people }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			add_stability = 0.1
+			add_war_support = 0.2
+			add_political_power = 50
+			add_manpower = 5671
+		}
+	}
+
+	#Focus for Beyond Pain and Suffering
+	focus = {
+		id = RPR_beyond_pain_and_suffering
+		icon = GFX_focus_beyond_pain_and_suffering
+		x = 10
+		y = 2
+		cost = 2
+		available_if_capitulated = yes
+		prerequisite = { focus = RPR_horn_of_liberation }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			add_timed_idea = {
+				idea = RPR_pain
+				days = 180
+			}
+		}
+	}
+
+	#Focus for Red Guard Officers
+	focus = {
+		id = RPR_red_guard_officers
+		icon = GFX_focus_red_guard_officers
+		x = 12
+		y = 1
+		cost = 1
+		available_if_capitulated = yes
+		prerequisite = { focus = RPR_revolution_of_the_people }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			#army stuff?
+			army_experience = 25
+			add_command_power = 25
+		}
+	}
+
+	#Focus for Take Every Weapon
+	focus = {
+		id = RPR_take_every_weapon
+		icon = GFX_focus_take_every_weapon
+		x = 12
+		y = 2
+		cost = 2
+		available_if_capitulated = yes
+		prerequisite = { focus = RPR_red_guard_officers }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			#gain equipment stockpiles
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_0
+				amount = 543
+				producer = PER
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_1
+				amount = 741
+				producer = ENG
+			}
+		}
+	}
+
+	#Focus for 1st Session of the Worker's Council
+	focus = {
+		id = RPR_1st_session_of_the_workers_council
+		icon = GFX_focus_1st_session_workers_council
+		x = 10
+		y = 3
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = RPR_take_every_weapon 
+		}
+		prerequisite = { 
+			focus = RPR_beyond_pain_and_suffering 
+		}
+		prerequisite = { 
+			focus = RPR_sabotage_their_navy 
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			PER = {
+				exists = no
+			}
+			has_war = no
+		}
+		completion_reward = {
+			#political stuff
+			country_event = {
+				id = per.61
+			}
+			hidden_effect = {
+				266 = {
+					remove_core_of = PER
+				}
+				888 = {
+					remove_core_of = PER
+				}
+				889 = {
+					remove_core_of = PER
+				}
+				955 = {
+					remove_core_of = PER
+				}
+				419 = {
+					remove_core_of = PER
+				}
+				420 = {
+					remove_core_of = PER
+				}
+				417 = {
+					remove_core_of = PER
+				}
+				421 = {
+					remove_core_of = PER
+				}
+				413 = {
+					remove_core_of = PER
+				}
+				411 = {
+					remove_core_of = PER
+				}
+				412 = {
+					remove_core_of = PER
+				}
+				410 = {
+					remove_core_of = PER
+				}
+				414 = {
+					remove_core_of = PER
+				}
+				418 = {
+					remove_core_of = PER
+				}
+				416 = {
+					remove_core_of = PER
+				}
+				set_cosmetic_tag = RPR_IPSR
+			}
+		}
+	}
+
+	#Focus for Eskandari Becomes General-Councilor
+	focus = {
+		id = RPR_eskandari_becomes_generalcouncilor
+		icon = GFX_focus_new_general_secretary
+		x = 5
+		y = 4
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = RPR_1st_session_of_the_workers_council }
+		mutually_exclusive = { focus = RPR_way_of_the_jungle }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			has_government  = popular_socialism
+		}
+		completion_reward = {
+			activate_advisor = PER_Iraj_Eskandari
+			add_stability = 0.03
+		}
+	}
+
+	#Focus for Way of the Jungle
+	focus = {
+		id = RPR_way_of_the_jungle
+		icon = GFX_focus_way_of_the_jungle
+		x = 16
+		y = 4
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = RPR_1st_session_of_the_workers_council }
+		mutually_exclusive = { focus = RPR_eskandari_becomes_generalcouncilor }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			has_government = vanguard_socialism
+		}
+		completion_reward = {
+			#begin Jangle programs
+			add_popularity = {
+				ideology = vanguard_socialism
+				popularity = 0.2
+			}
+			add_stability = 0.03
+		}
+	}
+
+	#Focus for Pursue Persification Policies
+	focus = {
+		id = RPR_pursue_persification_policies
+		icon = GFX_focus_persure_persification_policies
+		x = 3
+		y = 5
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = RPR_eskandari_becomes_generalcouncilor }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			#decisions to Persify non-persian lands/people (incl. captured/recaptured land once owned + cored)
+			custom_effect_tooltip = "eskandari_decisions"
+		}
+	}
+
+	#Focus for Mild Socialist Reforms
+	focus = {
+		id = RPR_mild_socialist_reforms
+		icon = GFX_focus_mild_socialist_reforms
+		x = 7
+		y = 5
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = RPR_eskandari_becomes_generalcouncilor }
+		ai_will_do = {
+			factor = 1
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 50
+			add_timed_idea = {
+				idea = RPR_mild_reforms
+				days = 180
+			}
+		}
+	}
+
+	#Focus for Federalise Persia
+	focus = {
+		id = RPR_federalise_persia
+		icon = GFX_focus_federalise_persia
+		x = 18
+		y = 6
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = RPR_leadership_from_rasht }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			add_stability = 0.1
+			add_war_support = -0.2
+			set_cosmetic_tag = RPR_iranian_fed
+		}
+	}
+
+	#Focus for Leadership From Rasht
+	focus = {
+		id = RPR_leadership_from_rasht
+		icon = GFX_focus_leadership_from_rasht
+		x = 16
+		y = 5
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = RPR_way_of_the_jungle }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			set_victory_points = {
+				province = 4637
+				value = 20
+			}
+			266 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Focus for Socialist Education
+	focus = {
+		id = RPR_socialist_education
+		icon = GFX_focus_socialist_education
+		x = 1
+		y = 6
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = RPR_pursue_persification_policies }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			#research boost
+			add_ideas = {
+				RPR_socialist_education_idea
+			}
+		}
+	}
+
+	#Focus for Jwanan swsaalast - socialist youth
+	focus = {
+		id = RPR_jwanan_swsaalast
+		icon = GFX_focus_socialist_youth
+		x = 0
+		y = 7
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = RPR_socialist_education }
+		ai_will_do = {
+			factor = 1
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	#Focus for Peaceful Land Distribution
+	focus = {
+		id = RPR_peaceful_land_distribution
+		icon = GFX_focus_peaceful_land_redistribution
+		x = 5
+		y = 6
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = RPR_pursue_persification_policies 
+		}
+		prerequisite = { 
+			focus = RPR_mild_socialist_reforms 
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			#gain land slots
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+			}
+			add_stability = 0.05
+		}
+	}
+
+	#Focus for Moderate Industrialisation
+	focus = {
+		id = RPR_moderate_industrialisation
+		icon = GFX_focus_moderate_industrialisation
+		x = 4
+		y = 7
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = RPR_peaceful_land_distribution }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			#gain civ factories
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Focus for Nationalise the Oil Industry
+	focus = {
+		id = RPR_nationalise_the_oil_industry
+		icon = GFX_focus_nationalise_the_oil_industry
+		x = 8
+		y = 6
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = RPR_mild_socialist_reforms }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			add_opinion_modifier = {
+				target = ENG
+				modifier = huge_decrease
+			}
+			add_stability = 0.12
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_resource = {
+				type = oil
+				amount = -5
+				state = 411
+			}
+			add_resource = {
+				type = oil
+				amount = -3
+				state = 412
+			}
+			add_resource = {
+				type = oil
+				amount = -6
+				state = 413
+			}
+		}
+	}
+
+	#Focus for Establish Agrarian Syndicates
+	focus = {
+		id = RPR_establish_agrarian_syndicates
+		icon = GFX_focus_establish_agrarian_syndicates
+		x = 6
+		y = 7
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = RPR_peaceful_land_distribution }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = revisionist_socialism
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = anarchism
+				popularity = 0.05
+			}
+			add_stability = 0.05
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+			}
+		}
+	}
+
+	#Focus for State Before People
+	focus = {
+		id = RPR_state_before_people
+		icon = GFX_focus_state_before_people
+		x = 18
+		y = 8
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = RPR_establish_the_council_of_autonomies }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			add_political_power = 100
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Focus for Nationalists, Socialists, Persians
+	focus = {
+		id = RPR_nationalists_socialists_persians
+		icon = GFX_focus_nationalists_socialists_persians
+		x = 16
+		y = 6
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = RPR_leadership_from_rasht }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			custom_effect_tooltip = "jangle_decisions"
+		}
+	}
+
+	#Focus for Fuse Marx and Islam
+	focus = {
+		id = RPR_fuse_marx_and_islam
+		icon = GFX_focus_fuse_marx_and_islam
+		x = 16
+		y = 7
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = RPR_nationalists_socialists_persians }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			#tanks relations with fellow muslims, most of all with IRQ and AFG
+			hidden_effect = {
+				add_opinion_modifier = {
+					target = AFG
+					modifier = huge_decrease
+				}
+				add_opinion_modifier = {
+					target = IRQ
+					modifier = huge_decrease
+				}
+				add_opinion_modifier = {
+					target = ALJ
+					modifier = large_decrease
+				}
+				add_opinion_modifier = {
+					target = SAU
+					modifier = large_decrease
+				}
+				add_opinion_modifier = {
+					target = OMA
+					modifier = large_decrease
+				}
+				add_opinion_modifier = {
+					target = YEM
+					modifier = large_decrease
+				}
+				add_opinion_modifier = {
+					target = EGY
+					modifier = large_decrease
+				}
+				add_opinion_modifier = {
+					target = BKR
+					modifier = large_decrease
+				}
+				add_opinion_modifier = {
+					target = DIN
+					modifier = large_decrease
+				}
+				add_opinion_modifier = {
+					target = SYR
+					modifier = large_decrease
+				}
+				add_opinion_modifier = {
+					target = TUR
+					modifier = small_decrease
+				}
+				#increases
+				add_opinion_modifier = {
+					target = AQT
+					modifier = medium_increase
+				}
+				add_opinion_modifier = {
+					target = KOK
+					modifier = medium_increase
+				}
+				add_opinion_modifier = {
+					target = KAV
+					modifier = medium_increase
+				}
+				add_opinion_modifier = {
+					target = RSR
+					modifier = medium_increase
+				}
+			}
+			custom_effect_tooltip = "RPR_marxist_islam"
+			add_ideas = {
+				RPR_marxist_islam_idea
+			}
+			
+		}
+	}
+
+	#Focus for Remove Absolutists From the Clergy
+	focus = {
+		id = RPR_remove_absolutists_from_the_clergy
+		icon = GFX_focus_remove_absolutists_from_the_clergy
+		x = 16
+		y = 8
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = RPR_fuse_marx_and_islam }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			add_stability = -0.05
+			add_war_support = -0.05
+			add_popularity = {
+				ideology = vanguard_socialism
+				popularity = 0.07
+			}
+			add_popularity = {
+				ideology = reactionism
+				popularity = 0.07
+			}
+		}
+	}
+
+	#Focus for Bring the Bourgeois to Constitutional Talks
+	focus = {
+		id = RPR_bring_the_bourgeois_to_constitutional_talks
+		icon = GFX_focus_invite_bourgeoise_to_talks
+		x = 14
+		y = 6
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = RPR_leadership_from_rasht }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			country_event = {
+				id = per.7
+			}
+		}
+	}
+
+	#Focus for Negotiate Land Reforms
+	focus = {
+		id = RPR_negotiate_land_reforms
+		icon = GFX_focus_negotiate_land_reforms
+		x = 14
+		y = 7
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = RPR_bring_the_bourgeois_to_constitutional_talks }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			#gain land slots
+			411 = {
+				add_extra_state_shared_building_slots = 1
+			}
+			412 = {
+				add_extra_state_shared_building_slots = 1
+			}
+			413 = {
+				add_extra_state_shared_building_slots = 1
+			}
+			266 = {
+				add_extra_state_shared_building_slots = 1
+			}
+			add_stability = -0.05
+			add_popularity = {
+				ideology = vanguard_socialism
+				popularity = 0.07
+			}
+		}
+	}
+
+	#Focus for Class Unity, National Struggle
+	focus = {
+		id = RPR_class_unity_national_struggle
+		icon = GFX_focus_class_unity_national_struggle
+		x = 14
+		y = 8
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = RPR_negotiate_land_reforms }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			add_timed_idea = {
+				idea = RPR_call_unity
+				days = 365
+			}
+		}
+	}
+
+	#Focus for Iran Reborn From Agony
+	focus = {
+		id = RPR_iran_reborn_from_agony
+		icon = GFX_focus_iran_reborn_from_agony
+		x = 16
+		y = 9
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = RPR_state_before_people 
+		}
+		prerequisite = { 
+			focus = RPR_remove_absolutists_from_the_clergy 
+		}
+		prerequisite = { 
+			focus = RPR_class_unity_national_struggle 
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			#stabilising
+			add_stability = 0.15
+			add_political_power = 150
+			266 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			413 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			417 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			custom_effect_tooltip = "RPR_DECISIONS_TOOLTIP"
+			hidden_effect = {
+				set_country_flag = RPR_class_conflict_mechanic_flag
+			}
+		}
+	}
+
+	#Focus for Aaran jdad dr tswar mrdm
+	focus = {
+		id = RPR_aaran_jdad_dr_tswar_mrdm
+		icon = GFX_focus_socialist_iran_towards_modernity
+		x = 4
+		y = 10
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = RPR_2nd_session_od_the_workers_council }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_war_support = 0.1
+			add_political_power = 50
+		}
+	}
+
+	#Focus for Restore the Old Borders
+	focus = {
+		id = RPR_restore_the_old_borders
+		icon = GFX_focus_restore_the_old_borders
+		x = 3
+		y = 11
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = RPR_aaran_jdad_dr_tswar_mrdm }
+		mutually_exclusive = { focus = RPR_liberation_not_imperialism }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			#annex goals on AZR, KUR and more!
+			custom_effect_tooltip = "tudeh_expansion_decisions"
+			create_faction = "RPR_damavand_pact"
+			if = {
+				limit = {
+					KOK = {
+						exists = yes
+						is_puppet = no
+					}
+				}
+				KHW = {
+					country_event = {
+						id = per.71
+					}
+				}
+			}
+		}
+	}
+
+	#Focus for Liberation Not Imperialism
+	focus = {
+		id = RPR_liberation_not_imperialism
+		icon = GFX_focus_liberation_not_imperialism
+		x = 5
+		y = 11
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = RPR_aaran_jdad_dr_tswar_mrdm }
+		mutually_exclusive = { focus = RPR_restore_the_old_borders }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			#puppet goals on stuff outside of PER_big borders
+			custom_effect_tooltip = "RPR_liberation_tooltip"
+			create_faction = "RPR_damavand_pact"
+			if = {
+				limit = {
+					KOK = {
+						exists = yes
+						is_puppet = no
+					}
+				}
+				KHW = {
+					country_event = {
+						id = per.71
+					}
+				}
+			}
+		}
+	}
+
+	#Focus for The International Leads the Way
+	focus = {
+		id = RPR_the_international_leads_the_way
+		icon = GFX_focus_international_leads_the_way
+		x = 4
+		y = 12
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = RPR_liberation_not_imperialism 
+			focus = RPR_restore_the_old_borders 
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			#ask Germany for friendship
+			GER = {
+				country_event = {
+					id = per.8
+				}
+			}
+		}
+	}
+
+	#Focus for Assist the World Revolution
+	focus = {
+		id = RPR_assist_the_world_revolution
+		icon = GFX_focus_assist_the_world_revolution
+		x = 4
+		y = 13
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = RPR_the_international_leads_the_way }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			OR = {
+				RSR = {
+					exists = yes
+				}
+				AQT = {
+					exists = yes
+				}
+				KOK = {
+					exists = yes
+				}
+			}
+		}
+		completion_reward = {
+			#boost ideology in neighbours, help RSR
+			if = {
+				limit = {
+					RSR = {
+						exists = yes
+						is_subject = no
+					}
+				}
+				RSR = {
+					add_offsite_building = { type = arms_factory level = 2 }
+					add_popularity = {
+						ideology = popular_socialism
+						popularity = 0.2
+					}
+					add_opinion_modifier = {
+						target = RPR
+						modifier = offered_support
+					}
+				}
+				RPR = {
+					diplomatic_relation = {
+						country = RSR
+						relation = non_aggression_pact
+						active = yes
+					}
+					add_opinion_modifier = {
+						target = RSR
+						modifier = offered_support
+					}
+				}
+			}
+			if = {
+				limit = {
+					AQT = {
+						exists = yes
+						is_subject = no
+					}
+				}
+				AQT = {
+					add_offsite_building = { type = arms_factory level = 2 }
+					add_popularity = {
+						ideology = popular_socialism
+						popularity = 0.2
+					}
+					add_opinion_modifier = {
+						target = RPR
+						modifier = offered_support
+					}
+				}
+				RPR = {
+					diplomatic_relation = {
+						country = AQT
+						relation = non_aggression_pact
+						active = yes
+					}
+					add_opinion_modifier = {
+						target = AQT
+						modifier = offered_support
+					}
+				}
+			}
+			if = {
+				limit = {
+					KOK = {
+						exists = yes
+						is_subject = no
+					}
+				}
+				KOK = {
+					add_offsite_building = { type = arms_factory level = 2 }
+					add_popularity = {
+						ideology = popular_socialism
+						popularity = 0.2
+					}
+					add_opinion_modifier = {
+						target = RPR
+						modifier = offered_support
+					}
+				}
+				RPR = {
+					diplomatic_relation = {
+						country = KOK
+						relation = non_aggression_pact
+						active = yes
+					}
+					add_opinion_modifier = {
+						target = KOK
+						modifier = offered_support
+					}
+				}
+			}
+		}
+	}
+
+	#Focus for Vision of the States of Tomorrow
+	focus = {
+		id = RPR_vision_of_the_states_of_tomorrow
+		icon = GFX_focus_vision_of_the_states_of_tomorrow
+		x = 15
+		y = 10
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = RPR_iran_reborn_from_agony }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			create_faction = "RPR_damavand_pact"
+			if = {
+				limit = {
+					KOK = {
+						exists = yes
+						is_puppet = no
+					}
+				}
+				KHW = {
+					country_event = {
+						id = per.71
+					}
+				}
+			}
+			add_political_power = 50
+		}
+	}
+
+	#Focus for Destiny of All Persians
+	focus = {
+		id = RPR_destiny_of_all_persians
+		icon = GFX_focus_the_destiny_of_all_persians
+		x = 17
+		y = 10
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = RPR_iran_reborn_from_agony }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			add_stability = -0.1
+			421 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			411 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			412 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			413 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			414 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			416 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			417 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Focus for The Capital of the Middle East
+	focus = {
+		id = RPR_the_capital_of_the_middle_east
+		icon = GFX_focus_capital_of_the_middle_east
+		x = 14
+		y = 11
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = RPR_vision_of_the_states_of_tomorrow }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			#lots of buildings in Tehran
+			add_political_power = -80
+			set_victory_points = {
+				province = 10837
+				value = 35
+			}
+			266 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 4
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Focus for Liberate Our Eastern Brothers
+	focus = {
+		id = RPR_liberate_our_eastern_brothers
+		icon = GFX_focus_liberate_our_eastern_brothers
+		x = 16
+		y = 11
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = RPR_vision_of_the_states_of_tomorrow 
+		}
+		prerequisite = { 
+			focus = RPR_destiny_of_all_persians 
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		bypass = {
+			DIN = {
+				exists = no
+			}
+			AFG = {
+				exists = no
+			}
+			BKR = {
+				exists = no
+			}
+			TUC = {
+				exists = no
+			}
+		}
+		completion_reward = {
+			#work in PAK and TRK
+			custom_effect_tooltip = "RPR_jangal_eastern_tooltip"
+		}
+	}
+
+	#Focus for Freedom of the Caucasians
+	focus = {
+		id = RPR_freedom_of_the_caucasians
+		icon = GFX_focus_freedom_of_the_caucasians
+		x = 15
+		y = 12
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = RPR_liberate_our_eastern_brothers }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		bypass = {
+			KAV = {
+				exists = no
+			}
+			ARM = {
+				exists = no
+			}
+			CCD = {
+				exists = no
+			}
+			ASY = {
+				exists = no
+			}
+			AZR = {
+				exists = no
+			}
+		}
+		completion_reward = {
+			#puppet goals in ARM, KAV etc.
+			custom_effect_tooltip = "RPR_jangal_caucasus_tooltip"
+		}
+	}
+
+	#Focus for Equality to the Euphrates
+	focus = {
+		id = RPR_equality_to_the_euphrates
+		icon = GFX_focus_equality_to_the_euphrates
+		x = 17
+		y = 12
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = RPR_liberate_our_eastern_brothers }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		bypass = {
+			ALJ = {
+				exists = no
+			}
+			IRQ = {
+				exists = no
+			}
+			KUR = {
+				exists = no
+			}
+		}
+		completion_reward = {
+			#Take ALJ
+			custom_effect_tooltip = "RPR_euphrates_tooltip"
+		}
+	}
+
+	#Focus for More Equal Than the Turks
+	focus = {
+		id = RPR_more_equal_than_the_turks
+		icon = GFX_focus_more_equal_than_the_turks
+		x = 16
+		y = 13
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = RPR_equality_to_the_euphrates 
+		}
+		prerequisite = { 
+			focus = RPR_freedom_of_the_caucasians 
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			TUR = {
+				AND = {
+					exists = yes
+					has_war = no
+					is_puppet = no
+					any_neighbor_country = {
+						OR = {
+							tag = RPR
+							is_in_faction_with = RPR
+						}
+					}
+				}
+			}
+		}
+		bypass = {
+			TUR = {
+				exists = no
+			}
+		}
+		completion_reward = {
+			#Cuck the turks out of West Kurdistan
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = TUR
+			}
+			if = {
+				limit = {
+					KUR = {
+						is_subject_of = RPR
+					}
+				}
+				KUR = {
+					add_state_core = 350
+					add_state_core = 352
+				}
+			}
+		}
+	}
+
+	#Focus for Sun of Marx Eternally Shines
+	focus = {
+		id = RPR_sunof_marx_eternally_shines
+		icon = GFX_focus_sun_of_marx_eternally_shines
+		x = 18
+		y = 11
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = RPR_destiny_of_all_persians }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			#shiny beacon of socialism
+			add_stability = 0.2
+			add_war_support = 0.2
+			add_popularity = {
+				ideology = revisionist_socialism
+				popularity = 0.1
+			}
+			add_research_slot = 1
+		}
+	}
+
+	#Focus for Persian Red Army
+	focus = {
+		id = RPR_persian_red_army
+		icon = GFX_focus_the_red_army
+		x = 10
+		y = 5
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = RPR_way_of_the_jungle 
+			focus = RPR_eskandari_becomes_generalcouncilor 
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			army_experience = 25
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 2
+				category = land_doctrine
+			}
+		}
+	}
+
+	#Focus for Modernisation Efforts
+	focus = {
+		id = RPR_modernisation_efforts
+		icon = GFX_focus_modernisation_efforts
+		x = 10
+		y = 6
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = RPR_persian_red_army }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			#army company techs
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = support_tech
+			}
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = motorized_equipment
+			}
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = cat_light_armor
+			}
+		}
+	}
+
+	#Focus for Mass Conscription
+	focus = {
+		id = RPR_mass_conscription
+		icon = GFX_focus_mass_conscription
+		x = 10
+		y = 7
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = RPR_modernisation_efforts }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			#more conscripts
+			add_ideas = {
+				RPR_mass_conscription_idea
+			}
+		}
+	}
+
+	#Focus for Artsh kearguran w dhqanan
+	focus = {
+		id = RPR_artsh_kearguran_w_dhqanan
+		icon = GFX_focus_army_of_workers_and_peasants
+		x = 10
+		y = 8
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = RPR_mass_conscription }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = RPR_mass_conscription_idea
+				add_idea = RPR_workers_and_peasants
+			}
+		}
+	}
+
+	#Focus for Begin Mass Unionisation
+	focus = {
+		id = RPR_begin_mass_unionisation
+		icon = GFX_focus_begin_mass_unionisation
+		x = 8
+		y = 7
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = RPR_nationalise_the_oil_industry }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			add_political_power = 75
+			266 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			417 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Focus for Establish the Council of Autonomies
+	focus = {
+		id = RPR_establish_the_council_of_autonomies
+		icon = GFX_focus_establish_the_council_of_autonomies
+		x = 18
+		y = 7
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = RPR_federalise_persia }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			add_political_power = -50
+			411 = {
+				add_extra_state_shared_building_slots = 1
+			}
+			412 = {
+				add_extra_state_shared_building_slots = 1
+			}
+			413 = {
+				add_extra_state_shared_building_slots = 1
+			}
+			417 = {
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+
+	#Focus for Reconcile the Iran Party
+	focus = {
+		id = RPR_reconcile_the_iran_party
+		icon = GFX_focus_reconcile_the_iran_party
+		x = 12
+		y = 7
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = RPR_remove_the_brits_remove_the_monarchists }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			add_stability = 0.1
+			add_popularity = {
+				ideology = vanguard_socialism
+				popularity = 0.07
+			}
+			add_political_power = 50
+		}
+	}
+
+	#Focus for Seek Regional Allies
+	focus = {
+		id = RPR_seek_regional_allies
+		icon = GFX_focus_seek_regional_allies
+		x = 12
+		y = 8
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = RPR_reconcile_the_iran_party }
+		ai_will_do = {
+			factor = 100
+		}
+		#befriend RSR, AQT, KOK
+		available = {
+			OR = {
+				RSR = {
+					exists = yes
+				}
+				AQT = {
+					exists = yes
+				}
+				KOK = {
+					exists = yes
+				}
+			}
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					RSR = {
+						exists = yes
+						is_subject = no
+					}
+				}
+				RSR = {
+					add_popularity = {
+						ideology = vanguard_socialism
+						popularity = 0.2
+					}
+					add_opinion_modifier = {
+						target = RPR
+						modifier = offered_support
+					}
+					country_event = {
+						id = per.71
+					}
+				}
+				RPR = {
+					diplomatic_relation = {
+						country = RSR
+						relation = non_aggression_pact
+						active = yes
+					}
+					add_opinion_modifier = {
+						target = RSR
+						modifier = offered_support
+					}
+				}
+			}
+			if = {
+				limit = {
+					AQT = {
+						exists = yes
+						is_subject = no
+					}
+				}
+				AQT = {
+					add_popularity = {
+						ideology = vanguard_socialism
+						popularity = 0.2
+					}
+					add_opinion_modifier = {
+						target = RPR
+						modifier = offered_support
+					}
+					country_event = {
+						id = per.71
+					}
+				}
+				RPR = {
+					diplomatic_relation = {
+						country = AQT
+						relation = non_aggression_pact
+						active = yes
+					}
+					add_opinion_modifier = {
+						target = AQT
+						modifier = offered_support
+					}
+				}
+			}
+			if = {
+				limit = {
+					KOK = {
+						exists = yes
+						is_subject = no
+					}
+				}
+				KOK = {
+					add_popularity = {
+						ideology = vanguard_socialism
+						popularity = 0.2
+					}
+					add_opinion_modifier = {
+						target = RPR
+						modifier = offered_support
+					}
+					country_event = {
+						id = per.71
+					}
+				}
+				RPR = {
+					diplomatic_relation = {
+						country = KOK
+						relation = non_aggression_pact
+						active = yes
+					}
+					add_opinion_modifier = {
+						target = KOK
+						modifier = offered_support
+					}
+				}
+			}
+		}
+	}
+
+#End of focuses 
+ }

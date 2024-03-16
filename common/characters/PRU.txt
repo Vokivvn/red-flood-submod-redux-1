@@ -1,0 +1,15 @@
+characters = {
+	PRU_raul_haya = {
+		name = "Victor Raúl Haya de la Torre"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/PRU/Portrait_PRU_Victor_Raul_Haya_de_la_Torre.png"
+			}
+		}
+
+		country_leader = {
+			ideology = democratic_socialism
+			expire = "1965.1.1.1"
+		}
+	}
+}

@@ -1,0 +1,45 @@
+characters = {
+	BOL_daniel_salamanca_urey = {
+		name = "Daniel Salamanca Urey"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/BOL/portrait_daniel_salamca.png"
+			}
+		}
+		country_leader = {
+			ideology = military_dictatorship
+			expire = "1965.1.1.1"
+		}
+	}
+	BOL_carlos_quintanilla = {
+		name = "Carlos Quintanilla"
+		portraits = {
+			army = {
+				large="gfx/leaders/BOL/Carlos_Quintanilla_g.png"
+			}
+		}
+		corps_commander = {
+			traits = {
+				trickster trait_engineer
+			}
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 4
+		}
+	}
+	BOL_german_busch = {
+		name = "Germán Busch"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/BOL/Portrait_BOL_German_Busch.png"
+			}
+		}
+		country_leader = {
+			ideology = progressive_corporatism #probably more appropriate than socnat
+			expire = "1965.1.1.1"
+		}
+	}
+
+}

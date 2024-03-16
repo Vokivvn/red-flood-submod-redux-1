@@ -1,0 +1,22 @@
+state={
+	id=1262
+	name="STATE_1262"
+	manpower = 669029
+
+	state_category = town
+
+	history= {
+		owner = ITA
+		victory_points = {
+			13613 5
+		}
+		add_core_of = ITA
+		add_claim_by = YUG
+		buildings = {
+			infrastructure = 3
+		}
+	}
+	provinces={
+		628 3657 9613 13612 13613
+	}
+}

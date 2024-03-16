@@ -1,0 +1,77 @@
+instant_effect = {
+	create_equipment_variant = {
+		name = "Series I Alekseivich"			# represents Alekseivich, B class, L-55 sub
+		type = ship_hull_submarine_1
+		name_group = RUS_SS_SHCHUKA
+		parent_version = 0
+		modules = {
+			fixed_ship_torpedo_slot = ship_torpedo_sub_1
+			fixed_ship_engine_slot = sub_ship_engine_1
+			rear_1_custom_slot = ship_torpedo_sub_1
+		}
+		obsolete = yes
+	}
+	# Light Cruisers #
+	create_equipment_variant = {
+		name = "Brusilovsky Class"
+		type = ship_hull_cruiser_1
+		name_group = RUS_CL_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_medium_battery_1
+			fixed_ship_anti_air_slot = empty
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+			mid_1_custom_slot = ship_light_medium_battery_1
+			mid_2_custom_slot = empty
+			rear_1_custom_slot = ship_mine_layer_1
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Dnipro Class"					# minelayer
+		type = ship_hull_light_1
+		name_group = RUS_MINELAYERS_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_1
+			fixed_ship_anti_air_slot = empty
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = light_ship_engine_2
+			fixed_ship_torpedo_slot = empty
+			mid_1_custom_slot = ship_mine_layer_1
+			rear_1_custom_slot = ship_mine_layer_1
+		}
+	}
+}
+
+units = {
+	fleet = {
+		name = "Baltic Sea Fleet"
+		naval_base = 9340
+		task_force = {
+			name = "Destroyer Fleet"
+			location = 9262
+			ship = { name = "KL1" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = WRU version_name = "Dnipro Class" } } }
+			ship = { name = "KL2" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = WRU version_name = "Dnipro Class" } } }
+			ship = { name = "KL3" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = WRU version_name = "Dnipro Class" } } }
+			ship = { name = "KL4" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = WRU version_name = "Dnipro Class" } } }
+		}
+		task_force = {
+			name = "Cruiser Fleet"
+			location = 9340
+			ship = { name = "Nevsky" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = WRU version_name = "Brusilovsky Class" } } }
+			ship = { name = "Petrovich" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = WRU version_name = "Brusilovsky Class" } } }
+		}
+		task_force = {
+			name = "Submarine Fleet"
+			location = 3152
+			ship = { name = "PL1" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = WRU version_name = "Series I Alekseivich" } } }
+			ship = { name = "PL2" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = WRU version_name = "Series I Alekseivich" } } }
+			ship = { name = "PL3" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = WRU version_name = "Series I Alekseivich" } } }
+			ship = { name = "PL4" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = WRU version_name = "Series I Alekseivich" } } }
+		}
+	}
+}

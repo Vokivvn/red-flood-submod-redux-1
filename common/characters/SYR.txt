@@ -1,0 +1,81 @@
+characters = {
+	SYR_Ghazi_I = {
+		name = "Ghazi"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/SYR/Portrait_SYR_Ghazi_I.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_GHAZI_DESC"
+			ideology = constitutional_monarchy
+		}
+	}
+	SYR_Fawzi_al_Qawuqji = {
+		name = "Fawzi al-Qawuqji"
+		portraits = {
+			army = {
+				large="gfx/leaders/SYR/Portrait_Fawzi_al-Qawuqji.png"
+			}
+		}
+		corps_commander = {
+			traits = { desert_fox }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	SYR_Ramadan_al_Shallash = {
+		name = "Ramadan al-Shallash"
+		portraits = {
+			army = {
+				large="gfx/leaders/SYR/Portrait_SYR_Ramadan_al-Shallash.png"
+			}
+		}
+		corps_commander = {
+			traits = { commando }
+			skill = 2
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 4
+		}
+	}
+
+	SYR_Muhammad_al_Ashmar = {
+		name = "Muhammad al-Ashmar"
+		portraits = {
+			army = {
+				large="gfx/leaders/SYR/Portrait_SYR_Muhammad_al-Ashmar.png"
+			}
+		}
+		corps_commander = {
+			traits = { trickster }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 1
+
+		}
+	}
+	SYR_Said_al_As = {
+		name = "Sa'id al-'As"
+		portraits = {
+			army = {
+				large="gfx/leaders/SYR/Portrait_SYR_Sa'id_al-'As.png"
+			}
+		}
+		corps_commander = {
+			traits = { infantry_leader }
+			skill = 1
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+
+		}
+	}
+}

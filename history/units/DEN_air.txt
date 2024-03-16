@@ -1,0 +1,39 @@
+﻿
+
+air_wings = {
+	### Flyvevabnet -- Copenhagen
+	37 = {
+		# 1. Jagerafdeling
+		# Consisted of 18 Gloster Gauntlets, 4 Bristol Bulldogs
+		small_plane_airframe_0 =  {
+			owner = "DEN" 
+			amount = 22
+			creator = "ENG"
+			version_name = "Hawker Fury"
+		}
+	}
+	# Søværnets Flyvetjeneste -- Jutland
+	99 = {
+		# Consisted of 12 Hawker Nimrods
+		cv_small_plane_airframe_0 = {
+			owner = "DEN" 
+			amount = 10
+			creator = "ENG"
+			version_name = "Hawker Nimrod"
+		}
+	}
+}
+
+instant_effect = {
+	if = {
+		limit = { NOT = { has_dlc = "By Blood Alone"} }
+		add_equipment_to_stockpile = {
+			type = fighter_equipment_0
+			amount = 15
+		}
+		add_equipment_to_stockpile = {
+			type = nav_bomber_equipment_1
+			amount = 10
+		}
+	}
+}

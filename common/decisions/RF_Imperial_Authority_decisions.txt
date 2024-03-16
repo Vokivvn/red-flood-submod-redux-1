@@ -1,0 +1,273 @@
+TAN_ungern_proclemations = {
+	TAN_realm_of_buddha = {
+		cost = 50
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			has_country_leader = {
+				character = TAN_Roman
+				ruling_only = yes
+			}
+			has_completed_focus = TAN_realmoflivingbuddha
+		}
+		complete_effect  = {
+			set_cosmetic_tag = TAN_realm_of_living_buddha
+		}
+		fire_only_once = yes
+	}
+	TAN_become_mahakala = {
+		cost = 50
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			has_country_leader = {
+				character = TAN_Roman
+				ruling_only = yes
+			}
+			has_completed_focus = TAN_mahakalaawakens
+		}
+		complete_effect  = {
+			TAN_Roman = {
+				set_portraits = {
+					civilian = { 
+						large = "GFX_Portrait_TAN_mahakala"
+						small = "GFX_Portrait_TAN_mahakala_small"
+					}
+					army = {
+						large = "GFX_Portrait_TAN_mahakala_general"
+						small = "GFX_Portrait_TAN_mahakala_small"
+					}
+				}
+				set_character_name = TAN_Mahakala_Name
+			}
+		}
+		fire_only_once = yes
+	}
+	TAN_restore_bamiyan = {
+		cost = 150
+		ai_will_do = {
+			factor = 100
+		}
+		fire_only_once = yes
+		available = {
+			has_full_control_of_state = 267
+			has_completed_focus = TAN_realmoflivingbuddha
+		}
+		complete_effect = {
+			every_state = {
+				limit = {
+					OR = {
+						state = 267
+						state = 884
+						state = 415
+						state = 885
+						state = 442
+						state = 445
+						state = 993
+						state = 444
+						state = 895
+					}
+				}
+				add_core_of = TAN
+			}
+			division_template = {
+				name = "Bamiyan Guard"
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 0 y = 2 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+					infantry = { x = 1 y = 2 }
+					infantry = { x = 2 y = 0 }
+					infantry = { x = 2 y = 1 }
+					infantry = { x = 2 y = 2 }
+				}
+				support = { 
+					military_police = { x = 0 y = 0 }
+					recon = { x = 0 y = 1 }
+				}
+			}
+			267 = {
+				create_unit = {
+					division = "name = \"Bamiyan Guard\" division_template = \"Bamiyan Guard\" start_experience_factor = 1.00"
+					owner = TAN
+				}
+			}
+			army_experience = 25
+		}
+	}
+	TAN_restore_the_qing = {
+		ai_will_do = {
+			factor = 100
+		}
+		fire_only_once = yes
+		visible = {
+			owns_state = 608
+			owns_state = 978
+			owns_state = 756
+			NOT = { country_exists = MNS }
+		}
+		complete_effect = {
+				every_state = {
+					limit = {
+						OR = {
+							#ZHR
+							state = 761
+							state = 881
+							state = 978
+							state = 714
+							state = 810
+							state = 912
+							state = 714
+							#claim japanese canton
+							state = 877
+							state = 728
+							state = 591
+							state = 1202
+							state = 797
+							state = 927
+							state = 524
+							state = 1023
+							#cores on BYJ
+							state = 615
+							state = 837
+							state = 609
+							state = 608
+							state = 860
+							state = 866
+							state = 614
+							state = 871
+							state = 872
+							state = 792
+							state = 870
+							state = 868
+							state = 878
+							state = 606
+							state = 879
+							state = 622
+							state = 744
+							state = 746
+							state = 607
+							state = 917
+							state = 620
+							#cores on Mao/hunan
+							state = 896
+							state = 932
+							state = 795
+							state = 897
+							state = 867
+							state = 750
+							state = 874
+							state = 602
+							state = 892
+							state = 934
+							#cores on KMT
+							state = 600
+							state = 749
+							state = 613
+							state = 929
+							state = 861
+							state = 862
+							state = 863
+							state = 596
+							#cores on FJN
+							state = 869
+							state = 595
+							state = 864
+							state = 931
+							state = 928
+							#cores on GDP
+							state = 876
+							state = 594
+							state = 599
+							state = 836
+							state = 925
+							#cores on MAN
+							state = 610
+							state = 715
+							state = 328
+							state = 717
+							state = 809
+							state = 716
+							state = 789
+							state = 745
+							#cores on XSM
+							state = 756
+							state = 283
+							#cores on SZC
+							state = 605
+							state = 751
+							state = 791
+							state = 790
+							state = 748
+							#cores on YUN
+							state = 603
+							state = 325
+							state = 924
+							state = 887
+							state = 886
+							state = 747
+							#cores on GDP
+							state = 876
+							state = 594
+							state = 599
+							state = 836
+							state = 925
+							state = 593
+							state = 926
+							state = 592
+							#cores on SHA
+							state = 918
+							state = 597
+							state = 873
+							state = 865
+							state = 893
+							state = 598
+							state = 743
+							state = 839
+							#canton
+							state = 729
+							state = 326
+						}
+					}
+					add_core_of = MNS
+				}
+				every_owned_state = {
+					limit = {
+						is_core_of = MNS
+						is_not_claim_or_core_of_ROOT = yes
+					}
+					MNS = { transfer_state = PREV }
+				}
+				set_temp_variable = { tag_to_release = MNS }
+				puppet_released_tag = yes
+				MNS = {
+					promote_character = MNS_pu_wei
+					set_cosmetic_tag = MNS_TAN_QING
+					set_capital = { state = 608 }
+				}
+				every_country = {
+					limit = {
+						OR = {
+							tag = XIA
+							tag = FJN
+							tag = KMT
+							tag = YUN
+							tag = GDP
+							tag = MAN
+							tag = SHA
+						}
+					}
+					TAN = {
+						create_wargoal = {
+							type = annex_everything
+							target = PREV
+						}
+					}
+				}
+		}
+	}
+}

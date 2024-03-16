@@ -1,0 +1,1081 @@
+characters = {
+	JAP_yasuhito = {
+		name = "Yasuhito"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/JAP/Portrait_Yasuhito.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_YASUHITO_DESC"
+			ideology = constitutional_monarchy
+			expire = "1965.1.1.1"
+			traits = { popular_figurehead }
+		}
+	}
+	JAP_yasuhito_green = {
+		name = "Green Yasuhito"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/JAP/Green_Japan.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_YASUHITO_GREEN_DESC"
+			expire = "1953.1.1"
+			ideology = absolute_monarchy
+			traits = {
+				popular_figurehead
+			}
+		}
+	}
+	JAP_kumazawa_hiromichi = {
+		name = "Kumazawa Hiromichi"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/JAP/Portrait_Kumazawa_Hiromichi.png"
+			}
+		}
+		country_leader = {
+			ideology = aristocratic_reaction
+			expire = "1965.1.1.1"
+		}
+	}
+	JAP_okawa_shumei = {
+		name = "Ōkawa Shūmei"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/JAP/Portrait_Okawa_Shumei.png"
+			}
+		}
+		country_leader = {
+			ideology = national_vanguardism
+			expire = "1965.1.1.1"
+		}
+	}
+	JAP_yamakawa_hitoshi = {
+		name = "Yamakawa Hitoshi"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/JAP/Portrait_Hitoshi_Yamakawa.png"
+			}
+		}
+		country_leader = {
+			ideology = spartakism
+			expire = "1965.1.1.1"
+		}
+	}
+	JAP_abe_isoo = {
+		name = "Abe Isoo"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/JAP/Portrait_Abe_Isoo.png"
+			}
+		}
+		country_leader = {
+			ideology = democratic_socialism
+			expire = "1965.1.1.1"
+		}
+	}
+	JAP_katayama_tetsu = {
+		name = "Katayama Tetsu"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/JAP/Portrait_Tetsu_Katayama.png"
+			}
+		}
+		country_leader = {
+			ideology = progressive_democracy
+			expire = "1965.1.1.1"
+		}
+	}
+	JAP_saito_takao = {
+		name = "Saitō Takao"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/JAP/Portrait_Saito_Takao.png"
+			}
+		}
+		country_leader = {
+			ideology = classical_liberalism
+			expire = "1965.1.1.1"
+		}
+	}
+	JAP_ito_noe = {
+		name = "Itō Noe"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/JAP/Portrait_Ito_Noe.png"
+			}
+		}
+		country_leader = {
+			ideology = social_anarchism
+			expire = "1965.1.1.1"
+		}
+	}
+	JAP_hatoyama_ichiro = {
+		name = "Hatoyama Ichirō"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/JAP/Portrait_Ichiro_Hatoyama.png"
+			}
+		}
+		country_leader = {
+			ideology = social_conservatism
+			expire = "1965.1.1.1"
+		}
+	}
+	JAP_masaki_jinzaburo = {
+		name = "Masaki Jinzaburō"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/JAP/Portrait_jinzaburo_masaki_d.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_JINZABURO_MASAKI_DESC"
+			ideology = military_dictatorship
+			expire = "1965.1.1.1"
+		}
+	}
+
+	JAP_araki_sadao = {
+		name = "Araki Sadao"
+		portraits = {
+			army = {
+				large = "gfx/leaders/JAP/Portrait_Japan_Sadao_Araki.png"
+				small = "GFX_idea_sadao"
+			}
+		}
+		field_marshal = {
+			traits = { JAP_samurai_lineage }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = JAP_sadao_araki_hog
+			allowed = {
+				original_tag = JAP
+			}
+			available = {
+				has_completed_focus = JAP_elevate_sadao
+			}
+			traits = { 
+				hog_old_general
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = JAP_araki_cos
+			allowed = {
+				original_tag = JAP
+			}
+			available = {
+				if = {
+					limit = {
+						has_government = despotism
+					}
+				}
+			}
+			traits = { 
+				army_chief_morale_3
+			}
+		}
+	}
+	JAP_seigo_nakano = {
+		name = JAP_seigo_nakano_hog
+		portraits = {
+			army = {
+				small = "GFX_idea_nakano"
+			}
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = JAP_seigo_nakano_hog
+			allowed = {
+				original_tag = JAP
+			}
+			available = {
+				has_government = reactionism
+			}
+			traits = { 
+				hog_local_tyrant
+			}
+		}
+	}
+	JAP_okada_keisuke = {
+		name = JAP_okada_keisuke_hog
+		portraits = {
+			army = {
+				small = "GFX_idea_okada"
+			}
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = JAP_okada_keisuke_hog
+			allowed = {
+				original_tag = JAP
+			}
+			traits = { 
+				hog_old_admiral
+			}
+		}
+	}
+	JAP_koki_hirota = {	#STARTING#
+		name = JAP_koki_hirota_hog
+		portraits = {
+			army = {
+				small = "GFX_idea_hirota"
+			}
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = JAP_koki_hirota_hog
+			allowed = {
+				original_tag = JAP
+			}
+			traits = { 
+				hog_pragmatic_statesman
+			}
+		}
+	}
+	JAP_fumimaro_konoe = {
+		name = JAP_fumimaro_konoe_hog
+		portraits = {
+			army = {
+				small = "GFX_idea_konoe"
+			}
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = JAP_fumimaro_konoe_hog
+			allowed = {
+				original_tag = JAP
+			}
+			traits = { 
+				hog_local_tyrant
+			}
+		}
+	}
+	JAP_kijuro_shidehara = {
+		name = JAP_kijuro_shidehara_for
+		portraits = {
+			army = {
+				small = "GFX_idea_shidehara"
+			}
+		}
+		advisor = {
+			slot = foreign_minister
+			idea_token = JAP_kijuro_shidehara_for
+			allowed = {
+				original_tag = JAP
+			}
+			traits = { 
+				for_apologetic_clerk
+			}
+		}
+	}
+	JAP_yosuke_matsuoka = {
+		name = JAP_yosuke_matsuoka_for
+		portraits = {
+			army = {
+				small = "GFX_idea_matsuoka"
+			}
+		}
+		advisor = {
+			slot = foreign_minister
+			idea_token = JAP_yosuke_matsuoka_for
+			allowed = {
+				original_tag = JAP
+			}
+			traits = { 
+				for_ideological_crusader
+			}
+		}
+	}
+
+	JAP_machida_chuji = {
+		name = JAP_machida_chuji_eco
+		portraits = {
+			army = {
+				small = "GFX_idea_machida"
+			}
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = JAP_machida_chuji_eco
+			allowed = {
+				original_tag = JAP
+			}
+			traits = { 
+				eco_balanced_budget_economy
+			}
+		}
+	}
+	JAP_gotaro_ogawa = {
+		name = JAP_gotaro_ogawa_eco
+		portraits = {
+			army = {
+				small = "GFX_idea_ogawa"
+			}
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = JAP_gotaro_ogawa_eco
+			allowed = {
+				original_tag = JAP
+			}
+			traits = { 
+				eco_laissez_faire_capitalist
+			}
+		}
+	}
+	JAP_gujiro_fujiwara = {
+		name = JAP_gujiro_fujiwara_eco
+		portraits = {
+			army = {
+				small = "GFX_idea_fujiwara"
+			}
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = JAP_gujiro_fujiwara_eco
+			allowed = {
+				original_tag = JAP
+			}
+			traits = { 
+				eco_reformer
+			}
+		}
+	}
+	
+	JAP_Suehiko_Shiono = {
+		name = "Suehiko Shiono"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/JAP/Suehiko_Shiono.png"
+			}
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = JAP_Suehiko_Shiono_sec
+			allowed = {
+				original_tag = JAP
+			}
+			traits = {
+				sec_crime_fighter
+			}
+		}
+	}
+	JAP_Suetsugu_Nobumasa = {
+		name = "Suetsugu Nobumasa"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/JAP/Suetsugu_Nobumasa.png"
+			}
+		}
+		advisor = {
+			slot = head_of_intel
+			idea_token = JAP_Suetsugu_Nobumasa_int
+			allowed = {
+				original_tag = JAP
+			}
+			traits = { 
+				int_naval_intelligence_specialist
+			}
+		}
+	}
+	
+	JAP_fushimi_hiroyasu_con = {
+		name = JAP_fushimi_hiroyasu_con
+		portraits = {
+			army = {
+				small = "GFX_idea_hiroyasu"
+			}
+		}
+		advisor = {
+			slot = navy_chief
+			idea_token = JAP_fushimi_hiroyasu_con
+			allowed = {
+				original_tag = JAP
+			}
+			traits = { 
+				cnav_decisive_battle_doctrine
+			}
+		}
+	}
+
+	JAP_terauchi_hisaichi = {
+		name = "Terauchi Hisaichi"
+		portraits = {
+			army = {
+				large = "gfx/leaders/JAP/Portrait_Japan_Hisaichi_Terauchi.png"
+				small = "gfx/interface/ministers/JAP/Terauchi_Hisaichi.png"
+			}
+		}
+		field_marshal = {
+			traits = { 
+				offensive_doctrine
+				JAP_samurai_lineage   # hakushaku
+				politically_connected
+			}
+			skill = 4
+			attack_skill = 4
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 2
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = JAP_terauchi_hisaichi_carm
+			allowed = {
+				original_tag = JAP
+			}
+			traits = {
+				cos_school_of_psychology
+			}
+		}
+	}
+	JAP_hata_shunroku = {
+		name = "Hata Shunroku"
+		portraits = {
+			army = {
+				large = "gfx/leaders/JAP/Portrait_Japan_Shunroku_Hata.png"
+			}
+		}
+		field_marshal = {
+			traits = { offensive_doctrine JAP_samurai_lineage }
+			skill = 4
+			attack_skill = 3
+			defense_skill = 4
+			planning_skill = 2
+			logistics_skill = 4
+		}
+	}
+	JAP_yamashita_tomoyuki = {
+		name = "Yamashita Tomoyuki"
+		portraits = {
+			army = {
+				large = "gfx/leaders/JAP/Portrait_Japan_Tomoyuki_Yamashita.png"
+				small = "gfx/interface/ministers/JAP/Tomoyuki_Yamashita.png"
+			}
+		}
+		corps_commander = {
+			traits = { trickster trait_engineer brilliant_strategist politically_connected }
+			skill = 5
+			attack_skill = 4
+			defense_skill = 5
+			planning_skill = 3
+			logistics_skill = 4
+		}
+		advisor = {
+			slot = high_command
+			idea_token = JAP_yamashita_tomoyuki_hc
+			allowed = {
+				original_tag = JAP
+			}
+			traits = {
+				army_CombinedArms_3
+			}
+		}
+	}
+	JAP_tanaka_shizuichi = {
+		name = "Tanaka Shizuichi"
+		portraits = {
+			army = {
+				large = "gfx/leaders/JAP/Portrait_Japan_Shizuichi_Tanaka.png"
+				small = "gfx/interface/ministers/JAP/Shizuichi_Tanaka.png"
+			}
+		}
+		corps_commander = {
+			traits = { trickster career_officer infantry_officer }
+			skill = 4
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 4
+		}
+		advisor = {
+			slot = high_command
+			idea_token = JAP_tanaka_shizuichi_hc
+			allowed = {
+				original_tag = JAP
+			}
+			traits = {
+				army_logistics_2
+			}
+		}
+	}
+	JAP_okamura_yasuji = {
+		name = "Okamura Yasuji"
+		portraits = {
+			army = {
+				large = "gfx/leaders/JAP/Portrait_Japan_Yasuji_Okamura.png"
+			}
+		}
+		corps_commander = {
+			traits = { trait_reckless }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	JAP_nishio_toshizo = {
+		name = "Nishio Toshizo"
+		portraits = {
+			army = {
+				large = "gfx/leaders/JAP/Portrait_Japan_Toshizo_Nishio.png"
+			}
+		}
+		corps_commander = {
+			traits = { brilliant_strategist infantry_officer }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 2
+		}
+		advisor = {
+			slot = high_command
+			idea_token = JAP_nishio_toshizo_hc
+			allowed = {
+				original_tag = JAP
+			}
+			traits = {
+				army_infantry_3
+			}
+		}
+	}
+	JAP_ando_rikichi = {
+		name = "Ando Rikichi"
+		portraits = {
+			army = {
+				large = "gfx/leaders/JAP/Portrait_Japan_Rikichi_Ando.png"
+			}
+		}
+		corps_commander = {
+			traits = { career_officer }
+			skill = 3
+			attack_skill = 1
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 3
+		}
+	}
+	JAP_muto_akira = {
+		name = "Muto Akira"
+		portraits = {
+			army = {
+				large = "gfx/leaders/JAP/Portrait_Japan_Akira_Muto.png"
+			}
+		}
+		corps_commander = {
+			traits = { career_officer  }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+		}
+	}
+	JAP_higashikuni_naruhiko = {
+		name = "Higashikuni Naruhiko"
+		portraits = {
+			army = {
+				large = "gfx/leaders/JAP/Portrait_Japan_Naruhiko_Higashikuni.png"
+			}
+		}
+		corps_commander = {
+			traits = { JAP_samurai_lineage politically_connected }
+			skill = 3 
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	JAP_sakai_takashi = {
+		name = "Sakai Takashi"
+		portraits = {
+			army = {
+				large = "gfx/leaders/JAP/Portrait_Japan_Takashi_Sakai.png"
+				small = "gfx/interface/ministers/JAP/Sakai_Takashi.png"
+			}
+		}
+		corps_commander = {
+			traits = { infantry_officer trait_reckless }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 3
+		}
+	}
+	JAP_ueda_kenkichi = {
+		name = "Ueda Kenkichi"
+		portraits = {
+			army = {
+				large = "gfx/leaders/JAP/Portrait_Japan_Kenkichi_Ueda.png"
+				small = "gfx/interface/ministers/JAP/Ueda_Kenkichi.png"
+			}
+		}
+		corps_commander = {
+			traits = { old_guard cavalry_officer trait_reckless }
+			skill = 4
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 4
+			logistics_skill = 4
+		}
+		advisor = {
+			slot = high_command
+			idea_token = JAP_ueda_kenkichi_hc
+			allowed = {
+				original_tag = JAP
+			}
+			traits = {
+				army_chief_maneuver_2
+			}
+		}
+	}
+	JAP_honjo_shigeru = {
+		name = "Honjo Shigeru"
+		portraits = {
+			army = {
+				large = "gfx/leaders/JAP/Portrait_Japan_Shigeru_Honjo.png"
+			}
+		}
+		corps_commander = {
+			traits = { old_guard war_hero }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	JAP_umezu_yoshijiro = {
+		name = "Umezu Yoshijiro"
+		portraits = {
+			army = {
+				large = "gfx/leaders/JAP/Portrait_Japan_Yoshijiro_Umezu.png"
+			}
+		}
+		corps_commander = {
+			traits = { trait_cautious politically_connected }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 1
+			logistics_skill = 3
+		}
+	}
+	JAP_yamada_otozo = {
+		name = "Yamada Otozo"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/JAP/Portrait_Japan_Otozo_Yamada.png"
+			}
+		}
+		corps_commander = {
+			traits = { cavalry_officer career_officer }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 1
+			planning_skill = 3
+			logistics_skill = 3
+		}
+	}
+	JAP_adachi_hatazo = {
+		name = "Adachi Hatazo"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/JAP/Portrait_Japan_Hatazo_Adachi.png"
+			}
+		}
+		corps_commander = {
+			traits = { trickster JAP_samurai_lineage trait_reckless infantry_officer }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	JAP_matsui_iwane = {
+		name = "Matsui Iwane"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/JAP/Portrait_Japan_Iwane_Matsui.png"
+			}
+		}
+		corps_commander = {
+			traits = { old_guard trait_reckless }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	JAP_fujie_keisuke = {
+		name = "Fujie Keisuke"
+		portraits = {
+			army = {
+				large = "gfx/leaders/JAP/Portrait_Japan_Keisuke_Fujie.png"
+			}
+		}
+		corps_commander = {
+			traits = { fortress_buster career_officer politically_connected } 
+			skill = 3
+			attack_skill = 1
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 3
+		}
+	}
+	JAP_higuchi_kiichiro = {
+		name = "Higuchi Kiichiro"
+		portraits = {
+			army = {
+				large = "gfx/leaders/JAP/Portrait_Japan_Kiichiro_Higuchi.png"
+			}
+		}
+		corps_commander = {
+			traits = { career_officer trait_cautious }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+		}
+	}
+	JAP_homma_masaharu = {
+		name = "Homma Masaharu"
+		portraits = {
+			army = {
+				large = "gfx/leaders/JAP/Portrait_Japan_Masaharu_Homma.png"
+			}
+		}
+		corps_commander = {
+			traits = { media_personality trait_cautious }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
+	JAP_hyakutake_harukichi = {
+		name = "Hyakutake Harukichi"
+		portraits = {
+			army = {
+				large = "gfx/leaders/JAP/Portrait_Japan_Harukichi_Hyakutake.png"
+			}
+		}
+		corps_commander = {
+			traits = { infantry_officer  }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 3
+		}
+	}
+	JAP_jo_iimura = {
+		name = "Jō Iimura"
+		portraits = {
+			army = {
+				large = "gfx/leaders/JAP/Portrait_Japan_Jo_Iimura.png"
+			}
+		}
+		corps_commander = {
+			traits = { career_officer }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	JAP_imamura_hitoshi = {
+		name = "Imamura Hitoshi"
+		portraits = {
+			army = {
+				large = "gfx/leaders/JAP/Portrait_Japan_Hitoshi_Imamura.png"
+			}
+		}
+		corps_commander = {
+			traits = {  commando career_officer infantry_officer }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 1
+			planning_skill = 3
+			logistics_skill = 3
+		}
+	}
+	JAP_kanda_masatane = {
+		name = "Kanda Masatane"
+		portraits = {
+			army = {
+				large = "gfx/leaders/JAP/Portrait_Japan_Masatane_Kanda.png"
+			}
+		}
+		corps_commander = {
+			traits = { trait_cautious }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
+	JAP_yamamoto_isoroku = {
+		name = "Yamamoto Isoroku"
+		portraits = {
+			navy = {
+				large = "gfx/leaders/JAP/Portrait_Japan_Isoroku_Yamamoto.png"
+				small = "gfx/interface/ministers/JAP/Yamamoto_Isoroku.png"
+			}
+		}
+		navy_leader = {
+			traits = { aviation_enthusiast bold air_controller flight_deck_manager superior_tactician spotter }
+			skill = 5
+			attack_skill = 5
+			defense_skill = 2
+			maneuvering_skill = 3
+			coordination_skill = 6
+		}
+		advisor = {
+			slot = high_command
+			idea_token = JAP_yamamoto_isoroku_hc
+			allowed = {
+				original_tag = JAP
+			}
+			traits = {
+				navy_carrier_3
+			}
+		}
+	}
+	JAP_koga_mineichi = {
+		name = "Koga Mineichi"
+		portraits = {
+			navy = {
+				large = "gfx/leaders/JAP/Portrait_Japan_Mineichi_Koga.png"
+			}
+		}
+		navy_leader = {
+			traits = { bold battleship_adherent superior_tactician spotter }
+			skill = 4
+			attack_skill = 4
+			defense_skill = 2
+			maneuvering_skill = 4
+			coordination_skill = 3
+		}
+	}
+	JAP_hasegawa_kiyoshi = {
+		name = "Hasegawa Kiyoshi"
+		portraits = {
+			navy = {
+				large = "gfx/leaders/JAP/Portrait_Japan_Hasegawa_Kiyoshi.png"
+			}
+		}
+		navy_leader = {
+			traits = { gentlemanly }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			maneuvering_skill = 1
+			coordination_skill = 2
+		}
+	}
+	JAP_inoue_shigeyoshi = {
+		name = "Inoue Shigeyoshi"
+		portraits = {
+			navy = {
+				large = "gfx/leaders/JAP/Portrait_Japan_Shigeyoshi_Inoue.png"
+			}
+		}
+		navy_leader = {
+			traits = { aviation_enthusiast navy_career_officer }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			maneuvering_skill = 1
+			coordination_skill = 3
+		}
+	}
+	JAP_kondo_nobutake = {
+		name = "Kondō Nobutake"
+		portraits = {
+			navy = {
+				large = "gfx/leaders/JAP/Portrait_Japan_Nobutake_Kondo.png"
+			}
+		}
+		navy_leader = {
+			traits = { battleship_adherent naval_lineage fly_swatter }
+			skill = 3
+			attack_skill = 4
+			defense_skill = 2
+			maneuvering_skill = 2
+			coordination_skill = 2
+		}
+	}
+	JAP_takagi_takeo = {
+		name = "Takagi Takeo"
+		portraits = {
+			navy = {
+				large = "gfx/leaders/JAP/Portrait_Japan_Takeo_Takagi.png"
+			}
+		}
+		navy_leader = {
+			traits = { spotter }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 1
+			maneuvering_skill = 3
+			coordination_skill = 3
+		}
+	}
+	JAP_toyoda_soemu = {
+		name = "Toyoda Soemu"
+		portraits = {
+			navy = {
+				large = "gfx/leaders/JAP/Portrait_Japan_Soemu_Toyoda.png"
+			}
+		}
+		navy_leader = {
+			traits = { bold ironside old_guard_navy }
+			skill = 3
+			attack_skill = 5
+			defense_skill = 1
+			maneuvering_skill = 2
+			coordination_skill = 2
+		}
+	}
+	JAP_ozawa_jisaburo = {
+		name = "Ozawa Jisaburo"
+		portraits = {
+			navy = {
+				large = "gfx/leaders/JAP/Portrait_Japan_Jisaburo_Ozawa.png"
+			}
+		}
+		navy_leader = {
+			traits = { bold aviation_enthusiast navy_career_officer blockade_runner superior_tactician }
+			skill = 5
+			attack_skill = 5
+			defense_skill = 3
+			maneuvering_skill = 3
+			coordination_skill = 4
+		}
+	}
+	JAP_yoshida_zengo = {
+		name = "Yoshida Zengo"
+		portraits = {
+			navy = {
+				large = "gfx/leaders/JAP/Portrait_Japan_Zengo_Yoshida.png"
+			}
+		}
+		navy_leader = {
+			traits = { old_guard_navy }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			maneuvering_skill = 1
+			coordination_skill = 2
+		}
+	}
+	JAP_abe_hiroaki = {
+		name = "Abe Hiroaki"
+		portraits = {
+			navy = {
+				large = "gfx/leaders/JAP/Portrait_Japan_Hiroaki_Abe.png"
+			}
+		}
+		navy_leader = {
+			traits = { battleship_adherent }
+			skill = 2
+			attack_skill = 3
+			defense_skill = 1
+			maneuvering_skill = 2
+			coordination_skill = 1
+		}
+	}
+	JAP_daigo_tadashige = {
+		name = "Daigo Tadashige"
+		portraits = {
+			navy = {
+				large = "gfx/leaders/JAP/Portrait_Japan_Tadashige_Daigo.png"
+			}
+		}
+		navy_leader = {
+			traits = { navy_career_officer seawolf }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			maneuvering_skill = 1
+			coordination_skill = 1
+		}
+	}
+	JAP_hyakutake_gengo = {
+		name = "Hyakutake Gengo"
+		portraits = {
+			navy = {
+				large = "gfx/leaders/JAP/Portrait_Japan_Gengo_Hyakutake.png"
+			}
+		}
+		navy_leader = {
+			traits = { gentlemanly }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			maneuvering_skill = 2
+			coordination_skill = 2
+		}
+	}
+	
+	JAP_Sugiyama_Hajime = {
+		name = "Sugiyama Hajime"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/JAP/Sugiyama_Hajime.png"
+			}
+		}
+		advisor = {
+			slot = air_chief
+			idea_token = JAP_Sugiyama_Hajime_cair
+			allowed = {
+				original_tag = JAP
+			}
+			traits = {
+				air_chief_safety_2
+			}
+		}
+	}
+	JAP_Yasuda_Takeo = {
+		name = "Yasuda Takeo"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/JAP/Yasuda_Takeo.png"
+			}
+		}
+		advisor = {
+			slot = air_chief
+			idea_token = JAP_Yasuda_Takeo_cair
+			allowed = {
+				original_tag = JAP
+			}
+			traits = {
+				air_bomber_interception_2
+			}
+		}
+	}
+}
+
+

@@ -1,0 +1,2348 @@
+ideas = {
+	country = {
+	    russian_offensive = {
+			picture = generic_idea_RF_idea_rifle
+			available = {
+				has_country_flag = RUS_offensive_ongoing
+				has_war = yes
+				united_russia = no
+			}
+			removal_cost = -1
+			modifier = {
+				fuel_cost = -50
+				army_fuel_consumption_factor = -0.1
+				air_fuel_consumption_factor = -0.3
+				navy_fuel_consumption_factor = -0.2
+				supply_factor = 0.3
+				supply_consumption_factor = -0.2
+				attrition = -0.2
+				no_supply_grace = 120
+                unit_upkeep_attrition_factor = -0.3
+				truck_attrition_factor = -0.3
+			}
+		}
+		ROS_recently_reunited = {
+			picture = rus_cwdamage
+			modifier = {
+				stability_factor = -0.3
+				war_support_factor = -0.3
+				army_org_factor = -0.2
+				conscription_factor = -0.2
+				consumer_goods_expected_value = 0.2
+				production_speed_buildings_factor = -0.2
+				industrial_capacity_factory = -0.25
+				industrial_capacity_dockyard = -0.25
+				#feel free to add more modifiers
+			}
+		}
+		ROS_recently_reunited1 = {
+			picture = rus_cwdamage
+			modifier = {
+				stability_factor = -0.2
+				war_support_factor = -0.2
+				army_org_factor = -0.15
+				conscription_factor = -0.15
+				consumer_goods_expected_value = 0.15
+				production_speed_buildings_factor = -0.15
+				industrial_capacity_factory = -0.15
+				industrial_capacity_dockyard = -0.15
+				#feel free to add more modifiers
+			}
+		}
+		ROS_recently_reunited2 = {
+			picture = rus_cwdamage
+			modifier = {
+				stability_factor = -0.1
+				war_support_factor = -0.1
+				army_org_factor = -0.075
+				conscription_factor = -0.075
+				consumer_goods_expected_value = 0.05
+				production_speed_buildings_factor = -0.05
+				industrial_capacity_factory = -0.1
+				industrial_capacity_dockyard = -0.1
+				#feel free to add more modifiers
+			}
+		}
+		victor_in_the_velikaya_voyna = {
+			picture = rus_victory
+			cancel = { has_country_flag = remove_idea }
+			removal_cost = -1
+			modifier = {
+				conscription_factor = -0.2
+				army_morale_factor = -0.1
+				training_time_factor = 0.5
+			}
+		}
+		victor_in_the_velikaya_voyna_1 = {
+			picture = rus_victory
+			cancel = { has_country_flag = remove_idea }
+			removal_cost = -1
+			modifier = {
+				conscription_factor = -0.1
+				army_morale_factor = -0.05
+				training_time_factor = 0.25
+			}
+		}
+		
+		monopolized_industry = {
+			picture = rus_industry
+			cancel = { has_country_flag = remove_idea }
+			removal_cost = -1
+			modifier = {
+				industrial_capacity_factory = -0.10
+				industrial_capacity_dockyard = -0.10
+				consumer_goods_expected_value = 0.15
+				research_speed_factor = 0.05
+			}
+		}
+		
+		RUS_drumhead_court_martial = {
+			picture = drumhead
+			cancel = { has_country_flag = remove_idea }
+			removal_cost = -1
+			modifier = {
+				subversive_activites_upkeep = -0.5
+			}
+		}	
+		
+		RUS_state_propaganda = {
+			picture = rus_statepropaganda
+			cancel = { has_country_flag = remove_idea }
+			removal_cost = -1
+			modifier = {
+				stability_weekly = 0.01
+				despotism_drift = 0.1
+			}
+		}		
+		unstable_political_system = {
+			picture = rus_politics
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				political_power_cost = 0.5
+				stability_factor = -0.05
+				foreign_minister_cost_factor = 0.25
+				economy_minister_cost_factor = 0.25
+				security_minister_cost_factor = 0.25
+				#head_of_intel_cost_factor = 0.25
+			}
+		}
+		unstable_political_system_1 = {
+			picture = rus_politics
+			cancel = { has_country_flag = remove_idea }
+			removal_cost = -1
+			modifier = {
+				political_power_cost = 0.25
+				stability_factor = -0.025
+				foreign_minister_cost_factor = 0.25
+				economy_minister_cost_factor = 0.25
+				security_minister_cost_factor = 0.25
+				#head_of_intel_cost_factor = 0.25
+			}
+		}
+
+		#Starting Tree ideas
+
+		november_harsh_repression = {
+			picture = rus_repressions
+			cancel = { has_country_flag = remove_idea }
+			removal_cost = -1
+			modifier = {
+				industrial_capacity_factory = -0.1
+				production_factory_efficiency_gain_factor = -0.1
+				anarchism_drift = -0.05
+				popular_socialism_drift = -0.05
+				vanguard_socialism_drift = -0.05
+			}
+		}
+		november_soft_repression = {
+			picture = rus_reconciliation
+			cancel = { has_country_flag = remove_idea }
+			removal_cost = -1
+			modifier = {
+				consumer_goods_expected_value = 0.1
+				anarchism_drift = 0.05
+				popular_socialism_drift = 0.05
+				vanguard_socialism_drift = 0.05
+			}
+		}
+		RUS_OSVAG_concessions = {
+			picture = rus_osvagconcessions
+			cancel = { has_country_flag = remove_idea }
+			removal_cost = -1
+			modifier = {
+				political_power_factor = -0.25
+				experience_gain_army_factor = -0.75
+			}
+		}
+		RUS_increased_naval_budget = {
+			picture = rus_navalinvestment
+			cancel = { has_country_flag = remove_idea }
+			removal_cost = -1
+			modifier = {
+				consumer_goods_expected_value = 0.05
+				production_speed_dockyard_factor = 0.2
+				production_speed_naval_base_factor = 0.2
+			}
+			equipment_bonus = {
+				convoy = {
+					build_cost_ic = -0.05 instant = yes
+				}
+				submarine = {
+					build_cost_ic = -0.05 instant = yes
+				}
+				destroyer = {
+					build_cost_ic = -0.05 instant = yes
+				}
+				screen_ship = {
+					build_cost_ic = -0.05 instant = yes
+				}
+				carrier = {
+					build_cost_ic = -0.05 instant = yes
+				}
+				heavy_cruiser_1 = {
+					build_cost_ic = -0.05 instant = yes
+				}
+				heavy_cruiser_2 = {
+					build_cost_ic = -0.05 instant = yes
+				}
+				heavy_cruiser_3 = {
+					build_cost_ic = -0.05 instant = yes
+				}
+				heavy_cruiser_4 = {
+					build_cost_ic = -0.05 instant = yes
+				}
+				capital_ship = {
+					build_cost_ic = -0.05 instant = yes
+				}
+			}
+		}
+
+		#Crisis Ideas
+
+		RUS_post_war_famine = {
+			picture = rus_famine
+			cancel = { has_country_flag = remove_idea }
+			removal_cost = -1
+			modifier = {
+				monthly_population = -0.8
+				consumer_goods_expected_value = 0.1
+				army_org_factor = -0.5
+			}
+		}
+		RUS_post_war_famine1 = {
+			picture = rus_famine
+			cancel = { has_country_flag = remove_idea }
+			removal_cost = -1
+			modifier = {
+				monthly_population = -0.4
+				consumer_goods_expected_value = 0.05
+				army_org_factor = -0.3
+			}
+		}
+		RUS_civil_war_damage = {
+			picture = rus_cwdamage
+			cancel = { has_country_flag = remove_idea }
+			removal_cost = -1
+			modifier = {
+				industry_repair_factor = -0.25
+				industrial_capacity_factory = -0.15
+				industrial_capacity_dockyard = -0.2
+			}
+		}
+		RUS_civil_war_damage1 = {
+			picture = rus_cwdamage
+			cancel = { has_country_flag = remove_idea }
+			removal_cost = -1
+			modifier = {
+				industry_repair_factor = -0.1
+				industrial_capacity_factory = -0.07
+				industrial_capacity_dockyard = -0.1
+			}
+		}
+		RUS_revolting_peasants = {
+			picture = rus_revoltingpeasants
+			cancel = { has_country_flag = remove_idea }
+			removal_cost = -1
+			modifier = {
+				drift_defence_factor = -0.5
+				revisionist_socialism_drift = 0.07
+				progressivism_drift = 0.05
+				liberalism_drift = 0.05
+				political_power_factor = -0.1
+			}
+		}
+		RUS_special_regulations = {
+			picture = rus_specialregulations
+			cancel = { has_country_flag = remove_idea }
+			removal_cost = -1
+			modifier = {
+				improve_relations_maintain_cost_factor = 0.75
+				trade_opinion_factor = -0.2
+			}
+		}
+		RUS_commission_for_starving = {
+			picture = rus_foodcomission
+			cancel = { has_country_flag = remove_idea }
+			removal_cost = -1
+			modifier = {
+				stability_weekly = 0.01
+				industry_repair_factor = 0.7
+				production_speed_buildings_factor = 0.1
+			}
+		}
+
+		#Liberalization Ideas
+
+		RUS_kolchak_assembly = {
+			picture = rus_nationalassembly
+			cancel = { has_country_flag = remove_idea }
+			removal_cost = -1
+			modifier = {
+				political_power_gain = 0.05
+				stability_factor = 0.1
+			}
+		}
+
+		RUS_kolchak_cult = {
+			picture = rus_leadercult
+			cancel = { has_country_flag = remove_idea }
+			removal_cost = -1
+			modifier = {
+				political_power_factor = 0.1
+			}
+		}
+		RUS_kolchak_cult_1 = {
+			picture = rus_leadercult
+			cancel = { has_country_flag = remove_idea }
+			removal_cost = -1
+			modifier = {
+				political_power_factor = 0.1
+				army_morale_factor = 0.05
+				offensive_war_stability_factor = 0.5
+			}
+		}
+		RUS_kolchak_cult_2 = {
+			picture = rus_leadercult
+			cancel = { has_country_flag = remove_idea }
+			removal_cost = -1
+			modifier = {
+				political_power_factor = 0.2
+				army_morale_factor = 0.05
+				offensive_war_stability_factor = 0.5
+				stability_factor = 0.05
+			}
+		}
+		RUS_okhrana_operations = {
+			picture = rus_blackterror
+			cancel = { has_country_flag = remove_idea }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.05
+				consumer_goods_expected_value = -0.05
+			}
+		}
+
+		RUS_emperor_return = {
+			picture = rus_realmofnewemperor
+			cancel = { has_country_flag = remove_idea }
+			removal_cost = -1
+			modifier = {
+				political_power_factor = -0.15
+			}
+		}
+		RUS_emperor_return_1 = {
+			picture = rus_realmofnewemperor
+			cancel = { has_country_flag = remove_idea }
+			removal_cost = -1
+			modifier = {
+				political_power_factor = -0.1
+				stability_factor = 0.1
+				drift_defence_factor = 0.1
+				defensive_war_stability_factor = 0.3
+			}
+		}
+		RUS_emperor_return_2 = {
+			picture = rus_realmofnewemperor
+			cancel = { has_country_flag = remove_idea }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.1
+				drift_defence_factor = 0.1
+				defensive_war_stability_factor = 0.3
+			}
+		}
+		RUS_kolchak_assembly_1 = {
+			picture = rus_nationalassembly
+			cancel = { has_country_flag = remove_idea }
+			removal_cost = -1
+			modifier = {
+				political_power_gain = 0.1
+				stability_factor = 0.1
+				army_org_factor = 0.05
+			}
+		}
+
+		RUS_migration = {
+			picture = rus_rimigrants
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				research_speed_factor = 0.07
+				monthly_population = 0.2
+				decryption_factor = 0.1
+			}
+		}
+		RUS_industrial_migration = {
+			picture = rus_rimigrants
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				production_speed_industrial_complex_factor = 0.1
+				production_speed_arms_factory_factor = 0.1
+			}
+		}
+		RUS_ban_on_paramilitaries = {
+			picture = FRA_matignon_agreements
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = 0.07
+				conscription_factor = -0.15
+			}
+		}
+		RUS_harsh_penalties = {
+			picture = generic_purge
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				industrial_capacity_factory = 0.1
+				stability_factor = -0.05
+			}
+		}
+		RUS_exportfocus = {
+			picture = generic_flexible_foreign_policy2
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				local_resources_factor = 0.12
+				trade_opinion_factor = 0.2
+			}
+		}
+		RUS_oil_must_flow = {
+			picture = generic_trade
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				fuel_gain_factor = 0.2
+				production_speed_synthetic_refinery_factor = 0.15
+			}
+		}
+		RUS_peasant_loans = {
+			picture = rus_peasantloans
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				consumer_goods_expected_value = 0.05
+				stability_factor = 0.05
+			}
+		}
+		RUS_strenghten_duma = {
+			picture = generic_democratic_drift_bonus
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				political_power_factor = 0.25
+				army_core_defence_factor = 0.1
+				right_authoritarianism_drift = 0.04
+			}
+		}
+
+		#Drozdovky Ideas
+
+		RUS_black_state = {
+			picture = PRS_power_of_freikorps
+			cancel = { has_country_flag = remove_idea }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.3
+			}
+		}
+		SRU_internal_purge = {
+			picture = FRA_scw_intervention_nationalists_focus
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				political_power_factor = 0.2
+				despotism_drift = 0.03
+				stability_factor = -0.05
+				resistance_target = -0.1
+				root_out_resistance_effectiveness_factor = 0.5
+			}
+		}
+		SRU_glorify = {
+			picture = vittoria_mutilata
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				army_morale_factor = 0.1
+				army_attack_factor = 0.1
+			}
+		}
+		SRU_glorify1 = {
+			picture = vittoria_mutilata
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				army_morale_factor = 0.1
+				army_attack_factor = 0.1
+				political_power_factor = 0.1
+			}
+		}
+		SRU_katorga_camps = {
+			picture = FRA_fortification_focus
+			cancel = { has_country_flag = remove_idea }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.1
+				monthly_population = -0.1
+				local_resources_factor = 0.2
+			}
+		}
+		SRU_effective_exploitation = {
+			picture = saf_history_of_segregation
+			cancel = { has_country_flag = remove_idea }
+			removal_cost = -1
+			modifier = {
+				local_resources_factor = 0.2
+				consumer_goods_expected_value = -0.1
+				fuel_gain_factor = 0.25
+			}
+		}
+		SRU_railway_boom = {
+			picture = generic_build_infrastructure
+			cancel = { has_country_flag = remove_idea }
+			removal_cost = -1
+			modifier = {
+				production_speed_rail_way_factor = 0.3
+			}
+		}
+		SRU_ruthless_industrialization = {
+			picture = generic_exploit_mines
+			cancel = { has_country_flag = remove_idea }
+			removal_cost = -1
+			modifier = {
+				production_speed_infrastructure_factor = 0.4
+				production_speed_rail_way_factor = 0.4
+				monthly_population = -0.2
+				industrial_capacity_factory = 0.20
+				production_speed_buildings_factor = 0.1
+				conversion_cost_civ_to_mil_factor = -0.5
+			}
+		}
+		SRU_natives_repression = {
+			picture = generic_oppression
+			cancel = { has_country_flag = remove_idea }
+			removal_cost = -1
+			modifier = {
+				resistance_target = -0.15
+			}
+		}
+		SRU_universal_education = {
+			picture = jap_supremacy_of_technology
+			cancel = { has_country_flag = remove_idea }
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = 0.07
+				stability_factor = 0.08
+			}
+		}
+		SRU_expanded_healthcare = {
+			picture = HUN_treaty_of_triannon
+			cancel = { has_country_flag = remove_idea }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.08
+				attrition = -0.12
+				monthly_population = 0.1
+			}
+		}
+		SRU_annual_purges = {
+			picture = tfv_can_conscription_crisis
+			cancel = { has_country_flag = remove_idea }
+			removal_cost = -1
+			modifier = {
+				stability_weekly = 0.02
+				monthly_population = -0.1
+			}
+		}
+		SRU_ministry_of_autonomies = {
+			picture = generic_volunteer_expedition_bonus
+			cancel = { has_country_flag = remove_idea }
+			removal_cost = -1
+			modifier = {
+				political_power_gain = 0.05
+			}
+		}
+		SRU_ministry_of_nationalities = {
+			picture = FRA_national_mobilization_focus
+			cancel = { has_country_flag = remove_idea }
+			removal_cost = -1
+			modifier = {
+				political_power_gain = 0.05
+				compliance_gain = 0.1
+			}
+		}
+		SRU_russification_intensifies = {
+			picture = YUG_local_militias
+			cancel = { has_country_flag = remove_idea }
+			removal_cost = -1
+			modifier = {
+				resistance_target = 0.15
+				conscription_factor = 0.1
+			}
+		}
+		SRU_let_them_be = {
+			picture = YUG_federal_defense_council
+			cancel = { has_country_flag = remove_idea }
+			removal_cost = -1
+			modifier = {
+				resistance_target = -0.15
+				despotism_drift = 0.1
+			}
+		}
+		SRU_ministry_of_labour_and_security = {
+			picture = generic_pp_unity_bonus
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				industrial_capacity_factory = 0.15
+				consumer_goods_expected_value = -0.05
+			}
+		}
+		SRU_league_of_russian_culture = {
+			picture = ORE_Continuous_Russification
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+			    despotism_drift = 0.1
+				compliance_gain = 0.1
+			}
+		}
+
+		#Mlodorossi Ideas
+
+		RUS_new_russian_man = {
+			picture = generic_reserve_divisions
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				army_morale_factor = 0.05
+			}
+		}
+		RUS_new_russian_man1 = {
+			picture = generic_reserve_divisions
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				army_core_defence_factor = 0.05
+				production_factory_max_efficiency_factor = 0.02
+				army_morale_factor = 0.05
+			}
+		}
+		RUS_new_russian_man2 = {
+			picture = generic_reserve_divisions
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				army_core_defence_factor = 0.05
+				production_factory_max_efficiency_factor = 0.03
+				army_morale_factor = 0.05
+				army_speed_factor = 0.05
+				conscription_factor = 0.05
+			}
+		}
+		RUS_new_russian_people = {
+			picture = generic_reserve_divisions
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				army_core_defence_factor = 0.05
+				production_factory_max_efficiency_factor = 0.04
+				army_morale_factor = 0.05
+				army_speed_factor = 0.05
+				conscription_factor = 0.05
+				research_speed_factor = 0.05
+			}
+		}
+		RUS_new_russian_people1 = {
+			picture = generic_reserve_divisions
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				army_core_attack_factor = 0.01
+				army_core_defence_factor = 0.1
+				production_factory_max_efficiency_factor = 0.05
+				army_morale_factor = 0.1
+				army_speed_factor = 0.05
+				conscription_factor = 0.05
+				consumer_goods_expected_value = -0.02
+				research_speed_factor = 0.05
+			}
+		}
+		RUS_new_russian_people2 = {
+			picture = generic_reserve_divisions
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				army_core_attack_factor = 0.02
+				army_core_defence_factor = 0.1
+				production_factory_max_efficiency_factor = 0.06
+				army_morale_factor = 0.1
+				army_speed_factor = 0.05
+				conscription_factor = 0.1
+				consumer_goods_expected_value = -0.02
+				research_speed_factor = 0.07
+				mobilization_speed = 0.05
+			}
+		}
+
+		RUS_tsarist_media = {
+			picture = generic_idea_RF_idea_speeches
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				drift_defence_factor = 0.05
+				encryption_factor = 0.1
+				decryption_factor = 0.1
+			}
+		}
+		RUS_tsarist_media1 = {
+			picture = generic_idea_RF_idea_speeches
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				drift_defence_factor = 0.1
+				encryption_factor = 0.2
+				decryption_factor = 0.2
+			}
+		}
+
+		RUS_molodaya_gvardyia = {
+			picture = generic_manpower_bonus
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				conscription = 0.015
+			}
+		}
+
+		RUS_popular_monarchism_idea = {
+			picture = economic_control_icon
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				political_power_factor = 0.1
+			}
+		}
+		RUS_popular_monarchism_idea1 = {
+			picture = economic_control_icon
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				political_power_factor = 0.2
+			}
+		}
+		RUS_popular_monarchism_idea2 = {
+			picture = economic_control_icon
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				political_power_factor = 0.2
+				surrender_limit = 0.03
+			}
+		}
+
+		RUS_peoples_oprichnina = {
+			picture = generic_spy_intel
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				right_authoritarianism_drift = -0.03
+				vanguard_socialism_drift = -0.05
+				popular_socialism_drift = -0.05
+				anarchism_drift = -0.05
+				resistance_target = -0.15
+			}
+		}
+
+		RUS_antitrust_law_idea = {
+			picture = generic_idea_RF_idea_law
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				consumer_goods_expected_value = -0.05
+				trade_opinion_factor = -0.1
+			}
+		}
+		RUS_progressive_taxes = {
+			picture = generic_idea_RF_idea_coins
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				consumer_goods_expected_value = -0.05
+			}
+		}
+		RUS_the_peoples_fortune = {
+			picture = generic_idea_RF_idea_coins
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				consumer_goods_expected_value = -0.1
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
+				trade_opinion_factor = -0.1
+			}
+		}
+
+		RUS_the_vsnkh = {
+			picture = generic_research_bonus
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				global_building_slots_factor = 0.25
+				production_speed_infrastructure_factor = 0.2
+				production_speed_rail_way_factor = 0.2
+			}
+		}
+		RUS_the_vsni = {
+			picture = generic_research_bonus
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				production_speed_buildings_factor = 0.15
+				local_resources_factor = 0.1
+			}
+		}
+		RUS_the_vsvs = {
+			picture = generic_research_bonus
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				planning_speed = 0.2
+				attrition = -0.1
+			}
+		}
+
+		RUS_national_champion = {
+			picture = generic_infantry_bonus
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				research_speed_factor = 0.05
+				special_forces_cap = 0.05
+			}
+		}
+		
+		################
+		#Military Ideas#
+		################
+		
+		RUS_reorganized_stavka = {
+			picture = generic_idea_RF_idea_officer_hat
+			cancel = { has_country_flag = remove_idea }
+			removal_cost = -1
+			modifier = {
+				max_command_power = 25
+			}
+		}
+		
+		RUS_autonomy_for_frontline_commanders = {
+			picture = FRA_scw_intervention_nationalists_focus
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				experience_gain_factor = 0.2
+				planning_speed = 0.2
+			}
+			removal_cost = -1
+		}
+		
+		RUS_symphony_of_steel = {
+			picture = generic_idea_RF_idea_shells
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				army_artillery_attack_factor = 0.05
+				#army_artillery_defence_factor = 0.05
+			}
+			equipment_bonus = {
+				artillery = {
+					build_cost_ic = -0.1
+				}
+			}
+			removal_cost = -1
+		}
+		
+		RUS_central_command_structure = {
+			picture = generic_reserve_divisions
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				army_org_Factor = 0.1
+				max_planning = 0.2
+			}
+			removal_cost = -1
+		}
+		
+		RUS_expanded_cadet_corps = {
+			picture = generic_reserve_divisions
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				training_time_army_factor = -0.2
+			}
+			removal_cost = -1
+		}
+		
+		RUS_always_prepared = {
+			picture = generic_infantry_bonus
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				conscription = 0.02
+			}
+			removal_cost = -1
+		}
+		
+		RUS_standardized_weapon_design = {
+			picture = HUN_secret_rearmament
+			cancel = { has_country_flag = remove_idea }
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.1
+				}
+			}
+			#research_bonus = {
+			#	infantry_weapons = 0.1
+			#}
+			removal_cost = -1
+		}
+		
+		RUS_neo_brusilovian_doctrine = {
+			picture = CZE_planning_bonus
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				conscription = 0.05
+				mobilization_speed = 0.2
+			}
+			removal_cost = -1
+		}
+		
+		RUS_deep_battle = {
+			picture = FRA_national_mobilization_focus
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				supply_consumption_factor = -0.1
+				land_reinforce_rate = 0.1
+			}
+			removal_cost = -1
+		}
+		
+		RUS_fast_and_deadly = {
+			picture = generic_license_production
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				army_armor_speed_factor = 0.05
+				army_armor_attack_factor = 0.02
+			}
+			removal_cost = -1
+		}
+		
+		RUS_petrograd_naval_academy = {
+			picture = generic_idea_RF_idea_admiral
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				#experience_gain_navy = 0.1
+				experience_gain_navy_factor = 0.1
+			}
+			removal_cost = -1
+		}
+		
+		RUS_coastal_troops_command = {
+			picture = YUG_federal_defense_council
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				amphibious_invasion = 0.1
+				amphibious_invasion_defence = 0.1
+			}
+			removal_cost = -1
+		}
+		
+		RUS_coastal_artillery = {
+			picture = generic_fortify_the_borders
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				production_speed_coastal_bunker_factor = 0.2
+			}
+			removal_cost = -1
+		}
+		
+		RUS_outrun_and_outgun = {
+			picture = CZE_planning_bonus
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				naval_coordination = 0.1
+				naval_speed_factor = 0.1
+			}
+			removal_cost = -1
+		}
+		
+		RUS_silent_and_deadly = {
+			picture = the_long_lance
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				navy_submarine_detection_factor = 0.05
+				navy_submarine_attack_factor = 0.05
+			}
+			removal_cost = -1
+		}
+		
+		RUS_display_of_power = {
+			picture = generic_navy_bonus
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				war_support_factor = 0.05
+				navy_capital_ship_attack_factor = 0.1
+			}
+			removal_cost = -1
+		}
+		
+		RUS_weather_training = {
+			picture = air_support_focus
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				air_weather_penalty = -0.1
+				air_accidents_factor = -0.1
+			}
+			removal_cost = -1
+		}
+		
+		RUS_national_aviation_committee = {
+			picture = generic_air_bonus
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				
+			}
+			research_bonus = {
+				air_equipment = 0.1
+			}
+			removal_cost = -1
+		}
+		
+		RUS_knights_in_the_air = {
+			picture = soviet_german_friendship
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				air_ace_generation_chance_factor = 0.2
+			}
+			removal_cost = -1
+		}
+		
+		RUS_fast_bomber_emphasis = {
+			picture = generic_air_research
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				air_air_superiority_agility_factor = 0.1
+			}
+			removal_cost = -1
+		}
+		
+		RUS_anywhere_anytime = {
+			picture = generic_air_payment
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				army_bonus_air_superiority_factor = 0.1
+				air_cas_present_factor = 0.1
+			}
+			removal_cost = -1
+		}
+		
+		RUS_aerial_apocalypse = {
+			picture = air_war_plans_division_focus
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				air_strategic_bomber_bombing_factor = 0.2
+			}
+			removal_cost = -1
+		}
+		#############################
+					#DITERIKHS
+	    #############################
+		RUS_shtabs_accept = {
+			picture = rus_shaccepts
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				consumer_goods_expected_value = 0.10
+			}
+			removal_cost = -1
+		}
+		RUS_shtabs_army = {
+			picture = rus_shinfluence
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				army_morale_factor = -0.20
+				army_org_factor = -0.20
+			}
+			removal_cost = -1
+		}
+
+		RUS_shtabs_strikes = {
+			picture = rus_shstrikes
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				local_resources_factor = -0.15
+				production_speed_buildings_factor = -0.15
+				consumer_goods_expected_value = 0.10	
+			}
+			removal_cost = -1
+		}
+
+		RUS_shtabs_rural_reforms = {
+			picture = generic_agrarian_society
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				local_resources_factor = 0.05
+				consumer_goods_expected_value = -0.10
+				political_power_gain = 0.10
+			}
+			removal_cost = -1
+		}
+		RUS_shtabs_patronizing = {
+			picture = rus_skpatronizing
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = 0.05
+				political_power_gain = 0.05
+			}
+			removal_cost = -1
+		}
+		RUS_shtabs_patronizing1 = {
+			picture = rus_skpatronizing
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = 0.07
+				political_power_gain = 0.10
+			}
+			removal_cost = -1
+		}
+
+		RUS_shtabs_patronizing2 = {
+			picture = rus_skpatronizing
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = 0.15
+				political_power_gain = 0.15
+			}
+			removal_cost = -1
+		}
+
+		RUS_council_of_artisans = {
+			picture = FRA_national_mobilization_focus
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.15
+				production_speed_buildings_factor = 0.10
+				consumer_goods_expected_value = 0.025
+			}
+			removal_cost = -1
+		}
+		
+		RUS_shtabs_restore_system = {
+			picture = rus_restorationoldsystem
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = -0.35
+				production_speed_buildings_factor = 0.05
+				consumer_goods_expected_value = -0.05
+				
+			}
+			removal_cost = -1
+		}
+		RUS_shtabs_restore_system1 = {
+			picture = rus_restorationoldsystem
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				local_resources_factor	 = 0.15
+				production_speed_buildings_factor = 0.15
+				consumer_goods_expected_value = -0.10
+				stability_factor = -0.1
+			}
+			removal_cost = -1
+		}
+		RUS_shtabs_benjamin = {
+			picture = YUG_orthodox_church_support
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				conscription = 0.01
+				stability_factor = 0.03
+				war_support_factor = 0.03
+				monthly_population = 0.01
+			}
+			removal_cost = -1
+		}
+		RUS_shtabs_andronik = {
+			picture = YUG_orthodox_church_support
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				conscription = 0.04
+				stability_factor = -0.09
+				war_support_factor = 0.05
+			}
+			removal_cost = -1
+		}
+		RUS_shtabs_sergius = {
+			picture = YUG_orthodox_church_support
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				conscription = 0.02
+				stability_factor = 0.02
+				war_support_factor = 0.05
+			}
+			removal_cost = -1
+		}
+		RUS_shtabs_alexius = {
+			picture = YUG_orthodox_church_support
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				conscription = 0.005
+				stability_factor = 0.08
+				war_support_factor = -0.05
+				monthly_population = 0.05
+			}
+			removal_cost = -1
+		}
+		RUS_cleaning_bureaucratic_apparatus = {
+			picture = rus_bureaucracy
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				research_speed_factor = 0.05
+				required_garrison_factor = -0.1
+				
+			}
+		}
+		RUS_ourfinalpush = {
+			picture = generic_exploit_mines
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				local_resources_factor = 0.15
+				production_speed_buildings_factor = 0.15
+				consumer_goods_expected_value = -0.10				
+			}
+			removal_cost = -1
+		}
+		RUS_will_of_zemlya = {
+			picture = SOV_scientist_defect
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				political_power_cost = -0.10			
+			}
+			removal_cost = -1
+		}
+		RUS_successful_purge = {
+			picture = chi_wargaming_division
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				despotism_drift = 0.02
+				right_authoritarianism_drift = 0.02
+				accelerationism_drift = -0.02
+				reactionism_drift = -0.02
+				political_power_gain = -0.5
+			}
+			removal_cost = -1
+		}
+		##############################
+		SRU_colonizationplanvostok = {
+			picture = generic_goods_red_bonus
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+			conscription = -0.01
+			stability_weekly = 0.01
+			consumer_goods_expected_value = -0.05
+
+			}
+		}
+		##############################
+		RUS_aristocratic_rule = {
+			picture = generic_intel_bonus
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				political_power_gain = 0.10		
+			}
+			removal_cost = -1
+		}
+		RUS_spiritual_guidance = {
+			picture = FRA_national_mobilization_focus
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				surrender_limit = 0.05
+				reactionism_drift = 0.05
+			}
+			removal_cost = -1
+		}
+		RUS_united_and_ready = {
+			picture = HUN_secret_rearmament
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				local_resources_factor	 = 0.15
+				production_speed_buildings_factor = 0.10
+				consumer_goods_expected_value = -0.10
+				political_power_cost = -0.10
+				political_power_gain = 0.10	
+				stability_factor = 0.05
+				reactionism_drift = 0.05
+			}
+			removal_cost = -1
+		}
+		RUS_army_reforms = {
+			picture = rus_armyreforms
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				army_org_factor = 0.05
+				command_power_gain = -0.10
+			}
+			removal_cost = -1
+		}
+		RUS_army_reforms1 = {
+			picture = rus_armyreforms1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				army_org_factor = 0.05
+				army_morale_factor = 0.10
+				command_power_gain = -0.10
+			}
+			removal_cost = -1
+		}
+		RUS_the_faithful_army = {
+			picture = rus_faithfularmy
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				army_defence_factor = 0.01
+				army_morale_factor = 0.01
+				army_attack_factor = 0.01
+			}
+			removal_cost = -1
+		}
+
+		RUS_the_faithful_army1 = {
+			picture = rus_newcrusaders
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				army_defence_factor = 0.02
+				army_morale_factor = 0.02
+				army_attack_factor = 0.02
+			}
+			removal_cost = -1
+		}
+		
+		#SRU BH#
+		
+		SRU_triune_formula = {
+			picture = rus_triuneformula
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				research_speed_factor = 0.07
+			}
+			removal_cost = -1
+		}
+		SRU_national_capitalism = {
+			picture = rus_natcap
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				research_speed_factor = 0.02
+				production_factory_efficiency_gain_factor = 0.1
+				industrial_capacity_factory = -0.1
+			}
+			removal_cost = -1
+		}
+		SRU_national_capitalism1 = {
+			picture = rus_natcap
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				research_speed_factor = 0.02
+				production_factory_efficiency_gain_factor = 0.1
+				industrial_capacity_factory = -0.1
+				trade_opinion_factor = -0.15
+				min_export = -0.05
+			}
+			removal_cost = -1
+		}
+		SRU_decentralized = {
+			picture = rus_decezadmin
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				no_supply_grace = 24
+				political_power_gain = -0.05
+			}
+			removal_cost = -1
+		}
+		SRU_national_kagal = {
+			picture = general_staff
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				production_speed_buildings_factor = 0.05
+			}
+			removal_cost = -1
+		}
+		#Jewish migration to Israel
+		isr_rus_migration = {
+			picture = rus_rimigrants
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				MONTHLY_POPULATION = 5
+			}
+			removal_cost = -1
+		}
+		SRU_black_terror = {
+			picture = rus_blackterror
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = -0.15
+				vanguard_socialism_drift = -0.1
+				popular_socialism_drift = -0.1
+				revisionist_socialism_drift = -0.1
+				progressivism_drift = -0.1
+				liberalism_drift = -0.1
+				accelerationism_drift = -0.1
+			}
+		}
+		SRU_industry_supervising = {
+			picture = rus_industrysupervision
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				industrial_capacity_factory = 0.1
+			 	industrial_capacity_dockyard = 0.1
+			}
+		}
+		SRU_antispartakism = {
+			#picture = 
+			cancel = { has_country_flag = remove_idea }
+			targeted_modifier = {
+				tag = GER
+				attack_bonus_against = 0.05
+			}
+			targeted_modifier = {
+				tag = HUN
+				attack_bonus_against = 0.05
+			}
+			targeted_modifier = {
+				tag = FIR
+				attack_bonus_against = 0.05
+			}
+		}
+		#Universal Russian Warlord Ideas
+		RUS_warlord_indifference = {
+			picture = russian_warlord
+			cancel = { has_country_flag = remove_idea }
+			removal_cost = -1
+		}
+	}
+	##############
+	# Companies
+	##############
+
+	#### General ####
+	industrial_concern = {
+
+		putilov = {
+			picture = Putilov
+			allowed = { 
+				OR = {
+					original_tag = RUS
+					original_tag = SRU
+					original_tag = DKB 
+					original_tag = ORE 
+					original_tag = SIB 
+					original_tag = KCK 
+					original_tag = HAR 
+					original_tag = PRI 
+					original_tag = ARC 
+					original_tag = FCR 
+					original_tag = PSL 
+					original_tag = KAV 
+					original_tag = ZHR
+					AND = {
+						tag = ALT
+						has_completed_focus = ALT_agartha_calling
+					}
+				}
+			}
+			available = {
+				has_full_control_of_state = 195
+			}
+			traits = { industrial_manufacturer }
+			modifier = {
+				production_speed_arms_factory_factor = 0.1
+				production_speed_industrial_complex_factor = 0.1
+			}
+			research_bonus = {
+				industry = 0.1
+			}
+		}
+
+		oktava = {
+			picture = Oktava
+			available = {
+				has_full_control_of_state = 223
+			}
+			allowed = { 
+				OR = {
+					original_tag = RUS
+					original_tag = SRU
+					original_tag = DKB 
+					original_tag = ORE 
+					original_tag = SIB 
+					original_tag = KCK 
+					original_tag = HAR 
+					original_tag = PRI 
+					original_tag = ARC 
+					original_tag = FCR 
+					original_tag = PSL 
+					original_tag = KAV 
+					original_tag = ZHR
+					AND = {
+						tag = ALT
+						has_completed_focus = ALT_agartha_calling
+					}	
+				}
+			}
+			traits = { electronics_manufacturer }
+			modifier = {
+				production_speed_radar_station_factor = 0.1
+			}
+			research_bonus = {
+				electronics = 0.1
+				industry = 0.05
+			}
+		}
+
+		branobel = {
+			picture = Branobel
+			allowed = { 
+				OR = {
+					original_tag = RUS
+					original_tag = SRU
+					original_tag = DKB 
+					original_tag = ORE 
+					original_tag = SIB 
+					original_tag = KCK 
+					original_tag = HAR 
+					original_tag = PRI 
+					original_tag = ARC 
+					original_tag = FCR 
+					original_tag = PSL 
+					original_tag = KAV 
+					original_tag = ZHR
+					AND = {
+						tag = ALT
+						has_completed_focus = ALT_agartha_calling
+					}
+					
+				}
+			}
+			available = {
+				has_full_control_of_state = 229
+			}
+			traits = { chemical_producer }
+			modifier = {
+				production_speed_synthetic_refinery_factor = 0.1
+			}
+			research_bonus = {
+				synth_resources = 0.1
+				industry = 0.05
+			}
+		}
+	}
+
+	#### Weapons Manufacturer ####
+	materiel_manufacturer = {
+		designer = yes
+
+		degtyaryov = {
+			picture = Degytarov
+			available = {
+				has_full_control_of_state = 253
+			}
+			allowed = { 
+				OR = {
+					original_tag = RUS
+					original_tag = SRU
+					original_tag = DKB 
+					original_tag = ORE 
+					original_tag = SIB 
+					original_tag = KCK 
+					original_tag = HAR 
+					original_tag = PRI 
+					original_tag = ARC 
+					original_tag = FCR 
+					original_tag = PSL 
+					original_tag = KAV 
+					original_tag = ZHR
+					AND = {
+						tag = ALT
+						has_completed_focus = ALT_agartha_calling
+					}
+					
+				}
+			}
+			traits = { infantry_equipment_producer_offense_2 }
+			modifier = {}
+			research_bonus = {
+				infantry_weapons = 0.1
+			}
+		}
+
+		izjevskij_mekhanitsjeskij = {
+			picture = Izhmash
+			allowed = { 
+				OR = {
+					original_tag = RUS
+					original_tag = SRU
+					original_tag = DKB 
+					original_tag = ORE 
+					original_tag = SIB 
+					original_tag = KCK 
+					original_tag = HAR 
+					original_tag = PRI 
+					original_tag = ARC 
+					original_tag = FCR 
+					original_tag = PSL 
+					original_tag = KAV 
+					original_tag = ZHR
+					AND = {
+						tag = ALT
+						has_completed_focus = ALT_agartha_calling
+					}
+				}
+			}
+			available = {
+				has_full_control_of_state = 399
+			}
+			traits = { infantry_equipment_producer_defense_1 }
+			modifier = {}
+			research_bonus = {
+				infantry_weapons = 0.1
+			}
+		}
+
+		sestroretskiy_oruzheynyy = {
+			picture = Sestoretskiy
+			available = {
+				has_full_control_of_state = 195
+			}
+			allowed = { 
+				OR = {
+					original_tag = RUS
+					original_tag = SRU
+					original_tag = DKB 
+					original_tag = ORE 
+					original_tag = SIB 
+					original_tag = KCK 
+					original_tag = HAR 
+					original_tag = PRI 
+					original_tag = ARC 
+					original_tag = FCR 
+					original_tag = PSL 
+					original_tag = KAV 
+					original_tag = ZHR
+					AND = {
+						tag = ALT
+						has_completed_focus = ALT_agartha_calling
+					}
+					
+				}
+			}
+			traits = { infantry_equipment_producer_mass_2 }
+			modifier = {}
+			research_bonus = {
+				infantry_weapons = 0.1
+			}
+		}
+
+		tulsky_oruzheiny = {
+			picture = Tulskiy
+			allowed = { 
+				OR = {
+					original_tag = RUS
+					original_tag = SRU
+					original_tag = DKB 
+					original_tag = ORE 
+					original_tag = SIB 
+					original_tag = KCK 
+					original_tag = HAR 
+					original_tag = PRI 
+					original_tag = ARC 
+					original_tag = FCR 
+					original_tag = PSL 
+					original_tag = KAV 
+					original_tag = ZHR
+					AND = {
+						tag = ALT
+						has_completed_focus = ALT_agartha_calling
+					}
+				}
+			}
+			available = {
+				has_full_control_of_state = 223
+			}
+			traits = { infantry_equipment_producer_allround_2 }
+			modifier = {}
+			research_bonus = {
+				infantry_weapons = 0.1
+			}
+		}
+	}
+
+	#### Heavy Equipment Manufacturer ####
+	tank_manufacturer = {
+		designer = yes
+
+		gosudarstvennyy_obukhovskiy = {
+			picture = Obukh
+			allowed = { 
+				OR = {
+					original_tag = RUS
+					original_tag = SRU
+					original_tag = DKB 
+					original_tag = ORE 
+					original_tag = SIB 
+					original_tag = KCK 
+					original_tag = HAR 
+					original_tag = PRI 
+					original_tag = ARC 
+					original_tag = FCR 
+					original_tag = PSL 
+					original_tag = KAV 
+					original_tag = ZHR
+					AND = {
+						tag = ALT
+						has_completed_focus = ALT_agartha_calling
+					}
+					
+				}
+			}
+			available = {
+				has_full_control_of_state = 195
+			}
+			traits = { artillery_producer_offense_1 }
+			modifier = {}
+			research_bonus = {
+				artillery = 0.05
+			}
+		}
+
+		motovilikha = {
+			picture = Motovil
+			allowed = { 
+				OR = {
+					original_tag = RUS
+					original_tag = SRU
+					original_tag = DKB 
+					original_tag = ORE 
+					original_tag = SIB 
+					original_tag = KCK 
+					original_tag = HAR 
+					original_tag = PRI 
+					original_tag = ARC 
+					original_tag = FCR 
+					original_tag = PSL 
+					original_tag = KAV 
+					original_tag = ZHR
+					AND = {
+						tag = ALT
+						has_completed_focus = ALT_agartha_calling
+					}
+					
+				}
+			}
+			available = {
+				has_full_control_of_state = 398
+			}
+			traits = { artillery_producer_mass_1 }
+			modifier = {}
+			research_bonus = {
+				artillery = 0.05
+			}
+		}
+
+		russko_baltiisky = {
+			picture = Russkobalt
+			allowed = { 
+				OR = {
+					original_tag = RUS
+					original_tag = SRU
+					original_tag = DKB 
+					original_tag = ORE 
+					original_tag = SIB 
+					original_tag = KCK 
+					original_tag = HAR 
+					original_tag = PRI 
+					original_tag = ARC 
+					original_tag = FCR 
+					original_tag = PSL 
+					original_tag = KAV 
+					original_tag = ZHR
+					AND = {
+						tag = ALT
+						has_completed_focus = ALT_agartha_calling
+					}
+				}
+			}
+			available = {
+				has_full_control_of_state = 195
+			}
+			traits = { motorised_equipment_producer_offense_1 }
+			modifier = {}
+			research_bonus = {
+				motorized_equipment = 0.05
+			}
+		}
+
+		nizhegorodsky_avtomobilny = {
+			picture = Nizhe
+			allowed = { 
+				OR = {
+					original_tag = RUS
+					original_tag = SRU
+					original_tag = DKB 
+					original_tag = ORE 
+					original_tag = SIB 
+					original_tag = KCK 
+					original_tag = HAR 
+					original_tag = PRI 
+					original_tag = ARC 
+					original_tag = FCR 
+					original_tag = PSL 
+					original_tag = KAV 
+					original_tag = ZHR
+					AND = {
+						tag = ALT
+						has_completed_focus = ALT_agartha_calling
+					}
+				}
+			}
+			available = {
+				has_full_control_of_state = 252
+			}
+			traits = { motorised_equipment_producer_mass_1 }
+			modifier = {}
+			research_bonus = {
+				motorized_equipment = 0.05
+			}
+		}
+
+		uralmash = {
+			picture = Uralmesh
+			allowed = { 
+				OR = {
+					original_tag = RUS
+					original_tag = SRU
+					original_tag = DKB 
+					original_tag = ORE 
+					original_tag = SIB 
+					original_tag = KCK 
+					original_tag = HAR 
+					original_tag = PRI 
+					original_tag = ARC 
+					original_tag = FCR 
+					original_tag = PSL 
+					original_tag = KAV 
+					original_tag = ZHR
+					AND = {
+						tag = ALT
+						has_completed_focus = ALT_agartha_calling
+					}
+				}
+			}
+			available = {
+				has_full_control_of_state = 653
+			}
+			traits = { heavy_tank_producer_offense_1 }
+			modifier = {}
+			research_bonus = {
+				armor = 0.05
+			}
+		}
+
+		uralvagonzavod = {
+			picture = Uralvagonzavod
+			allowed = { 
+				OR = {
+					original_tag = RUS
+					original_tag = SRU
+					original_tag = DKB 
+					original_tag = ORE 
+					original_tag = SIB 
+					original_tag = KCK 
+					original_tag = HAR 
+					original_tag = PRI 
+					original_tag = ARC 
+					original_tag = FCR 
+					original_tag = PSL 
+					original_tag = KAV 
+					original_tag = ZHR
+					AND = {
+						tag = ALT
+						has_completed_focus = ALT_agartha_calling
+					}
+				}
+			}
+			available = {
+				has_full_control_of_state = 653
+			}
+			traits = { medium_tank_producer_offense_1 }
+			modifier = {}
+			research_bonus = {
+				armor = 0.05
+			}
+		}
+
+		chelyabinskiy_traktornyy = {
+			picture = Chelya
+			allowed = { 
+				OR = {
+					original_tag = RUS
+					original_tag = SRU
+					original_tag = DKB 
+					original_tag = ORE 
+					original_tag = SIB 
+					original_tag = KCK 
+					original_tag = HAR 
+					original_tag = PRI 
+					original_tag = ARC 
+					original_tag = FCR 
+					original_tag = PSL 
+					original_tag = KAV 
+					original_tag = ZHR
+					AND = {
+						tag = ALT
+						has_completed_focus = ALT_agartha_calling
+					}
+				}
+			}
+			available = {
+				has_full_control_of_state = 572
+			}
+			traits = { medium_tank_producer_mass_1 }
+			modifier = {}
+			research_bonus = {
+				armor = 0.05
+			}
+		}
+
+		avtomobilnoe_moskovskoe = {
+			picture = Amo
+			allowed = { 
+				OR = {
+					original_tag = RUS
+					original_tag = SRU
+					original_tag = DKB 
+					original_tag = ORE 
+					original_tag = SIB 
+					original_tag = KCK 
+					original_tag = HAR 
+					original_tag = PRI 
+					original_tag = ARC 
+					original_tag = FCR 
+					original_tag = PSL 
+					original_tag = KAV 
+					original_tag = ZHR
+					AND = {
+						tag = ALT
+						has_completed_focus = ALT_agartha_calling
+					}
+				}
+			}
+			available = {
+				has_full_control_of_state = 219
+			}
+			traits = { small_tank_producer_defense_1 }
+			modifier = {}
+			research_bonus = {
+				armor = 0.05
+			}
+		}
+	}
+
+	#### Naval Manufacturer ####
+	naval_manufacturer = {
+		designer = yes
+		baltiysky_verfi = {
+			picture = Baltic
+			allowed = { 
+				OR = {
+					original_tag = RUS
+					original_tag = SRU
+					original_tag = DKB 
+					original_tag = ORE 
+					original_tag = SIB 
+					original_tag = KCK 
+					original_tag = HAR 
+					original_tag = PRI 
+					original_tag = ARC 
+					original_tag = FCR 
+					original_tag = PSL 
+					original_tag = KAV 
+					original_tag = ZHR
+					AND = {
+						tag = ALT
+						has_completed_focus = ALT_agartha_calling
+					}
+				}
+			}
+			available = {
+				has_full_control_of_state = 195
+			}
+			traits = { capital_ship_producer_offense_1 }
+			modifier = {}
+			research_bonus = {
+				naval_equipment = 0.05
+			}
+		}
+
+		admiralteiskie_verfi = {
+			picture = Admiralty
+			allowed = { 
+				OR = {
+					original_tag = RUS
+					original_tag = SRU
+					original_tag = DKB 
+					original_tag = ORE 
+					original_tag = SIB 
+					original_tag = KCK 
+					original_tag = HAR 
+					original_tag = PRI 
+					original_tag = ARC 
+					original_tag = FCR 
+					original_tag = PSL 
+					original_tag = KAV 
+					original_tag = ZHR
+					AND = {
+						tag = ALT
+						has_completed_focus = ALT_agartha_calling
+					}
+				}
+			}
+			available = {
+				has_full_control_of_state = 195
+			}
+			traits = { cruiser_producer_defense_1 }
+			modifier = {}
+			research_bonus = {
+				naval_equipment = 0.05
+			}
+		}
+
+		rubin = {
+			picture = Rubin
+			allowed = {
+				OR = {
+					original_tag = RUS
+					original_tag = SRU
+					original_tag = DKB 
+					original_tag = ORE 
+					original_tag = SIB 
+					original_tag = KCK 
+					original_tag = HAR 
+					original_tag = PRI 
+					original_tag = ARC 
+					original_tag = FCR 
+					original_tag = PSL 
+					original_tag = KAV 
+					original_tag = ZHR
+					original_tag = ZHR
+					AND = {
+						tag = ALT
+						has_completed_focus = ALT_agartha_calling
+					}
+					
+				}
+				
+			}
+			available = {
+				has_full_control_of_state = 195
+			}
+			traits = { small_ship_producer_offense_1 }
+			modifier = {}
+			research_bonus = {
+				naval_equipment = 0.05
+			}
+		}
+	}
+
+	#### Air ####
+	aircraft_manufacturer = {
+		designer = yes
+		mikoyan_gurevich = {
+			picture = Mikoyan
+			allowed = { 
+				OR = {
+					original_tag = RUS
+					original_tag = SRU
+					original_tag = DKB 
+					original_tag = ORE 
+					original_tag = SIB 
+					original_tag = KCK 
+					original_tag = HAR 
+					original_tag = PRI 
+					original_tag = ARC 
+					original_tag = FCR 
+					original_tag = PSL 
+					original_tag = KAV 
+					original_tag = ZHR
+					AND = {
+						tag = ALT
+						has_completed_focus = ALT_agartha_calling
+					}
+				}
+			}
+			available = {
+				has_full_control_of_state = 219
+			}
+			traits = { fighter_producer_offense_1 }
+			modifier = {}
+			research_bonus = {
+				air_equipment = 0.05
+			}
+		}
+
+		lavochkin = {
+			picture = Lavochkin
+			allowed = { 
+				OR = {
+					original_tag = RUS
+					original_tag = SRU
+					original_tag = DKB 
+					original_tag = ORE 
+					original_tag = SIB 
+					original_tag = KCK 
+					original_tag = HAR 
+					original_tag = PRI 
+					original_tag = ARC 
+					original_tag = FCR 
+					original_tag = PSL 
+					original_tag = KAV 
+					original_tag = ZHR
+					AND = {
+						tag = ALT
+						has_completed_focus = ALT_agartha_calling
+					}
+				}
+			}
+			available = {
+				has_full_control_of_state = 219
+			}
+			traits = { fighter_producer_defense_2 }
+			modifier = {}
+			research_bonus = {
+				air_equipment = 0.05
+			}
+		}
+
+		dux = {
+			picture = Dux
+			allowed = { 
+				OR = {
+					original_tag = RUS
+					original_tag = SRU
+					original_tag = DKB 
+					original_tag = ORE 
+					original_tag = SIB 
+					original_tag = KCK 
+					original_tag = HAR 
+					original_tag = PRI 
+					original_tag = ARC 
+					original_tag = FCR 
+					original_tag = PSL 
+					original_tag = KAV 
+					original_tag = ZHR
+					AND = {
+						tag = ALT
+						has_completed_focus = ALT_agartha_calling
+					}
+				}
+			}
+			available = {
+				has_full_control_of_state = 219
+			}
+			traits = { fighter_producer_mass_1 }
+			modifier = {}
+			research_bonus = {
+				air_equipment = 0.05
+			}
+		}
+
+		yakovlev = {
+			picture = Yakovlev
+			allowed = { 
+				OR = {
+					original_tag = RUS
+					original_tag = SRU
+					original_tag = DKB 
+					original_tag = ORE 
+					original_tag = SIB 
+					original_tag = KCK 
+					original_tag = HAR 
+					original_tag = PRI 
+					original_tag = ARC 
+					original_tag = FCR 
+					original_tag = PSL 
+					original_tag = KAV 
+					original_tag = ZHR
+					AND = {
+						tag = ALT
+						has_completed_focus = ALT_agartha_calling
+					}
+				}
+			}
+			available = {
+				has_full_control_of_state = 219
+			}
+			traits = { bomber_producer_offense_1 }
+			modifier = {}
+			research_bonus = {
+				air_equipment = 0.05
+			}
+		}
+
+		tupolev = {
+			picture = Tupolev
+			allowed = { 
+				OR = {
+					original_tag = RUS
+					original_tag = SRU
+					original_tag = DKB 
+					original_tag = ORE 
+					original_tag = SIB 
+					original_tag = KCK 
+					original_tag = HAR 
+					original_tag = PRI 
+					original_tag = ARC 
+					original_tag = FCR 
+					original_tag = PSL 
+					original_tag = KAV 
+					original_tag = ZHR
+					AND = {
+						tag = ALT
+						has_completed_focus = ALT_agartha_calling
+					}
+				}
+			}
+			available = {
+				has_full_control_of_state = 219
+			}
+			traits = { bomber_producer_defense_1 }
+			modifier = {}
+			research_bonus = {
+				air_equipment = 0.05
+			}
+		}
+
+		seversky_aircraft = {
+			picture = Seversky
+			allowed = { 
+				OR = {
+					original_tag = RUS
+					original_tag = SRU
+					original_tag = DKB 
+					original_tag = ORE 
+					original_tag = SIB 
+					original_tag = KCK 
+					original_tag = HAR 
+					original_tag = PRI 
+					original_tag = ARC 
+					original_tag = FCR 
+					original_tag = PSL 
+					original_tag = KAV 
+					original_tag = ZHR
+					AND = {
+						tag = ALT
+						has_completed_focus = ALT_agartha_calling
+					}
+				}
+			}
+			available = {
+				has_full_control_of_state = 219
+			}
+			traits = { bomber_producer_mass_1 }
+			modifier = {}
+			research_bonus = {
+				air_equipment = 0.05
+			}
+		}
+
+		sukhoi = {
+			picture = Sukhoi
+			allowed = { 
+				OR = {
+					original_tag = RUS
+					original_tag = SRU
+					original_tag = DKB 
+					original_tag = ORE 
+					original_tag = SIB 
+					original_tag = KCK 
+					original_tag = HAR 
+					original_tag = PRI 
+					original_tag = ARC 
+					original_tag = FCR 
+					original_tag = PSL 
+					original_tag = KAV 
+					original_tag = ZHR
+					AND = {
+						tag = ALT
+						has_completed_focus = ALT_agartha_calling
+					}
+				}
+			}
+			available = {
+				has_full_control_of_state = 219
+			}
+			traits = { nav_cas_producer_offense_1 }
+			modifier = {}
+			research_bonus = {
+				air_equipment = 0.05
+			}
+		}
+
+		ilyushin = {
+			picture = Ilyushin
+			allowed = { 
+				OR = {
+					original_tag = RUS
+					original_tag = SRU
+					original_tag = DKB 
+					original_tag = ORE 
+					original_tag = SIB 
+					original_tag = KCK 
+					original_tag = HAR 
+					original_tag = PRI 
+					original_tag = ARC 
+					original_tag = FCR 
+					original_tag = PSL 
+					original_tag = KAV 
+					original_tag = ZHR
+					AND = {
+						tag = ALT
+						has_completed_focus = ALT_agartha_calling
+					}
+				}
+			}
+			available = {
+				has_full_control_of_state = 219
+			}
+			traits = { nav_cas_producer_defense_2 }
+			modifier = {}
+			research_bonus = {
+				air_equipment = 0.05
+			}
+		}
+
+		sikorsky_aircraft = {
+			picture = Sikorsky
+			allowed = { 
+				OR = {
+					original_tag = RUS
+					original_tag = SRU
+					original_tag = DKB 
+					original_tag = ORE 
+					original_tag = SIB 
+					original_tag = KCK 
+					original_tag = HAR 
+					original_tag = PRI 
+					original_tag = ARC 
+					original_tag = FCR 
+					original_tag = PSL 
+					original_tag = KAV 
+					original_tag = ZHR
+					AND = {
+						tag = ALT
+						has_completed_focus = ALT_agartha_calling
+					}
+				}
+				
+			}
+			available = {
+				has_full_control_of_state = 219
+			}
+			traits = { nav_cas_producer_mass_2 }
+			modifier = {}
+			research_bonus = {
+				air_equipment = 0.05
+			}
+		}
+
+
+	}
+}

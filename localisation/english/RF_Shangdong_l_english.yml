@@ -1,0 +1,41 @@
+﻿l_english:
+#COUNTRY NAME#
+
+#PARTIES#
+
+SHA_vanguard_socialism_party:0 "CPC - R"
+SHA_popular_socialism_party:0 "CPC - L"
+SHA_anarchism_party:0 "CAM"
+SHA_revisionist_socialism_party:0 "GMD - MinSheng"
+SHA_progressivism_party:0 "GMD - MinQuan"
+SHA_placeholderism_party:0 "GMD - Moderates"
+SHA_liberalism_party:0 "GMD - Moderates"
+SHA_conservatism_party:0 "GMD - MinZu"
+SHA_right_authoritarianism_party:0 "GMD - CEC"
+SHA_despotism_party:0 "SMA"
+SHA_reactionism_party:0 "SHA - SSS"
+SHA_accelerationism_party:0 "YCP"
+SHA_vanguard_socialism_party_long:0 "Communist Party of China - Rightist"
+SHA_popular_socialism_party_long:0 "Communist Party of China - Leftist"
+SHA_anarchism_party_long:0 "Chinese Anarchist Movement"
+SHA_revisionist_socialism_party_long:0 "GMD - MinSheng Faction"
+SHA_progressivism_party_long:0 "GMD - MinQuan Faction"
+SHA_placeholderism_party_long:0 "GMD - Moderates"
+SHA_liberalism_party_long:0 "GMD - Moderate Faction"
+SHA_conservatism_party_long:0 "GMD - MinZu Faction"
+SHA_right_authoritarianism_party_long:0 "GMD - Central Executive Committee"
+SHA_despotism_party_long:0 "Shandong Military Adminstration"
+SHA_reactionism_party_long:0 "GMD - Senior Statesman Society"
+SHA_accelerationism_party_long:0 "Young China Party - Shandong"
+
+#LEADER DESCRIPTIONS#
+POLITICS_CHUANFANG_DESC:0 ""
+POLITICS_PEIFU_DESC:0 ""
+
+#IDEAS#
+SHA_anti_japan_diplo:0 "Anti-Japanese Stance"
+#CUSTOM TOOLTIPS AND FLAGS#
+
+#DECISIONS (1.5 Update)#
+
+#FOCUSES#

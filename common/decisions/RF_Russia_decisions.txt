@@ -1,0 +1,862 @@
+RUS_our_diplomacy = {
+	RUS_form_finland = {
+		icon = GFX_Russian_uni_nationalist
+		visible = {
+			owns_state = 111
+		}
+		fire_only_once = yes 
+		ai_will_do = {
+			factor = 100
+		}
+		complete_effect = {
+			add_to_temp_array = { core_removal_array = FIN }
+			remove_all_cores_and_claims_of_tags = yes
+			every_state = {
+				limit = {
+					OR = {
+						state = 111
+						state = 149
+						state = 856 
+						state = 146 
+						state = 150
+						state = 148
+					}
+				}
+				FIN = { add_state_core = PREV }
+			}
+			every_owned_state = {
+				limit = {
+					is_core_of = FIN
+					is_not_claim_or_core_of_ROOT = yes
+				}
+				FIN = { transfer_state = PREV }
+			}
+			set_temp_variable = { tag_to_release = FIN }
+			puppet_released_tag = yes
+			FIN = {
+				set_cosmetic_tag = FIN_RUS
+				set_politics = {
+					ruling_party = conservatism
+					elections_allowed = no
+				}
+				promote_character = FIN_juho_kusti_paasikivi
+			}
+		}
+	}
+	Unification_core_territory_rus = {
+		icon = GFX_Russian_uni_nationalist
+		ai_will_do = { factor = 100 }
+		visible = {
+			OR = {
+				tag = ARC
+				tag = PRI
+				tag = RUS
+				tag = SIB
+				tag = SRU
+				#Integrates Mongolia
+				tag = DKB
+				AND = {
+					tag = KCK
+					has_country_leader = {
+						character = KCK_Gajda
+						ruling_only = yes
+					}
+				}
+			}
+			any_owned_state = {
+				OR = {
+					has_variable = is_russian_state
+					has_variable = is_mongolian_state
+				}
+				NOT = { is_core_of = ROOT }
+			}
+		}
+		complete_effect = {
+			Unification_core_territory_effects = yes
+		}
+	}
+	RUS_puppet_brotherhood = {
+		icon = GFX_Russian_uni_nationalist
+		visible = {
+			has_completed_focus = RUS_reintegrate_baltic
+			WRT = {
+				exists = yes
+				has_government = reactionism
+			}
+		}
+		available = {
+			WRT = {
+				has_war = no
+			}
+		}
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+		}
+		complete_effect = {
+			ROOT = {
+				WRT = {
+					PREV_annex_CURRENT_warlord = yes
+				}
+			}
+		}
+	}
+	RUS_demand_baron = {
+		icon = GFX_Russian_uni_nationalist
+		visible = {
+			has_completed_focus = RUS_secure_altay
+			country_exists = TAN
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		fire_only_once = yes
+		complete_effect = {
+			TAN = {
+				country_event = mongolia.100
+			}
+		}
+	}
+	RUS_demand_mongolia={
+		ai_will_do = {
+			factor = 10
+		}
+		icon = GFX_Russian_uni_nationalist
+		fire_only_once = yes
+		visible = {
+			tag = ROS 
+			united_russia = yes 
+			var:330.owner = {
+				OR = {
+					tag = BYJ
+					tag = MAN
+				}
+			}
+		}
+		war_with_on_remove = BYJ
+		war_with_on_remove = MAN
+		remove_effect = {
+			if = {
+				limit = { var:330.owner = { is_ai = yes } }
+				every_state = {
+					limit = {
+						OR = {
+							state = 1213
+							state = 564 
+							state = 563 
+							state = 961 
+							state = 654
+							state = 838
+							state = 898
+						}
+						is_owned_by = var:330.owner
+					}
+					ROOT = { transfer_state = PREV }
+				}
+			}
+			else = {
+				declare_war_on = {
+					target = var:330.owner
+				}
+			}
+		}
+	}
+#	RUS_organize_mongolia = {
+#		ai_will_do = {
+#			factor = 10
+#		}
+#		icon = GFX_Russian_uni_nationalist
+ #	   fire_only_once = yes
+#		visible = {
+ #		   united_russia = yes
+#		}
+#		available = {
+#			owns_state = 330 #KHU
+#			owns_state = 612 #MON
+#			owns_state = 915 #MPA
+#			owns_state = 329 #TAN
+#			owns_state = 654 #ALT
+#			owns_state = 563 #MO2
+#		}
+#		complete_effect = {
+#			every_state = {
+#				limit = {
+#					OR = {
+#						state = 962
+#						state = 618
+#						state = 793
+#						state = 915
+#						state = 1149
+#						state = 330
+#						state = 1151
+#						state = 1150
+#						state = 914
+#						state = 612
+#					}
+#				}
+#				MNO = { add_state_core = PREV }
+#			}
+#			every_owned_state = {
+#				limit = { is_core_of = MNO }
+#				MNO = { transfer_state = PREV }
+#			}
+#			add_to_temp_array = { core_removal_array = ALT }
+#			remove_all_cores_and_claims_of_tags = yes
+#			add_to_temp_array = { core_removal_array = TAN }
+#			remove_all_cores_and_claims_of_tags = yes
+#			add_to_temp_array = { core_removal_array = MON }
+#			remove_all_cores_and_claims_of_tags = yes
+#			add_to_temp_array = { core_removal_array = MO2 }
+#			remove_all_cores_and_claims_of_tags = yes
+#			add_to_temp_array = { core_removal_array = MPA }
+#			remove_all_cores_and_claims_of_tags = yes
+#			add_to_temp_array = { core_removal_array = KHU }
+#			remove_all_cores_and_claims_of_tags = yes
+#			
+#			set_temp_variable = { tag_to_release = MNO }
+#			puppet_released_tag = yes
+#		}
+#	}
+	RUS_reclaim_caucasus = {
+		days_remove = 14
+		icon = GFX_Russian_uni_nationalist
+		visible = {
+			has_completed_focus = RUS_ultimatum_to_south_east
+			has_war = no
+			OR = {
+				is_neighbor_of = KAV
+				is_neighbor_of = ARM
+			}
+		}
+		ai_will_do={
+			base = 0
+			modifier = {
+				add = 2000
+				date > 1939.3.1
+			}
+		}
+		war_with_on_remove = KAV
+		war_with_on_remove = ARM
+		fire_only_once = yes
+		remove_effect = {
+			declare_war_on = {
+				type = annex_everything
+				target = KAV
+			}
+			declare_war_on = {
+				type = annex_everything
+				target = ARM
+			}
+		}
+	}
+	RUS_unification = {
+		icon = GFX_Russian_uni_nationalist
+		available = {
+			owns_state = 234
+			owns_state = 231
+			owns_state = 652
+			owns_state = 195
+			owns_state = 590
+			owns_state = 570
+			owns_state = 574
+			owns_state = 978
+			NOT = { MNS = { owns_state = 978 } }
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		fire_only_once = yes
+		remove_effect = {
+			clr_country_flag = is_russian_warlord
+			set_global_flag = united_russia
+			save_global_event_target_as = russian_unification
+			add_ideas = ROS_recently_reunited
+			activate_mission = ROS_idea_swap_times_one
+			add_war_support = 0.3
+			add_stability = 0.3
+			add_research_slot = 1
+			if = {
+				limit = { has_completed_focus = RUS_alt_black_bloc }
+				news_event = news.36
+			}
+			else_if = {
+				limit = { has_completed_focus = RUS_shtabs_kapitans }
+				news_event = news.37
+			}
+			else_if = {
+				limit = { has_completed_focus = RUS_liberalization_lead_prosperity }
+				news_event = news.357
+			}
+			else_if = {
+				limit = { has_completed_focus = RUS_union_of_young_russia }
+				news_event = news.38
+			}
+			else_if = {
+				limit = { has_completed_focus = RUS_novy_kurs  }
+				news_event = news.39
+				SRU = { 
+					drop_cosmetic_tag = yes
+					set_cosmetic_tag = SRU_unified
+				}
+			}
+			hidden_effect = {
+				every_owned_state = {
+					limit = { has_variable = is_russian_state }
+					remove_core_of = DKB 
+					remove_core_of = SIB 
+					remove_core_of = ZHR 
+					remove_core_of = ALT 
+					remove_core_of = ORE 
+					remove_core_of = KAV 
+					remove_core_of = KCK 
+					remove_core_of = HAR 
+					remove_core_of = ARC 
+					remove_core_of = PSL 
+					remove_core_of = MNS 
+					remove_core_of = PRI 
+					remove_core_of = FCR 
+					remove_core_of = GUK
+				}
+				if = {
+					limit = { ROOT = { original_tag = RUS } }
+					every_owned_state = {
+						remove_claim_by = SRU 
+						remove_core_of = SRU
+					}
+				}
+				else = {
+					every_owned_state = {
+						remove_claim_by = RUS 
+						remove_core_of = RUS
+					}
+				}
+			}
+		}
+	}
+	RUS_unification_1 = {
+		icon = GFX_Russian_uni_nationalist
+		visible = {
+			owns_state = 234
+			owns_state = 652
+			owns_state = 195
+			owns_state = 590
+			owns_state = 570
+			MNS = {
+				owns_state = 978
+			}
+		}
+		available = {
+			owns_state = 234
+			owns_state = 652
+			owns_state = 195
+			owns_state = 590
+			owns_state = 570
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		fire_only_once = yes
+		remove_effect = {
+			clr_country_flag = is_russian_warlord
+			set_global_flag = united_russia
+			save_global_event_target_as = russian_unification
+			add_ideas = ROS_recently_reunited
+			activate_mission = ROS_idea_swap_times_one
+			if = {
+				limit = { has_completed_focus = RUS_alt_black_bloc }
+				news_event = news.36
+			}
+			else_if = {
+				limit = { has_completed_focus = RUS_shtabs_kapitans }
+				news_event = news.37
+			}
+			else_if = {
+				limit = { has_completed_focus = RUS_union_of_young_russia }
+				news_event = news.38
+			}
+			else_if = {
+				limit = { has_completed_focus = RUS_novy_kurs }
+				SRU = { 
+					drop_cosmetic_tag = yes
+					set_cosmetic_tag = SRU_unified
+				}
+				news_event = news.39
+			}
+			else_if = {
+				limit = { has_completed_focus = RUS_liberalization_lead_prosperity }
+				news_event = news.39
+			}
+			hidden_effect = {
+				every_owned_state = {
+					limit = { has_variable = is_russian_state }
+					remove_core_of = DKB 
+					remove_core_of = SIB 
+					remove_core_of = ZHR 
+					remove_core_of = ALT 
+					remove_core_of = ORE 
+					remove_core_of = KAV 
+					remove_core_of = KCK 
+					remove_core_of = HAR 
+					remove_core_of = ARC 
+					remove_core_of = PSL 
+					remove_core_of = MNS 
+					remove_core_of = PRI 
+					remove_core_of = FCR 
+					remove_core_of = GUK
+				}
+				if = {
+					limit = { ROOT = { original_tag = RUS } }
+					every_owned_state = {
+						remove_claim_by = SRU 
+						remove_core_of = SRU
+					}
+				}
+				else = {
+					every_owned_state = {
+						remove_claim_by = RUS 
+						remove_core_of = RUS
+					}
+				}
+			}
+		}
+	}
+}
+
+SRU_new_course_to_the_great_russia = {
+
+	#Decision for: Improve the Trans-Siberian Railway
+	improvethetranssiberianrailway = {
+		cost = 200
+		days_remove = 70
+		ai_will_do = {
+			factor = 100
+		}
+		icon = decision_category_generic_industry
+		available = {
+			hidden_trigger = { original_tag = SRU }
+			owns_state = 569
+			owns_state = 40
+			owns_state = 570
+			owns_state = 403
+			owns_state = 571
+			owns_state = 653
+			has_completed_focus = RUS_transsib
+		}
+		fire_only_once = no
+		complete_effect = {
+			build_railway = {
+				path = { 7274 4734 10537 1794 }
+			}
+			build_railway = {
+				path = { 7757 4866 7274 7825 1860 1733 12679 10696 }
+			}
+			build_railway = {
+				path = { 10696 4700 12652 10600 3472 7774 7846 4824 10189 1543 9953 1821 }
+			}
+		}
+	}
+
+	improvethemoscowrigarailway = {
+		cost = 200
+		days_remove = 70
+		ai_will_do = {
+			factor = 100
+		}
+		icon = decision_category_generic_industry
+		available = {
+			owns_state = 12
+			owns_state = 242
+			owns_state = 210
+			owns_state = 857
+			owns_state = 1058
+			owns_state = 219
+			has_completed_focus = RUS_colonization_ostsee
+		}
+		fire_only_once = no
+		complete_effect = {
+			build_railway = {
+				path = { 9340 10323 11222 7482 310 6459 3219 6326 6249 9323 11241 11290 306 3362 6387 9272 11254 335 401 3327 3391 6380 }
+			}
+		}
+	}
+
+	improvethemoscowkazanrailway = {
+		cost = 150
+		days_remove = 70
+		ai_will_do = {
+			factor = 100
+		}
+		icon = decision_category_generic_industry
+		available = {
+			owns_state = 253
+			owns_state = 252
+			owns_state = 256
+			owns_state = 249
+		}
+		fire_only_once = no
+		complete_effect = {
+			build_railway = {
+				path = { 6380 301 11362 6316 378 280 3370 3268 6392 6295 6299 11375 3303 11344 11277 3352 6374 6253 9373 11356 11243 6338 }
+			}
+		}
+	}
+
+	improvethegroznybakurailway = {
+		cost = 100
+		days_remove = 70
+		ai_will_do = {
+			factor = 100
+		}
+		icon = decision_category_generic_industry
+		available = {
+			owns_state = 232
+			owns_state = 229
+			owns_state = 1054
+			owns_state = 1057
+			has_completed_focus = RUS_grozny_baku
+		}
+		fire_only_once = no
+		complete_effect = {
+			build_railway = {
+				path = { 3672 3682 3668 4463 7624 4458 7495 7661 }
+			}
+		}
+	}
+
+	improvethekazanyekaterinburgrailway = {
+		cost = 100
+		days_remove = 70
+		ai_will_do = {
+			factor = 100
+		}
+		icon = decision_category_generic_industry
+		available = {
+			owns_state = 249
+			owns_state = 399
+			owns_state = 398
+			owns_state = 573
+			owns_state = 653
+			has_completed_focus = RUS_kazan_yekaterinburg
+		}
+		fire_only_once = no
+		complete_effect = {
+			build_railway = {
+				path = { 6338 260 9336 3251 3300 6388 6278 7403 206 1380 10286 10314 361 3280 7320 10133 1821 }
+			}
+		}
+	}
+
+	improvethekoltasvorkutarailway = {
+		cost = 250
+		days_remove = 70
+		ai_will_do = {
+			factor = 100
+		}
+		icon = decision_category_generic_industry
+		available = {
+			owns_state = 262
+			owns_state = 397
+			owns_state = 399
+			owns_state = 400
+			has_completed_focus = RUS_kotlas_vorkuta
+		}
+		fire_only_once = no
+		complete_effect = {
+			build_railway = {
+				path = { 9293 6288 11124 88 10200 3000 11203 4298 10579 7712 10723 11098 11119 6040 }
+			}
+			262 = {
+				add_extra_state_shared_building_slots = 2
+				add_manpower = 50000
+				set_victory_points = {
+					province = 6040
+					value = 3
+				}
+				add_building_construction = {
+					type = supply_node
+					level = 1
+					province = 6040
+					instant_build = yes
+				}
+			}
+			397 = {
+				add_building_construction = {
+					type = supply_node
+					level = 1
+					province = 6040
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	improvethemoscowyuzovkarailway = {
+		icon = decision_category_generic_industry
+		available = {
+			owns_state = 219
+			owns_state = 220
+			owns_state = 221
+			owns_state = 222
+			owns_state = 223
+			owns_state = 227
+			owns_state = 240
+			has_completed_focus = RUS_moscow_donbass
+		}
+		fire_only_once = no
+		complete_effect = {
+			build_railway = {
+				path = { 6380 6414 9348 6290 6396 6262 3292 11242 9411 9355 9328 9260 3580 558 3492 9449 418 3531 6530 502 3479 6474 }
+			}
+		}
+		cost = 100
+		days_remove = 70
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	#Decision for: Exploit Siberian Wealth
+	exploitsiberianwealth = {
+		cost = 100
+		days_remove = 70
+		ai_will_do = {
+			factor = 100
+		}
+		icon = decision_category_generic_prospect_for_resources
+		available = {
+			owns_state = 570
+			owns_state = 208
+			owns_state = 569
+			has_completed_focus = RUS_siberian_wealth
+		}
+		fire_only_once = yes
+		complete_effect = {
+			add_resource = {
+				type = oil
+				amount = 15
+				state = 570
+			}
+			add_resource = {
+				type = steel
+				amount = 15
+				state = 208
+			}
+			add_resource = {
+				type = aluminium
+				amount = 20
+				state = 569
+			}
+		}
+	}
+}
+
+SRU_colonization_plan_vostok = {
+
+	SRU_core_steppes = {
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+		}
+		cost = 100
+		icon = infiltrate_state
+		visible = {
+			has_completed_focus = RUS_plan_vostok
+		}
+		available = {
+			owns_state = 571
+			owns_state = 583
+			owns_state = 590
+			owns_state = 588
+			owns_state = 404
+			owns_state = 589
+			owns_state = 842
+			owns_state = 586
+		}
+		complete_effect  = {
+			253 = {
+				add_manpower = -80000
+			}
+			404 = {
+				add_manpower = 40000
+				add_manpower = -10000
+			}
+			586 = {
+				add_manpower = 40000
+				add_manpower = -10000
+			}
+		}
+	}
+	SRU_core_siberia = {
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+		}
+		cost = 100
+		icon = infiltrate_state
+		visible = {
+			has_completed_focus = RUS_plan_vostok
+		}
+		available = {
+			owns_state = 403
+			owns_state = 580
+			owns_state = 578
+			owns_state = 570
+			owns_state = 40
+			owns_state = 569
+			owns_state = 568
+			owns_state = 567
+			owns_state = 566
+		}
+		complete_effect  = {
+			400 = {
+				add_manpower = -80000
+			}
+			403 = {
+				add_manpower = 40000
+				add_manpower = -2000
+			}
+			578 = {
+				add_manpower = 40000
+				add_manpower = -2000
+			}
+		}
+	}
+	SRU_uzbekistan = {
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+		}
+		cost = 150
+		icon = infiltrate_state
+		visible = {
+			has_completed_focus = RUS_resettlement_ministry
+		}
+		available = {
+			SRU = {
+				owns_state = 405
+				owns_state = 585
+			}
+		}
+		complete_effect  = {
+			219 = { add_manpower = -40000 }
+			405 = {
+				add_manpower = -2000
+				add_manpower = 20000
+			}
+			585 = {
+				add_manpower = -2000
+				add_manpower = 20000
+			}
+		}
+	}
+
+	SRU_turkestan = {
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+		}
+		cost = 150
+		icon = infiltrate_state
+		visible = {
+			has_completed_focus = RUS_resettlement_ministry
+		}
+		available = {
+			var:852.controller = { tag = SRU }
+		}
+		complete_effect  = {
+			255 = { add_manpower = -10000 }
+			852 = { add_manpower = 10000 }
+		}
+	}
+
+	SRU_khwarzem = {
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+		}
+		cost = 150
+		icon = infiltrate_state
+		visible = {
+			has_completed_focus = RUS_resettlement_ministry
+		}
+		available = {
+			SRU = {
+				owns_state = 849
+				owns_state = 587
+			}
+		}
+		complete_effect  = {
+			219 = { add_manpower = -10000 }
+			587 = { add_manpower = 5000 }
+			849 = { add_manpower = 5000 }
+			every_state = {
+				limit = { is_core_of = KHW }
+				add_core_of = SRU
+			}
+		}
+	}
+
+	SRU_kyrgyzstan = {
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+		}
+		cost = 150
+		icon = infiltrate_state
+		visible = {
+			has_completed_focus = RUS_resettlement_ministry
+		}
+		available = {
+			SRU = {
+				owns_state = 851
+				owns_state = 840
+				owns_state = 742
+			}
+		}
+		complete_effect  = {
+			221 = { add_manpower = -36000 }
+			every_state = {
+				limit = {
+					OR = {
+						state = 851
+						state = 840
+						state = 742
+					}
+				}
+				add_manpower = -1000
+				add_manpower = 12000
+			}
+		}
+	}
+
+	SRU_south_turkestan = {
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+		}
+		cost = 150
+		icon = infiltrate_state
+		visible = {
+			has_completed_focus = RUS_resettlement_ministry
+		}
+		available = {
+			SRU = {
+				owns_state = 584
+				owns_state = 850
+			}
+		}
+		complete_effect  = {
+			205 = {
+				add_manpower = -40000
+			}
+			850 = {
+				add_manpower = -2000
+				add_manpower = 20000
+			}
+			584 = {
+				add_manpower = -2000
+				add_manpower = 20000
+			}
+		}
+	}
+}

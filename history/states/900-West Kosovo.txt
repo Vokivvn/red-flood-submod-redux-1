@@ -1,0 +1,30 @@
+
+state={
+	id=900
+	name="STATE_900"
+
+	history={
+		owner = YUG
+		victory_points = {
+			6940 3 
+		}
+		victory_points = {
+			9849 1 
+		}
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+
+		}
+		add_core_of = YUG
+
+	}
+
+	provinces={
+		6940 9849 9874 
+	}
+	manpower=643153
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

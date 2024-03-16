@@ -1,0 +1,1185 @@
+characters = {
+	POL_józef_pilsudski = {
+		name = "Józef Piłsudski"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/POL/Portrait_POL_Jozef_Pilsudski.png"
+				small = "gfx/interface/ministers/POL/Jozef_Pisudski.png"
+			}
+		}
+		country_leader = {
+			ideology = national_rejuvenatism
+			expire = "1965.1.1.1"
+			desc="POLITICS_PILSUDSKI_DESC"
+			traits = {
+				POL_pilsudski_ubermensch
+				POL_pilsudski_44
+			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = POL_józef_pilsudski_carm
+			allowed = {
+				original_tag = POL
+			}
+			traits = {
+				cos_school_of_defence
+			}
+		}
+	}
+	POL_mykola_lebed = {
+		name = "Mykola Lebed"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/POL/POL_Lebed.png"
+			}
+		}
+		country_leader = {
+			ideology = military_dictatorship
+			expire = "1965.1.1.1"
+		}
+	}
+	POL_wojciech_korfanty = {
+		name = "Wojciech Korfanty"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/POL/Portrait_Poland_Wojciech_Korfanty.png"
+			}
+		}
+		country_leader = {
+			ideology = social_conservatism
+			expire = "1965.1.1.1"
+		}
+	}
+	POL_ignacy_daszyński = {
+		name = "Ignacy Daszyński"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/POL/Portrait_Poland_Ignacy_Daszynski.png"
+			}
+		}
+		country_leader = {
+			ideology = progressive_democracy
+			expire = "1965.1.1.1"
+		}
+	}
+	POL_edward_smigly_rydz = {
+		name = "Edward Śmigły-Rydz"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/POL/Portrait_POL_Edward_Smigly_Rydz.png"
+				small = "gfx/interface/ministers/POL/Edwar_Rydz_Smigy.png"
+			}
+		}
+		country_leader = {
+			ideology = oligarchy
+			expire = "1965.1.1.1"
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = POL_edward_smigly_rydz
+			allowed = {
+				original_tag = POL
+			}
+			traits = {
+				cos_school_of_manoeuvre
+			}
+		}
+	}
+	POL_michal_rola_zymierski = {
+		name = "Michał Rola-Żymierski"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/POL/portrait_poland_michal_rola_zymierski.png"
+			}
+		}
+		country_leader = {
+			ideology = military_dictatorship
+			expire = "1965.1.1.1"
+		}
+	}
+	POL_tomasz_nocznicki = {
+		name = "Tomasz Nocznicki"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/POL/Portrait_Poland_Tomasz_Nocznicki.png"
+			}
+		}
+		country_leader = {
+			ideology = democratic_socialism
+			expire = "1965.1.1.1"
+		}
+	}
+	POL_jedrzej_giertych = {
+		name = "Andrzej Świetlicki"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/POL/Portrait_POL_Andrzej_Swetlicki.png"
+			}
+		}
+		country_leader = {
+			ideology = reactionary_populism
+			expire = "1965.1.1.1"
+		}
+	}
+	POL_maciej_rataj = {
+		name = "Maciej Rataj"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/POL/Portrait_Poland_Maciej_Rataj.png"
+			}
+		}
+		country_leader = {
+			ideology = social_liberalism
+			expire = "1965.1.1.1"
+		}
+	}
+	POL_tomasz_arciszewski = {
+		name = "Tomasz Arciszewski"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/POL/Portrait_POL_Tomasz_Arciszewski.png"
+			}
+		}
+		country_leader = {
+			ideology = spartakism
+			expire = "1965.1.1.1"
+		}
+	}
+	POL_adolf_warski = {
+		name = "Adolf Warski"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/POL/Portrait_Poland_Adolf_Warski.png"
+			}
+		}
+		country_leader = {
+			ideology = leninism
+			expire = "1965.1.1.1"
+		}
+	}
+	POL_edward_dluzewski = {
+		name = "Edward Dłużewski"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/leader_unknown.dds"
+			}
+		}
+		country_leader = {
+			ideology = social_anarchism
+			expire = "1965.1.1.1"
+		}
+	}
+	POL_Stanislaw_Szukalski = {
+		name = "Stanisław Szukalski"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/POL/Portrait_POL_Stanislaw_Szukalski.png"
+			}
+		}
+		country_leader = {
+			ideology = zadrugism
+			expire = "1965.1.1.1"
+		}
+	}
+	POL_Andrzej_Swietlicki = {
+		name = "Andrzej Świetlicki"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/POL/Portrait_POL_Andrzej_Swetlicki.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_ALEXEI_II_DESC"
+			expire = "1965.1.1"
+			ideology = reactionary_populism
+			traits = {
+			}
+		}
+	}
+	POL_temporary_government = {
+		name = "Temporary Government"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/POL/Portrait_Poland_Temporary_Government.png"
+			}
+		}
+	}
+	POL_Kazimierz_Sosnkowski = {
+		name = "Kazimierz Sosnkowski"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/POL/Portrait_Kazimierz_Sosnkowski.png"
+				small = "gfx/interface/ministers/POL/Kazimierz_Sosnkowski.png"
+			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = POL_Kazimierz_Sosnkowski
+			allowed = {
+				original_tag = POL
+			}
+			traits = {
+				cos_school_of_psychology
+			}
+		}
+	}
+	POL_Wladyslaw_Sikorski = {
+		name = "Władysław Sikorski"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/POL/Wadysaw_Sikorski.png"
+			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = POL_Wladyslaw_Sikorski_carm
+			allowed = {
+				original_tag = POL
+			}
+			traits = {
+				cos_school_of_commando_operations
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = POL_Wladyslaw_Sikorski_hc
+			allowed = {
+				original_tag = POL
+			}
+			traits = {
+				army_logistics_2
+			}
+		}
+	}
+	POL_Jozef_Unrug = {
+		name = "Józef Unrug"
+		portraits = {
+			navy = {
+				small = "gfx/interface/ministers/POL/Jozef_Unrug_2.png"
+			}
+		}
+		advisor = {
+			slot = navy_chief
+			idea_token = POL_Jozef_Unrug_cnav
+			allowed = {
+				original_tag = POL
+			}
+			traits = {
+				cnav_indirect_approach_doctrine
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = POL_Jozef_Unrug_hc
+			allowed = {
+				original_tag = POL
+			}
+			traits = {
+				navy_submarine_2
+			}
+		}
+	}
+	POL_Gustaw_Orlicz-Dreszer = {
+		name = "Gustaw Orlicz-Dreszer"
+		portraits = {
+			navy = {
+				small = "gfx/interface/ministers/POL/Gustaw_Orlicz_Dreszer.png"
+			}
+		}
+		advisor = {
+			slot = navy_chief
+			idea_token = POL_Gustaw_Orlicz-Dreszer_cnav
+			available = {
+				original_tag = POL
+			}
+			traits = {
+				cnav_open_seas_doctrine
+			}
+		}
+		advisor = {
+			slot = theorist
+			idea_token = POL_Gustaw_Orlicz-Dreszer_theorist
+			available = {
+				original_tag = POL
+			}
+			traits = {
+				naval_theorist
+			}
+		}
+	}
+	POL_Mariusz_Zaruski = {
+		name = "Mariusz Zaruski"
+		portraits = {
+			navy = {
+				small = "gfx/interface/ministers/POL/Mariusz_Zaruski.png"
+			}
+		}
+		advisor = {
+			slot = navy_chief
+			idea_token = POL_Mariusz_Zaruski
+			allowed = {
+				original_tag = POL
+			}
+			traits = {
+				cnav_power_projection_doctrine
+			}
+		}
+	}
+	POL_Ludomil_Rayski = {
+		name = "Ludomił Rayski"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/POL/Ludomi_Rayski.png"
+			}
+		}
+		advisor = {
+			slot = air_chief
+			idea_token = POL_Ludomil_Rayski_cair
+			allowed = {
+				original_tag = POL
+			}
+			traits = {
+				cair_air_superiority_doctrine
+			}
+		}
+		advisor = {
+			slot = theorist
+			idea_token = POL_Ludomil_Rayski_theorist
+			available = {
+				original_tag = POL
+			}
+			traits = {
+				air_warfare_theorist
+			}
+		}
+	}
+	POL_Jozef_Zajac = {
+		name = "Józef Zając"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/POL/Jozef_Zajac.png"
+			}
+		}
+		advisor = {
+			slot = air_chief
+			idea_token = POL_Jozef_Zajac_cair
+			available = {
+				original_tag = POL
+			}
+			traits = {
+				cair_battlefield_support_doctrine
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = POL_Jozef_Zajac_hc
+			available = {
+				original_tag = POL
+			}
+			traits = {
+				air_close_air_support_1
+			}
+		}
+	}
+	POL_Stanislaw_Pawluc = {
+		name = "Stanisław Pawluć"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/POL/Stanisaw_Pawluc.png"
+			}
+		}
+		advisor = {
+			slot = air_chief
+			idea_token = POL_Stanislaw_Pawluc_cair
+			available = {
+				original_tag = POL
+			}
+			traits = {
+				cair_vertical_envelopment_doctrine
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = POL_Stanislaw_Pawluc_hc
+			available = {
+				original_tag = POL
+			}
+			traits = {
+				air_air_superiority_2
+			}
+		}
+	}
+	POL_Tadeusz_Kutrzeba = {
+		name = "Tadeusz Kutrzeba"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/POL/Tadeusz_Kutrzeba.png"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = POL_Tadeusz_Kutrzeba
+			available = {
+				original_tag = POL
+			}
+			traits = {
+				army_regrouping_2
+			}
+		}
+	}
+	POL_Stanislaw_Maczek = {
+		name = "Stanisław Maczek"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/POL/Stanisaw_Maczek.png"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = POL_Stanislaw_Maczek
+			available = {
+				original_tag = POL
+			}
+			traits = {
+				army_armored_2
+			}
+		}
+	}
+	POL_Jozef_Sila_Nowicki = {
+		name = "Józef Siła-Nowicki"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/POL/Jozef_sia_nowicki.png"
+			}
+		}
+		advisor = {
+			slot = high_command 
+			idea_token = POL_Jozef_Sila_Nowicki
+			available = {
+				original_tag = POL
+			}
+			traits = {
+				army_cavalry_3
+			}
+		}
+	}
+	POL_Stefan_Mossor = {
+		name = "Stefan Mossor"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/POL/Stefan_Mossor.png"
+			}
+		}
+		advisor = {
+			slot = theorist
+			idea_token = POL_Stefan_Mossor
+			available = {
+				original_tag = POL
+			}
+			traits = {
+				military_theorist
+			}
+		}
+	}
+	POL_Stanisaw_Ulam = {
+		name = "Stanisław Ulam"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/POL/Stanisaw_Ulam.png"
+			}
+		}
+		advisor = {
+			slot = theorist
+			idea_token = POL_Stanisaw_Ulam
+			available = {
+				original_tag = POL
+			}
+			research_bonus = {
+				nuclear = 0.15
+			}
+			traits = {
+				nuclear_scientist
+			}
+		}
+	}
+	POL_Slawek = {
+		name = "Walery Sławek"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/POL/Sawek.png"
+			}
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = POL_Slawek_hog
+			allowed = {
+				original_tag = POL
+			}
+			available = {
+				has_country_leader = {
+					character = POL_józef_pilsudski
+					ruling_only = yes
+				}
+			}
+			traits = {
+				hog_naive_optimist
+			}
+		}
+	}
+	POL_Beck = {
+		name = "Józef Beck"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/POL/Beck.png"
+			}
+		}
+		advisor = {
+			slot = foreign_minister
+			idea_token = POL_Beck_for
+			allowed = {
+				original_tag = POL
+			}
+			available = {
+				has_country_leader = {
+					character = POL_józef_pilsudski
+					ruling_only = yes
+				}
+			}
+			traits = {
+				for_biased_intellectual
+			}
+		}
+	}
+	POL_Eugeniusz = {
+		name = "Eugeniusz Kwiatkowski"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/POL/POL_eugeniusz_kwiatkowski_eco.tga"
+			}
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = POL_Eugeniusz_eco
+			allowed = {
+				original_tag = POL
+			}
+			available = {
+				OR = {
+					has_country_leader = {
+						character = POL_józef_pilsudski
+						ruling_only = yes
+					}
+					has_country_flag = POL_despotic_path_unlock
+				}
+			}
+			traits = {
+				eco_administrative_genius
+			}
+		}
+	}
+	POL_Moraczewski = {
+		name = "Jędrzej Moraczewski"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/POL/Moraczewski.png"
+			}
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = POL_Moraczewski_sec
+			allowed = {
+				original_tag = POL
+			}
+			available = {
+				has_country_leader = {
+					character = POL_józef_pilsudski
+					ruling_only = yes
+				}
+			}
+			traits = {
+				sec_silent_lawyer
+			}
+		}
+	}
+	POL_Lokietek = {
+		name = "Józef Łokietek"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/POL/Lokietek.png"
+			}
+		}
+		advisor = {
+			slot = head_of_intel
+			idea_token = POL_Lokietek_int
+			allowed = {
+				original_tag = POL
+			}
+			available = {
+				OR = {
+					has_country_leader = {
+						character = POL_józef_pilsudski
+						ruling_only = yes
+					}
+				}
+			}
+			traits = {
+				int_political_specialist
+			}
+		}
+	}
+	POL_Piasecki = {
+		name = "Bolesław Piasecki"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/POL/Piasecki.png"
+				large = "gfx/leaders/POL/Portrait_POL_Boleslaw_Piasecki_vanilla.png"
+			}
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = POL_Piasecki_hog
+			allowed = {
+				original_tag = POL
+			}
+			available = {
+				has_country_flag = POL_natrej_path_unlock
+			}
+			traits = {
+				hog_flamboyant_tough_guy
+			}
+		}
+	}
+	POL_Zielinski = {
+		name = "Tadeusz Zieliński"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/POL/Zielinski.png"
+			}
+		}
+		advisor = {
+			slot = foreign_minister
+			idea_token = POL_Zielinski_for
+			allowed = {
+				original_tag = POL
+			}
+			available = {
+				has_country_flag = POL_natrej_path_unlock
+			}
+			traits = {
+				for_ideological_crusader
+			}
+		}
+	}
+	POL_Stachniuk = {
+		name = "Jan Stachniuk"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/POL/Stachniuk.png"
+			}
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = POL_Stachniuk_eco
+			allowed = {
+				original_tag = POL
+			}
+			available = {
+				OR = {
+					has_country_flag = POL_natrej_path_unlock
+					has_country_flag = POL_despotic_path_unlock
+				}
+			}
+			traits = {
+				eco_planned_economy_proponent
+			}
+		}
+	}
+	POL_Koodziej = {
+		name = "Władysław Kołodziej"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/POL/Koodziej.png"
+			}
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = POL_Koodziej_sec
+			allowed = {
+				original_tag = POL
+			}
+			available = {
+				has_country_flag = POL_natrej_path_unlock
+			}
+			traits = {
+				sec_man_of_the_people
+			}
+		}
+	}
+	POL_Zeligowski = {
+		name = "Lucjan Żeligowski"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/POL/Zeligowski.png"
+			}
+		}
+		advisor = {
+			slot = head_of_intel
+			idea_token = POL_Zeligowski_int
+			allowed = {
+				original_tag = POL
+			}
+			available = {
+				has_country_flag = POL_natrej_path_unlock
+			}
+			traits = {
+				int_logistics_specialist
+			}
+		}
+	}
+	POL_Koc = {
+		name = "Adam Koc"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/POL/Koc.png"
+			}
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = POL_Koc_hog
+			allowed = {
+				original_tag = POL
+			}
+			available = {
+				has_country_flag = POL_despotic_path_unlock
+			}
+			traits = {
+				hog_political_protege
+			}
+		}
+	}
+	POL_Jerzy = {
+		name = "Jerzy Giedroyć"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/POL/Giedroyc.png"
+			}
+		}
+		advisor = {
+			slot = foreign_minister
+			idea_token = POL_Jerzy_for
+			allowed = {
+				original_tag = POL
+			}
+			available = {
+				has_country_flag = POL_despotic_path_unlock
+			}
+			traits = {
+				for_the_cloak_n_dagger_schemer
+			}
+		}
+	}
+	POL_Rutkowski = {
+		name = "Jerzy Rutkowski"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/POL/Rutkowski.png"
+			}
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = POL_Rutkowski_sec
+			allowed = {
+				original_tag = POL
+			}
+			available = {
+				has_country_flag = POL_despotic_path_unlock
+			}
+			traits = {
+				sec_prince_of_terror
+			}
+		}
+	}
+	POL_Zamorski = {
+		name = "Kordian Zamorski"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/POL/Zamorski.png"
+			}
+		}
+		advisor = {
+			slot = head_of_intel
+			idea_token = POL_Zamorski_int
+			allowed = {
+				original_tag = POL
+			}
+			available = {
+				has_country_flag = POL_despotic_path_unlock
+			}
+			traits = {
+				int_technical_specialist
+			}
+		}
+	}
+	POL_Puzak = {
+		name = "Kazimierz Pużak"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/POL/Puzak.png"
+			}
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = POL_Puzak_hog
+			allowed = {
+				original_tag = POL
+			}
+			available = {
+				has_country_flag = POL_socdem_path_unlock
+			}
+			traits = {
+				hog_naive_optimist
+			}
+		}
+	}
+	POL_Leon = {
+		name = "Leon Wasilewski"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/POL/Leon.png"
+			}
+		}
+		advisor = {
+			slot = foreign_minister
+			idea_token = POL_Leon_for
+			allowed = {
+				original_tag = POL
+			}
+			available = {
+				has_country_flag = POL_socdem_path_unlock
+			}
+			traits = {
+				for_great_compromiser
+			}
+		}
+	}
+	POL_Kalecki = {
+		name = "Michał Kalecki"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/POL/Kalecki.png"
+			}
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = POL_Kalecki_eco
+			allowed = {
+				original_tag = POL
+			}
+			available = {
+				has_country_flag = POL_socdem_path_unlock
+			}
+			traits = {
+				eco_mixed_economy
+			}
+		}
+	}
+	POL_Zofia = {
+		name = "Zofia Daszyńska-Golińska"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/POL/Zofia.png"
+			}
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = POL_Zofia_sec
+			allowed = {
+				original_tag = POL
+			}
+			available = {
+				has_country_flag = POL_socdem_path_unlock
+			}
+			traits = {
+				sec_efficient_sociopath
+			}
+		}
+	}
+	POL_Bartel = {
+		name = "Kazimierz Bartel"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/POL/Bartel.png"
+			}
+		}
+		advisor = {
+			slot = head_of_intel
+			idea_token = POL_Bartel_int
+			allowed = {
+				original_tag = POL
+			}
+			available = {
+				has_country_flag = POL_socdem_path_unlock
+			}
+			traits = {
+				int_political_specialist
+			}
+		}
+	}
+	POL_boleslaw_roja = {
+		name = "Bolesław Roja"
+		portraits = {
+			army = {
+				large = "gfx/leaders/POL/POL_Boleslaw_Roja.png"
+			}
+		}
+		field_marshal = {
+			traits = { fast_planner brilliant_strategist }
+			skill = 4
+			attack_skill = 3
+			defense_skill = 4
+			planning_skill = 4
+			logistics_skill = 2
+		}
+	}
+	POL_aleksander_osiński = {
+		name = "Aleksander Osiński"
+		portraits = {
+			army = {
+				large = "gfx/leaders/POL/POL_Aleksander_Osinski.png"
+			}
+		}
+		field_marshal = {
+			traits = { defensive_doctrine }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 2
+		}
+	}
+	POL_boleslaw_wieniawa_dlugoszowski = {
+		name = "Bolesław Wieniawa-Długoszowski"
+		portraits = {
+			army = {
+				large = "gfx/leaders/POL/POL_Boleslaw_wieniawa_Dlugoszowski.png"
+			}
+		}
+		corps_commander = {
+			traits = { cavalry_leader cavalry_expert war_hero media_personality }
+			skill = 5
+			attack_skill = 5
+			defense_skill = 1
+			planning_skill = 3
+			logistics_skill = 2
+		}
+	}
+	POL_emil_krukowicz_przedrzymirski = {
+		name = "Emil Krukowicz-Przedrzymirski"
+		portraits = {
+			army = {
+				large = "gfx/leaders/POL/POL_Emil_Przedrzymirski.png"
+			}
+		}
+		corps_commander = {
+			traits = { career_officer  }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 3
+		}
+	}
+	POL_eugeniusz_de_henning_michaelis = {
+		name = "Eugeniusz de Henning Michaelis"
+		portraits = {
+			army = {
+				large = "gfx/leaders/POL/POL_Eugeniusz_de_Henning_Michaelis.png"
+			}
+		}
+		corps_commander = {
+			traits = { old_guard  }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 3
+		}
+	}
+	POL_jan_kollataj_srzednicki = {
+		name = "Jan Kołłątaj-Srzednicki"
+		portraits = {
+			army = {
+				large = "gfx/leaders/POL/POL_Kallataj_Srzerzycki.png"
+			}
+		}
+		corps_commander = {
+			traits = { old_guard inflexible_strategist }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 2
+		}
+	}
+	POL_karo_wojtyla = {
+		name = "Karol Wojtyła"
+		portraits = {
+			army = {
+				large = "gfx/leaders/POL/POL_Karol_Wojtyla_senior.png"
+			}
+		}
+		corps_commander = {
+			traits = {  }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
+	POL_leopold_kula_lis = {
+		name = "Leopold 'kula' Lis"
+		portraits = {
+			army = {
+				large = "gfx/leaders/POL/POL_Leopold_Lis.png"
+			}
+		}
+		corps_commander = {
+			traits = { cavalry_officer  }
+			skill = 2
+			attack_skill = 4
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 1
+		}
+	}
+	POL_mieczyslaw_boruta_spiechowicz = {
+		name = "Mieczysław Boruta Spiechowicz"
+		portraits = {
+			army = {
+				large = "gfx/leaders/POL/POL_Mieczyslaw_Boruta_Spiechowicz.png"
+			}
+		}
+		corps_commander = {
+			traits = { trait_mountaineer }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 4
+			planning_skill = 2
+			logistics_skill = 3
+		}
+	}
+	POL_mieczyslaw_dabkowski = {
+		name = "Mieczysław Dąbkowski"
+		portraits = {
+			army = {
+				large = "gfx/leaders/POL/POL_Mieczyslaw_DABkowski.png"
+			}
+		}
+		corps_commander = {
+			traits = {  }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 3
+		}
+	}
+	POL_stefan_adam_zamoyski = {
+		name = "Stefan Adam Zamoyski"
+		portraits = {
+			army = {
+				large = "gfx/leaders/POL/POL_Stefan_Adam_Zamoyski.png"
+			}
+		}
+		corps_commander = {
+			traits = { career_officer trait_reckless }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 3
+		}
+	}
+	POL_peiper = {
+		name = "Tadeusz Peiper"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/POL/Portrait_POL_Tadeusz_Peiper.png"
+			}
+		}
+	}
+	POL_moczar = {
+		name = "Mieczysław Moczar"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/POL/Portrait_POL_Mieczyslaw_Moczar.png"
+			}
+		}
+	}
+	POL_cyrankiewicz = {
+		name = "Józef Cyrankiewicz"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/POL/Portrait_POL_Jozef_Cyrankiewicz.png"
+			}
+		}
+	}
+	POL_cybichowski = {
+		name = "Zygmunt Cybichowski"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/POL/Portrait_POL_Zygmunt_Cybichowski.png"
+			}
+		}
+	}
+	POL_kozicki = {
+		name = "Stanisław Kozicki"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/POL/Portrait_POL_Stanislaw_Kozicki.png"
+			}
+		}
+	}
+	POL_arciszewski_rev = {
+		name = "Tomasz Arciszewski"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/POL/Portrait_POL_Tomasz_Arciszewski.png"
+			}
+		}
+	}
+	POL_mikolajczyk = {
+		name = "Stanisław Mikołajczyk"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/POL/Portrait_POL_Stanislaw_Mikolajczyk.png"
+			}
+		}
+	}
+	POL_rybarski = {
+		name = "Roman Rybarski"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/POL/Portrait_POL_Roman_Rybarski_con.png"
+			}
+		}
+	}
+	POL_bierut = {
+		name = "Bolesław Bierut"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/POL/Portrait_POL_Boleslaw_Bierut.png"
+			}
+		}
+	}
+	POL_combat_wiejskiej_klasie = {
+		name = "Jan Dębski"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/POL/Portrait_POL_Jan_Debski.png"
+			}
+		}
+	}
+}

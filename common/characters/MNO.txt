@@ -1,0 +1,99 @@
+characters = {
+	MNO_damdin_sukhbaatar = {
+		name = "Damdin Sükhbaatar"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MPA/Sukhbaatar.png"
+			}
+			army = {
+				large = "gfx/leaders/MPA/Sukhbaatar_General.png"
+			}
+		}
+		country_leader = {
+			ideology = stratocratic_socialism
+			expire = "1965.1.1.1"
+		}
+		field_marshal = {
+			traits = {
+				politically_connected
+			}
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+    MNO_aleksandr_kaygorodov = {
+		name = "Aleksandr Kaygorodov"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/ALT/Portrait_Altai_Kaygorodov.tga"
+			}
+		}
+		country_leader = {
+			ideology = social_conservatism
+			expire = "1965.1.1.1"
+		}
+	}
+	MNO_demchugdongrub = {
+		name = "Demchugdongrub"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/MNO/MNO_Demchugdongrub.png"
+			}
+            army = {
+				large="gfx/leaders/MNO/MNO_Demchugdongrub.png"
+			}
+		}
+		country_leader = {
+			ideology = constitutional_monarchy
+			expire = "1965.1.1.1"
+		}
+		corps_commander = {
+			traits = {
+				politically_connected
+			}
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	MNO_ivan_yefremov = {
+		name = "Ivan Yefremov"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MPA/Portrait_Yefremov.tga"
+			}
+		}
+		country_leader = {
+			ideology = vperedism
+			expire = "1965.1.1.1"
+		}
+	}
+    MNO_boris_rezukhin={
+		name="Boris Rezukhin"
+		portraits={
+			civilian = {
+				small="gfx/interface/ministers/TAN/Boris_Rezukhin.dds"
+			}
+			army={
+				large="gfx/leaders/TAN/boris.png"
+			}
+		}
+        country_leader = {
+			ideology = oligarchy
+			expire = "1965.1.1.1"
+		}
+		corps_commander={
+			traits={ politically_connected thorough_planner }
+			skill=3
+			attack_skill=2
+			defense_skill=1
+			planning_skill=2
+			logistics_skill=3
+		}
+	}
+}

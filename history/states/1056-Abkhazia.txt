@@ -1,0 +1,22 @@
+state={
+	id=1056
+	name="STATE_1056"
+
+	history={
+		owner = KAV
+		buildings = {
+			infrastructure = 2
+		}
+		victory_points={
+			11647 3
+		}
+		add_core_of = KAV
+	}
+
+	provinces={
+		9663 11647 11617
+	}
+	manpower=116397
+	buildings_max_level_factor=1.000
+	state_category=town
+}

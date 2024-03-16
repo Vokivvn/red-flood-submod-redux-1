@@ -1,0 +1,26 @@
+
+state={
+	id=1210
+	name="STATE_1210"
+	manpower = 32477
+
+	state_category = town
+
+	history={
+		owner = MAL
+		victory_points = {
+			7387 3
+		}
+		buildings = {
+			infrastructure = 2
+			7387 = {
+				naval_base = 2
+			}
+		}
+		add_core_of = MAL
+	}
+
+	provinces={
+		7371 7387
+	}
+}

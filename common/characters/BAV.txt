@@ -1,0 +1,14 @@
+characters = {
+	BAV_hans_ritter_von_seisser = {
+		name = "Adolf von Harnier"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/BAV/Harnier.png"
+			}
+		}
+		country_leader = {
+			ideology = military_dictatorship
+			expire = "1965.1.1.1"
+		}
+	}
+}

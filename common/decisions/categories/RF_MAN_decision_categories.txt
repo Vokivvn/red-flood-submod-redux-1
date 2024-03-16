@@ -1,0 +1,7 @@
+MAN_equipment_sending = {
+	picture = GFX_decision_cat_picture_MAN_japanese_shipment
+    allowed = {
+		original_tag = MAN
+	}
+	priority = 100
+}

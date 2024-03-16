@@ -1,0 +1,36 @@
+state={
+	id=981
+	name="STATE_981"
+
+	history={
+		owner = MRS
+		buildings = {
+			infrastructure = 1
+			13354 = {
+				naval_base = 1
+			}
+			13355 = {
+				naval_base = 1
+			}
+			13356 = {
+				naval_base = 1
+			}
+			13357 = {
+			    naval_base = 1
+			}
+			industrial_complex = 1
+			arms_factory = 2
+		}
+		victory_points = {
+			13354 1
+		}
+		add_core_of = DAI
+		add_core_of = MRS
+	}
+
+	provinces={
+		13354 13355 13356 13357
+	}
+	manpower=6239
+	state_category=town
+}

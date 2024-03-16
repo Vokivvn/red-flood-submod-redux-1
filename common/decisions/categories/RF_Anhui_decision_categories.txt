@@ -1,0 +1,10 @@
+MON_fopo = {
+	allowed = {
+		original_tag = MON
+	}
+	priority = 100
+	visible = {
+		is_subject = no
+		has_completed_focus = Mongolia_greatermongolia
+	}
+}

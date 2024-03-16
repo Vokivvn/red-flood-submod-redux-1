@@ -1,0 +1,118 @@
+characters = {
+	MEX_manuel_avila_camacho = {
+		name = "Manuel Ávila Camacho"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MEX/Portrait_Manuel_Ávila_Camacho.png"
+			}
+			army = {
+				large = "gfx/leaders/MEX/Portrait_Manuel_Ávila_Camacho.png"
+			}
+		}
+		country_leader = {
+			ideology = left_populism
+			expire = "1965.1.1.1"
+		}
+		corps_commander = {
+			traits = { politically_connected } # Future president
+			skill = 3
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 3
+		}
+	}
+	MEX_lazaro_cardenas = {
+		name = "Lázaro Cárdenas"
+		portraits = {
+			army = {
+				large = "gfx/leaders/leader_unknown.dds"
+			}
+		}
+		field_marshal = {
+			traits = { politically_connected }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 3
+		}
+	}
+	MEX_heliodoro_charis = {
+		name = "Heliodoro Charis"
+		corps_commander = {
+			traits = { infantry_officer } # Veteran of many assaults
+			skill = 3
+			attack_skill = 4
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	MEX_luis_farell = {
+		name = "Luis Farell"
+		corps_commander = {
+			traits = { war_hero } # Personally piloted missions against rebels etc
+			skill = 3
+			attack_skill = 4
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 3
+		}
+	}
+	MEX_gildardo_magana = {
+		name = "Gildardo Magaña"
+		corps_commander = {
+			traits = { media_personality } # Headed some political organisations like trade unions
+			skill = 3
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 3
+		}
+	}
+	MEX_manuel_perez_treviño = {
+		name = "Manuel Pérez Treviño"
+		corps_commander = {
+			traits = { career_officer } # Pre-Revolutionary officer training
+			skill = 3
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 3
+		}
+	}
+	MEX_abelardo_l_rodriguez = {
+		name = "Abelardo L. Rodríguez"
+		corps_commander = {
+			traits = { politically_connected } # President prior to Cardenas
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 2
+		}
+	}
+	MEX_othon_p_blanco_nunez_de_caceres = {
+		name = "Othón P. Blanco Núñez de Cáceres"
+		navy_leader = {
+			traits = { old_guard_navy }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 1
+			maneuvering_skill = 2
+			coordination_skill = 3
+		}
+	}
+	MEX_heriberto_jara_corona = {
+		name = "Heriberto Jara Corona"
+		navy_leader = {
+			traits = { navy_media_personality }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			maneuvering_skill = 1
+			coordination_skill = 1
+		}
+	}
+}

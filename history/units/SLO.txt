@@ -1,0 +1,51 @@
+division_template = {
+	name = "Revolučná garda"
+	regiments = {
+		infantry = {
+			x = 0
+			y = 0
+		}
+		infantry = {
+			x = 0
+			y = 1
+		}
+	 }
+} 
+division_template = {
+	name = "Pechotná divízia"
+	regiments = {
+		infantry = {
+			x = 0
+			y = 0
+		}
+		infantry = {
+			x = 0
+			y = 1
+		}
+		infantry = {
+			x = 1
+			y = 0
+		}
+		infantry = {
+			x = 1
+			y = 1
+		}
+	 }
+} 
+units = {
+	division = {
+		location = 9692
+		division_template = "Revolučná garda"
+		start_equipment_factor = 0.2
+	}
+	division = {
+		location = 11554
+		division_template = "Revolučná garda"
+		start_equipment_factor = 0.2
+	}
+	division = {
+		location = 3537
+		division_template = "Pechotná divízia"
+		start_equipment_factor = 0.2
+	}
+}

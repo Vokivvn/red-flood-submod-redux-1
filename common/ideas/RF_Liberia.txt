@@ -1,0 +1,208 @@
+ideas = {
+
+#################
+# Country ideas #
+#################
+
+	country = {
+		LIB_african_migration = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_weekly = -0.05
+				war_support_factor = -0.2
+				MONTHLY_POPULATION = 3
+			}
+			picture = LIB_immigration
+		}
+		LIB_investors = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_weekly = 0.01
+				political_power_cost = -0.10
+				consumer_goods_expected_value = -0.03
+				trade_opinion_factor = 0.20
+			}
+			picture = generic_idea_RF_idea_capitalist
+		}
+		LIB_international_agreements = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_weekly = -0.01
+				political_power_cost = -0.15
+				consumer_goods_expected_value = -0.05
+				trade_opinion_factor = 0.50
+				war_support_weekly = 0.01
+			}
+			picture = generic_idea_RF_idea_agreement
+		}
+		LIB_monrovia_agreements = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_weekly = 0.01
+				conservatism_drift = 0.05
+				war_support_weekly = 0.01
+			}
+			picture = generic_idea_RF_idea_letter
+		}
+		LIB_african_liberation = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				justify_war_goal_time = -0.30
+				army_attack_factor = 0.15
+				conscription = 0.05
+			}
+			picture = generic_idea_RF_idea_revolution
+		}
+		LIB_african_migration1 = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_weekly = 0.02
+				war_support_factor = 0.1
+				accelerationism_drift = 0.03
+				MONTHLY_POPULATION = 3
+			}
+			picture = generic_idea_RF_idea_resist
+		}
+		LIB_PCA = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				encryption_factor = 2
+				non_core_manpower = 0.20
+				army_defence_factor = 0.10
+				army_org = 0.10
+			}
+			picture = generic_idea_RF_idea_vanguard
+		}
+		LIB_forcedlabor = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.15
+				production_factory_start_efficiency_factor = 0.15
+				production_speed_buildings_factor = 0.15
+				stability_factor = -0.10
+			}
+			picture = generic_idea_RF_idea_building
+		}
+		LIB_new_african_enlightnement = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				research_speed_factor = 0.10
+				stability_factor = -0.05
+				production_speed_buildings_factor = 0.10
+			}
+			picture = generic_idea_RF_idea_theorist
+		}
+		LIB_colonialism = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				MONTHLY_POPULATION = 1
+				stability_weekly = -0.01
+			}
+			picture = generic_idea_RF_idea_prison
+		}
+		LIB_monopoly = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				production_speed_buildings_factor = 0.15
+				production_speed_infrastructure_factor = 0.15
+				stability_weekly = 0.01
+			}
+			picture = generic_idea_RF_idea_briefcase
+		}
+		
+		LIB_MoPE = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				encryption_factor = 1
+			}
+			picture = generic_idea_RF_idea_speeches
+		}
+		LIB_beacon = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				conservatism_drift = 0.05
+				stability_weekly = 0.05
+			}
+			picture = generic_idea_RF_idea_liberty
+		}
+		LIB_patriotwelfare = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				production_speed_infrastructure_factor = 0.07
+				consumer_goods_expected_value = 0.02
+				political_power_cost = 0.02
+			}
+			picture = generic_idea_RF_idea_rose
+		}
+		LIB_dissenter_labor = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				production_speed_infrastructure_factor = 0.07
+				consumer_goods_expected_value = -0.04
+				political_power_cost = -0.05
+				stability_factor = -0.05
+			}
+			picture = generic_idea_RF_idea_industry_cog
+		}
+		LIB_antipartisans = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				right_authoritarianism_drift = 0.02
+				stability_weekly = 0.02
+				foreign_subversive_activites = 0.20
+				root_out_resistance_effectiveness_factor = 0.30
+			}
+			picture = generic_idea_RF_idea_truncheon
+		}
+		LIB_destroying_the_nation = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = -0.10
+				right_authoritarianism_drift = -0.01
+				political_power_cost = 0.20
+			}
+			picture = generic_idea_RF_idea_red_skull
+		}
+		WAF_brit_neutrality = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				ai_call_ally_desire_factor = -9999
+				stability_factor = 0.10
+			}
+			picture = generic_idea_RF_idea_peace
+		}
+	}
+
+	industrial_concern = {
+		Hampton_Heaven_Industries = {
+			allowed = {
+				original_tag = LIB
+			}
+			traits = {
+				industrial_manufacturer
+			}
+			modifier = {
+				production_speed_infrastructure_factor = 0.07
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					reliability = 0.01
+				}
+			}
+		}
+	}
+	materiel_manufacturer = {
+		designer = yes
+		Liberian_Arms_Company = {
+			allowed = {
+				original_tag = LIB
+			}
+			traits = {
+				artillery_producer_mass_1
+			}
+			research_bonus = {
+				infantry_weapons = 0.1
+			}
+		}
+	}
+}

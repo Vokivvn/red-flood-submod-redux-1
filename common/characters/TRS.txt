@@ -1,0 +1,76 @@
+﻿characters={
+	TRS_goga ={
+		name="Octavian Goga"
+		portraits={
+			civilian={
+				large="gfx/leaders/TRS/Portrait_TRS_Octavian_Goga.png"
+			}
+		}
+		country_leader={
+			
+			ideology= oligarchy
+			expire= "1965.1.1.1"
+			id=-1
+		}
+	}
+	TRS_hungaryman = {
+		name = "Stefan Foris"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/TRS/Portrait_TRS_Stefan_Foris.png"
+			}
+		}
+		country_leader = {
+			ideology = leninism
+			desc = "POLITICS_FORIS_DESC"
+			expire = "1965.1.1.1"
+		}
+	}
+	TRS_woman = {
+		name = "Ana Pauker"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/TRS/Portrait_TRS_Ana_Pauker.png"
+			}
+		}
+	}
+	TRS_flureas = {
+		name = "Ion Flureas"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/TRS/Portrait_TRS_Ioan_Flueras.png"
+			}
+		}
+		country_leader = {
+			ideology = nationalist_socialism
+			desc = "POLITICS_FLUREAS_DESC"
+			expire = "1965.1.1.1"
+		}
+	}
+	TRS_stelescu = {
+		name = "Mihai Stelescu"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/TRS/Portrait_TRS_Mihai_Stelescu.png"
+			}
+		}
+		country_leader = {
+			ideology = national_rejuvenatism
+			desc = "POLITICS_STELESCU_DESC"
+			expire = "1965.1.1.1"
+		}
+	}
+	TRS_roth = {
+		name = "Hans Otto Roth"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/TRS/Roth.png"
+			}
+		}
+		country_leader = {
+			ideology = national_liberalism
+			expire = "1965.1.1.1"
+		}
+	}
+	
+}

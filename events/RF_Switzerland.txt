@@ -1,0 +1,37 @@
+﻿add_namespace = SWI
+
+country_event = {
+	id = SWI.1
+	title = SWI.1.t
+	desc = SWI.1.desc
+	#picture = GFX_report_event_paul_levi
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = SWI.1.a
+		set_politics = { 
+			ruling_party = revisionist_socialism
+		}
+		add_popularity = {
+			ideology = revisionist_socialism
+			popularity = 0.23
+		}
+		ai_chance = {
+			base = 50
+		}
+	}
+	option = { 
+		name = SWI.1.b
+		set_politics = { 
+			ruling_party = anarchism
+		}
+		add_popularity = {
+			ideology = anarchism
+			popularity = 0.23
+		}
+		ai_chance = {
+			base = 50
+		}
+	}
+}

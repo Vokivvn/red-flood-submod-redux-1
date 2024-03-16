@@ -1,0 +1,38 @@
+characters={
+	RML_Tan_Malaka = {
+		name = "Tan Malaka"
+		portraits = {
+			civilian={
+				large="gfx/leaders/RML/Portrait_RML_Tan_Malaka.png"
+			}
+		}
+		country_leader = {
+			ideology = national_vanguardism
+			expire = "1965.1.1.1"
+		}
+	}
+	RML_Abdul_Rahim_Kajai = {
+		name = "Abdul Rahim Kajai"
+		portraits = {
+			civilian={
+				large="gfx/leaders/RML/Portrait_RML_Abdul_Rahim_Kajai.png"
+			}
+		}
+		country_leader = {
+			ideology = reactionary_populism
+			expire = "1965.1.1.1"
+		}
+	}
+	RML_Xu_Jie = {
+		name = "Xu Jie"
+		portraits = {
+			civilian={
+				large="gfx/leaders/RML/Portrait_RML_Xu_Jie.png"
+			}
+		}
+		country_leader = {
+			ideology = folk_socialism
+			expire = "1965.1.1.1"
+		}
+	}
+}

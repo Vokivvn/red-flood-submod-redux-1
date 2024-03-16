@@ -1,0 +1,25 @@
+state={
+	id=1251
+	name="STATE_1251"
+	manpower = 3269300
+
+	state_category = large_town
+
+	history={
+		owner = DEI
+		victory_points = { #Cheribon
+			1386 3
+		}
+		add_core_of = DEI
+		buildings = {
+			infrastructure = 3
+			1386 = {
+				naval_base = 3
+			}
+		}
+	}
+
+	provinces={
+		12249 1386
+	}
+}

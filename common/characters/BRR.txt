@@ -1,0 +1,1077 @@
+characters = {
+	BRR_antonio_carlos_de_andrada = {
+		name = "Antonio Carlos de Andrada"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/BRR/Portrait_BRA_Antonio_Andrada.png"
+			}
+		}
+		country_leader = {
+			ideology = oligarchy
+			expire = "1965.1.1.1"
+		}
+	}
+	BRR_anarchy = {
+		name = "Anarchy"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/BRR/Portrait_BRR_anarchy.png"
+			}
+		}
+	}
+	BRR_getúlio_vargas = {
+		name = "Getúlio Vargas"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/BRR/Portrait_BRR_Vargas.png"
+			}
+			army = {
+				small = "GFX_idea_BRR_vargas_eco"
+			}
+		}
+		country_leader = {
+			ideology = progressive_corporatism
+			expire = "1965.1.1.1"
+		}
+		advisor = {
+			allowed = {
+			    original_tag = BRR
+			}
+			cost = 150
+			slot = economy_minister
+			available = {
+				OR = {
+					has_government = conservatism
+					has_government = liberalism
+					has_government = progressivism
+				}
+			}
+			idea_token = BRR_vargas_eco
+			traits = {
+			    economy_minister
+			    eco_keynesian_economy
+			}
+		}
+
+	}
+	BRR_francisco_prestes_maia = {
+		name = "Francisco Prestes Maia"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/BRR/Portrait_BRR_Prestes_Maia.png"
+			}
+		}
+		country_leader = {
+			ideology = social_liberalism
+			expire = "1965.1.1.1"
+		}
+	}
+	BRR_oswald_de_andrade = {
+		name = "Oswald de Andrade"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/BRR/Portrait_BRR_Oswald.png"
+			}
+			army = {
+				small = "GFX_idea_BRR_oswalddeandrade_eco"
+			}
+		}
+		country_leader = {
+			ideology = futurism
+			expire = "1965.1.1.1"
+		}
+		advisor = {
+			allowed = {
+			    original_tag = BRR
+			}
+			cost = 150
+			slot = economy_minister
+			available = {
+				has_government = accelerationism
+			}
+			idea_token = BRR_oswalddeandrade_eco 
+			traits = {
+			    economy_minister
+			    eco_visionary_of_excess
+			}
+		}
+	}
+	BRR_gustavo_dodt_barroso = {
+		name = "Gustavo Dodt Barroso"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/BRR/Portrait_BRR_Barroso.png"
+			}
+		}
+		country_leader = {
+			ideology = reactionary_populism
+			expire = "1965.1.1.1"
+		}
+	}
+	BRR_miguel_costa = {
+		name = "Miguel Costa"
+		portraits = {
+			army = {
+				large="gfx/leaders/BRR/Portrait_BRA_Miguel_Costa.png"
+			}
+		}
+		corps_commander = {
+			traits = { infantry_leader career_officer harsh_leader }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 2
+		}
+	}
+	BRR_olímpio_mourão_filho = {
+		name = "Olímpio Mourão Filho"
+		portraits = {
+			army = {
+				large="gfx/leaders/BRR/Portrait_BRA_Olimpio_Filho.png"
+			}
+		}
+		corps_commander = {
+			traits = { cavalry_officer career_officer trait_cautious }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 2
+		}
+	}
+	BRR_newton_estillac_leal = {
+		name = "Newton Estillac Leal"
+		portraits = {
+			army = {
+				large="gfx/leaders/BRR/Portrait_BRA_Newton_Lead.png"
+				small = "GFX_idea_BRR_leal_army"
+			}
+		}
+		corps_commander = {
+			traits = { infantry_leader urban_assault_specialist harsh_leader }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 2
+		}
+		advisor = {
+			allowed = {
+			    original_tag = BRR
+			}
+			cost = 150
+			slot = army_chief
+			available = {
+				OR = {
+					has_government = conservatism
+					has_government = liberalism
+					has_government = progressivism
+				}
+			}
+			idea_token = BRR_leal_army 
+			traits = {
+			    army_chief
+			    carm_guns_and_butter_doctrine
+			}
+		}
+	}
+	BRR_flores_da_cuhna = {
+		name = "Flores Da Cuhna"
+		portraits = {
+			army = {
+				small = "GFX_idea_BRR_floresdacuhna_hog"
+			}
+		}
+		advisor = {
+			allowed = {
+			    original_tag = BRR
+			}
+			cost = 150
+			slot = head_of_government
+			available = {
+				has_government = reactionism
+			}
+			idea_token = BRR_floresdacuhna_hog 
+			traits = {
+			    head_of_government
+			    hog_respected_war_hero
+			}
+		}
+	}
+	BRR_bertoldo_klinger = {
+		name = "Bertoldo Klinger"
+		portraits = {
+			army = {
+				small = "GFX_idea_BRR_bertoldoklinger_hog"
+			}
+		}
+		advisor = {
+			allowed = {
+			    original_tag = BRR
+			}
+			cost = 150
+			slot = head_of_government
+			available = {
+				has_government = despotism
+			}
+			idea_token = BRR_bertoldoklinger_hog
+			traits = {
+			    head_of_government
+			    hog_silent_workhorse
+			}
+		}
+	}
+	BRR_jose_antonio_netto = {
+		name = "José Antônio Netto"
+		portraits = {
+			army = {
+				small = "GFX_idea_BRR_joseantonionetto_hog"
+			}
+		}
+		advisor = {
+			allowed = {
+			    original_tag = BRR
+			}
+			cost = 150
+			slot = head_of_government
+			available = {
+				has_government = right_authoritarianism
+			}
+			idea_token = BRR_joseantonionetto_hog 
+			traits = {
+			    head_of_government
+			    hog_smiling_oilman
+			}
+		}
+	}
+	BRR_osvaldo_aranha = {
+		name = "Osvaldo Aranha"
+		portraits = {
+			army = {
+				small = "GFX_idea_BRR_osvaldoaranha_hog"
+			}
+		}
+		advisor = {
+			allowed = {
+			    original_tag = BRR
+			}
+			cost = 150
+			slot = head_of_government
+			available = {
+				has_government = conservatism
+			}
+			idea_token = BRR_osvaldoaranha_hog
+			traits = {
+			    head_of_government
+			    hog_pragmatic_statesman
+			}
+		}
+	}
+	BRR_assis_brasil = {
+		name = "Assis Brazil"
+		portraits = {
+			army = {
+				small = "GFX_idea_BRR_assisbrasil_hog"
+			}
+		}
+		advisor = {
+			allowed = {
+			    original_tag = BRR
+			}
+			cost = 150
+			slot = head_of_government
+			available = {
+				has_government = liberalism
+			}
+			idea_token = BRR_assisbrasil_hog
+			traits = {
+			    head_of_government
+			    hog_political_protege
+			}
+		}
+	}
+	BRR_nereu_ramos = {
+		name = "Nereu Ramos"
+		portraits = {
+			army = {
+				small = "GFX_idea_BRR_neururamos_hog"
+			}
+		}
+		advisor = {
+			allowed = {
+			    original_tag = BRR
+			}
+			cost = 150
+			slot = head_of_government
+			available = {
+				has_government = progressivism
+			}
+			idea_token = BRR_neururamos_hog 
+			traits = {
+			    head_of_government
+			    hog_silent_workhorse
+			}
+		}
+	}
+	BRR_anita_malfatti = {
+		name = "Anita Malfatti"
+		portraits = {
+			army = {
+				small = "GFX_idea_BRR_anitamalfatti_hog"
+			}
+		}
+		advisor = {
+			allowed = {
+			    original_tag = BRR
+			}
+			cost = 150
+			slot = head_of_government
+			available = {
+				has_government = accelerationism
+			}
+			idea_token = BRR_anitamalfatti_hog 
+			traits = {
+			    head_of_government
+			    hog_silent_workhorse
+			}
+		}
+	}
+	BRR_waldir_bouhid = {
+		name = "Waldir Bouhid"
+		portraits = {
+			army = {
+				small = "GFX_idea_BRR_waldirbouhid_eco"
+			}
+		}
+		advisor = {
+			allowed = {
+			    original_tag = BRR
+			}
+			cost = 150
+			slot = economy_minister
+			available = {
+				has_government = reactionism
+			}
+			idea_token = BRR_waldirbouhid_eco
+			traits = {
+			    economy_minister
+			    eco_bank_president
+			}
+		}
+	}
+	BRR_julio_prestes = {
+		name = "Júlio Prestes"
+		portraits = {
+			army = {
+				small = "GFX_idea_BRR_prestes_eco"
+			}
+			civilian = {
+				large = "gfx/leaders/BRR/Portrait_BRR_Prestes.png"
+			}
+		}
+		country_leader = {
+			ideology = oligarchy
+			expire = "2000.1.1"
+		}
+		advisor = {
+			allowed = {
+			    original_tag = BRR
+			}
+			cost = 150
+			slot = economy_minister
+			available = {
+				has_government = right_authoritarianism
+			}
+			idea_token = BRR_prestes_eco
+			traits = {
+			    economy_minister
+			    eco_corrupt_kleptocrat
+			}
+		}
+	}
+	BRR_góis_monteiro = {
+		name = "Góis Monteiro"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/GCC/Portrait_Gois_Monteiro.png"
+			}
+		}
+		country_leader = {
+			ideology = oligarchy
+			expire = "1965.1.1.1"
+		}
+	}
+	BRR_leonidas_de_antero_matos = {
+		name = "Leônidas de Antero Matos"
+		portraits = {
+			army = {
+				small = "GFX_idea_BRR_matos_eco"
+			}
+		}
+		advisor = {
+			allowed = {
+			    original_tag = BRR
+			}
+			cost = 150
+			slot = economy_minister
+			available = {
+				has_government = despotism
+			}
+			idea_token = BRR_matos_eco
+			traits = {
+			    economy_minister
+			    eco_laissez_faire_capitalist
+			}
+		}
+	}
+	BRR_pedro_ludovico_teixeira = {
+		name = "Pedro Ludovico Teixeira"
+		portraits = {
+			army = {
+				small = "GFX_idea_BRR_teixeira_eco"
+			}
+		}
+		advisor = {
+			allowed = {
+			    original_tag = BRR
+			}
+			cost = 150
+			slot = economy_minister
+			available = {
+				OR = {
+					has_government = conservatism
+					has_government = liberalism
+				}
+			}
+			idea_token = BRR_teixeira_eco
+			traits = {
+			    economy_minister
+			    eco_oil_baron
+			}
+		}
+	}
+	BRR_janio_quadros = {
+		name = "Jânio Quadros"
+		portraits = {
+			army = {
+				small = "GFX_idea_BRR_quadros_eco"
+			}
+		}
+		advisor = {
+			allowed = {
+			    original_tag = BRR
+			}
+			cost = 150
+			slot = economy_minister
+			available = {
+				OR = {
+					has_government = liberalism
+					has_government = progressivism
+				}
+			}
+			idea_token = BRR_quadros_eco
+			traits = {
+			    economy_minister
+			    eco_keynesian_economy
+			}
+		}
+		advisor = {
+			allowed = {
+			    original_tag = BRR
+			}
+			cost = 150
+			slot = security_minister
+			available = {
+				has_government = progressivism
+			}
+			idea_token = BRR_quadros_inter
+			traits = {
+			    security_minister
+			    sec_man_of_the_people
+			}
+		}
+	}
+	BRR_lauro_sodre = {
+		name = "Lauro Sodré"
+		portraits = {
+			army = {
+				small = "GFX_idea_BRR_lauro_sodre_fore"
+			}
+		}
+		advisor = {
+			allowed = {
+			    original_tag = BRR
+			}
+			cost = 150
+			slot = foreign_minister
+			available = {
+				has_government = reactionism
+			}
+			idea_token = BRR_lauro_sodre_fore 
+			traits = {
+			    foreign_minister
+			    for_iron_fisted_brute
+			}
+		}
+		advisor = {
+			allowed = {
+			    original_tag = BRR
+			}
+			cost = 150
+			slot = security_minister
+			available = {
+				has_government = despotism
+			}
+			idea_token = BRR_lauro_sodre_inter
+			traits = {
+			    security_minister
+			    sec_efficient_sociopath
+			}
+		}
+	}
+	BRR_joaquim_barata = {
+		name = "Joaquim Barata"
+		portraits = {
+			army = {
+				small = "GFX_idea_BRR_barata_fore"
+			}
+		}
+		advisor = {
+			allowed = {
+			    original_tag = BRR
+			}
+			cost = 150
+			slot = foreign_minister
+			available = {
+				has_government = despotism
+			}
+			idea_token = BRR_barata_fore
+			traits = {
+			    foreign_minister
+			    for_apologetic_clerk
+			}
+		}
+	}
+	BRR_vital_soares = {
+		name = "Vital Soares"
+		portraits = {
+			army = {
+				small = "GFX_idea_BRR_soares_fore"
+			}
+		}
+		advisor = {
+			allowed = {
+			    original_tag = BRR
+			}
+			cost = 150
+			slot = foreign_minister
+			available = {
+				has_government = right_authoritarianism
+			}
+			idea_token = BRR_soares_fore 
+			traits = {
+			    foreign_minister
+			    for_the_cloak_n_dagger_schemer
+			}
+		}
+	}
+	BRR_antonio_ramos_caiado = {
+		name = "Antonio Ramos Caiado"
+		portraits = {
+			army = {
+				small = "GFX_idea_BRR_caiado_fore"
+			}
+		}
+		advisor = {
+			allowed = {
+			    original_tag = BRR
+			}
+			cost = 150
+			slot = foreign_minister
+			available = {
+				has_government = conservatism
+			}
+			idea_token = BRR_caiado_fore 
+			traits = {
+			    foreign_minister
+			    for_great_compromiser
+			}
+		}
+	}
+	BRR_luis_viana_vilho = {
+		name = "Luís Viana Filho"
+		portraits = {
+			army = {
+				small = "GFX_idea_BRR_luis_filho_fore"
+			}
+		}
+		advisor = {
+			allowed = {
+			    original_tag = BRR
+			}
+			cost = 150
+			slot = foreign_minister
+			available = {
+				has_government = liberalism
+			}
+			idea_token = BRR_luis_filho_fore 
+			traits = {
+			    foreign_minister
+			    for_apologetic_clerk
+			}
+		}
+		advisor = {
+			allowed = {
+			    original_tag = BRR
+			}
+			cost = 150
+			slot = security_minister
+			available = {
+				has_government = right_authoritarianism
+			}
+			idea_token = BRR_luis_filho_inter 
+			traits = {
+			    security_minister
+			    sec_crooked_kleptocrat
+			}
+		}
+	}
+	BRR_alvaro_botelho_maia = {
+		name = "Álvaro Botelho Maia"
+		portraits = {
+			army = {
+				small = "GFX_idea_BRR_maia_fore"
+			}
+		}
+		advisor = {
+			allowed = {
+			    original_tag = BRR
+			}
+			cost = 150
+			slot = foreign_minister
+			available = {
+				has_government = progressivism
+			}
+			idea_token = BRR_maia_fore 
+			traits = {
+			    foreign_minister
+			    for_apologetic_clerk
+			}
+		}
+	}
+	BRR_tarsila_do_amaral = {
+		name = "Tarsila do Amaral"
+		portraits = {
+			army = {
+				small = "GFX_idea_BRR_amaral_fore"
+			}
+		}
+		advisor = {
+			allowed = {
+			    original_tag = BRR
+			}
+			cost = 150
+			slot = foreign_minister
+			available = {
+				has_government = accelerationism
+			}
+			idea_token = BRR_amaral_fore 
+			traits = {
+			    foreign_minister
+			    for_iron_fisted_brute
+			}
+		}
+	}
+	BRR_artur_neiva = {
+		name = "Artur Neiva"
+		portraits = {
+			army = {
+				small = "GFX_idea_BRR_neiva_inter"
+			}
+		}
+		advisor = {
+			allowed = {
+			    original_tag = BRR
+			}
+			cost = 150
+			slot = security_minister
+			available = {
+				has_government = reactionism
+			}
+			idea_token = BRR_neiva_inter 
+			traits = {
+			    security_minister
+			    sec_crime_fighter
+			}
+		}
+	}
+	BRR_zuleika_alambert = {
+		name = "Zuleika Alambert"
+		portraits = {
+			army = {
+				small = "GFX_idea_BRR_alambert_inter"
+			}
+		}
+		advisor = {
+			allowed = {
+			    original_tag = BRR
+			}
+			cost = 150
+			slot = security_minister
+			available = {
+				has_government = conservatism
+			}
+			idea_token = BRR_alambert_inter 
+			traits = {
+			    security_minister
+			    sec_media_magnate
+			}
+		}
+	}
+	BRR_joao_filho = {
+		name = "João Fernandes Campos Café Filho"
+		portraits = {
+			army = {
+				small = "GFX_idea_BRR_joao_filho_inter"
+			}
+		}
+		advisor = {
+			allowed = {
+			    original_tag = BRR
+			}
+			cost = 150
+			slot = security_minister
+			available = {
+				has_government = liberalism
+			}
+			idea_token = BRR_joao_filho_inter
+			traits = {
+			    security_minister
+			    sec_silent_lawyer
+			}
+		}
+	}
+	BRR_menotti_del_picchia = {
+		name = "Menotti Del Picchia"
+		portraits = {
+			army = {
+				small = "GFX_idea_BRR_picchia_inter"
+			}
+		}
+		advisor = {
+			allowed = {
+			    original_tag = BRR
+			}
+			cost = 150
+			slot = security_minister
+			available = {
+				has_government = accelerationism
+			}
+			idea_token = BRR_picchia_inter 
+			traits = {
+			    security_minister
+			    sec_secret_police_chief
+			}
+		}
+	}
+	BRR_jurandir_bizarria_mamede = {
+		name = "Jurandir Bizarria Mamede"
+		portraits = {
+			army = {
+				small = "GFX_idea_BRR_mamede_army"
+			}
+		}
+		advisor = {
+			allowed = {
+			    original_tag = BRR
+			}
+			cost = 150
+			slot = army_chief
+			available = {
+				OR = {
+					has_government = reactionism
+					has_government = despotism
+					has_government = right_authoritarianism
+				}
+			}
+			idea_token = BRR_mamede_army
+			traits = {
+			    army_chief
+			    carm_decisive_battle_doctrine
+			}
+		}
+	}
+	BRR_newton_cavalcanti = {
+		name = "Newton Cavalcanti"
+		portraits = {
+			army = {
+				small = "GFX_idea_BRR_cavalcanti_army"
+			}
+		}
+		advisor = {
+			allowed = {
+			    original_tag = BRR
+			}
+			cost = 150
+			slot = army_chief
+			available = {
+				OR = {
+					has_government = reactionism
+					has_government = despotism
+					has_government = right_authoritarianism
+				}
+			}
+			idea_token = BRR_cavalcanti_army
+			traits = {
+			    army_chief
+			    carm_guns_and_butter_doctrine
+			}
+		}
+	}
+	BRR_julio_marcondes_salgado = {
+		name = "Júlio Marcondes Salgado"
+		portraits = {
+			army = {
+				small = "GFX_idea_BRR_salgado_army"
+			}
+		}
+		advisor = {
+			allowed = {
+			    original_tag = BRR
+			}
+			cost = 150
+			slot = army_chief
+			available = {
+				OR = {
+					has_government = despotism
+					has_government = right_authoritarianism
+				}
+			}
+			idea_token = BRR_salgado_army 
+			traits = {
+			    army_chief
+			    carm_doctrine_of_autonomy
+			}
+		}
+	}
+	BRR_candido_rondon = {
+		name = "Cândido Rondon"
+		portraits = {
+			army = {
+				small = "GFX_idea_BRR_rondon_army"
+			}
+		}
+		advisor = {
+			allowed = {
+			    original_tag = BRR
+			}
+			cost = 150
+			slot = army_chief
+			available = {
+				OR = {
+					has_government = progressivism
+					has_government = liberalism
+					has_government = conservatism
+				}
+			}
+			idea_token = BRR_rondon_army 
+			traits = {
+			    army_chief
+			    carm_commando_doctrine
+			}
+		}
+	}
+	BRR_euclides_zenobio_da_costa = {
+		name = "Euclides Zenóbio da Costa"
+		portraits = {
+			army = {
+				small = "GFX_idea_BRR_euclides_costa_army"
+			}
+		}
+		advisor = {
+			allowed = {
+			    original_tag = BRR
+			}
+			cost = 150
+			slot = army_chief
+			available = {
+				OR = {
+					has_government = conservatism
+					has_government = liberalism
+					has_government = progressivism
+				}
+			}
+			idea_token = BRR_euclides_costa_army
+			traits = {
+			    army_chief
+			    carm_elastic_defence_doctrine
+			}
+		}
+	}
+	BRR_tertuliano_potiguara = {
+		name = "Tertuliano Potiguara"
+		portraits = {
+			army = {
+				small = "GFX_idea_BRR_potiguara_nav"
+			}
+		}
+		advisor = {
+			allowed = {
+			    original_tag = BRR
+			}
+			cost = 150
+			slot = navy_chief
+			available = {
+				OR = {
+					has_government = reactionism
+					has_government = despotism
+					has_government = right_authoritarianism
+				}
+			}
+			idea_token = BRR_potiguara_nav 
+			traits = {
+			    navy_chief
+			    cnav_open_seas_doctrine
+			}
+		}
+	}
+	BRR_benjamin_de_almeida_sodre = {
+		name = "Benjamin de Almeida Sodré"
+		portraits = {
+			army = {
+				small = "GFX_idea_BRR_benjamin_sodre_nav"
+			}
+		}
+		advisor = {
+			allowed = {
+			    original_tag = BRR
+			}
+			cost = 150
+			slot = navy_chief
+			available = {
+				OR = {
+					has_government = conservatism
+					has_government = liberalism
+					has_government = progressivism
+					has_government = accelerationism
+				}
+			}
+			idea_token = BRR_benjamin_sodre_nav
+			traits = {
+			    navy_chief
+			    cnav_power_projection_doctrine
+			}
+		}
+	}
+	BRR_alexandre_busse = {
+		name = "Alexandre Busse"
+		portraits = {
+			army = {
+				small = "GFX_idea_BRR_busse_air"
+			}
+		}
+		advisor = {
+			allowed = {
+			    original_tag = BRR
+			}
+			cost = 150
+			slot = air_chief
+			available = {
+				OR = {
+					has_government = reactionism
+					has_government = despotism
+					has_government = right_authoritarianism
+				}
+			}
+			idea_token = BRR_busse_air 
+			traits = {
+			    air_chief
+			    cair_air_superiority_doctrine
+			}
+		}
+	}
+	BRR_marcio_de_sousa_melo = {
+		name = "Marcio de Sousa Melo"
+		portraits = {
+			army = {
+				small = "GFX_idea_BRR_melo_air"
+			}
+		}
+		advisor = {
+			allowed = {
+			    original_tag = BRR
+			}
+			cost = 150
+			slot = air_chief
+			available = {
+				OR = {
+					has_government = reactionism
+					has_government = despotism
+					has_government = right_authoritarianism
+					has_government = accelerationism
+				}
+			}
+			idea_token = BRR_melo_air
+			traits = {
+			    air_chief
+			    cair_carpet_bombing_doctrine
+			}
+		}
+	}
+	BRR_anisio_botelho = {
+		name = "Anisio Botelho"
+		portraits = {
+			army = {
+				small = "GFX_idea_BRR_botelho_air"
+			}
+		}
+		advisor = {
+			allowed = {
+			    original_tag = BRR
+			}
+			cost = 150
+			slot = air_chief
+			available = {
+				OR = {
+					has_government = conservatism
+					has_government = liberalism
+					has_government = progressivism
+				}
+			}
+			idea_token = BRR_botelho_air
+			traits = {
+			    air_chief
+			    cair_battlefield_support_doctrine
+			}
+		}
+	}
+	BRR_nero_moura = {
+		name = "Nero Moura"
+		portraits = {
+			army = {
+				small = "GFX_idea_BRR_moura_air"
+			}
+		}
+		advisor = {
+			allowed = {
+			    original_tag = BRR
+			}
+			cost = 150
+			slot = air_chief
+			available = {
+				OR = {
+					has_government = conservatism
+					has_government = liberalism
+					has_government = progressivism
+				}
+			}
+			idea_token = BRR_moura_air 
+			traits = {
+			    air_chief
+			    cair_vertical_envelopment_doctrine
+			}
+		}
+	}
+
+}

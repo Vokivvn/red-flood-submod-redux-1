@@ -1,0 +1,13 @@
+
+air_wings = {
+	12 = {
+		# 1st Squadron
+		small_plane_airframe_0 =  {
+			owner = "WRR" 
+			creator = "RUS"
+			amount = 25
+			version_name = "I-15"
+		}
+		name = "Pribaltiyskiy Aviaotryad Istrebiteley"
+	}
+}

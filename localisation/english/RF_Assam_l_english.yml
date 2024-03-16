@@ -1,0 +1,34 @@
+﻿l_english:
+
+#PARTIES#
+ASM_vanguard_socialism_party:0 "CPoI - L"
+ASM_popular_socialism_party:0 "CPoI - S"
+ASM_anarchism_party:0 "HSRA"
+ASM_revisionist_socialism_party:0 "CSP"
+ASM_progressivism_party:0 "INC - APCC"
+ASM_liberalism_party:0 "INC - APCC"
+ASM_conservatism_party:0 "AVP - AUMP"
+ASM_right_authoritarianism_party:0 "AIHGA (ABHM) Hardliners"
+ASM_despotism_party:0 "NVO (RSS) Constituionalists"
+ASM_reactionism_party:0 "NVO (RSS) Radicals"
+ASM_accelerationism_party:0 "AIR"
+
+ASM_vanguard_socialism_party_long:0 "Communist Party of India - Leninist"
+ASM_popular_socialism_party_long:0 "Communist Party of India - Spartakist"
+ASM_anarchism_party_long:0 "Assamese Socialist Republican Association"
+ASM_revisionist_socialism_party_long:0 "Congress Socialist Party"
+ASM_progressivism_party_long:0 "INC - Assam Pradesh Congress Committee"
+ASM_liberalism_party_long:0 "INC - Assam Pradesh Congress Committee"
+ASM_conservatism_party_long:0 "Assam Valley Party - Assam United Muslim Party"
+ASM_right_authoritarianism_party_long:0 "All-India Hindu Grand-Assembly - Hardliners"
+ASM_despotism_party_long:0 "National Volunteer Organisation - Constituionalists"
+ASM_reactionism_party_long:0 "National Volunteer Organisation - Radicals"
+ASM_accelerationism_party_long:0 "Association for Indian Renewal"
+#LEADER DESCRITIONS#
+
+#IDEAS#
+ASM_province_in_limbo:0 "Province in Limbo"
+ASM_province_in_limbo_desc:0 "Assam is trapped between Bangistan, the Federal Republic and Burma. There are parts of the province which would seek its future with each. No matter what Assam does, some will be upset, for religious, ethnic or political reasons. There is no easy way out."
+#CUSTOM TOOLTIPS AND FLAGS#
+#DECISIONS (1.5 Update)#
+#FOCUSES#

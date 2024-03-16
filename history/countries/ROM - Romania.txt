@@ -1,0 +1,121 @@
+﻿capital = 46
+set_research_slots = 3 
+set_convoys = 175
+set_stability = 0.5
+
+oob = "ROM"
+if = { limit = { has_dlc = "By Blood Alone" } set_air_oob = "ROM_air" }
+if = { limit = {  NOT = { has_dlc = "By Blood Alone" } }  set_air_oob = "ROM_air_legacy" }
+
+add_ideas = {
+	ROM_divide
+	ROM_frn_idea
+	ROM_legitimate_government
+	ROM_hedonist_king
+}
+
+# Starting tech
+set_technology = {
+	tech_support = 1		
+	tech_engineers = 1
+	tech_mountaineers = 1
+	tech_trucks =1
+	motorised_infantry = 1
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	gw_artillery = 1
+	interwar_antiair = 1
+	basic_train = 1
+}
+
+if = {
+	limit = { NOT = { has_dlc = "No Step Back" } }
+	set_technology = {
+		gwtank = 1
+		basic_light_tank = 1
+	}
+}
+if = {
+	limit = { has_dlc = "No Step Back" }
+	set_technology = {
+		gwtank_chassis = 1
+		basic_light_tank_chassis = 1
+	}
+}
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	set_technology = {
+		early_submarine = 1
+		early_destroyer = 1
+	}
+}
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		early_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		basic_battery = 1
+		basic_torpedo = 1
+		basic_depth_charges = 1
+	}
+}
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+	set_technology = {
+		iw_small_airframe = 1
+		aa_lmg = 1
+		aa_cannon_1 = 1
+		early_bombs = 1
+		engines_1 = 1
+	}
+}
+if = {
+	limit = { NOT = { has_dlc = "By Blood Alone" } }
+	set_technology = {
+		early_fighter = 1
+		CAS1 = 1
+	}
+}
+
+country_event = { id = romania.1 days = 207 }
+
+set_politics = {
+	ruling_party = despotism
+	last_election = "1932.2.25"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	vanguard_socialism = 1
+	popular_socialism = 1
+	anarchism = 1
+	revisionist_socialism = 2
+	progressivism = 5
+	liberalism = 15
+	conservatism = 15
+	right_authoritarianism = 10
+	despotism = 40
+	reactionism = 5
+	accelerationism = 5
+}
+
+recruit_character = ROM_chadrol
+recruit_character = ROM_chadderol
+recruit_character = ROM_tatarescu
+recruit_character = ROM_bratianu
+recruit_character = ROM_iorga_con
+recruit_character = ROM_iorga_rwa
+recruit_character = ROM_girlboss
+recruit_character = ROM_mihai
+recruit_character = ROM_agiu
+recruit_character = ROM_petre_dumitrescu
+recruit_character = ROM_ion_antonescu
+recruit_character = ROM_ioan_mihail_racovita
+recruit_character = ROM_gheorghe_avramescu
+recruit_character = ROM_horia_macellariu
+recruit_character = ROM_Gherea
+recruit_character = ROM_George_Karadordevic
+recruit_character = ROM_lapedatu

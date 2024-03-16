@@ -1,0 +1,162 @@
+add_namespace = siam
+
+country_event = {
+	id = siam.1 #Boworadet Rebellion
+	title = siam.1.t
+	desc = siam.1.desc
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = siam.1.a
+		SIA = {
+			set_politics = {
+				ruling_party = despotism
+				elections_allowed = no
+			}
+			add_popularity = {
+				ideology = despotism
+				popularity = 0.3
+			}
+			remove_ideas = {
+				SIA_rama_vii
+			}
+			country_event = {
+				id = siam.3
+				days = 70
+			}
+		}
+		news_event = {
+			id = news.316
+		}
+	}
+	option = {
+		name = siam.1.b
+		SIA = {
+			country_event = {
+				id = siam.2
+				days = 70
+			}
+		}
+		news_event = {
+			id = news.317
+		}
+	}
+}
+country_event = {
+	id = siam.2 #Prime minister
+	title = siam.2.t
+	desc = siam.2.desc
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = siam.2.a
+		SIA = {
+			set_politics = {
+				ruling_party = accelerationism
+				elections_allowed = no
+			}
+			add_popularity = {
+				ideology = accelerationism
+				popularity = 0.3
+			}
+		}
+		news_event = {
+			id = news.318
+		}
+	}
+	option = {
+		name = siam.2.b
+		SIA = {
+			set_politics = {
+				ruling_party = revisionist_socialism
+				elections_allowed = no
+			}
+			add_popularity = {
+				ideology = revisionist_socialism
+				popularity = 0.3
+			}
+		}
+		news_event = {
+			id = news.319
+		}
+	}
+	option = {
+		name = siam.2.c
+		SIA = {
+			set_politics = {
+				ruling_party = conservatism
+				elections_allowed = no
+			}
+			add_popularity = {
+				ideology = conservatism
+				popularity = 0.3
+			}
+		}
+		news_event = {
+			id = news.320
+		}
+	}
+}
+country_event = {
+	id = siam.3 #Monarch
+	title = siam.3.t
+	desc = siam.3.desc
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = siam.3.a
+		SIA = {
+			set_party_name = {
+				ideology = despotism
+				long_name = SIA_Chakri_despotism_party_long
+				name = SIA_Chakri_despotism_party
+			}
+			add_country_leader_role = {
+				character = "SIA_Prajadhipok"
+				country_leader = {
+					ideology = constitutional_monarchy
+					expire = "1965.1.1.1"
+				}
+				promote_leader = yes
+			}
+			set_politics = {
+				ruling_party = despotism
+				elections_allowed = no
+			}
+		}
+		news_event = {
+			id = news.321
+		}
+	}
+	option = {
+		name = siam.3.b
+		SIA = {
+			set_party_name = {
+				ideology = despotism
+				long_name = SIA_Chakri_despotism_party_long
+				name = SIA_Chakri_despotism_party
+			}
+			add_country_leader_role = {
+				character = "SIA_Sukhumbandhu"
+				country_leader = {
+					ideology = absolute_monarchy
+					expire = "1965.1.1.1"
+				}
+				promote_leader = yes
+			}
+			set_politics = {
+				ruling_party = despotism
+				elections_allowed = no
+			}
+		}
+		news_event = {
+			id = news.322
+		}
+	}
+}

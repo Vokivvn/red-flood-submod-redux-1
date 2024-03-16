@@ -1,0 +1,21 @@
+state={
+	id=1229
+	name="STATE_1229"
+	manpower = 295900
+
+	state_category = town
+
+	history = {
+		owner = DEI
+		victory_points = { #Pangkalpinang
+			7396 3
+		}
+		add_core_of = DEI
+		buildings = {
+			infrastructure = 2
+		}
+	}
+	provinces={
+		7396 7384 4211
+	}
+}

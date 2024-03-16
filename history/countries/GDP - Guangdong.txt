@@ -1,0 +1,66 @@
+﻿capital = 594
+
+oob = "GDP"
+
+set_convoys = 5
+set_research_slots = 2
+set_country_flag = CHI_is_kmt
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	gw_artillery = 1
+	mass_assault = 1
+}
+
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+	set_technology = {
+		iw_small_airframe = 1
+		aa_lmg = 1
+		aa_cannon_1 = 1
+		early_bombs = 1
+		engines_1 = 1
+	}
+}
+if = {
+	limit = { NOT = { has_dlc = "By Blood Alone" } }
+	set_technology = {
+		early_fighter = 1
+		CAS1 = 1
+	}
+}
+
+country_event = { id = china.100 days = 132 }
+
+set_politics = {
+	ruling_party = despotism
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	vanguard_socialism = 4
+	popular_socialism = 0
+	anarchism = 0
+	revisionist_socialism = 2
+	progressivism = 2
+	liberalism = 3
+	conservatism = 37
+	right_authoritarianism = 14
+	despotism = 34
+	reactionism = 0
+	accelerationism = 4
+}
+add_ideas = { 
+	CHI_shared_economy
+	GDP_kmt_nra_rule
+	GDP_whampoa_military_academy
+	CHI_kmt_dejure
+}
+
+recruit_character = GDP_xu_chong_zhi
+recruit_character = GDP_hu_hanmin
+recruit_character = GDP_bai_chongxi
+recruit_character = GDP_li_zongren
+recruit_character = GDP_zou_lu

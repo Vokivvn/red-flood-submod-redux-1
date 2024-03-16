@@ -1,0 +1,27 @@
+
+state={
+	id=1081
+	name="STATE_1081"
+	manpower = 214781
+
+	state_category = rural
+
+	resources={
+		
+	}
+
+	history={
+		owner = ASM
+		add_core_of = ASM
+		buildings = {
+			infrastructure = 1
+		}
+		victory_points = {
+			10090 1
+		}
+	}
+
+	provinces={
+		10090 997
+	}
+}

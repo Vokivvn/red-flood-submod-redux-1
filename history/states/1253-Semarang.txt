@@ -1,0 +1,25 @@
+state={
+	id=1253
+	name="STATE_1253"
+	manpower = 4135900
+
+	state_category = large_town
+
+	history={
+		owner = DEI
+		victory_points = { #Samarang
+			1413 5
+		}
+		add_core_of = DEI
+		buildings = {
+			infrastructure = 3
+			1413 = {
+				naval_base = 3
+			}
+		}
+	}
+
+	provinces={
+		1413 4390
+	}
+}

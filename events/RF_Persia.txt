@@ -1,0 +1,1294 @@
+#####################
+#	Persia - Baba	#
+#####################
+
+add_namespace = per
+
+#########################################
+#Starting
+#########################################
+country_event = { #Persians rise up
+	id = per.1
+	title = per.1.t
+	desc = per.1.desc
+	picture = GFX_PCW
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {	#PER
+		name = per.1.a
+		ai_chance = { base = 1 }
+		hidden_effect = {
+			diplomatic_relation = {
+				country = ENG
+				relation = military_access
+				active = no
+			}
+			news_event = {
+				id = news.107
+				days = 1
+			}
+			#RPR
+			every_state = {
+				limit = {
+					is_core_of = PER
+				}
+				add_core_of = RPR
+			}
+			every_state = {
+				limit = {
+					is_claimed_by = PER
+				}
+				add_claim_by = RPR
+			}
+			RPR = {
+				transfer_state = 421
+				transfer_state = 412
+				transfer_state = 413
+				transfer_state = 417
+				transfer_state = 416
+				transfer_state = 419
+				transfer_state = 420
+				transfer_state = 888
+				hidden_effect = {
+					inherit_technology = PER
+					load_oob = "RPR_civil_war"
+					load_oob = "RPR_civil_war_air"
+				}
+				declare_war_on = {
+					target = PER
+					type = annex_everything
+				}
+			}
+			#PER
+			PER = {
+				set_country_flag = PER_civil_war_mechanic_flag
+				load_focus_tree = PER_MAIN
+			}
+		}
+	}
+	option = {	#RPR
+		name = per.1.b
+		ai_chance = { base = 1 }
+		hidden_effect = {
+			diplomatic_relation = {
+				country = ENG
+				relation = military_access
+				active = no
+			}
+			TUC = {
+				country_event = {
+					id = transcaspia.1
+					days = 14
+				}
+			}
+			news_event = {
+				id = news.107
+				days = 1
+			}
+			#RPR
+			every_state = {
+				limit = {
+					is_core_of = PER
+				}
+				add_core_of = RPR
+			}
+			every_state = {
+				limit = {
+					is_claimed_by = PER
+				}
+				add_claim_by = RPR
+			}
+			RPR = {
+				transfer_state = 421
+				transfer_state = 412
+				transfer_state = 413
+				transfer_state = 417
+				transfer_state = 416
+				transfer_state = 419
+				transfer_state = 420
+				transfer_state = 888
+				hidden_effect = {
+					inherit_technology = PER
+					load_oob = "RPR_civil_war"
+					load_oob = "RPR_civil_war_air"
+				}
+				declare_war_on = {
+					target = PER
+					type = annex_everything
+				}
+			}
+			#PER
+			PER = {
+				set_country_flag = PER_civil_war_mechanic_flag
+				load_focus_tree = PER_MAIN
+			}
+		}
+		RPR = {
+			change_tag_from = PER
+		}
+	}
+}
+country_event = {	#ashes of greatness
+	id = per.2
+	title = per.2.t
+	desc = per.2.desc
+	picture = GFX_persian_ashes
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {	#PER
+		name = per.2.a
+		ai_chance = { base = 1 }
+	}
+}
+country_event = {	#Negotiations with London
+	id = per.201
+	title = per.201.t
+	desc = per.201.desc
+	picture = GFX_persian_ashes
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {	#yes
+		name = per.201.a
+		ai_chance = { base = 1 }
+		set_country_flag = PER_starting_pro_anglo
+	}
+	option = {	#no
+		name = per.201.b
+		ai_chance = { base = 1 }
+		set_country_flag = PER_starting_anti_anglo
+	}
+}
+country_event = {	#concessions
+	id = per.3
+	title = per.3.t
+	desc = per.3.desc
+	picture = GFX_persian_ashes
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {	#PER
+		name = per.3.a
+		ai_chance = { base = 1 }
+	}
+}
+country_event = {	#more denbts
+	id = per.4
+	title = per.4.t
+	desc = per.4.desc
+	picture = GFX_persian_ashes
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {	#PER
+		name = per.4.a
+		ai_chance = { base = 1 }
+	}
+}
+country_event = {	#Onion-shah
+	id = per.101
+	title = per.101.t
+	desc = per.101.desc
+	picture = GFX_street_bullies
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {	#
+		name = per.101.a
+		ai_chance = { base = 1 }
+		417 = {set_demilitarized_zone = yes}
+		412 = {set_demilitarized_zone = yes}
+		413 = {set_demilitarized_zone = yes}
+		416 = {set_demilitarized_zone = yes}
+		421 = {set_demilitarized_zone = yes}
+		888 = {set_demilitarized_zone = yes}
+	}
+}
+#########################################
+#Whites - Shah
+#########################################
+country_event = {	#whites win
+	id = per.5
+	title = per.5.t
+	desc = per.5.desc
+	picture = GFX_civil_war_defeated
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {	#PER
+		name = per.5.a
+		ai_chance = { base = 1 }
+		hidden_effect = {
+			clr_country_flag = PER_starting_mechanic_flag
+			clr_country_flag = PER_civil_war_mechanic_flag
+		}
+	}
+}
+country_event = {	#Mo takes over
+	id = per.51
+	title = per.51.t
+	desc = per.51.desc
+	picture = GFX_Shahanshah
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {	#PER
+		name = per.51.a
+		ai_chance = { base = 1 }
+	}
+}
+country_event = {	#Kurds
+	id = per.36
+	title = per.36.t
+	desc = per.36.desc
+	picture = GFX_shah_flag
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {	#yes
+		name = per.36.a
+		ai_chance = { base = 1 }
+		PER = {
+			transfer_state = 889
+			country_event = {
+				id = per.361
+			}
+		}
+	}
+	option = {	#no
+		name = per.36.b
+		ai_chance = { base = 1 }
+		PER = {
+			country_event = {
+				id = per.362
+			}
+		}
+	}
+}
+country_event = {	#yes
+	id = per.361
+	title = per.361.t
+	desc = per.361.desc
+	picture = GFX_shah_flag
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {	#PER
+		name = per.361.a
+		ai_chance = { base = 1 }
+	}
+}
+country_event = {	#no
+	id = per.362
+	title = per.362.t
+	desc = per.362.desc
+	picture = GFX_shah_flag
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {	#PER
+		name = per.362.a
+		ai_chance = { base = 1 }
+	}
+}
+country_event = {	#Afghanis
+	id = per.37
+	title = per.37.t
+	desc = per.37.desc
+	picture = GFX_shah_flag
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {	#yes
+		name = per.37.a
+		ai_chance = { base = 1 }
+		PER = {
+			if = {
+				limit = {
+					AFG = {
+						has_full_control_of_state = 885
+					}
+				}
+				transfer_state = 885
+			}
+			if = {
+				limit = {
+					AFG = {
+						has_full_control_of_state = 993
+					}
+				}
+				transfer_state = 993
+			}
+			country_event = {
+				id = per.371
+			}
+		}
+	}
+	option = {	#no
+		name = per.37.b
+		ai_chance = { base = 1 }
+		PER = {
+			country_event = {
+				id = per.372
+			}
+		}
+		
+	}
+}
+country_event = {	#yes
+	id = per.371
+	title = per.371.t
+	desc = per.371.desc
+	picture = GFX_shah_flag
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {	#PER
+		name = per.371.a
+		ai_chance = { base = 1 }
+	}
+}
+country_event = {	#no
+	id = per.372
+	title = per.372.t
+	desc = per.372.desc
+	picture = GFX_shah_flag
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {	#PER
+		name = per.372.a
+		ai_chance = { base = 1 }
+		PER = {
+			add_opinion_modifier = {
+				target = AFG
+				modifier = huge_decrease
+			}
+		}
+		AFG = {
+			add_opinion_modifier = {
+				target = PER
+				modifier = huge_decrease
+			}
+		}
+	}
+}
+country_event = {	#Azeris
+	id = per.38
+	title = per.38.t
+	desc = per.38.desc
+	picture = GFX_shah_flag
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {	#yes
+		name = per.38.a
+		ai_chance = { base = 1 }
+		PER = {
+			transfer_state = 891
+			transfer_state = 229
+			transfer_state = 1054
+			country_event = {
+				id = per.381
+			}
+		}
+	}
+	option = {	#no
+		name = per.38.b
+		ai_chance = { base = 1 }
+		PER = {
+			country_event = {
+				id = per.382
+			}
+		}
+	}
+}
+country_event = {	#yes
+	id = per.381
+	title = per.381.t
+	desc = per.381.desc
+	picture = GFX_shah_flag
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {	#PER
+		name = per.381.a
+		ai_chance = { base = 1 }
+	}
+}
+country_event = {	#no
+	id = per.382
+	title = per.382.t
+	desc = per.382.desc
+	picture = GFX_shah_flag
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {	#PER
+		name = per.382.a
+		ai_chance = { base = 1 }
+		PER = {
+			add_opinion_modifier = {
+				target = AZR
+				modifier = huge_decrease
+			}
+		}
+		AZR = {
+			add_opinion_modifier = {
+				target = PER
+				modifier = huge_decrease
+			}
+		}
+	}
+}
+country_event = {	#Balochis
+	id = per.39
+	title = per.39.t
+	desc = per.39.desc
+	picture = GFX_shah_flag
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {	#PER
+		name = per.39.a
+		ai_chance = { base = 1 }
+		PER = {
+			if = {
+				limit = {
+					DIN = {
+						has_full_control_of_state = 444
+					}
+				}
+				transfer_state = 444
+			}
+			if = {
+				limit = {
+					DIN = {
+						has_full_control_of_state = 1222
+					}
+				}
+				transfer_state = 1222
+			}
+			if = {
+				limit = {
+					DIN = {
+						has_full_control_of_state = 993
+					}
+				}
+				transfer_state = 993
+			}
+			country_event = {
+				id = per.391
+			}
+		}
+	}
+	option = {	#PER
+		name = per.39.b
+		ai_chance = { base = 1 }
+		PER = {
+			country_event = {
+				id = per.392
+			}
+		}
+	}
+}
+country_event = {	#yes
+	id = per.391
+	title = per.391.t
+	desc = per.391.desc
+	picture = GFX_shah_flag
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {	#PER
+		name = per.391.a
+		ai_chance = { base = 1 }
+		PER = {
+			diplomatic_relation = {
+				country = DIN
+				relation = non_aggression_pact
+				active = yes
+			}
+		}
+	}
+}
+country_event = {	#no
+	id = per.392
+	title = per.392.t
+	desc = per.392.desc
+	picture = GFX_shah_flag
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {	#PER
+		name = per.392.a
+		ai_chance = { base = 1 }
+		PER = {
+			add_opinion_modifier = {
+				target = DIN
+				modifier = huge_decrease
+			}
+		}
+		DIN = {
+			add_opinion_modifier = {
+				target = PER
+				modifier = huge_decrease
+			}
+		}
+	}
+}
+country_event = {	#Oman
+	id = per.40
+	title = per.40.t
+	desc = per.40.desc
+	picture = GFX_shah_flag
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {	#yes
+		name = per.40.a
+		ai_chance = { base = 1 }
+		transfer_state = 1214
+		add_state_core = 1214
+		PER = {
+			puppet = OMA
+		}
+	}
+	option = {	#no
+		name = per.40.b
+		ai_chance = { base = 1 }
+		PER = {
+			end_puppet = OMA
+		}
+		OMA = {
+			leave_faction = yes
+		}
+		PER = {
+			declare_war_on = {
+				target = OMA
+				type = puppet_wargoal_focus
+			}
+		}
+	}
+}
+country_event = {	#Yemen
+	id = per.41
+	title = per.41.t
+	desc = per.41.desc
+	picture = GFX_shah_flag
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {	#yes
+		name = per.41.a
+		ai_chance = { base = 1 }
+		PER = {
+			puppet = YEM
+		}
+	}
+	option = {	#no
+		name = per.41.b
+		ai_chance = { base = 1 }
+		PER = {
+			end_puppet = YEM
+		}
+		YEM = {
+			leave_faction = yes
+		}
+		PER = {
+			declare_war_on = {
+				target = YEM
+				type = puppet_wargoal_focus
+			}
+		}
+	}
+}
+country_event = {	#Kuwait
+	id = per.42
+	title = per.42.t
+	desc = per.42.desc
+	picture = GFX_shah_flag
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {	#yes
+		name = per.42.a
+		ai_chance = { base = 1 }
+		PER = {
+			transfer_state = 656
+		}
+	}
+	option = {	#no
+		name = per.42.b
+		ai_chance = { base = 1 }
+		#border conflict here?
+	}
+}
+country_event = {	#Qatar
+	id = per.43
+	title = per.43.t
+	desc = per.43.desc
+	picture = GFX_shah_flag
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {	#yes
+		name = per.43.a
+		ai_chance = { base = 1 }
+		PER = {
+			transfer_state = 765
+		}
+	}
+	option = {	#no
+		name = per.43.b
+		ai_chance = { base = 1 }
+	}
+}
+country_event = {	#Dubai
+	id = per.44
+	title = per.44.t
+	desc = per.44.desc
+	picture = GFX_shah_flag
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {	#yes
+		name = per.44.a
+		ai_chance = { base = 1 }
+		PER = {
+			transfer_state = 658
+		}
+	}
+	option = {	#no
+		name = per.44.b
+		ai_chance = { base = 1 }
+	}
+}
+country_event = {	#Aden
+	id = per.45
+	title = per.45.t
+	desc = per.45.desc
+	picture = GFX_shah_flag
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {	#yes
+		name = per.45.a
+		ai_chance = { base = 1 }
+		PER = {
+			transfer_state = 659
+		}
+	}
+	option = {	#no
+		name = per.45.b
+		ai_chance = { base = 1 }
+	}
+}
+country_event = {	#ally israel?
+	id = per.46
+	title = per.46.t
+	desc = per.46.desc
+	picture = GFX_shah_flag
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {	#yes - if PER owns 1088 and ISR owns 1123 then transfer 1088 to ISR
+		name = per.46.a
+		ai_chance = { base = 1 }
+		PER = { add_to_faction = ISR }
+		if = {
+			limit = {
+				PER = {
+					has_full_control_of_state = 1088
+				}
+			}
+			ISR = {
+				transfer_state = 1088
+			}
+			PER = {
+				remove_state_core = 1088
+			}
+		}
+		if = {
+			limit = {
+				PER = {
+					has_full_control_of_state = 1123
+				}
+			}
+			ISR = {
+				transfer_state = 1123
+			}
+			PER = {
+				remove_state_core = 1123
+			}
+		}
+	}
+	option = {	#no - sadface
+		name = per.46.b
+		ai_chance = { base = 1 }
+		
+	}
+}
+country_event = {	#Iran represses the clergy
+	id = per.47
+	title = per.47.t
+	desc = per.47.desc
+	picture = GFX_shah_flag
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {	#autonomy
+		name = per.47.a
+		ai_chance = { base = 1 }
+		add_popularity = {
+			ideology = reactionism
+			popularity = 0.03
+		}
+		add_political_power = 50
+	}
+	option = {	#loyalty
+		name = per.47.b
+		ai_chance = { base = 1 }
+		add_popularity = {
+			ideology = reactionism
+			popularity = -0.06
+		}
+		add_political_power = -50
+	}
+}
+#########################################
+#Whites - APOC
+#########################################
+country_event = {	#APOC state
+	id = per.52
+	title = per.52.t
+	desc = per.52.desc
+	picture = GFX_APOC
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {	#PER
+		name = per.52.a
+		ai_chance = { base = 1 }
+		set_cosmetic_tag = PER_APOC_state
+		retire_country_leader = yes
+		promote_character = PER_john_cadman
+		set_party_name = {
+			ideology = right_authoritarianism
+			long_name = PER_anglopersian_right_authoritarianism_party_long
+			name = PER_anglopersian_right_authoritarianism_party
+		}
+		add_opinion_modifier = {
+			target = ENG
+			modifier = huge_increase
+		}
+		ENG = {
+			add_opinion_modifier = {
+				target = PER
+				modifier = huge_increase
+			}
+		}
+	}
+}
+country_event = {	#APOC sells
+	id = per.521
+	title = per.521.t
+	desc = per.521.desc
+	picture = GFX_APOC
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {	#Oil
+		name = per.521.a
+		ai_chance = { base = 1 }
+		add_political_power = -25
+		create_import = {
+			resource = oil
+			amount = 20
+			exporter = PER
+		}
+		PER = {
+			add_political_power = 25
+			add_offsite_building = { type = industrial_complex level = 1 }
+		}
+	}
+	option = {	#Soldiers
+		name = per.521.b
+		ai_chance = { base = 1 }
+		add_political_power = -30
+		division_template = {
+			name = "Anglo-Persian Mercenaries"
+			regiments = {
+				infantry = { x = 0 y = 0 }
+				infantry = { x = 0 y = 1 }
+				infantry = { x = 1 y = 0 }
+				infantry = { x = 1 y = 1 }
+				infantry = { x = 1 y = 2 }
+				infantry = { x = 2 y = 0 }
+				infantry = { x = 2 y = 1 }
+				infantry = { x = 2 y = 2 }
+			}
+			support = {
+				artillery = { x = 0 y = 0 }
+			}
+		}
+		random_owned_controlled_state = {
+			create_unit = {
+				division = "name = \"Anglo-Persian Mercenaries\" division_template = \"Anglo-Persian Mercenaries\" start_experience_factor = 0.75"
+				owner = ROOT
+			}
+		}
+		random_owned_controlled_state = {
+			create_unit = {
+				division = "name = \"Anglo-Persian Mercenaries\" division_template = \"Anglo-Persian Mercenaries\" start_experience_factor = 0.75"
+				owner = ROOT
+			}
+		}
+		random_owned_controlled_state = {
+			create_unit = {
+				division = "name = \"Anglo-Persian Mercenaries\" division_template = \"Anglo-Persian Mercenaries\" start_experience_factor = 0.75"
+				owner = ROOT
+			}
+		}
+		PER = {
+			army_experience = 10
+			add_manpower = -12000
+			add_offsite_building = { type = arms_factory level = 1 }
+		}
+	}
+	option = {	#Both
+		name = per.521.c
+		ai_chance = { base = 1 }
+		add_political_power = -65
+		create_import = {
+			resource = oil
+			amount = 20
+			exporter = PER
+		}
+		division_template = {
+			name = "Anglo-Persian Mercenaries"
+			regiments = {
+				infantry = { x = 0 y = 0 }
+				infantry = { x = 0 y = 1 }
+				infantry = { x = 1 y = 0 }
+				infantry = { x = 1 y = 1 }
+				infantry = { x = 1 y = 2 }
+				infantry = { x = 2 y = 0 }
+				infantry = { x = 2 y = 1 }
+				infantry = { x = 2 y = 2 }
+			}
+			support = {
+				artillery = { x = 0 y = 0 }
+			}
+		}
+		random_owned_controlled_state = {
+			create_unit = {
+				division = "name = \"Anglo-Persian Mercenaries\" division_template = \"Anglo-Persian Mercenaries\" start_experience_factor = 0.75"
+				owner = ROOT
+			}
+		}
+		random_owned_controlled_state = {
+			create_unit = {
+				division = "name = \"Anglo-Persian Mercenaries\" division_template = \"Anglo-Persian Mercenaries\" start_experience_factor = 0.75"
+				owner = ROOT
+			}
+		}
+		random_owned_controlled_state = {
+			create_unit = {
+				division = "name = \"Anglo-Persian Mercenaries\" division_template = \"Anglo-Persian Mercenaries\" start_experience_factor = 0.75"
+				owner = ROOT
+			}
+		}
+		PER = {
+			add_political_power = 25
+			army_experience = 10
+			add_manpower = -12000
+			add_offsite_building = { type = arms_factory level = 1 }
+			add_offsite_building = { type = industrial_complex level = 1 }
+		}
+	}
+}
+country_event = {	#Stable Authority - commonwealth?
+	id = per.522
+	title = per.522.t
+	desc = per.522.desc
+	picture = GFX_exhalted_leader
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {	#
+		name = per.522.a
+		ai_chance = { base = 1 }
+		ENG = {
+			add_to_faction = PER
+		}
+		add_political_power = 50
+	}
+	option = {	#
+		name = per.522.b
+		ai_chance = { factor = 2 }
+		ENG = {
+			diplomatic_relation = {
+				country = PER
+				relation = guarantee
+				active = yes
+			}
+		}
+		add_political_power = 50
+	}
+}
+country_event = {	#APOC asks for Gulf
+	id = per.53
+	title = per.53.t
+	desc = per.53.desc
+	picture = GFX_exiles_MAN
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {	#yes
+		name = per.53.a
+		ai_chance = { factor = 2 }
+		PER = {
+			country_event = {
+				id = per.531
+			}
+		}
+	}
+	option = {	#no
+		name = per.53.a
+		ai_chance = { base = 1 }
+		PER = {
+			country_event = {
+				id = per.532
+			}
+		}
+	}
+}
+country_event = {	#APOC get gulf
+	id = per.531
+	title = per.531.t
+	desc = per.531.desc
+	picture = GFX_fireworks
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {	#PER
+		name = per.531.a
+		ai_chance = { base = 1 }
+		transfer_state = 656
+		transfer_state = 765
+		transfer_state = 658
+		puppet = OMA
+		add_state_core = 656
+		add_state_core = 765
+		add_state_core = 658
+		add_state_core = 294
+	}
+}
+country_event = {	#APOC do not get gulf
+	id = per.532
+	title = per.532.t
+	desc = per.532.desc
+	picture = GFX_exiles_MAN
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {	#PER
+		name = per.532.a
+		ai_chance = { base = 1 }
+	}
+}
+#########################################
+#Reds
+#########################################
+country_event = {	#Reds win
+	id = per.6
+	title = per.6.t
+	desc = per.6.desc
+	picture = GFX_civil_war_defeated
+	
+	fire_only_once = yes
+	trigger = {
+		tag = RPR
+		RPR = {
+			exists = yes
+			has_war = no
+		}
+		PER = {
+			exists = no
+		}
+	}
+	
+	option = {	#PER
+		name = per.6.a
+		ai_chance = { base = 1 }
+	}
+}
+country_event = {	#1st council
+	id = per.61
+	title = per.61.t
+	desc = per.61.desc
+	picture = GFX_democracy_1
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {	#lib-marx
+		name = per.61.a
+		ai_chance = { base = 1 }
+		add_political_power = 50
+		set_party_name = { 
+			ideology = popular_socialism 
+			long_name = RPR_tudeh_popular_socialism_party_long
+			name = RPR_tudeh_popular_socialism_party
+		}
+	}
+	option = {	#jungle
+		name = per.61.b
+		ai_chance = { base = 1 }
+		set_politics = {
+			ruling_party = vanguard_socialism
+		}
+		add_political_power = 50
+	}
+}
+country_event = {	#2nd council
+	id = per.62
+	title = per.62.t
+	desc = per.62.desc
+	picture = GFX_democracy_2
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {	#
+		name = per.62.a
+		ai_chance = { base = 1 }
+		add_political_power = 50
+		add_popularity = {
+			ideology = 	progressivism
+			popularity = 0.12
+		}
+		add_popularity = {
+			ideology = revisionist_socialism
+			popularity = 0.12
+		}
+	}
+	option = {	#
+		name = per.62.b
+		ai_chance = { base = 1 }
+		add_political_power = -50
+		add_popularity = {
+			ideology = 	popular_socialism
+			popularity = 0.06
+		}
+		add_popularity = {
+			ideology = 	vanguard_socialism
+			popularity = 0.06
+		}
+	}
+}
+country_event = {	#constitutional talks
+	id = per.7
+	title = per.7.t
+	desc = per.7.desc
+	picture = MO2_the_trial
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {	#
+		name = per.7.a
+		ai_chance = { base = 1 }
+		add_popularity = {
+			ideology = vanguard_socialism
+			popularity = -0.1
+		}
+		add_political_power = 50
+	}
+	option = {	#
+		name = per.7.b
+		ai_chance = { base = 1 }
+		add_popularity = {
+			ideology = vanguard_socialism
+			popularity = 0.1
+		}
+		add_political_power = -50
+	}
+}
+country_event = {	#join Damavand_pact?
+	id = per.71
+	title = per.71.t
+	desc = per.71.desc
+	picture = GFX_militias_2
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {	#yes
+		name = per.71.a
+		ai_chance = { base = 1 }
+		RPR = {
+			add_to_faction = ROOT
+		}
+	}
+	option = {	#no
+		name = per.71.b
+		ai_chance = { factor = 2 }
+		RPR = {
+			add_political_power = -10
+		}
+		add_political_power = 10
+	}
+}
+country_event = {	#ask Germany for fwendship
+	id = per.8
+	title = per.8.t
+	desc = per.8.desc
+	picture = GFX_militias_2
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {	#yes
+		name = per.8.a
+		ai_chance = { factor = 4 }
+		GER = {
+			diplomatic_relation = {
+				country = RPR
+				relation = non_aggression_pact
+				active = yes
+			}
+			diplomatic_relation = {
+				country = RPR
+				relation = military_access
+				active = yes
+			}
+			diplomatic_relation = {
+				country = RPR
+				relation = docking_rights
+				active = yes
+			}
+		}
+		RPR = {
+			country_event = {
+				id = per.81
+			}
+		}
+	}
+	option = {	#no
+		name = per.8.b
+		ai_chance = { base = 1 }
+		RPR = {
+			country_event = {
+				id = per.82
+			}
+		}
+	}
+}
+country_event = {	#ger yes
+	id = per.81
+	title = per.81.t
+	desc = per.81.desc
+	picture = GFX_militias_2
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {	#yey
+		name = per.81.a
+		ai_chance = { base = 1 }
+		add_political_power = 5
+	}
+}
+country_event = {	#ger no
+	id = per.82
+	title = per.82.t
+	desc = per.82.desc
+	picture = GFX_militias_2
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {	#aw
+		name = per.82.a
+		ai_chance = { base = 1 }
+		add_political_power = -5
+	}
+}
+country_event = {	#azeris 1
+	id = per.9
+	title = per.9.t
+	desc = per.9.desc
+	picture = GFX_militias_2
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {	#harsh
+		name = per.9.a
+		ai_chance = { base = 1 }
+		set_country_flag = PER_starting_azeris_crushed
+	}
+	option = {	#not harsh
+		name = per.9.b
+		ai_chance = { base = 1 }
+		set_country_flag = PER_starting_azeris_placated
+	}
+}
+country_event = {	#luris+kurds
+	id = per.91
+	title = per.91.t
+	desc = per.91.desc
+	picture = GFX_militias_2
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {	#harsh
+		name = per.91.a
+		ai_chance = { base = 1 }
+		set_country_flag = PER_starting_strikers_crushed
+	}
+	option = {	#not harsh
+		name = per.91.b
+		ai_chance = { base = 1 }
+		set_country_flag = PER_starting_strikers_placated
+	}
+}

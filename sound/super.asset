@@ -1,0 +1,369 @@
+category = {
+ name = "Super"
+ soundeffects = {
+	brazil_super
+	dev_super
+	rosenbaum_super
+	trotsky_super
+	gastev_super
+	kerensky_super
+	blackbloc_super
+	novykurs_super
+	mladorossi_super
+	diterikhs_super
+	chapayev_super
+	irreal_super
+	churchill_super
+	kali_super
+	savinkov_super
+	ruthenia_super
+	dor_super
+	collapse_super
+	spain_super
+	solidarist_super
+	scythia_super
+	eurasia_super
+	kornilov_super
+	gulidov_super
+	ww2_super
+	italian_victory_super
+	balbo_super
+	nitti_super
+	bodin_super
+	parsons_super
+	hubbard_super
+	sinclair_super
+	sinclair_moderate_super
+	libs_super
+	oln_super
+	tri_super
+	kamenev_super
+	hyperborea_theme
+	sam_and_max_theme
+	barchenko_super
+	bokii_super
+	gajda_super
+	khlebnikov_super
+	mayakovsky_super
+	mirsky_super
+	rasputin_super
+	bogdanov_super
+	harbin_super
+	merkulov_super
+	boldyrev_super
+	jpr_super
+	jpn_chinavictory_super
+	ppr_super
+	severyanin_super
+	muravyev_super
+	rodz_super
+	yaroslavsky_super
+	bandera_super
+	stalin_super
+}
+  compressor =  {
+	enabled = yes
+	pregain = 5.0
+	postgain = 6.0
+	ratio = 15.0
+	threshold = -15.0
+	attacktime = 0.03
+	releasetime = 0.0
+ }
+}
+#####################
+# SUPER EVENT MUSIC #
+#####################
+sound = {
+	name = brazil_super
+	volume = 0.5
+	file = "super_events/brazil_super.wav"
+}
+sound = {
+	name = rosenbaum_super
+	volume = 0.5
+	file = "super_events/rosenbaum_super.wav"
+}
+sound = {
+	name = chapayev_super
+	volume = 0.5
+	file = "super_events/chapayev_super.wav"
+}
+sound = {
+	name = trotsky_super
+	#volume = 0.5
+	file = "super_events/trotsky_super.wav"
+}
+sound = {
+	name = gastev_super
+	volume = 0.5
+	file = "super_events/gastev_super.wav"
+}
+sound = {
+	name = kerensky_super
+	volume = 0.5
+	file = "super_events/kerensky_super.wav"
+}
+sound = {
+	name = blackbloc_super
+	volume = 0.5
+	file = "super_events/blackbloc_super.wav"
+}
+sound = {
+	name = novykurs_super
+	volume = 0.5
+	file = "super_events/novykurs_super.wav"
+}
+sound = {
+	name = mladorossi_super
+	volume = 0.5
+	file = "super_events/mladorossi_super.wav"
+}
+sound = {
+	name = diterikhs_super
+	volume = 0.5
+	file = "super_events/diterikhs_super.wav"
+}
+sound = {
+	name = irreal_super
+	volume = 0.3
+	file = "super_events/irreal_super.wav"
+}
+sound = {
+	name = churchill_super
+	volume = 0.5
+	file = "super_events/hug_churchill.wav"
+}
+sound = {
+	name = kali_super
+	volume = 0.5
+	file = "super_events/kali_ma.wav"
+}
+sound = {
+	name = ruthenia_super
+	volume = 0.5
+	file = "super_events/ruthenia_super.wav"
+}
+sound = {
+	name = savinkov_super
+	volume = 0.5
+	file = "super_events/savinkov_super.wav"
+}
+sound = {
+	name = dor_super
+	volume = 0.5
+	file = "super_events/dor_super.wav"
+}
+sound = {
+	name = collapse_super
+	volume = 0.5
+	file = "super_events/collapse_super.wav"
+}
+sound = {
+	name = dev_super
+	file = "super_events/dev_super.wav"
+}
+sound = {
+	name = spain_super
+	volume = 0.5
+	file = "super_events/spain_super.wav"
+}
+sound = {
+	name = solidarist_super
+	volume = 0.5
+	file = "super_events/rusuni_nts.wav"
+}
+sound = {
+	name = scythia_super
+	volume = 0.5
+	file = "super_events/rusuni_scythia.wav"
+}
+sound = {
+	name = eurasia_super
+	volume = 0.5
+	file = "super_events/eurasia_super.wav"
+}
+sound = {
+	name = kornilov_super
+	volume = 0.5
+	file = "super_events/kornilov_super.wav"
+}
+sound = {
+	name = gulidov_super
+	volume = 0.5
+	file = "super_events/gulidov_super.wav"
+}
+sound = {
+	name = ww2_super
+	volume = 0.5
+	file = "super_events/ww2_super.wav"
+}
+sound = {
+	name = italian_victory_super
+	volume = 0.5
+	file = "super_events/italian_victory_super.wav"
+}
+sound = {
+	name = balbo_super
+	volume = 0.5
+	file = "super_events/balbo_super.wav"
+}
+sound = {
+	name = nitti_super
+	volume = 0.5
+	file = "super_events/nitti_super.wav"
+}
+sound = {
+	name = bodin_super
+	volume = 0.5
+	file = "super_events/bodin_super.wav"
+}
+sound = {
+	name = parsons_super
+	volume = 0.5
+	file = "super_events/parsons_super.wav"
+}
+sound = {
+	name = hubbard_super
+	volume = 0.5
+	file = "super_events/hubbard_super.wav"
+}
+sound = {
+	name = sinclair_super
+	volume = 0.5
+	file = "super_events/sinclair_super.wav"
+}
+sound = {
+	name = sinclair_moderate_super
+	volume = 0.5
+	file = "super_events/sinclair_moderate_super.wav"
+}
+sound = {
+	name = libs_super
+	volume = 0.5
+	file = "super_events/milyukov_super.wav"
+}
+sound = {
+	name = oln_super
+	volume = 0.5
+	file = "super_events/rusuni_oln.wav"
+}
+sound = {
+	name = tri_super
+	volume = 0.5
+	file = "super_events/rusuni_danists.wav"
+}
+sound = {
+	name = kamenev_super
+	volume = 0.5
+	file = "super_events/rusuni_kamenev.wav"
+}
+sound = {
+	name = hyperborea_theme
+	file = "super_events/hyperborea_theme.wav"
+}
+sound = {
+	name = sam_and_max_theme
+	volume = 0.5
+	file = "super_events/sam_and_max_theme.wav"
+}
+sound = {
+	name = barchenko_super
+	volume = 0.5
+	file = "super_events/barchenko_super.wav"
+}
+sound = {
+	name = bokii_super
+	volume = 0.5
+	file = "super_events/bokii_super.wav"
+}
+sound = {
+	name = gajda_super
+	volume = 0.5
+	file = "super_events/Gajda_super.wav"
+}
+sound = {
+	name = mayakovsky_super
+	volume = 0.5
+	file = "super_events/mayakovsky_super.wav"
+}
+sound = {
+	name = khlebnikov_super
+	volume = 0.5
+	file = "super_events/khlebnikov_super.wav"
+}
+sound = {
+	name = mirsky_super
+	volume = 0.5
+	file = "super_events/mirsky_super.wav"
+}
+sound = {
+	name = bogdanov_super
+	volume = 0.5
+	file = "super_events/bogdanov_super.wav"
+}
+sound = {
+	name = rasputin_super
+	volume = 0.5
+	file = "super_events/rasputin_super.wav"
+}
+sound = {
+	name = harbin_super
+	volume = 0.5
+	file = "super_events/rusuni_harbin.wav"
+}
+sound = {
+	name = merkulov_super
+	volume = 0.5
+	file = "super_events/rusuni_merkulovs.wav"
+}
+sound = {
+	name = boldyrev_super
+	volume = 0.5
+	file = "super_events/rusuni_boldyrev.wav"
+}
+sound = {
+	name = jpr_super
+	volume = 0.5
+	file = "super_events/jpr_super.wav"
+}
+sound = {
+	name = jpn_chinavictory_super
+	volume = 0.5
+	file = "super_events/jpn_chinavictory_super.wav"
+}
+sound = {
+	name = ppr_super
+	volume = 0.5
+	file = "super_events/ppr_super.wav"
+}
+sound = {
+	name = severyanin_super
+	volume = 0.5
+	file = "super_events/severyanin_super.wav"
+}
+sound = {
+	name = muravyev_super
+	volume = 0.5
+	file = "super_events/muravyev_super.wav"
+}
+sound = {
+	name = rodz_super
+	volume = 0.5
+	file = "super_events/rodz_super.wav"
+}
+sound = {
+	name = yaroslavsky_super
+	volume = 0.5
+	file = "super_events/yaroslavsky_super.wav"
+}
+sound = {
+	name = bandera_super
+	volume = 0.5
+	file = "super_events/banderite.wav"
+}
+sound = {
+	name = stalin_super
+	volume = 0.5
+	file = "super_events/stalin_super.wav"
+}

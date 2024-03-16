@@ -1,0 +1,53 @@
+characters = {
+	BNG_a_k_fazlul_huq = {
+		name = "A. K. Fazlul Huq"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/BNG/Portrait_a_k_fazlul_huq.png"
+			}
+		}
+		country_leader = {
+			ideology = agrarian_socialism
+			expire = "1965.1.1"
+		}
+	}
+	BNG_huseyn_shaheed_suhrawardy = {
+		name = "Huseyn Shaheed Suhrawardy"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/BNG/Portrait_Huseyn_Shaheed_Suhrawardy.png"
+			}
+		}
+		country_leader = {
+			ideology = social_liberalism
+			expire = "1965.1.1"
+			traits = {
+				popular_figurehead
+			}
+		}
+	}
+	BNG_khawaja_nazimuddin = {
+		name = "Khawaja Nazimuddin"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/BNG/Portrait_khawaja_nazimuddin.png"
+			}
+		}
+		country_leader = {
+			ideology = social_conservatism
+			expire = "1965.1.1"
+		}
+	}
+	BNG_nurul_amin = {
+		name = "Nurul Amin"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/BNG/Portrait_nurul_amin.png"
+			}
+		}
+		country_leader = {
+			ideology = national_conservatism
+			expire = "1974.1.1"
+		}
+	}
+}

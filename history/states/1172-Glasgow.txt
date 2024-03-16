@@ -1,0 +1,29 @@
+state={
+	id=1172
+	name="STATE_1172" # glasgae
+	manpower = 1187623
+	
+	state_category = city
+	
+	resources={
+		steel=7 # was: 36
+	}
+
+	history={
+		owner = ENG
+		victory_points = {
+			3273 20
+		}
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 3
+			anti_air_building = 2
+
+		}
+		add_core_of = ENG
+	}
+
+	provinces={
+		3273 6320
+	}
+}

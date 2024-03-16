@@ -1,0 +1,207 @@
+ideas = {
+
+#################
+# Country ideas #
+#################
+
+	country = {
+		ARM_thegreatbattle = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = -0.30	
+				war_support_factor = -0.20
+				surrender_limit = -0.30
+				consumer_goods_expected_value = 0.20
+				
+			}
+			picture = generic_idea_RF_idea_duel
+		}
+		ARM_tgb1 = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = -0.10	
+				war_support_factor = -0.05
+				surrender_limit = -0.05
+				consumer_goods_expected_value = 0.05
+				
+			}
+			picture = generic_idea_RF_idea_duel
+		}
+		ARM_freedomforworker = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				industrial_capacity_factory = 0.07
+				consumer_goods_expected_value = 0.05
+				monthly_population = 0.05
+			}
+			picture = generic_idea_RF_idea_agreement
+		}
+		ARM_arts = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				army_org_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.10
+				research_speed_factor = 0.07
+			}
+			picture = generic_idea_RF_idea_quill
+		}
+		ARM_planned_armenian_economy = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				army_morale_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.10
+				industrial_capacity_factory = 0.05
+			}
+			picture = generic_idea_RF_idea_vanguard
+		}
+		ARM_newjobs = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				consumer_goods_expected_value = -0.10
+				political_power_gain = 0.15
+				monthly_population = 0.1
+			}
+			picture = generic_idea_RF_idea_up
+		}
+		TUR_interdictedtrade = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				consumer_goods_expected_value = 0.05
+				min_export = -0.1
+			}
+			picture = generic_idea_RF_idea_monkey_skull
+		}
+		TUR_starvation = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				consumer_goods_expected_value = 0.1
+				defensive_war_stability_factor = -0.2
+				mobilization_speed = -0.3
+				min_export = -0.15
+			}
+			picture = generic_idea_RF_idea_monkey_skull	
+		}
+		ARM_peoplesarmy = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				conscription = 0.02
+				supply_consumption_factor = -0.10
+			}
+			picture = generic_idea_RF_idea_soldier2
+		}
+		ARM_unstoppablewave_idea = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				conscription = 0.05
+				supply_consumption_factor = -0.20
+			}
+			picture = generic_idea_RF_idea_soldier2	
+		}
+		ARM_wealth = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				consumer_goods_expected_value = -0.05
+				political_power_gain = 0.05
+				stability_factor = -0.1
+			}
+			picture = generic_idea_RF_idea_letter
+		}
+		ARM_welfare = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				consumer_goods_expected_value = -0.1
+				political_power_gain = -0.05
+			}
+			picture = generic_idea_RF_idea_coins
+		}
+		ARM_turkautonomy = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = 0.05
+				surrender_limit = 0.05
+				required_garrison_factor = -0.25
+			}
+			picture = generic_idea_RF_idea_light_foot
+		}
+		ARM_society = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = -0.15
+				war_support_factor = 0.10
+				surrender_limit = 0.05
+				monthly_population = 0.1
+			}
+			picture = generic_idea_RF_idea_lion_head
+		}
+		ARM_tsegh = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				army_attack_factor = 0.1
+				army_morale_factor = 0.1
+				non_core_manpower = 0.1
+			}
+			picture = generic_idea_RF_idea_spartan
+		}
+		ARM_travelermovement_idea = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				out_of_supply_factor = -0.15
+				production_speed_infrastructure_factor = 0.20
+				production_speed_rail_way_factor = 0.20
+			}
+			picture = generic_idea_RF_idea_briefcase
+		}
+		ARM_turkfuckyou = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				army_core_defence_factor = 0.10
+				recruitable_population = 0.02
+			}
+			picture = generic_idea_RF_idea_grenade
+		}
+		ARM_rusfuckyou = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				army_core_attack_factor = 0.10
+				recruitable_population = 0.02
+			}
+			picture = generic_idea_RF_idea_rifle
+		}
+		ARM_state_secularism_idea = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = 0.05
+				research_speed_factor = 0.05
+				required_garrison_factor = -0.10
+			}
+			picture = generic_idea_RF_idea_theorist
+		}
+		ARM_reward_daringness_idea = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = -0.05
+				experience_gain_air_factor = 0.10
+				air_night_penalty = -0.20
+				air_ace_generation_chance_factor = 0.20
+			
+			}
+			picture = generic_idea_RF_idea_air_tech
+		}
+		ARM_airways = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				air_air_superiority_attack_factor = 0.15
+				air_air_superiority_defence_factor = 0.15
+			}
+			picture = generic_idea_RF_idea_peace
+		}
+		ARM_trucks_and_tanks_cost = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				license_armor_purchase_cost = -0.5
+				license_production_speed = 0.1
+			}
+			picture = generic_idea_RF_idea_gear
+		}
+	}
+}

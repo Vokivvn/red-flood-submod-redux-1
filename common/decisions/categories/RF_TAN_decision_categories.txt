@@ -1,0 +1,9 @@
+TAN_ungern_proclemations = {
+	allowed = {
+		original_tag = TAN
+	}
+	priority = 100
+	visible = {
+		always = yes
+	}
+}

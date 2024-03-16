@@ -1,0 +1,14 @@
+characters = {
+	AQT_reuter = { 
+		name = "Ernst Reuter"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/AQT/Portrait_Ernst_Reuter.png"
+			}
+		}
+		country_leader = {
+			ideology = leninism
+			expire = "1965.1.1.1"
+		}
+	}
+}

@@ -1,0 +1,49 @@
+add_namespace = wng
+
+country_event = {
+	id = wng.1
+	title = wng.1.t
+	desc = wng.1.desc
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = wng.1.a
+		WNG = {
+			drop_cosmetic_tag = yes
+			add_country_leader_role = {
+				character = "WNG_Stephanus_Simopyaref"
+				country_leader = {
+					ideology = praetorian_oligarchy
+					expire = "1965.1.1.1"
+				}
+				promote_leader = yes
+			}
+			set_politics = {
+				ruling_party = right_authoritarianism
+				elections_allowed = no
+			}
+			add_popularity = {
+				ideology = right_authoritarianism
+				popularity = 0.5
+			}
+			set_capital = { state = 669 }
+		}
+	}
+	option = {
+		name = wng.1.b
+		WNG = {
+			drop_cosmetic_tag = yes
+			set_politics = {
+				ruling_party = accelerationism
+				elections_allowed = no
+			}
+			add_popularity = {
+				ideology = accelerationism
+				popularity = 0.5
+			}
+			set_capital = { state = 1259 }
+		}
+	}
+}

@@ -1,0 +1,10 @@
+leader_traits = {
+	#FRANCE
+	FRA_marc_augier_desc = {}
+	FRA_leon_degrelle_desc = {}
+	FRA_pierre_drieu_desc = {}
+	FRA_alphonse_de_chateaubriant_desc = {}
+	FRA_jacques_schweizer_desc = {}	
+	#MADAGASCAR
+	MLG_paul_dussac_desc = {}
+}

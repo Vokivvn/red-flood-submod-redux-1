@@ -1,0 +1,24 @@
+state={
+	id=1237
+	name="STATE_1237"
+	manpower = 203700
+
+	state_category = rural
+
+	history= {
+		owner = DEI
+		victory_points = { #Paloe
+			12358 1
+		}
+		add_core_of = DEI
+		buildings = {
+			infrastructure = 2
+			12358 = {
+				naval_base = 1
+			}
+		}
+	}
+	provinces={
+		13576 4307 1098 13566 12358 13577
+	}
+}

@@ -1,0 +1,14 @@
+characters = {
+	AMP_janary_gentil_nunes = {
+		name = "Janary Gentil Nunes"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/AMP/Portrait_AMP_JGN.png"
+			}
+		}
+		country_leader = {
+			ideology = military_dictatorship
+			expire = "1965.1.1.1"
+		}
+	}
+}

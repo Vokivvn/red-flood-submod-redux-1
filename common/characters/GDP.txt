@@ -1,0 +1,87 @@
+characters = {
+	GDP_xu_chong_zhi = {
+		name = "Xu Chong Zhi"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/GDP/Portrait_GDP_Xu_ChongZhi.png"
+			}
+			army= {
+				large = "gfx/leaders/GDP/Portrait_GDP_Xu_ChongZhi_g.png"
+			}
+		}
+		corps_commander = {
+			traits = { politically_connected }
+			skill = 3
+			attack_skill = 1
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 3
+		}
+		country_leader = {
+			ideology = military_dictatorship
+			expire = "1965.1.1.1"
+			desc = POLITICS_CHONGZHI_DESC
+		}
+	}
+	GDP_hu_hanmin = {
+		name = "Hu Hanmin"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/GDP/Portrait_GDP_Hu_Hanmin.png"
+			}
+		}
+		country_leader = {
+			ideology = anocracy
+			expire = "1936.5.12"
+			desc = POLITICS_HANMIN_DESC
+		}
+	}
+	GDP_bai_chongxi ={
+		name = "Bai Chongxi"
+		portraits = {
+			army = {
+				large="gfx/leaders/GDP/Portrait_Bai_Chongxi.png"
+			}
+		}
+		corps_commander = {
+			traits = { politically_connected }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	GDP_li_zongren ={
+		name = "Li Zongren"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/GDP/Portrait_Li_Zongren_Despot.png"
+			}
+			army={
+				large="gfx/leaders/GDP/Portrait_Li_Zongren_General.png"
+			}
+		}
+		corps_commander = {
+			traits = { politically_connected }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 1
+		}
+	}
+	GDP_zou_lu ={
+		name = "Zou Lu"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/GDP/Portrait_Zou_Lu_Con.png"
+			}
+		}
+		country_leader = {
+			ideology = national_conservatism
+			expire = "1954.2.8"
+			desc = POLITICS_LU_DESC
+		}
+	}
+}

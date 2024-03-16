@@ -1,0 +1,14 @@
+characters = {
+	PRP_ivan_boberski = {
+		name = "Ivan Boberski"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/PRP/Portrait_Ivan_Boberski.png"
+			}
+		}
+		country_leader = {
+			ideology = oligarchy
+			expire = "1965.1.1.1"
+		}
+	}
+}

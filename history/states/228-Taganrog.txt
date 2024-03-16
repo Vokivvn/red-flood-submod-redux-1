@@ -1,0 +1,27 @@
+
+state={
+	id=228
+	name="STATE_228" # Voroshilovgrad
+	manpower = 1367411
+
+	state_category = town
+
+	history={
+		owner = SRU
+add_core_of = SRU
+		victory_points = {
+			9461 5
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+			arms_factory = 2
+		}
+
+		add_core_of = UKR
+	}
+
+	provinces={
+		523 570 6505 6519 9446 9461 9476 11487 11513
+	}
+}

@@ -1,0 +1,36 @@
+state={
+	id=1254
+	name="STATE_1254"
+	manpower = 6947500
+
+	state_category = large_town
+
+	resources={
+		rubber=40 # was: 242
+		oil=5 # was: 16
+	}
+
+	history={
+		owner = DEI
+		victory_points = { #Soerabaja
+			13564 7
+		}
+		victory_points = { #Pasoeroean
+			13602 3
+		}
+		add_core_of = DEI
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			dockyard = 1
+			air_base = 3
+			13564 = {
+				naval_base = 5
+			}
+		}
+	}
+
+	provinces={
+		13564 10479 13602 4306
+	}
+}

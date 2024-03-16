@@ -1,0 +1,14 @@
+characters = {
+	NIR_James_Craig = {
+		name = "James Craig"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/NIR/Portrait_NIR_James_Craig.png"
+			}
+		}
+		country_leader = {
+			ideology = social_conservatism
+			expire = "1965.1.1.1"
+		}
+	}
+}

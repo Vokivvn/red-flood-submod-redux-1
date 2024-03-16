@@ -1,0 +1,248 @@
+#########################
+#	REV JAPAN - Baba	#
+#########################
+ideas = {
+	country = {
+		
+	}
+#################################################################
+
+##############
+# Companies
+##############
+
+	#### General ####
+	industrial_concern = {
+
+		rev_kawasaki = {
+			allowed = { original_tag = JPR }
+			available = {
+				has_completed_focus = JPR_collectivism_policy
+			}
+			traits = { industrial_manufacturer }
+			modifier = {
+				production_speed_arms_factory_factor = 0.1
+				production_speed_industrial_complex_factor = 0.1
+			}
+			research_bonus = {
+				industry = 0.1
+			}
+		}
+
+		rev_sumitomo = {
+			allowed = { original_tag = JPR }
+			available = {
+				has_completed_focus = JPR_collectivism_policy
+			}
+			traits = { electronics_manufacturer }
+			modifier = {
+				production_speed_radar_station_factor = 0.1
+			}
+			research_bonus = {
+				electronics = 0.1
+				industry = 0.05
+			}
+		}
+
+		rev_idemitsu_kosan = {
+			allowed = { original_tag = JPR }
+			available = {
+				has_completed_focus = JPR_collectivism_policy
+			}
+			traits = { chemical_producer }
+			modifier = {
+				production_speed_synthetic_refinery_factor = 0.1
+			}
+			research_bonus = {
+				synth_resources = 0.1
+				industry = 0.05
+			}
+		}
+	}
+
+	#### Weapons Manufacturer ####
+	materiel_manufacturer = {
+		designer = yes
+
+		rev_nambu_arms = {
+			allowed = { original_tag = JPR }
+			available = {
+				has_completed_focus = JPR_collectivism_policy
+			}
+			traits = { infantry_equipment_producer_offense_2 }
+			modifier = {}
+			research_bonus = {
+				infantry_weapons = 0.1
+			}
+		}
+		rev_tokyo_arsenal = {
+			allowed = { original_tag = JPR }
+			available = {
+				has_completed_focus = JPR_collectivism_policy
+			}
+			traits = { infantry_equipment_producer_mass_2 }
+			modifier = {}
+			research_bonus = {
+				infantry_weapons = 0.1
+			}
+		}
+		rev_osaka_arsenal = {
+			allowed = { original_tag = JPR }
+			available = {
+				has_completed_focus = JPR_collectivism_policy
+			}
+			traits = { infantry_equipment_producer_allround_2 }
+			modifier = {}
+			research_bonus = {
+				infantry_weapons = 0.1
+			}
+		}
+	}
+
+	#### Heavy Equipment Manufacturer ####
+	tank_manufacturer = {
+		designer = yes
+
+		rev_osaka_arsenal_arty = {
+			allowed = { original_tag = JPR }
+			available = {
+				has_completed_focus = JPR_collectivism_policy
+			}
+			traits = { artillery_producer_offense_1 }
+			modifier = {}
+			research_bonus = {
+				artillery = 0.05
+			}
+		}
+		rev_nissan_motor = {
+			allowed = { original_tag = JPR }
+			available = {
+				has_completed_focus = JPR_collectivism_policy
+			}
+			traits = { motorised_equipment_producer_offense_1 }
+			modifier = {}
+			research_bonus = {
+				motorized_equipment = 0.05
+			}
+		}
+		rev_ishikawajima_motor_works = {
+			allowed = { original_tag = JPR }
+			available = {
+				has_completed_focus = JPR_collectivism_policy
+			}
+			traits = { small_tank_producer_offense_1 }
+			modifier = {}
+			research_bonus = {
+				armor = 0.05
+			}
+		}
+		rev_hino_motors = {
+			allowed = { original_tag = JPR }
+			available = {
+				has_completed_focus = JPR_collectivism_policy
+			}
+			traits = { medium_tank_producer_offense_1 }
+			modifier = {}
+			research_bonus = {
+				armor = 0.05
+			}
+		}
+	}
+
+	#### Naval Manufacturer ####
+	naval_manufacturer = {
+		designer = yes
+		rev_maizura = {
+			allowed = { original_tag = JPR }
+			available = {
+				has_completed_focus = JPR_collectivism_policy
+			}
+			traits = { capital_ship_producer_offense_1 }
+			modifier = {}
+			research_bonus = {
+				naval_equipment = 0.05
+			}
+		}
+
+		rev_kure = {
+			allowed = { original_tag = JPR }
+			available = {
+				has_completed_focus = JPR_collectivism_policy
+			}
+			traits = { cruiser_producer_defense_1 }
+			modifier = {}
+			research_bonus = {
+				naval_equipment = 0.05
+			}
+		}
+
+		rev_osaka_iron_works = {
+			allowed = { original_tag = JPR }
+			available = {
+				has_completed_focus = JPR_collectivism_policy
+			}
+			traits = { small_ship_producer_offense_1 }
+			modifier = {}
+			research_bonus = {
+				naval_equipment = 0.05
+			}
+		}
+	}
+
+	#### Air ####
+	aircraft_manufacturer = {
+		designer = yes
+		rev_yokosuka_air = {
+			allowed = { original_tag = JPR }
+			available = {
+				has_completed_focus = JPR_collectivism_policy
+			}
+			traits = { fighter_producer_mass_1 }
+			modifier = {}
+			research_bonus = {
+				air_equipment = 0.05
+			}
+		}
+
+		rev_mitsubishi = {
+			allowed = { original_tag = JPR }
+			available = {
+				has_completed_focus = JPR_collectivism_policy
+			}
+			traits = { bomber_producer_offense_1 }
+			modifier = {}
+			research_bonus = {
+				air_equipment = 0.05
+			}
+		}
+
+		rev_nakajima = {
+			allowed = { original_tag = JPR }
+			available = {
+				has_completed_focus = JPR_collectivism_policy
+			}
+			traits = { bomber_producer_defense_1 }
+			modifier = {}
+			research_bonus = {
+				air_equipment = 0.05
+			}
+		}
+
+		rev_aichi = {
+			allowed = { original_tag = JPR }
+			available = {
+				has_completed_focus = JPR_collectivism_policy
+			}
+			traits = { bomber_producer_mass_1 }
+			modifier = {}
+			research_bonus = {
+				air_equipment = 0.05
+			}
+		}
+		
+		###################################################
+		
+
+	}
+
+}

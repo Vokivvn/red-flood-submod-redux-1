@@ -1,0 +1,75 @@
+﻿capital = 439
+set_research_slots = 2
+set_stability = 0.5
+
+oob = "ARY"
+set_air_oob = "ARY_air"
+
+add_ideas = {
+	RAJ_shared_economy
+	ARY_RSS_militias
+	ARY_malaviyas_nightmare
+	ARY_shelter_to_rajas
+	low_economic_mobilisation
+	limited_exports
+	limited_conscription
+}
+
+set_technology = {
+	infantry_weapons = 1
+	tech_support = 1
+	tech_recon = 1
+	tech_engineers = 1
+	gw_artillery = 1
+	basic_train = 1
+	tech_trucks =1
+	motorised_infantry = 1
+}
+
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+	set_technology = {
+		iw_small_airframe = 1
+		aa_lmg = 1
+		aa_cannon_1 = 1
+		early_bombs = 1
+		engines_1 = 1
+	}
+}
+if = {
+	limit = { NOT = { has_dlc = "By Blood Alone" } }
+	set_technology = {
+		early_fighter = 1
+		CAS1 = 1
+	}
+}
+
+set_politics = {
+	ruling_party = right_authoritarianism
+	last_election = "1933.10.25"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	vanguard_socialism = 1
+	popular_socialism = 2
+	anarchism = 1
+	revisionist_socialism = 1
+	progressivism = 10
+	liberalism = 10
+	conservatism = 20
+	right_authoritarianism = 40
+	despotism = 10
+	reactionism = 5
+	accelerationism = 0
+}
+
+recruit_character = ARY_syama_prasad_mukherjee
+recruit_character = ARY_Balakrishna_Shivram_Moonje
+recruit_character = ARY_Madan_Mohan_Malaviya
+recruit_character = ARY_Prabhakar_Balwant_Dani
+recruit_character = ARY_Madhav_Sadashivrao_Golwalkar
+recruit_character = ARY_Ganesh_Damodar_Savarkar
+recruit_character = ARY_k_b_hedgewar
+recruit_character = ARY_v_d_savarkar

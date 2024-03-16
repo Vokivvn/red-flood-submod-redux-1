@@ -1,0 +1,26 @@
+
+state={
+	id=1025
+	name="STATE_1025"
+	resources={
+		steel=5.000
+	}
+	state_category = city
+	history={
+		owner = BRA
+		buildings = {
+			infrastructure = 2
+		}
+		victory_points = {
+			4533 3 
+		}
+		add_core_of = BRA
+
+	}
+
+	provinces={
+	 4533 8181
+	}
+	manpower=440401
+	buildings_max_level_factor=1.000
+}

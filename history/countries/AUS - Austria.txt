@@ -1,0 +1,163 @@
+﻿capital = 4
+set_research_slots = 4
+
+oob = "AUS"
+#set_air_oob = "AUS_air" # The AUS planes are in the ITA_air file because they won't load here, idk why
+if = { limit = { has_dlc = "By Blood Alone" } set_air_oob = "AUS_air" }
+if = { limit = {  NOT = { has_dlc = "By Blood Alone" } }  set_air_oob = "AUS_air_legacy" }
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_recon = 1
+	tech_support = 1
+	tech_engineers = 1
+	tech_mountaineers = 1
+	tech_trucks =1
+	motorised_infantry = 1
+	gw_artillery = 1
+	fuel_silos = 1
+	basic_train = 1
+	interwar_antiair = 1
+	interwar_antitank = 1
+}
+
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+	set_technology = {
+		iw_small_airframe = 1
+		iw_medium_airframe = 1
+		iw_large_airframe = 1
+		aa_lmg = 1
+		aa_cannon_1 = 1
+		early_bombs = 1
+		engines_1 = 1
+	}
+}
+if = {
+	limit = { NOT = { has_dlc = "By Blood Alone" } }
+	set_technology = {
+		early_fighter = 1
+		early_bomber = 1
+		CAS1 = 1
+	}
+}
+
+if = {
+	limit = { NOT = { has_dlc = "No Step Back" } }
+	set_technology = {
+		gwtank = 1
+		basic_light_tank = 1
+		improved_light_tank = 1
+		basic_heavy_tank = 1
+	}
+}
+if = {
+	limit = { has_dlc = "No Step Back" }
+	set_technology = {
+		gwtank_chassis = 1
+		basic_light_tank_chassis = 1
+		improved_light_tank_chassis = 1
+		basic_heavy_tank_chassis = 1
+		engine_tech_1 = 1
+	}
+}
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	set_technology = {
+		early_submarine = 1
+		early_destroyer = 1
+		early_light_cruiser = 1
+		early_heavy_cruiser = 1
+		early_battleship = 1
+		early_battlecruiser = 1
+	}
+}
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	set_technology = {
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		early_ship_hull_light = 1
+		early_ship_hull_cruiser = 1
+		early_ship_hull_heavy = 1
+	}
+}
+
+set_politics = {
+	ruling_party = conservatism
+	last_election = "1933.10.25"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	vanguard_socialism = 3
+	popular_socialism = 7
+	anarchism = 1
+	revisionist_socialism = 2
+	progressivism = 23
+	liberalism = 5
+	conservatism = 31
+	right_authoritarianism = 14
+	despotism = 3
+	reactionism = 11
+	accelerationism = 0
+}
+
+give_guarantee = SWI
+
+recruit_character = AUS_franz_ii_von_habsburg_lothringen
+recruit_character = AUS_imperial_council
+recruit_character = AUS_Karl_I2
+recruit_character = AUS_Karl_I
+recruit_character = AUS_karl_seitz
+recruit_character = AUS_adolf_hitler
+recruit_character = AUS_Ludwig_von_Mises
+recruit_character = AUS_Otto_I_von_Habsburg_Lothringen
+
+recruit_character = AUS_erwin_rommel
+recruit_character = AUS_lothar_rendulic
+recruit_character = AUS_wilhelm_list
+recruit_character = AUS_franz_bohme
+recruit_character = AUS_wilhelm_keitel
+recruit_character = AUS_erhard_raus
+recruit_character = AUS_eduard_dietl
+recruit_character = AUS_ferdinand_schorner
+recruit_character = AUS_alexander_lohr
+recruit_character = AUS_Emil_Uzlac
+recruit_character = AUS_Edmund_Glaise_Horstenau
+recruit_character = AUS_Gunther_Burstyn
+recruit_character = AUS_Alfred_Jansa
+
+recruit_character = AUS_Ignaz_Seipel
+recruit_character = AUS_Leopold_Graf_Berchtold
+recruit_character = AUS_Aurel_Popovici
+recruit_character = AUS_Johannes_Schober
+recruit_character = AUS_Richard_von_Coudenhove_Kalergi
+recruit_character = AUS_kalergi_upgrade
+recruit_character = AUS_karl_seitz_upgrade
+
+recruit_character = AUS_Gottfried_Haberler
+recruit_character = AUS_Hans_Kelsen
+
+recruit_character = AUS_Gottfried_Feder
+recruit_character = AUS_Hans_Krebs
+recruit_character = AUS_Engelbert_Dolfuss
+recruit_character = AUS_kurt_schuschnigg
+recruit_character = AUS_georg_trakl
+
+add_ideas = {
+	AUS_red_threat
+	AUS_nationalist_rumblings
+	AUS_ongoing_federalization
+	limited_conscription
+}
+
+activate_advisor = AUS_Ignaz_Seipel_hog
+activate_advisor = AUS_ludwig_von_mises_eco
+activate_advisor = AUS_Leopold_Graf_Berchtold_for
+activate_advisor = AUS_Aurel_Popovici_sec
+activate_advisor = AUS_Franz_ii_int
+
+

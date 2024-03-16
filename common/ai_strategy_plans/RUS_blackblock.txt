@@ -1,0 +1,20 @@
+Russia_path_1 = {
+	name = "BH Russia"
+	desc = "Placeholder"
+	enable = {
+        OR = {
+            original_tag = RUS
+            original_tag = SRU
+        }
+		has_game_rule = {
+			rule = RUS_ai_route
+			option = BLACKBLOCK
+		}
+	}
+	ai_national_focuses = {
+		RUS_alt_black_bloc
+		RUS_reorganizethestavka
+		RUS_unify_empire
+		RUS_finish_zhelto
+	}
+}

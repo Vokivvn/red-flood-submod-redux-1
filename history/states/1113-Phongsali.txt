@@ -1,0 +1,22 @@
+state = {
+	id = 1113
+	name = "STATE_1113"
+
+	history = {
+		owner = DAI
+		add_core_of = DAI
+		add_core_of = LAO
+		buildings = {
+			infrastructure = 1
+		}
+		victory_points = { 12392 2 }
+	}
+
+	provinces = {
+		12433 12392
+	}
+
+	manpower = 20000
+	buildings_max_level_factor = 1
+	state_category = rural
+}

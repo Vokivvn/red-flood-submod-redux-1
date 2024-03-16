@@ -1,0 +1,41 @@
+
+state={
+	id=211
+	name="STATE_211"
+	manpower = 1575499
+
+
+	state_category = town
+
+	history={
+		owner = BUL
+		victory_points = {
+			9783 20
+		}
+		victory_points = {
+			9612 10
+		}
+		victory_points = {
+			9902 10
+		}
+		victory_points = {
+			9769 5
+		}
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 2
+			9783 = {
+				naval_base = 3
+			}
+			9902 = {
+				naval_base = 1
+			}
+		}
+		add_core_of = BUL
+		add_claim_by = YUG
+	}
+
+	provinces={
+		649 6967 9612 9769 9783 9919 9902 9888
+	}
+}

@@ -1,0 +1,119 @@
+characters = {
+	NOR_gotfred_johan_harvold = {
+		name = "Gotfred Hølvold"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/NOR/Portrait_NOR_Gotfred_Johan_Harvold.png"
+			}
+		}
+		country_leader = {
+			ideology = spartakism
+			expire = "1965.1.1.1"
+			traits = { dictator }
+		}
+	}
+	NOR_fridtjof_nansen = {
+		name = "Fridtjof Nansen"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/leader_unknown.dds"
+			}
+		}
+		country_leader = {
+			ideology = leninism
+			expire = "1965.1.1.1"
+			traits = { dictator }
+		}
+	}
+	NOR_kristian_kristiansen_laake = {
+		name = "Kristian Laake"
+		portraits = {
+			army = {
+				large = "gfx/leaders/NOR/Portrait_Norway_Kristian_Kristiansen_Laake.png"
+			}
+		}
+		field_marshal = {
+			traits = {  old_guard inflexible_strategist }
+			skill = 4
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 4
+			logistics_skill = 4
+		}
+	}
+	NOR_carl_gustav_fleischer = {
+		name = "Carl Fleischer"
+		portraits = {
+			army = {
+				large = "gfx/leaders/NOR/Portrait_Norway_Carl_Fleischer.png"
+			}
+		}
+		corps_commander = {
+			traits = {  trickster winter_specialist }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 4
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	NOR_otto_ruge = {
+		name = "Otto Ruge"
+		portraits = {
+			army = {
+				large = "gfx/leaders/NOR/Portrait_Norway_Otto_Ruge.png"
+			}
+		}
+		corps_commander = {
+			traits = {  old_guard career_officer infantry_leader }
+			skill = 4
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 4
+			logistics_skill = 4
+		}
+	}
+	NOR_birger_eriksen = {
+		name = "Birger Eriksen"
+		portraits = {
+			army = {
+				large = "gfx/leaders/NOR/Portrait_Norway_Birger_Eriksen.png"
+			}
+		}
+		corps_commander = {
+			traits = {  old_guard winter_specialist }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 4
+			planning_skill = 2
+			logistics_skill = 4
+		}
+	}
+	NOR_wilhelm_von_tangen_hansteen = {
+		name = "Wilhelm Hansteen"
+		portraits = {
+			army = {
+				large = "gfx/leaders/NOR/Portrait_Norway_Wilhelm_von_Tangen_Hansteen.png"
+			}
+		}
+		corps_commander = {
+			traits = { commando  }
+			skill = 2
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 2
+		}
+	}
+	NOR_elias_corneliussen = {
+		name = "Elias Corneliussen"
+		navy_leader = {
+			traits = { navy_career_officer inshore_fighter spotter }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 4
+			maneuvering_skill = 3
+			coordination_skill = 1
+		}
+	}
+}

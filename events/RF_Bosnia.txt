@@ -1,0 +1,36 @@
+###############################
+# A R T I L L E R I J A ! ! ! #
+###############################
+
+add_namespace = bos
+
+country_event = {
+	id = bos.1992
+	title = bos.1992.t
+	desc = bos.1992.desc
+	#picture =
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = bos.1.a
+		ai_chance = { factor = 1 }
+		set_cosmetic_tag = BOS_IOI
+	}
+}
+country_event = {
+	id = bos.1993
+	title = bos.1993.t
+	desc = bos.1993.desc
+	#picture =
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = bos.1.a
+		ai_chance = { factor = 1 }
+		set_cosmetic_tag = BOS_FT
+	}
+}

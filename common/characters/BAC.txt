@@ -1,0 +1,14 @@
+characters = {
+	BAC_zacharias_mahabane = {
+		name = "Zacharias Mahabane"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/BAC/Portrait_Zacharias_Mahabane.png"
+			}
+		}
+		country_leader = {
+			ideology = reactionary_populism
+			expire = "1965.1.1.1"
+		}
+	}
+}

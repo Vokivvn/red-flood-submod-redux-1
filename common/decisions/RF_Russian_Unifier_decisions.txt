@@ -1,0 +1,1389 @@
+ROS_diplomatic_decisions = {
+ 	attack_the_intermarium = {
+ 	 	icon = GFX_icon_poland
+ 	 	visible = {
+ 	 	 	OR = {
+ 	 	 	 	AND = {
+ 	 	 	 	 	POL = {
+ 	 	 	 	 	 	exists = yes
+ 	 	 	 	 	 	NOT = {
+ 	 	 	 	 	 	 	has_country_leader = {
+ 	 	 	 	 	 	 	 	character = POL_mykola_lebed
+ 	 	 	 	 	 	 	}
+ 	 	 	 	 	 	}
+ 	 	 	 	 	}
+ 	 	 	 	 	UKR = {
+ 	 	 	 	 	 	exists = yes
+ 	 	 	 	 	 	has_government = despotism
+ 	 	 	 	 	}
+ 	 	 	 	}
+ 	 	 	 	UKR = {
+ 	 	 	 	 	has_country_leader = {
+ 	 	 	 	 	 	character = UKR_petro_bolbochan
+ 	 	 	 	 	}
+ 	 	 	 	}
+ 	 	 	}
+ 	 	 	united_russia = yes
+ 	 	 	UKR_ROS_peaceful_deal = no
+ 	 	 	has_war = no
+ 	 	}
+ 	 	cancel_if_not_visible = yes
+ 	 	days_remove = 45
+ 	 	ai_will_do = {
+ 	 	 	factor = 100
+ 	 	}
+ 	 	war_with_on_remove = POL
+ 	 	war_with_on_remove = LIT
+ 	 	war_with_on_remove = BLR
+ 	 	war_with_on_remove = UKR
+ 	 	fire_only_once = yes
+ 	 	remove_effect = {
+			every_country = {
+				limit = {
+					OR = {
+						tag = POL
+						tag = LIT
+						tag = BLR
+						tag = UKR
+					}
+				}
+				ROS = {
+					declare_war_on = {
+						type = annex_everything
+						target = PREV
+					}
+				}
+			}
+ 	 	}
+ 	}
+
+ 	return_land_to_prussia = {
+ 	 	icon = GFX_icon_prussia
+ 	 	visible = {
+ 	 	 	ROS = {
+ 	 	 	 	is_in_faction_with = PRS
+ 	 	 	}
+ 	 	 	has_country_flag = intermarium_solved
+ 	 	}
+ 	 	ai_will_do = {
+ 	 	 	factor = 100
+ 	 	}
+ 	 	fire_only_once = yes
+ 	 	complete_effect = {
+			every_state = {
+				limit = {
+					OR = {
+						state = 86
+						state = 85
+						state = 63
+						state = 68
+						state = 66
+						state = 67
+					}
+				}
+				PRS = { add_state_core = PREV }
+			}
+			every_state = {
+				limit = {
+					is_core_of = PRS
+					owner = {
+						OR = {
+							is_subject_of = ROS
+							tag = ROS
+						}
+					}
+				}
+				transfer_state_to = PRS
+			}
+		}
+	}
+ 	socialist_finland = {
+ 	 	days_remove = 5
+ 	 	icon = GFX_Russian_uni_socialist
+ 	 	visible = {
+ 	 	 	united_russia = yes 
+ 	 	 	OR = {
+ 	 	 	 	original_tag = FCR 
+ 	 	 	 	original_tag = PSL 
+ 	 	 	 	original_tag = HAR 
+ 	 	 	 	AND = {
+ 	 	 	 	 	original_tag = ZHR
+ 	 	 	 	 	OR = {
+ 	 	 	 	 	 	has_completed_focus = ZHR_permanentrevolution
+ 	 	 	 	 	 	has_completed_focus = ZHR_naturesubmitstothefiveyearplan
+ 	 	 	 	 	 	has_completed_focus = ZHR_creators_of_god
+ 	 	 	 	 	 	has_completed_focus = ZHR_realm_of_socialism
+ 	 	 	 	 	 	has_completed_focus = ZHR_peoples_will
+ 	 	 	 	 	 	has_completed_focus = ZHR_kerenskyprevails
+		 		 	 	has_completed_focus = ZHR_long_live_the_republic_of_labour
+		 		 	 	has_completed_focus = ZHR_long_live_the_republic_of_councils
+ 	 	 	 	 	}
+ 	 	 	 	}
+ 	 	 	 	AND = {
+ 	 	 	 	 	original_tag = ALT 
+ 	 	 	 	 	has_completed_focus = ALT_the_red_merlin
+ 	 	 	 	 	has_completed_focus = ALT_the_red_faust
+ 	 	 	 	}
+ 	 	 	 	AND = {
+ 	 	 	 	 	original_tag = KAV
+ 	 	 	 	 	OR = {
+ 	 	 	 	 	 	has_completed_focus = KAV_the_red_princes_dream
+ 	 	 	 	 	 	has_completed_focus = KAV_the_transmutation_of_koba
+ 	 	 	 	 	 	has_completed_focus = KAV_i_mayakovsky
+ 	 	 	 	 	 	has_completed_focus = KAV_enter_king_of_time
+ 	 	 	 	 	}
+ 	 	 	 	}
+ 	 	 	}
+ 	 	 	FIR = {
+				exists = yes
+ 	 	 	 	is_puppet = no
+			}
+ 	 	}
+ 	 	ai_will_do = {
+ 	 	 	factor = 100
+ 	 	}
+ 	 	fire_only_once = yes 
+ 	 	remove_effect = {
+ 	 	 	FIR = {
+ 	 	 	 	drop_cosmetic_tag = yes
+ 	 	 	}
+ 	 	 	puppet = FIR
+ 	 	 	if = {
+ 	 	 	 	limit = {
+ 	 	 	 	 	FIR = {
+						has_country_leader = {
+							character = FIR_yrjo_sirola
+							ruling_only = yes
+						}
+ 	 	 	 	 	}
+ 	 	 	 	}
+ 	 	 	 	FIR = {
+					promote_character = FIR_yrjo_sirola
+					set_politics = {
+						ruling_party = vanguard_socialism
+						elections_allowed = no
+					}
+ 	 	 	 	}
+ 	 	 	}
+ 	 	 	else_if = {
+ 	 	 	 	limit = {
+ 	 	 	 	 	FIR = {
+						has_country_leader = {
+							character = FIR_oskari_tokoi
+							ruling_only = yes
+						}
+ 	 	 	 	 	}
+ 	 	 	 	}
+ 	 	 	 	FIR = {
+					promote_character = FIR_oskari_tokoi
+					set_politics = {
+						ruling_party = popular_socialism
+						elections_allowed = no
+					}
+ 	 	 	 	}
+ 	 	 	}
+ 	 	 	else_if = {
+ 	 	 	 	limit = {
+ 	 	 	 	 	FIR = {
+						has_country_leader = {
+							character = FIR_karl_einar_paivio
+							ruling_only = yes
+						}
+ 	 	 	 	 	}
+ 	 	 	 	}
+ 	 	 	 	FIR = {
+					promote_character = FIR_karl_einar_paivio
+					set_politics = {
+						ruling_party = anarchism
+						elections_allowed = no
+					}
+ 	 	 	 	}
+ 	 	 	}
+ 	 	 	else_if = {
+ 	 	 	 	limit = {
+ 	 	 	 	 	FIR = {
+						has_country_leader = {
+							character = FIR_Helsinki_Veterans_Association
+							ruling_only = yes
+						}
+ 	 	 	 	 	}
+ 	 	 	 	}
+ 	 	 	 	FIR = {
+					promote_character = FIR_Helsinki_Veterans_Association
+					set_politics = {
+						ruling_party = anarchism
+						elections_allowed = no
+					}
+ 	 	 	 	}
+ 	 	 	}
+ 	 	}
+ 	}
+ 	socialist_turkestan = {
+ 	 	days_remove = 5
+ 	 	icon = GFX_Russian_uni_socialist
+ 	 	visible = {
+ 	 	 	united_russia = yes 
+ 	 	 	OR = {
+ 	 	 	 	original_tag = FCR 
+ 	 	 	 	original_tag = PSL 
+ 	 	 	 	original_tag = HAR 
+ 	 	 	 	AND = {
+ 	 	 	 	 	original_tag = ZHR
+ 	 	 	 	 	OR = {
+ 	 	 	 	 	 	has_completed_focus = ZHR_permanentrevolution
+ 	 	 	 	 	 	has_completed_focus = ZHR_naturesubmitstothefiveyearplan
+ 	 	 	 	 	 	has_completed_focus = ZHR_creators_of_god
+ 	 	 	 	 	 	has_completed_focus = ZHR_realm_of_socialism
+ 	 	 	 	 	 	has_completed_focus = ZHR_peoples_will
+ 	 	 	 	 	 	has_completed_focus = ZHR_kerenskyprevails
+		 		 	 	has_completed_focus = ZHR_long_live_the_republic_of_labour
+		 		 	 	has_completed_focus = ZHR_long_live_the_republic_of_councils
+ 	 	 	 	 	}
+ 	 	 	 	}
+ 	 	 	 	AND = {
+ 	 	 	 	 	original_tag = ALT 
+ 	 	 	 	 	has_completed_focus = ALT_the_red_merlin
+ 	 	 	 	 	has_completed_focus = ALT_the_red_faust
+ 	 	 	 	}
+ 	 	 	 	AND = {
+ 	 	 	 	 	original_tag = KAV
+ 	 	 	 	 	OR = {
+ 	 	 	 	 	 	has_completed_focus = KAV_the_red_princes_dream
+ 	 	 	 	 	 	has_completed_focus = KAV_the_transmutation_of_koba
+ 	 	 	 	 	 	has_completed_focus = KAV_i_mayakovsky
+ 	 	 	 	 	 	has_completed_focus = KAV_enter_king_of_time
+ 	 	 	 	 	}
+ 	 	 	 	}
+ 	 	 	}
+ 	 	 	KHW = {
+				exists = yes
+ 	 	 	 	is_puppet = no
+			}
+ 	 	}
+ 	 	ai_will_do = {
+ 	 	 	factor = 100
+ 	 	}
+ 	 	fire_only_once = yes 
+ 	 	remove_effect = {
+ 	 	 	puppet = KHW
+ 	 	 	KHW = {
+ 	 	 	 	promote_character = KHW_mirsaid_sultan_galiev
+ 	 	 	 	set_politics = {
+					ruling_party = vanguard_socialism
+					elections_allowed = no
+			 	}
+ 	 	 	 	set_cosmetic_tag = KHW_galiev_uni
+ 	 	 	}
+ 	 	}
+ 	}
+ 	mongolian_republic = {
+ 	 	icon = GFX_icon_mongolia
+ 	 	fire_only_once = yes
+ 	 	ai_will_do = {
+ 	 	 	factor = 100
+ 	 	}
+ 	 	visible = {
+ 	 	 	country_exists = MNO 
+ 	 	 	OR = {
+ 	 	 	 	original_tag = SIB 
+ 	 	 	 	AND = {
+ 	 	 	 	 	original_tag = KAV
+ 	 	 	 	 	has_completed_focus = KAV_the_king_of_poets 
+ 	 	 	 	}
+ 	 	 	 	AND = {
+ 	 	 	 	 	original_tag = ZHR
+ 	 	 	 	 	OR = {
+ 	 	 	 	 	 	has_completed_focus = ZHR_dawn_of_peoples_freedom
+ 	 	 	 	 	 	has_completed_focus = ZHR_everyoneforthemselves	
+		 		 	 	has_completed_focus = ZHR_kerenskyprevails
+ 	 	 	 	 	}
+ 	 	 	 	}
+ 	 	 	}
+ 	 	}
+ 	 	remove_effect = {
+ 	 	 	MNO = {
+ 	 	 	 	set_cosmetic_tag = MNO_republican
+ 	 	 	 	set_politics = {
+				 	ruling_party = conservatism
+				 	elections_allowed = no
+			 	}
+ 	 	 	 	promote_character = MNO_aleksandr_kaygorodov
+ 	 	 	}
+ 	 	}
+ 	}
+ 	join_entente = {
+ 	 	icon = GFX_Russian_uni_nationalist
+ 	 	fire_only_once = yes
+ 	 	ai_will_do = {
+ 	 	 	factor = 100
+ 	 	}
+ 	 	visible = {
+ 	 	 	has_country_flag = total_polish_death
+ 	 	 	ENG = {
+ 	 	 	 	is_subject = no
+ 	 	 	 	exists = yes
+ 	 	 	}
+ 	 	 	OR = {
+ 	 	 	 	tag = SIB
+ 	 	 	 	AND = {
+ 	 	 	 	 	tag = ZHR 
+ 	 	 	 	 	has_country_leader ={
+ 	 	 	 	 	 	character = ZHR_Pavel_Milyukov
+ 	 	 	 	 	} 
+ 	 	 	 	}
+ 	 	 	 	AND = {
+ 	 	 	 	 	tag = RUS
+ 	 	 	 	 	has_completed_focus = RUS_liberalization_lead_prosperity
+ 	 	 	 	}
+ 	 	 	}
+ 	 	}
+ 	 	remove_effect = {
+ 	 	 	ENG = {
+ 	 	 	 	add_to_faction = ROS
+ 	 	 	}
+ 	 	}
+ 	}
+ 	join_birkeneid = {
+ 	 	icon = GFX_Russian_uni_nationalist
+ 	 	fire_only_once = yes
+ 	 	ai_will_do = {
+ 	 	 	factor = 100
+ 	 	}
+ 	 	visible = {
+ 	 	 	has_country_flag = total_polish_death
+ 	 	 	SWE = {
+ 	 	 	 	is_subject = no
+ 	 	 	 	exists = yes
+ 	 	 	}
+ 	 	 	tag = ARC
+ 	 	}
+ 	 	remove_effect = {
+ 	 	 	SWE = {
+ 	 	 	 	add_to_faction = ROS
+ 	 	 	}
+ 	 	}
+ 	}
+ 	join_league = {
+ 	 	icon = GFX_Russian_uni_socialist
+ 	 	fire_only_once = yes
+ 	 	ai_will_do = {
+ 	 	 	factor = 100
+ 	 	}
+ 	 	visible = {
+ 	 	 	has_country_flag = total_polish_death
+ 	 	 	FRA = {
+ 	 	 	 	is_subject = no
+ 	 	 	 	exists = yes
+ 	 	 	}
+ 	 	 	tag = FCR
+ 	 	 	has_country_leader = {
+ 	 	 	 	character = FCR_alexander_yaroslavsky
+ 	 	 	}
+ 	 	}
+ 	 	remove_effect = {
+ 	 	 	FRA = {
+ 	 	 	 	add_to_faction = ROS
+ 	 	 	}
+ 	 	}
+ 	}
+ 	join_rotfront = {
+ 	 	icon = GFX_Russian_uni_socialist
+ 	 	fire_only_once = yes
+ 	 	ai_will_do = {
+ 	 	 	factor = 100
+ 	 	}
+ 	 	visible = {
+ 	 	 	has_country_flag = total_polish_death
+ 	 	 	GER = {
+ 	 	 	 	is_subject = no
+ 	 	 	 	exists = yes
+ 	 	 	}
+ 	 	 	tag = PSL
+ 	 	}
+ 	 	remove_effect = {
+ 	 	 	GER = {
+ 	 	 	 	add_to_faction = ROS
+ 	 	 	}
+ 	 	}
+ 	}
+ 	mongolian_protectorate = {
+ 	 	icon = GFX_Russian_uni_nationalist
+ 	 	fire_only_once = yes
+ 	 	ai_will_do = {
+ 	 	 	factor = 100
+ 	 	}
+ 	 	visible = {
+ 	 	 	country_exists = MNO 
+ 	 	 	OR = {
+ 	 	 	 	original_tag = RUS 
+ 	 	 	 	original_tag = SRU 
+ 	 	 	 	original_tag = ORE 
+ 	 	 	 	original_tag = DKB 
+ 	 	 	 	original_tag = KCK 
+ 	 	 	 	original_tag = PRI 
+ 	 	 	 	original_tag = ARC
+ 	 	 	}
+ 	 	}
+ 	 	remove_effect = {
+ 	 	 	MNO = {
+ 	 	 	 	drop_cosmetic_tag = yes
+ 	 	 	 	set_cosmetic_tag = MNO_protectorate
+				set_politics = {
+					ruling_party = despotism
+					elections_allowed = no
+				}
+				promote_character = MNO_boris_rezukhin
+ 	 	 	}
+ 	 	}
+ 	}
+ 	vperedist_mongolia = {
+ 	 	icon = GFX_Russian_uni_socialist
+ 	 	fire_only_once = yes
+ 	 	ai_will_do = {
+ 	 	 	factor = 100
+ 	 	}
+ 	 	visible = {
+ 	 	 	country_exists = MNO 
+ 	 	 	OR = {
+ 	 	 	 	original_tag = FCR 
+ 	 	 	 	AND = {
+ 	 	 	 	 	original_tag = ZHR
+ 	 	 	 	 	OR = {
+ 	 	 	 	 	 	has_completed_focus = ZHR_naturesubmitstothefiveyearplan
+ 	 	 	 	 	 	has_completed_focus = ZHR_creators_of_god
+ 	 	 	 	 	}
+ 	 	 	 	}
+ 	 	 	 	AND = {
+ 	 	 	 	 	original_tag = KAV
+ 	 	 	 	 	OR = {
+ 	 	 	 	 	 	has_completed_focus = KAV_the_red_princes_dream
+ 	 	 	 	 	 	has_completed_focus = KAV_the_transmutation_of_koba
+ 	 	 	 	 	 	has_completed_focus = KAV_i_mayakovsky
+ 	 	 	 	 	 	has_completed_focus = KAV_enter_king_of_time
+ 	 	 	 	 	}
+ 	 	 	 	}
+ 	 	 	}
+ 	 	}
+ 	 	remove_effect = {
+ 	 	 	MNO = {
+				drop_cosmetic_tag = yes
+				set_cosmetic_tag = MNO_vpered
+				promote_character = MNO_ivan_yefremov
+				set_politics = {
+					ruling_party = accelerationism
+					elections_allowed = no
+				}
+ 	 	 	}
+ 	 	 	set_autonomy = {
+				target = MNO
+				autonomy_state = socialistrepublic
+				end_wars = no
+				end_civil_wars = no
+		 	}
+ 	 	}
+ 	}
+ 	socialist_mongolia = {
+ 	 	icon = GFX_Russian_uni_socialist
+ 	 	fire_only_once = yes
+ 	 	ai_will_do = {
+ 	 	 	factor = 100
+ 	 	}
+ 	 	visible = {
+ 	 	 	country_exists = MNO 
+ 	 	 	OR = {
+ 	 	 	 	original_tag = PSL 
+ 	 	 	 	original_tag = HAR
+ 	 	 	 	AND = {
+ 	 	 	 	 	original_tag = ZHR
+ 	 	 	 	 	OR = {
+ 	 	 	 	 	 	has_completed_focus = ZHR_permanentrevolution
+ 	 	 	 	 	 	has_completed_focus = ZHR_dawn_of_peoples_freedom
+ 	 	 	 	 	 	has_completed_focus = ZHR_realm_of_socialism
+ 	 	 	 	 	 	has_completed_focus = ZHR_peoples_will
+ 	 	 	 	 	 	has_completed_focus = ZHR_kerenskyprevails
+		 		 	 	has_completed_focus = ZHR_long_live_the_republic_of_labour
+		 		 	 	has_completed_focus = ZHR_long_live_the_republic_of_councils
+ 	 	 	 	 	}
+ 	 	 	 	}
+ 	 	 	}
+ 	 	}
+ 	 	remove_effect = {
+ 	 	 	MNO = {
+ 	 	 	 	drop_cosmetic_tag = yes
+ 	 	 	 	set_cosmetic_tag = MNO_socialist
+ 	 	 	 	promote_character = MNO_damdin_sukhbaatar
+ 	 	 	 	set_politics = {
+				 	ruling_party = vanguard_socialism
+				 	elections_allowed = no
+			 	}
+ 	 	 	}
+ 	 	 	set_autonomy = {
+				target = MNO
+				autonomy_state = socialistrepublic
+				end_wars = no
+				end_civil_wars = no
+		 	}
+ 	 	}
+ 	}
+ 	organize_mongolia = {
+		ai_will_do = {
+			factor = 10
+		}
+ 	 	fire_only_once = yes
+		visible = {
+			NOT = {
+				country_exists = MNO
+				OR = {
+					tag = FCR 
+					tag = ALT
+					tag = DKB
+					AND = {
+						tag = KAV 
+						OR = {
+							has_completed_focus = KAV_enter_king_of_time
+							has_completed_focus = KAV_the_red_princes_dream
+						}
+					}
+					AND = {
+						tag = ORE 
+						has_completed_focus = Orenburg_eurasian_ideocracy
+					}
+				}
+			}
+			united_russia = yes 
+			ROOT = {
+				owns_state = 330
+				owns_state = 612
+				owns_state = 915
+				owns_state = 329
+				owns_state = 654
+			}
+		}
+		complete_effect={
+ 	 	 	hidden_effect = {
+				every_state = {
+					remove_claim_by = ALT 
+					remove_claim_by = MPA 
+					remove_claim_by = MO2 
+					remove_claim_by = TAN 
+					remove_claim_by = KHU
+ 	 	 	 	 	remove_claim_by = MON
+					remove_core_of = MON 
+					remove_core_of = ALT 
+					remove_core_of = MPA 
+					remove_core_of = MO2 
+					remove_core_of = TAN 
+					remove_core_of = KHU
+				}
+			}
+ 	 	 	if = {
+ 	 	 	 	limit = {
+ 	 	 	 	 	NOT = {
+ 	 	 	 	 	 	tag = ALT
+ 	 	 	 	 	}
+ 	 	 	 	}
+ 	 	 	 	every_owned_state = {
+					remove_core_of = ALT
+				}
+ 	 	 	}
+			MNO = {
+				add_state_core = 962
+				add_state_core = 618
+				add_state_core = 793
+				add_state_core = 915
+				add_state_core = 1149
+				add_state_core = 330
+				add_state_core = 1151
+				add_state_core = 1150
+				add_state_core = 914
+				add_state_core = 612
+				transfer_state = 962
+				transfer_state = 618
+				transfer_state = 793
+				transfer_state = 915
+				transfer_state = 1149
+				transfer_state = 330
+				transfer_state = 1151
+				transfer_state = 1150
+				transfer_state = 914
+				transfer_state = 612
+			}
+			puppet = MNO
+		}
+	}
+ 	socialist_baltics = {
+ 	 	days_remove = 5
+ 	 	icon = GFX_Russian_uni_socialist
+ 	 	visible = {
+ 	 	 	united_russia = yes 
+ 	 	 	OR = {
+ 	 	 	 	original_tag = FCR 
+ 	 	 	 	original_tag = PSL 
+ 	 	 	 	original_tag = HAR 
+ 	 	 	 	AND = {
+ 	 	 	 	 	original_tag = ZHR
+ 	 	 	 	 	OR = {
+ 	 	 	 	 	 	has_completed_focus = ZHR_permanentrevolution
+ 	 	 	 	 	 	has_completed_focus = ZHR_dawn_of_peoples_freedom
+ 	 	 	 	 	 	has_completed_focus = ZHR_naturesubmitstothefiveyearplan
+ 	 	 	 	 	 	has_completed_focus = ZHR_creators_of_god
+ 	 	 	 	 	 	has_completed_focus = ZHR_realm_of_socialism
+ 	 	 	 	 	 	has_completed_focus = ZHR_peoples_will
+ 	 	 	 	 	 	has_completed_focus = ZHR_kerenskyprevails
+		 		 	 	has_completed_focus = ZHR_long_live_the_republic_of_labour
+		 		 	 	has_completed_focus = ZHR_long_live_the_republic_of_councils
+ 	 	 	 	 	}
+ 	 	 	 	}
+ 	 	 	 	AND = {
+ 	 	 	 	 	original_tag = ALT 
+ 	 	 	 	 	has_completed_focus = ALT_the_red_merlin
+ 	 	 	 	 	has_completed_focus = ALT_the_red_faust
+ 	 	 	 	}
+ 	 	 	 	AND = {
+ 	 	 	 	 	original_tag = KAV
+ 	 	 	 	 	OR = {
+ 	 	 	 	 	 	has_completed_focus = KAV_the_red_princes_dream
+ 	 	 	 	 	 	has_completed_focus = KAV_the_transmutation_of_koba
+ 	 	 	 	 	 	has_completed_focus = KAV_i_mayakovsky
+ 	 	 	 	 	 	has_completed_focus = KAV_enter_king_of_time
+ 	 	 	 	 	}
+ 	 	 	 	}
+ 	 	 	}
+ 	 	 	WRT = {
+				exists = yes
+				has_government = vanguard_socialism
+			}
+ 	 	}
+ 	 	ai_will_do = {
+ 	 	 	factor = 100
+ 	 	}
+ 	 	fire_only_once = yes 
+ 	 	remove_effect = {
+ 	 	 	puppet = WRT 
+ 	 	 	WRT = {
+ 	 	 	 	drop_cosmetic_tag = yes
+ 	 	 	 	promote_character = WRT_jaan_anvelt 
+ 	 	 	 	set_politics = {
+					ruling_party = vanguard_socialism
+					elections_allowed = no
+			 	}
+ 	 	 	}
+ 	 	 	set_autonomy = {
+				target = WRT
+				autonomy_state = socialistrepublic
+				end_wars = no
+				end_civil_wars = no
+		 	}
+ 	 	}
+ 	}
+ 	form_xinjiang = {
+ 	 	icon = GFX_icon_xinjiang
+ 	 	fire_only_once = yes 
+ 	 	visible = {
+ 	 	 	united_russia = yes 
+ 	 	 	owns_state = 617
+ 	 	 	NOT = {
+ 	 	 	 	OR = {
+ 	 	 	 	 	has_completed_focus = Orenburg_eurasian_ideocracy
+ 	 	 	 	 	has_completed_focus = KAV_the_red_princes_dream
+ 	 	 	 	 	has_completed_focus = KAV_enter_king_of_time 
+ 	 	 	 	 	has_completed_focus = ALT_the_red_faust 
+ 	 	 	 	 	has_completed_focus = ALT_the_red_merlin
+ 	 	 	 	}
+ 	 	 	}
+ 	 	}
+ 	 	ai_will_do = {
+ 	 	 	factor = 100
+ 	 	}
+ 	 	remove_effect = {
+			SIK = {
+ 	 	 	 	transfer_state = 794 
+ 	 	 	 	transfer_state = 287 
+ 	 	 	 	transfer_state = 617 
+ 	 	 	 	transfer_state = 760 
+ 	 	 	 	transfer_state = 759 
+ 	 	 	 	transfer_state = 935 
+ 	 	 	 	transfer_state = 843 
+ 	 	 	 	transfer_state = 619
+ 	 	 	 	add_state_core = 794 
+ 	 	 	 	add_state_core = 287 
+ 	 	 	 	add_state_core = 617 
+ 	 	 	 	add_state_core = 760 
+ 	 	 	 	add_state_core = 759 
+ 	 	 	 	add_state_core = 935 
+ 	 	 	 	add_state_core = 843 
+ 	 	 	 	add_state_core = 619
+ 	 	 	}
+ 	 	 	puppet = SIK
+ 	 	 	SIK = {
+ 	 	 	 	drop_cosmetic_tag = yes
+		 	 	set_cosmetic_tag = SIK_RUS
+ 	 	 	 	set_politics = {
+			 		ruling_party = despotism
+			 		elections_allowed = no
+			 	}
+ 	 	 	 	promote_character = SIK_sheng_shicai
+ 	 	 	}
+		}
+ 	}
+ 	invade_central_asia_nationalist = {
+		days_remove = 14
+ 	 	icon = GFX_Russian_uni_nationalist
+		visible = {
+			united_russia = yes
+			has_war = no
+ 	 	 	OR = {
+ 	 	 	 	original_tag = RUS 
+ 	 	 	 	original_tag = SRU 
+ 	 	 	 	original_tag = ORE 
+ 	 	 	 	original_tag = DKB 
+ 	 	 	 	original_tag = KCK 
+ 	 	 	 	original_tag = PRI 
+ 	 	 	 	original_tag = ARC
+ 	 	 	}
+			OR = {
+				is_neighbor_of = TUK
+ 	 	 	 	is_neighbor_of = TRK 
+ 	 	 	 	is_neighbor_of = KHW 
+ 	 	 	 	is_neighbor_of = BKR
+			}
+		}
+		ai_will_do = {
+ 	 	 	factor = 100
+ 	 	}
+		fire_only_once = yes
+		remove_effect = {
+			every_country = {
+				limit = {
+					OR = {
+						tag = TUK
+						tag = TRK
+						tag = TUC
+						tag = KHW
+						tag = BKR
+					}
+				}
+				ROS = {
+					declare_war_on = {
+						type = annex_everything
+						target = PREV
+					}
+				}
+			}
+		}
+	}
+ 	invade_central_asia_socialist = {
+		days_remove = 14
+ 	 	icon = GFX_Russian_uni_socialist
+		visible = {
+			united_russia = yes
+			has_war = no
+ 	 	 	OR = {
+ 	 	 	 	original_tag = KAV
+				original_tag = HAR 
+				original_tag = FCR 
+				original_tag = ALT 
+ 	 	 	}
+			OR= {
+				is_neighbor_of = TUK
+ 	 	 	 	is_neighbor_of = TRK 
+ 	 	 	 	is_neighbor_of = BKR
+			}
+		}
+		available = {
+			OR= {
+				is_neighbor_of = TUK
+ 	 	 	 	is_neighbor_of = TRK 
+ 	 	 	 	is_neighbor_of = KHW 
+ 	 	 	 	is_neighbor_of = BKR
+			}
+		}
+		ai_will_do = {
+ 	 	 	factor = 100
+ 	 	}
+		fire_only_once = yes
+		remove_effect = {
+			declare_war_on = {
+					type = annex_everything
+					target = TUK
+				}
+				declare_war_on = {
+					type = annex_everything
+					target = TRK
+				}
+ 	 	 	 	declare_war_on = {
+					type = annex_everything
+					target = TUC
+				}
+ 	 	 	 	if = {
+ 	 	 	 	 	limit = {
+ 	 	 	 	 	 	NOT = {
+ 	 	 	 	 	 	 	KHW = {
+ 	 	 	 	 	 	 	 	owns_state = 586
+ 	 	 	 	 	 	 	}
+ 	 	 	 	 	 	}
+ 	 	 	 	 	}
+ 	 	 	 	 	declare_war_on = {
+					 	type = annex_everything
+					 	target = KHW
+				 	}
+ 	 	 	 	}
+				declare_war_on = {
+					type = annex_everything
+					target = BKR
+				}
+		}
+	}
+ 	invade_central_asia_ZHR = {
+		days_remove = 14
+ 	 	icon = GFX_Russian_uni_socialist
+		visible = {
+			united_russia = yes
+			has_war = no
+ 	 	 	OR = {
+ 	 	 	 	original_tag = ZHR 
+ 	 	 	 	original_tag = PSL
+ 	 	 	}
+			OR= {
+				is_neighbor_of = TUC
+ 	 	 	 	is_neighbor_of = TRK 
+ 	 	 	 	is_neighbor_of = BKR
+			}
+		}
+		available = {
+			OR= {
+				is_neighbor_of = TUC
+ 	 	 	 	is_neighbor_of = TRK 
+ 	 	 	 	is_neighbor_of = BKR
+			}
+		}
+		ai_will_do = {
+ 	 	 	factor = 100
+ 	 	}
+		fire_only_once = yes
+		remove_effect = {
+			every_country = {
+				limit = {
+					OR = {
+						tag = TRK
+						tag = TUC
+						tag = BKR
+					}
+				}
+				ROS = {
+					declare_war_on = {
+						type = annex_everything
+						target = PREV
+					}
+				}
+			}
+		}
+	}
+ 	organize_poland = {
+ 	 	icon = GFX_icon_poland
+ 	 	days_remove = 14
+ 	 	fire_only_once = yes
+ 	 	visible = { 
+ 	 	 	OR = {
+ 	 	 	 	original_tag = RUS
+ 	 	 	 	original_tag = SRU 
+ 	 	 	 	original_tag = ORE 
+ 	 	 	 	original_tag = PSL
+ 	 	 	 	original_tag = ARC
+ 	 	 	 	original_tag = SIB 
+ 	 	 	 	original_tag = PRI 
+ 	 	 	 	original_tag = ALT
+ 	 	 	 	AND = {
+ 	 	 	 	 	original_tag = KAV
+ 	 	 	 	 	OR = {
+ 	 	 	 	 	 	has_completed_focus = KAV_the_red_princes_dream
+ 	 	 	 	 	 	has_completed_focus = KAV_the_transmutation_of_koba
+ 	 	 	 	 	 	has_completed_focus = KAV_the_king_of_poets
+ 	 	 	 	 	}
+ 	 	 	 	}
+ 	 	 	 	AND = {
+ 	 	 	 	 	original_tag = ZHR
+ 	 	 	 	 	OR = {
+ 	 	 	 	 	 	has_completed_focus = ZHR_realm_of_socialism
+ 	 	 	 	 	 	has_completed_focus = ZHR_peoples_will
+ 	 	 	 	 	 	has_completed_focus = ZHR_everyoneforthemselves	
+		 		 	 	has_completed_focus = ZHR_kerenskyprevails
+		 		 	 	has_completed_focus = ZHR_long_live_the_republic_of_labour
+		 		 	 	has_completed_focus = ZHR_long_live_the_republic_of_councils
+ 	 	 	 	 	}
+ 	 	 	 	}
+ 	 	 	}
+		}
+ 	 	available = {
+			owns_state = 10
+ 	 	}
+ 	 	ai_will_do = {
+ 	 	 	factor = 100
+ 	 	}
+ 	 	remove_effect = {
+			add_to_temp_array = { core_removal_array = POL }
+			remove_all_cores_and_claims_of_tags = yes
+			POL = {
+ 	 	 	 	drop_cosmetic_tag = yes
+ 	 	 	 	transfer_state = 10
+ 	 	 	 	transfer_state = 90
+ 	 	 	 	transfer_state = 87 
+ 	 	 	 	transfer_state = 762 
+ 	 	 	 	transfer_state = 72 
+ 	 	 	 	transfer_state = 975
+ 	 	 	 	transfer_state = 92
+ 	 	 	 	transfer_state = 97
+ 	 	 	 	transfer_state = 98
+ 	 	 	 	transfer_state = 88
+ 	 	 	 	transfer_state = 1299
+ 	 	 	 	transfer_state = 86
+ 	 	 	 	transfer_state = 85
+ 	 	 	 	add_state_core = 85
+ 	 	 	 	add_state_core = 86
+ 	 	 	 	add_state_core = 88
+ 	 	 	 	add_state_core = 10
+ 	 	 	 	add_state_core = 90
+ 	 	 	 	add_state_core = 87 
+ 	 	 	 	add_state_core = 762 
+ 	 	 	 	add_state_core = 72 
+ 	 	 	 	add_state_core = 975
+ 	 	 	 	add_state_core = 92
+ 	 	 	 	add_state_core = 97
+ 	 	 	 	add_state_core = 98
+ 	 	 	 	add_state_core = 1299
+ 	 	 	 	
+ 	 	 	 	load_focus_tree = generic_focus
+ 	 	 	}
+ 	 	 	if = {
+ 	 	 	 	limit = {
+ 	 	 	 	 	OR = {
+ 	 	 	 	 	 	tag = SRU
+ 	 	 	 	 	 	tag = RUS
+ 	 	 	 	 	 	tag = ARC
+ 	 	 	 	 	 	AND = {
+ 	 	 	 	 	 	 	tag = ORE
+ 	 	 	 	 	 	 	has_government = reactionism
+ 	 	 	 	 	 	}
+ 	 	 	 	 	}
+ 	 	 	 	}
+ 	 	 	 	POL = {
+ 	 	 	 	 	transfer_state = 1300
+ 	 	 	 	 	transfer_state = 91
+ 	 	 	 	 	transfer_state = 89
+ 	 	 	 	 	add_state_core = 89
+ 	 	 	 	 	add_state_core = 91
+ 	 	 	 	 	add_state_core = 1300
+ 	 	 	 	}
+ 	 	 	}
+			if = {
+ 	 	 	 	limit = {
+ 	 	 	 	 	owns_state = 68
+ 	 	 	 	}
+ 	 	 	 	POL = {
+					transfer_state = 63
+					transfer_state = 66
+					transfer_state = 68
+					transfer_state = 67
+					add_state_core = 67
+					add_state_core = 68
+					add_state_core = 66
+					add_state_core = 63
+				}
+			}
+ 	 	 	puppet = POL
+ 	 	 	if = {
+ 	 	 	 	limit = {
+ 	 	 	 	 	OR = {
+ 	 	 	 	 	 	AND = {
+ 	 	 	 	 	 	 	original_tag = KAV
+ 	 	 	 	 	 	 	NOT = {
+ 	 	 	 	 	 	 	 	has_country_leader = {
+ 	 	 	 	 	 	 	 	 	character = KAV_igor_severyanin
+ 	 	 	 	 	 	 	 	}
+ 	 	 	 	 	 	 	}
+ 	 	 	 	 	 	}
+ 	 	 	 	 	 	AND = {
+ 	 	 	 	 	 	 	original_tag = ALT 
+ 	 	 	 	 	 	 	NOT = {
+ 	 	 	 	 	 	 	 	has_completed_focus = ALT_the_red_merlin
+ 	 	 	 	 	 	 	}
+ 	 	 	 	 	 	}
+ 	 	 	 	 	 	AND = {
+ 	 	 	 	 	 	 	original_tag = ZHR
+ 	 	 	 	 	 	 	OR = {
+ 	 	 	 	 	 	 	 	has_country_leader = {
+ 	 	 	 	 	 	 	 	 	character = ZHR_lev_kamenev
+ 	 	 	 	 	 	 	 	}
+ 	 	 	 	 	 	 	 	has_country_leader = {
+ 	 	 	 	 	 	 	 	 	character = ZHR_leon_trotsky
+ 	 	 	 	 	 	 	 	}
+ 	 	 	 	 	 	 	 	has_country_leader = {
+ 	 	 	 	 	 	 	 	 	character = ZHR_bogdanov
+ 	 	 	 	 	 	 	 	}
+ 	 	 	 	 	 	 	}
+ 	 	 	 	 	 	}
+ 	 	 	 	 	 	original_tag = FCR 
+ 	 	 	 	 	}
+ 	 	 	 	}
+ 	 	 	 	country_event = {
+ 	 	 	 	 	id = poland.1002
+ 	 	 	 	}
+ 	 	 	}
+ 	 	 	if = {
+ 	 	 	 	limit = {
+ 	 	 	 	 	OR = {
+ 	 	 	 	 	 	AND = {
+ 	 	 	 	 	 	 	original_tag = KAV
+ 	 	 	 	 	 	 	has_country_leader = {
+ 	 	 	 	 	 	 	 	character = KAV_igor_severyanin
+ 	 	 	 	 	 	 	}
+ 	 	 	 	 	 	}
+ 	 	 	 	 	 	original_tag = SIB
+ 	 	 	 	 	 	original_tag = PRI
+ 	 	 	 	 	 	AND = {
+ 	 	 	 	 	 	 	original_tag = ZHR
+ 	 	 	 	 	 	 	NOT = {
+ 	 	 	 	 	 	 	 	has_country_leader = {
+ 	 	 	 	 	 	 	 	 	character = ZHR_maria_spiridonova
+ 	 	 	 	 	 	 	 	}
+ 	 	 	 	 	 	 	 	has_country_leader = {
+ 	 	 	 	 	 	 	 	 	character = ZHR_lev_kamenev
+ 	 	 	 	 	 	 	 	}
+ 	 	 	 	 	 	 	 	has_country_leader = {
+ 	 	 	 	 	 	 	 	 	character = ZHR_leon_trotsky
+ 	 	 	 	 	 	 	 	}
+ 	 	 	 	 	 	 	 	has_country_leader = {
+ 	 	 	 	 	 	 	 	 	character = ZHR_vasily_chapayev
+ 	 	 	 	 	 	 	 	}
+ 	 	 	 	 	 	 	 	has_country_leader = {
+ 	 	 	 	 	 	 	 	 	character = ZHR_bogdanov
+ 	 	 	 	 	 	 	 	}
+ 	 	 	 	 	 	 	}
+ 	 	 	 	 	 	}
+ 	 	 	 	 	}
+ 	 	 	 	}
+ 	 	 	 	country_event = {
+ 	 	 	 	 	id = poland.1001
+ 	 	 	 	}
+ 	 	 	}
+ 	 	 	if = {
+ 	 	 	 	limit = {
+ 	 	 	 	 	OR = {
+ 	 	 	 	 	 	original_tag = HAR
+ 	 	 	 	 	 	original_tag = PSL
+ 	 	 	 	 	 	AND = {
+ 	 	 	 	 	 	 	original_tag = ZHR
+ 	 	 	 	 	 	 	OR = {
+ 	 	 	 	 	 	 	 	has_country_leader = {
+ 	 	 	 	 	 	 	 	 	character = ZHR_maria_spiridonova
+ 	 	 	 	 	 	 	 	}
+ 	 	 	 	 	 	 	 	has_country_leader = {
+ 	 	 	 	 	 	 	 	 	character = ZHR_vasily_chapayev
+ 	 	 	 	 	 	 	 	}
+ 	 	 	 	 	 	 	}
+ 	 	 	 	 	 	}
+ 	 	 	 	 	 	AND = {
+ 	 	 	 	 	 	 	original_tag = ALT 
+ 	 	 	 	 	 	 	has_completed_focus = ALT_the_red_merlin
+ 	 	 	 	 	 	}
+ 	 	 	 	 	}
+ 	 	 	 	}
+ 	 	 	 	country_event = {
+ 	 	 	 	 	id = poland.1003
+ 	 	 	 	}
+ 	 	 	}
+ 	 	 	if = {
+ 	 	 	 	limit = {
+ 	 	 	 	 	OR = {
+ 	 	 	 	 	 	original_tag = RUS 
+ 	 	 	 	 	 	original_tag = SRU
+ 	 	 	 	 	 	original_tag = ORE
+ 	 	 	 	 	 	original_tag = ARC
+ 	 	 	 	 	}
+ 	 	 	 	}
+ 	 	 	 	POL={
+					set_cosmetic_tag = POL_kingdom
+ 	 	 	 	 	if = {
+ 	 	 	 	 	 	limit = {
+ 	 	 	 	 	 	 	has_dlc = "Together for Victory"
+ 	 	 	 	 	 	}
+ 	 	 	 	 	 	ROS = {
+ 	 	 	 	 	 	 	set_autonomy = {
+ 				 	 	 	 	target = POL
+ 				 	 	 	 	autonomy_state = autonomy
+			 	 	 	 	}
+						}
+					}
+ 	 	 	 	 	
+ 	 	 	 	 	add_state_core = 933
+ 	 	 	 	 	transfer_state = 933
+ 	 	 	 	 	add_state_core = 189 
+ 	 	 	 	 	transfer_state = 189 
+ 	 	 	 	 	add_state_core = 11
+ 	 	 	 	 	transfer_state = 11
+ 	 	 	 	 	add_state_core = 96
+ 	 	 	 	 	transfer_state = 96
+				}
+ 	 	 	 	country_event = {
+ 	 	 	 	 	id = poland.1000
+ 	 	 	 	}
+ 	 	 	 	if = {
+ 	 	 	 	 	limit = {
+ 	 	 	 	 	 	PRS = {
+ 	 	 	 	 	 	 	is_in_faction_with = ROS
+ 	 	 	 	 	 	}
+ 	 	 	 	 	}
+ 	 	 	 	 	PRS = {
+						transfer_state = 86 
+						transfer_state = 85
+						add_state_core = 86 
+						add_state_core = 85
+ 	 	 	 	 	 	annex_country = {
+ 					 	 target = DAN
+				 	 	 transfer_troops = yes
+				 	 	}
+				 	}
+ 	 	 	 	}
+ 	 	 	}
+			else = {
+ 	 	 	 	POL = {
+ 	 	 	 	 	transfer_state = 86 
+					transfer_state = 85
+					add_state_core = 86 
+					add_state_core = 85
+ 	 	 	 	}
+ 	 	 	}
+			
+		}
+ 	}
+ 	integrate_poland = {
+ 	 	icon = GFX_icon_poland
+ 	 	days_remove = 310
+ 	 	fire_only_once = yes
+ 	 	visible = { 
+			NOT = { 10 = { is_core_of = ROOT } }
+			owns_state = 10
+		}
+ 	 	available = {
+ 	 	 	OR = {
+ 	 	 	 	original_tag = DKB 
+ 	 	 	 	original_tag = KCK 
+ 	 	 	 	original_tag = FCR 
+ 	 	 	 	original_tag = HAR 
+ 	 	 	 	AND = {
+ 	 	 	 	 	original_tag = KAV
+ 	 	 	 	 	OR = {
+ 	 	 	 	 	 	has_completed_focus = KAV_i_mayakovsky
+ 	 	 	 	 	 	has_completed_focus = KAV_enter_king_of_time
+ 	 	 	 	 	}
+ 	 	 	 	}
+ 	 	 	 	AND = {
+ 	 	 	 	 	original_tag = ZHR
+ 	 	 	 	 	OR = {
+ 	 	 	 	 	 	has_completed_focus = ZHR_permanentrevolution
+ 	 	 	 	 	 	has_completed_focus = ZHR_naturesubmitstothefiveyearplan
+ 	 	 	 	 	 	has_completed_focus = ZHR_creators_of_god
+ 	 	 	 	 	}
+ 	 	 	 	}
+ 	 	 	}
+ 	 	}
+ 	 	ai_will_do = {
+ 	 	 	factor = 100
+ 	 	}
+ 	 	remove_effect = {
+			add_to_temp_array = { core_removal_array = POL }
+			remove_all_cores_and_claims_of_tags = yes
+			add_state_core = 10
+			add_state_core = 90
+			add_state_core = 87 
+			add_state_core = 86 
+			add_state_core = 85 
+			add_state_core = 762 
+			add_state_core = 72 
+			add_state_core = 975
+			add_state_core = 92
+			add_state_core = 97
+			add_state_core = 98
+		}
+ 	}
+ 	integrate_belarus = {
+ 	 	icon = GFX_icon_belarus
+ 	 	days_remove = 150
+ 	 	fire_only_once = yes
+ 	 	visible = { 
+			NOT = { 206 = { is_core_of = ROOT } }
+			owns_state = 206
+		}
+ 	 	ai_will_do = {
+ 	 	 	factor = 100
+ 	 	}
+ 	 	remove_effect = {
+			add_to_temp_array = { core_removal_array = BLR }
+			remove_all_cores_and_claims_of_tags = yes
+			add_state_core = 206
+			add_state_core = 204
+			add_state_core = 207
+			add_state_core = 995
+			add_state_core = 95
+			add_state_core = 94
+			add_state_core = 194 
+			add_state_core = 1299
+			add_state_core = 1300
+		}
+ 	}
+ 	integrate_lithuania = {
+ 	 	icon = GFX_icon_lithuania
+ 	 	days_remove = 150
+ 	 	fire_only_once = yes
+ 	 	visible = { 
+			owns_state = 96
+ 	 	 	NOT = {
+				96 = { is_core_of = ROOT }
+ 	 	 	 	OR = {
+ 	 	 	 	 	original_tag = RUS 
+ 	 	 	 	 	original_tag = SRU
+ 	 	 	 	}
+ 	 	 	}
+		}
+ 	 	ai_will_do = {
+ 	 	 	factor = 100
+ 	 	}
+ 	 	remove_effect = {
+			add_to_temp_array = { core_removal_array = LIT }
+			remove_all_cores_and_claims_of_tags = yes
+			add_state_core = 96
+			add_state_core = 11
+			add_state_core = 933
+			add_state_core = 189
+		}
+ 	}
+ 	integrate_ukraine = {
+ 	 	icon = GFX_icon_ukraine
+ 	 	days_remove = 150
+ 	 	fire_only_once = yes
+ 	 	visible = { 
+			NOT = { 202 = { is_core_of = ROOT } }
+			owns_state = 202
+		}
+ 	 	ai_will_do = {
+ 	 	 	factor = 100
+ 	 	}
+ 	 	remove_effect = {
+ 	 	 	add_to_temp_array = { core_removal_array = UKR }
+			remove_all_cores_and_claims_of_tags = yes
+ 	 	 	hidden_effect = {
+				set_province_name = {
+					id = 525
+					name = RUS_decision_integrate_ukraine_province_525
+				}
+				202 = { set_state_name = RUS_decision_integrate_ukraine_state_202 }
+ 	 	 	}
+			add_state_core = 202
+			add_state_core = 201
+			add_state_core = 93
+			add_state_core = 91 
+			add_state_core = 89
+			add_state_core = 199 
+			add_state_core = 198
+			add_state_core = 192
+			add_state_core = 193
+			add_state_core = 1156
+			add_state_core = 203
+			add_state_core = 197
+			add_state_core = 226
+		}
+ 	}
+ 	give_ukraine_west = {
+ 	 	icon = GFX_icon_ukraine
+ 	 	days_remove = 14
+ 	 	fire_only_once = yes
+ 	 	visible = { 
+			owns_state = 10
+ 	 	 	UKR = {
+ 	 	 	 	OR = {
+ 	 	 	 	 	is_in_faction_with = ROS
+ 	 	 	 	 	is_puppet_of = ROS
+ 	 	 	 	}
+ 	 	 	}
+		}
+ 	 	available = {
+ 	 	 	owns_state = 89
+ 	 	 	owns_state = 91
+ 	 	 	UKR = {
+ 	 	 	 	OR = {
+ 	 	 	 	 	is_in_faction_with = ROS
+ 	 	 	 	 	is_puppet_of = ROS
+ 	 	 	 	}
+ 	 	 	}
+ 	 	}
+ 	 	ai_will_do = {
+ 	 	 	factor = 100
+ 	 	}
+ 	 	remove_effect = {
+			UKR = {
+				transfer_state = 89 
+				transfer_state = 91
+				add_state_core = 89 
+				add_state_core = 91
+			}
+		}
+ 	}
+}
+ROS_reunification_blues = {
+ 	ROS_idea_swap_times_one = {
+ 	 	allowed = { always = no }
+ 	 	available = {
+ 	 	 	is_subject = yes
+ 	 	}
+ 	 	cancel_trigger = {
+ 	 	 	is_subject = yes
+ 	 	}
+ 	 	fire_only_once = yes
+ 	 	is_good = yes
+ 	 	days_mission_timeout = 365
+ 	 	selectable_mission = no 
+ 	 	timeout_effect = {
+ 	 	 	swap_ideas = {
+ 	 	 	 	remove_idea = ROS_recently_reunited
+ 	 	 	 	add_idea = ROS_recently_reunited1
+ 	 	 	}
+ 	 	 	activate_mission = ROS_idea_swap_times_two
+ 	 	}
+ 	}
+ 	ROS_idea_swap_times_two = {
+ 	 	allowed = { always = no }
+ 	 	cancel_trigger = {
+ 	 	 	is_subject = yes
+ 	 	}
+ 	 	available = {
+ 	 	 	is_subject = yes
+ 	 	}
+ 	 	fire_only_once = yes
+ 	 	is_good = yes
+ 	 	days_mission_timeout = 365
+ 	 	selectable_mission = no 
+ 	 	timeout_effect = {
+ 	 	 	swap_ideas = {
+ 	 	 	 	remove_idea = ROS_recently_reunited1
+ 	 	 	 	add_idea = ROS_recently_reunited2
+ 	 	 	}
+ 	 	 	activate_mission = ROS_finally_victory
+ 	 	}
+ 	}
+ 	ROS_finally_victory = {
+ 	 	allowed = { always = no }
+ 	 	cancel_trigger = {
+ 	 	 	is_subject = yes
+ 	 	}
+ 	 	available = {
+ 	 	 	is_subject = yes
+ 	 	}
+ 	 	fire_only_once = yes
+ 	 	is_good = yes
+ 	 	days_mission_timeout = 365
+ 	 	selectable_mission = no 
+ 	 	timeout_effect = {
+ 	 	 	remove_ideas = ROS_recently_reunited2
+ 	 	}
+ 	}
+}

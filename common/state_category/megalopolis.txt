@@ -1,0 +1,14 @@
+state_categories={
+	megalopolis = {
+		local_building_slots = 12
+	
+			color = { 255 0 255 }
+
+	}
+	megalopolis_mini = {
+		local_building_slots = 8
+	
+			color = { 255 0 255 }
+
+	}
+}

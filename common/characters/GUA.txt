@@ -1,0 +1,14 @@
+characters = {
+	GUA_manuel_maría_orellana_contreras = {
+		name = "Manuel María Orellana Contreras"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GUA/Portrait_Manuel_Maria_Orellana_Contreras.png"
+			}
+		}
+		country_leader = {
+			ideology = progressive_democracy
+			expire = "1965.1.1.1"
+		}
+	}
+}

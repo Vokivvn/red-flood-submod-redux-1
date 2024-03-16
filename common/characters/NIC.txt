@@ -1,0 +1,14 @@
+characters = {
+	NIC_carlos_jose_solorzano = {
+		name = "Carlos José Solórzano"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/NIC/Portrait_NIC_Carlos_Jose_Solorzano.png"
+			}
+		}
+		country_leader = {
+			ideology = provisional_government
+			expire = "1965.1.1.1"
+		}
+	}
+}

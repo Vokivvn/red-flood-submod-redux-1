@@ -1,0 +1,270 @@
+﻿instant_effect = {
+	create_equipment_variant = {
+		name = "Ki-10"
+		type = small_plane_airframe_0
+		modules = {
+			fixed_main_weapon_slot = light_mg_2x
+			engine_type_slot = engine_1_1x
+			special_type_slot_1 = empty
+		}
+	}
+	create_equipment_variant = {
+		name = "Ki-2"
+		type = small_plane_cas_airframe_0
+		modules = {
+			fixed_main_weapon_slot = small_bomb_bay
+			engine_type_slot = engine_1_2x
+			special_type_slot_1 = lmg_defense_turret
+		}
+		icon = "GFX_JAP_CAS1_medium"
+	}
+	create_equipment_variant = {
+		name = "Ki-1"
+		type = medium_plane_airframe_0
+		modules = {
+			fixed_main_weapon_slot = medium_bomb_bay
+			engine_type_slot = engine_1_2x
+			special_type_slot_1 = lmg_defense_turret
+		}
+	}
+	create_equipment_variant = {
+		name = "Ki-3"
+		type = small_plane_cas_airframe_0
+		modules = {
+			fixed_main_weapon_slot = bomb_locks
+			engine_type_slot = engine_1_1x
+			special_type_slot_1 = lmg_defense_turret
+		}
+		icon = "GFX_JAP_CAS1_medium"
+	}
+	create_equipment_variant = {
+		name = "Aichi D1A2"
+		type = cv_small_plane_cas_airframe_0
+		modules = {
+			fixed_main_weapon_slot = bomb_locks
+			engine_type_slot = engine_1_1x
+			special_type_slot_1 = dive_brakes_small
+		}
+		icon = "GFX_JAP_CAS1_medium"
+	}
+	create_equipment_variant = {
+		name = "A4N"
+		type = cv_small_plane_airframe_0
+		modules = {
+			fixed_main_weapon_slot = light_mg_2x
+			engine_type_slot = engine_1_1x
+			special_type_slot_1 = empty
+		}
+	}
+	create_equipment_variant = {
+		name = "B2M"
+		type = cv_small_plane_naval_bomber_airframe_0
+		modules = {
+			fixed_main_weapon_slot = torpedo_mounting
+			engine_type_slot = engine_1_1x
+			special_type_slot_1 = empty
+		}
+		obsolete = yes
+		icon = "GFX_JAP_cv_naval_bomber1_medium"
+	}
+	create_equipment_variant = {
+		name = "B4Y"
+		type = cv_small_plane_naval_bomber_airframe_1
+		modules = {
+			fixed_main_weapon_slot = torpedo_mounting
+			fixed_auxiliary_weapon_slot_1 = bomb_locks
+			engine_type_slot = engine_2_1x
+			special_type_slot_1 = empty
+		}
+		icon = "GFX_JAP_cv_naval_bomber1_medium"
+	}
+}
+
+
+
+
+#AIRCRAFT
+air_wings = {
+	### IJA Air Forces ###
+	# 1 Hikodan -- Tokyo
+	282 = { 
+		# 1 Hiko Rentai -- Kawasaki Ki-10
+		small_plane_airframe_0 = {
+			owner = "JAP" 
+			amount = 72
+			version_name = "Ki-10"
+		}
+		# 16 Hiko Rentai -- Kawasaki Ki-10
+		small_plane_airframe_0 = {
+			owner = "JAP" 
+			amount = 72
+			version_name = "Ki-10"
+		}
+		# 6 Hiko Rentai -- Mitsubishi Ki-2
+		small_plane_cas_airframe_0 =  {
+			owner = "JAP" 
+			amount = 54
+			version_name = "Ki-2"
+		}
+		# 9 Hiko Rentai -- Mitsubishi Ki-1
+		medium_plane_airframe_0 =  {
+			owner = "JAP" 
+			amount = 54
+			version_name = "Ki-1"
+		}
+	}
+
+	# 2 Hikodan -- Dalian
+	716 = {
+		# 3 Hiko Rentai -- Kawasaki Ki-10
+		small_plane_airframe_0 = {
+			owner = "JAP" 
+			amount = 72
+			version_name = "Ki-10"
+		}
+		# 5 Hiko Rentai -- Kawasaki Ki-3
+		small_plane_cas_airframe_0 =  {
+			owner = "JAP" 
+			amount = 54
+			version_name = "Ki-3"
+		}
+	}
+
+	# 3 Hikodan -- Taiwan
+	524 = {
+		# 10 Hiko Rentai -- Kawasaki Ki-3
+		small_plane_cas_airframe_0 =  {
+			owner = "JAP" 
+			amount = 54
+			version_name = "Ki-3"
+		}
+
+	}
+
+	### IJN Air Forces ###
+	# 1 Rengo Kokutai -- Taiwan
+	524 = {
+		# Kizarazu Kokutai -- Aichi D1A2
+		cv_small_plane_cas_airframe_0 = {
+			owner = "JAP" 
+			amount = 60
+			version_name = "Aichi D1A2"
+		}
+		# Kanoya Kokutai -- Aichi D1A2
+		cv_small_plane_cas_airframe_0 = {
+			owner = "JAP" 
+			amount = 60
+			version_name = "Aichi D1A2"
+		}
+	}
+
+	# 2 Rengo Kokutai -- Taiwan
+	524 = {
+		# 12 Kokutai -- Nakajima A4N1
+		cv_small_plane_airframe_0 = {
+			owner = "JAP" 
+			amount = 72
+			version_name = "A4N"
+		}
+		# 13 Kokutai -- Mitsubishi B2M2
+		cv_small_plane_naval_bomber_airframe_0 = { owner = "JAP" amount = 60 version_name = "B2M" }
+		
+	}
+
+	### Akagi CAG -- Hiroshima (while Akagi is refit)
+	1276 = { 
+		cv_small_plane_airframe_0 =  {
+			owner = "JAP" 
+			amount = 10
+			version_name = "A4N"
+		}
+		cv_small_plane_cas_airframe_0 = {
+			owner = "JAP" 
+			amount = 9
+			version_name = "Aichi D1A2"
+		}
+		cv_small_plane_naval_bomber_airframe_0 =  {
+			owner = "JAP" 
+			amount = 9
+			version_name = "B2M"
+		}
+
+	}
+	"Ryujo"  = { 
+		cv_small_plane_airframe_0 =  { owner = "JAP" amount = 10 version_name = "A4N" } # historical 24
+		cv_small_plane_airframe_0 =  { owner = "JAP" amount = 8 version_name = "A4N" } # historical 24
+		cv_small_plane_cas_airframe_0 = { owner = "JAP" amount = 10 version_name = "Aichi D1A2" } 	# historical 12
+		cv_small_plane_cas_airframe_0 = { owner = "JAP" amount = 2 version_name = "Aichi D1A2" } 	# historical 12
+	}
+			
+	"Kaga"  = { 
+		cv_small_plane_airframe_0 =  { owner = "JAP" amount = 10 version_name = "A4N" } # historical 16
+		cv_small_plane_airframe_0 =  { owner = "JAP" amount = 2 version_name = "A4N" } # historical 16
+		cv_small_plane_cas_airframe_0 = { owner = "JAP" amount = 10 version_name = "Aichi D1A2" } # historical 16
+		cv_small_plane_cas_airframe_0 = { owner = "JAP" amount = 2 version_name = "Aichi D1A2" } # historical 16
+		cv_small_plane_naval_bomber_airframe_0 =  { owner = "JAP" amount = 10 version_name = "B2M" } # historical 28
+		cv_small_plane_naval_bomber_airframe_0 =  { owner = "JAP" amount = 10 version_name = "B2M" } # historical 28
+	}
+			
+	"Akagi"  = { 
+		cv_small_plane_airframe_0 =  { owner = "JAP" amount = 9 version_name = "A4N" } 	# historical 12
+		cv_small_plane_cas_airframe_0 = { owner = "JAP" amount = 10 version_name = "Aichi D1A2" } 			# historical 18
+		cv_small_plane_cas_airframe_0 = { owner = "JAP" amount = 2 version_name = "Aichi D1A2" } 			# historical 18
+		cv_small_plane_naval_bomber_airframe_0 =  { owner = "JAP" amount = 10 version_name = "B2M" } 	# historical 36
+		cv_small_plane_naval_bomber_airframe_0 =  { owner = "JAP" amount = 10 version_name = "B2M" } 	# historical 36
+		cv_small_plane_naval_bomber_airframe_0 =  { owner = "JAP" amount = 4 version_name = "B2M" } 	# historical 36
+	}
+}
+
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+instant_effect = {
+	if = {
+		limit = { NOT = { has_dlc = "By Blood Alone" } }
+		add_equipment_to_stockpile = {
+			type = fighter_equipment_0
+			amount = 350
+		}
+		add_equipment_to_stockpile = {
+			type = fighter_equipment_1 
+			amount = 150
+		}
+		add_equipment_to_stockpile = {
+			type = cv_fighter_equipment_0 
+			amount = 50
+		}
+		add_equipment_to_stockpile = {
+			type = CAS_equipment_1
+			amount = 200
+		}
+		add_equipment_to_stockpile = {
+			type = nav_bomber_equipment_1
+			amount = 100
+		}
+	}
+	else = {
+		add_equipment_production = {
+			equipment = {
+				type = small_plane_airframe_0
+				creator = "JAP" 
+				version_name = "Ki-10"
+			}
+			requested_factories = 1
+			progress = 0.15
+			efficiency = 50
+		}
+
+		add_equipment_production = {
+			equipment = {
+				type = cv_small_plane_naval_bomber_airframe_1
+				creator = "JAP" 
+				version_name = "B4Y"
+			}
+			requested_factories = 1
+			progress = 0.2
+			efficiency = 50
+		}
+	}
+}

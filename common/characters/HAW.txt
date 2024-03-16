@@ -1,0 +1,14 @@
+characters = {
+	HAW_theresa_owana_kaohelelani_laanui = {
+		name = "Theresa Owana Ka'ōhelelani La'anui"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/HAW/Portrait_HAW_Theresa.png"
+			}
+		}
+		country_leader = {
+			ideology = absolute_monarchy
+			expire = "1965.1.1.1"
+		}
+	}
+}

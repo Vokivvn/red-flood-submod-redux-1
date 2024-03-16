@@ -1,0 +1,15 @@
+characters = {
+	ETH_mekonnen_selassie = {
+		name = "Mekonnen Selassie"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/ETH/Portrait_ETH_Mekonnen_Selassie.png"
+			}
+		}
+		country_leader = {
+			ideology = absolute_monarchy
+			expire = "1965.1.1.1"
+			id=-1
+		}
+	}
+}

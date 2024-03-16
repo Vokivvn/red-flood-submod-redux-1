@@ -1,0 +1,76 @@
+#United States - annexation_USA_CONQ
+can_release_america = {
+	state = 361 #Washington
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			has_country_flag = USA_CONQ
+			country_exists = USA
+			tag = CAL
+		}
+	}
+}
+#Canada - annexation_CAN_CONQ
+can_release_canada = {
+	state = 276 #Ottowa
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			has_country_flag = CAN_CONQ
+			country_exists = CAN
+		}
+	}
+}
+#Quebec - annexation_QUE_CONQ
+can_release_quebec = {
+	state = 276 #Ottowa
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		# Do Canada release first
+		OR = {
+			country_exists = CAN
+			has_country_flag = CAN_CONQ
+			276 = { OR = { is_core_of = var:276.owner is_claimed_by = var:276.owner } }
+		}
+		NOT = {
+			has_country_flag = QUE_CONQ
+			country_exists = QUE
+		}
+	}
+}
+#Greenland - annexation_GRN_CONQ
+can_release_greenland = {
+	state = 101 #Greenland
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		# Do Denmark release first
+		OR = {
+			country_exists = DEN
+			has_country_flag = DEN_CONQ
+			37 = { OR = { is_core_of = var:37.owner is_claimed_by = var:37.owner } }
+		}
+		# Do Iceland release first
+		OR = {
+			country_exists = ICE
+			has_country_flag = ICE_CONQ
+			100 = { OR = { is_core_of = var:100.owner is_claimed_by = var:100.owner } }
+		}
+		NOT = {
+			tag = DEN
+			tag = ICE
+			country_exists = GRN
+			has_country_flag = GRN_CONQ
+		}
+	}
+}
+#Mexico - annexation_MEX_CONQ
+can_release_mexico = {
+	state = 277 #Mexico City
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			has_country_flag = MEX_CONQ
+			country_exists = MEX
+		}
+	}
+}

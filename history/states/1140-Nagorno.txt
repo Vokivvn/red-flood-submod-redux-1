@@ -1,0 +1,24 @@
+state={
+	id = 1140
+	name = "STATE_1140"
+	manpower = 461981
+
+	state_category = pastoral
+
+	history={
+		owner = ARM
+		add_core_of = AZR
+		add_core_of = KAV
+		add_core_of = ARM
+		buildings = {
+			infrastructure = 1
+		}
+        victory_points = {
+			1467 3
+		}
+	}
+
+	provinces={
+		9715 1467 1539
+	}
+}

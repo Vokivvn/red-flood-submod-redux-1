@@ -1,0 +1,14 @@
+characters = {
+	POA_josé_antonio_netto = {
+		name = "José Antonio Netto"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/POA/Portrait_Jose_Antonio_Netto.png"
+			}
+		}
+		country_leader = {
+			ideology = oligarchy
+			expire = "1965.1.1.1"
+		}
+	}
+}

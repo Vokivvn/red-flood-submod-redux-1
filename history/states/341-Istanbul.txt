@@ -1,0 +1,29 @@
+state= {
+	id=341
+	name="STATE_341"
+	manpower = 484509
+	resources={
+		chromium=84
+		steel = 20
+	}
+	
+	state_category = large_town
+
+	history= {
+		add_core_of = MAR
+		owner = GRE
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 3
+		}
+		add_core_of = TUR
+		add_core_of = GRE
+		add_claim_by = BUL
+		victory_points = {
+			11842 5
+		}
+	}
+	provinces = {
+		922 3893 11842 13545 13546 13547
+	}
+}

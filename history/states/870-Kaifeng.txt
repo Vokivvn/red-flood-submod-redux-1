@@ -1,0 +1,19 @@
+state = {
+	id = 870
+	name = "STATE_870"
+	manpower = 15160000
+	state_category = city
+	history = {
+		owner = BYJ
+		add_core_of = BYJ
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 2
+		}
+		victory_points = { 7656 20 }
+		victory_points = { 9958 5 }
+	}
+	provinces = {
+		4010 4066 7085 7126 7129 7540 7656 9958 9995 10098 10364 12012
+	}
+}

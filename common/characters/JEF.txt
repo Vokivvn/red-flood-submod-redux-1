@@ -1,0 +1,26 @@
+characters = {
+	JEF_gilbert_gable = {
+		name = "Gilbert Gable"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/JEF/Portrait_Gilbert_Gable.png"
+			}
+		}
+		country_leader = {
+			ideology = national_liberalism
+			expire = "1965.1.1.1"
+		}
+	}
+	JEF_aleksandr_kurenkov = {
+		name = "Aleksandr Kurenkov"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/JEF/Portrait_Aleksandr_Kurenkov.png"
+			}
+		}
+		country_leader = {
+			ideology = national_rejuvenatism
+			expire = "1965.1.1.1"
+		}
+	}
+}

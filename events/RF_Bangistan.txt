@@ -1,0 +1,48 @@
+add_namespace = bangistan
+#Dacca is lovely this time of year
+country_event = {
+	id = bangistan.1
+	title = bangistan.1.title
+	desc = bangistan.1.desc
+	picture = GFX_report_event_soviet_in_riga
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {	#
+		name = bangistan.1.a
+		ai_chance = { factor = 1}
+		add_popularity = {
+			ideology = liberalism
+			popularity = 0.1
+		}
+	}
+	option = {	#
+		name = bangistan.1.b
+		ai_chance = { factor = 1}
+		set_politics = {
+			ruling_party = revisionist_socialism
+			elections_allowed = no
+		}
+		add_popularity = {
+			ideology = revisionist_socialism
+			popularity = 0.2
+		}
+	}
+	option = {	#
+		name = bangistan.1.c
+		ai_chance = { factor = 1}
+		set_politics = {
+			ruling_party = conservatism
+			elections_allowed = no
+		}
+		add_popularity = {
+			ideology = progressivism
+			popularity = -0.1
+		}
+		add_popularity = {
+			ideology = conservatism
+			popularity = 0.1
+		}
+	}
+}

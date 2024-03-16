@@ -1,0 +1,97 @@
+﻿l_english:
+#COUNTRY NAME#
+SIA_anarchism:0 "Kingdom of Siam"
+SIA_anarchism_DEF:0 "the Kingdom of Siam"
+SIA_anarchism_ADJ:0 "Siamese"
+
+SIA_vanguard_socialism:0 "Kingdom of Siam"
+SIA_vanguard_socialism_DEF:0 "the Kingdom of Siam"
+SIA_vanguard_socialism_ADJ:0 "Siamese"
+
+SIA_popular_socialism:0 "Kingdom of Siam"
+SIA_popular_socialism_DEF:0 "the Kingdom of Siam"
+SIA_popular_socialism_ADJ:0 "Siamese"
+
+SIA_revisionist_socialism:0 "Kingdom of Siam"
+SIA_revisionist_socialism_DEF:0 "the Kingdom of Siam"
+SIA_revisionist_socialism_ADJ:0 "Siamese"
+
+SIA_progressivism:0 "Kingdom of Siam"
+SIA_progressivism_DEF:0 "the Kingdom of Siam"
+SIA_progressivism_ADJ:0 "Siamese"
+
+SIA_liberalism:0 "Kingdom of Siam"
+SIA_liberalism_DEF:0 "the Kingdom of Siam"
+SIA_liberalism_ADJ:0 "Siamese"
+
+SIA_conservatism:0 "Kingdom of Siam"
+SIA_conservatism_DEF:0 "the Kingdom of Siam"
+SIA_conservatism_ADJ:0 "Siamese"
+
+SIA_right_authoritarianism:0 "Kingdom of Siam"
+SIA_right_authoritarianism_DEF:0 "the Kingdom of Siam"
+SIA_right_authoritarianism_ADJ:0 "Siamese"
+
+SIA_despotism:0 "Kingdom of Siam"
+SIA_despotism_DEF:0 "the Kingdom of Siam"
+SIA_despotism_ADJ:0 "Siamese"
+
+SIA_reactionism:0 "Kingdom of Siam"
+SIA_reactionism_DEF:0 "the Kingdom of Siam"
+SIA_reactionism_ADJ:0 "Siamese"
+
+SIA_accelerationism:0 "Kingdom of Thailand"
+SIA_accelerationism_DEF:0 "the Kingdom of Thailand"
+SIA_accelerationism_ADJ:0 "Thai"
+
+#PARTIES#
+SIA_revisionist_socialism_party:0 "KR(C)"
+SIA_revisionist_socialism_party_long:0 "Khana Ratsadon (Civilian Faction)"
+
+SIA_liberalism_party:0 "KR(M)"
+SIA_liberalism_party_long:0 "Khana Ratsadon (Military Faction)"
+
+SIA_conservatism_party:0 "KR(S)"
+SIA_conservatism_party_long:0 "Khana Ratsadon (Songsuradet's Clique)"
+
+SIA_despotism_party:0 "KKB"
+SIA_despotism_party_long:0 "Khana Ku Banmuang"
+
+SIA_Chakri_despotism_party:0 "Chakri Dynasty"
+SIA_Chakri_despotism_party_long:0 "Chakri Dynasty"
+
+SIA_accelerationism_party:0 "KR(P)"
+SIA_accelerationism_party_long:0 "Khana Ratsadon (Phibunsongkhram's Clique)"
+
+#EVENTS#
+siam.1.t:0 "Boworadet Rebellion"
+siam.1.desc:0 "Which way Eastern man?"
+siam.1.a:0 "Chakri"
+siam.1.b:0 "Khana Ratsadon"
+
+siam.2.t:0 "Prime Minister"
+siam.2.desc:0 "Choose"
+siam.2.a:0 "Phibun"
+siam.2.b:0 "Banomyong"
+siam.2.c:0 "Songsuradet"
+
+siam.3.t:0 "Monarch"
+siam.3.desc:0 "Choose"
+siam.3.a:0 "Prajadhipok"
+siam.3.b:0 "Sukhumbandhu"
+
+#LEADER DESCRITIONS#
+#IDEAS#
+SIA_political_conflict:0 "Political Conflict"
+SIA_political_conflict_desc:0 "Even though the 1934 Revolution succeeded, the Royalist remnants are still around. This causes conflicts in our society, and the lact of effectiveness of the government has done nothing but made the situation worse."
+SIA_chinese_immigrants:0 "Chinese Immigrants"
+SIA_chinese_immigrants_desc:0 "The constant wars and famines in China have caused many Chinese to migrate to Southeast Asian nations, including us. Even though the rise of the Chinese population in our lands is concerning, they do work for our economy, making it stronger."
+SIA_foreign_X_territorial_rights:0 "Foreign Extra-Territorial Rights"
+SIA_foreign_X_territorial_rights_desc:0 "The unequal treaties between us and foreign powers have been mostly renegotiated, however their extraterritorial rights still remain."
+SIA_econ_recovery:0 "Beginnings of Economic Recovery"
+SIA_econ_recovery_desc:0 "Our economy is recovering from the crisis, but we still haven't recovered properly, due to the problems present in our government."
+SIA_rama_vii:0 "Rama VII"
+SIA_rama_vii_desc:0 "Rama VII is opposed to many things within our government. Despite that, he is the symbol of our nation, and stands as an unifier of the people."
+#CUSTOM TOOLTIPS AND FLAGS#
+#DECISIONS (1.5 Update)#
+#FOCUSES#

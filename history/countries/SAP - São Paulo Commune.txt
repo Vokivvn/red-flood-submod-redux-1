@@ -1,0 +1,54 @@
+﻿capital = 1033
+
+oob = "SAP"
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	gw_artillery = 1
+}
+
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+	set_technology = {
+		iw_small_airframe = 1
+		aa_lmg = 1
+		aa_cannon_1 = 1
+		early_bombs = 1
+		engines_1 = 1
+	}
+}
+if = {
+	limit = { NOT = { has_dlc = "By Blood Alone" } }
+	set_technology = {
+		early_fighter = 1
+		CAS1 = 1
+	}
+}
+
+set_convoys = 10
+
+set_popularities = {
+	vanguard_socialism = 9
+	popular_socialism = 10
+	anarchism = 40
+	revisionist_socialism = 0
+	progressivism = 6
+	liberalism = 9
+	conservatism = 0
+	right_authoritarianism = 20
+	despotism = 0
+	reactionism = 0
+	accelerationism = 6
+}
+
+recruit_character = SAP_ORistori
+
+
+set_politics = {
+	ruling_party = anarchism
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+

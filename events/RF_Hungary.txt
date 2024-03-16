@@ -1,0 +1,84 @@
+ add_namespace = hungarystart
+
+country_event = {
+	id = hungarystart.9
+	title = hungarystart.9.t
+	desc = hungarystart.9.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = hungarystart.9.a
+		country_event = {
+			id = hungarystart.10
+			days = 1
+		}
+	}
+}
+country_event = {
+	id = hungarystart.10
+	title = hungarystart.10.t
+	desc = hungarystart.10.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = hungarystart.10.a
+		country_event = {
+			id = hungarystart.11
+			days = 1
+		}
+		kill_country_leader = yes
+		add_country_leader_role = {
+			character = HUN_rakosi
+			country_leader = {
+				desc = "POLITICS_RAKOSI_DESC"
+				expire = "1965.1.1"
+				ideology = leninism
+			}
+			promote_leader = yes
+			
+		}
+		swap_ideas = {
+			remove_idea = HUN_mentors_death
+			add_idea = HUN_to_arms
+		}
+		add_stability = -0.2
+	}
+}
+country_event = {
+	id = hungarystart.11
+	title = hungarystart.11.t
+	desc = hungarystart.11.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = hungarystart.11.a
+		
+	}
+}
+country_event = {
+	id = hungarystart.12
+	title = hungarystart.12.t
+	desc = hungarystart.12.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = hungarystart.12.a
+		declare_war_on = {
+			target = SLO
+			type = annex_everything
+		}
+		SLO = {
+			swap_ideas = {
+			remove_idea = SLO_ephemeral
+			add_idea = SLO_thunder
+		    }
+		}
+		news_event = {
+			id = news.156
+		}
+		hidden_effect = {
+			leave_faction = yes
+		}
+		activate_mission = HUN_intervention
+	}
+}

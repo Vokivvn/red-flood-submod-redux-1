@@ -1,0 +1,76 @@
+characters = {
+	ARY_syama_prasad_mukherjee = {
+		name = "Syama Prasad Mukherjee"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ARY/Portrait_Aryanvata_syama_prasad_mukherjee.png"
+			}
+		}
+		country_leader = {
+			ideology = national_conservatism
+			expire = "1965.1.1.1"
+		}
+	}
+	ARY_k_b_hedgewar = {
+		name = "K. B. Hedgewar"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ARY/Portrait_Aryanvata_k_b_hedgewar.png"
+			}
+		}
+		country_leader = {
+			ideology = reactionary_populism
+			expire = "1940.6.21.1"
+		}
+	}
+	ARY_Balakrishna_Shivram_Moonje = {
+		name = "Balakrishna Shivram Moonje"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ARY/Portrait_B_S_Moonje.png"
+			}
+		}
+		country_leader = {
+			ideology = national_democracy
+			expire = "1965.1.1.1"
+		}
+	}
+	ARY_Madan_Mohan_Malaviya = {
+		name = "Madan Mohan Malaviya"
+		
+	}
+	ARY_Prabhakar_Balwant_Dani = {
+		name = "Prabhakar Balwant Dani"
+		
+	}
+	ARY_Madhav_Sadashivrao_Golwalkar = {
+		name = "Madhav Sadashivrao Golwalkar"
+		
+	}
+	ARY_Ganesh_Damodar_Savarkar = {
+		name = "Ganesh Damodar Savarkar"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ARY/Portrait_Ayranvata_Veer_Savarkar.png"
+			}
+		}	
+	}
+
+	ARY_v_d_savarkar = {
+		name = "V. D. Savarkar"
+		#desc = "POLITICS_V.D.Savarkar_DESC"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ARY/Portrait_Ayranvata_Veer_Savarkar.png"
+			}
+		}
+		country_leader = {
+			ideology = national_democracy
+			expire = "1966.2.26.1"
+			traits = {
+				warmonger
+			}
+		}
+	}
+}
+

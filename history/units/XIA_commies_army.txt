@@ -1,0 +1,57 @@
+﻿division_template = {
+	name = "Hóngjūn"				
+	division_names_group = CHI_INF_01
+	regiments = {
+		infantry = { x = 0 y = 0 }	# Note: Chinese divisions were brigade-sized compared other nations' armies
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+
+	priority = 0 # garrison
+}
+### OOB ###
+units = {
+	division = {
+		name = "7th Juntuán"
+		location = 7199
+		division_template = "Hóngjūn"		# Provincial militia unit (poor equipment and training)
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "1st Juntuán"
+		location = 3992
+		division_template = "Hóngjūn"		# Provincial militia unit (poor equipment and training)
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "3rd Juntuán"
+		location = 3992
+		division_template = "Hóngjūn"		# Provincial militia unit (poor equipment and training)
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "8th Juntuán"
+		location = 3992
+		division_template = "Hóngjūn"		# Provincial militia unit (poor equipment and training)
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "9th Juntuán"
+		location = 4083
+		division_template = "Hóngjūn"		# Provincial militia unit (poor equipment and training)
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "5th Juntuán"
+		location = 4083
+		division_template = "Hóngjūn"		# Provincial militia unit (poor equipment and training)
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "New 10th Army"
+		location = 7172
+		division_template = "Hóngjūn"		# Provincial militia unit (poor equipment and training)
+		start_equipment_factor = 0.8
+	}
+}

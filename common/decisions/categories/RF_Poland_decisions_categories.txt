@@ -1,0 +1,31 @@
+POL_aftermath_of_prussia = {
+	icon = GFX_icon_prussia_eagle
+	allowed = {
+		original_tag = POL
+	}
+	priority = 100
+	visible = {
+		OR = {
+			has_completed_focus = POL_claim_slovakia
+			has_completed_focus = POL_expand_political_freedom
+		}
+	}
+}
+
+POL_russia_diplo = {
+	icon = GFX_icon_poland
+	allowed={
+		original_tag = POL
+		is_subject = no
+	}
+	priority = 100
+	visible = {
+        is_subject = no
+		BLR = {
+			NOT = {
+				has_completed_focus = BLR_pale_horse
+				has_completed_focus = BLR_foreign_clique
+			}
+		}
+	}
+}

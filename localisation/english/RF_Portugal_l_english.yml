@@ -1,0 +1,43 @@
+﻿l_english:
+#COUNTRY NAME#
+
+#PARTIES#
+POR_vanguard_socialism_party:0 "PCB"
+POR_vanguard_socialism_party_long:0 "Partido Comunista Português"
+POR_popular_socialism_party:0 "MNS"
+POR_popular_socialism_party_long:0 "Movimiento Nacional-Sindicalista"
+POR_anarchism_party:0 "UAP"
+POR_anarchism_party_long:0 "União Anarquista Portuguesa"
+POR_revisionist_socialism_party:0 "PSP"
+POR_revisionist_socialism_party_long:0 "Partido Socialista Português"
+POR_progressivism_party:0 "PD"
+POR_progressivism_party_long:0 "Partido Democrático"
+POR_liberalism_party:0 "PR"
+POR_liberalism_party_long:0 "Partido Regionalista"
+POR_conservatism_party:0 "PRN"
+POR_conservatism_party_long:0 "Partido Republicano Nacionalista"
+POR_right_authoritarianism_party:0 "Os Paladinos"
+POR_right_authoritarianism_party_long:0 "os Paladinos"
+POR_despotism_party:0 "Círculo de Coimbra"
+POR_despotism_party_long:0 "Círculo de Coimbra"
+POR_reactionism_party:0 "IL"
+POR_reactionism_party_long:0 "Integralismo Lusitano"
+POR_accelerationism_party:0 "Grupo do Tavares"
+POR_accelerationism_party_long:0 "Grupo do Tavares"
+#LEADER DESCRITIONS#
+#IDEAS#
+POR_vices_of_heliogabalus:0 "The Vices of Heliogabalus"
+POR_vices_of_heliogabalus_desc:0 "There are certain rumours about our most noble King among Portuguese society, echoed by whispers inside Palace of Ajuda and jokes between government officials. Wild parties, celebrations of sexual deviation, degenerate crazes. These are, of course, just tales. At least that's what the regime says.\n\nFrancisco José's dissolute lifestyle and uncommon carnal appetites have followed him all the way from his Austrian exile, and the monarch's weekend escapades to Coimbra and stories of youths going through the royal palace's backdoor have proven to be quite the gossip material. As if such a situation wasn't delicate enough, the King's status as a childless bachelor at his advanced age lets out more than what the government wishes to be known. Even if the succession to the throne is not a real problem, Francisco José's Uranian concupiscence has become a constant headache for the very Catholic and traditional elite, who try to hide this reality at any cost."
+POR_sidonist_underground:0 "Sidonist Underground"
+POR_sidonist_underground_desc:0 "\"Valete, fratres!"\n\nAlthough the restoration of the monarchy was a bloodless and relatively peaceful process thanks to Manuel Gomes da Costa's efforts, it was not without opposition. Even if the leftist and liberal republicans were forced into obscurity and languished within a few years, others were not willing to fade away. Sidónio Pais, briefly President of the Republic before being exiled by a coup, carefully picked up the pieces of the rightist opposition to the Crown, ready to play the long game. From Fiume, the beating heart of European revolutionary spirit, Pais has been plotting the end of the Portuguese regime.\n\nThe Sidonists have yet to carry out violent acts, but increasingly daring demonstrations against the monarchy have become commonplace. For the good of the country and the survival of our royal dream, we cannot let this threat go unchecked."
+POR_volta_ao_campo:0 "Volta ao Campo"
+POR_volta_ao_campo_desc:0 "Is man not truer to himself when he is in harmony with nature? Is not the village the most perfect form of political organisation? Because of the Integralists' committed support to agrarianism we have managed to revert centuries of demographic mistakes, and now internal migration from Lisbon and the northern urban conglomerates has given new life to our abandoned rural landscape. Portugal is slowly becoming a nation that can proudly claim to be firmly rooted in God, family, and soil."
+#CUSTOM TOOLTIPS AND FLAGS#
+#DECISIONS (1.5 Update)#
+#EVENTS#
+por.1.title:0 "Frederico elected mayor of Gato"
+por.1.desc:0 "Today, Frederico has been elected the mayor of the village of Gato in our great country due to his charming sociability and sweetness towards humans. He has proven a great learner and interested in the local needs of the population."
+por.1.a:0 "Such a lovely little guy."
+#FOCUSES#
+
+

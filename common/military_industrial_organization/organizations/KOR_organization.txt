@@ -1,0 +1,55 @@
+################################
+#materiel_manufacturer##############
+################################
+KOR_incheon_armory_organization = {
+	include = generic_infantry_equipment_organization
+	icon = GFX_idea_incheon_armory
+	allowed = {
+		original_tag = KOR 
+	}
+}
+################################
+#tank_manufacturer##############
+################################
+KOR_kyungsung_precision_engineering_organization = {
+	include = generic_motorized_mechanized_organization
+	icon = GFX_idea_kyungsung_precision_engineering
+	allowed = {
+		original_tag = KOR 
+	}
+	
+	available = { 
+		IF = {
+            FROM = {	
+                has_completed_focus = KOR_establish_the_chaebols
+            }
+        }
+	}
+}
+KOR_shinjin_motors_tanks_organization = {
+	include = generic_medium_tank_organization
+	icon = GFX_idea_shinjin_motors_tanks
+	allowed = {
+		original_tag = KOR 
+	}
+}
+################################
+#naval_manufacturer##############
+################################
+KOR_chosun_heavy_industries_naval_organization = {
+	include = generic_submarine_organization
+	icon = GFX_idea_chosun_heavy_industries_naval
+	allowed = {
+		original_tag = KOR 
+	}
+}
+################################
+#aircraft_manufacturer##############
+################################
+KOR_chosun_heavy_industries_organization = {
+	include = generic_light_aircraft_organization
+	icon = GFX_idea_chosun_heavy_industries
+	allowed = {
+		original_tag = KOR 
+	}
+}

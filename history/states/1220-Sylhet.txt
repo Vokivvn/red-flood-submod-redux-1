@@ -1,0 +1,24 @@
+
+state={
+	id=1220
+	name="STATE_1220" # Sylhet
+	manpower = 3053300
+
+	state_category = town
+
+	history={
+		owner = ASM
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = ASM
+		add_core_of = BNG
+		victory_points = {
+			13208 3
+		}
+	}
+
+	provinces={
+		13549 13208
+	}
+}

@@ -1,0 +1,14 @@
+characters = {
+	DIX_george_r_e_shell = {
+		name = "George R. E. Shell"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/DIX/portrait_george_shell.png"
+			}
+		}
+		country_leader = {
+			ideology = military_dictatorship
+			expire = "1965.1.1.1"
+		}
+	}
+}

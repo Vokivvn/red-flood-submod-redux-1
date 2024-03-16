@@ -1,0 +1,26 @@
+state={
+	id=680
+	name="STATE_680"
+	manpower = 120177
+	
+	state_category = rural
+	resources={
+
+	}
+	history={
+		owner = SNP
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+		add_core_of = SYR
+		add_core_of = SNP
+		victory_points = {
+			1606 2
+		}
+	}
+
+	provinces={
+		901 1606 1634 6883 10882 1578
+	}
+}

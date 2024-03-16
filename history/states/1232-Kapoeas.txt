@@ -1,0 +1,29 @@
+state= {
+	id=1232
+	name="STATE_1232"
+	manpower = 215000
+	resources={
+		rubber=60 # was: 138
+		oil=5 # was: 10
+	}
+
+	state_category = rural
+
+	history= {
+		owner = DEI
+		victory_points = { #Pangkalanboeoen
+			7227 1
+		}
+		victory_points = { #Koela Kapoeas
+			12110 1
+		}
+		add_core_of = DEI
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+	}
+	provinces={
+		12955 7227 8221 10310 12280 2184 10138 12110 10266 5176 13584 13585 13586 13587 13588
+	}
+}

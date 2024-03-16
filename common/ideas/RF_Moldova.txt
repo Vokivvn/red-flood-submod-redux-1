@@ -1,0 +1,83 @@
+#############
+# Westralia #
+#############
+ideas = {
+
+#################
+# Country ideas #
+#################
+
+	country = {
+		MOL_slavic_separatism = {
+			
+			modifier = {
+				stability_factor = -0.1
+				political_power_factor = -0.1
+			}
+			picture = great_depression
+		}
+		MOL_legionnaire = {
+			allowed = {
+				original_tag = MOL
+			}
+			modifier = {
+				stability_factor = -0.05
+				reactionism_drift = 0.05
+			}
+		}
+		MOL_provisional = {
+			allowed = {
+				original_tag = MOL
+			}
+			modifier = {
+				stability_weekly = -0.002
+				anarchism_drift = 0.03
+				reactionism_drift = 0.03
+				progressivism_drift = 0.03
+				conservatism_drift = 0.03
+				revisionist_socialism_drift = -0.05
+			}
+			
+		}
+		MOL_our_republic = {
+			allowed = {
+				original_tag = MOL
+			}
+			modifier = {
+				stability_factor = 0.2
+				production_speed_buildings_factor = 0.1
+				army_core_defence_factor = 0.05
+			}
+		}
+		
+		
+	}
+	
+#############
+# Companies #
+#############
+
+	#### General ####
+	industrial_concern = {
+	
+	}
+	
+	#### Weapons ####
+	materiel_manufacturer = {
+	
+	}
+	
+	#### Naval ####
+	naval_manufacturer = {
+	
+	}
+
+
+	#### Air ####
+	aircraft_manufacturer = {
+	
+	}
+#############
+# Theorist	#
+#############
+}

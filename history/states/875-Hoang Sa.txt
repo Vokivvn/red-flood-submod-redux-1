@@ -1,0 +1,32 @@
+state={
+	id=875
+	name="STATE_875"
+
+	history={
+		owner = JAP
+		buildings = {
+			infrastructure = 1
+			13358 = {
+				naval_base = 1
+			}
+			13359 = {
+				naval_base = 1
+			}
+			13360 = {
+				naval_base = 1
+			}
+			arms_factory = 1
+		}
+		add_core_of = DAI
+		add_core_of = MRS
+		victory_points = {
+			13360 1
+		}
+	}
+
+	provinces={
+		13358 13359 13360
+	}
+	manpower=13952
+	state_category=rural
+}

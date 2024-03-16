@@ -1,0 +1,23 @@
+state={
+	id=1148
+	name="STATE_1148"
+	provinces={
+		3548 6571 
+	}
+	history = {
+		owner = HUN
+		victory_points = {
+			11691 3
+		}
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = HUN
+		add_core_of = UKR
+		add_core_of = SLO
+		
+	}
+	state_category = pastoral
+	manpower=230000
+	buildings_max_level_factor=1.000
+}

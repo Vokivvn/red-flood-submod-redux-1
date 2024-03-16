@@ -1,0 +1,1067 @@
+AUS_karl_empire_restoration = {
+	AUS_restore_hungary = {
+		is_good = yes 
+		selectable_mission = no
+		fire_only_once = yes
+		available = { hidden_trigger = { always = no } }
+		days_mission_timeout = 7 
+		activation = {
+			has_completed_focus = AUS_carolingian_kaisertum
+			43 = { is_owned_by_ROOT_or_ai_ally = yes }
+		}
+		timeout_effect = {
+			every_state = {
+				limit = {
+					OR = {
+						state = 43
+						state = 155
+						state = 1147
+						state = 45
+						
+						state = 70
+						state = 71
+						state = 664
+						state = 73
+
+						state = 154
+						state = 1035
+						state = 923
+						state = 911
+						state = 1148
+					}
+				}
+				add_claim_by = AUS
+			}
+		}
+	}
+	AUS_restore_transylvania = {
+		is_good = yes 
+		selectable_mission = no
+		fire_only_once = yes
+		available = { hidden_trigger = { always = no } }
+		days_mission_timeout = 7 
+		activation = {
+			has_completed_focus = AUS_carolingian_kaisertum
+			73 = { is_owned_by_ROOT_or_ai_ally = yes }
+			ROM = {
+				NOT = {
+					is_in_faction_with = AUS
+				}
+			}
+		}
+		timeout_effect = {
+			every_state = {
+				limit = {
+					OR = {
+						state = 76
+						state = 1194
+						state = 1195
+						state = 84
+						state = 83
+						state = 82
+					}
+				}
+				add_claim_by = AUS
+				if = {
+					limit = { is_owned_by_ROOT_or_ai_ally = yes }
+					transfer_state_to = AUS
+				}
+			}
+		}
+	}
+	AUS_restore_venice = {
+		is_good = yes
+		selectable_mission = no
+		fire_only_once = yes
+		available = { hidden_trigger = { always = no } }
+		days_mission_timeout = 7 
+		activation = {
+			has_completed_focus = AUS_carolingian_kaisertum
+			160 = { is_owned_by_ROOT_or_ai_ally = yes }
+		}
+		timeout_effect = {
+			every_state = {
+				limit = {
+					OR = {
+						state = 736
+						state = 163
+						state = 1265
+						state = 1262
+						state = 160
+						state = 1200
+						state = 39
+					}
+				}
+				add_claim_by = AUS
+				if = {
+					limit = { is_owned_by_ROOT_or_ai_ally = yes }
+					transfer_state_to = AUS
+				}
+			}
+		}
+	}
+	AUS_restore_yugo = {
+		is_good = yes 
+		selectable_mission = no
+		fire_only_once = yes
+		available = { hidden_trigger = { always = no } }
+		days_mission_timeout = 7 
+		activation = {
+			has_completed_focus = AUS_carolingian_kaisertum
+			107 = { is_owned_by_ROOT_or_ai_ally = yes }
+		}
+		timeout_effect = {
+			every_state = {
+				limit = {
+					OR = {
+						state = 109
+						state = 103
+						state = 104
+						state = 1201
+						state = 764
+						state = 921
+						state = 922
+					}
+				}
+				add_claim_by = AUS
+				if = {
+					limit = { is_owned_by_ROOT_or_ai_ally = yes }
+					transfer_state_to = AUS
+				}
+			}
+		}
+	}
+	AUS_restore_galicia = {
+		is_good = yes 
+		selectable_mission = no
+		fire_only_once = yes
+		available = { hidden_trigger = { always = no } }
+		days_mission_timeout = 7 
+		activation = {
+			has_completed_focus = AUS_carolingian_kaisertum
+			91 = { is_owned_by_ROOT_or_ai_ally = yes }
+		}
+		timeout_effect = {
+			every_state = {
+				limit = {
+					OR = {
+						state = 88
+						state = 975
+						state = 91
+						state = 89
+						state = 80
+						state = 1193
+					}
+				}
+				add_claim_by = AUS
+				if = {
+					limit = { is_owned_by_ROOT_or_ai_ally = yes }
+					transfer_state_to = AUS
+				}
+			}
+		}
+	}
+	AUS_organize_albania = {
+		is_good = yes 
+		selectable_mission = no
+		fire_only_once = yes
+		available = { hidden_trigger = { always = no } }
+		days_mission_timeout = 7
+		activation = {
+			has_completed_focus = AUS_carolingian_kaisertum
+			44 = { is_owned_by_ROOT_or_ai_ally = yes }
+		}
+		timeout_effect = {
+			hidden_effect = {
+				add_to_temp_array = { core_removal_array = ROM }
+				remove_all_cores_and_claims_of_tags = yes
+				every_state = {
+					limit = {
+						OR = {
+							state = 44
+							state = 811
+							state = 900
+							state = 941
+							state = 942
+						}
+					}
+					add_core_of = ALB
+					if = {
+						limit = { is_owned_by_ROOT_or_ai_ally = yes }
+						transfer_state_to = ALB
+					}
+				}
+				set_temp_variable = { tag_to_release = ALB }
+				puppet_released_tag = yes
+				end_puppet = ALB
+			}
+			ALB = {
+				drop_cosmetic_tag = yes
+				set_politics = {
+					ruling_party = despotism
+					elections_allowed = no
+				}
+			}
+			recheck_annexations = yes
+		}
+	}
+	AUS_organize_romania = {
+		is_good = yes
+		selectable_mission = no
+		fire_only_once = yes
+		available = { hidden_trigger = { always = no } }
+		days_mission_timeout = 7
+		activation = {
+			has_completed_focus = AUS_carolingian_kaisertum
+			46 = { is_owned_by_ROOT_or_ai_ally = yes }
+		}
+		timeout_effect = {
+			hidden_effect = {
+				add_to_temp_array = { core_removal_array = ROM }
+				remove_all_cores_and_claims_of_tags = yes
+				every_state = {
+					limit = {
+						OR = {
+							state = 46
+							state = 81
+							state = 1059
+						}
+					}
+					add_core_of = ROM
+					if = {
+						limit = { is_owned_by_ROOT_or_ai_ally = yes }
+						transfer_state_to = ROM
+					}
+				}
+				set_temp_variable = { tag_to_release = ROM }
+				puppet_released_tag = yes
+				end_puppet = ROM
+			}
+			ROM = {
+				set_politics = {
+					ruling_party = reactionism
+					elections_allowed = no
+				}
+				promote_character = ROM_ioan_c_filitti
+			}
+			if = {
+				limit = {
+					79 = { is_owned_by_ROOT_or_ai_ally = yes }
+				}
+				if = {
+					limit = { ROS = { ROOT_can_grant_land = yes } }
+					ROS = {
+						set_temp_variable = { tag_to_release = MOL }
+						puppet_released_tag = yes
+					}
+					every_state = {
+						limit = {
+							OR = {
+								state = 1014
+								state = 78
+								state = 766
+							}
+						}
+						add_claim_by = ROS
+						if = {
+							limit = { is_owned_by_ROOT_or_ai_ally = yes }
+							transfer_state_to = ROS
+						}
+					}
+				}
+				else = {
+					every_state = {
+						limit = {
+							OR = {
+								state = 1014
+								state = 78
+								state = 766
+							}
+						}
+						add_claim_by = MOL
+						if = {
+							limit = { is_owned_by_ROOT_or_ai_ally = yes }
+							transfer_state_to = MOL
+						}
+					}
+				}
+				every_state = {
+					limit = {
+						OR = {
+							state = 79
+							state = 1193
+							state = 80
+						}
+					}
+					add_core_of = MOL
+					if = {
+						limit = { is_owned_by_ROOT_or_ai_ally = yes }
+						transfer_state_to = MOL
+					}
+				}
+				set_temp_variable = { tag_to_release = MOL }
+				puppet_released_tag = yes
+				end_puppet = MOL
+			}
+			else = {
+				every_state = {
+					limit = {
+						OR = {
+							state = 79
+							state = 1193
+							state = 80
+							state = 1014
+							state = 78
+							state = 766
+						}
+					}
+					add_core_of = ROM
+				}
+			}
+			if = {
+				limit = {
+					77 = { is_owned_by_ROOT_or_ai_ally = yes }
+					48 = { is_owned_by_ROOT_or_ai_ally = yes }
+				}
+				BUL = {
+					transfer_state = 77
+					add_state_core = 77
+				}
+			}
+			else = {
+				ROM = {
+					transfer_state = 77
+					add_state_core = 77
+				}
+			}
+			recheck_annexations = yes
+		}
+	}
+	AUS_organize_bulgaria = {
+		is_good = yes 
+		selectable_mission = no
+		fire_only_once = yes
+		available = { hidden_trigger = { always = no } }
+		days_mission_timeout = 7
+		activation = {
+			has_completed_focus = AUS_carolingian_kaisertum
+			48 = { is_owned_by_ROOT_or_ai_ally = yes }
+		}
+		timeout_effect = {
+			hidden_effect = {
+				add_to_temp_array = { core_removal_array = BUL }
+				remove_all_cores_and_claims_of_tags = yes
+				every_state = {
+					limit = {
+						OR = {
+							state = 48
+							state = 212
+							state = 211
+							state = 812
+							state = 1062
+							state = 106
+							state = 1064
+						}
+					}
+					add_core_of = BUL
+					if = {
+						limit = { is_owned_by_ROOT_or_ai_ally = yes is_not_claim_or_core_of_ROOT = yes }
+						transfer_state_to = BUL
+					}
+				}
+				set_temp_variable = { tag_to_release = BUL }
+				puppet_released_tag = yes
+				end_puppet = BUL
+			}
+			BUL = {
+				set_politics = {
+					ruling_party = despotism
+					elections_allowed = no
+				}
+				promote_character = BUL_assen_hartenau
+			}
+			recheck_annexations = yes
+		}
+	}
+	AUS_gateway_to_adriatic = {
+		cost = 50
+		fire_only_once = yes
+		days_remove = 15
+		ai_will_do = {
+			factor = 5000
+		}
+		visible = {
+			country_exists = FIU
+		}
+		available = {
+			owns_state = 43
+			FIU = {
+				owns_state = 2
+			}
+		}
+		remove_effect = {
+			create_wargoal = {
+				type = take_core_state
+				target = FIU
+			}
+		}
+	}
+	AUS_reclaim_balkans = {
+		cost = 50
+		fire_only_once = yes
+		days_remove = 15
+		ai_will_do = {
+			factor = 5000
+		}
+		visible = {
+			var:107.owner = {
+				OR = {
+					tag = YUG
+					tag = SER
+					tag = BUL
+				}
+			}
+		}
+		available = {
+			owns_state = 43
+			NOT = {
+				var:107.owner = {
+					is_in_faction_with = GER
+				}
+			}
+		}
+		remove_effect = {
+			create_wargoal = {
+				type = annex_everything
+				target = var:107.owner
+			}
+		}
+	}
+	AUS_punish_traitors = {
+		cost = 50
+		fire_only_once = yes
+		days_remove = 15
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 2000
+				is_in_faction_with = ROS
+			}
+		}
+		visible = {
+			OR = {
+				country_exists = HUN
+				country_exists = SLO
+				country_exists = TRS
+			}
+		}
+		remove_effect = {
+			every_country = {
+				limit = {
+					OR = {
+						tag = HUN
+						tag = SLO
+						tag = TRS
+					}
+				}
+				AUS = {
+					create_wargoal = {
+						type = annex_everything
+						target = PREV
+					}
+				}
+			}
+		}
+	}
+	AUS_crush_ambitious_romanians = {
+		cost = 50
+		fire_only_once = yes
+		days_remove = 15
+		ai_will_do = {
+			factor = 5000
+		}
+		visible = {
+			NOT = {
+				is_in_faction_with = ROM
+			}
+			OR = {
+				country_exists = ROM
+				country_exists = MOL
+			}
+		}
+		available = {
+			owns_state = 43
+		}
+		remove_effect = {
+			every_country = {
+				limit = {
+					OR = {
+						tag = ROM
+						tag = MOL
+					}
+				}
+				AUS = {
+					create_wargoal = {
+						type = annex_everything
+						target = PREV
+					}
+				}
+			}
+		}
+	}
+}
+
+AUS_mises_fopo = {
+	AUS_mises_join_britain = {
+		icon = decision_generic_nationalism
+		available = {
+			AUS = {
+				OR = {
+					has_war_with = GER
+					has_war_with = FRA
+				}
+			}
+			ENG = {
+				OR = {
+					has_war_with = GER
+					has_war_with = FRA
+				}
+			}
+		}
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 5000
+		}
+		complete_effect = {
+			ENG = {
+				country_event = {
+					id = austria.408
+					days = 2
+				}
+			}
+		}
+	}
+
+	AUS_mises_HUN_puppet = {
+		icon = decision_generic_nationalism
+		available = { hidden_trigger = { always = no } }
+		fire_only_once = yes
+		activation = {
+			has_completed_focus = AUS_open_for_business
+			43 = { is_owned_by_ROOT_or_ai_ally = yes }
+		}
+		is_good = yes
+		days_mission_timeout = 14
+		timeout_effect = {
+			hidden_effect = {
+				add_to_temp_array = { core_removal_array = HUN }
+				remove_all_cores_and_claims_of_tags = yes
+				every_state = {
+					limit = {
+						OR = {
+							state = 155 #Transdanubia
+							state = 43 #Northern Hungary
+							state = 154 #Alfold
+							state = 1147
+							state = 911
+							state = 664
+							state = 73
+							state = 1148
+						}
+					}
+					add_core_of = HUN
+					if = {
+						limit = { is_owned_by_ROOT_or_ai_ally = yes is_not_claim_or_core_of_ROOT = yes }
+						transfer_state_to = HUN
+					}
+				}
+			}
+			set_temp_variable = { tag_to_release = HUN }
+			puppet_released_tag = yes
+			HUN = {
+				set_politics = { ruling_party = right_authoritarianism }
+				set_cosmetic_tag = HUN_mises_puppet
+				add_country_leader_role = {
+					character = HUN_miklos_horthy
+					promote_leader = yes
+					country_leader = {
+						ideology = anocracy
+						expire = "1965.1.1.1"
+					}
+				}
+				load_oob = "HUN_mises"
+			}
+			recheck_annexations = yes
+		}
+	}
+	AUS_mises_SLO_puppet = {
+		icon = decision_generic_nationalism
+		available = { hidden_trigger = { always = no } }
+		fire_only_once = yes
+		activation = {
+			has_completed_focus = AUS_open_for_business
+			70 = { is_owned_by_ROOT_or_ai_ally = yes }
+		}
+		is_good = yes
+		days_mission_timeout = 14
+		timeout_effect = {
+			hidden_effect = {
+				add_to_temp_array = { core_removal_array = SLO }
+				remove_all_cores_and_claims_of_tags = yes
+				every_state = {
+					limit = {
+						OR = {
+							state = 70 #Western Slovakia
+							state = 71 #Eastern Slovakia
+						}
+					}
+					add_core_of = SLO
+					if = {
+						limit = { is_owned_by_ROOT_or_ai_ally = yes is_not_claim_or_core_of_ROOT = yes }
+						transfer_state_to = SLO
+					}
+				}
+			}
+			set_temp_variable = { tag_to_release = SLO }
+			puppet_released_tag = yes
+			SLO = {
+				set_cosmetic_tag = SLO_mises_puppet
+				add_country_leader_role = {
+					character = SLO_milan_hodza
+					promote_leader = yes
+					country_leader = {
+						ideology = social_liberalism
+						expire = "1965.1.1.1"
+					}
+				}
+				load_oob = "SLO_mises"
+			}
+			recheck_annexations = yes
+		}
+	}
+	AUS_mises_SER_puppet = {		#SERBIA
+		icon = decision_generic_nationalism
+		available = { hidden_trigger = { always = no } }
+		fire_only_once = yes
+		activation = {
+			has_completed_focus = AUS_open_for_business
+			107 = { is_owned_by_ROOT_or_ai_ally = yes }
+		}
+		is_good = yes
+		days_mission_timeout = 14
+		timeout_effect = {
+			hidden_effect = {
+				if = {
+					limit = { SER = { is_subject_of = AUS } }
+					add_to_temp_array = { core_removal_array = SER }
+					remove_all_cores_and_claims_of_tags = yes
+				}
+				else_if = {
+					limit = { YUG = { is_subject_of = AUS } }
+					add_to_temp_array = { core_removal_array = YUG }
+					remove_all_cores_and_claims_of_tags = yes
+				}
+				every_state = {
+					limit = {
+						OR = {
+							state = 1201
+							state = 105
+							state = 1063
+							state = 107 #Belgrade
+							state = 108 #Morava
+						}
+					}
+					SER = { add_state_core = PREV }
+					if = {
+						limit = { is_owned_by_ROOT_or_ai_ally = yes is_not_claim_or_core_of_ROOT = yes }
+						transfer_state_to = SER
+					}
+				}
+			}
+			set_temp_variable = { tag_to_release = SER }
+			puppet_released_tag = yes
+			SER = {
+				set_cosmetic_tag = SER_mises_puppet
+				promote_character = SER_dragisa_cvetkovic
+				load_oob = "SER_mises"
+			}
+			recheck_annexations = yes
+		}
+	}	
+	AUS_mises_ALB_puppet = {
+		icon = decision_generic_nationalism
+		available = { hidden_trigger = { always = no } }
+		fire_only_once = yes
+		activation = {
+			has_completed_focus = AUS_open_for_business
+			44 = { is_owned_by_ROOT_or_ai_ally = yes }
+		}
+		is_good = yes
+		days_mission_timeout = 14
+		timeout_effect = {
+			every_state = {
+				limit = {
+					OR = {
+						state = 44
+						state = 811
+						state = 942
+						state = 941
+						state = 900
+					}
+				}
+				ALB = { add_state_core = PREV }
+				if = {
+					limit = { is_owned_by_ROOT_or_ai_ally = yes is_not_claim_or_core_of_ROOT = yes }
+					transfer_state_to = ALB
+				}
+			}
+			set_temp_variable = { tag_to_release = ALB }
+			puppet_released_tag = yes
+			ALB = {
+				set_cosmetic_tag = ALB_mises_puppet
+				set_politics = { ruling_party = progressivism }
+				load_oob = "ALB_mises"
+			}
+			recheck_annexations = yes
+		}
+	}	
+	AUS_mises_CRO_puppet = {
+		icon = decision_generic_nationalism
+		available = { hidden_trigger = { always = no } }
+		fire_only_once = yes
+		activation = {
+			has_completed_focus = AUS_open_for_business
+			109 = { is_owned_by_ROOT_or_ai_ally = yes }
+		}
+		is_good = yes
+		days_mission_timeout = 14
+		timeout_effect = {
+			hidden_effect = {
+				add_to_temp_array = { core_removal_array = CRO }
+				remove_all_cores_and_claims_of_tags = yes
+				every_state = {
+					limit = {
+						OR = {
+							state = 109 #Croatia
+							state = 163
+							state = 103
+							state = 899
+							state = 922
+						}
+					}
+					add_core_of = CRO
+					if = {
+						limit = { is_owned_by_ROOT_or_ai_ally = yes is_not_claim_or_core_of_ROOT = yes }
+						transfer_state_to = CRO
+					}
+				}
+			}
+			set_temp_variable = { tag_to_release = CRO }
+			puppet_released_tag = yes
+			CRO = {
+				set_cosmetic_tag = CRO_mises_puppet
+				set_politics = { ruling_party = conservatism }
+				load_oob = "CRO_mises"
+			}
+			recheck_annexations = yes
+		}
+	}	
+	AUS_mises_BOS_puppet = {
+		icon = decision_generic_nationalism
+		available = { hidden_trigger = { always = no } }
+		fire_only_once = yes
+		activation = {
+			has_completed_focus = AUS_open_for_business
+			921 = { is_owned_by_ROOT_or_ai_ally = yes }
+		}
+		is_good = yes
+		days_mission_timeout = 14
+		timeout_effect = {
+			hidden_effect = {
+				add_to_temp_array = { core_removal_array = BOS }
+				remove_all_cores_and_claims_of_tags = yes
+				every_state = {
+					limit = {
+						OR = {
+							state = 921 #Sarajevo
+							state = 104 #Banja Luka
+						}
+					}
+					add_core_of = BOS
+					if = {
+						limit = { is_owned_by_ROOT_or_ai_ally = yes is_not_claim_or_core_of_ROOT = yes }
+						transfer_state_to = BOS
+					}
+				}
+			}
+			set_temp_variable = { tag_to_release = BOS }
+			puppet_released_tag = yes
+			BOS = {
+				set_cosmetic_tag = BOS_mises_puppet
+				set_politics = { ruling_party = conservatism }
+				load_oob = "BOS_mises"
+			}
+			recheck_annexations = yes
+		}
+	}
+	AUS_mises_BUL_puppet = {
+		icon = decision_generic_nationalism
+		available = { hidden_trigger = { always = no } }
+		fire_only_once = yes
+		activation = {
+			has_completed_focus = AUS_open_for_business
+			48 = { is_owned_by_ROOT_or_ai_ally = yes }
+		}
+		is_good = yes
+		days_mission_timeout = 14
+		timeout_effect = {
+			hidden_effect = {
+				add_to_temp_array = { core_removal_array = BUL }
+				remove_all_cores_and_claims_of_tags = yes
+				every_state = {
+					limit = {
+						OR = {
+							state = 48 #Sofia
+							state = 212 #Plovdiv
+							state = 211 #Burgas
+							state = 812 #Blagoevgrad
+							state = 1062
+							state = 1064
+							state = 106
+							state = 77
+						}
+					}
+					add_core_of = BUL
+					if = {
+						limit = { is_owned_by_ROOT_or_ai_ally = yes is_not_claim_or_core_of_ROOT = yes }
+						transfer_state_to = BUL
+					}
+				}
+			}
+			set_temp_variable = { tag_to_release = BUL }
+			puppet_released_tag = yes
+			BUL = {
+				set_cosmetic_tag = BUL_mises_puppet
+				set_politics = { ruling_party = right_authoritarianism }
+				load_oob = "BUL_mises"
+			}
+			recheck_annexations = yes
+		}
+	}
+	AUS_mises_ROM_puppet = {
+		icon = decision_generic_nationalism
+		available = { hidden_trigger = { always = no } }
+		fire_only_once = yes
+		activation = {
+			has_completed_focus = AUS_open_for_business
+			46 = { is_owned_by_ROOT_or_ai_ally = yes }
+		}
+		is_good = yes
+		days_mission_timeout = 14
+		timeout_effect = {
+			hidden_effect = {
+				add_to_temp_array = { core_removal_array = ROM }
+				remove_all_cores_and_claims_of_tags = yes
+				every_state = {
+					limit = {
+						OR = {
+							state = 81 #Oltenia
+							state = 46 #Muntenia
+							state = 79
+							state = 78
+							state = 1059
+							state = 766
+							state = 1014
+							state = 80
+							state = 1193
+						}
+					}
+					add_core_of = ROM
+					if = {
+						limit = { is_owned_by_ROOT_or_ai_ally = yes is_not_claim_or_core_of_ROOT = yes }
+						transfer_state_to = ROM
+					}
+				}
+			}
+			set_temp_variable = { tag_to_release = ROM }
+			puppet_released_tag = yes
+			ROM = {
+				set_cosmetic_tag = ROM_mises_puppet
+				promote_character = ROM_alexandru_lapedatu
+				load_oob = "ROM_mises"
+			}
+			recheck_annexations = yes
+		}
+	}
+	AUS_mises_TRS_puppet = {
+		icon = decision_generic_nationalism
+		available = { hidden_trigger = { always = no } }
+		fire_only_once = yes
+		activation = {
+			has_completed_focus = AUS_open_for_business
+			76 = { is_owned_by_ROOT_or_ai_ally = yes }
+		}
+		is_good = yes
+		days_mission_timeout = 14
+		timeout_effect = {
+			hidden_effect = {
+				add_to_temp_array = { core_removal_array = TRS }
+				remove_all_cores_and_claims_of_tags = yes
+				every_state = {
+					limit = {
+						OR = {
+							state = 76
+							state = 1194
+							state = 1195
+							state = 84
+							state = 83
+						}
+					}
+					add_core_of = TRS
+					if = {
+						limit = { is_owned_by_ROOT_or_ai_ally = yes is_not_claim_or_core_of_ROOT = yes }
+						transfer_state_to = TRS
+					}
+				}
+			}
+			set_temp_variable = { tag_to_release = TRS }
+			puppet_released_tag = yes
+			TRS = { set_cosmetic_tag = TRS_mises_puppet }
+		}
+	}
+	AUS_mises_DY1_puppet = {
+		icon = decision_generic_nationalism
+		available = { hidden_trigger = { always = no } }
+		fire_only_once = yes
+		activation = {
+			has_completed_focus = AUS_open_for_business
+			923 = { is_owned_by_ROOT_or_ai_ally = yes }
+		}
+		is_good = yes
+		days_mission_timeout = 14
+		timeout_effect = {
+			hidden_effect = {
+				every_state = {
+					limit = {
+						OR = {
+							state = 923
+							state = 45
+							state = 1035
+							state = 764
+							state = 82
+						}
+					}
+					add_core_of = DY1
+					if = {
+						limit = { is_owned_by_ROOT_or_ai_ally = yes is_not_claim_or_core_of_ROOT = yes }
+						transfer_state_to = DY1
+					}
+				}
+			}
+			set_temp_variable = { tag_to_release = DY1 }
+			puppet_released_tag = yes
+			DY1 = {
+				set_cosmetic_tag = DY1_mises
+				promote_character = DY1_lapp
+				set_politics = {
+					ruling_party = right_authoritarianism
+				}
+			}
+		}
+	}
+	AUS_mises_german_unification = {
+		icon = decision_generic_nationalism
+		available = { hidden_trigger = { always = no } }
+		fire_only_once = yes
+		activation = {
+			has_completed_focus = AUS_open_for_business
+			OR = {
+				64 = { is_owned_by_ROOT_or_ai_ally = yes }
+				GER = { is_subject_of = AUS }
+				RHI = { is_subject_of = AUS }
+				BAV = { is_subject_of = AUS }
+				LOR = { is_subject_of = AUS }
+				LUX = { is_subject_of = AUS }
+			}
+		}
+		is_good = yes
+		days_mission_timeout = 14
+		timeout_effect = {
+			hidden_effect = {
+				every_state = {
+					limit = {
+						is_full_germany = yes
+					}
+					add_core_of = AUS
+				}
+			}
+			if = {
+				limit = { GER = { is_subject_of = AUS } }
+				annex_country = {
+					target = GER
+					transfer_troops = yes
+				}
+			}
+			every_country = {
+				limit = {
+					OR = {
+						tag = BAV
+						tag = RHI
+						tag = LOR
+						tag = LUX
+						tag = PRS
+					}
+					is_subject_of = AUS
+				}
+				hidden_effect = {
+					add_to_temp_array = { core_removal_array = PREV }
+					remove_all_cores_and_claims_of_tags = yes
+				}
+				AUS = {
+					annex_country = {
+						target = PREV
+						transfer_troops = yes
+					}
+				}
+			}
+			set_cosmetic_tag = AUS_mises_confed
+			if = {
+				limit = { CZE = { NOT = { is_subject_of = AUS } } }
+				every_state = {
+					limit = {
+						is_owned_by_ROOT_or_ai_ally = yes
+						is_core_of = CZE
+					}
+					CZE = { transfer_state = PREV }
+				}
+				set_temp_variable = { tag_to_release = CZE }
+				puppet_released_tag = yes
+				CZE = {
+					set_cosmetic_tag = CZE_mises_puppet
+					promote_character = CZE_Karel_Englis
+					load_oob = "CZE_mises"
+				}
+			}
+			if = {
+				limit = { SLV = { NOT = { is_subject_of = AUS } } }
+				SLV = {
+					add_state_core = 102
+					transfer_state = 102
+					AUS = {
+						remove_state_core = 102
+						add_state_claim = 102
+						set_temp_variable = { tag_to_release = SLV }
+						puppet_released_tag = yes
+					}
+					set_cosmetic_tag = SLV_mises_puppet
+					set_politics = {
+						ruling_party = progressivism
+					}
+					promote_character = SLV_drago_marusic
+					load_oob = "SLV_mises"
+				}
+			}
+			recheck_annexations = yes
+		}
+	}
+}

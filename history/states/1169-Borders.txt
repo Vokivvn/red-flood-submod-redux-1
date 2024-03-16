@@ -1,0 +1,19 @@
+state={
+	id=1169
+	name="STATE_1169" # borders
+	manpower = 210224
+	
+	state_category = rural
+
+	history={
+		owner = ENG
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = ENG
+	}
+
+	provinces={
+		9314 11378 
+	}
+}

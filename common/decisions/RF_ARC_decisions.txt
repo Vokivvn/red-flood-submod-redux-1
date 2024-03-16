@@ -1,0 +1,58 @@
+ARC_diplomatic_decisions = {
+	ARC_join_empire = {
+		days_remove = 14
+		ai_will_do = { factor = 100 }
+		icon = GFX_Russian_uni_nationalist
+		fire_only_once = yes
+		visible = {
+			OR = {
+				is_neighbor_of = RUS 
+				is_neighbor_of = SRU
+			}
+			NOT = {
+				OR = {
+					RUS = { has_completed_focus = RUS_liberalization_lead_prosperity }
+					SRU = { has_completed_focus = RUS_novy_kurs }
+				}
+			}
+		}
+		remove_effect = {
+			if = {
+				limit = { country_exists = RUS }
+				if ={
+					limit = { RUS = { is_ai = no } }
+					RUS = { ARC = { PREV_annex_CURRENT_warlord = yes } }
+				}
+				if = {
+                    limit = { ARC = { is_ai = no } }
+					ARC = { RUS = { PREV_annex_CURRENT_warlord = yes } }
+				}
+				if = {
+					limit = {
+						ARC = { is_ai = yes }
+						RUS = { is_ai = yes }
+					}
+					country_event = russia.206
+		        }
+			}
+			else = {
+				if = {
+					limit = { SRU = { is_ai = no } }
+					SRU = { ARC = { PREV_annex_CURRENT_warlord = yes } }
+				}
+				if = {
+                    limit = { ARC = { is_ai = no } }
+					ARC = { SRU = { PREV_annex_CURRENT_warlord = yes } }
+				}
+				if = {
+					limit = {
+						ARC = { is_ai = yes }
+						SRU = { is_ai = yes }
+					}
+					country_event = russia.207
+		        }
+			}
+		}
+	}
+
+}

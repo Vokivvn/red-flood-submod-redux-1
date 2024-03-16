@@ -1,0 +1,14 @@
+characters = {
+	GRI_georgios_kondylis = {
+		name = "Georgios Kondylis"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/GRE/Portrait_Georgios_Kondylis.png"
+			}
+		}
+		country_leader = {
+			ideology = military_dictatorship
+			expire = "1965.1.1.1"
+		}
+	}
+}

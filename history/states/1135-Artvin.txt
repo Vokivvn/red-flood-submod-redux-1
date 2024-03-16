@@ -1,0 +1,26 @@
+state={
+	id = 1135
+	name = "STATE_1135"
+	manpower = 231129
+
+	state_category = rural
+
+	history={
+		owner = ARM
+
+		buildings = {
+			infrastructure = 2
+			11753 = {
+				naval_base = 1
+			}
+		}
+		add_core_of = ARM
+		add_claim_by = TUR
+		add_core_of = KAV
+		add_core_of = MAR
+	}
+
+	provinces={
+		789 10403 11753 7454
+	}
+}

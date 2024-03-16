@@ -1,0 +1,52 @@
+ideas = {
+	country = {
+		TUC_great_game = {
+			removal_cost = -1
+			picture = TUC_game
+			allowed = {
+				original_tag = TUC
+			}
+			modifier= {
+				war_support_factor = 0.1
+				army_morale_factor = -0.05
+			}
+		}
+		TUC_raj = {
+			removal_cost = -1
+			picture = TUC_raj
+			allowed = {
+				original_tag = TUC
+			}
+			modifier= {
+				stability_factor = 0.05
+				political_power_gain = -0.05
+				acclimatization_hot_climate_gain_factor = 0.1
+			}
+		}
+		TUC_oil = {
+			removal_cost = -1
+			picture = KAV_council_reforms
+			allowed = {
+				original_tag = TUC
+			}
+			modifier= {
+				fuel_gain_factor = 0.2
+				production_oil_factor = 0.1
+			}
+		}
+	}
+	hidden_ideas = {
+		TUC_hiddenbuff = {
+			removal_cost = -1
+			allowed = {
+				original_tag = TUK
+			}
+			modifier = {
+				army_attack_factor = 0.1
+				army_defence_factor = 0.05
+				production_speed_buildings_factor = 0.1
+				supply_consumption_factor = -0.1
+			}
+		}
+	}
+}

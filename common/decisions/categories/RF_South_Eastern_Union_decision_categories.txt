@@ -1,0 +1,10 @@
+DKB_diplomatic_decisions = {
+	icon = GFX_Russian_uni_nationalist
+	allowed = {
+		original_tag = DKB
+	}
+	priority = 200
+	visible = {
+		is_subject = no
+	}
+}

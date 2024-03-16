@@ -1,0 +1,13 @@
+﻿units = { #We need to review this - the IJN woukd have Some Questions about puppet naval power, and also has no squadron in the region 
+
+	##### NAVAL UNITS #####
+	fleet = {
+		name = "Mai Lao Bang"
+		naval_base = 13359
+		task_force = {				
+			name = "Mai Lao Bang"				
+			location =  13359
+			ship = { name = "Mai Lao Bang" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = JAP version_name = "Tran Hung Dao Class" } } }			
+		}				
+	}
+}

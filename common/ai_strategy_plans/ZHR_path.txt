@@ -1,0 +1,41 @@
+Zheltorossyia_path = {
+	name = "ZHR"
+	desc = "Placeholder"
+	enable = {
+		original_tag = ZHR
+	}
+	ai_national_focuses = {
+		ZHR_adawninyellowrussia
+		ZHR_troublingreports
+		ZHR_thefamineofzheltorossiya
+		ZHR_inthewest
+		ZHR_intheeast
+		ZHR_inthecentralareas
+		ZHR_ultimatumofthesupremezheltorossiyasoviet
+		ZHR_kerenskyprevails
+		ZHR_kerenskyresigns
+		ZHR_thesoldiersstepin
+		ZHR_popularstate
+		ZHR_thefreedombloc
+		ZHR_comradetrotsky
+		ZHR_theherowedeserve
+		ZHR_endthefamine
+		ZHR_permanentrevolution
+		ZHR_peoples_will
+		ZHR_naturesubmitstothefiveyearplan
+		ZHR_everyoneforthemselves	
+		ZHR_realm_of_socialism
+		ZHR_the_sun_rises_bright
+		ZHR_long_live_the_republic_of_labour
+		ZHR_long_live_the_republic_of_councils
+		ZHR_creators_of_god
+		ZHR_amidthenations
+		ZHR_liberationofthemotherland
+		ZHR_yakutiaswitchingsides
+		ZHR_assassinatethesiberiangeneralgovernor
+		ZHR_returntocentralasia
+		ZHR_desertcampaign
+		ZHR_offensiveonmoscow
+		ZHR_youngrussiahailvictorious
+	}
+}

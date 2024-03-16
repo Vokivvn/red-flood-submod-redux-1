@@ -1,0 +1,31 @@
+
+state={
+	id=1202
+	name="STATE_1202"
+	state_category = town
+	history={
+		owner = ZHR
+		add_core_of = ZHR
+		victory_points={
+			4809 5
+		}
+		victory_points={
+			10541 3
+		}
+		victory_points={
+			7832 3
+		}
+		buildings = {
+			infrastructure = 2
+			arms_factory = 1
+			industrial_complex = 1
+			air_base = 5
+		}
+	}
+	provinces={
+		4809 7832 7848 7873 10541 10675 12537 
+	}
+	manpower=2206069
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

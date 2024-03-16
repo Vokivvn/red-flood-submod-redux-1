@@ -1,0 +1,16 @@
+characters={
+	WYO_smedley_butler={
+		name="Smedley Butler"
+		portraits={
+			civilian={
+				large="gfx/leaders/WYO/Portrait_Smedley_Butler.png"
+			}
+		}
+		country_leader={
+			ideology=praetorian_oligarchy
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	
+}

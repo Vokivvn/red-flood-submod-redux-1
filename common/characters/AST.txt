@@ -1,0 +1,154 @@
+characters = {
+	AST_joseph_lyons = {
+		name = "Joseph Lyons"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/AST/Portrait_AST_Joseph_Lyons.png"
+			}
+		}
+		country_leader = {
+			ideology = social_liberalism
+			expire = "1965.1.1.1"
+		}
+	}
+	AST_thomas_joseph_ryan = {
+		name = "Thomas Joseph Ryan"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/AST/Portrait_AST_Thomas_Joseph_Ryan.png"
+			}
+		}
+		country_leader = {
+			ideology = progressive_democracy
+			expire = "1965.1.1.1"
+		}
+	}
+	AST_thomas_blamey = {
+		name = "Thomas Blamey"
+		portraits = {
+			army = {
+				large="gfx/leaders/AST/Portrait_AST_Thomas_Blamey.png"
+			}
+		}
+		field_marshal = {
+			traits = { politically_connected career_officer organisational_leader}
+			skill = 3
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 4
+			logistics_skill = 3
+		}
+	}
+	AST_horace_robertson = {
+		name = "Horace Robertson"
+		portraits = {
+			army = {
+				large="gfx/leaders/AST/Portrait_AST_Horace_Robertson.png"
+			}
+		}
+		field_marshal = {
+			traits = { war_hero offensive_doctrine}
+			skill = 3
+			attack_skill = 4
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 3
+		}
+	}
+	AST_brudenell_white = {
+		name = "Brudenell White"
+		portraits = {
+			army = {
+				large="gfx/leaders/AST/Portrait_AST_Brudenell_White.png"
+			}
+		}
+		field_marshal = {
+			traits = { old_guard fast_planner }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 4
+			planning_skill = 5
+			logistics_skill = 2
+		}
+	}
+	AST_john_northcott = {
+		name = "John Northcott"
+		portraits = {
+			army = {
+				large="gfx/leaders/AST/Portrait_AST_John_Northcott.png"
+			}
+		}
+		corps_commander = {
+			traits = { career_officer panzer_leader }
+			skill = 3
+			attack_skill = 4
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 2
+		}
+	}
+	AST_vernon_sturdee = {
+		name = "Vernon Sturdee"
+		portraits = {
+			army = {
+				large="gfx/leaders/AST/Portrait_AST_Vernon_Sturdee.png"
+			}
+		}
+		corps_commander = {
+			traits = { trait_cautious infantry_leader }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 4
+			planning_skill = 2
+			logistics_skill = 3
+		}
+	}
+	AST_lesie_morshead = {
+		name = "Leslie Morshead"
+		portraits = {
+			army = {
+				large="gfx/leaders/AST/Portrait_AST_Leslie_Morshead.png"
+			}
+		}
+		corps_commander = {
+			traits = { harsh_leader infantry_leader desert_fox }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 4
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	AST_iven_mackay = {
+		name = "Iven Mackay"
+		portraits = {
+			army = {
+				large="gfx/leaders/AST/Portrait_AST_Iven_Mackay.png"
+			}
+		}
+		corps_commander = {
+			traits = { war_hero infantry_leader }
+			skill = 2
+			attack_skill = 3
+			defense_skill = 4
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	AST_john_whitham = {
+		name = "John Whitham"
+		portraits = {
+			army = {
+				large="gfx/leaders/AST/Portrait_AST_John_Whitham.png"
+			}
+		}
+		corps_commander = {
+			traits = { jungle_rat }
+			skill = 1
+			attack_skill = 4
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+}

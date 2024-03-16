@@ -1,0 +1,23 @@
+state = {
+	id=1180
+	name="STATE_1180"
+	manpower = 350230
+	
+	state_category = town
+	
+	resources = {
+
+	}
+
+	history = {
+		owner = ENG
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = ENG
+	}
+
+	provinces=	{
+		6363 9364
+	}
+}

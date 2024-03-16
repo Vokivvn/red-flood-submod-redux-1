@@ -1,0 +1,14 @@
+characters = {
+	PHI_Manuel_Quezon = {
+		name = "Manuel L. Quezon"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/PHI/Portrait_PHI_Manuel_Quezon.png"
+			}
+		}
+		country_leader = {
+			ideology = oligarchy
+			expire = "1965.1.1.1"
+		}
+	}
+}

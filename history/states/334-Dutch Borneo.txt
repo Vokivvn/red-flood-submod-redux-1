@@ -1,0 +1,20 @@
+state= {
+	id=334
+	name="STATE_334"
+	manpower = 169800
+
+	impassable = yes
+
+	state_category = wasteland
+
+	history= {
+		owner = DEI
+		add_core_of = DEI
+		buildings = {
+			infrastructure = 1
+		}
+	}
+	provinces={
+		2047 5226 2222 7424 2170
+	}
+}

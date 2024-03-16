@@ -1,0 +1,1277 @@
+###########################
+# Israel Events
+###########################
+
+add_namespace = ISR
+add_namespace = israel_border_conflict
+
+country_event = {	#placeholder
+	id = israel_border_conflict.1
+	title = israel_border_conflict.1.t
+	desc = israel_border_conflict.1.desc
+	#picture = GFX_report_event_thecat
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = israel_border_conflict.1.a
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_1
+				amount = 2000
+				producer = SYR
+			}
+	}
+}
+country_event = {	#ISR loses
+	id = israel_border_conflict.2
+	title = israel_border_conflict.2.t
+	desc = israel_border_conflict.2.desc
+	#picture = GFX_report_event_thecat
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = israel_border_conflict.2.a
+		add_political_power = -50
+		add_war_support = -0.05
+		add_stability = -0.05
+	}
+}
+country_event = {	#Cancelled/Stalemate
+	id = israel_border_conflict.3
+	title = israel_border_conflict.3.t
+	desc = israel_border_conflict.3.desc
+	#picture = GFX_report_event_thecat
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = israel_border_conflict.2.a
+		add_political_power = -30
+	}
+}
+country_event = {	#Gurion Wins - Sinai
+	id = israel_border_conflict.4
+	title = israel_border_conflict.4.t
+	desc = israel_border_conflict.4.desc
+	#picture = GFX_report_event_thecat
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = israel_border_conflict.4.a
+		add_political_power = 50
+		transfer_state = 453
+	}
+}
+country_event = {	#Gurion Wins - Suez
+	id = israel_border_conflict.5
+	title = israel_border_conflict.5.t
+	desc = israel_border_conflict.5.desc
+	#picture = GFX_report_event_thecat
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = israel_border_conflict.5.a
+		add_political_power = 50
+		transfer_state = 800
+		800 = {
+			add_core_of = ISR
+		}
+	}
+}
+country_event = {	#Gurion Wins - Bully Egypt
+	id = israel_border_conflict.6
+	title = israel_border_conflict.6.t
+	desc = israel_border_conflict.6.desc
+	#picture = GFX_report_event_thecat
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = israel_border_conflict.6.a
+		ISR = {
+			add_political_power = 50
+		}
+		ENG = {
+			end_puppet = EGY
+		}
+		EGY = {
+			leave_faction = yes
+			add_stability = -0.1
+			add_political_power = -50
+		}		
+	}
+}
+country_event = {	#Gurion Loses - Egypt
+	id = israel_border_conflict.7
+	title = israel_border_conflict.7.t
+	desc = israel_border_conflict.7.desc
+	#picture = GFX_report_event_thecat
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = israel_border_conflict.7.a
+		800 = {
+			set_demilitarized_zone = yes
+		}
+		
+	}
+}
+country_event = {	#Jabo Wins - Golan
+	id = israel_border_conflict.8
+	title = israel_border_conflict.8.t
+	desc = israel_border_conflict.8.desc
+	#picture = GFX_report_event_thecat
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = israel_border_conflict.8.a
+		add_political_power = 50
+		transfer_state = 1092
+	}
+}
+country_event = {	#Jabo Wins - Jordan
+	id = israel_border_conflict.9
+	title = israel_border_conflict.9.t
+	desc = israel_border_conflict.9.desc
+	#picture = GFX_report_event_thecat
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = israel_border_conflict.9.a
+		add_political_power = 50
+		transfer_state = 455
+		transfer_state = 1089
+		1091 = {
+			add_core_of = DRZ
+			transfer_state_to = DRZ
+		}
+	}
+}
+
+#################
+##### ISRAEL ####
+#################
+#victory
+country_event = {
+	id = ISR.victory
+	title = ISR.victory.t
+	desc = ISR.victory.desc
+	picture = GFX_ISR_flag_raise
+	fire_only_once = yes
+	
+    trigger = {
+		tag = ISR
+		NOT = {
+			ISR = {
+				has_country_flag = ISR_independence_secured
+			}
+		}
+		OR = {
+			ISR = {
+				has_war_with = SYR
+				controls_state = 455
+				controls_state = 1003
+				controls_state = 1004
+			}
+			ISR = {
+				has_war_with = SNP
+				controls_state = 455
+				controls_state = 1003
+				controls_state = 1004
+			}
+			ISR = {
+				has_war_with = CCD
+				controls_state = 455
+				controls_state = 1003
+				controls_state = 1004
+			}
+		}
+    }
+
+	immediate = {
+		hidden_effect = {
+			ISR = {
+				if = {
+					limit = {
+						has_war_with = SYR
+					}
+					white_peace = {
+						tag = SYR
+						message = ISR_syria_peace_tt
+					}
+				}
+				if = {
+					limit = {
+						has_war_with = SNP
+					}
+					white_peace = {
+						tag = SNP
+						message = ISR_syria_peace_tt
+					}
+				}
+				if = {
+					limit = {
+						has_war_with = CCD
+					}
+					white_peace = {
+						tag = CCD
+						message = ISR_syria_peace_tt
+					}
+				}
+				set_state_owner = 454
+				set_state_controller = 454
+				set_state_owner = 1004
+				set_state_controller = 1004
+				set_country_flag = ISR_independence_secured
+				remove_ideas = SYR_syrian_circlejerk_war
+			}
+			news_event = {
+				id = news.352
+			}
+			set_global_flag = syr_first_syrian_peace
+			1004 = {
+				remove_core_of = SYR
+				remove_core_of = SNP
+				remove_core_of = CCD
+				set_state_name = ISR_event_ISR_victory_state_1004
+			}
+			454 = {
+				remove_core_of = SYR
+				remove_core_of = SNP
+				remove_core_of = CCD
+			}
+			455 = {
+				owner = {
+					add_state_claim = 1004
+					add_state_claim = 454
+				}
+			}
+		}
+	}
+	option = {
+		name = ISR.victory.a
+	}
+}
+#stern rule
+country_event = { 
+	id = ISR.1
+	title = ISR.1.t
+	desc = ISR.1.desc
+	#picture = 
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = ISR.1.a
+		add_stability = -0.03
+		add_political_power = 10
+		drop_cosmetic_tag = yes
+		set_politics = {
+			ruling_party = accelerationism
+			elections_allowed = no
+		}
+	}
+
+}
+#first elections
+country_event = { 
+	id = ISR.2
+	title = ISR.2.t
+	desc = ISR.2.desc
+	#picture = 
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = ISR.2.a
+		ai_chance = {
+			factor = 4
+		}
+		drop_cosmetic_tag = yes
+		set_politics = {
+			ruling_party = progressivism
+		}
+		set_country_flag = soc_dems_are_socialists
+		add_stability = 0.03
+		add_political_power = -10
+	}
+	option = {
+		name = ISR.2.b
+		ai_chance = {
+			factor = 4
+		}
+		drop_cosmetic_tag = yes
+		set_politics = {
+			ruling_party = right_authoritarianism
+		}
+		add_stability = 0.03
+		add_political_power = -10
+	}
+	option = {
+		name = ISR.2.c
+		drop_cosmetic_tag = yes
+		set_politics = {
+			ruling_party = popular_socialism
+		}
+		add_stability = 0.03
+		add_political_power = -10
+		country_event = {
+			id = ISR.201
+		}
+	}
+
+}
+country_event = { 
+	id = ISR.201
+	title = ISR.201.t
+	desc = ISR.201.desc
+	#picture = 
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = ISR.201.a
+		
+	}
+
+}
+#the split
+country_event = { 
+	id = ISR.5
+	title = ISR.5.t
+	desc = ISR.5.desc
+	#picture = 
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = ISR.5.a
+		add_popularity = {
+			ideology = accelerationism
+			popularity = -0.05
+		}
+		add_political_power = 5
+		set_country_flag = ISR_democracy_path
+		ISR_avraham_stern = {
+			remove_unit_leader_role = yes
+		}
+		
+	}
+	option = {
+		name = ISR.5.b
+		add_popularity = {
+			ideology = accelerationism
+			popularity = 0.05
+		}
+		add_political_power = 5
+		set_country_flag = ISR_lehi_path
+	}
+
+}
+#ask Krauts for aid
+country_event = {
+	id = ISR.6
+	title = ISR.6.t
+	desc = ISR.6.desc
+	#picture = 
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = ISR.6.a
+		ai_chance = {
+			factor = 5
+		}
+		ISR = {
+			country_event = {
+				id = ISR.61
+			}
+		}
+	}
+	option = {
+		name = ISR.6.b
+		ai_chance = {
+			factor = 1
+		}
+		ISR = {
+			country_event = {
+				id = ISR.62
+			}
+		}
+	}
+}
+country_event = { 
+	id = ISR.61
+	title = ISR.61.t
+	desc = ISR.61.desc
+	#picture = 
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = ISR.61.a
+		
+	}
+	
+}
+country_event = { 
+	id = ISR.62
+	title = ISR.62.t
+	desc = ISR.62.desc
+	#picture = 
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = ISR.62.a
+		
+	}
+	
+}
+#ask red Iran to faction
+country_event = { 
+	id = ISR.7
+	title = ISR.7.t
+	desc = ISR.7.desc
+	#picture = 
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = ISR.7.a
+		ai_chance = {
+			factor = 5
+		}
+		ISR = {
+			country_event = {
+				id = ISR.71
+			}
+		}
+	}
+	option = {
+		name = ISR.7.b
+		ai_chance = {
+			factor = 1
+		}
+		ISR = {
+			country_event = {
+				id = ISR.72
+			}
+		}
+	}
+}
+country_event = { 
+	id = ISR.71
+	title = ISR.71.t
+	desc = ISR.71.desc
+	#picture = 
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = ISR.71.a
+		ISR = { add_to_faction = RPR }
+	}
+	
+}
+country_event = { 
+	id = ISR.72
+	title = ISR.72.t
+	desc = ISR.72.desc
+	#picture = 
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = ISR.72.a
+		add_political_power = -5
+	}
+	
+}
+#ask Germany for Int'l membership
+country_event = { 
+	id = ISR.8
+	title = ISR.8.t
+	desc = ISR.8.desc
+	#picture = 
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = ISR.8.a
+		ai_chance = {
+			factor = 5
+		}
+		ISR = {
+			country_event = {
+				id = ISR.81
+			}
+		}
+		add_opinion_modifier = {
+			target = ISR
+			modifier = aided_cause
+		}
+		ISR = {
+			add_opinion_modifier = {
+				target = GER
+				modifier = aided_cause
+			}
+		}
+	}
+	option = {
+		name = ISR.8.b
+		ai_chance = {
+			factor = 1
+		}
+		ISR = {
+			country_event = {
+				id = ISR.82
+			}
+		}
+		add_opinion_modifier = {
+			target = ISR
+			modifier = refused_help
+		}
+		ISR = {
+			add_opinion_modifier = {
+				target = GER
+				modifier = refused_help
+			}
+		}
+	}
+}
+country_event = { 
+	id = ISR.81
+	title = ISR.81.t
+	desc = ISR.81.desc
+	#picture = 
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = ISR.81.a
+		ai_chance = {
+			factor = 1
+		}
+		GER = {
+			send_equipment = {
+				type = infantry_equipment
+				amount = 2500
+				target = ISR
+			}
+		}
+		add_tech_bonus = {
+			bonus = 0.5
+			uses = 2
+			category = armor
+		}
+		add_tech_bonus = {
+			bonus = 0.5
+			uses = 2
+			category = air_equipment
+		}
+		set_country_flag = warschauer_vertrag
+		wp_add_member = yes
+	}
+	
+}
+country_event = { 
+	id = ISR.82
+	title = ISR.82.t
+	desc = ISR.82.desc
+	#picture = 
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = ISR.82.a
+		ai_chance = {
+			factor = 1
+		}
+		add_political_power = -5
+	}
+	
+}
+#ask France for aid
+country_event = { 
+	id = ISR.9
+	title = ISR.9.t
+	desc = ISR.9.desc
+	#picture = 
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = ISR.9.a
+		ai_chance = {
+			factor = 4
+		}
+		ISR = {
+			country_event = {
+				id = ISR.91
+			}
+		}
+		add_opinion_modifier = {
+			target = ISR
+			modifier = aided_cause
+		}
+		ISR = {
+			add_opinion_modifier = {
+				target = POL
+				modifier = aided_cause
+			}
+		}
+	}
+	option = {
+		name = ISR.9.b
+		ai_chance = {
+			factor = 1
+		}
+		ISR = {
+			country_event = {
+				id = ISR.92
+			}
+		}
+		add_opinion_modifier = {
+			target = ISR
+			modifier = refused_help
+		}
+		ISR = {
+			add_opinion_modifier = {
+				target = POL
+				modifier = refused_help
+			}
+		}
+	}
+}
+country_event = { 
+	id = ISR.91
+	title = ISR.91.t
+	desc = ISR.91.desc
+	#picture = 
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = ISR.91.a
+		ai_chance = { factor = 1 }
+		POL = {
+			send_equipment = {
+				type = infantry_equipment
+				amount = 2500
+				target = ISR
+			}
+		}
+		add_ideas = POL_intermarium_observer
+		add_tech_bonus = {
+			bonus = 0.5
+			uses = 2
+			category = armor
+		}
+		add_tech_bonus = {
+			bonus = 0.5
+			uses = 2
+			category = air_equipment
+		}
+		add_offsite_building = { type = industrial_complex level = 2 }
+	}
+}
+country_event = { 
+	id = ISR.92
+	title = ISR.92.t
+	desc = ISR.92.desc
+	#picture = 
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = ISR.92.a
+		ai_chance = { factor = 1 }
+		add_political_power = -5
+	}
+}
+
+#Event to add spirit for Streamline The Education
+country_event = { 
+	id = ISR.11
+	title = ISR.11.t
+	desc = ISR.11.desc
+	#picture = 
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = ISR.11.a
+		ISR = {
+			add_ideas = {
+				ISR_revised_education
+			}
+		}
+	}
+}
+
+#Contacts in Liberia
+country_event = { 
+	id = ISR.10
+	title = ISR.10.t
+	desc = ISR.10.desc
+	#picture = 
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = ISR.10.a
+		ai_chance = {
+			factor = 1
+		}
+		ISR = {
+			country_event = {
+				id = ISR.101
+			}
+		}
+		
+	}
+	option = {
+		name = ISR.10.b
+		ai_chance = {
+			factor = 1
+		}
+		ISR = {
+			country_event = {
+				id = ISR.102
+			}
+		}
+		
+	}
+}
+country_event = { 
+	id = ISR.101
+	title = ISR.101.t
+	desc = ISR.101.desc
+	#picture = 
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = ISR.101.a
+		ISR = {
+			diplomatic_relation = {
+				country = LIB
+				relation = non_aggression_pact
+				active = yes
+			}
+			add_opinion_modifier = {
+				target = LIB
+				modifier = offered_support
+			}
+		}
+		LIB = {
+			add_opinion_modifier = {
+				target = ISR
+				modifier = offered_support
+			}
+		}
+		298 = {
+			add_extra_state_shared_building_slots = 1
+		}
+		454 = {
+			add_extra_state_shared_building_slots = 1
+		}
+	}
+	
+}
+country_event = { 
+	id = ISR.102
+	title = ISR.102.t
+	desc = ISR.102.desc
+	#picture = 
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = ISR.102.a
+		add_political_power = -5
+	}
+}
+
+#Join Commonwealth?
+country_event = { 
+	id = ISR.12
+	title = ISR.12.t
+	desc = ISR.12.desc
+	#picture = 
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = ISR.12.a
+		ISR = {
+			country_event = {
+				id = ISR.121
+			}
+		}
+	}
+	option = {
+		name = ISR.12.b
+		ISR = {
+			country_event = {
+				id = ISR.122
+			}
+		}
+	}
+}
+country_event = { 
+	id = ISR.121
+	title = ISR.121.t
+	desc = ISR.121.desc
+	#picture = 
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = ISR.121.a
+		ENG = { add_to_faction = ISR }
+	}
+	
+}
+country_event = { 
+	id = ISR.122
+	title = ISR.122.t
+	desc = ISR.122.desc
+	#picture = 
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = ISR.122.a
+		add_political_power = -5
+	}
+}
+#############
+#	RETVRN	#
+#############
+country_event = { #1
+	id = ISR.13
+	title = ISR.13.t
+	desc = ISR.13.desc
+	#picture = 
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = ISR.13.a
+		
+	}
+}
+country_event = { #FRA
+	id = ISR.14
+	title = ISR.14.t
+	desc = ISR.14.desc
+	#picture = 
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = ISR.14.a
+		
+	}
+}
+country_event = { #GER
+	id = ISR.15
+	title = ISR.15.t
+	desc = ISR.15.desc
+	#picture = 
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = ISR.15.a
+		
+	}
+}
+country_event = { #RUS
+	id = ISR.16
+	title = ISR.16.t
+	desc = ISR.16.desc
+	#picture = 
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = ISR.16.a
+		
+	}
+}
+country_event = { #POL
+	id = ISR.17
+	title = ISR.17.t
+	desc = ISR.17.desc
+	#picture = 
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = ISR.17.a
+		
+	}
+}
+country_event = { #USA
+	id = ISR.18
+	title = ISR.18.t
+	desc = ISR.18.desc
+	#picture = 
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = ISR.18.a
+		
+	}
+}
+country_event = { #YEM
+	id = ISR.19
+	title = ISR.19.t
+	desc = ISR.19.desc
+	#picture = 
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = ISR.19.a
+		
+	}
+}
+country_event = { #ETH
+	id = ISR.20
+	title = ISR.20.t
+	desc = ISR.20.desc
+	#picture = 
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = ISR.20.a
+		
+	}
+}
+
+#negotiate the sinai
+country_event = { #sinai
+	id = ISR.21
+	title = ISR.21.t
+	desc = ISR.21.desc
+	#picture = 
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {	#yes
+		name = ISR.21.a
+		ISR = {
+			country_event = {
+				id = ISR.211
+			}
+		}
+	}
+	option = {	#no
+		name = ISR.21.b
+		ISR = {
+			country_event = {
+				id = ISR.212
+			}
+		}
+	}
+}
+country_event = { #sinai
+	id = ISR.211
+	title = ISR.211.t
+	desc = ISR.211.desc
+	#picture = 
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {	#
+		name = ISR.211.a
+		ISR = {
+			transfer_state = 453
+		}
+		453 = {
+			add_core_of = ISR
+		}
+	}
+}
+country_event = { #sinai
+	id = ISR.212
+	title = ISR.212.t
+	desc = ISR.212.desc
+	#picture = 
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {	#
+		name = ISR.212.a
+		
+	}
+}
+
+country_event = { #cohen
+	id = ISR.22
+	title = ISR.22.t
+	desc = ISR.22.desc
+	#picture = 
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {	#
+		name = ISR.22.a
+		add_manpower = 21
+	}
+}
+
+#ask Alawites to faction
+country_event = { 
+	id = ISR.23
+	title = ISR.23.t
+	desc = ISR.23.desc
+	#picture = 
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = ISR.23.a
+		ai_chance = {
+			factor = 100
+		}
+		ISR = {
+			country_event = {
+				id = ISR.231
+			}
+		}
+	}
+	option = {
+		name = ISR.23.b
+		ai_chance = {
+			factor = 1
+		}
+		ISR = {
+			country_event = {
+				id = ISR.232
+			}
+		}
+	}
+}
+country_event = { 
+	id = ISR.231
+	title = ISR.231.t
+	desc = ISR.231.desc
+	#picture = 
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = ISR.231.a
+		ISR = { add_to_faction = ALW }
+	}
+	
+}
+country_event = { 
+	id = ISR.232
+	title = ISR.232.t
+	desc = ISR.232.desc
+	#picture = 
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = ISR.232.a
+		add_political_power = -5
+	}
+}
+#ask Alexandretta to faction
+country_event = { 
+	id = ISR.24
+	title = ISR.24.t
+	desc = ISR.24.desc
+	#picture = 
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = ISR.24.a
+		ai_chance = {
+			factor = 0
+		}
+		ISR = {
+			country_event = {
+				id = ISR.241
+			}
+		}
+	}
+	option = {
+		name = ISR.24.b
+		ai_chance = {
+			factor = 100
+		}
+		ISR = {
+			country_event = {
+				id = ISR.242
+			}
+		}
+	}
+}
+country_event = { 
+	id = ISR.241
+	title = ISR.241.t
+	desc = ISR.241.desc
+	#picture = 
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = ISR.241.a
+		ISR = { add_to_faction = CCD }
+	}
+	
+}
+country_event = { 
+	id = ISR.242
+	title = ISR.242.t
+	desc = ISR.242.desc
+	#picture = 
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = ISR.242.a
+		add_political_power = -5
+	}
+}
+#ask Armenia to faction
+country_event = { 
+	id = ISR.25
+	title = ISR.25.t
+	desc = ISR.25.desc
+	#picture = 
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = ISR.25.a
+		ai_chance = {
+			factor = 15
+		}
+		ISR = {
+			country_event = {
+				id = ISR.251
+			}
+		}
+	}
+	option = {
+		name = ISR.25.b
+		ai_chance = {
+			factor = 1
+		}
+		ISR = {
+			country_event = {
+				id = ISR.252
+			}
+		}
+	}
+}
+country_event = { 
+	id = ISR.251
+	title = ISR.251.t
+	desc = ISR.251.desc
+	#picture = 
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = ISR.251.a
+		ISR = { add_to_faction = ARM }
+	}
+	
+}
+country_event = { 
+	id = ISR.252
+	title = ISR.252.t
+	desc = ISR.252.desc
+	#picture = 
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = ISR.252.a
+		add_political_power = -5
+	}
+}
+
+country_event = {
+	id = ISR.990
+	title = ISR.990.t
+	desc = ISR.990.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = ISR.990.a
+		ai_chance = {
+			base = ISR.SUEZSEIZURE
+		}
+		ISR = {
+			transfer_state = 800
+			country_event = {
+				id = ISR.991
+			}
+		}
+	}
+	option = {
+		name = ISR.990.b
+		ai_chance = {
+			base = ISR.SUEZNONSEIZURE
+		}
+		ISR = {
+			country_event = {
+				id = ISR.992
+			}
+		}
+	}
+}
+
+country_event = {
+	id = ISR.991
+	title = ISR.991.t
+	desc = ISR.991.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = ISR.991.a
+		add_political_power = 50
+	}
+}
+
+country_event = {
+	id = ISR.992
+	title = ISR.992.t
+	desc = ISR.992.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = ISR.992.a
+		add_political_power = -25
+	}
+}
+
+country_event = {
+	id = ISR.2000
+	title = ISR.2000.t
+	desc = ISR.2000.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = ISR.2000.a
+	}
+}

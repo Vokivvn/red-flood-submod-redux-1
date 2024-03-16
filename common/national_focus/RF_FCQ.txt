@@ -1,0 +1,666 @@
+focus_tree = {
+	id = FCQ
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = FCQ
+		}
+	}
+	continuous_focus_position = { x = 50 y = 1500 }
+	#Focus for Negotiations with the Natives
+	focus = {
+		id = FCQ_negotiations_with_the_natives
+		icon = GFX_FCQ_negotiations_with_the_natives-20794
+		x = 7
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FCQ_direction_west }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_war = no
+		}
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = ASS
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = CRA
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = CUI
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = AMP
+			}
+		}
+	}
+
+	#Focus for Fix the Errors of 1889
+	focus = {
+		id = FCQ_fix_the_errors_of_1889
+		icon = GFX_FCQ_fix_the_errors_of_1889-20777
+		x = 12
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FCQ_destroy_oligarchic_elements }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_timed_idea = {
+				idea = FCQ_fixing
+				days = 100
+			}
+		}
+	}
+
+	#Focus for For the Common Man
+	focus = {
+		id = FCQ_for_the_common_man
+		icon = GFX_FCQ_for_the_common_man-20778
+		x = 10
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FCQ_destroy_oligarchic_elements }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = FCQ_common_man
+		}
+	}
+
+	#Focus for Industrialize the Maranhão Area
+	focus = {
+		id = FCQ_industrialize_the_maranho_area
+		icon = GFX_FCQ_industrialize_the_maranho_area-20780
+		x = 7
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FCQ_industrialize_the_par_area }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			1032 = {
+				if = {
+					limit = {
+						free_building_slots = {
+							building = industrial_complex size > 0
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+
+	#Focus for Fazendeiros em Nescessidade Program
+	focus = {
+		id = FCQ_fazendeiros_em_nescessidade_program
+		icon = GFX_FCQ_fazendeiros_em_nescessidade_program-20781
+		x = 13
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FCQ_fix_the_errors_of_1889 }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = FCQ_fazendeiros
+		}
+	}
+
+	#Focus for Purge Remaining Communists
+	focus = {
+		id = FCQ_purge_remaining_communists
+		icon = GFX_FCQ_purge_remaining_communists-20782
+		x = 10
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FCQ_for_the_common_man }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = { 
+			add_popularity = {
+				ideology = vanguard_socialism 
+				popularity = -0.15
+			}
+			add_popularity = {
+				ideology = popular_socialism 
+				popularity = -0.05
+			}
+			add_popularity = {
+				ideology = revisionist_socialism 
+				popularity = -0.05
+			}
+		}
+	}
+
+	#Focus for Create Jobs
+	focus = {
+		id = FCQ_create_jobs
+		icon = GFX_FCQ_create_jobs-20783
+		x = 4
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FCQ_industrialize_the_maranho_area }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Focus for Consumer Industries Expansion
+	focus = {
+		id = FCQ_consumer_industries_expansion
+		icon = GFX_FCQ_consumer_industries_expansion-20785
+		x = 7
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FCQ_industrialize_the_maranho_area }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			1032  = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			497 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Focus for End the enwhitening process
+	focus = {
+		id = FCQ_end_the_enwhitening_process
+		icon = GFX_FCQ_end_the_enwhitening_process-20786
+		x = 16
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FCQ_fazendeiros_em_nescessidade_program }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power = -25
+			add_stability = 0.05
+		}
+	}
+
+	#Focus for Civic Identity
+	focus = {
+		id = FCQ_civic_identity
+		icon = GFX_FCQ_civic_identity-20787
+		x = 16
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FCQ_end_the_enwhitening_process }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_timed_idea = {
+				idea = FCQ_civic_identity
+				days = 180
+			}
+		}
+	}
+
+	#Focus for Army Reforms
+	focus = {
+		id = FCQ_army_reforms
+		icon = GFX_FCQ_army_reforms-20789
+		x = 10
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FCQ_purge_remaining_communists }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = FCQ_latinx_armada
+			every_state = {
+				limit = {
+					OR = {
+						is_core_of = BRA
+						is_core_of = BRR
+					}
+					NOT = {
+						is_core_of = FCQ
+					}
+				}
+				add_core_of = FCQ
+			}
+		}
+	}
+
+	#Focus for Direction West
+	focus = {
+		id = FCQ_direction_west
+		icon = GFX_FCQ_direction_west-20790
+		x = 7
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FCQ_army_reforms }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_war = no
+		}
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = BLM
+			}
+		}
+	}
+
+	#Focus for Direction South
+	focus = {
+		id = FCQ_direction_south
+		icon = GFX_FCQ_direction_south-20792
+		x = 10
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FCQ_army_reforms }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_war = no
+		}
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = GOY
+			}
+		}
+	}
+
+	#Focus for Deal with Manaus
+	focus = {
+		id = FCQ_deal_with_manaus
+		icon = GFX_FCQ_deal_with_manaus-20795
+		x = 7
+		y = 9
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FCQ_negotiations_with_the_natives }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_war = no
+		}
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = MCM
+			}
+		}
+	}
+
+	#Focus for End Lampiãos Tyranny
+	focus = {
+		id = FCQ_end_lampios_tyranny
+		icon = GFX_FCQ_end_lampios_tyranny-20796
+		x = 10
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FCQ_direction_south }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_war = no
+		}
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = NTB
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = MIN
+			}
+		}
+	}
+
+	#Focus for Kill the Oligarchic Lackeys
+	focus = {
+		id = FCQ_kill_the_oligarchic_lackeys
+		icon = GFX_FCQ_kill_the_oligarchic_lackeys-20797
+		x = 10
+		y = 9
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FCQ_end_lampios_tyranny }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_war = no
+		}
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = BRR
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = BRA
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = FAC
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = MOG
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = SAP
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = NEU
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = FLO
+			}
+		}
+	}
+
+	#Focus for Finish the Officer in the Suit
+	focus = {
+		id = FCQ_finish_the_officer_in_the_suit
+		icon = GFX_FCQ_finish_the_officer_in_the_suit-20799
+		x = 13
+		y = 9
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FCQ_end_the_dictator }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_war = no
+		}
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = GCC
+			}
+		}
+	}
+
+	#Focus for The New Republic, Born from Fire
+	focus = {
+		id = FCQ_the_new_republic_born_from_fire
+		icon = GFX_FCQ_the_new_republic_born_from_fire-20800
+		x = 10
+		y = 10
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = FCQ_kill_the_oligarchic_lackeys 
+		}
+		prerequisite = { 
+			focus = FCQ_finish_the_officer_in_the_suit 
+		}
+		prerequisite = { 
+			focus = FCQ_deal_with_manaus 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = { 
+			is_subject = no
+			owns_state = 495
+			owns_state = 500
+			owns_state = 1024
+			owns_state = 498
+		}
+		completion_reward = {
+			set_politics = {
+				ruling_party = conservatism
+				elections_allowed = no
+			}
+			add_popularity = { 
+				ideology = conservatism
+				popularity = 0.6
+			}
+			set_cosmetic_tag = FCQ_brazil
+			set_capital = {
+				state = 500
+			}
+		}
+	}
+
+	#Focus for Rise, New Republic
+	focus = {
+		id = FCQ_rise_new_republic
+		icon = GFX_FCQ_rise_new_republic-20773
+		x = 10
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+
+	#Focus for Destroy Oligarchic Elements
+	focus = {
+		id = FCQ_destroy_oligarchic_elements
+		icon = GFX_FCQ_destroy_oligarchic_elements-20774
+		x = 10
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FCQ_rise_new_republic }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_timed_idea = {
+				idea = FCQ_destruction
+				days = 100
+			}
+		}
+	}
+
+	#Focus for Direction East
+	focus = {
+		id = FCQ_direction_east
+		icon = GFX_FCQ_direction_east-20793
+		x = 13
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FCQ_army_reforms }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_war = no
+		}
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = PRB
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = PNB
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = ALA
+			}
+		}
+	}
+
+	#Focus for Industrialize the Pará Area
+	focus = {
+		id = FCQ_industrialize_the_par_area
+		icon = GFX_FCQ_industrialize_the_par_area-20775
+		x = 8
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FCQ_destroy_oligarchic_elements }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			497 = {
+				if = {
+					limit = {
+						free_building_slots = {
+							building = industrial_complex size > 0
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+
+	#Focus for Bolster Legitimacy
+	focus = {
+		id = FCQ_bolster_legitimacy
+		icon = GFX_FCQ_bolster_legitimacy-20784
+		x = 4
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FCQ_create_jobs }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	#Focus for Authentic Brazilian Nationalism
+	focus = {
+		id = FCQ_authentic_brazilian_nationalism
+		icon = GFX_FCQ_authentic_brazilian_nationalism-20788
+		x = 13
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FCQ_fazendeiros_em_nescessidade_program }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = { 
+			add_war_support = 0.075
+			add_manpower = 2000
+		}
+	}
+
+	#Focus for End the Dictator
+	focus = {
+		id = FCQ_end_the_dictator
+		icon = GFX_FCQ_end_the_dictator-20798
+		x = 13
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FCQ_direction_east }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_war = no
+		}
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = ACQ
+			}
+		}
+	}
+
+#End of focuses 
+ }

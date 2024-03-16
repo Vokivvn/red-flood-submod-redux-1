@@ -1,0 +1,24 @@
+
+state={
+	id=590
+	name="STATE_590" # Akmolinsk
+	manpower = 664232
+
+	state_category = large_town
+
+	history={
+		owner = ORE
+		add_core_of = ORE
+		victory_points = {
+			4333 20
+		}
+		buildings = {
+			infrastructure = 2
+			arms_factory = 1
+		}
+	}
+
+	provinces={
+		1223 10268 12111 1229 1375 1680 4232 4238 4281 4309 4333 7298 7326 7383 7407 7425 10211 10239 10308 10633 12152
+	}
+}

@@ -1,0 +1,82 @@
+characters={
+	WAS_philip_collier={
+		name="Philip Collier"
+		portraits={
+			civilian={
+				large="gfx/leaders/WAS/Portrait_WAS_Philip_Collier.png"
+			}
+		}
+		country_leader={
+			
+			ideology=progressive_democracy
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	WAS_hal_colebatch={
+		name="Hal Colebatch"
+		portraits={
+			civilian={
+				large="gfx/leaders/WAS/Portrait_WAS_Hal_Colebatch.png"
+			}
+		}
+		country_leader={
+			
+			ideology=social_liberalism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	WAS_john_lavarack={
+		name="John Lavarack"
+		portraits={
+			army={
+				large="gfx/leaders/WAS/Portrait_WAS_John_Lavarack.png"
+			}
+		}
+		field_marshal={
+			traits={ defensive_doctrine }
+			skill=3
+			attack_skill=2
+			defense_skill=4
+			planning_skill=3
+			logistics_skill=3
+			legacy_id=-1
+		}
+	}
+	WAS_charles_lloyd={
+		name="Charles Lloyd"
+		portraits={
+			army={
+				large="gfx/leaders/WAS/Portrait_WAS_Charles_Lloyd.png"
+			}
+		}
+		corps_commander={
+			traits={ bearer_of_artillery trait_engineer }
+			skill=2
+			attack_skill=3
+			defense_skill=2
+			planning_skill=3
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	WAS_alwny_ragnar_garrett={
+		name="Alwny Ragnar Garrett"
+		portraits={
+			army={
+				large="gfx/leaders/WAS/Portrait_WAS_Ragnar_Garrett.png"
+			}
+		}
+		corps_commander={
+			traits={ cavalry_officer cavalry_leader }
+			skill=2
+			attack_skill=3
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=1
+			legacy_id=-1
+		}
+	}
+	
+}

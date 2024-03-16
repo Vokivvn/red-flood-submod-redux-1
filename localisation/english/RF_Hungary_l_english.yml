@@ -1,0 +1,84 @@
+﻿#####################
+#      Hungary     	#
+#####################
+
+l_english:
+#COUNTRY NAME#
+HUN_anarchism:0 "Pannonian Commune"
+HUN_anarchism_DEF:0 "the Pannonian Commune"
+HUN_anarchism_ADJ:0 "Panonnian"
+HUN_vanguard_socialism:0 "Hungarian Republic of Councils"
+HUN_vanguard_socialism_DEF:0 "the Hungarian Republic of Councils"
+HUN_vanguard_socialism_ADJ:0 "Hungarian"
+HUN_popular_socialism:0 "Hungarian Republic of Councils"
+HUN_popular_socialism_DEF:0 "the Hungarian Republic of Councils"
+HUN_popular_socialism_ADJ:0 "Hungarian"
+HUN_revisionist_socialism:0 "Hungarian Democratic Republic"
+HUN_revisionist_socialism_DEF:0 "the Hungarian Democratic Republic"
+HUN_revisionist_socialism_ADJ:0 "Hungarian"
+HUN_progressivism:0 "Hungarian Republic"
+HUN_progressivism_DEF:0 "the Hungarian Republic"
+HUN_progressivism_ADJ:0 "Hungarian"
+HUN_liberalism:0 "Hungarian Republic"
+HUN_liberalism_DEF:0 "the Hungarian Republic"
+HUN_liberalism_ADJ:0 "Hungarian"
+HUN_conservatism:0 "Hungarian National Republic"
+HUN_conservatism_DEF:0 "the Hungarian National Republic"
+HUN_conservatism_ADJ:0 "Hungarian"
+HUN_right_authoritarianism:0 "Hungarian National Republic"
+HUN_right_authoritarianism_DEF:0 "the Hungarian National Republic"
+HUN_right_authoritarianism_ADJ:0 "Hungarian"
+HUN_despotism:0 "Hungarian State"
+HUN_despotism_DEF:0 "the Hungarian State"
+HUN_despotism_ADJ:0 "Hungarian"
+HUN_reactionism:0 "Hungarian Kingdom"
+HUN_reactionism_DEF:0 "the Hungarian Kingdom"
+HUN_reactionism_ADJ:0 "Hungarian"
+HUN_accelerationism:0 "Revolutionary Republic of Hungary" #placeholder
+HUN_accelerationism_DEF:0 "the Revolutionary Republic of Hungary"
+HUN_accelerationism_ADJ:0 "Hungarian"
+
+HUN_kingdom:0 "Kingdom of Hungary"
+HUN_kingdom_DEF:0 "Kingdom of Hungary"
+HUN_kingdom_ADJ:0 "Hungarian"
+
+HUN_uni:0 "Union of Carpathian Council Republics"
+HUN_uni_DEF:0 "the Union of Carpathian Council Republics"
+HUN_uni_ADJ:0 "Carpathian"
+
+#PARTIES#
+HUN_anarchism_party:0 "FEF"
+HUN_vanguard_socialism_party:0 "MSZP-K"
+HUN_popular_socialism_party:0 "MSZP-SZD"
+HUN_revisionist_socialism_party:0 "DKsP"
+HUN_progressivism_party:0 "FK"
+HUN_liberalism_party:0 "F48P"
+HUN_conservatism_party:0 "NHF"
+HUN_right_authoritarianism_party:0 "NHF"
+HUN_despotism_party:0 "Szeged Remnants"
+HUN_reactionism_party:0 "Various Restorationists"
+HUN_accelerationism_party:0 "MA"
+HUN_anarchism_party_long:0 "Forradalmi Emancipációs Front"
+HUN_vanguard_socialism_party_long:0 "Magyarországi Szocialista Párt - Kommunisták"
+HUN_popular_socialism_party_long:0 "Magyarországi Szocialista Párt - Szociáldemokraták"
+HUN_revisionist_socialism_party_long:0 "Demokrata Keresztényszocialista Párt"
+HUN_progressivism_party_long:0 "Független Kisgazdapárt"
+HUN_liberalism_party_long:0 "Függetlenségi és 48-as Párt"
+HUN_conservatism_party_long:0 "Nemzeti Helyreállítási Front"
+HUN_right_authoritarianism_party_long:0 "Nemzeti Helyreállítási Front"
+HUN_despotism_party_long:0 "Szeged Remnants"
+HUN_reactionism_party_long:0 "Various Restorationists"
+HUN_accelerationism_party_long:0 "Magyar Aktivizmus"
+
+
+#LEADER DESCRITIONS#
+#IDEAS#
+HUN_mentors_death:0 "Death of the Mentor"
+HUN_revolutions_children:0 "Children of the Revolution"
+HUN_to_arms:0 "To Arms!"
+HUN_warschauer_vertrag:0 "Der Warschauer Vertrag"
+#CUSTOM TOOLTIPS AND FLAGS#
+#DECISIONS (1.5 Update)#
+HUN_integrate_slovakia:0 "Integrate Slovakia"
+#FOCUSES#
+

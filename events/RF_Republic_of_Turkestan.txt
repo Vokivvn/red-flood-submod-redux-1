@@ -1,0 +1,49 @@
+add_namespace = tuk 
+
+country_event = {
+	id = tuk.2
+	title = tuk.2.t
+	desc = tuk.2.desc
+	picture = GFX_GER_march_action
+	fire_only_once = yes
+	
+	trigger = {
+		tag = TUK
+		 owns_state = 586
+	}
+	
+	option = { #trk CORES pt1
+		name = tuk.2.a
+		add_state_core = 852 
+		add_state_core = 1043 
+		add_state_core = 586 
+		add_state_core = 842
+	}
+}
+
+country_event = {
+	id = tuk.3
+	title = tuk.3.t
+	desc = tuk.3.desc
+	picture = GFX_GER_march_action
+	fire_only_once = yes
+	
+	trigger = {
+		tag = TUK
+		 owns_state = 1038
+	}
+	
+	option = { #trk CORES pt2
+		name = tuk.3.a
+		add_state_core = 584
+		add_state_core = 1037
+		add_state_core = 850
+		add_state_core = 849
+		add_state_core = 1039
+		add_state_core = 851
+		add_state_core = 1038
+		add_state_core = 840 
+		add_state_core = 742
+		remove_ideas = TUK_hiddenbuff
+	}
+}

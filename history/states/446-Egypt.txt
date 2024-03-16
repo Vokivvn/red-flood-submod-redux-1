@@ -1,0 +1,27 @@
+state={
+	id=446
+	name="STATE_446"
+	manpower = 1586596
+
+	state_category = large_town
+
+	history={
+		owner = EGY #EGY
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+		}
+		victory_points = {
+			3996 3 #giza
+		}
+		victory_points = {
+			1068 5 #faiyum
+		}
+		add_core_of = EGY
+
+	}
+
+	provinces={
+		1068 3996 4055 10031 992 7117
+	}
+}

@@ -1,0 +1,29 @@
+state={
+	id = 1128
+	name = "STATE_1128" # Eskisehir
+	manpower = 770758
+	resources={
+		chromium=11 # was: 16
+		steel = 6
+	}
+	
+	state_category = town
+
+	history={
+		owner = TUR
+		
+		victory_points = {
+			3951 3
+		}
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+		add_core_of = TUR
+		add_core_of = MAR
+	}
+
+	provinces={
+		909 3907 3951 6808
+	}
+}

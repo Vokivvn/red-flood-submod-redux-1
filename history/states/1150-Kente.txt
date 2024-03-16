@@ -1,0 +1,20 @@
+state={
+	id=1150
+	name="STATE_1150"
+	history={
+		owner = MON
+		add_core_of = MON
+		buildings = {
+			infrastructure = 1
+		}
+        victory_points = {
+			12612 5
+		}
+	}
+	provinces={
+		10578 10647 10575 4873 1868 7749 12612 1743 12629 12557
+	}
+	manpower=53557
+	buildings_max_level_factor=1.000
+        state_category=pastoral
+}

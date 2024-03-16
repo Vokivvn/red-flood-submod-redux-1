@@ -1,0 +1,410 @@
+ideas = {
+	country = {
+		SIB_minorities_recognized = {
+			picture = SIB_minorities_recognized
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = 0.1
+			}
+			modifier = {
+				monthly_population = 0.20
+			}
+		}
+		SIB_member_of_the_eu_1 = {
+			picture = SIB_european_union_member
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				min_export = 0.05
+				political_power_factor = -0.05
+			}
+		}
+		SIB_member_of_the_eu_2 = {
+			picture = SIB_european_union_member
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				min_export = 0.1
+				political_power_factor = 0.05
+				consumer_goods_expected_value = -0.1
+			}
+		}
+		SIB_swiss = {
+			picture = SIB_swiss
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				consumer_goods_expected_value = -0.05
+			}
+		}
+		SIB_oldfrnc = {
+			picture = SIB_oldfrnc
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				training_time_factor = -0.05
+			}
+		}
+		SIB_transformation = {
+			picture = SIB_transformation
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				political_power_factor = 0.05
+				revisionist_socialism_drift = 0.05
+				progressivism_drift = 0.05
+				liberalism_drift = 0.05
+				conservatism_drift = 0.05
+			}
+		}
+		SIB_econreforms = {
+			picture = SIB_econreforms
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				consumer_goods_expected_value = -0.05
+				local_resources_factor = 0.05
+				production_factory_max_efficiency_factor = 0.05
+			}
+		}
+		SIB_popularland = {
+			picture = SIB_popularland
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				consumer_goods_expected_value = -0.05
+				production_speed_buildings_factor = 0.05
+			}
+		}
+		SIB_industrial_subsidies = {
+			picture = SIB_industrial_subsidies
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				production_factory_max_efficiency_factor = 0.05
+			}
+		}
+		SIB_patriotism = {
+			picture = SIB_patriotism
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
+				conscription_factor = 0.02
+			}
+		}
+		SIB_patriotism1 = {
+			picture = SIB_patriotism
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = 0.05
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
+				conscription_factor = 0.05
+			}
+		}
+		SIB_welfarestate = {
+			picture = SIB_welfarestate
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				local_resources_factor = 0.05
+				production_factory_max_efficiency_factor = 0.05
+				production_speed_buildings_factor = 0.05
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+				min_export = -0.05
+			}
+		}
+		SIB_siberia_glory = {
+			picture = SIB_siberia_glory
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
+				conscription_factor = 0.02
+			}
+		}
+		SIB_siberian_democracy = {
+			picture = SIB_siberian_democracy
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				conscription_factor = 0.05
+				political_power_factor = 0.05
+				progressivism_drift = 0.05
+				liberalism_drift = 0.05
+				conservatism_drift = 0.05
+				local_resources_factor = 0.05
+				production_factory_max_efficiency_factor = 0.02
+				production_speed_buildings_factor = 0.01
+				industrial_capacity_factory = 0.01
+				industrial_capacity_dockyard = 0.01
+				min_export = -0.05
+			}
+		}
+		SIB_siberian_democracy1 = {
+			picture = SIB_siberian_democracy
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				conscription_factor = 0.05
+				political_power_factor = 0.07
+				progressivism_drift = 0.05
+				liberalism_drift = 0.05
+				conservatism_drift = 0.05
+				local_resources_factor = 0.05
+				production_factory_max_efficiency_factor = 0.02
+				production_speed_buildings_factor = 0.01
+				industrial_capacity_factory = 0.01
+				industrial_capacity_dockyard = 0.01
+				min_export = -0.05
+				research_speed_factor = 0.1
+			}
+		}
+		SIB_league_of_nations_member = {
+			picture = SIB_league_of_nations_member
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				trade_opinion_factor  = 0.3
+				political_power_factor = 0.1
+				min_export = 0.05
+			}
+		}
+
+		SIB_russification_by_education = {
+			picture = SIB_russification_by_education
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = -0.1
+				despotism_drift = 0.05
+				conscription_factor = 0.1
+			}
+		}
+		SIB_workethic = {
+			picture = SIB_workethic
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = -0.1
+				production_factory_max_efficiency_factor = 0.05
+				production_speed_buildings_factor = 0.05
+				political_power_factor = 0.05
+				vanguard_socialism_drift = -0.02
+				popular_socialism_drift = -0.02
+				revisionist_socialism_drift = -0.02
+				anarchism_drift = -0.02
+				accelerationism_drift = -0.02
+			}
+		}
+		SIB_workethic1 = {
+			picture = SIB_industrial_quotas
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = -0.1
+				production_factory_max_efficiency_factor = 0.05
+				production_speed_buildings_factor = 0.05
+				political_power_factor = 0.05
+				vanguard_socialism_drift = -0.02
+				popular_socialism_drift = -0.02
+				revisionist_socialism_drift = -0.02
+				anarchism_drift = -0.02
+				accelerationism_drift = -0.02
+				local_resources_factor = 0.2
+			}
+		}
+		SIB_workethic2 = {
+			picture = SIB_industrial_quotas
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = -0.1
+				production_factory_max_efficiency_factor = 0.05
+				production_speed_buildings_factor = 0.05
+				political_power_factor = 0.05
+				vanguard_socialism_drift = -0.02
+				popular_socialism_drift = -0.02
+				revisionist_socialism_drift = -0.02
+				anarchism_drift = -0.02
+				accelerationism_drift = -0.02
+				local_resources_factor = 0.3
+			}
+		}
+		SIB_havenfordrozd = {
+			picture = SIB_havenfordrozd
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				conscription = 0.03
+				war_support_factor = 0.15
+				despotism_drift = 0.1
+			}
+		}
+		SIB_synchronization_army = {
+			picture = SIB_russian_militarism
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				attrition = -0.01
+				acclimatization_cold_climate_gain_factor = 0.02
+				acclimatization_hot_climate_gain_factor = 0.02
+				conscription_factor = 0.1
+			}
+		}
+		SIB_synchronization_army_1 = {
+			picture = SIB_russian_rebirth_idea
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				army_core_defence_factor = 0.01
+				mobilization_speed = 0.1
+				army_morale_factor = 0.01
+				planning_speed = 0.2
+			}
+		}
+		SIB_synchronization_army_2 = {
+			picture = SIB_russian_militarism
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				attrition = -0.01
+				acclimatization_cold_climate_gain_factor = 0.02
+				acclimatization_hot_climate_gain_factor = 00.2
+				conscription_factor = 0.1
+				org_loss_when_moving = -0.1
+			}
+		}
+		SIB_russian_militarism = {
+			picture = SIB_russian_militarism
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				attrition = -0.01
+				acclimatization_cold_climate_gain_factor = 0.02
+				acclimatization_hot_climate_gain_factor = 0.02
+				conscription_factor = 0.1
+				org_loss_when_moving = -0.01
+				army_speed_factor = 0.01
+				training_time_factor = -0.05
+			}
+			equipment_bonus = {
+				motorized_equipment = {
+					instant = yes build_cost_ic = -0.05
+				}
+				infantry_equipment = {
+					instant = yes build_cost_ic = -0.05
+				}
+			}
+		}
+		SIB_population_growth = {
+			picture = ASY_repatriation
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = -0.1
+				monthly_population = 5
+			}
+		}
+		SIB_society = {
+			picture = SIB_solidarist_mass_media
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				conscription = 0.05
+			}
+		}
+		SIB_meritocratic_leadership = {
+			picture = SIB_society
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				research_speed_factor = 0.05
+				max_command_power = 20
+				drift_defence_factor = 0.5
+				experience_loss_factor = -0.1
+			}
+		}
+		SIB_society1 = {
+			picture = SIB_society
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				conscription = 0.01
+				resistance_target = -0.2
+				non_core_manpower = 0.05
+			}
+		}
+		SIB_society2 = {
+			picture = SIB_society
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				conscription = 0.03
+				resistance_target = -0.2
+				non_core_manpower = 0.1
+				right_authoritarianism_drift = 0.05
+				progressivism_drift = 0.05
+				conservatism_drift = 0.05
+			}
+		}
+		SIB_solidaristcommissars = {
+			picture = SIB_solidaristcommissars
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				resistance_target = -0.03
+			}
+		}
+		SIB_solidaristcommissars1 = {
+			picture = SIB_solidarist_mass_media
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				resistance_target = -0.06
+			}
+		}
+		SIB_russian_progressivism = {
+			picture = SIB_russian_progressivism
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				political_power_factor = 0.05
+				right_authoritarianism_drift = 0.1
+				conservatism_drift = 0.1
+				progressivism_drift = 0.1
+				resistance_target = -0.15
+			}
+		}
+		SIB_SVSNK = {
+			picture = SIB_workethic
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				consumer_goods_expected_value = -0.10
+				industry_free_repair_factor = 0.05
+			}
+		}
+		SIB_SVSNK1 = {
+			picture = SIB_SVSNK
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				consumer_goods_expected_value = -0.1
+				industry_free_repair_factor = 0.05
+				monthly_population = 0.03
+				production_speed_buildings_factor = 0.05
+				local_resources_factor = 0.1
+				production_factory_max_efficiency_factor = 0.05
+			}
+		}
+		SIB_syncretisation_people = {
+			picture = SIB_SVSNK
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				consumer_goods_expected_value = -0.05
+				industry_free_repair_factor = 0.05
+				monthly_population = 0.03
+				production_factory_max_efficiency_factor = 0.05
+				local_resources_factor = 0.1
+			}
+		}
+		SIB_solidarism_idea = {
+			picture = SIB_SVSNK
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				consumer_goods_expected_value = -0.05
+				industry_free_repair_factor = 0.25
+				local_resources_factor = 0.1
+				production_factory_max_efficiency_factor = 0.05
+				monthly_population = 0.03
+				production_speed_buildings_factor = 0.10
+				conservatism_drift = 0.02
+			}
+		}
+		SIB_headquarters = {
+			picture = SIB_russian_rebirth_idea
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				planning_speed = 0.2
+				required_garrison_factor  = 0.1
+				mobilization_speed = 0.1
+				army_morale_factor = 0.1
+			}
+		}
+	}
+}

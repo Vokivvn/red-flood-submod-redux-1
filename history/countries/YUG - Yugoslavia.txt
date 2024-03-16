@@ -1,0 +1,179 @@
+﻿capital = 107
+set_research_slots = 3
+set_convoys = 10
+set_stability = 0.5
+
+oob = "YUG"
+set_naval_oob = "YUG_naval"
+if = { limit = { has_dlc = "By Blood Alone" } set_air_oob = "YUG_air" }
+if = { limit = {  NOT = { has_dlc = "By Blood Alone" } }  set_air_oob = "YUG_air_legacy" }
+
+country_event = { id = yugoslavia.2 days = 3 }
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_recon = 1
+	tech_support = 1
+	tech_engineers = 1
+	tech_trucks =1
+	motorised_infantry = 1
+	gw_artillery = 1
+	interwar_antiair = 1
+	interwar_antitank = 1
+}
+
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+	set_technology = {
+		iw_small_airframe = 1
+		iw_medium_airframe = 1
+		iw_large_airframe = 1
+		aa_lmg = 1
+		aa_cannon_1 = 1
+		early_bombs = 1
+		engines_1 = 1
+	}
+}
+if = {
+	limit = { NOT = { has_dlc = "By Blood Alone" } }
+	set_technology = {
+		early_fighter = 1
+		early_bomber = 1
+		CAS1 = 1
+	}
+}
+
+if = {
+	limit = { NOT = { has_dlc = "No Step Back" } }
+	set_technology = {
+		gwtank = 1
+		basic_light_tank = 1
+	}
+}
+if = {
+	limit = { has_dlc = "No Step Back" }
+	set_technology = {
+		gwtank_chassis = 1
+		basic_light_tank_chassis = 1
+	}
+}
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	set_technology = {
+		early_submarine = 1
+		basic_submarine = 1
+		early_light_cruiser = 1
+		basic_light_cruiser = 1
+		early_heavy_cruiser = 1
+		basic_heavy_cruiser = 1
+		early_battleship = 1
+		early_carrier = 1
+		transport = 1
+	}
+}
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		basic_torpedo = 1
+		basic_battery = 1
+		basic_light_battery = 1
+		basic_heavy_battery = 1
+		basic_medium_battery = 1
+		improved_ship_torpedo_launcher = 1
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		early_ship_hull_light = 1
+		basic_ship_hull_light = 1
+		early_ship_hull_cruiser = 1
+		basic_ship_hull_cruiser = 1
+		early_ship_hull_heavy = 1
+		basic_ship_hull_heavy = 1
+		early_ship_hull_carrier = 1
+		mtg_transport = 1
+		coastal_defense_ships = 1
+		basic_light_battery = 1
+		basic_depth_charges = 1
+		cruiser_submarines = 1
+	}
+}
+
+set_politics = {
+	ruling_party = accelerationism
+	last_election = "1933.10.25"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	vanguard_socialism = 0
+	popular_socialism = 3
+	anarchism = 1
+	revisionist_socialism = 0
+	progressivism = 0
+	liberalism = 0
+	conservatism = 0
+	right_authoritarianism = 14
+	despotism = 6
+	reactionism = 15
+	accelerationism = 61
+}
+
+add_ideas = {
+   YUG_hell_italians
+   YUG_velocities
+}
+
+add_to_variable = { YUG_yugoslav_influence = 0.6 }
+clamp_variable = {
+	var = YUG_yugoslav_influence
+	min = 0
+	max = 1
+}
+
+
+recruit_character = YUG_dimitrije_ljotic
+recruit_character = YUG_dragutin_dimitrijevic_apis
+recruit_character = YUG_nikola_tesla
+recruit_character = YUG_paul_i
+recruit_character = YUG_tin_ujevic
+recruit_character = YUG_ljubo_leontic
+recruit_character = YUG_dimitrije_mitrinovic
+recruit_character = YUG_ivan_gosnjak
+recruit_character = YUG_mihailo_apostolski
+recruit_character = YUG_vladimir_cukavac
+recruit_character = YUG_dobroslav_jevdevic
+recruit_character = YUG_danilo_kalafatovic
+recruit_character = YUG_ivo_andric
+recruit_character = YUG_milos_crnjanski
+recruit_character = YUG_miroslav_krleza
+recruit_character = YUG_ivan_mestrovic
+recruit_character = YUG_niko_bartulevic
+recruit_character = YUG_milan_pribicevic
+recruit_character = YUG_edo_bulat
+recruit_character = YUG_ljubomir_micic
+recruit_character = YUG_mihajlo_petrov
+recruit_character = YUG_dragan_aleksic
+recruit_character = YUG_nikolai_velimirovic
+recruit_character = YUG_velibor_jonic
+recruit_character = YUG_kosta_muscicki
+recruit_character = YUG_milan_acimovic
+recruit_character = YUG_petar_dobrovic
+recruit_character = YUG_stanislav_vinaver
+recruit_character = YUG_franjo_vučer
+recruit_character = YUG_viktor_bubanj
+recruit_character = YUG_dusan_simovic
+recruit_character = YUG_borivoje_mirkovic
+recruit_character = YUG_dragutin_dimitrijević
+recruit_character = YUG_vojislav_tankosić
+recruit_character = YUG_milutin_nedić
+recruit_character = YUG_mileva_marić
+recruit_character = YUG_gavrilo_princip
+recruit_character = YUG_babunksi
+
+activate_advisor = YUG_ujevic_hog
+activate_advisor = YUG_mestrovic_for
+activate_advisor = YUG_tesla_eco
+activate_advisor = YUG_mitrinovic_sec
+activate_advisor = YUG_leontic_int

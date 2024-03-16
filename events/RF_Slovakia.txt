@@ -1,0 +1,103 @@
+ add_namespace = slovakia
+
+
+country_event = {
+	id = slovakia.12
+	title = slovakia.12.t
+	desc = slovakia.12.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = slovakia.12.a
+		country_event = {
+			id = slovakia.13
+			days = 1
+		}
+		HUN = {
+			country_event = {
+				id = hungarystart.9
+			}
+		}
+	}
+}
+country_event = {
+	id = slovakia.13
+	title = slovakia.13.t
+	desc = slovakia.13.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = slovakia.13.a
+		kill_country_leader = yes
+		add_stability = -0.2
+		add_popularity = {
+			ideology = conservatism
+			popularity = 0.2
+		}
+		country_event = {
+			id = slovakia.14
+			days = 1
+		}
+		add_country_leader_role = {
+			character = SLO_siroky
+			country_leader = {
+				expire = "1965.1.1"
+				ideology = leninism
+			}
+			promote_leader = yes
+		}
+	}
+}
+country_event = {
+	id = slovakia.14
+	title = slovakia.14.t
+	desc = slovakia.14.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = slovakia.14.a
+		set_politics = {
+			ruling_party = conservatism
+		}
+		add_popularity = {
+			ideology = conservatism
+			popularity = 0.1
+		}
+		add_popularity = {
+			ideology = right_authoritarianism
+			popularity = 0.15
+		}
+		add_popularity = {
+			ideology = liberalism
+			popularity = 0.15
+		}
+		HUN = {
+			end_puppet = SLO
+			country_event = {
+				id = hungarystart.12
+				days = 1
+			}
+		}
+		custom_effect_tooltip = "SLO_DISBAND_TT"
+		hidden_effect = {
+			load_oob = "SLO_revolt"
+			delete_unit_template_and_units = {
+				division_template = "Revolučná garda"
+				disband = yes
+			}
+		}
+		drop_cosmetic_tag = yes
+		leave_faction = yes
+		add_stability = 0.05
+		clr_country_flag = warschauer_vertrag
+		wp_lose_member = yes
+		news_event = {
+			id = news.155
+		}
+		AUS = {
+			set_rule = {
+				can_guarantee_other_ideologies = no
+			}
+		}
+	}
+}

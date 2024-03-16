@@ -1,0 +1,42 @@
+ideas = {
+
+#################
+# Country ideas #
+#################
+
+	country = {
+		HON_banana_blight = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				liberalism_drift = -0.02
+				consumer_goods_expected_value = 0.07
+				political_power_cost = 0.15
+			}
+			picture = generic_idea_RF_idea_skull_flame
+		}
+		HON_ufc_hostilities = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				production_speed_buildings_factor = -0.5
+				consumer_goods_expected_value = 0.02
+				stability_factor = -0.07
+			}
+			picture = generic_idea_RF_idea_bear
+		}
+		HON_loose_immigration = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				conscription_factor = 0.03
+				stability_factor = -0.10
+				war_support_factor = -0.10
+				political_power_cost = 0.20
+				monthly_population = 1
+				reactionism_drift = 0.01
+			}
+			picture = generic_idea_RF_idea_building
+		}
+	}
+###########
+#MINISTERS#
+###########
+}

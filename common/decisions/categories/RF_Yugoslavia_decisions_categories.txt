@@ -1,0 +1,26 @@
+YUG_foreign_policy = {
+	icon = GFX_KAV_diplomacy_icon
+	picture = GFX_decision_cat_picture_YUG_diplo
+	allowed = {
+		original_tag = YUG
+	}
+	priority = 100
+	visible = {
+		has_completed_focus = YUG_thefutureofyugoslavia
+		is_subject = no
+	}
+}
+YUG_yugoslav_mechanic = {
+	icon = generic_political_actions
+	picture = GFX_decision_cat_picture_YUG_uni
+	allowed = {
+		tag = YUG
+	}
+	visible = {
+		BUL = {
+			has_cosmetic_tag = BUL_yugo
+		}
+	}
+	visible_when_empty = yes
+	priority = 1000
+}

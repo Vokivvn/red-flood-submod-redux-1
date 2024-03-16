@@ -1,0 +1,38 @@
+division_template = {
+	name = "Brigáda Rodobrany"
+	regiments = {
+		infantry = {
+			x = 0
+			y = 0
+		}
+		infantry = {
+			x = 0
+			y = 1
+		}
+		infantry = {
+			x = 1
+			y = 0
+		}
+	 }
+} 
+
+units = {
+	division = {
+		location = 6586
+		division_name = {
+			name = "Hlinková Garda"
+		}
+		division_template = "Brigáda Rodobrany"
+		start_equipment_factor = 0.4
+	}
+	division = {
+		location = 9692
+		division_template = "Brigáda Rodobrany"
+		start_equipment_factor = 0.2
+	}
+	division = {
+		location = 9692
+		division_template = "Brigáda Rodobrany"
+		start_equipment_factor = 0.2
+	}
+}

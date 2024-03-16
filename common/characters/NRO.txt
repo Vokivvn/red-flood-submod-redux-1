@@ -1,0 +1,14 @@
+characters = {
+	NRO_carl_V = {
+		name = "Carl V"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/NRO/Portrait_NRO_Carl_V.png"
+			}
+		}
+		country_leader = {
+			ideology = social_conservatism
+			expire = "1965.1.1.1"
+		}
+	}
+}

@@ -1,0 +1,78 @@
+characters = {
+	IRQ_Arnold_Wilson = {
+		name = "Arnold Wilson"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/IRQ/Portrait_IRQ_Arnold_Wilson.png"
+			}
+		}
+		country_leader = {
+			ideology = colonial_government
+			expire = "1965.1.1.1"
+		}
+	}
+	IRQ_jafar_pasha_alaskari = {
+		name = "Ja'far Pasha al-Askari"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/IRQ/Portrait_IRQ_Ja'far Pasha al-Askari.png"
+			}
+		}
+		corps_commander = {
+			traits = { desert_fox commando }
+			skill = 3
+			attack_skill = 4
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 4
+		}
+	}
+	IRQ_abd_alkarim_qasim = {
+		name = "Abd al-Karim Qasim"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/IRQ/Portrait_IRQ_Abd_Qasim.png"
+			}
+		}
+		corps_commander = {
+			traits = { career_officer }
+			skill = 1
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
+	IRQ_robert_stone = {
+		name = "Robert Stone"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/EGY/Portrait_Robert_Stone.png"
+			}
+		}
+		corps_commander = {
+			traits = { career_officer }
+			skill = 3
+			attack_skill = 4
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 4
+		}
+	}
+	IRQ_eric_dorman_smith = {
+		name = "Eric Dorman Smith"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/EGY/Portrait_Eric_Dorman_Smith.png"
+			}
+		}
+		corps_commander = {
+			traits = {  trickster commando }
+			skill = 2
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 3
+		}
+	}
+}

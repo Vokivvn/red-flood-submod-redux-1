@@ -1,0 +1,26 @@
+state={
+	id=1052
+	name="STATE_1052"
+	manpower = 110125
+	
+	state_category = pastoral
+
+	history={
+		owner = SNP
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = SYR
+		add_core_of = SNP
+		victory_points = {
+			12442 1 #Tadmor
+		}
+		victory_points = {
+			2013 1 #Deir ez-zor
+		}
+	}
+
+	provinces={
+		2013 3942 7513 10383 12316 12442
+	}
+}

@@ -1,0 +1,191 @@
+characters={
+	TAN_Roman ={
+		name="Roman von Ungern-Sternberg"
+		portraits={
+			civilian={
+				large="gfx/leaders/TAN/Portrait_TAN_Sternberg.png"
+				small="gfx/interface/ministers/TAN/Baron_Ungern.dds"
+			}
+			army = {
+				large = "gfx/leaders/TAN/Roman_von_Ungern-Sternberg_general.png"
+				small="gfx/interface/ministers/TAN/Baron_Ungern.dds"
+			}
+		}
+		country_leader={
+			ideology= esoteric_reactionism
+			traits = { TAN_roman }
+			desc = " POLITICS_Roman_von_Ungern-Sternberg_DESC"
+		}
+		field_marshal = {
+			traits = { offensive_doctrine trait_reckless war_hero trickster charismatic }
+			skill = 4
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 3
+			legacy_id = 300
+		}
+		advisor = {
+		    slot = head_of_government
+			available = {
+				has_government = reactionism
+			}
+			idea_token = TAN_roman_hig
+			traits = { hog_spiritual_leader }
+		}
+		advisor = {
+		    slot = high_command
+			available = {
+				has_government = reactionism
+			}
+			idea_token = TAN_Roman_command
+			traits = { army_chief_maneuver_2 }
+		}
+		advisor = {
+		    slot = army_chief
+			available = {
+				has_government = reactionism
+			}
+			idea_token = TAN_Roman_army
+			traits = { army_chief_offensive_2 }
+		}
+		advisor = {
+		    slot = navy_chief
+			available = {
+				has_government = reactionism
+			}
+			idea_token = TAN_Roman_navy
+			traits = { navy_chief_decisive_battle_2 }
+		}
+		advisor = {
+		    slot = air_chief
+			available = {
+				has_government = reactionism
+			}
+			idea_token = TAN_Roman_air
+			traits = { air_chief_ground_support_2 }
+		}
+	}
+	TAN_Shoigu ={
+		name="Kujuget Shoigu"
+		country_leader={
+			ideology= social_nationalism
+		}
+	}
+	TAN_Kuular ={
+		name="Donduk Kuular"
+		portraits={
+			civilian={
+				large="gfx/leaders/TAN/Portrait_TAN_Donduk_Kuular.png"
+			}
+		}
+		country_leader={
+			ideology= religious_socialism
+		}
+	}
+
+	TAN_boris_rezukhin={
+		name="Boris Rezukhin"
+		portraits={
+			civilian = {
+				small="gfx/interface/ministers/TAN/Boris_Rezukhin.dds"
+			}
+			army={
+				large="gfx/leaders/TAN/boris.png"
+			}
+		}
+		corps_commander={
+			traits={ politically_connected thorough_planner }
+			skill=3
+			attack_skill=2
+			defense_skill=1
+			planning_skill=2
+			logistics_skill=3
+		}
+		advisor = {
+		    slot = head_of_intel
+			available = {
+				has_government = reactionism
+			}
+			idea_token = TAN_boris_rezukhin
+			traits = { head_of_intel int_logistics_specialist }
+		}
+		advisor = {
+		    slot = high_command
+			available = {
+				has_government = reactionism
+			}
+			idea_token = TAN_rezukhin_staff
+			traits = { army_regrouping_2 }
+		}
+	}
+	TAN_nikolai_kazagrandi={
+		name="Nikolai Kazagrandi"
+		portraits={
+			civilian = {
+				small="gfx/interface/ministers/TAN/Nikolai_Kazagrandi.dds"
+			}
+			army={
+				large="gfx/leaders/TAN/nikolai.png"
+			}
+		}
+		corps_commander={
+			traits={ charismatic fortress_buster }
+			skill=2
+			attack_skill=3
+			defense_skill=2
+			planning_skill=1
+			logistics_skill=2
+			legacy_id=302
+		}
+		advisor = {
+		    slot = security_minister
+			available = {
+				has_government = reactionism
+			}
+			idea_token = TAN_nikolai_kazagrandi
+			traits = { security_minister sec_prince_of_terror }
+		}
+		advisor = {
+		    slot = high_command
+			available = {
+				has_government = reactionism
+			}
+			idea_token = TAN_kazagrandi_staff
+			traits = { army_cavalry_1 }
+		}
+	}
+	TAN_ferdynand_antoni_ossendowski ={
+		name="Ferdynan Antoni Ossendowski"
+		portraits={
+			civilian = {
+				small="gfx/interface/ministers/TAN/Ferdynand_Antoni_Ossendowski.dds"
+			}
+		}
+		advisor = {
+		    slot = foreign_minister
+			available = {
+				has_government = reactionism
+			}
+			idea_token = TAN_ferdynand_antoni_ossendowski
+			traits = { foreign_minister for_biased_intellectual }
+		}
+	}
+	
+	TAN_gombozozhavyn_luvsantseveen = {
+		name="Gombozozhavyn Luvantseveen"
+		portraits={
+			civilian = {
+				small="gfx/interface/ministers/TAN/Gombozhavyn_Luvsantseveen.dds"
+			}
+		}
+		advisor = {
+		    slot = economy_minister
+			available = {
+				has_government = reactionism
+			}
+			idea_token = TAN_gombozozhavyn_luvsantseveen
+			traits = { economy_minister eco_industrialiser }
+		}
+	}
+}

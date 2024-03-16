@@ -1,0 +1,24 @@
+state={
+	id=1228
+	name="STATE_1228"
+	manpower = 342900
+
+	state_category = town
+
+	history = {
+		owner = DEI
+		victory_points = { #Benkoelen
+			12138 3
+		}
+		add_core_of = DEI
+		buildings = {
+			infrastructure = 2
+			12138 = {
+				naval_base = 2
+			}
+		}
+	}
+	provinces={
+		10194 7440 12138 7308 12209
+	}
+}

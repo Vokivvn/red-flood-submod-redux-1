@@ -1,0 +1,10 @@
+SPR_cw = {
+	random_country = {
+		limit = {
+			is_ai = no
+		}
+		news_event = {
+			id = news.55
+		}
+	}
+}

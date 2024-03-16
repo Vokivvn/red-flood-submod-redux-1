@@ -1,0 +1,82 @@
+fight_civil_wars_dumbfucks = {
+	allowed={
+        tag = SNP
+		tag = SYR
+        tag = PER 
+        tag = RPR 
+        tag = MAR 
+        tag = TUR 
+        tag = KUR 
+        tag = SAU
+        tag = ASY 
+        tag = DAI 
+        tag = SMC 
+        tag = VIN
+    }
+    enable = {
+		has_war = yes
+	}
+	abort = {
+		has_war = no
+	}
+	ai_strategy = {
+    type = front_control
+    state_trigger = {
+        OR = {
+            is_controlled_by = SNP 
+            is_controlled_by = SYR 
+            is_controlled_by = PER 
+            is_controlled_by = YEM
+            is_controlled_by = OMA
+            is_controlled_by = RPR 
+            is_controlled_by = MAR 
+            is_controlled_by = TUR 
+            is_controlled_by = KUR 
+            is_controlled_by = ASY
+            is_controlled_by = DAI 
+            is_controlled_by = SMC 
+            is_controlled_by = VIN
+        }
+    }
+    ratio = 0
+	execute_order = yes
+	priority = 100
+    ordertype = front
+    execution_type = rush
+    manual_attack = yes
+    }
+}
+AUS_war_against_GER = {
+    allowed = {
+        original_tag = AUS
+    }
+    enable = {
+        country_exists = GER
+    }
+    abort = {
+        has_war_with = GER
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = {
+        type = prepare_for_war 
+        id = GER
+        value = 200
+    }
+}	
+AUS_war_against_HUN = {
+    allowed = {
+        original_tag = AUS
+    }
+    enable = {
+        country_exists = HUN
+    }
+    abort = {
+        has_war_with = HUN
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = {
+        type = prepare_for_war 
+        id = HUN
+        value = 200
+    }
+}

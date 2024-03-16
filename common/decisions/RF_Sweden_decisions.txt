@@ -1,0 +1,75 @@
+SWE_birkeneid = {
+	SWE_denmark = {
+		ai_will_do = {
+			factor = 100
+		}
+		fire_only_once = yes
+		visible = {
+			is_subject = no
+			var:37.owner = {
+				is_ally_with = ROOT
+			}
+		}
+		complete_effect = {
+			add_to_temp_array = { core_removal_array = DEN }
+			remove_all_cores_and_claims_of_tags = yes
+			every_state = {
+				limit = {
+					OR = {
+						state = 99 #Jutland
+						state = 37 #Sjaelland
+						state = 796 #Northern Schleswig
+						state = 337
+					}
+				}
+				add_core_of = ICE
+			}
+			every_owned_state = {
+				limit = {
+					OR = {
+						state = 99 #Jutland
+						state = 37 #Sjaelland
+						state = 796 #Northern Schleswig
+						state = 337
+					}
+				}
+				ICE = { transfer_state = PREV }
+			}
+			ICE = {
+				set_cosmetic_tag = ICE_denmark
+				set_capital = { state = 37 }
+				remove_ideas = {
+					ICE_danish_exiles
+					ICE_another_generation_of_vikings
+				}
+			}
+		}
+	}
+	SWE_bij_bolszewika = {
+		days_remove = 170
+		icon = decision_generic_nationalism
+		allowed = {	tag = SWE }
+		fire_only_once = yes
+		cancel_if_not_visible = yes
+		ai_will_do = {
+			factor = 100
+		}
+		visible = {
+			SWE = { is_faction_leader = yes }
+			PRS = { owns_state = 763 }
+			GER = {
+				OR = {
+					has_war_with = ENG
+					has_war_with = FRA
+				}
+			}
+		}
+		remove_effect = {
+			news_event = news.343
+			declare_war_on = {
+				type = annex_everything
+				target = GER
+			}
+		}
+	}
+}

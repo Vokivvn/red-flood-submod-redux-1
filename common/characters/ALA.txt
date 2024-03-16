@@ -1,0 +1,14 @@
+characters = {
+	ALA_pedro_de_costa_rego = {
+		name = "Pedro de Costa Rego"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/ALA/Portrait_ALA_PCR.png"
+			}
+		}
+		country_leader = {
+			ideology = oligarchy
+			expire = "1965.1.1.1"
+		}
+	}
+}

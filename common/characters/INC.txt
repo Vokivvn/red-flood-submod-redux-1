@@ -1,0 +1,75 @@
+characters = {
+	INC_rajendra_prasad = {
+		name = "Rajendra Prasad"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/INC/Portrait_INC_Rajendra_Prasad.png"
+			}
+		}
+		country_leader = {
+			ideology = progressive_democracy
+			expire = "1965.1.1.1"
+			traits = { silent_workhorse }
+		}
+	}
+	INC_Vallahbai_Patel = {
+		name = "Vallabhbhai Patel"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/INC/Portrait_INC_Sardar.png"
+			}
+		}
+		country_leader = {
+			ideology = left_populism
+			expire = "1965.1.1.1"
+			traits = { popular_figurehead }
+		}
+	}
+	INC_Ramaswamy_Reddiyar = {
+		name = "Ramaswamy Reddiyar"
+		
+	}
+	INC_Jawaharlal_Nehru = {
+		name = "Jawaharlal Nehru"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/INC/Portrait_INC_Nehru.png"
+			}
+		}
+		country_leader = {
+			ideology = democratic_socialism
+			traits = { headstrong }
+			expire = "1965.1.1.1"
+			traits = {  }
+		}
+	}
+	INC_Sarojini_Naidu = {
+		name = "Sarojini Naidu"
+		
+	}
+	INC_Kamaladevi_Chattopadhyay = {
+		name = "Kamaladevi Chattopadhyay"
+		
+	}
+	INC_Walchand_Hirachand_Doshi = {
+		name = "Walchand Hirachand Doshi"
+		
+	}
+	INC_Kanhaiyalal_Maneklal_Munshi = {
+		name = "Kanhaiyalal Maneklal Munshi"
+		
+	}
+	INC_morarji_ranchhodji_desai = {
+		name = "Morarji Ranchhodji Desai"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/INC/Portrait_INC_Morarji_Ranchhodji_Desai.png"
+			}
+		}
+		country_leader = {
+			ideology = social_liberalism
+			traits = { humble }
+			expire = "1965.1.1.1"
+		}
+	}
+}

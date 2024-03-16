@@ -1,0 +1,75 @@
+################################
+#materiel_manufacturer##############
+################################
+UKR_Kyiv_Arsenal_Factory_organization = {
+	include = generic_infantry_equipment_organization
+	icon = GFX_idea_Kyiv_Arsenal_Factory
+	allowed = {
+		original_tag = UKR 
+	}
+}
+UKR_Fort_Rifle_Factory_organization = {
+	include = generic_infantry_equipment_organization
+	icon = GFX_idea_Fort_Rifle_Factory
+	allowed = {
+		original_tag = UKR 
+	}
+}
+################################
+#tank_manufacturer##############
+################################
+UKR_Fastiv_Design_Bureau_organization = {
+	include = generic_tank_organization
+	icon = GFX_idea_Fastiv_Design_Bureau
+	allowed = {
+		original_tag = UKR 
+	}
+}
+UKR_Berdychiv_Motorcar_Factory_organization = {
+	include = generic_tank_organization
+	icon = GFX_idea_Berdychiv_Motorcar_Factory
+	allowed = {
+		original_tag = UKR 
+	}
+}
+################################
+#naval_manufacturer##############
+################################
+UKR_Mykolaiv_Shipyards_organization = {
+	include = generic_task_force_ship_organization
+	icon = GFX_idea_Mykolaiv_Shipyards
+	allowed = {
+		original_tag = UKR 
+	}
+}
+################################
+#aircraft_manufacturer##############
+################################
+UKR_Kyiv_Aeronautics_Club_organization = {
+	include = generic_general_aircraft_organization
+	icon = GFX_idea_Kyiv_Aeronautics_Club
+	allowed = {
+		original_tag = UKR 
+	}
+}
+UKR_Cherkasy_Aircraft_Bureau_organization = {
+	include = generic_general_aircraft_organization
+	icon = GFX_idea_Cherkasy_Aircraft_Bureau
+	allowed = {
+		original_tag = UKR 
+	}
+}
+UKR_Antonov_Design_Bureau_organization = {
+	include = generic_general_aircraft_organization
+	icon = GFX_idea_Antonov_Design_Bureau
+	allowed = {
+		original_tag = UKR 
+	}
+}
+UKR_Baltic_Black_Sea_Naval_Aeronautics_Society_organization = {
+	include = generic_general_aircraft_organization
+	icon = GFX_idea_Baltic_Black_Sea_Naval_Aeronautics_Society
+	allowed = {
+		original_tag = UKR 
+	}
+}

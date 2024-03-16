@@ -1,0 +1,46 @@
+capital = 651
+
+oob = "ASK_1936"
+
+set_research_slots = 2 
+
+add_ideas = {
+	ASK_spirit
+}
+
+set_convoys = 175
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1		
+	tech_recon = 1
+	tech_engineers = 1
+	tech_trucks =1
+	motorised_infantry = 1
+	early_fighter = 1
+}
+
+set_politics = {
+	ruling_party = revisionist_socialism
+	last_election = "1933.10.25"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	vanguard_socialism = 0
+	popular_socialism = 0
+	anarchism = 0
+	revisionist_socialism = 40
+	progressivism = 0
+	liberalism = 40
+	conservatism = 0
+	right_authoritarianism = 20
+	despotism = 0
+	reactionism = 0
+	accelerationism = 0
+}
+
+set_stability = 0.5
+
+recruit_character = ASK_Ayaz

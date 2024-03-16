@@ -1,0 +1,143 @@
+characters = {
+	GRE_Dimitrios_Gounaris = {
+		name = "Dimitrios Gounaris"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GRE/Portrait_Dimitrios_Gounaris.png"
+			}
+		}
+		country_leader = {
+			ideology = social_conservatism
+			expire = "1965.1.1.1"
+		}
+	}
+	GRE_Konstantinos_Karamanlis = {
+		name = "Konstantinos Karamanlis"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GRE/Portrait_Konstantinos_Karamanlis.png"
+			}
+		}
+	}
+	GRE_Sofoklis_Venizelos = {
+		name = "Sofoklis Venizelos"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GRE/Portrait_Sofoklis_Venizelos.png"
+			}
+		}
+		country_leader = {
+			ideology = national_liberalism
+			expire = "1965.1.1.1"
+		}
+	}
+	GRE_Ioannis_Metaxas = {
+		name = "Ioannis Metaxas"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GRE/Portrait_Ioannis_Metaxas.png"
+			}
+		}
+		country_leader = {
+			ideology = revolutionary_nationalism
+			expire = "1965.1.1.1"
+		}
+	}
+	GRE_Alexandros_Svolos_Poly = {
+		name = "Alexandros Svolos"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GRE/Portrait_Alexandros_Svolos_Poly.png"
+			}
+			army = {
+				large = "gfx/leaders/GRE/Portrait_Alexandros_Svolos_Army.png"
+			}
+		}
+		country_leader = {
+			ideology = provisional_government
+			expire = "1965.1.1.1"
+		}
+		corps_commander = {
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 3
+		}
+	}
+	GRE_Alexandros_Svolos_PopSoc = {
+		name = "Alexandros Svolos"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GRE/Portrait_Alexandros_Svolos_PopSoc.png"
+			}
+			army = {
+				large = "gfx/leaders/GRE/Portrait_Alexandros_Svolos_Army.png"
+			}
+		}
+		country_leader = {
+			ideology = spartakism
+			expire = "1965.1.1.1"
+		}
+		corps_commander = {
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 3
+		}
+	}
+	GRE_Angelos_Sikelianos = {
+		name = "Angelos Sikelianos"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GRE/Portrait_Angelos_Sikelianos.png"
+			}
+		}
+		country_leader = {
+			ideology = religious_socialism
+			expire = "1965.1.1.1"
+		}
+	}
+	GRE_Nicolas_Calas = {
+		name = "M. Spieros"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GRE/Portrait_Nicolas_Calas.png"
+			}
+		}
+		country_leader = {
+			ideology = surrealism
+			expire = "1965.1.1.1"
+		}
+	}
+	GRE_Dimitris_Giotopoulos = {
+		name = "Dimitris Giotopoulos"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GRE/Portrait_Dimitris_Giotopoulos.png"
+			}
+		}
+		country_leader = {
+			ideology = leninism
+			expire = "1965.1.1.1"
+		}
+	}
+
+	GRE_Alexandros_Papanastasiou = {
+		name = "Alexandros Papanastasiou"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GRE/Portrait_Alexandros_Papanastasiou.png"
+			}
+		}
+	}
+	GRE_Alexander_Karadordevic = {
+		name = "Alexandros I"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GRE/Portrait_Alexander_Karadordevic.png"
+			}
+		}
+	}
+}

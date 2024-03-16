@@ -1,0 +1,17 @@
+characters = {
+	PAK_sikandar_hayat_khan = {
+		name = "Sikandar Hayat Khan"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/PAK/Portrait_PAK_Sikandar_Hayat_Khan.png"
+			}
+		}
+		country_leader = {
+			ideology = anocracy
+			expire = "1965.1.1.1"
+			traits = {
+				popular_figurehead
+			}
+		}
+	}
+}

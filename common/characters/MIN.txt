@@ -1,0 +1,14 @@
+characters = {
+	MIN_antonio_carlos_ribeiro_de_andrada = {
+		name = "Antônio Carlos Ribeiro de Andrada"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MIN/Portrait_MIN_ACRA.png"
+			}
+		}
+		country_leader = {
+			ideology = oligarchy
+			expire = "1965.1.1.1"
+		}
+	}
+}

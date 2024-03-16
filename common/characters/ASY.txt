@@ -1,0 +1,591 @@
+characters = {
+	ASY_benyamin_XIX_shimun = {
+		name = "Benyamin XIX Shimun"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/ASY/Portrait_Assyria_Benyamin.png"
+				small = "gfx/interface/ministers/ASY/ASY_Benyamin_XIX_Shimun.png"
+			}
+			army = {
+				small = "gfx/interface/ministers/ASY/ASY_Benyamin_XIX_Shimun.png"
+			}
+		}
+		country_leader = {
+			ideology = theocracy
+			expire = "1965.1.1.1"
+		}
+		advisor = {
+			available = {
+				has_country_leader = {
+					character = ASY_benyamin_XIX_shimun
+					ruling_only = yes
+				}
+			}
+			allowed = {
+				original_tag = ASY
+			}
+			idea_token = ASY_benyamin_xix_hog
+			slot = head_of_government
+			traits = {
+				hog_spiritual_leader
+			}
+		}
+	}
+	ASY_agha_petros = {
+		name = "Agha Petros"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/ASY/Portrait_Assyria_Agha_Petros_Polyarchy.png"
+				small = "gfx/interface/ministers/ASY/ASY_Agha_Petros.png"
+			}
+			army = {
+				large="gfx/leaders/ASY/Portrait_Assyria_Agha_Petros_General.png"
+				small = "gfx/interface/ministers/ASY/ASY_Agha_Petros.png"
+			}
+		}
+		corps_commander = {
+			traits = { brilliant_strategist war_hero }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 4
+			logistics_skill = 4
+		}
+		country_leader = {
+			ideology = national_rejuvenatism
+			expire = "1965.1.1.1"
+		}
+		country_leader = {
+			expire = "1965.1.1"
+			ideology = provisional_government
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = ASY_agha_petros_coa
+			allowed = {
+				original_tag = ASY
+			}
+			traits = {
+				army_chief_organizational_2
+			}
+		}
+		advisor = {
+			slot = theorist
+			idea_token = ASY_agha_petros_the
+			allowed = {
+				original_tag = ASY
+			}
+			traits = {
+				military_theorist
+			}
+		}
+		advisor = {
+			slot = head_of_intel
+			idea_token = ASY_agha_petros_int
+			allowed = {
+				original_tag = ASY
+			}
+			available = {
+				has_completed_focus = ASY_ascendance_of_petros
+			}
+			traits = {
+				int_technical_specialist
+			}
+		}
+	}
+	ASY_shimun_xxi = {
+		name = "Shimun XXI Eshai"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ASY/Portrait_Assyria_Shimun.png"
+				small = "gfx/interface/ministers/ASY/ASY_Shimun_XXI_Eshai.png"
+			}
+			army = {
+				small = "gfx/interface/ministers/ASY/ASY_Shimun_XXI_Eshai.png"
+			}
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = ASY_shimun_xxi_hog
+			allowed = {
+				original_tag = ASY
+			}
+			available = {
+				has_country_leader = {
+					character = ASY_shimun_xxi
+					ruling_only = yes
+				}
+			}
+			traits = {
+				head_of_government
+				hog_spiritual_leader
+			}
+		}
+	}
+
+	ASY_freydun_atturaya = {
+		name = "Freydun Atturaya"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ASY/Portrait_Assyria_Freydun_PopSoc.png"
+				small = "gfx/interface/ministers/ASY/ASY_Freydun_Atturaya.png"
+			}
+			army = {
+				large = "gfx/leaders/ASY/Portrait_Assyria_Freydun_General.png"
+				small = "gfx/interface/ministers/ASY/ASY_Freydun_Atturaya.png"
+			}
+		}
+		country_leader = {
+			expire = "1965.1.1"
+			ideology = nationalist_socialism
+		}		
+		country_leader = {
+			expire = "1965.1.1"
+			ideology = folk_socialism
+		}
+		advisor = {
+			slot = economy_minister
+			traits = {
+				eco_mixed_economy
+			}
+			idea_token = ASY_freydun_atturaya_eco
+			allowed = {
+				original_tag = ASY
+			}
+			available = {
+				has_completed_focus = ASY_visions_of_freydun_the_assyrian
+			}
+		}
+	}
+	ASY_yusuf_malek = {
+		name = "Yusuf Malek"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ASY/Portrait_Assyria_Yusuf_Malek.png"
+				small = "gfx/interface/ministers/ASY/ASY_Yusuf_Malek.png"
+			}
+			army = {
+				large = "gfx/leaders/ASY/Portrait_Assyria_Yusuf_Malek.png"
+				small = "gfx/interface/ministers/ASY/ASY_Yusuf_Malek.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_YUSUF_MALEK_DESC"
+			expire = "1965.1.1"
+			ideology = national_conservatism
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = ASY_yusuf_malek_eco
+			allowed = {
+				original_tag = ASY
+			}
+			available = {
+				has_completed_focus = ASY_ascendance_of_petros
+			}
+			traits = {
+				eco_oil_baron
+			}
+		}
+	}
+	ASY_Malik_Khoshaba = {
+		name = "Malik Khoshaba"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/ASY/ASY_Malik_Khoshaba.png"
+			}
+			army = {
+				large = "gfx/leaders/ASY/ASY_Malik_Khoshaba.png"
+				small = "gfx/interface/ministers/ASY/ASY_Malik_Khoshaba.png"
+			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = ASY_Malik_Khoshaba_carm
+			allowed = {
+				original_tag = ASY
+			}
+			traits = {
+				army_chief_offensive_2
+			}
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = ASY_Malik_Khoshaba_sec
+			allowed = {
+				original_tag = ASY
+			}
+			available = {
+				NOT = {
+					has_completed_focus = ASY_for_a_free_assyria
+				}
+			}
+			traits = {
+				sec_health_and_safety
+			}
+		}
+		field_marshal = {
+			traits = { aggressive_assaulter war_hero }
+			skill = 3
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 2
+		}
+	}
+	ASY_Dawid_Mar_Shimun = {
+		name = "Dawid Mar Shimun"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/ASY/ASY_Dawid_Mar_Shimun.png"
+			}
+			army = {
+				large = "gfx/leaders/ASY/Portrait_Assyria_Dawid_Mar_Shimun.png"
+				small = "gfx/interface/ministers/ASY/ASY_Dawid_Mar_Shimun.png"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = ASY_Dawid_Mar_Shimun_hc
+			allowed = {
+				original_tag = ASY
+			}
+			traits = {
+				army_artillery_1
+			}
+		}
+		corps_commander = {
+			traits = { trait_engineer fortress_buster }
+			skill = 2
+			attack_skill = 3
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 3
+		}
+		advisor = {
+			slot = head_of_intel
+			idea_token = ASY_Dawid_Mar_Shimun_int
+			allowed = {
+				original_tag = ASY
+			}
+			available = {
+				NOT = {
+					has_completed_focus = ASY_for_a_free_assyria
+				}
+			}
+			traits = {
+				int_logistics_specialist
+			}
+		}
+	}
+	ASY_Malik_Qambar = {
+		name = "Malik Qambar"
+		portraits = {
+			army = {
+				large = "gfx/leaders/ASY/Portrait_Assyria_Malik_Qambar.png"
+				small = "gfx/interface/ministers/ASY/ASY_Malik_Qambar.png"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = ASY_Malik_Khoshaba_hc
+			allowed = {
+				original_tag = ASY
+			}
+			traits = {
+				army_regrouping_2
+			}
+		}
+		corps_commander = {
+			traits = { skilled_staffer organizer }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 3
+		}
+	}
+	ASY_Yosip_Khnanisho = {
+		name = "Yosip Khnanisho"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/ASY/ASY_Yosip_Khnanisho.png"
+			}
+		}
+		advisor = {
+			slot = foreign_minister
+			idea_token = ASY_Yosip_Khnanisho_for
+			allowed = {
+				original_tag = ASY
+			}
+			available = {
+				NOT = {
+					has_completed_focus = ASY_for_a_free_assyria
+				}
+			}
+			traits = {
+				for_great_compromiser
+			}
+		}
+	}
+	ASY_Surma_Mar_Shimun = {
+		name = "Surma Mar Shimun"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/ASY/ASY_Surma_Mar_Shimun.png"
+			}
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = ASY_Surma_Mar_Shimun_eco
+			allowed = {
+				original_tag = ASY
+			}
+			available = {
+				NOT = {
+					has_completed_focus = ASY_for_a_free_assyria
+				}
+			}
+			traits = {
+				eco_reformer
+			}
+		}
+	}
+	ASY_Benjamin_Arsanis  = {
+		name = "Benjamin Arsanis"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/ASY/ASY_Benjamin_Arsanis.png"
+			}
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = ASY_Benjamin_Arsanis_hog
+			allowed = {
+				original_tag = ASY
+			}
+			available = {
+				has_completed_focus = ASY_visions_of_freydun_the_assyrian
+			}
+			traits = {
+				hog_ambitious_union_boss
+			}
+		}
+	}
+	ASY_Ziga_Levkoev  = {
+		name = "Ziga Levkoev"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/ASY/ASY_Ziga_Levkoev.png"
+			}
+		}
+		advisor = {
+			slot = foreign_minister
+			idea_token = ASY_Ziga_Levkoev_for
+			allowed = {
+				original_tag = ASY
+			}
+			available = {
+				has_completed_focus = ASY_visions_of_freydun_the_assyrian
+			}
+			traits = {
+				for_biased_intellectual
+			}
+		}
+	}
+	ASY_Baba_Parhad = {
+		name = "Baba Parhad"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/ASY/ASY_Baba_Parhad.png"
+			}
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = ASY_Baba_Parhad_sec
+			allowed = {
+				original_tag = ASY
+			}
+			available = {
+				has_completed_focus = ASY_visions_of_freydun_the_assyrian
+			}
+			traits = {
+				sec_man_of_the_people
+			}
+		}
+	}
+	ASY_Yusuf_Salman_Yusuf = {
+		name = "Yusuf Salman Yusuf"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/ASY/ASY_Yusuf_Salman_Yusuf.png"
+			}
+		}
+		advisor = {
+			slot = head_of_intel
+			idea_token = ASY_Yusuf_Salman_Yusuf_int
+			allowed = {
+				original_tag = ASY
+			}
+			available = {
+				has_completed_focus = ASY_visions_of_freydun_the_assyrian
+			}
+			traits = {
+				int_civilian_specialist
+			}
+		}
+	}
+	ASY_Farid_Nuzha = {
+		name = "Farid Nuz'ha"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/ASY/ASY_Farid_Nuzha.png"
+			}
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = ASY_Farid_Nuzha_hog
+			allowed = {
+				original_tag = ASY
+			}
+			available = {
+				has_completed_focus = ASY_ascendance_of_petros
+			}
+			traits = {
+				hog_flamboyant_tough_guy
+			}
+		}
+	}
+	ASY_David_Barsum_Perley = {
+		name = "David Barsum Perley"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/ASY/ASY_David_Barsum_Perley.png"
+			}
+		}
+		advisor = {
+			slot = foreign_minister
+			idea_token = ASY_David_Barsum_Perley_for
+			allowed = {
+				original_tag = ASY
+			}
+			available = {
+				has_completed_focus = ASY_ascendance_of_petros
+			}
+			traits = {
+				sec_silent_lawyer
+			}
+		}
+	}
+	ASY_Naoum_Faik = {
+		name = "Naoum Faik"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/ASY/ASY_Naoum_Faik.png"
+			}
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = ASY_Naoum_Faik_sec
+			allowed = {
+				original_tag = ASY
+			}
+			available = {
+				has_completed_focus = ASY_ascendance_of_petros
+			}
+			traits = {
+				sec_compassionate_gentleman
+			}
+		}
+	}
+	ASY_bureau_of_patrol_boats = {
+		name = "Burea of Patrol Boats"
+		portraits = {
+			army = {
+				small = "GFX_idea_ASY_bureau_of_patrol_boats"
+			}
+		}
+		advisor = {
+			slot = navy_chief
+			traits = {
+				navy_chief_reform_1
+			}
+			allowed = {
+				original_tag = ASY
+			}
+			idea_token = ASY_bureau_of_patrol_boats
+		}
+	}
+	ASY_Emma_Baijan_Peku = {
+		name = "Emma Baijan Peku"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/ASY/ASY_Emma_Baijan_Peku.png"
+			}
+		}
+		advisor = {
+			slot = air_chief
+			traits = {
+				air_chief_reform_1
+			}
+			allowed = {
+				original_tag = ASY
+			}
+			idea_token = ASY_Emma_Baijan_Peku_cair
+		}
+	}
+	ASY_Bozo_Kivarkis = {
+		name = "Bozo Kiwarkis"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/ASY/ASY_Bozo_Kivarkis.png"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = ASY_Bozo_Kivarkis_hc
+			allowed = {
+				original_tag = ASY
+			}
+			traits = {
+				army_concealment_1
+			}
+		}
+	}
+	ASY_Malik_Yaqo = {
+		name = "Malik Yaqo"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/ASY/ASY_Malik_Yaqo.png"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = ASY_Malik_Yaqo_hc
+			allowed = {
+				original_tag = ASY
+			}
+			traits = {
+				army_entrenchment_1
+			}
+		}
+	}
+	ASY_Tremma_Yacob_Khoshaba_Aboona = {
+		name = "Tremma Yacob Khoshaba Aboona"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/ASY/ASY_Tremma_Yacob_Khoshaba_Aboona.png"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = ASY_Tremma_Yacob_Khoshaba_Aboona_hc
+			allowed = {
+				original_tag = ASY
+			}
+			traits = {
+				air_air_combat_training_1
+			}
+		}
+	}
+}

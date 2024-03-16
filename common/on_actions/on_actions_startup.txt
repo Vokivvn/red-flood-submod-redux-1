@@ -1,0 +1,103 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			every_country = {
+				limit = {
+					OR = {
+						tag = GER
+						tag = POL
+						tag = BLR
+						tag = LIT
+						tag = UKR
+						tag = HUN
+						tag = SLO
+						tag = TRS
+						tag = DAN
+						tag = DEN
+						tag = NOR
+					}
+				}
+				set_country_flag = warschauer_vertrag
+				add_dynamic_modifier = { modifier = warsaw_pact }
+			}
+			every_country = {
+				limit = {
+					OR = {
+						tag = GER
+						tag = POL
+					}
+				}
+				set_country_flag = wp_major
+			}
+			ATU = {
+				set_variable = { wp_cgf_minor = -0.001 }
+				set_variable = { wp_me_minor = 0.01 }
+				set_variable = { wp_tof_minor = 0.01 }
+				set_variable = { wp_psicf_minor = 0.01 }
+				set_variable = { wp_cgf_major = -0.01 }
+				set_variable = { wp_me_major = 0.1 }
+				set_variable = { wp_tof_major = 0.1 }
+				set_variable = { wp_psicf_major = 0.1 }
+				set_variable = { wp_count_minor = 9 }
+				set_variable = { wp_count_major = 2 }
+				wp_setup = yes
+				wp_total_count = yes
+			}
+			every_country = {
+				limit = {
+					has_country_flag = is_russian_warlord
+				}
+				set_variable = { smuta_surrender_limit = -0.30 }
+				set_variable = { smuta_min_export = -0.8 }
+				set_variable = { smuta_tef = -0.8 }
+				add_dynamic_modifier = { modifier = second_smuta }
+			}
+			every_state = {
+				limit = {
+					OR = {
+						state = 793
+						state = 962
+						state = 1149
+						state = 915
+						state = 330
+						state = 914
+						state = 1150
+						state = 1151
+					}
+				}
+				set_variable = { is_mongolian_state = true }
+			}
+			every_state = {
+				limit = {
+					OR = {
+						state = 654
+						state = 1213
+						state = 838
+						state = 898
+						state = 961
+						state = 329
+						state = 564
+						state = 563
+						is_owned_by = RUS
+						is_owned_by = SRU 
+						is_owned_by = FIN 
+						is_owned_by = KAV 
+						is_owned_by = ARM 
+						is_owned_by = DKB 
+						is_owned_by = SIB 
+						is_owned_by = ORE 
+						is_owned_by = TRK 
+						is_owned_by = WRU
+						is_owned_by = KCK 
+						is_owned_by = ZHR 
+						is_owned_by = TUC 
+						is_owned_by = KHW 
+						is_owned_by = TUK 
+						is_owned_by = BKR 
+					}
+				}
+				set_variable = { is_russian_state = true }
+			}
+		}
+    }
+}

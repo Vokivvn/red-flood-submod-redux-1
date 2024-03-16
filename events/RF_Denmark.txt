@@ -1,0 +1,324 @@
+#Lego
+add_namespace = DEN
+
+country_event = {
+	id = DEN.1 #1936 election
+	title = DEN.1.t
+	desc = DEN.1.desc
+	#picture = GFX_ISR_flag_raise
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = DEN.1.a #SDAP
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 10000
+				has_game_rule = {
+					rule = DEN_ai_route
+					option = SDAP
+				}
+			}
+		}
+		news_event = {
+			id = news.109
+		}
+		add_popularity = {
+			ideology = revisionist_socialism
+			popularity = 0.3
+		}
+	}
+	option = {
+		name = DEN.1.b #RV
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 10000
+				has_game_rule = {
+					rule = DEN_ai_route
+					option = RV
+				}
+			}
+		}
+		news_event = {
+			id = news.110
+		}
+		set_country_flag = is_socialist_aligned
+		add_popularity = {
+			ideology = progressivism
+			popularity = 0.3
+		}
+		set_politics = {
+			ruling_party = progressivism
+		}
+	}
+	option = {
+		name = DEN.1.c #DKP
+		ai_chance = {
+			factor = 20
+			modifier = {
+				factor = 10000
+				has_game_rule = {
+					rule = DEN_ai_route
+					option = DKP
+				}
+			}
+		}
+		news_event = {
+			id = news.111
+		}
+		country_event = {
+			days = 27
+			id = DEN.2
+		}
+		add_popularity = {
+			ideology = popular_socialism
+			popularity = 0.3
+		}
+		set_politics = {
+			ruling_party = popular_socialism
+		}
+	}
+	option = {
+		name = DEN.1.d #S&R
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 10000
+				OR = {
+					has_game_rule = {
+						rule = DEN_ai_route
+						option = SR
+					}
+					has_game_rule = {
+						rule = DEN_ai_route
+						option = DKP_B
+					}
+					has_game_rule = {
+						rule = DEN_ai_route
+						option = USF
+					}
+					has_game_rule = {
+						rule = DEN_ai_route
+						option = SDAP_F
+					}
+				}
+			}
+		}
+		news_event = {
+			id = news.112
+		}
+		country_event = {
+			days = 60
+			id = DEN.3
+		}
+		set_country_flag = is_socialist_aligned
+		add_popularity = {
+			ideology = conservatism
+			popularity = 0.3
+		}
+		set_politics = {
+			ruling_party = conservatism
+		}
+	}
+}
+country_event = {
+	id = DEN.2 #no more parliament
+	title = DEN.2.t
+	desc = DEN.2.desc
+	#picture = GFX_ISR_flag_raise
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = DEN.2.a
+		news_event = {
+			id = news.113
+		}
+		remove_ideas = {
+			DEN_democratic_road
+		}
+	}
+}
+country_event = {
+	id = DEN.3 #RSF owns the cons
+	title = DEN.3.t
+	desc = DEN.3.desc
+	#picture = GFX_ISR_flag_raise
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = DEN.3.a
+		news_event = {
+			id = news.114
+		}
+		country_event = {
+			days = 12
+			id = DEN.4
+		}
+		remove_ideas = {
+			DEN_democratic_road
+		}
+		add_popularity = {
+			ideology = conservatism
+			popularity = -0.4
+		}
+		add_popularity = {
+			ideology = vanguard_socialism
+			popularity = 0.2
+		}
+		add_popularity = {
+			ideology = anarchism
+			popularity = 0.2
+		}
+		add_popularity = {
+			ideology = accelerationism
+			popularity = 0.2
+		}
+		set_politics = {
+			ruling_party = vanguard_socialism
+		}
+	}
+}
+country_event = {
+	id = DEN.4 #>leftist >unity
+	title = DEN.4.t
+	desc = DEN.4.desc
+	#picture = GFX_ISR_flag_raise
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = DEN.4.a
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 10000
+				has_game_rule = {
+					rule = DEN_ai_route
+					option = DKP_B
+				}
+			}
+		}
+		add_popularity = {
+			ideology = vanguard_socialism
+			popularity = 0.2
+		}
+		set_politics = {
+			ruling_party = vanguard_socialism
+		}
+		news_event = {
+			id = news.117
+		}
+	}
+	option = {
+		name = DEN.4.b
+		ai_chance = {
+			factor = 35
+			modifier = {
+				factor = 10000
+				has_game_rule = {
+					rule = DEN_ai_route
+					option = USF
+				}
+			}
+		}
+		set_country_flag = is_socialist_aligned
+		add_popularity = {
+			ideology = anarchism
+			popularity = 0.2
+		}
+		set_politics = {
+			ruling_party = anarchism
+		}
+		news_event = {
+			id = news.116
+		}
+	}
+	option = {
+		name = DEN.4.c
+		ai_chance = {
+			factor = 20
+			modifier = {
+				factor = 10000
+				has_game_rule = {
+					rule = DEN_ai_route
+					option = SDAP_F
+				}
+			}
+		}
+		set_country_flag = is_socialist_aligned
+		add_popularity = {
+			ideology = accelerationism
+			popularity = 0.2
+		}
+		set_politics = {
+			ruling_party = accelerationism
+		}
+		news_event = {
+			id = news.115
+		}
+	}
+}
+country_event = {
+	id = DEN.5
+	title = DEN.5.t
+	desc = DEN.5.desc
+	#picture = GFX_ISR_flag_raise
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = DEN.5
+	}
+}
+country_event = {
+	id = DEN.6
+	title = DEN.6.t
+	desc = DEN.6.desc
+	#picture = GFX_ISR_flag_raise
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = DEN.6
+	}
+}
+country_event = {
+	id = DEN.7
+	title = DEN.7.t
+	desc = DEN.7.desc
+	#picture = GFX_ISR_flag_raise
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = DEN.7
+	}
+}
+country_event = {
+	id = DEN.8
+	title = DEN.8.t
+	desc = DEN.8.desc
+	#picture = GFX_ISR_flag_raise
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = DEN.8
+	}
+}
+country_event = {
+	id = DEN.9
+	title = DEN.9.t
+	desc = DEN.9.desc
+	#picture = GFX_ISR_flag_raise
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = DEN.9
+	}
+}

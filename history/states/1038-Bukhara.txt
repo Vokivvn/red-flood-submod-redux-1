@@ -1,0 +1,32 @@
+
+state={
+	id=1038
+	name="STATE_1038"
+
+	history={
+		owner = BKR
+		victory_points = {
+			1573 25
+		}
+		victory_points = {
+			12239 5
+		}
+		victory_points = {
+			7639 10
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 1
+		}
+		add_core_of = BKR
+
+	}
+
+	provinces={
+		756 1573 1632 7639 9605 10205 10470 12161 12239 12722 1623
+	}
+	manpower=1052000
+	buildings_max_level_factor=1.000
+	state_category=town
+}

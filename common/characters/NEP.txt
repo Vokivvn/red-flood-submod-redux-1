@@ -1,0 +1,14 @@
+characters = {
+	NEP_tribhuvan_bir_bikram_shah = {
+		name = "Tribhuvan Bir Bikram Shah"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/NEP/Portrait_NEP_Tribhuvan_Shah.png"
+			}
+		}
+		country_leader = {
+			ideology = absolute_monarchy
+			expire = "1965.1.1.1"
+		}
+	}
+}

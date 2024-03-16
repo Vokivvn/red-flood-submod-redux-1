@@ -1,0 +1,107 @@
+﻿capital = 822
+set_research_slots = 3
+set_convoys = 30
+
+oob = "DAI"
+set_naval_oob = "DAI_naval"
+set_air_oob = "DAI_air"
+
+recruit_character = DAI_Nam_Hung_Nhat
+recruit_character = DAI_Khoi
+recruit_character = DAI_Hideki_Tojo
+recruit_character = DAI_Bao_Dai
+
+add_ideas = {
+	DAI_united
+	DAI_acolonialstate
+	DAI_nihonisation
+	DAI_Mandarins_Warlordism
+}
+
+###EVENTS###
+country_event = { id = dainam.99 days = 1 }
+
+###TECH###
+set_technology = {
+	### INF ###
+	infantry_weapons = 2
+	infantry_weapons1 = 1
+	tech_support = 1
+	tech_engineers = 1
+	tech_recon = 1
+	gw_artillery = 1
+	tech_trucks =1
+	motorised_infantry = 1
+}
+
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	set_technology = {
+		early_submarine = 1
+		early_heavy_cruiser = 1
+	}
+}
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		early_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		early_ship_hull_cruiser = 1
+		basic_battery = 1
+		basic_light_battery = 1
+		coastal_defense_ships = 1
+	}
+}
+if = {
+	limit = { NOT = { has_dlc = "No Step Back" } }
+	set_technology = {
+		gwtank = 1
+	}
+}
+if = {
+	limit = { has_dlc = "No Step Back" }
+	set_technology = {
+		gwtank_chassis = 1
+	}
+}
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+	set_technology = {
+		iw_small_airframe = 1
+		aa_lmg = 1
+		aa_cannon_1 = 1
+		early_bombs = 1
+		engines_1 = 1
+	}
+}
+if = {
+	limit = { NOT = { has_dlc = "By Blood Alone" } }
+	set_technology = {
+		early_fighter = 1
+		CAS1 = 1
+	}
+}
+
+###POLITICS###
+set_politics = {
+	ruling_party = despotism
+	last_election = "1936.6.15"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	vanguard_socialism = 14
+	popular_socialism = 15
+	anarchism = 1
+	revisionist_socialism = 0
+	progressivism = 9
+	liberalism = 0
+	conservatism = 21
+	right_authoritarianism = 10
+	despotism = 14
+	reactionism = 10
+	accelerationism = 6
+}
+

@@ -1,0 +1,284 @@
+ideas = {
+	country = {
+		TAN_religious_tensions = {
+			picture = generic_idea_RF_idea_skull_flame
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = -0.15
+				justify_war_goal_time = 0.90
+				trade_opinion_factor = -0.1
+			}
+		}
+		
+		TAN_religious_tensions2 = {
+			picture = generic_idea_RF_idea_skull_flame
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = -0.10
+				justify_war_goal_time = 0.45
+				trade_opinion_factor = -0.05
+			}
+		}
+		
+		TAN_religious_tensions3 = {
+			picture = generic_idea_RF_idea_buddah_statue
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				justify_war_goal_time = 0.20
+			}
+		}
+		
+		TAN_guerilla_army = {
+			picture = generic_idea_RF_idea_grenade
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				conscription_factor = -0.5
+				war_support_factor = -0.25
+			}
+		}
+		
+		TAN_guerilla_army2 = {
+			picture = generic_idea_RF_idea_1911
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				army_org_factor = 0.05
+				conscription_factor = -0.25
+				war_support_factor = -0.15
+			}
+		}
+		
+		TAN_guerilla_army3 = {
+			picture = generic_idea_RF_idea_rifle
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				army_org_factor = 0.10
+				conscription_factor = -0.1
+				war_support_factor = -0.05
+			}
+		}
+		
+		TAN_eurasian_army = {
+			picture = generic_idea_RF_idea_soldier
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				army_org_factor = 0.15
+				conscription_factor = 0.5
+				war_support_factor = 0.1
+			}
+		}
+		
+		TAN_divided_tribes = {
+			picture = generic_idea_RF_idea_crossed_swords
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = -0.15
+				political_power_factor = -0.25
+				surrender_limit = -0.1
+			}
+		}
+		
+		TAN_divided_tribes2 = {
+			picture = generic_idea_RF_idea_crossed_swords
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = -0.10
+				political_power_factor = -0.1
+				surrender_limit = -0.05
+			}
+		}
+		
+		TAN_industrial_dinosaur = {
+			picture = generic_idea_RF_idea_bezel_gear
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				research_speed_factor = -0.2
+				production_factory_max_efficiency_factor = -0.15
+				production_speed_buildings_factor = -0.15
+			}
+		}
+		
+		TAN_industrial_dinosaur2 = {
+			picture = generic_idea_RF_idea_bezel_gear
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				research_speed_factor = -0.1
+				production_factory_max_efficiency_factor = -0.05
+				production_speed_buildings_factor = -0.05
+			}
+		}
+		
+		TAN_industrial_dinosaur3 = {
+			picture = generic_idea_RF_idea_bezel_gear
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				production_factory_max_efficiency_factor = 0.10
+				production_speed_buildings_factor = 0.10
+			}
+		}
+		
+		TAN_welcome_all = {
+			picture = generic_idea_RF_idea_agreement
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				MONTHLY_POPULATION = 0.1
+				attrition = -0.1
+				consumer_goods_expected_value = 0.02
+				research_speed_factor = 0.02
+			}
+		}
+		
+		TAN_synod = {
+			picture = generic_idea_RF_idea_orthodox
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				military_leader_cost_factor = -0.05
+				political_power_cost = -0.05
+				drift_defence_factor = 0.03
+			}
+		}
+		
+		TAN_synod2 = {
+			picture = generic_idea_RF_idea_orthodox
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				military_leader_cost_factor = -0.10
+				political_power_cost = -0.1
+				drift_defence_factor = 0.06
+			}
+		}
+		
+		TAN_synod3 = {
+			picture = generic_idea_RF_idea_orthodox
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				military_leader_cost_factor = -0.15
+				political_power_cost = -0.15
+				drift_defence_factor = 0.09
+			}
+		}
+		
+		TAN_Barons_Men = {
+			picture = generic_idea_RF_idea_cavalry
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				foreign_minister_cost_factor = -0.10
+				economy_minister_cost_factor = -0.10
+				security_minister_cost_factor = -0.10
+				#head_of_intel_cost_factor = -0.10
+				#trade_laws_cost_factor = -0.10
+				#mobilization_laws_cost_factor = -0.10
+				#economy_cost_factor = -0.10
+			}
+		}
+		
+		TAN_Barons_Men2 = {
+			picture = generic_idea_RF_idea_buddhism
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				max_command_power = 25
+				promote_cost_factor = 0.2
+				command_power_gain_mult = 0.1
+			}
+		}
+		
+		TAN_Barons_Men3 = {
+			picture = generic_idea_RF_idea_king
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				conscription = 0.05
+			}
+		}
+		
+		TAN_Mahakala_Path = {
+			picture = generic_idea_RF_idea_star
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				non_core_manpower = 0.2
+			}
+		}
+		
+		TAN_Mahakala_Path2 = {
+			picture = generic_idea_RF_idea_coins
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				consumer_goods_expected_value = -0.05
+			}
+		}
+		
+		TAN_Uyighur_defectors = {
+			picture = generic_idea_RF_idea_resist
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				offence = 0.1
+				defence = 0.05
+				reactionism_drift = 0.03
+			}
+		}
+		
+		TAN_Propaganda = {
+			picture = generic_idea_RF_idea_speeches
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				root_out_resistance_effectiveness_factor = 0.2
+				resistance_damage_to_garrison = -0.05
+				war_support_factor = 0.07
+			}
+		}
+		
+		TAN_Mongol_Training = {
+			picture = generic_idea_RF_idea_cavalry
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				training_time_army_factor = -0.1
+				cavalry_attack_factor = 0.03
+				cavalry_defence_factor = 0.03
+			}
+		}
+		
+		TAN_Russian_Banners = {
+			picture = WRT_permanent_colonisation
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				monthly_population = 0.5
+				despotism_drift = 0.01
+			}
+		}
+		TAN_express = {
+			picture = MO2_trans_siberian_railway
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				production_speed_rail_way_factor = 0.15
+				repair_speed_rail_way_factor = 0.15
+				army_speed_factor = 0.1
+				army_armor_speed_factor = 0.1
+			}
+		}
+	}
+
+}

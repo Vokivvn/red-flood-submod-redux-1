@@ -1,0 +1,14 @@
+characters = {
+	SER_Sun_Chuanfang = {
+		name = "Sun Chuanfang"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/SHA/Portrait_Sun_Chuanfang.png"
+			}
+		}
+		country_leader = {
+			ideology = military_dictatorship
+			traits = { popular_figurehead }
+		}
+	}
+}

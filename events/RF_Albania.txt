@@ -1,0 +1,194 @@
+add_namespace = albania
+
+country_event = {
+	id = albania.1
+	title = albania.1.t
+	desc = albania.1.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = albania.1.a
+		set_politics = {
+			ruling_party = conservatism
+		}
+		retire_character = ALB_fuad
+		EGY = {
+			retire_character = EGY_fuad_I
+			set_politics = { ruling_party = despotism }
+		}
+		news_event = {
+			id = news.119
+		}
+		hidden_effect = {
+			remove_ideas = ALB_house_of_slavery
+			swap_ideas = {
+				remove_idea = ALB_voice_of_napoleon
+				add_idea = ALB_voice_of_napoleon2
+			}
+			add_opinion_modifier = {
+				target = ITA
+				modifier = small_increase
+			}
+			add_opinion_modifier = {
+				target = GRE
+				modifier = small_increase
+			}
+		}
+	}
+	option = {
+		name = albania.1.b
+		add_country_leader_role = {
+			character = ALB_franz_nopcsa
+			country_leader = {
+				ideology = absolute_monarchy
+			}
+			promote_leader = yes
+		}
+		set_party_name = {
+			ideology = despotism
+			long_name = ALB_despotism_party_long
+			name = ALB_despotism_party
+		}
+		retire_character = ALB_fuad
+		EGY = {
+			retire_character = EGY_fuad_I
+			set_politics = { ruling_party = despotism }
+		}
+		news_event = {
+			id = news.120
+		}
+		hidden_effect = {
+			remove_ideas = ALB_house_of_slavery
+			remove_ideas = ALB_voice_of_napoleon
+			add_ideas = ALB_eccentric_escapade
+		}
+	}
+	option = {
+		name = albania.1.c
+		set_politics = {
+			ruling_party = right_authoritarianism
+		}
+		retire_character = ALB_fuad
+		EGY = {
+			retire_character = EGY_fuad_I
+			set_politics = { ruling_party = despotism }
+		}
+		hidden_effect = {
+			country_event = {
+				id = albania.2
+				days = 10
+			}
+		}
+		news_event = {
+			id = news.121
+		}
+		hidden_effect = {
+			remove_ideas = ALB_house_of_slavery
+			remove_ideas = ALB_voice_of_napoleon
+		}
+	}
+	option = {
+		name = albania.1.d
+		set_politics = {
+			ruling_party = revisionist_socialism
+		}
+		retire_character = ALB_fuad
+		EGY = {
+			retire_character = EGY_fuad_I
+			set_politics = { ruling_party = despotism }
+		}
+		news_event = {
+			id = news.179
+		}
+		hidden_effect = {
+			remove_ideas = ALB_house_of_slavery
+			remove_ideas = ALB_voice_of_napoleon
+			add_ideas = ALB_one_national_front
+		}
+	}
+}
+
+
+country_event = {
+	id = albania.2
+	title = albania.2.t
+	desc = albania.2.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = albania.2.a
+		if = {
+			limit = {
+				BUL = {
+					owns_state = 107
+				}
+			}
+			BUL = {
+				puppet = ALB	
+			}
+			hidden_effect = {
+				add_ideas = ALB_welcome_gentlemen_BUL
+			}
+			set_cosmetic_tag = ALB_bulgar
+		}
+		else = {
+			YUG = {
+				set_autonomy = {
+					target = ALB
+					autonomy_state = ayregion
+				}
+			}
+			set_cosmetic_tag = ALB_yugo
+			hidden_effect = {
+				add_ideas = ALB_welcome_gentlemen_YUG
+			}
+		}
+		set_politics = {
+			ruling_party = right_authoritarianism
+		}
+	}
+	option = {
+		name = albania.2.b
+		set_politics = {
+			ruling_party = reactionism
+		}
+		news_event = {
+			id = news.118
+		}
+		hidden_effect = {
+			add_ideas = ALB_supreme_guidance
+			add_opinion_modifier = {
+				target = MAR
+				modifier = small_increase
+			}
+		}
+	}
+}
+
+country_event = {
+	id = albania.3
+	title = albania.3.t
+	desc = albania.3.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = albania.3.a
+	}
+	option = {
+		name = albania.3.b
+		set_politics = {
+			ruling_party = reactionism
+		}
+		news_event = {
+			id = news.180
+		}
+		hidden_effect = {
+			remove_ideas = ALB_one_national_front
+			add_ideas = ALB_supreme_guidance
+			add_opinion_modifier = {
+				target = MAR
+				modifier = small_increase
+			}
+		}
+	}
+}

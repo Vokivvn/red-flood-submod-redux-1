@@ -1,0 +1,54 @@
+﻿instant_effect = {
+	# Heavy Cruisers #
+	create_equipment_variant = {
+		name = "Tran Hung Dao Class"				
+		type = ship_hull_cruiser_coastal_defense_ship
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_medium_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+			fixed_ship_armor_slot = ship_armor_cruiser_1
+			fixed_ship_secondaries_slot = ship_secondaries_1
+			mid_1_custom_slot = empty
+			mid_2_custom_slot = empty
+			rear_1_custom_slot = empty
+		}
+	}
+	# Light Cruisers #
+	create_equipment_variant = {
+		name = "Tran Binh Trong Class"				
+		type = ship_hull_cruiser_1
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_medium_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+			fixed_ship_armor_slot = ship_armor_cruiser_1
+			fixed_ship_secondaries_slot = ship_secondaries_1
+			mid_1_custom_slot = empty
+			mid_2_custom_slot = empty
+			rear_1_custom_slot = empty
+		}
+	}
+}
+
+units = { #We need to review this - the IJN woukd have Some Questions about puppet naval power, and also has no squadron in the region 
+
+	##### NAVAL UNITS #####
+	fleet = {
+		name = "Tran Hung Dao"
+		naval_base = 10309
+		task_force = {				
+			name = "Tran Hung Dao"				
+			location =  10309
+			ship = { name = "Tran Hung Dao" definition = heavy_cruiser equipment = { ship_hull_cruiser_coastal_defense_ship = { amount = 1 owner = DAI version_name = "Tran Hung Dao Class" } } }	
+			ship = { name = "Tran Binh Trong" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = DAI version_name = "Tran Binh Trong Class" } } }		
+			ship = { name = "Tran Khanh Du" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = DAI version_name = "Tran Binh Trong Class" } } }
+		}				
+	}
+}

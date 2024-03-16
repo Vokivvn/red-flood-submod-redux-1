@@ -1,0 +1,29 @@
+characters = {
+	MNG_zhu_yuxun = {
+		name = "Zhu Yuxun"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MNG/Portrait_Zhu_Yuxun.png"
+			}
+		}
+		country_leader = {
+			ideology = esoteric_reactionism
+			expire = "1965.1.1.1"
+			desc = POLITICS_YUXUN_DESC
+		}
+	}
+	MNG_Daming = {
+		name = "Daming"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MNG/Portrait_Zhu_Yuxun.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_MNG_ZHU_DESC"
+			ideology = esoteric_reactionism
+			expire = "1965.1.1.1"
+			desc = POLITICS_DAMING_DESC
+		}
+	}
+}

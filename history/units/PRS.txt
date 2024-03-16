@@ -1,0 +1,192 @@
+﻿instant_effect = {
+	create_equipment_variant = {
+		name = "Leichttraktor"
+		type = light_tank_chassis_0
+		parent_version = 0
+		modules = {
+			main_armament_slot = tank_small_cannon
+			turret_type_slot = tank_light_two_man_tank_turret
+			suspension_type_slot = tank_christie_suspension
+			armor_type_slot = tank_riveted_armor
+			engine_type_slot = tank_gasoline_engine
+			special_type_slot_1 = tank_radio_1
+		}
+		upgrades = {
+			tank_nsb_engine_upgrade = 2
+			tank_nsb_armor_upgrade = 2
+		}
+		obsolete = yes
+		icon = "GFX_gwtank_medium"
+	}
+	create_equipment_variant = {
+		name = "Panzer I Ausf. A"
+		type = light_tank_chassis_1
+		parent_version = 0
+		modules = {
+			main_armament_slot = tank_heavy_machine_gun
+			turret_type_slot = tank_light_one_man_tank_turret
+			suspension_type_slot = tank_christie_suspension
+			armor_type_slot = tank_riveted_armor
+			engine_type_slot = tank_gasoline_engine
+			special_type_slot_1 = tank_radio_1
+		}
+		upgrades = {
+			tank_nsb_engine_upgrade = 5
+			tank_nsb_armor_upgrade = 1
+		}
+		icon = "GFX_GER_basic_light_tank_medium"
+		obsolete = yes
+	}
+}
+
+division_template = {
+	name = "Sturmbattalion"
+	division_names_group = GER_Inf_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 } 
+	}
+}
+division_template = {
+	name = "Kavallerie Division"
+	division_names_group = GER_Cav_01
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+	}
+}
+division_template = {
+	name = "Landwehr"
+	division_names_group = GER_Inf_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		artillery_brigade = { x = 2 y = 0 }
+		artillery_brigade = { x = 2 y = 1 }
+	}
+}
+division_template = {
+	name = "Freikorps"
+	division_names_group = GER_Gar_01
+
+	regiments = {
+		motorized = { x = 0 y = 0 }
+		motorized = { x = 0 y = 1 }
+		motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+	}
+	support = {
+		recon = { x = 0 y = 0 } 
+	}
+}
+division_template = {
+	name = "Marine Brigade"
+	division_names_group = GER_Mar_01
+
+	regiments = {
+		marine = { x = 0 y = 0 }
+		marine = { x = 0 y = 1 }
+		marine = { x = 1 y = 0 }
+		marine = { x = 1 y = 1 }
+	}
+}
+units = {
+	division = {
+		division_name = { #"Marinebrigade Erhart"
+		}
+		location = 6332
+		division_template = "Marine Brigade"
+		start_experience_factor = 0.20
+	}
+	division = {
+		division_name = { #"Garde-Kavallerie-Schützen-Division" 
+		}
+		location = 11386
+		division_template = "Kavallerie Division"
+		start_experience_factor = 0.20
+	}
+	division = {
+		division_name = { #"Sturmbattalion "Stahlhelm" 
+		}
+		location = 6332
+		division_template = "Sturmbattalion"
+		start_experience_factor = 0.20
+	}
+	division = {
+		division_name = { #"Detachement von Randow" 
+		}
+		location = 6332
+		division_template = "Sturmbattalion"
+		start_experience_factor = 0.20
+	}
+	division = {
+		division_name = { #"Sturmbattalion "Wehrwolf"
+		}
+		location = 6332
+		division_template = "Sturmbattalion"
+		start_experience_factor = 0.20
+	}
+	division = {
+		division_name = { #"Sturmabteilung "Totenkopf"" 
+		}
+		location = 3288
+		division_template = "Sturmbattalion"
+		start_experience_factor = 0.20
+	}
+	division = {
+		division_name = { #"Garde-Landesschützen-Korps" 
+		}
+		location = 11386
+		division_template = "Sturmbattalion"
+		start_experience_factor = 0.20
+	}
+	division = {
+		division_name = { #"Freikorps "Schwarze Jäger"" 
+		}
+		location = 6332
+		division_template = "Freikorps"
+		start_experience_factor = 0.20
+	}
+	division = {
+		division_name = { #"Freikorps "Hacketau"" 
+		}
+		location = 3380
+		division_template = "Freikorps"
+		start_experience_factor = 0.20
+	}
+	division = {
+		division_name = { #"Freikorps von Petersdorff" 
+		}
+		location = 6332
+		division_template = "Freikorps"
+		start_experience_factor = 0.20
+	}
+	division = {
+		division_name = { #"Freiwilligen-Regiment Königsberg"
+		}
+		location = 3384
+		division_template = "Freikorps"
+		start_experience_factor = 0.20
+	}
+	division = {
+		division_name = { #"Ostrpreußisches Freiwilligenkorps" 
+		}
+		location = 6375
+		division_template = "Landwehr"
+		start_experience_factor = 0.20
+	}
+}

@@ -1,0 +1,22 @@
+state={
+	id=1250
+	name="STATE_1250"
+	manpower = 1091700
+
+	state_category = large_town
+
+	history={
+		owner = DEI
+		victory_points = { #Serang
+			10279 3
+		}
+		add_core_of = DEI
+		buildings = {
+			infrastructure = 2
+		}
+	}
+
+	provinces={
+		10279 1398
+	}
+}

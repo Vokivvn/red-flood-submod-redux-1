@@ -1,0 +1,101 @@
+﻿capital = 285
+set_research_slots = 3 
+set_stability = 0.5
+set_convoys = 175
+
+oob = "AST"
+set_naval_oob = "AST_naval"
+if = { limit = { has_dlc = "By Blood Alone" } set_air_oob = "AST_air" }
+if = { limit = {  NOT = { has_dlc = "By Blood Alone" } }  set_air_oob = "AST_air_legacy" }
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1		
+	tech_recon = 1
+	tech_engineers = 1
+	tech_trucks =1
+	motorised_infantry = 1
+	gw_artillery = 1
+	basic_light_tank = 1
+	fuel_silos = 1
+}
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	set_technology = {
+		early_destroyer = 1
+		early_light_cruiser = 1
+		early_heavy_cruiser = 1
+		early_submarine = 1
+		transport = 1
+	}
+}
+if = {
+	limit = {  has_dlc = "Man the Guns" }
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		early_ship_hull_light = 1
+		early_ship_hull_cruiser = 1
+		basic_ship_hull_cruiser = 1
+		early_ship_hull_submarine = 1
+		basic_battery = 1
+		basic_torpedo = 1
+		basic_depth_charges = 1
+		basic_cruiser_armor_scheme = 1
+		mtg_transport = 1
+	}
+}
+
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+	set_technology = {
+		iw_small_airframe = 1
+		aa_lmg = 1
+		aa_cannon_1 = 1
+		early_bombs = 1
+		engines_1 = 1
+	}
+}
+if = {
+	limit = { NOT = { has_dlc = "By Blood Alone" } }
+	set_technology = {
+		early_fighter = 1
+		CAS1 = 1
+	}
+}
+
+add_to_tech_sharing_group = anglo_technology
+set_cosmetic_tag = AST_eastralia
+
+set_politics = {
+	ruling_party = progressivism
+	last_election = "1933.10.25"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	vanguard_socialism = 0
+	popular_socialism = 0
+	anarchism = 5
+	revisionist_socialism = 10
+	progressivism = 30
+	liberalism = 25
+	conservatism = 25
+	right_authoritarianism = 0
+	despotism = 0
+	reactionism = 0
+	accelerationism = 5
+}
+
+recruit_character = AST_joseph_lyons
+recruit_character = AST_thomas_joseph_ryan
+recruit_character = AST_thomas_blamey
+recruit_character = AST_horace_robertson
+recruit_character = AST_brudenell_white
+recruit_character = AST_john_northcott
+recruit_character = AST_vernon_sturdee
+recruit_character = AST_lesie_morshead
+recruit_character = AST_iven_mackay
+recruit_character = AST_john_whitham

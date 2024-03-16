@@ -1,0 +1,80 @@
+characters = {
+	KMT_zhang_jingjiang = {
+		name = "Zhang Jingjiang"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/KMT/Portrait_KMT_Zhang_Jingjiang.png"
+			}
+		}
+		country_leader = {
+			ideology = anocracy
+			expire = "1950.9.2"
+			desc = POLITICS_JINJIANG_DESC
+		}
+	}
+	KMT_chiang_weikuo = {
+		name = "Jiang Weiguo"
+		portraits = {
+			army = {
+				large = "gfx/leaders/KMT/Portrait_Chiang_wei_kuo.png"
+			}
+		}
+		corps_commander = {
+			traits = { politically_connected }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 2
+		}
+	}
+	KMT_ju_zheng = {
+		name = "Ju Zheng"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/KMT/Portrait_Ju_Zheng_con.png"
+			}
+		}
+		country_leader={
+			expire = "1951.11.23"
+			ideology = right_populism
+			desc = POLITICS_ZHENG_DESC
+			traits = {
+				#
+			}
+		}
+		
+	}
+	KMT_gu_zhutong = {
+		name = "Gu Zhutong"
+		portraits = {
+			army = {
+				large = "gfx/leaders/KMT/Portrait_Gu_Zhutong.png"
+			}
+		}
+		corps_commander={
+			traits = { }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
+	KMT_zhang_jiahua = {
+		name = "Zhu Jiahua"
+		portraits={
+			civilian={
+				large="gfx/leaders/KMT/Portrait_Zhu_Jiahua_RW_Auth.png"
+			}
+		}
+	}
+	KMT_dai_jitao = {
+		name = "Dai Jitao"
+		portraits={
+			civilian={
+				large="gfx/leaders/KMT/Portrait_Dai_Jitao.png"
+			}
+		}
+	}
+}

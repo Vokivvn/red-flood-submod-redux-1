@@ -1,0 +1,59 @@
+﻿capital = 301
+set_research_slots = 3
+set_convoys = 175
+set_stability = 0.75
+
+oob = "PAR"
+if = { limit = { has_dlc = "By Blood Alone" } set_air_oob = "PAR_air" }
+if = { limit = {  NOT = { has_dlc = "By Blood Alone" } }  set_air_oob = "PAR_air_legacy" }
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	gw_artillery = 1
+}
+
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+	set_technology = {
+		iw_small_airframe = 1
+		aa_lmg = 1
+		aa_cannon_1 = 1
+		early_bombs = 1
+		engines_1 = 1
+	}
+}
+if = {
+	limit = { NOT = { has_dlc = "By Blood Alone" } }
+	set_technology = {
+		early_fighter = 1
+		CAS1 = 1
+	}
+}
+
+declare_war_on = {
+	target = BOL
+	type = annex_everything
+}
+
+set_politics = {
+	ruling_party = despotism
+	last_election = "1933.10.25"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	vanguard_socialism = 4
+	popular_socialism = 4
+	anarchism = 2
+	revisionist_socialism = 10
+	progressivism = 6
+	liberalism = 12
+	conservatism = 4
+	right_authoritarianism = 6
+	despotism = 52
+	reactionism = 0
+	accelerationism = 0
+}
+
+recruit_character = PAR_rafael_franco

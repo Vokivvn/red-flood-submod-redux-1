@@ -1,0 +1,24 @@
+state = { #Jinan
+	id = 597
+	name = "STATE_597"
+	manpower = 11758200
+	state_category = large_city
+
+	history = {
+		owner = BYJ
+		add_core_of = BYJ
+		buildings = {
+			infrastructure = 2
+			arms_factory = 2
+			air_base = 3
+			industrial_complex = 2
+		}
+		victory_points = {
+			1069 20
+		}
+	}
+
+	provinces = {
+		1069 4037 10072 10043 10102 12045 12069
+	}
+}

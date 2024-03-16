@@ -1,0 +1,84 @@
+characters={
+	YUN_tang_jiyao={
+		name="Tang Jiyao"
+		portraits={
+			civilian={
+				large="gfx/leaders/YUN/Portrait_YUN_Tang_Jiyao.png"
+			}
+			army = {
+				large="gfx/leaders/YUN/Portrait_Tang_Jiyao_gen.png"
+			}
+		}
+		country_leader={
+			ideology=military_dictatorship
+			expire="1965.1.1.1"
+			desc = POLITICS_JIYAO_DESC
+			id=-1
+		}
+		corps_commander = {
+			traits = { politically_connected trickster }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
+	YUN_long_yun = {
+		name="Long Yun"
+		portraits={
+			civilian={
+				large="gfx/leaders/YUN/Portrait_Long_Yun_prog.png"
+			}
+			army = {
+				large="gfx/leaders/YUN/Portrait_Long_Yun_gen.png"
+			}
+		}
+		country_leader={
+			ideology=social_nationalism
+			expire="1965.1.1.1"
+			desc  = POLITICS_YUN_DESC
+			id=-1
+		}
+		corps_commander = {
+			traits = { politically_connected }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 4
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	YUN_yang_jie = {
+		name="Yang Jie"
+		portraits={
+			army={
+				large="gfx/leaders/YUN/Portrait_Yang_Jie.png"
+			}
+		}
+		corps_commander = {
+			traits = { politically_connected infantry_officer }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	YUN_zhu_peide = {
+		name="Zhu Peide"
+		portraits={
+			army={
+				large="gfx/leaders/YUN/Portrait_Zhu_Peide.png"
+			}
+		}
+		corps_commander = {
+			traits = { infantry_officer }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 3
+			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
+}

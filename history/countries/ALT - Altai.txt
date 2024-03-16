@@ -1,0 +1,108 @@
+﻿capital = 654
+
+oob = "ALT"
+
+set_research_slots = 2
+
+set_country_flag = is_russian_warlord
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1
+	tech_recon = 1
+	tech_engineers = 1
+	tech_trucks =1
+	motorised_infantry = 1
+	gw_artillery = 1
+}
+
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+	set_technology = {
+		iw_small_airframe = 1
+		aa_lmg = 1
+		aa_cannon_1 = 1
+		early_bombs = 1
+		engines_1 = 1
+	}
+}
+if = {
+	limit = { NOT = { has_dlc = "By Blood Alone" } }
+	set_technology = {
+		early_fighter = 1
+		CAS1 = 1
+	}
+}
+
+set_politics = {
+	ruling_party = conservatism
+	last_election = "1933.10.25"
+	election_frequency = 48
+	elections_allowed = no
+}
+	
+set_popularities = {
+	vanguard_socialism = 10
+	popular_socialism = 0
+	anarchism = 0
+	revisionist_socialism = 20
+	progressivism = 5
+	liberalism = 0
+	conservatism = 25
+	right_authoritarianism = 20
+	despotism = 0
+	reactionism = 20
+	accelerationism = 0
+}
+
+add_ideas = {
+	extensive_conscription
+	export_focus
+	partial_economic_mobilisation
+}
+set_stability = 0.6
+set_war_support = 0.6
+
+recruit_character = ALT_aleksandr_kaygorodov
+recruit_character = ALT_gleb_bokii
+recruit_character = ALT_klement_voroshilov
+recruit_character = ALT_grigorii_choros_gurkhin
+recruit_character = ALT_barchenko
+recruit_character = ALT_konstantin_osipov
+recruit_character = ALT_ospan_batyr
+recruit_character = ALT_Givaapil
+recruit_character = ALT_Lhagvasuren
+recruit_character = ALT_Nikolai_Roerich
+recruit_character = ALT_Alexandr_Kondyain
+recruit_character = ALT_Alexei_Dushkin
+recruit_character = ALT_Ivan_Moskvin
+recruit_character = ALT_Magsarjav
+recruit_character = ALT_Tsog
+recruit_character = ALT_togtokho
+
+promote_character = ALT_grigorii_choros_gurkhin
+
+activate_advisor = ALT_oyogostur_omogoyovich_makhcharov_hog
+
+add_equipment_to_stockpile = {
+	type = infantry_equipment_1
+	amount = 200
+}
+add_equipment_to_stockpile = {
+	type = artillery_equipment_1
+	amount = 15
+}
+add_equipment_to_stockpile = {
+	type = support_equipment_1
+	amount = 20
+}
+add_equipment_to_stockpile = {
+	type = motorized_equipment_1
+	amount = 100
+}
+add_equipment_to_stockpile = {
+	type = train_equipment_1
+	amount = 10
+}
+

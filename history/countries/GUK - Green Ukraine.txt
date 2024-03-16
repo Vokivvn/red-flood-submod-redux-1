@@ -1,0 +1,80 @@
+﻿capital = 561
+
+oob = "GUK"
+
+set_research_slots = 3 
+
+set_convoys = 0
+
+add_ideas={
+
+}
+
+set_country_flag = is_russian_warlord
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1		
+	tech_recon = 1
+	tech_engineers = 1
+	tech_trucks =1
+	motorised_infantry = 1
+}
+
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+	set_technology = {
+		iw_small_airframe = 1
+		aa_lmg = 1
+		aa_cannon_1 = 1
+		early_bombs = 1
+		engines_1 = 1
+	}
+}
+if = {
+	limit = { NOT = { has_dlc = "By Blood Alone" } }
+	set_technology = {
+		early_fighter = 1
+		CAS1 = 1
+	}
+}
+
+set_politics = {
+	ruling_party = right_authoritarianism
+	last_election = "1933.10.25"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+    vanguard_socialism = 2
+    popular_socialism = 2
+    anarchism = 1
+    revisionist_socialism = 2
+    progressivism = 10
+    liberalism = 20
+    conservatism = 4
+    right_authoritarianism = 50
+    despotism = 4
+    reactionism = 5
+    accelerationism = 0
+}
+
+set_stability = 0.4
+
+recruit_character = GUK_grigory_fajda
+recruit_character = GUK_borys_khreshchatytskyi
+recruit_character = GUK_andriy_eryomenko
+recruit_character = GUK_volodymyr_sinclair
+recruit_character = GUK_kost_andrushchenko
+recruit_character = GUK_rodion_malynovskyi
+recruit_character = GUK_Dmytro_Danylsyhn
+recruit_character = GUK_volodymyr_savchenko_bilskyi
+recruit_character = GUK_oleksandr_dovzhenko
+recruit_character = GUK_ivan_bahryany
+recruit_character = GUK_dmytro_myronovych
+recruit_character = GUK_Bilas
+recruit_character = GUK_Yurii
+recruit_character = GUK_Kordyuk
+
+

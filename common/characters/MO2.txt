@@ -1,0 +1,250 @@
+characters = {
+	MO2_grigory_semyonov = {
+		name = "Grigory Semyonov"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MO2/Portrait_MO2_Grigory_Semyonov.png"
+			}
+			army = {
+				large = "gfx/leaders/MO2/Portrait_MO2_Grigory_Semyonov.png"
+				small = "gfx/interface/ministers/MO2/semyonov_hog.dds"
+			}
+		}
+		country_leader = {
+			ideology = military_dictatorship
+			expire = "1965.1.1.1"
+		}
+		field_marshal = {
+			traits = { offensive_doctrine }
+			skill = 4
+			attack_skill = 3
+			defense_skill = 4
+			planning_skill = 2
+			logistics_skill = 4
+		}
+		advisor = {
+		    slot = head_of_government
+			available = {
+                has_completed_focus = Transbaikal_siberiandespot
+			}
+			idea_token = MO2_grigory_semyonov_hog
+			traits = { head_of_government eco_industrialiser }
+		}
+		advisor = {
+		    slot = high_command
+			available = {
+				has_government = despotism
+			}
+			idea_token = MO2_semyonov_staff
+			traits = { army_cavalry_2 }
+		}
+	}
+	MO2_sergei_taskin = {
+		name = "Sergei Taskin"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MO2/Portrait_lib_Sergey_Taskin.png"
+				small = "gfx/interface/ministers/MO2/taskin_hog.dds"
+			}
+		}
+		country_leader = {
+			ideology = social_liberalism
+			expire = "1965.1.1.1"
+		}
+		advisor = {
+		    slot = head_of_government
+			available = {
+                has_government = liberalism
+			}
+			idea_token = MO2_sergei_taskin_hog
+			traits = { head_of_government hog_ambitious_union_boss }
+		}
+		advisor = {
+		    slot = economy_minister
+			available = {
+                has_government = despotism
+			}
+			idea_token = MO2_sergei_taskin_eco
+			traits = { economy_minister eco_railway_magnate }
+		}
+	}
+	MO2_pitirim_sorokin = {
+		name = "Pitirim Sorokin"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MO2/Portrait_con_Pitrim_Sorokin.png"
+				small = "gfx/interface/ministers/MO2/Leonid Vitalevitch.dds"
+			}
+		}
+		country_leader = {
+			ideology = social_conservatism
+			expire = "1965.1.1.1"
+		}
+		advisor = {
+		    slot = head_of_government
+			available = {
+                has_government = conservatism
+			}
+			idea_token = MO2_sergei_taskin_hog
+			traits = { head_of_government hog_spiritual_leader }
+		}
+	}
+	
+	MO2_anton_kostyushko_valyuzanich = {
+		name = "Anton Kostyushko-Valyuzanich"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MO2/Portrait_Anton_Kostyushko_Valyuzhanich.png"
+			}
+		}
+		country_leader = {
+			ideology = syndicalism
+			expire = "1965.1.1.1"
+		}
+	}
+	MO2_provisional_baikal_government = {
+		name = "Provisional Baikal Government"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MO2/Portrait_provisional_mo2.png"
+			}
+		}
+		country_leader = {
+			ideology = provisional_government
+			expire = "1965.1.1.1"
+		}
+	}
+	MO2_ivan_shilnikov = {
+		name = "Ivan Shilnikov"
+		portraits = {
+			army = {
+				large = "gfx/leaders/MO2/Ivan_Shilnikov_lib_general.png"
+			}
+		}
+		corps_commander = {
+			traits = {   }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+		}
+		advisor = {
+		    slot = high_command
+			available = {
+				NOT = {
+					has_government = despotism
+				}
+			}
+			idea_token = MO2_shilnikov_staff
+			traits = { army_entrenchment_2 }
+			visible = { has_completed_focus = Transbaikal_thetrial }
+		}
+	}
+	MO2_leonid_verigo = {
+		name = "Leonid Verigo"
+		portraits = {
+			army = {
+				large = "gfx/leaders/MO2/Leonid_Verigo.png"
+			}
+			civilian = {
+				small="gfx/interface/ministers/MO2/Leonid Vitalevitch.dds"
+			}
+		}
+		corps_commander = {
+			traits = {  }
+			skill = 1 
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+		advisor = {
+		    slot = foreign_minister
+			idea_token = MO2_leonid_verigo 
+			traits = { foreign_minister for_biased_intellectual }
+		}
+	}
+	MO2_leo_vlasyevsky = {
+		name = "Leo Vlasyevsky"
+		portraits = {
+			army = {
+				large = "gfx/leaders/MO2/Vlasyevsky.png"
+			}
+		}
+		corps_commander = {
+			traits = { trickster career_officer infantry_officer }
+			skill = 4
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 4
+		}
+	}
+	MO2_xenofont_aslamov = {
+		name = "Xenofont Aslamov"
+		portraits = {
+			army = {
+				large = "gfx/leaders/MO2/Xenofont_Aslamov.png"
+			}
+		}
+		corps_commander = {
+			traits = { trait_reckless }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	MO2_vladimir_kosmyn = {
+		name="Valdimir Kosmyn"
+		portraits={
+			civilian = {
+				small="gfx/interface/ministers/MO2/Vladimir Dmitrevitch.dds"
+			}
+		}
+		advisor = {
+		    slot = head_of_government
+			available = {
+				has_government = despotism
+			}
+			idea_token = MO2_vladimir_kosmyn
+			traits = { head_of_government hog_political_protege  }
+		}
+	}
+	MO2_grigory_verzhbit = {
+		name="Grigory Verzhbitsky"
+		portraits={
+			civilian = {
+				small="gfx/interface/ministers/MO2/Grigory Verzhbitsky.dds"
+			}
+		}
+		advisor = {
+		    slot = security_minister
+			available = {
+				has_government = despotism
+			}
+			idea_token = MO2_grigory_verzhbit_sec
+			traits = { head_of_government sec_prince_of_terror  }
+		}
+	}
+	MO2_arseniy_nesmelov = {
+		name="Arseniy Nesmelov"
+		portraits={
+			civilian = {
+				small="gfx/interface/ministers/MO2/Arseniy Ivanovitch.dds"
+			}
+		}
+		advisor = {
+		    slot = head_of_intel
+			available = {
+				has_government = despotism
+			}
+			idea_token = MO2_arseniy_nesmelov_intel
+			traits = { head_of_intel int_logistics_specialist }
+		}
+	}
+	
+	
+}

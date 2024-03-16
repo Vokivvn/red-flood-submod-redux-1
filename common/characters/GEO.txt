@@ -1,0 +1,14 @@
+characters = {
+	GEO_Ilia = {
+		name = "Ilia Zdanevich"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/GEO/Portrait_GEO_Ilia Zdanevich.png"
+			}
+		}
+		country_leader = {
+			ideology = futurism
+			expire = "1965.1.1.1"
+		}
+	}
+}

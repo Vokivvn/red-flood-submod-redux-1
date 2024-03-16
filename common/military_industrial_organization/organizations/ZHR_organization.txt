@@ -1,0 +1,370 @@
+#####################
+
+###  ##  #  # # #  ## 
+ #  #  # ## # # # #   
+ #  #### # ## ##   #  
+ #  #  # #  # # #   # 
+ #  #  # #  # # # ## 
+
+ #################### 
+
+
+ZHR_Kotin-Mikulin_Engines_organization = {
+	include = generic_mobile_tank_organization
+	icon = GFX_idea_ZHR_Kotin-Mikulin_Engines
+	
+	allowed = { 
+        OR = {
+            original_tag = RUS
+            original_tag = SRU
+            original_tag = DKB 
+            original_tag = ORE 
+            original_tag = SIB 
+            original_tag = KCK 
+            original_tag = HAR 
+            original_tag = PRI 
+            original_tag = ARC 
+            original_tag = FCR 
+            original_tag = PSL 
+            original_tag = KAV 
+            original_tag = ZHR
+            AND = {
+                tag = ALT
+                has_completed_focus = ALT_agartha_calling
+            }
+        }
+    }
+	available = {
+		# When in a Foreign MIO, countries need to be at peace with original country
+        IF = {
+            FROM = {	has_full_control_of_state = 978
+            }
+        }
+	}
+}
+
+
+#####################
+
+ ## #  # ### ###   ## 
+#   #  #  #  #  # #   
+ #  ####  #  ###   #  
+  # #  #  #  #      # 
+##  #  # ### #    ##  
+ 
+#####################
+
+ZHR_Union_of_Pacific_Shipyards_organization = {
+	include = generic_battle_line_ship_organization
+	icon = GFX_idea_ZHR_Union_of_Pacific_Shipyards
+	
+	allowed = { 
+        OR = {
+            original_tag = RUS
+            original_tag = SRU
+            original_tag = DKB 
+            original_tag = ORE 
+            original_tag = SIB 
+            original_tag = KCK 
+            original_tag = HAR 
+            original_tag = PRI 
+            original_tag = ARC 
+            original_tag = FCR 
+            original_tag = PSL 
+            original_tag = KAV 
+            original_tag = ZHR
+            AND = {
+                tag = ALT
+                has_completed_focus = ALT_agartha_calling
+            }
+        }
+    }
+	available = {
+		# When in a Foreign MIO, countries need to be at peace with original country
+        IF = {
+            FROM = {	has_full_control_of_state = 408
+            }
+        }
+	}
+}
+
+
+
+
+###########################
+
+###  #    ##  #  # ###  ## 
+#  # #   #  # ## # #   #   
+###  #   #### # ## ##   #  
+#    #   #  # #  # #     # 
+#    ### #  # #  # ### ##  
+
+###########################
+
+
+ZHR_Khabarovsk_Hydroaeronautics_Bureau_organization = {
+	include = generic_cas_aircraft_organization
+	icon = GFX_idea_ZHR_Khabarovsk_Hydroaeronautics_Bureau
+	
+	allowed = { 
+        OR = {
+            original_tag = RUS
+            original_tag = SRU
+            original_tag = DKB 
+            original_tag = ORE 
+            original_tag = SIB 
+            original_tag = KCK 
+            original_tag = HAR 
+            original_tag = PRI 
+            original_tag = ARC 
+            original_tag = FCR 
+            original_tag = PSL 
+            original_tag = KAV 
+            original_tag = ZHR
+            AND = {
+                tag = ALT
+                has_completed_focus = ALT_agartha_calling
+            }
+        }
+    }
+	available = {
+		# When in a Foreign MIO, countries need to be at peace with original country
+        IF = {
+            FROM = {	has_full_control_of_state = 409
+            }
+        }
+	}
+}
+ZHR_Nikolayevsk_Aeronautics_Factory_organization = {
+	include = generic_medium_aircraft_organization
+	icon = GFX_idea_ZHR_Nikolayevsk_Aeronautics_Factory
+	
+	allowed = { 
+        OR = {
+            original_tag = RUS
+            original_tag = SRU
+            original_tag = DKB 
+            original_tag = ORE 
+            original_tag = SIB 
+            original_tag = KCK 
+            original_tag = HAR 
+            original_tag = PRI 
+            original_tag = ARC 
+            original_tag = FCR 
+            original_tag = PSL 
+            original_tag = KAV 
+            original_tag = ZHR
+            AND = {
+                tag = ALT
+                has_completed_focus = ALT_agartha_calling
+            }
+        }
+    }
+	available = {
+		# When in a Foreign MIO, countries need to be at peace with original country
+        IF = {
+            FROM = {	has_full_control_of_state = 409
+            }
+        }
+	}
+}
+
+ZHR_Aerograd_Inc_organization = {
+	include = generic_light_aircraft_organization
+	icon = GFX_idea_ZHR_Aerograd_Inc
+	
+	allowed = { 
+        OR = {
+            original_tag = RUS
+            original_tag = SRU
+            original_tag = DKB 
+            original_tag = ORE 
+            original_tag = SIB 
+            original_tag = KCK 
+            original_tag = HAR 
+            original_tag = PRI 
+            original_tag = ARC 
+            original_tag = FCR 
+            original_tag = PSL 
+            original_tag = KAV 
+            original_tag = ZHR
+            AND = {
+                tag = ALT
+                has_completed_focus = ALT_agartha_calling
+            }
+        }
+    }
+	available = {
+		# When in a Foreign MIO, countries need to be at peace with original country
+        IF = {
+            FROM = {	has_full_control_of_state = 978
+            }
+        }
+	}
+}
+
+
+ZHR_Harbin_Strategic_Aircraft_Bureau_organization = {
+	include = generic_heavy_aircraft_organization
+	icon = GFX_idea_ZHR_Harbin_Strategic_Aircraft_Bureau
+	
+	allowed = { 
+        OR = {
+            original_tag = RUS
+            original_tag = SRU
+            original_tag = DKB 
+            original_tag = ORE 
+            original_tag = SIB 
+            original_tag = KCK 
+            original_tag = HAR 
+            original_tag = PRI 
+            original_tag = ARC 
+            original_tag = FCR 
+            original_tag = PSL 
+            original_tag = KAV 
+            original_tag = ZHR
+            AND = {
+                tag = ALT
+                has_completed_focus = ALT_agartha_calling
+            }
+        }
+    }
+	available = {
+		# When in a Foreign MIO, countries need to be at peace with original country
+        IF = {
+            FROM = {	has_full_control_of_state = 978
+            }
+        }
+	}
+}
+
+
+
+################################### 
+
+#   #  ##  ### ### ###  ### ### #   
+## ## #  #  #  #   #  #  #  #   #   
+# # # ####  #  ##  ###   #  ##  #   
+#   # #  #  #  #   #  #  #  #   #   
+#   # #  #  #  ### #  # ### ### ### 
+
+
+###################################
+
+
+
+
+
+
+###################################
+#motorized
+###################################
+
+ZHR_Khabarovsk_Motorcar_Factory_organization = {
+	include = generic_motorized_mechanized_organization
+	icon = GFX_idea_ZHR_Khabarovsk_Motorcar_Factory
+	
+	allowed = { 
+        OR = {
+            original_tag = RUS
+            original_tag = SRU
+            original_tag = DKB 
+            original_tag = ORE 
+            original_tag = SIB 
+            original_tag = KCK 
+            original_tag = HAR 
+            original_tag = PRI 
+            original_tag = ARC 
+            original_tag = FCR 
+            original_tag = PSL 
+            original_tag = KAV 
+            original_tag = ZHR
+            AND = {
+                tag = ALT
+                has_completed_focus = ALT_agartha_calling
+            }
+        }
+    }
+	available = {
+		# When in a Foreign MIO, countries need to be at peace with original country
+        IF = {
+            FROM = {	has_full_control_of_state = 978
+            }
+        }
+	}
+}
+
+
+###################################
+#Infantry
+###################################
+
+
+
+ZHR_Harbin_Arsenal_organization = {
+	include = generic_infantry_equipment_organization
+	icon = GFX_idea_ZHR_Harbin_Arsenal
+	
+	allowed = { 
+        OR = {
+            original_tag = RUS
+            original_tag = SRU
+            original_tag = DKB 
+            original_tag = ORE 
+            original_tag = SIB 
+            original_tag = KCK 
+            original_tag = HAR 
+            original_tag = PRI 
+            original_tag = ARC 
+            original_tag = FCR 
+            original_tag = PSL 
+            original_tag = KAV 
+            original_tag = ZHR
+            AND = {
+                tag = ALT
+                has_completed_focus = ALT_agartha_calling
+            }
+        }
+    }
+	available = {
+		# When in a Foreign MIO, countries need to be at peace with original country
+        IF = {
+            FROM = {	has_full_control_of_state = 978
+            }
+        }
+	}
+}
+
+ZHR_Grabins_Ordnance_Factories_Inc_organization = {
+	include = generic_support_equipment_organization
+	icon = GFX_idea_ZHR_Grabins_Ordnance_Factories_Inc
+	
+	allowed = { 
+        OR = {
+            original_tag = RUS
+            original_tag = SRU
+            original_tag = DKB 
+            original_tag = ORE 
+            original_tag = SIB 
+            original_tag = KCK 
+            original_tag = HAR 
+            original_tag = PRI 
+            original_tag = ARC 
+            original_tag = FCR 
+            original_tag = PSL 
+            original_tag = KAV 
+            original_tag = ZHR
+            AND = {
+                tag = ALT
+                has_completed_focus = ALT_agartha_calling
+            }
+        }
+    }
+	available = {
+		# When in a Foreign MIO, countries need to be at peace with original country
+        IF = {
+            FROM = {	has_full_control_of_state = 978
+            }
+        }
+	}
+}

@@ -1,0 +1,25 @@
+state={
+	id=1123
+	name="STATE_1123" #Basra
+	manpower = 220133
+	
+	state_category = town
+	
+	history={
+		owner = IRQ
+		victory_points = {
+			2089 3
+		}
+		buildings = {
+			infrastructure = 3
+			2089 = {
+				naval_base = 1
+			}
+		}
+		add_core_of = IRQ
+	}
+
+	provinces={
+		2089 8001 12879
+	}
+}

@@ -1,0 +1,10 @@
+PRS_reunification = {
+	#picture = decision_cat_picture_FRA_worldwide_futurism
+	allowed = {
+		original_tag = PRS
+	}
+	priority = 200
+	visible = {
+		is_subject = no
+	}
+}

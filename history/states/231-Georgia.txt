@@ -1,0 +1,27 @@
+state={
+	id=231
+	name="STATE_231"
+
+	history={
+		owner = KAV
+		victory_points = {
+			1599 25
+		}
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			arms_factory = 2
+			air_base = 6
+        
+		}
+		add_core_of = KAV
+
+	}
+
+	provinces={
+		1530 1599 6671 9626
+	}
+	manpower=2117413
+	buildings_max_level_factor=1.000
+	state_category=large_city
+}

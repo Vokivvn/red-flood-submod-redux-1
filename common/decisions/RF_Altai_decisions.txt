@@ -1,0 +1,354 @@
+ALT_mongolian_unification = {
+	ALT_invade_anhui = {
+		days_remove = 14
+		ai_will_do = {
+			factor = 10
+		}
+		icon = GFX_Russian_uni_socialist
+		fire_only_once = yes
+		visible = { 
+			has_completed_focus = ALT_banish_the_invaders
+			country_exists = MON
+		}
+		available = {
+			has_war = no
+			OR = {
+				is_neighbor_of = MON
+				MPA = {
+					is_neighbor_of = MON
+					is_in_faction_with = ALT 
+				}
+			}
+			NOT = { has_country_flag = RUS_chose_wargoal }
+		}
+		complete_effect = {
+			set_country_flag = {
+				flag = RUS_chose_wargoal
+				days = 15
+				value = 1
+			}
+		}
+		remove_effect = {
+			declare_war_on = {
+				type = annex_everything
+				target = MON
+			}
+			MPA = {
+				declare_war_on = {
+					target = MON
+					type = annex_everything
+				}
+			}
+		}
+	}	
+	ALT_invade_baron = {
+		days_remove = 14
+		ai_will_do = {
+			factor = 10
+		}
+		icon = GFX_Russian_uni_socialist
+		fire_only_once = yes
+		visible = { 
+			has_completed_focus = ALT_banish_the_invaders
+			country_exists = TAN
+		}
+		available = {
+			has_war = no
+			NOT = {
+				has_country_flag = RUS_chose_wargoal
+				country_exists = KHU
+				TAN = {
+					is_in_faction_with = RUS
+				}
+			}
+		}
+		complete_effect = {
+			set_country_flag = {
+				flag = RUS_chose_wargoal
+				days = 15
+				value = 1
+			}
+		}
+		remove_effect = {
+			declare_war_on = {
+				type = annex_everything
+				target = TAN
+			}
+			MPA = {
+				declare_war_on = {
+					target = TAN
+					type = annex_everything
+				}
+			}
+		}
+	}	 
+	ALT_invade_khuree = {
+		days_remove = 14
+		ai_will_do = {
+			factor = 10
+		}
+		icon = GFX_Russian_uni_socialist
+		fire_only_once = yes
+		visible = { 
+			has_completed_focus = ALT_banish_the_invaders
+			country_exists = KHU
+		}
+		available = {
+			has_war = no
+			OR = {
+				is_neighbor_of = MON
+				MPA = {
+					is_neighbor_of = MON
+					is_in_faction_with = ALT 
+				}
+			}
+			NOT = { has_country_flag = RUS_chose_wargoal }
+		}
+		complete_effect = {
+			set_country_flag = {
+				flag = RUS_chose_wargoal
+				days = 15
+				value = 1
+			}
+		}
+		remove_effect = {
+			declare_war_on = {
+				type = annex_everything
+				target = KHU
+			}
+			MPA = {
+				declare_war_on = {
+					target = KHU
+					type = annex_everything
+				}
+			}
+		}
+	}	
+	ALT_invade_transbaikal = {
+		days_remove = 14
+		ai_will_do = {
+			factor = 10
+		}
+		icon = GFX_Russian_uni_socialist
+		fire_only_once = yes
+		visible = { 
+			has_completed_focus = ALT_banish_the_invaders
+			country_exists = MO2
+		}
+		available = {
+			has_war = no
+			OR = {
+				is_neighbor_of = MO2
+				MPA = {
+					is_neighbor_of = MO2
+					is_in_faction_with = ALT 
+				}
+			}
+			NOT = {
+				has_country_flag = RUS_chose_wargoal
+				country_exists = KHU
+		}
+		}
+		complete_effect = {
+			set_country_flag = {
+				flag = RUS_chose_wargoal
+				days = 15
+				value = 1
+			}
+		}
+		remove_effect = {
+			declare_war_on = {
+				type = annex_everything
+				target = MO2
+			}
+			MPA = {
+				declare_war_on = {
+					target = MO2
+					type = annex_everything
+				}
+			}
+		}
+	}
+	ALT_restore_mpa = {
+		days_remove = 7
+		ai_will_do = {
+			factor = 10
+		}
+		icon = GFX_Russian_uni_socialist
+		fire_only_once = yes
+		visible = {
+			owns_state = 330
+			owns_state = 1213 
+			owns_state = 612
+		}
+		remove_effect = {
+			MPA = {
+				hidden_effect = {
+					every_state = {
+						limit = {
+							OR = {
+								state = 1149
+								state = 1150
+								state = 1151
+								state = 915 
+								state = 330 
+								state = 914 
+								state = 612
+
+								state = 564
+								state = 563
+							}
+						}
+						add_core_of = MPA
+						remove_core_of = ALT
+					}
+					every_owned_state = {
+						limit = {
+							is_core_of = MPA
+							is_not_claim_or_core_of_ROOT = yes
+						}
+						MPA = { transfer_state = PREV }
+					}
+				}
+				set_capital = { state = 330 }
+				set_politics = {
+					ruling_party = vanguard_socialism
+					elections_allowed = no
+				}
+				set_cosmetic_tag = MPA_uni
+			}
+			create_faction = ALT_PAN_MONGOLIAN_FEDERATION
+			add_to_faction = MPA
+		}
+	}
+	ALT_rename_khuree = {
+		days_remove = 7
+		ai_will_do = {
+			factor = 10
+		}
+		icon = GFX_Russian_uni_socialist
+		fire_only_once = yes
+		visible = { 
+			MPA = { owns_state = 330 }
+			is_ally_with = MPA
+		}
+		remove_effect = {
+			set_province_name = {
+				id = 4801
+				name = ALT_decision_ALT_rename_khuree_province_4801
+			}
+		}
+	}
+}
+
+ALT_diplomatic_decisions = {
+	ALT_join_kavkaz = {
+		days_remove = 14
+		ai_will_do = {
+			factor = 10
+		}
+		icon = GFX_Russian_uni_socialist
+		fire_only_once = yes
+		visible = { 
+			is_neighbor_of = KAV
+			NOT = {
+				has_country_flag = RUS_chose_wargoal
+			}
+			ALT_KAV_peaceful_uni = yes
+			NOT = {
+				country_exists = SIB
+				country_exists = ZHR
+			}
+		}
+		available = {
+			has_completed_focus = ALT_quest_to_hyperborea
+			is_neighbor_of = KAV
+			has_war = no
+			NOT = {
+				has_country_flag = RUS_chose_wargoal
+			}
+		}
+		complete_effect = {
+			set_country_flag = {
+				flag = RUS_chose_wargoal
+				days = 15
+				value = 1
+			}
+		}
+		remove_effect = {
+			if = {
+				limit = { ALT_KAV_peaceful_uni = yes }
+				if = {
+					limit = { ALT = { is_ai = no } }
+					ALT = { KAV = { PREV_annex_CURRENT_warlord = yes } }
+				}
+				else_if = {
+					limit = { KAV = { is_ai = no } }
+					KAV = { ALT = { PREV_annex_CURRENT_warlord = yes } }
+				}
+				else_if = {
+					limit = {
+						KAV = { is_ai = yes }
+						ALT = { is_ai = yes }
+					}
+					country_event = russia.200
+				}
+			}
+		}
+	}
+	ALT_join_orenburg = {
+		days_remove = 14
+		ai_will_do = {
+			factor = 10
+		}
+		icon = GFX_Russian_uni_socialist
+		fire_only_once = yes
+		visible = { 
+			is_neighbor_of = ORE
+			NOT = {
+				has_country_flag = RUS_chose_wargoal
+			}
+			ALT_ORE_peaceful_uni = yes
+			NOT = {
+				country_exists = SIB
+				country_exists = ZHR
+			}
+		}
+		available = {
+			has_completed_focus = ALT_quest_to_hyperborea
+			is_neighbor_of = ORE
+			has_war = no
+			NOT = {
+				has_country_flag = RUS_chose_wargoal
+			}
+		}
+		complete_effect = {
+			set_country_flag = {
+				flag = RUS_chose_wargoal
+				days = 15
+				value = 1
+			}
+		}
+		remove_effect = {
+			if = {
+				limit = { ALT_ORE_peaceful_uni = yes }
+				if = {
+					limit ={ ALT = { is_ai = no } }
+					ALT = { ORE = { PREV_annex_CURRENT_warlord = yes } }
+				}
+				else_if = {
+					limit = { ORE = { is_ai = no } }
+					ORE = { ALT = { PREV_annex_CURRENT_warlord = yes } }
+				}
+				else_if = {
+					limit = {
+						ORE = { is_ai = yes }
+						ALT = { is_ai = yes }
+					}
+					country_event = russia.203
+				}
+			}
+		}
+	}
+
+}

@@ -1,0 +1,16 @@
+characters = {
+	SNP_Antoun_Saadeh = {
+		name = "Antun Sa'adah"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SYR/Portrait_SYR_Anton_Saadeh.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_SAADEH_DESC"
+			ideology = provisional_government
+			expire = "1965.1.1.1"
+			traits = { }
+		}
+	}
+}

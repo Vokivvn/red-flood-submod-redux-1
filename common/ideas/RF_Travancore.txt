@@ -1,0 +1,31 @@
+ideas = {
+
+#################
+# Country ideas #
+#################
+	country = {
+		TRA_political_agitation = {
+			modifier = {
+				stability_factor = -0.2
+                political_power_gain = -0.15
+				war_support_factor = -0.1
+				popular_socialism_drift = 0.03		 	
+			}
+			picture = generic_idea_RF_idea_quill
+		}
+		TRA_feudal_economy = {
+			modifier = {
+				consumer_goods_expected_value = 0.25
+				production_speed_buildings_factor = -0.1
+				production_factory_max_efficiency_factor = -0.2
+				research_speed_factor = -0.05                              		
+			}
+			picture = generic_idea_RF_idea_grain
+		}
+	}
+###########
+#MINISTERS#
+###########
+
+	
+}

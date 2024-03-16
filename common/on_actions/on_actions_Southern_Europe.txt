@@ -1,0 +1,75 @@
+# Scripted GUI Pie Chart example by Yard1
+# Feel free to use in your mods, but give credits to Yard1 (both in code, with comments; and on your download page)
+
+# This is just an example of how to update the pie chart, it does not need to be an on_action
+on_actions = {
+	#on_daily = {
+	#	effect = {
+	#		if = {
+	#			limit = { tag = FIU }
+	#			create_pie_chart = yes
+	#		}
+	#	}
+	#}
+
+	on_capitulation_immediate = {
+		effect = {
+			if = {
+				limit = {
+					FRA = { is_faction_leader = yes } #League Solar Exists
+					FROM = { is_in_faction_with = FRA } #League Solar Member capitulates Italy
+					ROOT = { tag = ITA }
+				}
+				every_state = {
+					limit = {
+						OR = {
+							state = 550
+							state = 268
+							state = 271
+							state = 1018
+							state = 1019
+							state = 1020
+							state = 1022
+							state = 1021
+						}
+					}
+					ET2 = { add_state_core = PREV }
+				}
+				FIU = {
+					white_peace = {
+						tag = ITA
+						message = ITA_LOST
+					}
+					annex_country = {
+						target = ITA					
+					}
+					release_puppet = ET2
+				}
+				FRA = {
+					transfer_state = 458
+					transfer_state = 665
+					transfer_state = 268
+					add_state_claim = 268
+				}
+				GRE = {
+					transfer_state = 164
+				}
+				if = {
+					limit = { SOK = { exists = yes } }
+					SOK = { transfer_state = 1199 }	
+					else = {
+						FIU = { 
+							transfer_state = 1199
+							transfer_state = 775
+							transfer_state = 1198
+						}
+					}
+				}
+				if = { limit = { ALB = { exists = yes } }
+					ALB = { transfer_state = 942 }
+				}
+			}
+		}
+		
+	}
+}

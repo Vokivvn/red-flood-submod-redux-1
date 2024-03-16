@@ -1,0 +1,79 @@
+﻿capital = 3
+set_research_slots = 3 
+set_stability = 0.5
+
+oob = "SWI"
+if = { limit = { has_dlc = "By Blood Alone" } set_air_oob = "SWI_air" }
+if = { limit = { NOT = { has_dlc = "By Blood Alone" } } set_air_oob = "SWI_air_legacy" }
+
+
+add_ideas = {
+	SWI_fanatic_antisocialism
+	limited_conscription
+}
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_mountaineers = 1
+	tech_support = 1
+	tech_engineers = 1
+	tech_recon = 1
+	fuel_silos = 1
+	basic_train = 1
+}
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+	set_technology = {
+		iw_small_airframe = 1
+		aa_lmg = 1
+		aa_cannon_1 = 1
+		early_bombs = 1
+		engines_1 = 1
+	}
+}
+if = {
+	limit = { NOT = { has_dlc = "By Blood Alone" } }
+	set_technology = {
+		early_fighter = 1
+		CAS1 = 1
+	}
+}
+
+set_politics = {
+	ruling_party = despotism #xd
+	last_election = "1933.10.25"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	vanguard_socialism = 1
+	popular_socialism = 5
+	anarchism = 5
+	revisionist_socialism = 5
+	progressivism = 3
+	liberalism = 11
+	conservatism = 20
+	right_authoritarianism = 10
+	despotism = 33
+	reactionism = 0
+	accelerationism = 7
+}
+
+give_guarantee = AUS
+
+recruit_character = SWI_hans_sonderegger
+recruit_character = SWI_fed_council_lib
+recruit_character = SWI_fed_council_con
+recruit_character = SWI_fed_council_oli
+recruit_character = SWI_fed_council_dic #this is funny because this is actually sonderegger lol
+recruit_character = SWI_fed_council_reac
+recruit_character = SWI_fed_council_techno
+recruit_character = SWI_fed_council_anarch
+recruit_character = SWI_fed_council_lenin
+recruit_character = SWI_fed_council_prog
+recruit_character = SWI_fed_council_syndie
+recruit_character = SWI_fed_council_dsa
+recruit_character = SWI_Henri_Guisan
+
+

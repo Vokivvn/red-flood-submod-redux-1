@@ -1,0 +1,30 @@
+characters = {
+	LEB_Pierre_Gemayel = {
+		name = "Pierre Gemayel"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/LEB/Portrait_LEB_Pierre_Gemayel.png"
+			}
+		}
+		country_leader = {
+			ideology = revolutionary_nationalism
+			expire = "1965.1.1.1"
+		}
+	}
+	LEB_henri_dentz = {
+		name = "Henri Dentz"
+		portraits = {
+			army = {
+				large = "gfx/leaders/LEB/Portrait_LEB_Henri_Dentz.png"
+			}
+		}
+		corps_commander = {
+			traits = { politically_connected old_guard infantry_leader }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+		}
+	}
+}

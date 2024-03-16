@@ -1,0 +1,346 @@
+characters = {
+	UPI_churchills_suicide = {
+		name = "Winston Churchill"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/UPI/Portrait_UPI_Doomer_Churchill_1.png"
+				small="gfx/interface/ministers/UPI/UPI_Winston_Churchill.tga"
+			}
+		}
+		country_leader = {
+			ideology = military_dictatorship
+			expire = "1965.1.1.1"
+			traits = { UPI_brutal_colonizer }
+		}
+		advisor = {
+		    slot = head_of_government
+			available = {
+			    NOT = { has_country_flag = Winston_Churchill_dead }
+			}
+			visible = {
+				NOT = { has_country_flag = Winston_Churchill_dead }
+			}
+			idea_token = UPI_churchills_suicide_hog
+			traits = { head_of_government hog_flamboyant_tough_guy }
+		}
+	}
+	UPI_Doomer_Churchill = {
+		name = "Winston Churchill"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/UPI/Portrait_UPI_Doomer_Churchill_2.png"
+				small="gfx/interface/ministers/UPI/UPI_Winston_Churchill.tga"
+			}
+		}
+		country_leader = {
+			ideology = military_dictatorship
+			expire = "1965.1.1.1"
+			traits = { UPI_brutal_colonizer }
+			desc = "UPI_winston_churchill"
+		}
+	}
+	UPI_Bloomer_Churchill = {
+		name = "Winston Churchill"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/UPI/Portrait_UPI_Bloomer_Churchill_0.png"
+				small="gfx/interface/ministers/UPI/UPI_Winston_Churchill.tga"
+			}
+		}
+		country_leader = {
+			ideology = military_dictatorship
+			expire = "1965.1.1.1"
+			traits = { UPI_brutal_colonizer }
+			desc = "UPI_winston_churchill"
+		}
+	}
+	UPI_Bloomer_Churchill_2 = {
+		name = "Winston Churchill"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/UPI/Portrait_UPI_Bloomer_Churchill_2.png"
+				small="gfx/interface/ministers/UPI/UPI_Winston_Churchill.tga"
+			}
+		}
+		country_leader = {
+			ideology = social_conservatism
+			expire = "1965.1.1.1"
+			desc = "UPI_winston_churchill"
+		}
+	}
+	UPI_collapsed_government = {
+		name = "Collapsed Government"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/UPI/Portrait_UPI_Collapsed_government.png"
+			}
+		}
+	}
+	UPI_acharya_narendra_deva = {
+		name = "Acharya Narendra Deva"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/UPI/Portrait_UPI_Narendra_Deva.png"
+			}
+		}
+		country_leader = {
+			ideology = social_nationalism
+			expire = "1965.1.1.1"
+		}
+	}
+	UPI_the_avatar = {
+		name = "The Avatar"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/UPI/Portrait_Avatar.png"
+				small="gfx/interface/ministers/UPI/UPI_Savitri_Devi_minister.tga"
+			}
+		}
+		country_leader = {
+			ideology = esoteric_reactionism
+			expire = "1965.1.1.1"
+		}
+		advisor = {
+		    slot = economy_minister
+			available = {
+				has_government = reactionism
+			}
+			visible = {
+				has_government = reactionism
+			}
+			idea_token = UPI_the_avatar_eco
+			traits = { economy_minister eco_corrupt_kleptocrat }
+		}
+		advisor = {
+		    slot = head_of_intel
+			available = {
+				has_government = reactionism
+			}
+			visible = {
+				has_government = reactionism
+			}
+			idea_token = UPI_the_avatar_intel
+			traits = { head_of_intel int_dismal_enigma }
+		}
+	}
+	UPI_reginald_dyer={
+		name="Reginald Dyer"
+		portraits={
+			army={
+				large="gfx/leaders/UPI/Portrait_UPI_Reginald_Dyer.png"
+			}
+		}
+		field_marshal={
+			traits={ unyielding_defender }
+			skill=3
+			attack_skill=1
+			defense_skill=4
+			planning_skill=3
+			logistics_skill=3
+			legacy_id=8999
+		}
+	}
+	UPI_noel_beresfordpeirse={
+		name="Noel Beresford-Peirse"
+		portraits={
+			army={
+				large="gfx/leaders/UPI/Portrait_UPi_Noel_Beresford-Peirse.png"
+			}
+		}
+		corps_commander={
+			traits={ career_officer trickster }
+			skill=3
+			attack_skill=2
+			defense_skill=3
+			planning_skill=3
+			logistics_skill=2
+			legacy_id=8998
+		}
+	}
+	UPI_douglas_gracey={
+		name="Douglas Gracey"
+		portraits={
+			army={
+				large="gfx/leaders/UPI/Portrait_UPI_Douglas_Gracey.png"
+			}
+		}
+		corps_commander={
+			traits={ infantry_leader }
+			skill=2
+			attack_skill=2
+			defense_skill=4
+			planning_skill=2
+			logistics_skill=1
+			legacy_id=8997
+		}
+	}
+	UPI_jack_churchill={
+		name="Jack Churchill"
+		portraits={
+			army={
+				large="gfx/leaders/UPI/Portrait_UPI_Jack_Churchill.png"
+			}
+		}
+		corps_commander={
+			traits={ commando }
+			skill=2
+			attack_skill=2
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=1
+			legacy_id=8996
+		}
+	}
+	UPI_francis_tucker={
+		name="Francis Tucker"
+		portraits={
+			army={
+				large="gfx/leaders/UPI/Portrait_UPI_Francis_Tucker.png"
+			}
+		}
+		corps_commander={
+			traits={ infantry_officer jungle_rat }
+			skill=2
+			attack_skill=3
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=1
+			legacy_id=8995
+		}
+	}
+	UPI_asit_mukheri ={
+		name="Asit Mukheri"
+		portraits={
+			civilian = {
+				small="gfx/interface/ministers/UPI/UPI_Asit_Mukheri_hog.tga"
+			}
+		}
+		advisor = {
+		    slot = head_of_government
+			available = {
+				has_government = reactionism
+			}
+			visible = {
+				has_government = reactionism
+			}
+			idea_token = UPI_asit_mukheri_hog
+			traits = { head_of_government hog_silent_workhorse }
+		}
+	}
+	UPI_maurice_hallett ={
+		name="Maurice Hallett"
+		portraits={
+			civilian = {
+				small="gfx/interface/ministers/UPI/UPI_Maurice_Hallett.tga"
+			}
+		}
+		advisor = {
+		    slot = foreign_minister
+			available = {
+				NOT = { has_country_flag = Winston_Churchill_dead }
+			}
+			visible = {
+				NOT = { has_country_flag = Winston_Churchill_dead }
+			}
+			idea_token = UPI_maurice_hallett
+			traits = { foreign_minister for_apologetic_clerk  }
+		}
+	}
+	UPI_mahanambrata_brahmachari ={
+		name="Mahanambrata Brahmachari"
+		portraits={
+			civilian = {
+				small="gfx/interface/ministers/UPI/UPI_Mahanambrata_Brahmachari.tga"
+			}
+		}
+		advisor = {
+		    slot = foreign_minister
+			available = {
+				has_government = reactionism
+			}
+			visible = {
+				has_government = reactionism
+			}
+			idea_token = UPI_mahanambrata_brahmachari
+			traits = { foreign_minister for_biased_intellectual }
+		}
+	}
+	UPI_harry_graham_haig ={
+		name="Harry Graham Haig"
+		portraits={
+			civilian = {
+				small="gfx/interface/ministers/UPI/UPI_Harry_Graham_Haig.tga"
+			}
+		}
+		advisor = {
+		    slot = economy_minister
+			available = {
+				NOT = { has_country_flag = Winston_Churchill_dead }
+			}
+			visible = {
+				NOT = { has_country_flag = Winston_Churchill_dead }
+			}
+			idea_token = UPI_harry_graham_haig
+			traits = { economy_minister eco_balanced_budget_economy }
+		}
+	}
+	UPI_orde_wingate ={
+		name="Orde Wingate"
+		portraits={
+			civilian = {
+				small="gfx/interface/ministers/UPI/UPI_Orde_Wingate.tga"
+			}
+		}
+		advisor = {
+		    slot = security_minister
+			available = {
+				NOT = { has_country_flag = Winston_Churchill_dead }
+			}
+			visible = {
+				NOT = { has_country_flag = Winston_Churchill_dead }
+			}
+			idea_token = UPI_orde_wingate
+			traits = { security_minister sec_prince_of_terror }
+		}
+	}
+	UPI_bangalore_venkata_raman ={
+		name="Bangalore Venkata Raman"
+		portraits={
+			civilian = {
+				small="gfx/interface/ministers/UPI/UPI_Bangalore_Venkata_Raman.tga"
+			}
+		}
+		advisor = {
+		    slot = security_minister
+			available = {
+				has_government = reactionism
+			}
+			visible = {
+				has_government = reactionism
+			}
+			idea_token = UPI_bangalore_venkata_raman
+			traits = { security_minister sec_media_magnate }
+		}
+	}
+	UPI_michael_o_dwyer ={
+		name="Michael O'Dwyer"
+		portraits={
+			civilian = {
+				small="gfx/interface/ministers/UPI/UPI_Michael_O_Dwyer.tga"
+			}
+		}
+		advisor = {
+		    slot = head_of_intel
+			available = {
+				NOT = { has_country_flag = Winston_Churchill_dead }
+			}
+			visible = {
+				NOT = { has_country_flag = Winston_Churchill_dead }
+			}
+			idea_token = UPI_michael_o_dwyer
+			traits = { head_of_intel int_logistics_specialist }
+		}
+	}
+}
+
+

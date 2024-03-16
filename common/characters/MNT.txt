@@ -1,0 +1,105 @@
+characters = {
+	MNT_niko_miljanic = {
+		name = "Niko Miljanić"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MNT/Portrait_Niko_Miljanić.png"
+			}
+		}
+		country_leader = {
+			ideology = state_socialism
+			expire = "1965.1.1.1"
+		}
+	}
+	MNT_danilo_I = {
+		name = "Danilo"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MNT/Danilo_I.png"
+			}
+		}
+		country_leader = {
+			desc = POLITICS_DANILO_DESC
+			ideology = absolute_monarchy
+			expire = "1965.1.1.1"
+		}
+	}
+	MNT_kosta_popović = {
+		name = "Kosta Popović"
+		portraits = {
+			army = {
+				large = "gfx/leaders/MNT/Portrait_Montenegro_Kosta_Popovic.png"
+			}
+		}
+		corps_commander = {
+			traits = {
+				infantry_officer
+				career_officer
+				politically_connected
+			}
+			skill = 2
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	MNT_petar_pesic = {
+		name = "Petar Pešić"
+		portraits = {
+			army = {
+				large = "gfx/leaders/MNT/Portrait_Montenegro_Petar_Pesic.png"
+			}
+		}
+		corps_commander = {
+			traits = {
+				infantry_officer
+				career_officer
+			}
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
+	MNT_jovan_becir = {
+		name = "Jovan Bećir"
+		portraits = {
+			army = {
+				large = "gfx/leaders/MNT/Portrait_Montenegro_Jovan_Becir.png"
+			}
+		}
+		corps_commander = {
+			traits = {
+				infantry_officer
+				career_officer
+			}
+			skill = 1
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
+	MNT_janko_vukotic = {
+		name = "Janko Vukotić"
+		portraits = {
+			army = {
+				large = "gfx/leaders/MNT/Portraint_Montenegro_Janko_Vukotic.png"
+			}
+		}
+		corps_commander = {
+			traits = {
+				infantry_officer
+				career_officer
+				trickster
+			}
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
+}

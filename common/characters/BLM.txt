@@ -1,0 +1,14 @@
+characters = {
+	BLM_antonio_facióla = {
+		name = "Antonio Facióla"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/BLM/Portrait_BLM_AF.png"
+			}
+		}
+		country_leader = {
+			ideology = oligarchy
+			expire = "1965.1.1.1"
+		}
+	}
+}

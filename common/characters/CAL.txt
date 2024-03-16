@@ -1,0 +1,1204 @@
+characters = {
+	CAL_riverside_council = {
+		name = "Riverside Council"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/CAL/Portrait_Riverside_Council.png"
+			}
+		}
+		country_leader = {
+			ideology = provisional_government
+			expire = "1965.1.1.1"
+		}
+	}
+	CAL_jack_parsons = {
+		name = "Jack Parsons"
+		country_leader = {
+			ideology = mystical_anarchism
+			expire = "1965.1.1.1"
+		}
+		portraits = {
+			army = {
+				small = "GFX_idea_CAL_jack_parsons"
+			}
+			civilian = {
+				large="gfx/leaders/CAL/Portrait_Jack_Parsons.png"
+			}
+		}
+		
+	}
+	CAL_l_ron_hubbard = {
+		name = "L. Ron Hubbard"
+		portraits = {
+			army = {
+				small = "GFX_idea_CAL_LRH"
+			}
+			civilian = {
+				large="gfx/leaders/CAL/Portrait_L_Ron_Hubbard.png"
+			}
+		}
+		country_leader = {
+			ideology = personalist_dictatorship
+			expire = "1965.1.1.1"
+		}
+		advisor = {
+			allowed = {
+			    original_tag = CAL
+			}
+			cost = 150
+			slot = head_of_government
+			available = {
+				has_government = despotism
+			}
+			idea_token = CAL_LRH 
+			traits = {
+			    head_of_government
+			    hog_spiritual_leader
+			}
+		}
+		advisor = {
+			allowed = {
+			    original_tag = CAL
+			}
+			cost = 150
+			slot = economy_minister
+			available = {
+				has_government = despotism
+			}
+			idea_token = CAL_eco_LRH
+			traits = {
+			    economy_minister
+			    eco_administrative_genius
+			}
+		}
+	}
+	CAL_Spiritualist_Party_Council = {
+		name = "Spiritualist Party Council"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/CAL/Portrait_Spiritual_Council.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_SPIRITUAL_COUNCIL_DESC"
+			expire = "1965.1.1"
+			ideology = national_rejuvenatism
+		}
+	}
+
+	CAL_Archangel_Uriel = {
+		name = "Archangel Uriel"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/CAL/Portrait_Uriel.png"
+			}
+		}
+	}
+	CAL_Krishna_Venta = {
+		name = "Krishna Venta"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/CAL/Portrait_Krishna_Venta.png"
+			}
+		}
+	}
+	CAL_upton_sinclair = {
+		name = "Upton Sinclair"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/CAL/Portrait_CAL_Upton_Sinclair.png"
+			}
+			army = {
+				small = "GFX_idea_CAL_upton_sinclair"
+			}
+		}
+		country_leader = {
+			ideology = utopian_socialism
+			expire = "1965.1.1.1"
+		}
+		advisor = {
+			allowed = {
+			    original_tag = CAL
+			}
+			cost = 150
+			slot = head_of_government
+			available = {
+				has_government = revisionist_socialism
+			}
+			idea_token = CAL_upton_sinclair 
+			traits = {
+			    head_of_government
+			    hog_pragmatic_statesman
+			}
+		}
+	}
+	CAL_upton_sinclair_moderate = {
+		name = "Upton Sinclair"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/CAL/Portrait_CAL_Upton_Sinclair_Moderate.png"
+			}
+			army = {
+				small = "GFX_idea_CAL_upton_sinclair"
+			}
+		}
+		country_leader = {
+			ideology = left_populism
+			expire = "1965.1.1.1"
+		}
+	}
+	CAL_culbert_olson = {
+		name = "Culbert Olson"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/CAL/Portrait_Culbert_Olson.png"
+			}
+			army = {
+				small = "GFX_idea_CAL_culbert_olson"
+			}
+		}
+		country_leader = {
+			ideology = social_conservatism
+			expire = "1965.1.1.1"
+		}
+		advisor = {
+			allowed = {
+			    original_tag = CAL
+			}
+			cost = 150
+			slot = head_of_intel
+			available = {
+				has_government = conservatism
+			}
+			idea_token = CAL_culbert_olson 
+			traits = {
+			    head_of_intel
+			    int_political_specialist
+			}
+		}
+	}
+	CAL_earl_warren = {
+		name = "Earl Warren"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/CAL/Portrait_Earl_Warren.png"
+			}
+		}
+		country_leader = {
+			ideology = classical_liberalism
+			expire = "1965.1.1.1"
+		}
+	}
+	CAL_robert_tryon_frederick = {
+		name = "Robert Tryon Frederick"
+		portraits = {
+			army = {
+				large="gfx/leaders/CAL/Portrait_Robert_Tryon_Frederick.png"
+				small = "GFX_idea_CAL_robert_t_frederick"
+			}
+		}
+		corps_commander = {
+			traits = { infantry_officer inflexible_strategist trait_reckless }
+			skill = 3
+
+			attack_skill = 4 
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 4
+		}
+		advisor = {
+			allowed = {
+			    original_tag = CAL
+			}
+			cost = 150
+			slot = army_chief
+			idea_token = CAL_robert_t_frederick
+			traits = {
+			    army_chief
+			    carm_commando_doctrine
+			}
+		}
+	}
+	CAL_john_george_agar_jr = {
+		name = "John George Agar Jr."
+		portraits = {
+			army = {
+				large="gfx/leaders/CAL/Portrait_John_Agar_Jr.png"
+			}
+		}
+		corps_commander = {
+			traits = { politically_connected brilliant_strategist armor_officer }
+			skill = 3
+
+			attack_skill = 3 
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 4
+		}
+	}
+	CAL_alex_xydias = {
+		name = "Alex Xydias"
+		portraits = {
+			army = {
+				large="gfx/leaders/CAL/Portrait_Alex_Xydias.png"
+			}
+		}
+		corps_commander = {
+			traits = { politically_connected armor_officer }
+			skill = 1
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	CAL_elisha_cook_jr = {
+		name = "Elisha Cook Jr."
+		portraits = {
+			army = {
+				large="gfx/leaders/CAL/Portrait_Elisha_Cook_Jr.png"
+			}
+		}
+		corps_commander = {
+			traits = { politically_connected infantry_officer trait_engineer commando }
+			skill = 2
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	CAL_john_william_finn = {
+		name = "John William Finn"
+		portraits = {
+			navy = {
+				large="gfx/leaders/CAL/Portrait_John_William_Finn.png"
+			}
+			army = {
+				small = "GFX_idea_CAL_john_william_finn"
+			}
+		}
+		navy_leader = {
+			traits = { career_officer fleet_protector superior_tactician }
+			skill = 4
+			attack_skill = 4
+			defense_skill = 4
+			maneuvering_skill = 4
+			coordination_skill = 4
+		}
+		advisor = {
+			allowed = {
+			    original_tag = CAL
+			}
+			cost = 150
+			slot = high_command
+			idea_token = CAL_john_william_finn 
+			traits = {
+			    cos_school_of_psychology
+			}
+		}
+	}
+	CAL_john_mcmaster = {
+		name = CAL_john_mcmaster
+		portraits = {
+			army = {
+				small = "GFX_idea_CAL_john_mcmaster"
+			}
+		}
+		advisor = {
+			allowed = {
+			    original_tag = CAL
+			}
+			cost = 150
+			slot = head_of_government
+			available = {
+				has_government = despotism
+			}
+			idea_token = CAL_john_mcmaster
+			traits = {
+			    head_of_government
+			    hog_happy_amateur
+			}
+		}
+	}
+	CAL_ernest_norman = {
+		name = CAL_ernest_norman
+		portraits = {
+			army = {
+				small = "GFX_idea_CAL_ernest_norman"
+			}
+		}
+		advisor = {
+			allowed = {
+			    original_tag = CAL
+			}
+			cost = 150
+			slot = head_of_government
+			available = {
+				has_government = despotism
+			}
+			idea_token = CAL_ernest_norman 
+			traits = {
+			    head_of_government
+			    hog_spiritual_leader
+			}
+		}
+	}
+	CAL_dorothy_martin = {
+		name = CAL_dorothy_martin
+		portraits = {
+			army = {
+				small = "GFX_idea_CAL_dorothy_martin"
+			}
+		}
+		advisor = {
+			allowed = {
+			    original_tag = CAL
+			}
+			cost = 150
+			slot = head_of_government
+			available = {
+				has_government = despotism
+			}
+			idea_token = CAL_dorothy_martin 
+			traits = {
+			    head_of_government
+			    hog_spiritual_leader
+			}
+		}
+	}
+	CAL_israel_regardie = {
+		name = CAL_israel_regardie
+		portraits = {
+			army = {
+				small = "GFX_idea_CAL_israel_regardie"
+			}
+		}
+		advisor = {
+			allowed = {
+			    original_tag = CAL
+			}
+			cost = 150
+			slot = head_of_government
+			available = {
+				has_government = despotism
+			}
+			idea_token = CAL_israel_regardie 
+			traits = {
+			    head_of_government
+			    hog_spiritual_leader
+			}
+		}
+	}
+	CAL_frank_l_shaw = {
+		name = CAL_frank_l_shaw
+		portraits = {
+			army = {
+				small = "GFX_idea_CAL_frank_l_shaw"
+			}
+		}
+		advisor = {
+			allowed = {
+			    original_tag = CAL
+			}
+			cost = 150
+			slot = head_of_government
+			available = {
+				has_government = liberalism
+			}
+			idea_token = CAL_frank_l_shaw 
+			traits = {
+			    head_of_government
+			    hog_corporate_suit
+			}
+		}
+	}
+	CAL_john_f_shelley = {
+		name = CAL_john_f_shelley
+		portraits = {
+			army = {
+				small = "GFX_idea_CAL_john_f_shelley"
+			}
+		}
+		advisor = {
+			allowed = {
+			    original_tag = CAL
+			}
+			cost = 150
+			slot = head_of_government
+			available = {
+				has_government = conservatism
+			}
+			idea_token = CAL_john_f_shelley
+			traits = {
+			    head_of_government
+			    hog_backroom_backstabber
+			}
+		}
+	}
+	CAL_frank_allyn_edwards = {
+		name = CAL_frank_allyn_edwards
+		portraits = {
+			army = {
+				small = "GFX_idea_CAL_frank_allyn_edwards"
+			}
+		}
+		advisor = {
+			allowed = {
+			    original_tag = CAL
+			}
+			cost = 150
+			slot = foreign_minister
+			available = {
+				has_government = despotism
+			}
+			idea_token = CAL_frank_allyn_edwards 
+			traits = {
+			    foreign_minister
+			    for_the_cloak_n_dagger_schemer
+			}
+		}
+	}
+	CAL_frank_allyn_edwards_2 = {
+		name = CAL_frank_allyn_edwards
+		portraits = {
+			army = {
+				small = "GFX_idea_CAL_frank_allyn_edwards"
+			}
+		}
+		advisor = {
+			allowed = {
+			    original_tag = CAL
+			}
+			cost = 150
+			slot = foreign_minister
+			available = {
+				has_government = despotism
+			}
+			idea_token = CAL_frank_allyn_edwards_hubbard
+			traits = {
+			    foreign_minister
+			    for_great_compromiser
+			}
+		}
+	}
+	CAL_robert_a_heinlein = {
+		name = CAL_robert_a_heinlein
+		portraits = {
+			army = {
+				small = "GFX_idea_CAL_robert_a_heinlein"
+			}
+		}
+		advisor = {
+			allowed = {
+			    original_tag = CAL
+			}
+			cost = 150
+			slot = foreign_minister
+			available = {
+				has_government = despotism
+			}
+			idea_token = CAL_robert_a_heinlein 
+			traits = {
+			    foreign_minister
+			    for_biased_intellectual
+			}
+		}
+	}
+	CAL_mother_ruth = {
+		name = CAL_mother_ruth
+		portraits = {
+			army = {
+				small = "GFX_idea_CAL_mother_ruth"
+			}
+		}
+		advisor = {
+			allowed = {
+			    original_tag = CAL
+			}
+			cost = 150
+			slot = foreign_minister
+			available = {
+				has_government = despotism
+			}
+			idea_token = CAL_mother_ruth 
+			traits = {
+			    foreign_minister
+			    for_ideological_crusader
+			}
+		}
+	}
+	CAL_karl_johannes_germer = {
+		name = CAL_karl_johannes_germer
+		portraits = {
+			army = {
+				small = "GFX_idea_CAL_karl_johannes_germer"
+			}
+		}
+		advisor = {
+			allowed = {
+			    original_tag = CAL
+			}
+			cost = 150
+			slot = foreign_minister
+			available = {
+				has_government = despotism
+			}
+			idea_token = CAL_karl_johannes_germer 
+			traits = {
+			    foreign_minister
+			    for_the_cloak_n_dagger_schemer
+			}
+		}
+	}
+	CAL_melech_epstein = {
+		name = CAL_melech_epstein
+		portraits = {
+			army = {
+				small = "GFX_idea_CAL_melech_epstein"
+			}
+		}
+		advisor = {
+			allowed = {
+			    original_tag = CAL
+			}
+			cost = 150
+			slot = foreign_minister
+			available = {
+				has_government = revisionist_socialism
+			}
+			idea_token = CAL_melech_epstein
+			traits = {
+			    foreign_minister
+			    for_ideological_crusader
+			}
+		}
+	}
+	CAL_george_christopher = {
+		name = CAL_george_christopher
+		portraits = {
+			army = {
+				small = "GFX_idea_CAL_george_christopher"
+			}
+		}
+		advisor = {
+			allowed = {
+			    original_tag = CAL
+			}
+			cost = 150
+			slot = foreign_minister
+			available = {
+				has_government = liberalism
+			}
+			idea_token = CAL_george_christopher 
+			traits = {
+			    foreign_minister
+			    for_apologetic_clerk
+			}
+		}
+	}
+	CAL_lyndon_b_johnson = {
+		name = CAL_lyndon_b_johnson
+		portraits = {
+			army = {
+				small = "GFX_idea_CAL_lyndon_b_johnson"
+			}
+		}
+		advisor = {
+			allowed = {
+			    original_tag = CAL
+			}
+			cost = 150
+			slot = foreign_minister
+			available = {
+				has_government = conservatism
+			}
+			idea_token = CAL_lyndon_b_johnson 
+			traits = {
+			    foreign_minister
+			    for_great_compromiser
+			}
+		}
+	}
+	CAL_arthur_leo_zagat = {
+		name = CAL_arthur_leo_zagat
+		portraits = {
+			army = {
+				small = "GFX_idea_CAL_arthur_leo_zagat"
+			}
+		}
+		advisor = {
+			allowed = {
+			    original_tag = CAL
+			}
+			cost = 150
+			slot = economy_minister
+			available = {
+				has_government = despotism
+			}
+			idea_token = CAL_arthur_leo_zagat 
+			traits = {
+			    economy_minister
+			    eco_mixed_economy
+			}
+		}
+	}
+	CAL_paul_twitchell = {
+		name = CAL_paul_twitchell
+		portraits = {
+			army = {
+				small = "GFX_idea_CAL_paul_twitchell"
+			}
+		}
+		advisor = {
+			allowed = {
+			    original_tag = CAL
+			}
+			cost = 150
+			slot = economy_minister
+			available = {
+				has_government = despotism
+			}
+			idea_token = CAL_paul_twitchell 
+			traits = {
+			    economy_minister
+			    eco_balanced_budget_economy
+			}
+		}
+	}
+	CAL_bishop_nekona = {
+		name = CAL_bishop_nekona
+		portraits = {
+			army = {
+				small = "GFX_idea_CAL_bishop_nekona"
+			}
+		}
+		advisor = {
+			allowed = {
+			    original_tag = CAL
+			}
+			cost = 150
+			slot = economy_minister
+			available = {
+				has_government = despotism
+			}
+			idea_token = CAL_bishop_nekona 
+			traits = {
+			    economy_minister
+			    eco_planned_economy_proponent
+			}
+		}
+	}
+	CAL_grady_louis_mcmurtry = {
+		name = CAL_grady_louis_mcmurtry
+		portraits = {
+			army = {
+				small = "GFX_idea_CAL_grady_louis_mcmurtry"
+			}
+		}
+		advisor = {
+			allowed = {
+			    original_tag = CAL
+			}
+			cost = 150
+			slot = economy_minister
+			available = {
+				has_government = despotism
+			}
+			idea_token = CAL_grady_louis_mcmurtry
+			traits = {
+			    economy_minister
+			    eco_military_entrepreneur
+			}
+		}
+	}
+	CAL_norman_thomas = {
+		name = CAL_norman_thomas
+		portraits = {
+			army = {
+				small = "GFX_idea_CAL_norman_thomas"
+			}
+		}
+		advisor = {
+			allowed = {
+			    original_tag = CAL
+			}
+			cost = 150
+			slot = economy_minister
+			available = {
+				has_government = revisionist_socialism
+			}
+			idea_token = CAL_norman_thomas 
+			traits = {
+			    economy_minister
+			    eco_planned_economy_proponent
+			}
+		}
+	}
+	CAL_elmer_robinson = {
+		name = CAL_elmer_robinson
+		portraits = {
+			army = {
+				small = "GFX_idea_CAL_elmer_robinson"
+			}
+		}
+		advisor = {
+			allowed = {
+			    original_tag = CAL
+			}
+			cost = 150
+			slot = economy_minister
+			available = {
+				has_government = liberalism
+			}
+			idea_token = CAL_elmer_robinson 
+			traits = {
+			    economy_minister
+			    eco_laissez_faire_capitalist
+			}
+		}
+	}
+	CAL_ellis_e_patterson = {
+		name = CAL_ellis_e_patterson
+		portraits = {
+			army = {
+				small = "GFX_idea_CAL_ellis_e_patterson"
+			}
+		}
+		advisor = {
+			allowed = {
+			    original_tag = CAL
+			}
+			cost = 150
+			slot = economy_minister
+			available = {
+				has_government = conservatism
+			}
+			idea_token = CAL_ellis_e_patterson 
+			traits = {
+			    economy_minister
+			    eco_bank_president
+			}
+		}
+	}
+	CAL_arthur_bell = {
+		name = CAL_arthur_bell
+		portraits = {
+			army = {
+				small = "GFX_idea_CAL_arthur_bell"
+			}
+		}
+		advisor = {
+			allowed = {
+			    original_tag = CAL
+			}
+			cost = 150
+			slot = security_minister
+			available = {
+				has_government = despotism
+			}
+			idea_token = CAL_arthur_bell
+			traits = {
+			    security_minister
+			}
+		}
+	}
+	CAL_ruth_norman = {
+		name = CAL_ruth_norman
+		portraits = {
+			army = {
+				small = "GFX_idea_CAL_ruth_norman"
+			}
+		}
+		advisor = {
+			allowed = {
+			    original_tag = CAL
+			}
+			cost = 150
+			slot = security_minister
+			available = {
+				has_government = despotism
+			}
+			idea_token = CAL_ruth_norman
+			traits = {
+			    security_minister
+			    sec_efficient_sociopath
+			}
+		}
+		
+	}
+	CAL_elesha = {
+		name = CAL_elesha
+		portraits = {
+			army = {
+				small = "GFX_idea_CAL_elesha"
+			}
+		}
+		advisor = {
+			allowed = {
+			    original_tag = CAL
+			}
+			cost = 150
+			slot = security_minister
+			available = {
+				has_government = despotism
+			}
+			idea_token = CAL_elesha 
+			traits = {
+			    security_minister
+			    sec_crime_fighter
+			}
+		}
+	}
+	CAL_kenneth_anger = {
+		name = CAL_kenneth_anger
+		portraits = {
+			army = {
+				small = "GFX_idea_CAL_kenneth_anger"
+			}
+		}
+		advisor = {
+			allowed = {
+			    original_tag = CAL
+			}
+			cost = 150
+			slot = security_minister
+			available = {
+				has_government = despotism
+			}
+			idea_token = CAL_kenneth_anger 
+			traits = {
+			    security_minister
+			    sec_media_magnate
+			}
+		}
+	}
+	CAL_sara_northtrup_hollister = {
+		name = CAL_sara_northtrup_hollister
+		portraits = {
+			army = {
+				small = "GFX_idea_CAL_sara_northrup_hollister"
+			}
+		}
+		advisor = {
+			allowed = {
+			    original_tag = CAL
+			}
+			cost = 150
+			slot = security_minister
+			available = {
+				has_government = despotism
+			}
+			idea_token = CAL_sara_northtrup_hollister 
+			traits = {
+			    security_minister
+			    sec_health_and_safety
+			}
+		}
+	}
+	CAL_JBS_hardman = {
+		name = CAL_JBS_hardman
+		portraits = {
+			army = {
+				small = "GFX_idea_CAL_JBS_hardman"
+			}
+		}
+		advisor = {
+			allowed = {
+			    original_tag = CAL
+			}
+			cost = 150
+			slot = security_minister
+			available = {
+				has_government = revisionist_socialism
+			}
+			idea_token = CAL_JBS_hardman 
+			traits = {
+			    security_minister
+			    sec_man_of_the_people
+			}
+		}
+	}
+	CAL_norris_poulson = {
+		name = CAL_norris_poulson
+		portraits = {
+			army = {
+				small = "GFX_idea_CAL_norris_poulson"
+			}
+		}
+		advisor = {
+			allowed = {
+			    original_tag = CAL
+			}
+			cost = 150
+			slot = security_minister
+			available = {
+				has_government = liberalism
+			}
+			idea_token = CAL_norris_poulson 
+			traits = {
+			    security_minister
+			    sec_media_magnate
+			}
+		}
+	}
+	CAL_pat_brown = {
+		name = CAL_pat_brown
+		portraits = {
+			army = {
+				small = "GFX_idea_CAL_pat_brown"
+			}
+		}
+		advisor = {
+			allowed = {
+			    original_tag = CAL
+			}
+			cost = 150
+			slot = security_minister
+			available = {
+				has_government = conservatism
+			}
+			idea_token = CAL_pat_brown
+			traits = {
+			    security_minister
+			    sec_health_and_safety
+			}
+		}
+	}
+	CAL_theodore_tinsley = {
+		name = CAL_theodore_tinsley
+		portraits = {
+			army = {
+				small = "GFX_idea_CAL_theodore_tinsley"
+			}
+		}
+		advisor = {
+			allowed = {
+			    original_tag = CAL
+			}
+			cost = 150
+			slot = head_of_intel
+			available = {
+				has_government = despotism
+			}
+			idea_token = CAL_theodore_tinsley 
+			traits = {
+			    head_of_intel
+			    int_dismal_enigma
+			}
+		}
+	}
+	CAL_a_e_van_vogt = {
+		name = CAL_a_e_van_vogt
+		portraits = {
+			army = {
+				small = "GFX_idea_CAL_a_e_van_vogt"
+			}
+		}
+		advisor = {
+			allowed = {
+			    original_tag = CAL
+			}
+			cost = 150
+			slot = head_of_intel
+			available = {
+				has_government = despotism
+			}
+			idea_token = CAL_a_e_van_vogt 
+			traits = {
+			    head_of_intel
+			    int_dismal_enigma
+			}
+		}
+	}
+	CAL_brother_charles = {
+		name = CAL_brother_charles
+		portraits = {
+			army = {
+				small = "GFX_idea_CAL_brother_charles"
+			}
+		}
+		advisor = {
+			allowed = {
+			    original_tag = CAL
+			}
+			cost = 150
+			slot = head_of_intel
+			available = {
+				has_government = despotism
+			}
+			idea_token = CAL_brother_charles
+			traits = {
+			    head_of_intel
+			    int_fortune_teller
+			}
+		}
+	}
+	CAL_john_j_ballam = {
+		name = CAL_john_j_ballam
+		portraits = {
+			army = {
+				small = "GFX_idea_CAL_john_j_ballam"
+			}
+		}
+		advisor = {
+			allowed = {
+			    original_tag = CAL
+			}
+			cost = 150
+			slot = head_of_intel
+			available = {
+				has_government = revisionist_socialism
+			}
+			idea_token = CAL_john_j_ballam
+			traits = {
+			    head_of_intel
+			    int_industrial_specialist
+			}
+		}
+	}
+	CAL_fletcher_bowron = {
+		name = CAL_fletcher_bowron
+		portraits = {
+			army = {
+				small = "GFX_idea_CAL_fletcher_bowron"
+			}
+		}
+		advisor = {
+			allowed = {
+			    original_tag = CAL
+			}
+			cost = 150
+			slot = head_of_intel
+			available = {
+				has_government = liberalism
+			}
+			idea_token = CAL_fletcher_bowron 
+			traits = {
+			    head_of_intel
+			    int_technical_specialist
+			}
+		}
+	}
+	CAL_kenneth_j_houghton = {
+		name = CAL_kenneth_j_houghton
+		portraits = {
+			army = {
+				small = "GFX_idea_CAL_kenneth_j_houghton"
+			}
+		}
+		advisor = {
+			allowed = {
+			    original_tag = CAL
+			}
+			cost = 150
+			slot = high_command
+			idea_token = CAL_kenneth_j_houghton 
+			traits = {
+			    cos_school_of_commando_operations
+			}
+		}
+	}
+	CAL_herman_v_wall = {
+		name = CAL_herman_v_wall
+		portraits = {
+			army = {
+				small = "GFX_idea_CAL_herman_v_wall"
+			}
+		}
+		advisor = {
+			allowed = {
+			    original_tag = CAL
+			}
+			cost = 150
+			slot = army_chief
+			idea_token = CAL_herman_v_wall 
+			traits = {
+			    army_chief
+			    carm_doctrine_of_autonomy
+			}
+		}
+	}
+	CAL_raymond_murray = {
+		name = CAL_raymond_murray
+		portraits = {
+			army = {
+				small = "GFX_idea_CAL_raymond_murray"
+			}
+		}
+		advisor = {
+			allowed = {
+			    original_tag = CAL
+			}
+			cost = 150
+			slot = navy_chief
+			idea_token = CAL_raymond_murray
+			traits = {
+			    navy_chief
+			    cnav_base_control_doctrine
+			}
+		}
+	}
+	CAL_jack_hendrick_taylor = {
+		name = CAL_jack_hendrick_taylor
+		portraits = {
+			army = {
+				small = "GFX_idea_CAL_jack_hendrick_taylor"
+
+			}
+		}
+		advisor = {
+			allowed = {
+			    original_tag = CAL
+			}
+			cost = 150
+			slot = navy_chief
+			idea_token = CAL_jack_hendrick_taylor
+			traits = {
+			    navy_chief
+			    cnav_decisive_battle_doctrine
+			}
+		}
+	}
+	CAL_brooke_nihart = {
+		name = CAL_brooke_nihart
+		portraits = {
+			army = {
+				small = "GFX_idea_CAL_brooke_nihart"
+			}
+		}
+		advisor = {
+			allowed = {
+			    original_tag = CAL
+			}
+			cost = 150
+			slot = air_chief
+			idea_token = CAL_brooke_nihart
+			traits = {
+			    air_chief
+			    cair_naval_aviation_doctrine
+			}
+		}
+	}
+	CAL_ted_w_lawson = {
+		name = CAL_ted_w_lawson
+		portraits = {
+			army = {
+				small = "GFX_idea_CAL_ted_w_lawson"
+			}
+		}
+		advisor = {
+			allowed = {
+			    original_tag = CAL
+			}
+			cost = 150
+			slot = air_chief
+			idea_token = CAL_ted_w_lawson 
+			traits = {
+			    air_chief
+			    cair_carpet_bombing_doctrine
+			}
+		}
+	}
+
+}

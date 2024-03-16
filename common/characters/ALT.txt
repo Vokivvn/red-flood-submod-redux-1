@@ -1,0 +1,386 @@
+characters = {
+	ALT_aleksandr_kaygorodov = {
+		name = "Aleksandr Kaygorodov"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/ALT/Portrait_Altai_Kaygorodov.tga"
+			}
+		}
+		country_leader = {
+			ideology = social_conservatism
+			expire = "1965.1.1.1"
+		}
+	}
+	ALT_gleb_bokii = {
+		name = "Gleb Bokii"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ALT/Portrait_ALT_Gleb_Bokii.png"
+				small="gfx/interface/ministers/ALT/ALT_gleb_bokii.png"
+			}
+			army = {
+				large = "gfx/leaders/ALT/Portrait_ALT_Bokii_general.png"
+				small="gfx/interface/ministers/ALT/ALT_gleb_bokii.png"
+			}
+		}
+		country_leader = {
+			ideology = state_socialism
+			expire = "1965.1.1.1"
+		}
+		corps_commander = {
+			traits = { trait_engineer politically_connected }
+			skill = 1
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+		advisor = {
+			slot = head_of_intel
+			idea_token = ALT_bokii_int
+			traits = {
+				sec_secret_police_chief
+			}
+			allowed = {
+				original_tag = ALT
+			}
+		}
+	}
+	ALT_ospan_batyr = {
+		name = "Ospan Batyr"
+		portraits = {
+			army ={
+				large = "gfx/leaders/ALT/Batyr.png"
+				small = "gfx/interface/ministers/ALT/ALT_ospan_batyr.png"
+			}
+		}
+		corps_commander = {
+			traits = { trait_mountaineer brilliant_strategist }
+			skill = 1
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+		advisor = {
+			slot = high_command
+			idea_token = ALT_ospan_batyr_hc
+			allowed = {
+				original_tag = ALT
+			}
+			traits = { 
+				 army_commando_1
+			}
+		}
+	}
+	ALT_klement_voroshilov = {
+		name = "Klement Voroshilov"
+		portraits = {
+			army = {
+				large = "gfx/leaders/ALT/Portrait_Klement_Voroshilov.png"
+				small = "gfx/interface/ministers/ALT/ALT_klement_voroshilov.png"
+			}
+			civilian = {
+				large = "gfx/leaders/ALT/Portrait_Klement_Voroshilov.png"
+				small = "gfx/interface/ministers/ALT/ALT_klement_voroshilov.png"
+			}
+		}
+		
+		field_marshal = {
+			traits = { career_officer infantry_officer }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = ALT_klement_voroshilov_carm
+			allowed = {
+				original_tag = ALT
+			}
+			traits = { 
+				 army_chief_reform_2
+			}
+		}
+	}
+	ALT_konstantin_osipov = {
+		name = "Konstantin Osipov"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ALT/Osipov.png"
+				small = "gfx/interface/ministers/ALT/ALT_konstantin_osipov.png"
+			}
+			army = {
+				large = "gfx/leaders/ALT/Osipov.png"
+				small = "gfx/interface/ministers/ALT/ALT_konstantin_osipov.png"
+			}
+		}
+		corps_commander = {
+			traits = { infantry_officer }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 2
+		}
+		advisor = {
+			slot = high_command
+			idea_token = ALT_klement_voroshilov_hc
+			allowed = {
+				original_tag = ALT
+			}
+			traits = { 
+				 army_CombinedArms_1
+			}
+		}
+	}
+	ALT_togtokho= {
+		name = "Enkhbilegtiin Togtokho"
+		portraits = {
+			civilian = {
+				#large = ""
+				small = "gfx/interface/ministers/ALT/ALT_togtokho.png"
+			}
+			army = {
+				large = "gfx/leaders/ALT/Togtokho.png"
+				small = "gfx/interface/ministers/ALT/ALT_togtokho.png"
+			}
+		}
+		corps_commander = {
+			traits = { cavalry_officer }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+		}
+		advisor = {
+			slot = high_command
+			idea_token = ALT_togtokho_hc
+			allowed = {
+				original_tag = ALT
+			}
+			traits = { 
+				 army_cavalry_2
+			}
+		}
+	}
+	ALT_Magsarjav= {
+		name = "Khatanbaatar Magsarjav"
+		portraits = {
+			civilian = {
+				#large = ""
+				small = "gfx/interface/ministers/ALT/ALT_Magsarjav.png"
+			}
+			army = {
+				large = "gfx/leaders/ALT/Magsarjav.png"
+				small = "gfx/interface/ministers/ALT/ALT_Magsarjav.png"
+			}
+		}
+		field_marshal = {
+			traits = { cavalry_officer war_hero }
+			skill = 4
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 2
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = ALT_Magsarjav_carm
+			allowed = {
+				original_tag = ALT
+			}
+			traits = { 
+				 army_chief_maneuver_3
+			}
+		}
+	}
+	ALT_Lhagvasuren= {
+		name = "Zhamyangiyn Lhagvasuren"
+		portraits = {
+			civilian = {
+				#large = ""
+				small = "gfx/interface/ministers/ALT/ALT_Lhagvasuren.png"
+			}
+			army = {
+				large = "gfx/leaders/ALT/Lhagvasuren.png"
+				small = "gfx/interface/ministers/ALT/ALT_Lhagvasuren.png"
+			}
+		}
+		corps_commander = {
+			traits = { }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	ALT_Tsog= {
+		name = "Butochiyn Tsog"
+		portraits = {
+			civilian = {
+				#large = ""
+				small = "gfx/interface/ministers/ALT/ALT_Tsog.png"
+			}
+			army = {
+				large = "gfx/leaders/ALT/Tsog.png"
+				small = "gfx/interface/ministers/ALT/ALT_Tsog.png"
+			}
+		}
+		corps_commander = {
+			traits = { bearer_of_artillery }
+			skill = 1
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	ALT_Givaapil= {
+		name = "Sereenengiin Givaapil"
+		portraits = {
+			civilian = {
+				#large = ""
+				small = "gfx/interface/ministers/ALT/ALT_Givaapil.png" 
+			}
+			army = {
+				large = "gfx/leaders/ALT/Givaapil.png"
+				small = "gfx/interface/ministers/ALT/ALT_Givaapil.png" 
+			}
+		}
+		corps_commander = {
+			traits = { politically_connected }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	
+	
+	ALT_grigorii_choros_gurkhin = {
+		name = "Grigoriy Gurkin"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ALT/Portrait_Grigorii.png"
+			}
+		}
+		country_leader = {
+			ideology = national_conservatism
+			expire = "1965.1.1.1"
+		}
+	}
+	ALT_barchenko = {
+		name = "Aleksandr Barchenko"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ALT/Portrait_ALT_Alexander_Barchenko.png"
+			}
+		}
+		country_leader = {
+			ideology = esoteric_socialism
+			expire = "1965.1.1.1"
+		}
+	}
+	ALT_Alexandr_Kondyain = {
+		name = "Aleksandr Kondyain"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/ALT/ALT_Alexandr_Kondyain.png"
+			}
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = ALT_Alexandr_Kondyain_hog
+			traits = {
+				hog_spiritual_leader
+			}
+			allowed = {
+				original_tag = ALT
+			}
+			available = {
+				OR = {
+					has_government = vanguard_socialism 
+					has_government = revisionist_socialism
+				}
+			}
+		}
+	}
+	ALT_Nikolai_Roerich = {
+		name = "Nikolai Roerich"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/ALT/ALT_Nikolai_Roerich.png"
+			}
+		}
+		advisor = {
+			slot = foreign_minister
+			idea_token = ALT_roerich_for
+			traits = {
+				for_ideological_crusader
+			}
+			available = {
+				OR = {
+					has_government = vanguard_socialism 
+					has_government = revisionist_socialism
+				}
+			}
+			allowed = {
+				original_tag = ALT
+			}
+		}
+	}
+	ALT_Alexei_Dushkin = {
+		name = "Alexei Dushkin"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/ALT/ALT_Alexei_Dushkin.png"
+			}
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = ALT_dushkin_econ
+			traits = {
+				eco_balanced_budget_economy
+			}
+			allowed = {
+				original_tag = ALT
+			}
+			available = {
+				OR = {
+					has_government = vanguard_socialism 
+					has_government = revisionist_socialism
+				}
+			}
+		}
+	}
+	ALT_Ivan_Moskvin = {
+		name = "Ivan Moskvin"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/ALT/ALT_Ivan_Moskvin.png"
+			}
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = ALT_dushkin_econ
+			traits = {
+				sec_health_and_safety
+			}
+			allowed = {
+				original_tag = ALT
+			}
+			available = {
+				OR = {
+					has_government = vanguard_socialism 
+					has_government = revisionist_socialism
+				}
+			}
+		}
+	}
+}

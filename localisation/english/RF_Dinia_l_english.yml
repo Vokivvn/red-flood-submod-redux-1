@@ -1,0 +1,42 @@
+﻿l_english:
+#COUNTRY NAME#
+DIN_pakistan:0 "Pakistan"
+DIN_pakistan_DEF:0 "Republic of Pakistan"
+DIN_pakistan_ADJ:0 "Pakistani"
+#PARTIES#
+DIN_vanguard_socialism_party:0 "CPoI - L"
+DIN_popular_socialism_party:0 "CPoI - S"
+DIN_anarchism_party:0 "SAC"
+DIN_revisionist_socialism_party:0 "CSP"
+DIN_progressivism_party:0 "INC - S"
+DIN_liberalism_party:0 "AML - M"
+DIN_conservatism_party:0 "SIP"
+DIN_right_authoritarianism_party:0 "AML - R"
+DIN_despotism_party:0 "Muslim Armies of India"
+DIN_reactionism_party:0 "JeI"
+DIN_accelerationism_party:0 "SR"
+
+DIN_vanguard_socialism_party_long:0 "Communist Party of India - Leninist"
+DIN_popular_socialism_party_long:0 "Communist Party of India - Spartakist"
+DIN_anarchism_party_long:0 "Sindhi Anarchist Confederation"
+DIN_revisionist_socialism_party_long:0 "Congress Socialist Party"
+DIN_progressivism_party_long:0 "Indian National Congress - Socialist"
+DIN_liberalism_party_long:0 "All-India Muslim League - Moderates"
+DIN_conservatism_party_long:0 "Sind Ittehad Party"
+DIN_right_authoritarianism_party_long:0 "All-India Muslim League - Radicals"
+DIN_despotism_party_long:0 "Military Administration of Muslim Territories"
+DIN_reactionism_party_long:0 "Jamaat-e-Islami"
+DIN_accelerationism_party_long:0 "Sindhi Rejuvanists"
+
+#LEADER DESCRIPTIONS#
+POLITICS_Muhammad_Iqbal_DESC: "Muhammed Iqbal is the spirtual and founding farther of the young Republic of Dinia. Having been unanimously elected as president by a gathering of political and military figures. A poet, philosopher and politician Muhammed Iqbal is essential for the young republic to run smoothly due to the large amount of support he gathers, both from the general population as a beloved figure, and poltical peers due to his work in creating the state. Iqbal wishes for Dinia to spread over what is known as Pakistan creating a Muslim-Indian nation his people and culture can thrive in. Against the extremes of radicalism of both the left and right Iqbal is responsible for keeping Dinias young democratic values alive and if he was to perish, the very future of Dinia would hang in the balance."
+#IDEAS#
+DIN_home_of_the_league:0 "Home of the All-India Muslim League"
+DIN_home_of_the_league_desc:0 "The All-India Muslim League may have been established in Dacca, East Bengal, but the majority of the League's power, personelle and resources were tied up in the Western provinces when the Raj began to fall. As a result, the Republic of Dinia was proclaimed, and the AML headquartered there. The republic was however, slow to act and over the course of 1935 it failed to consolidate its control over the West of the Raj. By the time the dust settled, Dinia was confined to just two of it's five claimed regions. The AML now operates from Karachi, but has it's eyes set firmly on Lahore and Rawalpindi."
+DIN_sind_ittehad:0 "Sind Ittehad Influences"
+DIN_sind_ittehad_desc:0 ""
+DIN_khan_kalat:0 "Khanate of Kalat"
+DIN_khan_kalat_desc:0 ""
+#CUSTOM TOOLTIPS AND FLAGS#
+#DECISIONS (1.5 Update)#
+#FOCUSES#

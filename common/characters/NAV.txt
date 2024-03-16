@@ -1,0 +1,14 @@
+characters = {
+	NAV_chee_dodge = {
+		name = "Chee Dodge"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/NAV/Portrait_Chee_Dodge.png"
+			}
+		}
+		country_leader = {
+			ideology = social_conservatism
+			expire = "1965.1.1.1"
+		}
+	}
+}

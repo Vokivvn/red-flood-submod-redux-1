@@ -1,0 +1,37 @@
+﻿l_english:
+#COUNTRY NAME#
+
+
+#PARTIES#
+NIC_vanguard_socialism_party:0 "EDSN"
+NIC_popular_socialism_party:0 "EDSN-S"
+NIC_anarchism_party:0 "EDSN"
+NIC_revisionist_socialism_party:0 "EDSN"
+NIC_progressivism_party:0 "EDSN-D"
+NIC_liberalism_party:0 "PD"
+NIC_conservatism_party:0 "PLN"
+NIC_right_authoritarianism_party:0 "PC"
+NIC_despotism_party:0 "GN-N"
+NIC_reactionism_party:0 "FE-CC"
+NIC_vanguard_socialism_party_long:0 "Ejército Defensor de la Soberanía Nacional"
+NIC_popular_socialism_party_long:0 "Ejército Defensor de la Soberanía Nacional - Sandinistas"
+NIC_anarchism_party_long:0 "Ejército Defensor de la Soberanía Nacional"
+NIC_revisionist_socialism_party_long:0 "Ejército Defensor de la Soberanía Nacional"
+NIC_progressivism_party_long:0 "Ejército Defensor de la Soberanía Nacional - Democratas"
+NIC_liberalism_party_long:0 "Partido Democrático"
+NIC_conservatism_party_long:0 "Partido Liberal"
+NIC_right_authoritarianism_party_long:0 "Partido Conservador"
+NIC_despotism_party_long:0 "Guarda Nacional de Nicaragua"
+NIC_reactionism_party_long:0 "Falange Española en el Colegio Centroámerica"
+
+#LEADER DESCRITIONS#
+#IDEAS#
+NIC_dying_admin:0 "Dying Administration"
+NIC_dying_admin_desc:0 "Our President is ill, weak, and senile. This is a great representation of the very situation that Nicaragua's politics finds itself in - an increasingly radicalized youth and an evermore old and ignorant establishment."
+NIC_sandinistas:0 "EDSN-dominated Countryside"
+NIC_sandinistas_desc:0 "The Army of Augusto César Sandino has been utterly dominating our countryside, ensuring that we have very little control over our territory outside of Managua. This travesty has meant that our politics are equally impossible to traverse outside of the Capital."
+NIC_guarda_nacional:0 "Guardia Nacional"
+NIC_guardia_nacional_desc:0 "The National Guard of Nicaragua is completely inefficient as a military force, and generally just has no value in actual combat. Its main purpose is to fight off rebels, and even with that its failing pretty badly."
+#CUSTOM TOOLTIPS AND FLAGS#
+#DECISIONS (1.5 Update)#
+#FOCUSES#

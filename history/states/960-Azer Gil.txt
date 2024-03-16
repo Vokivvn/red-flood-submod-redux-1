@@ -1,0 +1,24 @@
+
+state={
+	id=960
+	name="STATE_960"
+	manpower = 357890
+
+	state_category = city
+
+	history={
+		owner = KAV
+		buildings = {
+			infrastructure = 2
+		}
+		victory_points = {
+			4473 3
+		}
+		add_core_of = AZR
+		add_core_of = KAV
+	}
+
+	provinces={
+		4473 12434
+	}
+}

@@ -1,0 +1,26 @@
+state={
+	id=1057
+	name="STATE_1057"
+	resources={
+		
+	}
+
+	history={
+		owner = DKB
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+		victory_points = {
+			3672 3
+		}
+		add_core_of = DKB
+	}
+
+	provinces={
+		3672 11632 683 1455 666 1050
+	}
+	manpower=523970
+	buildings_max_level_factor=1.000
+	state_category=town
+}

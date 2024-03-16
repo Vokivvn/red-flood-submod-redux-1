@@ -1,0 +1,1200 @@
+characters = {
+	ITA_luigi_sturzo = {
+		name = "Luigi Sturzo"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ITA/ITA_Luigi_Sturzo.png"
+			}
+			army = {
+				small = "GFX_idea_ITA_hog_Luigi_Struzo"
+			}
+		}
+		country_leader = {
+			ideology = social_conservatism
+			expire = "1965.1.1.1"
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = ITA_hog_Luigi_Struzo
+			allowed = {
+				original_tag = ITA
+			}
+			available = {
+				has_country_leader = {
+					character = ITA_luigi_sturzo
+					ruling_only = yes
+				}
+			}
+			traits = {
+				head_of_government
+				hog_silent_workhorse
+			}
+		}
+	}
+	ITA_italo_balbo = {
+		name = "Italo Balbo"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ITA/ITA_Italo_Balbo.png"
+			}
+			army = {
+				large = "gfx/leaders/ITA/ITA_Italo_Balbo_General.png"
+				small = "GFX_idea_ITA_hog_Italo_Balbo"
+			}
+		}
+		country_leader = {
+			ideology = revolutionary_nationalism
+			expire = "1965.1.1.1"
+		}
+		corps_commander = {
+			traits = { career_officer politically_connected }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = ITA_hog_Italo_Balbo 
+			allowed = {
+				original_tag = ITA
+			}
+			available = {
+				has_country_leader = {
+					character = ITA_italo_balbo
+					ruling_only = yes
+				}
+			}
+			traits = {
+				head_of_government
+				hog_backroom_backstabber
+			}
+		}
+		advisor = {
+			slot = air_chief
+			idea_token = ITA_hog_Italo_Balbo 
+			allowed = {
+				original_tag = ITA
+			}
+			available = {
+				NOT ={
+					has_country_leader = {
+						character = ITA_italo_balbo
+						ruling_only = yes
+					}
+				}
+			}
+			traits = {
+				cair_air_superiority_doctrine
+			}
+		}
+	}
+	ITA_ivanoe_bonomi = {
+		name = "Ivanoe Bonomi"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ITA/ITA_Ivanoe_Bonomi.png"
+			}
+			army = {
+				small = "GFX_idea_ITA_hog_Ivanoe_Bonomi"
+			}
+		}
+		country_leader = {
+			ideology = social_liberalism
+			expire = "1965.1.1.1"
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = ITA_hog_Ivanoe_Bonomi
+			allowed = {
+				original_tag = ITA
+			}
+			available = {
+				has_country_leader = {
+					character =  ITA_ivanoe_bonomi
+					ruling_only = yes
+				}
+			}
+			traits = {
+				head_of_government
+				hog_ambitious_union_boss
+			}
+		}
+	}
+	ITA_carlo_rosselli = {
+		name = "Carlo Rosselli"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ITA/ITA_Carlo_Rosselli.png"
+			}
+		}
+		country_leader = {
+			ideology = liberal_socialism
+			expire = "1965.1.1.1"
+		}
+	}
+	ITA_michele_bianchi = {
+		name = "Michele Bianchi"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ITA/ITA_Michele_Bianchi.png"
+			}
+		}
+		country_leader = {
+			ideology = syndicalism
+			expire = "1965.1.1.1"
+		}
+	}
+	ITA_lelio_basso = {
+		name = "Lelio Basso"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ITA/ITA_Lelio_Basso.png"
+			}
+		}
+		country_leader = {
+			ideology = spartakism
+			expire = "1965.1.1.1"
+		}
+	}
+	ITA_junio_valerio_borghese = {
+		name = "Junio Valerio Borghese"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ITA/Junio_Valerio_Borghese.png"
+			}
+		}
+		country_leader = {
+			ideology = reactionary_populism
+			expire = "1965.1.1.1"
+		}
+	}
+	ITA_amadeo_bordiga = {
+		name = "Amadeo Bordiga"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ITA/Portrait_ITA_Amadeo_Bordiga_vansoc.png"
+			}
+		}
+		country_leader = {
+			ideology = leninism
+			expire = "1965.1.1.1"
+		}
+	}
+	ITA_berto_ricci = {
+		name = "Berto Ricci"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ITA/ITA_berto_ricci.png"
+			}
+		}
+		country_leader = {
+			ideology = national_vanguardism
+			expire = "1965.1.1.1"
+		}
+	}
+	ITA_camillo_berneri = {
+		name = "Camillo Berneri"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ITA/ITA_Camillo_Berneri.png"
+			}
+		}
+		country_leader = {
+			ideology = social_anarchism
+			expire = "1965.1.1.1"
+		}
+	}
+	ITA_giacomo_balla = {
+		name = "Giacomo Balla"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ITA/ITA_Giacomo_Balla.png"
+			}
+		}
+		country_leader = {
+			ideology = futurism
+			expire = "1965.1.1.1"
+		}
+	}
+	ITA_Francesco_Nitti = {
+		name = ITA_hog_Francesco_Nitti
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ITA/ITA_Francesco_Nitti.png"
+			}
+			army = {
+				small = "GFX_idea_ITA_hog_Francesco_Nitti"
+			}
+		}
+		country_leader = {
+			expire = "1965.1.1"
+			ideology = social_liberalism
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = ITA_hog_Francesco_Nitti
+			allowed = {
+				original_tag = ITA
+			}
+			available = {
+				has_country_leader = {
+					character = ITA_Francesco_Nitti
+					ruling_only = yes
+				}
+			}
+			traits = {
+				head_of_government
+				hog_political_protege
+			}	
+		}
+	}
+
+
+	ITA_Carlo_Sforza = {
+		name = ITA_for_Carlo_Sforza
+		portraits = {
+			army = {
+				small = "GFX_idea_ITA_for_Carlo_Sforza"
+			}
+		}
+		advisor = {
+			slot = foreign_minister
+			idea_token = ITA_for_Carlo_Sforza
+			allowed = {
+				original_tag = ITA
+			}
+			available = {
+				has_country_leader = {
+					character =  ITA_ivanoe_bonomi
+					ruling_only = yes
+				}
+			}
+			traits = {
+				foreign_minister
+				for_ideological_crusader
+			}
+		}
+	}
+	ITA_Pietro_Torretta = {
+		name = ITA_for_Pietro_Torretta
+		portraits = {
+			army = {
+				small = "GFX_idea_ITA_for_Pietro_Torretta"
+			}
+		}
+		advisor = {
+			slot = foreign_minister
+			idea_token = ITA_for_Pietro_Torretta
+			allowed = {
+				original_tag = ITA
+			}
+			available = {
+				has_country_leader = {
+					character = ITA_luigi_sturzo
+					ruling_only = yes
+				}
+			}
+			traits = {
+				foreign_minister
+				for_ideological_crusader
+			}
+		}
+	}
+	ITA_Giuseppe_Bastanini = {
+		name = ITA_for_Giuseppe_Bastanini
+		portraits = {
+			army = {
+				small = "GFX_idea_ITA_for_Giuseppe_Bastanini"
+			}
+		}
+		advisor = {
+			slot = foreign_minister
+			idea_token = ITA_for_Giuseppe_Bastanini
+			allowed = {
+				original_tag = ITA
+			}
+			available = {
+				has_country_leader = {
+					character = ITA_italo_balbo
+					ruling_only = yes
+				}
+			}
+			traits = {
+				foreign_minister
+				for_general_staffer
+			}
+		}
+	}
+	ITA_Ugo_La_Malfa = {
+		name = ITA_for_Ugo_La_Malfa
+		portraits = {
+			army = {
+				small = "GFX_idea_ITA_for_Ugo_La_Malfa"
+			}
+		}
+		advisor = {
+			slot = foreign_minister
+			idea_token = ITA_for_Ugo_La_Malfa
+			allowed = {
+				original_tag = ITA
+			}
+			available = {
+				has_country_leader = {
+					character = ITA_Francesco_Nitti
+					ruling_only = yes
+				}
+			}
+			traits = {
+				foreign_minister
+				for_great_compromiser
+			}	
+		}
+	}
+
+	ITA_Alberto_Beneduce = {
+		name = ITA_eco_Alberto_Beneduce
+		portraits = {
+			army = {
+				small = "GFX_idea_ITA_eco_Alberto_Beneduce"
+			}
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = ITA_eco_Alberto_Beneduce
+			allowed = {
+				original_tag = ITA
+			}
+			available = {
+				has_country_leader = {
+					character =  ITA_ivanoe_bonomi
+					ruling_only = yes
+				}
+			}
+			traits = {
+				economy_minister
+				eco_reformer
+			}
+		}
+	}
+	ITA_Luigi_Facta = {
+		name = ITA_eco_Luigi_Facta
+		portraits = {
+			army = {
+				small = "GFX_idea_ITA_eco_Luigi_Facta"
+			}
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = ITA_eco_Luigi_Facta
+			allowed = {
+				original_tag = ITA
+			}
+			available = {
+				has_country_leader = {
+					character = ITA_luigi_sturzo
+					ruling_only = yes
+				}
+			}
+			traits = {
+				economy_minister
+				eco_balanced_budget_economy
+			}
+		}
+	}
+	ITA_Giacomo_Acerbo = {
+		name = ITA_eco_Giacomo_Acerbo
+		portraits = {
+			army = {
+				small = "GFX_idea_ITA_eco_Giacomo_Acerbo"
+			}
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = ITA_eco_Giacomo_Acerbo
+			allowed = {
+				original_tag = ITA
+			}
+			available = {
+				has_country_leader = {
+					character = ITA_italo_balbo
+					ruling_only = yes
+				}
+			}
+			traits = {
+				economy_minister
+				eco_military_entrepreneur
+			}
+		}
+	}
+	ITA_Bruno_Visentini = {
+		name = ITA_eco_Bruno_Visentini
+		portraits = {
+			army = {
+				small = "GFX_idea_ITA_eco_Bruno_Visentini"
+			}
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = ITA_eco_Bruno_Visentini
+			allowed = {
+				original_tag = ITA
+			}
+			available = {
+				has_country_leader = {
+					character = ITA_Francesco_Nitti
+					ruling_only = yes
+				}
+			}
+			traits = {
+				economy_minister
+				eco_industrialiser
+			}	
+		}
+	}
+
+	ITA_Vittorio_Orlando = {
+		name = ITA_sec_Vittorio_Orlando
+		portraits = {
+			army = {
+				small = "GFX_idea_ITA_sec_Vittorio_Orlando"
+			}
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = ITA_sec_Vittorio_Orlando
+			allowed = {
+				original_tag = ITA
+			}
+			available = {
+				has_country_leader = {
+					character =  ITA_ivanoe_bonomi
+					ruling_only = yes
+				}
+			}
+			traits = {
+				security_minister
+				sec_man_of_the_people
+			}
+		}
+	}
+	ITA_Alcide_De_Gasperi = {
+		name = ITA_sec_Alcide_De_Gasperi
+		portraits = {
+			army = {
+				small = "GFX_idea_ITA_sec_Alcide_De_Gasperi"
+			}
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = ITA_sec_Alcide_De_Gasperi
+			allowed = {
+				original_tag = ITA
+			}
+			available = {
+				has_country_leader = {
+					character = ITA_luigi_sturzo
+					ruling_only = yes
+				}
+			}
+			traits = {
+				security_minister
+				sec_man_of_the_people
+			}
+		}
+	}
+	ITA_Alessandro_Pavolini = {
+		name = ITA_sec_Alessandro_Pavolini
+		portraits = {
+			army = {
+				small = "GFX_idea_ITA_sec_Alessandro_Pavolini"
+			}
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = ITA_sec_Alessandro_Pavolini
+			allowed = {
+				original_tag = ITA
+			}
+			available = {
+				has_country_leader = {
+					character = ITA_italo_balbo
+					ruling_only = yes
+				}
+			}
+			traits = {
+				security_minister
+				sec_secret_police_chief
+			}
+		}
+	}
+	ITA_Ferruccio_Parri = {
+		name = ITA_sec_Ferruccio_Parri
+		portraits = {
+			army = {
+				small = "GFX_idea_ITA_sec_Ferruccio_Parri"
+			}
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = ITA_sec_Ferruccio_Parri
+			allowed = {
+				original_tag = ITA
+			}
+			available = {
+				has_country_leader = {
+					character = ITA_Francesco_Nitti
+					ruling_only = yes
+				}
+			}
+			traits = {
+				security_minister
+				sec_media_magnate
+			}	
+		}
+	}
+
+	ITA_Emilio_de_Bono = {
+		name = ITA_int_Emilio_de_Bono
+		portraits = {
+			army = {
+				small = "GFX_idea_ITA_int_Emilio_de_Bono"
+			}
+		}
+		advisor = {
+			slot = head_of_intel
+			idea_token = ITA_int_Emilio_de_Bono
+			allowed = {
+				original_tag = ITA
+			}
+			available = {
+				has_country_flag = ITA_ln_victory
+			}
+			traits = {
+				head_of_intel
+				int_logistics_specialist
+			}
+		}
+	}
+	ITA_Emilio_Lussu = {
+		name = ITA_int_Emilio_Lussu
+		portraits = {
+			army = {
+				small = "GFX_idea_ITA_int_Emilio_Lussu"
+			}
+		}
+		advisor = {
+			slot = head_of_intel
+			idea_token = ITA_int_Emilio_Lussu
+			allowed = {
+				original_tag = ITA
+			}
+			available = {
+				OR = {
+					has_country_flag = ITA_pri_victory
+					has_country_flag = ITA_pudi_stays
+				}
+			}
+			traits = {
+				head_of_intel
+				int_political_specialist
+			}
+		}
+	}
+	ITA_Fernando_Tambroni = {
+		name = ITA_int_Fernando_Tambroni
+		portraits = {
+			army = {
+				small = "GFX_idea_ITA_int_Fernando_Tambroni"
+			}
+		}
+		advisor = {
+			slot = head_of_intel
+			idea_token = ITA_int_Fernando_Tambroni
+			allowed = {
+				original_tag = ITA
+			}
+			available = {
+				OR = {
+					has_country_flag = ITA_ln_victory
+					has_country_flag = ITA_pudi_stays
+				}
+			}
+			traits = {
+				head_of_intel
+				int_dismal_enigma
+			}	
+		}
+	}
+
+	ITA_pietro_badoglio = {
+		name = "Pietro Badoglio"
+		portraits = {
+			army = {
+				large = "gfx/leaders/ITA/ITA_Pietro_Badoglio.png"
+				small = "gfx/interface/ministers/ITA/pietro_badoglio_m.tga"
+			}
+		}
+		field_marshal = {
+			traits = { defensive_doctrine old_guard politically_connected inflexible_strategist }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 4
+			logistics_skill = 3
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = ITA_cos_Pietro_Badoglio
+			allowed = {
+				original_tag = ITA
+			}
+			traits = {
+				carm_static_defence_doctrine
+			}
+		}
+	}
+	ITA_ugo_cavallero = {
+		name = "Ugo Cavallero"
+		portraits = {
+			army = {
+				large = "gfx/leaders/ITA/ITA_Ugo_Cavallero.dds"
+			}
+		}
+		corps_commander = {
+			traits = {  old_guard trait_cautious career_officer }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 3
+		}
+	}
+	ITA_giovanni_messe = {
+		name = "Giovanni Messe"
+		portraits = {
+			army = {
+				large = "gfx/leaders/ITA/ITA_Giovanni_Messe.dds"
+				small = "gfx/interface/ministers/ITA/giovanni_messe_m.tga"
+			}
+		}
+		corps_commander = {
+			traits = {  armor_officer war_hero }
+			skill = 4
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 4
+		}
+		advisor={
+			cost = 150
+			slot = theorist
+			idea_token = giovanni_messe
+			ledger = army
+			allowed = {
+				original_tag = ITA
+			}
+			traits = {
+				mobile_warfare_expert
+			}
+		}
+	}
+	ITA_sebastiano_visconti_prasca = {
+		name = "Sebastiano Visconti Prasca"
+		portraits = {
+			army = {
+				large = "gfx/leaders/ITA/ITA_Sebastiano_Visconti_Prasca.dds"
+			}
+		}
+		corps_commander = {
+			traits = { career_officer inflexible_strategist }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	ITA_ubaldo_soddu = {
+		name = "Ubaldo Soddu"
+		portraits = {
+			army = {
+				large = "gfx/leaders/ITA/ITA_Ubaldo_Soddu.dds"
+			}
+		}
+		corps_commander = {
+			traits = { career_officer trait_cautious }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	ITA_rodolfo_graziani = {
+		name = "Rodolfo Graziani"
+		portraits = {
+			army = {
+				large = "gfx/leaders/ITA/ITA_Rodolfo_Graziani.dds"
+				small = "gfx/interface/ministers/ITA/rodolfo_graziani_m.tga"
+			}
+		}
+		corps_commander = {
+			traits = { offensive_doctrine politically_connected trait_cautious }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+		}
+		advisor={
+			cost = 150
+			slot = theorist
+			idea_token = rodolfo_graziani
+			ledger = army
+			allowed = {
+				original_tag = ITA
+			}
+			traits = {
+				grand_battle_plan_expert
+			}
+		}
+	}
+	ITA_dardano_fenulli = {
+		name = "Dardano Fenulli"
+		portraits = {
+			army = {
+				large = "gfx/leaders/ITA/Portrait_ITA_Dardano_Fenulli.png"
+			}
+		}
+		corps_commander = {
+			traits = { inflexible_strategist commando }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	ITA_francesco_de_martini = {
+		name = "Francesco de Martini"
+		portraits = {
+			army = {
+				large = "gfx/leaders/ITA/ITA_Francesco_de_Martini.png"
+			}
+		}
+		corps_commander = {
+			traits = { cavalry_leader trickster }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+		}
+	}
+	ITA_ettore_troilo = {
+		name = "Ettore Troilo"
+		portraits = {
+			army = {
+				large = "gfx/leaders/ITA/Portrait_ITA_Ettore_Troilo.png"
+			}
+		}
+		corps_commander = {
+			traits = { infantry_officer hill_fighter }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
+	ITA_randolfo_pacciardi = {
+		name = "Randolfo Pacciardi"
+		portraits = {
+			army = {
+				large = "gfx/leaders/ITA/ITA_Randolfo_Pacciardi.png"
+				small = "GFX_idea_ITA_int_Randolfo_Pacciardi"
+			}
+		}
+		corps_commander = {
+			traits = { politically_connected infantry_leader }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+		}
+		advisor = {
+			slot = head_of_intel
+			idea_token = ITA_int_Randolfo_Pacciardi
+			allowed = {
+				original_tag = ITA
+			}
+			available = {
+				has_country_flag = ITA_pri_victory
+			}
+			traits = {
+				head_of_intel
+				int_logistics_specialist
+			}	
+		}
+	}
+	ITA_inigo_campioni = {
+		name = "Inigo Campioni"
+		portraits = {
+			navy = {
+				large = "gfx/leaders/ITA/ITA_Inigo_Campioni.dds"
+				small = "gfx/interface/ministers/ITA/inigo_campioni_m.tga"
+			}
+		}
+		navy_leader = {
+			traits = { battleship_adherent superior_tactician spotter }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 2
+			maneuvering_skill = 3
+			coordination_skill = 3
+		}
+		advisor = {
+			slot = navy_chief
+			idea_token = ITA_cos_inigo_campioni
+			allowed = {
+				original_tag = ITA
+			}
+			traits = {
+				cnav_base_control_doctrine
+			}
+		}
+	}
+	ITA_alberto_da_zara = {
+		name = "Alberto Da Zara"
+		portraits = {
+			navy = {
+				large = "gfx/leaders/ITA/ITA_Alberto_Da_Zara.dds"
+				small = "gfx/interface/ministers/ITA/alberto_da_zara_m.tga"
+			}
+		}
+		navy_leader = {
+			traits = { gentlemanly superior_tactician }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			maneuvering_skill = 3
+			coordination_skill = 2
+		}
+		advisor = {
+			slot = high_command
+			idea_token = ITA_hoc_alberto_da_zara
+			allowed = {
+				original_tag = ITA
+			}
+			traits = {
+				navy_chief_reform_2
+			}
+		}
+	}
+	ITA_giuseppe_fioravanzo = {
+		name = "Giuseppe Fioravanzo"
+		portraits = {
+			navy = {
+				large = "gfx/leaders/ITA/ITA_Giuseppe_Fioravanzo.dds"
+			}
+		}
+		navy_leader = {
+			traits = { aviation_enthusiast blockade_runner }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 2
+			maneuvering_skill = 4
+			coordination_skill = 2
+		}
+	}
+	ITA_carlo_bergamini = {
+		name = "Carlo Bergamini"
+		portraits = {
+			navy = {
+				large = "gfx/leaders/ITA/ITA_Carlo_Bergamini.dds"
+			}
+		}
+		navy_leader = {
+			traits = { battleship_adherent gunnery_expert ironside }
+			skill = 2
+			attack_skill = 3
+			defense_skill = 1
+			maneuvering_skill = 2
+			coordination_skill = 1
+		}
+	}
+	ITA_angelo_iachino = {
+		name = "Angelo Iachino"
+		portraits = {
+			navy = {
+				large = "gfx/leaders/ITA/ITA_Angelo_Iachino.dds"
+				small = "gfx/interface/ministers/ITA/angelo_iachino_m.tga"
+			}
+		}
+		navy_leader = {
+			traits = { bold navy_career_officer superior_tactician spotter }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			maneuvering_skill = 3
+			coordination_skill = 1
+		}
+		advisor = {
+			cost = 150
+			slot = theorist
+			idea_token = angelo_iachino
+			allowed = {
+				original_tag = ITA
+			}
+			traits = {
+				naval_theorist
+			}
+		}
+	}
+	ITA_amedeo_mecozzi = {
+		name = "Amedeo Mecozzi"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/ITA/amedeo_mecozzi_m.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = theorist
+			idea_token = amedeo_mecozzi
+			allowed = {
+				original_tag = ITA
+			}
+			traits = {
+				assault_avaition
+			}
+		}
+	}
+	ITA_renato_sandalli = {
+		name = "Renato Sandalli"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/ITA/renato_sandalli_m.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = theorist
+			idea_token = renato_sandalli
+			allowed = {
+				original_tag = ITA
+			}
+			traits = {
+				air_warfare_theorist
+			}
+		}
+	}
+	ITA_gaetano_crocco = {
+		name = "Gaetano Crocco"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/ITA/gaetano_crocco_m.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = theorist
+			idea_token = gaetano_crocco
+			allowed = {
+				original_tag = ITA
+			}
+			research_bonus = {
+				rocketry = 0.15
+			}
+			traits = {
+				rocket_scientist 
+			}
+		}
+	}
+	ITA_enrico_caviglia = {
+		name = "Enrico Caviglia"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/ITA/enrico_caviglia_m.tga"
+			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = ITA_cos_enrico_caviglia
+			allowed = {
+				original_tag = ITA
+			}
+			traits = {
+				carm_guns_and_butter_doctrine
+			}
+		}
+	}
+	ITA_sabato_martelli_castaldi = {
+		name = "Sabato Martelli Castaldi"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/ITA/sabato_martelli_castaldi_m.tga"
+			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = ITA_cos_sabato_martelli_castaldi
+			allowed = {
+				original_tag = ITA
+			}
+			traits = {
+				carm_doctrine_of_autonomy
+			}
+		}
+	}
+	ITA_raffaele_de_courten = {
+		name = "Raffaele De Courten"
+		portraits = {
+			navy = {
+				small = "gfx/interface/ministers/ITA/raffaele_de_courten_m.tga"
+			}
+		}
+		advisor = {
+			slot = navy_chief
+			idea_token = ITA_cos_raffaele_de_courten
+			allowed = {
+				original_tag = ITA
+			}
+			traits = {
+				cnav_decisive_battle_doctrine
+			}
+		}
+	}
+	ITA_francesco_pricolo = {
+		name = "Francesco Pricolo"
+		portraits = {
+			navy = {
+				small = "gfx/interface/ministers/ITA/francesco_pricolo_m.tga"
+			}
+		}
+		advisor = {
+			slot = air_chief
+			idea_token = ITA_cos_francesco_pricolo
+			allowed = {
+				original_tag = ITA
+			}
+			traits = {
+				cair_battlefield_support_doctrine
+			}
+		}
+	}
+	ITA_paolo_berardi = {
+		name = "Paolo Berardi"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/ITA/paolo_berardi_m.tga"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = ITA_hoc_paolo_berardi
+			allowed = {
+				original_tag = ITA
+			}
+			traits = {
+				army_artillery_2
+			}
+		}
+	}
+	ITA_vittorio_ambrosio = {
+		name = "Vittorio Ambrosio"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/ITA/vittorio_ambrosio_m.tga"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = ITA_hoc_vittorio_ambrosio
+			allowed = {
+				original_tag = ITA
+			}
+			traits = {
+				army_regrouping_2
+			}
+		}
+	}
+	ITA_giuseppe_castellano = {
+		name = "Giuseppe Castellano"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/ITA/giuseppe_castellano_m.tga"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = ITA_hoc_giuseppe_castellano
+			allowed = {
+				original_tag = ITA
+			}
+			traits = {
+				army_chief_planning_1
+			}
+		}
+	}
+
+	ITA_luigi_sansonetti = {
+		name = "Luigi Sansonetti"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/ITA/luigi_sansonetti_m.tga"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = ITA_hoc_luigi_sansonetti
+			allowed = {
+				original_tag = ITA
+			}
+			traits = {
+				navy_fleet_logistics_3
+			}
+		}
+	}
+	ITA_rino_corso_fougier = {
+		name = "Rino Corso Fougier"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/ITA/rino_corso_fougier_m.tga"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = ITA_hoc_rino_corso_fougier
+			allowed = {
+				original_tag = ITA
+			}
+			traits = {
+				air_air_superiority_1
+			}
+		}
+	}
+	ITA_pietro_piacentini = {
+		name = "Pietro Piacentini"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/ITA/pietro_piacentini_m.tga"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = ITA_hoc_pietro_piacentini
+			allowed = {
+				original_tag = ITA
+			}
+			traits = {
+				air_close_air_support_2
+			}
+		}
+	}
+}
+
+

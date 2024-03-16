@@ -1,0 +1,166 @@
+import os
+import re
+from collections import deque
+
+## this automio Generator is made by sanon all copyright reserved by me kek (23-10-15)
+
+
+CaseDic = {"":"Todo",
+                "materiel_manufacturer": "generic_infantry_equipment_organization", 
+                "tank_manufacturer":"generic_tank_organization",
+                "naval_manufacturer":"generic_task_force_ship_organization",
+                "aircraft_manufacturer":"generic_general_aircraft_organization",
+                }
+
+TraitDic = {    
+                "small_tank_producer_defense": "generic_infantry_tank_organization", 
+                "small_tank_producer_offense": "generic_mobile_tank_organization", 
+                "medium_tank_producer_defense": "generic_tank_organization", 
+                "medium_tank_producer_offense": "generic_medium_tank_organization", 
+                "heavy_tank_producer": "generic_heavy_tank_organization", 
+
+                "capital_ship_producer_offense": "generic_black_sea_fleet_organization", 
+                "capital_ship_producer_defense": "generic_raider_ship_organization", 
+                "small_ship_producer_offense": "generic_submarine_organization", 
+                "small_ship_producer_defense": "generic_task_force_ship_organization", 
+                "cruiser_producer_offense": "generic_battle_line_ship_organization", 
+                "cruiser_producer_small_ship_producer_": "generic_escort_ship_organization", 
+                "ship_producer_mass": "generic_refurbishment_repair_organization", 
+
+                "nav_cas_producer_mass": "generic_cas_aircraft_organization", 
+                "nav_cas_producer_offense": "generic_cas_aircraft_organization", 
+                "nav_cas_producer_defense": "generic_naval_aircraft_organization", 
+                "bomber_producer_offense":"generic_multi_role_aircraft_organization",
+                "bomber_producer_defense":"generic_medium_aircraft_organization",
+                "bomber_producer_mass":"generic_heavy_aircraft_organization",
+                "fighter_producer_mass":"generic_range_focused_aircraft_organization",
+                "fighter_producer_offense":"generic_light_aircraft_organization",
+                "fighter_producer_defense":"generic_high_agility_fighter_aircraft_organization",
+
+                "motorised_equipment_producer_defense":"generic_motorized_mechanized_organization",
+                "motorised_equipment_producer":"generic_armored_car_organization",
+
+                "infantry_equipment_producer_offense":"generic_infantry_equipment_organization",
+                "infantry_equipment_producer":"generic_support_equipment_organization",
+
+                "artillery_producer_offense":"generic_artillery_offence_attack_organization",
+                "artillery_producer_defense":"generic_artillery_offence_break_organization",
+                "artillery_producer":"generic_artillery_organization",
+
+
+                "":"Todo",
+                }
+
+def get_ListData(CurrentCase, CurrentName,CurrentPicture,CurrentAllowed,CurrentTrait):
+
+    starttag =  re.search(r'original_tag = (\w{3})', CurrentAllowed).group(1)
+    returnList = [] 
+    returnList.append(starttag+"_"+CurrentName+"_organization" + " = {")
+    processedTrait = CurrentTrait.replace("traits = { ", "").replace(" }", "").replace(" ", "")
+    
+    found = False
+    for key in TraitDic.keys():
+        if key in processedTrait:
+            print(key +"="+ processedTrait+"="+ TraitDic[key])
+            returnList.append("\tinclude = "+TraitDic[key])
+            found = True
+            break
+    if found == False:
+        returnList.append("\tinclude = "+CaseDic[CurrentCase])
+
+    if CurrentPicture == "":
+        returnList.append("\ticon = GFX_idea_"+ CurrentName)
+    else :
+        returnList.append("\ticon = GFX_idea_"+CurrentPicture)
+
+    original_tags = re.findall(r"original_tag = (\w+)", CurrentAllowed)
+    if "OR = {" in CurrentAllowed:
+        # 여러 "original_tag =" 패턴이 "OR = {" 안에 있는 경우
+        inner_content = "\n\t\t\t" + " \n\t\t\t".join([f"original_tag = {tag}" for tag in original_tags])
+        transformed_string = f"\tallowed = {{\n\t\tOR = {{ {inner_content} \n\t\t}} \n\t}}"
+    else:
+        # 단일 "original_tag =" 패턴이 있는 경우
+        transformed_string = f"\tallowed = {{\n\t\toriginal_tag = {original_tags[0]} \n\t}}"
+    returnList.append(transformed_string)
+    returnList.append("}")
+
+    print(returnList)
+
+    return returnList
+
+
+def transform_to_to_format(from_content):
+    lines = from_content.split('\n')
+    transformed_lines = []
+
+    BracketQ = deque()
+    CurrentCase = ""
+    CurrentName = ""
+    CurrentPicture = ""
+    CurrentAllowed = ""
+    CurrentTrait= ""
+    Allowed = False
+    for i, line in enumerate(lines[:-1]):
+        if len(BracketQ) == 0:
+            if "=" in line:
+                # "=", "{" "tab" delete
+                CurrentCase = re.findall(r"[^=\{\}\t\s]+", line)[0]
+        elif len(BracketQ) == 1:
+            if "=" in line and '{'  in line:
+                CurrentName = re.findall(r"[^=\{\}\t\s]+", line)[0]
+        elif len(BracketQ) ==2:
+            if "picture" in line:
+                CurrentPicture =re.findall(r"[^=\{\}\t\s]+", line)[1]
+            elif "allowed" in line:
+                CurrentAllowed = line.replace("\t", "")
+                Allowed = True
+            elif "traits" in line:
+                CurrentTrait = line.replace("\t", "")
+
+
+        if '{' in line:
+            if len(BracketQ) == 0 and CurrentCase != "":
+                transformed_lines.append("################################")
+                transformed_lines.append("#"+ CurrentCase+"##############")
+                transformed_lines.append("################################")
+                
+            BracketQ.append('{')
+
+        if Allowed and len(BracketQ) >3:
+            CurrentAllowed+=(line.replace("\t", "") + " ")
+
+        if '}' in line and BracketQ:
+            BracketQ.pop()
+            if len(BracketQ) == 1:
+                print("-----------")
+                #print( "case : "+CurrentCase +"\n name : " + CurrentName+"\n picture : "+CurrentPicture+"\n all : "+CurrentAllowed+"\n trait : "+CurrentTrait)
+                transformed_lines.extend(get_ListData(CurrentCase, CurrentName, CurrentPicture, CurrentAllowed, CurrentTrait))
+                #get_ListData(CurrentCase, CurrentName, CurrentPicture, CurrentAllowed, CurrentTrait)
+                CurrentName = ""
+                CurrentPicture = ""
+                CurrentAllowed = ""
+                CurrentTrait= ""
+                Allowed = False
+        
+            #CurrentName = "" 으로 만들고
+
+
+
+    return '\n'.join(transformed_lines)
+
+def transform_files_in_directory(directory_path):
+    for filename in os.listdir(directory_path):
+        if filename == 'From.txt':
+            filepath = os.path.join(directory_path, filename)
+            with open(filepath, 'r', encoding='utf-8') as f:
+                content = f.read()
+            
+            transformed_content = transform_to_to_format(content)
+            
+            new_filepath = os.path.join(directory_path, 'To.txt')
+            with open(new_filepath, 'w', encoding='utf-8') as f:
+                f.write(transformed_content)
+
+if __name__ == "__main__":
+    transform_files_in_directory(r"C:\Users\axur1\Desktop\AutoMio")
+    print("Finished.")

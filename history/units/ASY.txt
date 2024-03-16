@@ -1,0 +1,78 @@
+﻿division_template = {
+	name = "Palgha Righ'laia"			# Infantry Division
+
+	division_names_group = ASY_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+}
+division_template = {
+	name = "Palgha Tu'ra"				# Mountain Division
+
+	division_names_group = ASY_MTN_01
+
+	regiments = {
+		mountaineers = { x = 0 y = 0 }
+		mountaineers = { x = 0 y = 1 }
+		mountaineers = { x = 0 y = 2 }	
+		mountaineers = { x = 1 y = 0 }
+		mountaineers = { x = 1 y = 1 }
+		mountaineers = { x = 1 y = 2 }
+	}
+}
+division_template = {
+	name = "Palgha Su'vara"
+
+	division_names_group = ASY_CAV_01
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+	}
+}
+units = {
+	division = {
+		name = "1st Cavalry"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 10106
+		division_template = "Palgha Su'vara"	
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.8
+
+	}
+	division = {
+		name = "1st Infantry"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 10106
+		division_template = "Palgha Righ'laia"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.8
+
+	}
+	division = {
+		name = "1st Mountaineers"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 3916
+		division_template = "Palgha Tu'ra"	
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.8
+
+	}
+}

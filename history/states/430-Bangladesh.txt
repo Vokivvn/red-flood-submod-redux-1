@@ -1,0 +1,24 @@
+
+state={
+	id=430
+	name="STATE_430" # East Bengal
+	manpower = 25073300
+
+	state_category = city
+
+	history={
+		owner = BNG
+		victory_points = {
+			11929 25
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+		}
+		add_core_of = BNG
+	}
+
+	provinces={
+		4162 4616 7078 9993 10035 10416 10443 11911 11929 12423 10389 7662
+	}
+}

@@ -1,0 +1,42 @@
+characters = {
+	ASS_orlando_villas_boas = {
+		name = "Orlando Villas-Bôas"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/ASS/Portrait_ASS_Orlando_Villas_Boas.png"
+			}
+		}
+		country_leader = {
+			ideology = technocracy
+			expire = "1965.1.1.1"
+		}
+	}
+	ASS_peter_fleming = {
+		name = "Peter Fleming"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/ASS/Portrait_ASS_Peter_Fleming.png"
+			}
+		}
+		country_leader = {
+			ideology = military_dictatorship
+			expire = "1965.1.1.1"
+		}
+	}
+	ASS_carl_gustav_von_rosen = {
+		name = "Carl Gustav von Rosen"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/ASS/Portrait_ASS_Gustav_Rosen.png"
+			}
+		}
+		corps_commander = {
+			traits = { infantry_officer }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
+}

@@ -1,0 +1,555 @@
+ideas = {
+	country = {
+		AUS_red_threat = {
+			picture = AUS_red_threat
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = -0.05
+				political_power_gain = -0.10
+				production_factory_efficiency_gain_factor = -0.1
+			}
+		}
+		AUS_red_threat_worse = {
+			picture = AUS_red_threat
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = -0.025
+				political_power_gain = -0.15
+				production_factory_efficiency_gain_factor = -0.20
+			}
+		}
+		AUS_nationalist_rumblings = {
+			picture = AUS_nationalist_rumblings
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				conscription_factor = 0.1
+				stability_factor = -0.1
+				war_support_factor = 0.1
+			}
+		}
+		AUS_ongoing_federalization = {
+			picture = AUS_ongoing_federalization
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				political_power_gain = 0.05
+				stability_factor = 0.05
+			}
+		}
+		#karl lives intro
+		AUS_red_threat_worse_karl = {
+			picture = AUS_red_threat
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = -0.025
+				political_power_gain = -0.10
+				production_factory_efficiency_gain_factor = -0.10
+			}
+		}
+		AUS_nationalist_rumblings_karl = {
+			picture = AUS_nationalist_rumblings
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				conscription_factor = 0.05
+				stability_factor = -0.05
+				war_support_factor = 0.1
+			}
+		}
+		
+		#karl dies
+		AUS_nationalist_rumblings_otto = {
+			picture = AUS_nationalist_rumblings
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				conscription_factor = 0.15
+				stability_factor = -0.1
+				war_support_factor = 0.1
+			}
+		}
+		
+		#karl despot
+		AUS_everpresent_emergency = {
+			picture = AUS_everpresent_emergency
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				political_power_factor = 0.1
+			}
+		}
+		AUS_ongoing_federalization_karl_1 = {
+			picture = AUS_ongoing_federalization
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				political_power_gain = 0.05
+				stability_factor = 0.1
+			}
+		}
+		AUS_ongoing_federalization_karl_2 = {
+			picture = AUS_ongoing_federalization
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				political_power_gain = 0.05
+				stability_factor = 0.1
+				conscription = 0.015
+			}
+		}
+		AUS_ongoing_federalization_karl_final = {
+			picture = AUS_ongoing_federalization
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				political_power_gain = 0.1
+				stability_factor = 0.15
+				conscription = 0.02
+			}
+		}
+		AUS_dynamic_deputies_idea = {
+			picture = AUS_dynamic_deputies
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				research_speed_factor = 0.05
+			}
+		}
+		AUS_laudable_lords_idea = {
+			picture = GFX_idea_AUS_laudable_lords	
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				experience_gain_army_factor = 0.075
+			}
+		}
+		AUS_subservient_council_idea = {
+			picture = AUS_subservient_council		
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				research_speed_factor = 0.1
+				experience_gain_army_factor = 0.15
+			}
+		}
+		AUS_brot_kronen_idea = {
+			picture = AUS_brot_und_kronen
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				consumer_goods_expected_value = 0.05
+				production_speed_buildings_factor = 0.1
+			}
+		}
+		AUS_brot_kronen_idea_2 = {
+			picture = AUS_brot_und_kronen	
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				production_speed_buildings_factor = 0.15
+			}
+		}
+		#mises
+		
+		AUS_gold_standard = {
+			picture = AUS_gold_standard
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				consumer_goods_expected_value = 0.025
+				stability_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.10
+			}
+		}
+		AUS_flattened_taxes = {
+			picture = AUS_flat_taxes
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				liberalism_drift = 0.1
+				trade_opinion_factor = 0.30
+			}
+		}
+		AUS_closed_welfare = {
+			picture = AUS_not_for_poors
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				consumer_goods_expected_value = -0.075
+				production_factory_max_efficiency_factor = 0.1
+				monthly_population = -0.05
+			}
+		}
+		AUS_fighting_for_freedom = {
+			picture = AUS_freedom_fighting
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				conscription = 0.015
+				army_attack_factor = 0.05
+				army_org_factor = 0.05
+			}
+		}
+		AUS_ongoing_federalization_mises_1 = {
+			picture = AUS_ongoing_federalization
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				political_power_gain = 0.10
+				stability_factor = 0.05
+			}
+		}
+		AUS_ongoing_federalization_mises_2 = {
+			picture = AUS_ongoing_federalization
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				political_power_gain = 0.10
+				stability_factor = 0.10
+				research_speed_factor = 0.06
+			}
+		}
+		AUS_federalization_complete_mises_1 = {
+			picture = AUS_ongoing_federalization
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				political_power_gain = 0.15
+				stability_factor = 0.125
+				research_speed_factor= 0.1
+				army_defence_factor = 0.075
+			}
+		}
+		AUS_nobility_sidelined_politics = {
+			picture = AUS_no_nobles
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				political_power_gain = -0.10
+			}
+		}
+		AUS_a_strong_legislative = {
+			picture = AUS_strong_laws
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				political_power_gain = 0.05
+				drift_defence_factor = 0.15
+			}
+		}
+		AUS_retrustructuring = {
+			picture = AUS_new_future
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+			}
+		}
+		
+		#hitler
+		
+		AUS_all_germans = {
+			picture = AUSaustria_germans
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				political_power_gain = 0.1
+				war_support_factor = 0.1
+				stability_factor = -0.05
+			}
+		}
+		AUS_ein_fuhrer = {
+			picture = AUS_fuhrer
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = 0.075
+				political_power_gain = 0.5 
+				surrender_limit = 0.05
+			}
+		}
+		AUS_christian_land_reforms_1 = {
+			picture = AUS_land_reforms
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				monthly_population = 0.25
+				stability_factor = 0.025
+			}
+		}
+		AUS_christian_land_reforms_2 = {
+			picture = AUS_land_reforms
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				monthly_population = 0.32
+				stability_factor = 0.05
+				consumer_goods_expected_value = 0.06
+			}
+		}
+		AUS_christian_land = {
+			picture = AUS_holy_lands
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				monthly_population = 0.32
+				stability_factor = 0.07
+				consumer_goods_expected_value = 0.06
+				local_resources_factor = 0.15
+			}
+		}
+		AUS_decentralized_bishops = {
+			picture = AUS_independant_clergy
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = 0.10
+				consumer_goods_expected_value = -0.075
+				compliance_growth_on_our_occupied_states = 0.15
+			}
+		}
+		AUS_a_state_church = {
+			picture = AUS_state_church
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = 0.05
+				consumer_goods_expected_value = -0.10
+				compliance_growth_on_our_occupied_states = 0.10
+			}
+		}
+	
+		AUS_social_reforms_1 = {
+			picture = AUS_work_reforms
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = 0.03
+				production_factory_efficiency_gain_factor = 0.07
+			}
+		}
+		AUS_social_reforms_2 = {
+			picture = AUS_work_reforms
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.10
+				production_speed_buildings_factor = 0.10
+				consumer_goods_expected_value = -0.075
+			}
+		}
+		AUS_against_great_capital = {
+			picture = AUS_against_usury
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = -0.075
+				production_factory_efficiency_gain_factor = 0.10
+				production_speed_buildings_factor = 0.10
+				consumer_goods_expected_value = -0.075
+				research_speed_factor = 0.08
+			}
+		}
+		AUS_nationalist_fervour = {
+			picture = AUS_nationalism
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				army_attack_factor = 0.075
+				army_defence_factor = 0.075
+				army_org_factor = 0.10
+			}
+		}
+		
+		
+		#karl fakeout
+		AUS_helping_hand_fakeout = {
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				consumer_goods_expected_value = -0.1
+			}
+		}
+		AUS_nationalist_rumblings_fakeout = {
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				conscription_factor = 0.1
+				war_support_factor = 0.2
+			}
+		}
+		AUS_persecute_extremism_fakeout = {
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				conservatism_drift = 0.05
+				drift_defence_factor = 0.1
+			}
+		}
+		AUS_perfect_federation_fakeout = {
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				political_power_gain = 0.1
+				stability_factor = 0.1
+			}
+		}
+		AUS_perfect_federation_2_fakeout = {
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				political_power_gain = 0.1
+				stability_factor = 0.1
+				conscription = 0.01
+			}
+		}
+	}
+#	Companies	#
+	industrial_concern = {
+
+		strabag = {
+			picture = rf_generic_industrial_company
+			allowed = { 
+				original_tag = AUS
+			}
+			traits = { industrial_manufacturer }
+			modifier = {
+				production_speed_arms_factory_factor = 0.1
+				production_speed_industrial_complex_factor = 0.1
+			}
+			research_bonus = {
+				industry = 0.1
+			}
+		}
+		kapsch = {
+			picture = rf_generic_industrial_company
+			allowed = { 
+				original_tag = AUS
+			}
+			traits = { electronics_manufacturer }
+			modifier = {
+				production_speed_radar_station_factor = 0.1
+			}
+			research_bonus = {
+				electronics = 0.1
+			}
+		}
+		kkStB = {
+			picture = rf_generic_rail_company
+			allowed = {
+				original_tag = AUS
+			}
+			traits = { railway_company }
+			modifier = {
+				production_speed_rail_way_factor = 0.1
+			}
+		}
+	}
+	materiel_manufacturer = {
+		designer = yes
+
+		steyr = {
+			picture = generic_equipment_company
+			allowed = {
+				original_tag = AUS
+			}
+			traits = { infantry_equipment_producer_offense_2 }
+			modifier = {}
+			research_bonus = {
+				infantry_weapons = 0.1
+			}
+		}
+	}
+	aircraft_manufacturer = {
+		designer = yes
+		aviatik_fighter = {
+			picture = rf_generic_fighter_company
+			allowed = {
+					original_tag = AUS
+			}
+			traits = {
+				fighter_producer_defense_1
+			}
+			research_bonus = {
+				air_equipment = 0.05
+			}
+		}
+		aviatik_bomber = {
+			picture = generic_bomber_company
+			allowed = {
+					original_tag = AUS
+			}
+			traits = {
+				bomber_producer_defense_1
+			}
+			research_bonus = {
+				air_equipment = 0.05
+			}
+		}
+	}
+	tank_manufacturer = {
+		designer = yes
+		ausporsche = {
+			picture = AUS_porsche
+			allowed = {
+					original_tag = AUS
+			}
+			traits = {
+				porsche_trait
+			}
+			research_bonus = {
+				armor = 0.05
+			}
+		}
+		rosenbauer = {
+			picture = generic_truck_company
+			allowed = { 
+				original_tag = AUS
+			}
+			traits = { motorised_equipment_producer_offense_1 }
+			modifier = {}
+			research_bonus = {
+				motorized_equipment = 0.05
+			}
+		}
+		daimler_puch_mot = {
+			picture = generic_truck_company
+			allowed = { 
+				original_tag = AUS
+			}
+			traits = { motorised_equipment_producer_mass_1 }
+			modifier = {}
+			research_bonus = {
+				motorized_equipment = 0.05
+			}
+		}
+		daimler_puch_lt = {
+			picture = generic_light_tank_company
+			allowed = { 
+				original_tag = AUS
+			}
+			traits = { small_tank_producer_defense_1 }
+			modifier = {}
+			research_bonus = {
+				armor = 0.05
+			}
+		}
+		daimler_puch_mt = {
+			picture = generic_medium_tank_company
+			allowed = { 
+				original_tag = AUS
+			}
+			traits = { medium_tank_producer_offense_1 }
+			modifier = {}
+			research_bonus = {
+				armor = 0.05
+			}
+		}
+	}
+}

@@ -1,0 +1,26 @@
+state={
+	id=1090
+	name="STATE_1090" #Saudi Coast
+	manpower = 442000
+	
+	state_category = rural
+
+	history={
+		owner = SAU
+		buildings = {
+			infrastructure = 1
+			12702 = {
+				naval_base = 6
+
+			}
+		}
+		add_core_of = SAU
+		victory_points = {
+			12702 1
+		}
+	}
+
+	provinces={
+		5024 7995 1955 10791 10850 10923 12702 12749
+	}
+}

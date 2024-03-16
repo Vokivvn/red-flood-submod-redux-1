@@ -1,0 +1,288 @@
+united_russia = {
+	has_global_flag = united_russia
+}
+
+is_russian_warlord = {
+	has_country_flag = is_russian_warlord
+}
+
+unify_russia = {
+	OR = {
+		has_completed_focus = KAV_fullfill_transcaucasia
+		has_completed_focus = ALT_quest_to_hyperborea
+		has_completed_focus = HAR_push_north
+		has_completed_focus = PSL_do_not_forget_cause
+		has_completed_focus = FCR_siberian_revolution
+		has_completed_focus = ARC_yermaks_call
+		has_completed_focus = ZHR_liberationofthemotherland
+		has_completed_focus = KCK_harbin_delenda_est
+		has_completed_focus = SIB_making_our_move
+		has_completed_focus = Orenburg_eurasian_geopolitics
+		has_completed_focus = ORE_smite_zhmey
+		has_completed_focus = DKB_we_are_scythians_we_are_asians
+	}
+}
+
+UKR_ROS_peaceful_deal = {
+	AND = {
+		UKR = {
+			OR = {
+				has_country_leader = {
+					character = UKR_semen_man
+					ruling_only = yes
+				}
+				has_country_leader = {
+					character = UKR_lazar_kaganovich
+					ruling_only = yes
+				}
+			}
+		}
+		ROS = {
+			OR = {
+				has_country_leader = {
+					character = KAV_vladimir_mayakovsky
+					ruling_only = yes
+				}
+				has_country_leader = {
+					character = KAV_Velimir_Khlebnikov
+					ruling_only = yes
+				}
+				has_country_leader = {
+					character = KAV_dmitry_mirsky
+					ruling_only = yes
+				}
+				has_country_leader = {
+					character = KAV_Iosif_Stalin
+					ruling_only = yes
+				}
+				has_country_leader = {
+					character = ZHR_bogdanov
+					ruling_only = yes
+				}
+				has_country_leader = {
+					character = ZHR_Leon_Trotsky
+					ruling_only = yes
+				}
+				has_country_leader = {
+					character = ZHR_lev_kamenev
+					ruling_only = yes
+				}
+				has_country_leader = {
+					character = ZHR_fyodor_dan
+					ruling_only = yes
+				}
+				has_country_leader = {
+					character = ZHR_maria_spiridonova
+					ruling_only = yes
+				}
+				has_country_leader = {
+					character = ZHR_Nikolai_Avksentiev
+					ruling_only = yes
+				}
+				has_country_leader = {
+					character = ALT_gleb_bokii
+					ruling_only = yes
+				}
+				has_country_leader = {
+					character = ALT_barchenko
+					ruling_only = yes
+				}
+			}
+		}
+	}
+}
+
+HAR_KAV_peaceful_uni = {
+	AND = {
+		KAV = {
+			OR = {
+				has_completed_focus = KAV_i_mayakovsky
+				has_completed_focus = KAV_the_transmutation_of_koba
+				has_completed_focus = KAV_the_red_princes_dream
+			}
+		}
+		HAR = {
+			has_completed_focus = HAR_union_man
+		}
+	}
+}
+
+ZHR_KAV_peaceful_uni = {
+	OR = {
+		AND = {
+			KAV = {
+				has_completed_focus = KAV_the_king_of_poets
+			}
+			ZHR = {
+				OR = {
+					has_completed_focus = ZHR_dawn_of_peoples_freedom
+					has_completed_focus = ZHR_kerenskyprevails 
+					has_completed_focus = ZHR_atlasshruggednomore 
+					has_completed_focus = ZHR_triumvirate_unites_the_centre 
+					has_completed_focus = ZHR_homogeneous_socialist_government
+				}
+			}
+		}
+		AND = {
+			KAV = {
+				has_completed_focus = KAV_i_mayakovsky
+			}
+			ZHR = {
+				OR = {
+					has_completed_focus = ZHR_vperedists_in_soviet 
+					has_completed_focus = ZHR_triumvirate_unites_the_centre 
+					has_completed_focus = ZHR_comradetrotsky
+				}
+			}
+		}
+		AND = {
+			KAV = {
+				has_completed_focus = KAV_the_red_princes_dream
+			}
+			ZHR = {
+				OR = {
+					has_completed_focus = ZHR_vperedists_in_soviet 
+					has_completed_focus = ZHR_homogeneous_socialist_government
+				}
+			}
+		}
+		AND = {
+			KAV = {
+				has_completed_focus = KAV_the_transmutation_of_koba
+			}
+			ZHR = {
+				OR = {
+					has_completed_focus = ZHR_vperedists_in_soviet 
+					has_completed_focus = ZHR_comradetrotsky
+				}
+			}
+		}
+	}
+}
+
+FCR_KAV_peaceful_uni = {
+	AND = {
+		KAV = {
+			OR = {
+				has_completed_focus = KAV_i_mayakovsky
+				has_completed_focus = KAV_the_transmutation_of_koba
+				has_completed_focus = KAV_the_red_princes_dream
+			}
+		}
+		FCR = {
+			has_completed_focus = FCR_message_for_mankind
+		}
+	}
+}
+
+ALT_ZHR_peaceful_uni = {
+	AND = {
+		ALT = {
+			has_completed_focus = ALT_OTB_putsch
+		}
+		ZHR = {
+			OR = {
+				has_completed_focus = ZHR_vperedists_in_soviet 
+				has_completed_focus = ZHR_homogeneous_socialist_government
+				has_completed_focus = ZHR_triumvirate_unites_the_centre 
+				has_completed_focus = ZHR_comradetrotsky
+			}
+		}
+	}
+}
+
+ALT_KAV_peaceful_uni = {
+	AND = {
+		ALT = {
+			has_completed_focus = ALT_OTB_putsch
+		}
+		KAV = {
+			OR = {
+				has_completed_focus = KAV_the_red_princes_dream
+				has_completed_focus = KAV_the_transmutation_of_koba
+				has_completed_focus = KAV_i_mayakovsky 
+				has_completed_focus = KAV_enter_king_of_time
+			}
+		}
+	}
+}
+
+ALT_ORE_peaceful_uni = {
+	AND = {
+		ALT = {
+			has_completed_focus = ALT_OTB_putsch
+		}
+		ORE = {
+			has_completed_focus = ORE_rasputins_conspiracy
+		}
+	}
+}
+
+Russian_unification_decisions_nationalist_triggers = {
+	is_subject = no
+	OR = {
+		AND = {
+			tag = KCK
+			has_completed_focus = KCK_harbin_delenda_est
+		}
+		AND = {
+			tag = DKB
+			has_completed_focus = DKB_we_are_scythians_we_are_asians
+		}
+		AND = {
+			tag = ORE
+			OR = {
+				has_completed_focus = Orenburg_eurasian_geopolitics
+				has_completed_focus = ORE_smite_zhmey
+			}
+		}
+		AND = {
+			tag = SIB
+			has_completed_focus = SIB_making_our_move
+		}
+		AND = {
+			tag = ARC
+			has_completed_focus = ARC_yermaks_call
+		}
+		AND = {
+			OR = {
+				tag = RUS
+				tag = SRU
+			}
+			has_completed_focus = RUS_unify_empire
+		}
+		AND = {
+			tag = PRI
+			has_completed_focus = PRI_land_of_money_and_milk
+		}
+	}
+}
+Russian_unification_decisions_socialist_triggers = {
+	is_subject = no
+	OR = {
+		AND = {
+			tag = KAV 
+			has_completed_focus = KAV_fullfill_transcaucasia
+		}
+		AND = {
+			tag = ZHR
+			has_completed_focus = ZHR_liberationofthemotherland
+		}
+		AND = {
+			tag = ALT
+			has_completed_focus = ALT_agartha_calling
+		}
+		AND = {
+			tag = HAR
+			has_completed_focus = HAR_push_north
+		}
+		AND = {
+			tag = FCR
+			has_completed_focus = FCR_siberian_revolution
+		}
+		AND = {
+			tag = PSL
+			has_completed_focus = PSL_do_not_forget_cause
+		}
+	}
+}

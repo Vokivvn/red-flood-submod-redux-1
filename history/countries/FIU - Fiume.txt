@@ -1,0 +1,150 @@
+﻿capital = 736
+set_research_slots = 3
+set_convoys = 50
+set_stability = 0.85
+
+oob = "FIU"
+set_air_oob = "FIU_air"
+
+country_event = { id = fiume.10 days = 20 }
+
+set_variable = {
+	var = FIU_keller_popularity
+	value = 40
+}
+set_variable = {
+	var = FIU_marinetti_popularity
+	value = 30
+}
+set_variable = {
+	var = FIU_shimoi_popularity
+	value = 30
+}
+
+add_ideas = {
+	FIU_the_slump
+	limited_exports
+	volunteer_only
+	partial_economic_mobilisation
+}
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1
+	tech_recon = 1
+	tech_engineers = 1
+	tech_trucks =1
+	motorised_infantry = 1
+	gw_artillery = 1
+	tech_mountaineers = 1
+	marines = 1
+	tech_special_forces = 1
+	basic_train = 1
+}
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+		set_technology = {
+		early_submarine = 1
+		early_destroyer = 1
+		early_light_cruiser = 1
+		early_heavy_cruiser = 1
+		early_battleship = 1
+		basic_battleship = 1
+		early_battlecruiser = 1
+		transport = 1
+	}
+}
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		basic_depth_charges = 1
+		basic_torpedo = 1
+		basic_battery = 1
+		basic_light_battery = 1
+		basic_cruiser_armor_scheme = 1
+		basic_heavy_battery = 1
+		basic_medium_battery = 1
+		basic_light_battery = 1
+		improved_dp_light_battery = 1
+		basic_heavy_armor_scheme = 1
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		early_ship_hull_light = 1
+		basic_ship_hull_light = 1
+		early_ship_hull_cruiser = 1
+		basic_ship_hull_cruiser = 1
+		early_ship_hull_heavy = 1
+		basic_ship_hull_heavy = 1
+		mtg_transport = 1
+		coastal_defense_ships = 1
+		fuel_silos = 1
+	}
+}
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+	set_technology = {
+		aa_lmg = 1
+		early_bombs = 1
+		aircraft_construction = 1
+		engines_1 = 1
+		engines_2 = 1
+		iw_small_airframe = 1
+		iw_medium_airframe = 1
+		basic_small_airframe = 1
+		basic_medium_airframe = 1
+	}
+}
+if = {
+	limit = { NOT = { has_dlc = "By Blood Alone" } }
+	set_technology = {
+		early_fighter = 1
+		early_bomber = 1
+		naval_bomber1 = 1
+		CAS1 = 1
+	}
+}
+
+set_politics = {
+	ruling_party = accelerationism
+	last_election = "1935.10.25"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	vanguard_socialism = 3
+	popular_socialism = 0
+	anarchism = 4
+	revisionist_socialism = 0
+	progressivism = 2
+	liberalism = 0
+	conservatism = 0
+	right_authoritarianism = 1
+	despotism = 0
+	reactionism = 0
+	accelerationism = 90
+}
+
+recruit_character = FIU_gabriele_dannunzio
+recruit_character = FIU_consiglio_degli_otimi
+recruit_character = FIU_enrico_toti
+recruit_character = FIU_reginaldo_giulani
+recruit_character = FIU_mario_carli
+recruit_character = FIU_riccardo_gigante
+recruit_character = FIU_Filippo_Marinetti
+recruit_character = FIU_Guido_Keller
+recruit_character = FIU_Harukichi_Shimoi
+recruit_character = FIU_Nicola_Bombacci
+recruit_character = FIU_Alceste_de_Ambris
+recruit_character = FIU_Enrico_Corradini
+recruit_character = FIU_Giovanni_Papini
+recruit_character = FIU_Giovanni_Giurati
+recruit_character = FIU_ettore_muti
+recruit_character = FIU_giovanni_host-venturi
+recruit_character = FIU_luigi_rizzo
+recruit_character = FIU_icilio_baccich
+recruit_character = FIU_ernesto_cabruna
+
+

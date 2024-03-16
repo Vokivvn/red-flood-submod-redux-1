@@ -1,0 +1,104 @@
+﻿division_template = {
+	name = "Infantry Brigade"			# Infantry Brigade
+
+	division_names_group = RAJ_GAR_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+}
+division_template = {
+	name = "Cavalry Brigade"			# Cavalry Brigade
+
+	division_names_group = RAJ_CAV_01
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+	}
+	support = {
+		recon = { x = 0 y = 0 } 	
+	}
+}
+#division_template = {
+#	name = "Motorisierte Volksschützendivision" 				# Motorized
+#	division_names_group = GER_MOT_01
+#	regiments = {
+#		infantry = { x = 0 y = 0 }
+#		infantry = { x = 0 y = 1 }
+#		infantry = { x = 0 y = 2 }
+#		motorized = { x = 1 y = 0 }
+#		motorized = { x = 1 y = 1 }
+#		motorized = { x = 1 y = 2 }
+#	}
+#}
+units = {
+	######## LAND OOB ########
+	division = {
+		location = 12854
+		division_template = "Infantry Brigade"		
+		start_equipment_factor = 0.7
+	}
+	division = {
+		location = 10807
+		division_template = "Infantry Brigade"		
+		start_equipment_factor = 0.7
+	}
+	division = {
+		location = 2036
+		division_template = "Infantry Brigade"		
+		start_equipment_factor = 0.7
+	}
+	division = {
+		location = 12105
+		division_template = "Infantry Brigade"		
+		start_equipment_factor = 0.7
+	}
+	division = {
+		location = 13551
+		division_template = "Infantry Brigade"		
+		start_equipment_factor = 0.7
+	}
+	division = {
+		location = 1949
+		division_template = "Infantry Brigade"		
+		start_equipment_factor = 0.7
+	}
+	division = {
+		location = 7205
+		division_template = "Infantry Brigade"		
+		start_equipment_factor = 0.7
+	}
+	division = {
+		location = 4353
+		division_template = "Infantry Brigade"		
+		start_equipment_factor = 0.7
+	}
+	division = {
+		location = 11995
+		division_template = "Cavalry Brigade"		
+		start_equipment_factor = 0.7
+	}
+	division = {
+		location = 2105
+		division_template = "Cavalry Brigade"		
+		start_equipment_factor = 0.7
+	}
+	division = {
+		location = 7013
+		division_template = "Cavalry Brigade"		
+		start_equipment_factor = 0.7
+	}
+	division = {
+		location = 1349
+		division_template = "Cavalry Brigade"		
+		start_equipment_factor = 0.7
+	}
+}

@@ -1,0 +1,133 @@
+ITA_slump_change = {
+	if = {
+		limit = {
+			has_idea = ITA_the_slump
+		}
+		swap_ideas = {
+			remove_idea = ITA_the_slump
+			add_idea = ITA_the_slump_s1
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = ITA_the_slump_s1
+		}
+		swap_ideas = {
+			remove_idea = ITA_the_slump_s1
+			add_idea = ITA_the_slump_s2
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = ITA_the_slump_s2
+		}
+		swap_ideas = {
+			remove_idea = ITA_the_slump_s2
+			add_idea = ITA_the_slump_s3
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = ITA_the_slump_s3
+		}
+		swap_ideas = {
+			remove_idea = ITA_the_slump_s3
+			add_idea = ITA_the_slump_s4
+		}
+	}
+}
+
+ITA_wipe_ideas = {
+	ITA = {
+		remove_ideas = {
+			ITA_pudi_hegemony
+			ITA_the_slump
+			ITA_fuzzy_economic_complication
+			ITA_ineffective_military
+			ITA_overburdened_administration
+			ITA_bulwark_of_democracy
+			ITA_victor_emmanuel
+			ITA_the_libyan_war
+			ITA_lagging_south
+			ITA_the_slump_s1
+			ITA_the_slump_s2
+			ITA_the_slump_s3
+			ITA_the_slump_s4
+			ITA_the_slump_s5
+			ITA_the_slump_s6
+			ITA_lagging_south_s1
+			ITA_the_easy_way_out
+			ITA_repaying_the_debt
+			ITA_repaying_the_debt1
+			ITA_repaying_the_debt2
+			ITA_deflation
+			ITA_agricultural_crisis
+			ITA_good_neighbor_italy
+			ITA_good_neighbor_italy1
+			ITA_ineffective_military_s1
+			ITA_ineffective_military_s2
+			ITA_italian_imperialism
+			ITA_pacified_unions
+			ITA_italian_family
+			ITA_idea_national_works
+			ITA_lagging_south_b1
+			ITA_idea_farmer_subsides_b
+			ITA_idea_stabilizing_currency_b
+			ITA_idea_focus_on_export_b
+			ITA_ineffective_military_b1
+			ITA_ineffective_military_b2
+			ITA_purged_officers
+			ITA_balbo_strategy
+			ITA_staff_innovations
+			ITA_back_to_stoneage
+			ITA_swelling_ranks
+			ITA_swelling_ranks_1
+			ITA_nation_above_all
+			ITA_opening_moves
+			ITA_opening_moves_1
+			ITA_athenes_coup_timer
+			ITA_overburdened_administration_n1
+			ITA_idea_farmer_subsides_n
+			ITA_idea_farmer_subsides_n1
+			ITA_idea_farmer_subsides_n2
+			ITA_idea_farmer_subsides_n3
+			ITA_idea_farmer_subsides_n4
+			ITA_centralized_land_sales
+			ITA_centralized_land_sales_1
+			ITA_idea_redistribution
+			ITA_idea_redistribution_1
+			ITA_inflation_n0
+			ITA_inflation_n1
+			ITA_inflation_n2
+			ITA_inflation_n3
+			ITA_inflation_n4
+			ITA_rdic
+			ITA_rdic_1
+			ITA_rdic_2
+			ITA_dual_welfare_system
+			ITA_dual_welfare_system_1
+			ITA_welfare_inspectorate_idea
+			ITA_lagging_south_n1
+			ITA_lagging_south_n2
+			ITA_export_production
+			ITA_ineffective_military_n1
+			ITA_west_colonies_improvement
+			ITA_west_colonies_improvement_1
+			ITA_west_colonies_improvement_2
+			ITA_west_colonies_improvement_3
+			ITA_west_colonies_improvement_4
+			ITA_east_colonies_improvement
+			ITA_east_colonies_improvement_1
+			ITA_east_colonies_improvement_2
+			ITA_desegregated_army
+			ITA_logistics_departament
+			ITA_logistics_departament_1
+			ITA_staff_empowered
+			ITA_idea_fort_expansion_works
+			ITA_idea_railway_expansion_works
+			ITA_idea_industry_worker_incentives
+			ITA_diplomats_mobilized
+			ITA_antitotalitarian
+		}
+	}
+}

@@ -1,0 +1,24 @@
+add_namespace = PRI
+
+
+country_event = {
+	id = PRI.1
+	title = PRI.1.t
+	desc = PRI.1.desc
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = PRI.1.a
+		set_country_flag = PRI_spiridon_win
+		complete_national_focus = PRI_spiridon_the_wise
+	}
+	option = {
+		name = PRI.1.b
+		set_country_flag = PRI_nikolai_win
+		retire_country_leader = yes
+		complete_national_focus = PRI_nikolai_the_shrewd
+	}
+}

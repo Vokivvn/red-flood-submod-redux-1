@@ -1,0 +1,1090 @@
+characters={
+	UKR_symon_petliura={
+		name="Symon Petliura"
+		portraits={
+			civilian={
+				large="gfx/leaders/UKR/UKR_Symon_Petlura.png"
+				small="gfx/interface/ministers/UKR/UKR_portrait_Symon_Petliura.png"
+			}
+		}
+		country_leader={
+			desc=UKR_Symon_Petliura_desc
+			ideology=social_nationalism
+			expire="1965.1.1.1"
+			id=-1
+		}
+		advisor = {
+		    slot = head_of_intel
+			idea_token = UKR_symon_petliura_int
+			traits = { int_political_specialist }
+			allowed = { original_tag = UKR }
+			available = { has_government = revisionist_socialism }
+		}
+	}
+	UKR_volodymyr_vynnychenko={
+		name="Volodymyr Vynnychenko"
+		portraits={
+			civilian={
+				large="gfx/leaders/UKR/UKR_Volodymyr_Vynnychenko.png"
+			}
+		}
+		country_leader={
+			desc = UKR_volodymyr_vynnychenko_desc
+			ideology=utopian_socialism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	UKR_dmytro_levytsky={
+		name="Dmytro Levytsky"
+		portraits={
+			civilian={
+				large="gfx/leaders/UKR/Portrait_Dmytro_Levytsky.png"
+			}
+		}
+		country_leader={
+			ideology=classical_liberalism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	UKR_mykola_mikhnovsky={
+		name="Mykola Mikhnovsky"
+		portraits={
+			civilian={
+				large="gfx/leaders/UKR/Mikhnovsky.png"
+			}
+		}
+		country_leader={
+			desc = UKR_mykola_mikhnovsky_desc
+			ideology=right_populism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	UKR_semen_man = {
+		name = "Mykhail Semenko"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/UKR/Portrait_UKR_Mykhailo_Semenko.png"
+			}
+		}
+		country_leader={
+			desc = UKR_semen_man_desc
+			ideology=vperedism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	UKR_batko_nash = {
+		name = "Stepan Bandera"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/UKR/Portrait_Stepan_Bandera.png"
+				small="gfx/interface/ministers/UKR/UKR_portrait_stepan_bandera.png"
+			}
+		}
+		country_leader={
+			desc = UKR_batko_nash_desc
+			ideology= revolutionary_nationalism
+			expire="1965.1.1.1"
+			id=-1
+		}
+		advisor = {
+		    slot = head_of_government
+			idea_token = UKR_batko_nash_hog
+			traits = { hog_flamboyant_tough_guy }
+			allowed = { original_tag = UKR }
+			available = { has_government = despotism }
+		}
+	}
+	UKR_lazar_kaganovich = {
+		name = "Lazar Kaganovich"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/UKR/Portrait_Lazar_Kaganovich.png"
+			}
+		}
+		country_leader={
+			desc = UKR_lazar_kaganovich_desc 
+			ideology= leninism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	UKR_bohdan_ihor_antonych = {
+		name = "Bohdan Ihor Antonych"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/UKR/Portrait_bohdan_ihor_antonych.png"
+			}
+		}
+		country_leader={
+			desc = UKR_bohdan_ihor_antonych_desc
+			ideology= zadrugism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	UKR_ihor_panchenko={
+		name="Ihor Panchenko"
+		portraits={
+		}
+		country_leader={
+			ideology=social_anarchism
+			traits={ undistinguished_suit silent_workhorse }
+			expire="1947.1.1.12"
+			id=-1
+		}
+	}
+	UKR_volodymyr_melnyk={
+		name="Volodymyr Melnyk"
+		portraits={
+		}
+		country_leader={
+			ideology=syndicalism
+			expire="1946.1.1.12"
+			id=-1
+		}
+	}
+	
+	##Mikhnovsky Cabinet##
+	UKR_dmytro_doroshenko={
+		name="Dmytro Doroshenko"
+		portraits={
+			civilian={
+				small="gfx/interface/ministers/UKR/UKR_Portrait_Dmytro_Doroshenko.png"
+			}
+		}
+		advisor = {
+		    slot = head_of_government
+			idea_token = UKR_dmytro_doroshenko_hog
+			traits = { hog_backroom_backstabber }
+			allowed = { original_tag = UKR }
+			available = { has_government = conservatism }
+		}
+	}
+	UKR_mykola_livytskyi={
+		name="Mykola Livytskyi"
+		portraits={
+			civilian={
+				small="gfx/interface/ministers/UKR/UKR_portrait_Livytskyi.png"
+			}
+		}
+		advisor = {
+		    slot = foreign_minister
+			idea_token = UKR_mykola_livytskyi_for
+			traits = { for_biased_intellectual }
+			allowed = { original_tag = UKR }
+			available = { has_government = conservatism }
+		}
+	}
+	UKR_vyacheslav_lypynsky={
+		name="Vyacheslav Lypynsky"
+		portraits={
+			civilian={
+				small="gfx/interface/ministers/UKR/UKR_portrait_Lypynsky.png"
+			}
+		}
+		advisor = {
+		    slot = economy_minister
+			idea_token = UKR_vyacheslav_lypynsky_eco
+			traits = { eco_administrative_genius }
+			allowed = { original_tag = UKR }
+			available = { has_government = conservatism }
+		}
+	}
+	UKR_ilarion_ohienko={
+		name="Ilarion Ohienko"
+		portraits={
+			civilian={
+				small="gfx/interface/ministers/UKR/UKR_portrait_Ohienko.png"
+			}
+		}
+		advisor = {
+		    slot = security_minister
+			idea_token = UKR_ilarion_ohienko_sec
+			traits = { sec_man_of_the_people }
+			allowed = { original_tag = UKR }
+			available = { has_government = conservatism }
+		}
+	}
+	UKR_sergey_gerbel={
+		name="Sergey Gerbel"
+		portraits={
+			civilian={
+				small="gfx/interface/ministers/UKR/UKR_portrait_Gerbel.png"
+			}
+		}
+		advisor = {
+		    slot = head_of_intel
+			idea_token = UKR_sergey_gerbel_int
+			traits = { int_political_specialist }
+			allowed = { original_tag = UKR }
+			available = { has_government = conservatism }
+		}
+	}
+	
+	##Petliura/Vynny Cabinet##
+	
+	UKR_andriy_livytsky={
+		name="Andriy Livytsky"
+		portraits={
+			civilian={
+				small="gfx/interface/ministers/UKR/UKR_portrait_Andriy_Livitsky.png"
+			}
+		}
+		advisor = {
+		    slot = head_of_government
+			idea_token = UKR_andriy_livytsky_hog
+			traits = { hog_silent_workhorse }
+			allowed = { original_tag = UKR }
+			available = {
+				OR = {
+					has_government = revisionist_socialism
+					has_government = progressivism
+				}
+			}
+		}
+	}
+	UKR_borys_martos={
+		name="Borys Martos"
+		portraits={
+			civilian={
+				small="gfx/interface/ministers/UKR/UKR_portrait_Borys_Martos.png"
+			}
+		}
+		advisor = {
+		    slot = foreign_minister
+			idea_token = UKR_borys_martos_for
+			traits = { for_great_compromiser }
+			allowed = { original_tag = UKR }
+			available = {
+				OR = {
+					has_government = revisionist_socialism
+					has_government = progressivism
+				}
+			}
+		}
+	}
+	UKR_serhiy_ostapenko={
+		name="Serhiy Ostapenko"
+		portraits={
+			civilian={
+				small="gfx/interface/ministers/UKR/UKR_portrait_serhiy_Ostapenko.png"
+			}
+		}
+		advisor = {
+		    slot = economy_minister
+			idea_token = UKR_serhiy_ostapenko_eco
+			traits = { eco_mixed_economy }
+			allowed = { original_tag = UKR }
+			available = {
+				OR = {
+					has_government = progressivism
+					has_government = revisionist_socialism
+				}
+			}
+		}
+	}
+	UKR_isaak_mazepa ={
+		name="Isaak Mazepa "
+		portraits={
+			civilian={
+				small="gfx/interface/ministers/UKR/UKR_portrait_Isaak_Mazepa.png"
+			}
+		}
+		advisor = {
+		    slot = security_minister
+			idea_token = UKR_isaak_mazepa_sec
+			traits = { sec_man_of_the_people }
+			allowed = { original_tag = UKR }
+			available = {
+				OR = {
+					has_government = revisionist_socialism
+					has_government = progressivism
+				}
+			}
+		}
+	}
+	UKR_volodomyr_kedrovsky ={
+		name="Volodomyr Kedrovsky"
+		portraits={
+			civilian={
+				small="gfx/interface/ministers/UKR/UKR_portrait_Volodymyr_Kedrovsky.png"
+			}
+		}
+		advisor = {
+		    slot = head_of_intel
+			idea_token = UKR_volodomyr_kedrovsky_int
+			traits = { int_logistics_specialist }
+			allowed = { original_tag = UKR }
+			available = { has_government = progressivism }
+		}
+	}
+	
+	## Semenko Kabinet 
+	
+	UKR_yulian_shpol ={
+		name="Yulian Shpol"
+		portraits={
+			civilian={
+				small="gfx/interface/ministers/UKR/UKR_portrait_yulian_shpol.png"
+			}
+		}
+		advisor = {
+		    slot = head_of_government
+			idea_token = UKR_yulian_shpol_hog
+			traits = { hog_political_protege }
+			allowed = { original_tag = UKR }
+			available = { has_government = accelerationism has_country_flag = UKR_semenko_win }
+		}
+	}
+	UKR_heo_shkurupii ={
+		name="Heo Shkurupii"
+		portraits={
+			civilian={
+				small="gfx/interface/ministers/UKR/UKR_portrait_heo_shkurupii.png"
+			}
+		}
+		advisor = {
+		    slot = foreign_minister
+			idea_token = UKR_heo_shkurupii_for
+			traits = { for_ideological_crusader }
+			allowed = { original_tag = UKR }
+			available = { has_government = accelerationism has_country_flag = UKR_semenko_win }
+		}
+	}
+	UKR_mykhailo_volobuyev ={
+		name="Mykhailo Volobuyev"
+		portraits={
+			civilian={
+				small="gfx/interface/ministers/UKR/UKR_portrait_mykhailo_volobuyev.png"
+			}
+		}
+		advisor = {
+		    slot = economy_minister
+			idea_token = UKR_mykhailo_volobuyev_eco
+			traits = { eco_theoretical_scientist }
+			allowed = { original_tag = UKR }
+			available = { has_government = accelerationism has_country_flag = UKR_semenko_win }
+		}
+	}
+	UKR_nikita_khrushchev ={
+		name="Nikita Khrushchev"
+		portraits={
+			civilian={
+				small="gfx/interface/ministers/UKR/UKR_portrait_nikita_khrushchev.png"
+			}
+		}
+		advisor = {
+		    slot = security_minister
+			idea_token =  UKR_nikita_khrushchev_sec
+			traits = { sec_compassionate_gentleman }
+			allowed = { original_tag = UKR }
+			available = { has_government = accelerationism has_country_flag = UKR_semenko_win }
+		}
+	}
+	UKR_mykola_kulish ={
+		name="Mykola Kulish"
+		portraits={
+			civilian={
+				small="gfx/interface/ministers/UKR/UKR_portrait_mykola_kulish.png"
+			}
+		}
+		advisor = {
+		    slot = head_of_intel
+			idea_token =  UKR_mykola_kulish_int
+			traits = { int_political_specialist }
+			allowed = { original_tag = UKR }
+			available = { has_government = accelerationism has_country_flag = UKR_semenko_win }
+		}
+	}
+	
+	##Kaganovich##
+	
+	UKR_andrei_bubnov ={
+		name="Andrei Bubnov"
+		portraits={
+			civilian={
+				small="gfx/interface/ministers/UKR/UKR_portrait_andrei_bubnov.png"
+			}
+		}
+		advisor = {
+		    slot = head_of_government
+			idea_token = UKR_andrei_bubnov_hog
+			traits = { hog_pragmatic_statesman }
+			allowed = { original_tag = UKR }
+			available = { has_government = vanguard_socialism }
+		}
+	}
+	UKR_mykola_skyrpnyk ={
+		name="Mykola Skyrpnyk"
+		portraits={
+			civilian={
+				small="gfx/interface/ministers/UKR/UKR_portrait_mykola_skyrpnyk.png"
+			}
+		}
+		advisor = {
+		    slot = foreign_minister
+			idea_token = UKR_mykola_skyrpnyk_for
+			traits = { for_great_compromiser }
+			allowed = { original_tag = UKR }
+			available = { has_government = vanguard_socialism }
+		}
+	}
+	UKR_viktor_novozhilov ={
+		name="Viktor Novozhilov"
+		portraits={
+			civilian={
+				small="gfx/interface/ministers/UKR/UKR_portrait_viktor_novozhilov.png"
+			}
+		}
+		advisor = {
+		    slot = economy_minister
+			idea_token = UKR_viktor_novozhilov_eco
+			traits = { eco_planned_economy_proponent }
+			allowed = { original_tag = UKR }
+			available = { has_government = vanguard_socialism }
+		}
+	}
+	UKR_anton_makarenko  ={
+		name="Anton Makarenko"
+		portraits={
+			civilian={
+				small="gfx/interface/ministers/UKR/UKR_portrait_anton_makarenko.png"
+			}
+		}
+		advisor = {
+		    slot = security_minister
+			idea_token = UKR_anton_makarenko_sec
+			traits = { sec_prince_of_terror }
+			allowed = { original_tag = UKR }
+			available = { has_government = vanguard_socialism }
+		}
+	}
+	UKR_stanisław_kosior  ={
+		name="Stanisław Kosior"
+		portraits={
+			civilian={
+				small="gfx/interface/ministers/UKR/UKR_portrait_stanisław_kosior.png"
+			}
+		}
+		advisor = {
+		    slot = head_of_intel
+			idea_token = UKR_stanisław_kosior_int
+			traits = { int_civilian_specialist }
+			allowed = { original_tag = UKR }
+			available = { has_government = vanguard_socialism }
+		}
+	}
+	##Bandera Cabinet ##
+	
+	UKR_yaroslav_stetsko ={
+		name="Yaroslav Stetsko"
+		portraits={
+			civilian={
+				small="gfx/interface/ministers/UKR/UKR_portrait_yaroslav_stetsko.png"
+			}
+		}
+		advisor = {
+		    slot = foreign_minister
+			idea_token = UKR_yaroslav_stetsko_for
+			traits = { for_ideological_crusader }
+			allowed = { original_tag = UKR }
+			available = { has_government = despotism }
+		}
+	}
+	UKR_dmytro_dontsov ={
+		name="Dmytro Dontsov"
+		portraits={
+			civilian={
+				small="gfx/interface/ministers/UKR/UKR_portrait_dmytro_dontsov.png"
+			}
+		}
+		advisor = {
+		    slot = economy_minister
+			idea_token = UKR_dmytro_dontsov_eco
+			traits = { eco_planned_economy_proponent }
+			allowed = { original_tag = UKR }
+			available = { has_government = despotism }
+		}
+	}
+	UKR_dmytro_klyachkivsky ={
+		name="Dmytro Klyachkivsky"
+		portraits={
+			civilian={
+				small="gfx/interface/ministers/UKR/UKR_portrait_dmytro_klyachkivsky.png"
+			}
+		}
+		advisor = {
+		    slot = security_minister
+			idea_token = UKR_dmytro_klyachkivsky_sec
+			traits = { for_iron_fisted_brute }
+			allowed = { original_tag = UKR }
+			available = { has_government = despotism }
+		}
+	}
+	UKR_mykola_lebed ={
+		name="Mykola Lebed"
+		portraits={
+			civilian={
+				small="gfx/interface/ministers/UKR/UKR_portrait_mykola_lebed.png"
+			}
+		}
+		advisor = {
+		    slot = head_of_intel
+			idea_token = UKR_mykola_lebed_int
+			traits = { int_civilian_specialist }
+			allowed = { original_tag = UKR }
+			available = { has_government = despotism }
+		}
+	}
+	
+	##Knights##
+	
+	UKR_volodymyr_shayan ={
+		name="Volodymyr Shayan"
+		portraits={
+			civilian={
+				small="gfx/interface/ministers/UKR/UKR_portrait_volodymyr_shayan.png"
+			}
+		}
+		advisor = {
+		    slot = head_of_government
+			idea_token = UKR_volodymyr_shayan_hog
+			traits = { hog_spiritual_leader }
+			allowed = { original_tag = UKR }
+			available = { has_government = accelerationism has_country_flag = UKR_knights_win }
+		}
+		country_leader={
+			ideology= zadrugism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	UKR_yevhen_yulii ={
+		name="Yevhen Yulii Pelenski"
+		portraits={
+			civilian={
+				small="gfx/interface/ministers/UKR/UKR_portrait_ulas_samchuk.png"
+			}
+		}
+		advisor = {
+		    slot = foreign_minister
+			idea_token = UKR_yevhen_yulii_for
+			traits = { for_ideological_crusader }
+			allowed = { original_tag = UKR }
+			available = { has_government = accelerationism has_country_flag = UKR_knights_win }
+		}
+	}
+	UKR_vasyl_kurhut ={
+		name="Vasyl Kurhut"
+		portraits={
+			civilian={
+				small="gfx/interface/ministers/UKR/UKR_portrait_vasyl_kurhut.png"
+			}
+		}
+		advisor = {
+		    slot = economy_minister
+			idea_token = UKR_vasyl_kurhut_eco
+			traits = { eco_mixed_economy }
+			allowed = { original_tag = UKR }
+			available = { has_government = accelerationism has_country_flag = UKR_knights_win }
+		}
+	}
+	UKR_ulas_samchuk  ={
+		name="Ulas Samchuk"
+		portraits={
+			civilian={
+				small="gfx/interface/ministers/UKR/UKR_portrait_yevhen_yulii.png "
+			}
+		}
+		advisor = {
+		    slot = security_minister
+			idea_token = UKR_ulas_samchuk_sec
+			traits = { sec_man_of_the_people }
+			allowed = { original_tag = UKR }
+			available = { has_government = accelerationism has_country_flag = UKR_knights_win }
+		}
+	}
+	UKR_lev_rebet  ={
+		name="Lev Rebet"
+		portraits={
+			civilian={
+				small="gfx/interface/ministers/UKR/UKR_portrait_lev_rebet.png"
+			}
+		}
+		advisor = {
+		    slot = head_of_intel
+			idea_token = UKR_lev_rebet_int
+			traits = { int_political_specialist }
+			allowed = { original_tag = UKR }
+			available = { has_government = accelerationism has_country_flag = UKR_knights_win }
+		}
+	}
+	
+	UKR_pavlo_skoropadskyi={
+		name="Pavlo Skoropads'kyi"
+		portraits={
+			civilian={
+				large="gfx/leaders/UKR/Portrait_Pavlo_Skoropadskyi.png"
+				small="gfx/interface/ministers/UKR/military/UKR_chief_Pavlo_Skoropadsky.tga"
+			}
+		}
+		field_marshal={
+			traits={ cavalry_officer }
+			skill=3
+			attack_skill=3
+			defense_skill=2
+			planning_skill=3
+			logistics_skill=3
+			legacy_id=-1
+		}
+		advisor = {
+		    slot = high_command
+			idea_token = UKR_pavlo_skoropadskyi_command
+			traits = { army_cavalry_3 }
+		}
+	}
+	UKR_ivan_poltavets={
+		name="Ivan Poltavets"
+		portraits={
+			civilian={
+				large="gfx/leaders/UKR/Portrait_Ivan_Poltavets.png"
+			}
+		}
+		country_leader={
+			desc="UKR_Ivan_Poltavets_desc"
+			ideology=reactionary_populism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	UKR_petro_bolbochan={
+		name="Petro Bolbochan"
+		portraits={
+			civilian={
+				large="gfx/leaders/UKR/Portrait_UKR_Petro_Bolbochan.png"
+				small="gfx/interface/ministers/UKR/military/UKR_chief_Petro_Bolbochan.tga"
+			}
+			army={
+				large="gfx/leaders/UKR/Military/Portrait_UKR_Petro_Bolbochan_general.png"
+			}
+		}
+		field_marshal={
+			traits={ brilliant_strategist }
+			skill=4
+			attack_skill=3
+			defense_skill=4
+			planning_skill=3
+			logistics_skill=2
+			legacy_id=-1
+		}
+	
+		advisor = {
+		    slot = high_command
+			idea_token = UKR_petro_bolbochan_command
+			traits = { army_regrouping_2 }
+		}
+	}
+	UKR_hnat_vasylchenko={
+		name="Hnat Vasyl'chenko"
+		portraits={
+			army={
+				large="gfx/leaders/UKR/Military/Portrait_Hnat_Vasylchenko.png"
+			}
+		}
+		corps_commander={
+			traits={ infantry_officer }
+			skill=1
+			attack_skill=2
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=-1
+		}
+	}
+	UKR_oleksandr_lignau={
+		name="Oleksandr Lignau"
+		portraits={
+			army={
+				small="gfx/interface/ministers/UKR/military/UKR_arm_Oleksandr_Lignau.tga"
+			}
+			army={
+				large="gfx/leaders/UKR/Military/Portrait_Oleksandr_Lignau.png"
+			}
+		}
+		corps_commander={
+			traits={ brilliant_strategist }
+			skill=4
+			attack_skill=2
+			defense_skill=1
+			planning_skill=3
+			logistics_skill=3
+			legacy_id=-1
+		}
+		advisor = {
+		    slot = army_chief
+			idea_token = UKR_oleksandr_lignau_army
+			traits = { carm_elastic_defence_doctrine }
+		}
+	}
+	UKR_andriy_vovk={
+		name="Andriy Vovk"
+		portraits={
+			army={
+				large="gfx/leaders/UKR/Military/Portrait_Andriy_Vovk.png"
+			}
+		}
+		corps_commander={
+			traits={ harsh_leader }
+			skill=2
+			attack_skill=3
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	UKR_serhiy_dyadyusha={
+		name="Serhiy Dyadyusha"
+		portraits={
+			army={
+				large="gfx/leaders/UKR/Military/Portrait_Serhiy_Dyadyusha.png"
+			}
+		}
+		corps_commander={
+			traits={ inflexible_strategist }
+			skill=3
+			attack_skill=1
+			defense_skill=1
+			planning_skill=3
+			logistics_skill=3
+			legacy_id=-1
+		}
+	}
+	UKR_volodymyr_oskilko={
+		name="Volodymyr Oskilko"
+		portraits={
+			army={
+				small="gfx/interface/ministers/UKR/military/UKR_arm_Volodymyr_Oskilko.tga"
+			}
+			army={
+				large="gfx/leaders/UKR/Military/Portrait_Volodymyr_Oskilko.png"
+			}
+		}
+		corps_commander={
+			traits={ armor_officer }
+			skill=3
+			attack_skill=4
+			defense_skill=1
+			planning_skill=2
+			logistics_skill=1
+			legacy_id=-1
+		}
+		advisor = {
+		    slot = army_chief
+			idea_token = UKR_volodymyr_oskilko_army
+			traits = { carm_armoured_spearhead_doctrine }
+		}
+	}
+	UKR_oleksandr_hrekiv={
+		name="Oleksandr Hrekiv"
+		portraits={
+			army={
+				small="gfx/interface/ministers/UKR/military/UKR_theo_Oleksandr_Hrekiv.tga"
+			}
+			army={
+				large="gfx/leaders/UKR/Military/Portrait_Oleksandr_Hrekiv.png"
+			}
+		}
+		corps_commander={
+			traits={ infantry_officer }
+			skill=4
+			attack_skill=3
+			defense_skill=2
+			planning_skill=3
+			logistics_skill=2
+			legacy_id=-1
+		}
+		advisor = {
+		    slot = theorist
+			idea_token = UKR_oleksandr_hrekiv_theo
+			traits = { military_theorist }
+		}
+	}
+	UKR_oleksandr_slyvynskyi={
+		name="Oleksandr Slyvyns'kyi"
+		portraits={
+			army={
+				small="gfx/interface/ministers/UKR/military/UKR_arm_Oleksandr_Slyvynsky.tga"
+			}
+			army={
+				large="gfx/leaders/UKR/Military/Portrait_Oleksandr_Slyvynsky.png"
+			}
+		}
+		corps_commander={
+			traits={ armor_officer }
+			skill=3
+			attack_skill=2
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=3
+			legacy_id=-1
+		}
+		advisor = {
+		    slot = army_chief
+			idea_token = UKR_oleksandr_slyvynskyi_army
+			traits = { carm_doctrine_of_autonomy }
+		}
+		
+	}
+	UKR_levko_drozdovskyi={
+		name="Levko Drozdovs'kyi"
+		portraits={
+			army={
+				large="gfx/leaders/UKR/Military/Portrait_Levko_Drozdovsky.png"
+			}
+		}
+		corps_commander={
+			traits={ harsh_leader }
+			skill=3
+			attack_skill=3
+			defense_skill=1
+			planning_skill=3
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	UKR_mykola_kakurin={
+		name="Mykola Kakurin"
+		portraits={
+			army={
+				large="gfx/leaders/UKR/Military/Portrait_Mykola_Kakurin.png"
+			}
+		}
+		corps_commander={
+			traits={ old_guard }
+			skill=3
+			attack_skill=1
+			defense_skill=4
+			planning_skill=1
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	UKR_mykhailo_omelyanovychpavlenko={
+		name="Mykhailo Omelyanovych-Pavlenko"
+		portraits={
+			army={
+				large="gfx/leaders/UKR/Military/Portrait_Mykhailo_Omelyanovych_Pavlenko.png"
+			}
+		}
+		corps_commander={
+			traits={ war_hero }
+			skill=4
+			attack_skill=2
+			defense_skill=4
+			planning_skill=2
+			logistics_skill=1
+			legacy_id=-1
+		}
+	}
+	UKR_ivan_omelyanovychpavlenko={
+		name="Ivan Omelyanovych-Pavlenko"
+		portraits={
+			army={
+				large="gfx/leaders/UKR/UKR_general_Ivan_Omelyanovych_Pavlenko.png"
+			}
+		}
+		corps_commander={
+			traits={ cavalry_officer }
+			skill=4
+			attack_skill=4
+			defense_skill=3
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=-1
+		}
+	}
+	UKR_yevhen_myshkovskyi={
+		name="Yevhen Myshkovs'kyi"
+		portraits={
+			army={
+				large="gfx/leaders/UKR/Military/Portrait_Yevhen_Myshkovsky.png"
+			}
+		}
+		corps_commander={
+			traits={ infantry_officer }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=1
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	UKR_svyatoslav_shramchenko={
+		name="Svyatoslav Shramchenko"
+		portraits={
+			army={
+				large="gfx/leaders/UKR/Military/Portrait_Syvatoslav_Shramchenko.png"
+			}
+			army={ 
+			    small="gfx/interface/ministers/UKR/military/UKR_nav_Svyatoslav_Shramchenko.tga"
+			}
+		}
+		navy_leader={
+			traits={ old_guard_navy bold ironside }
+			skill=4
+			attack_skill=5
+			defense_skill=2
+			maneuvering_skill=1
+			coordination_skill=1
+			legacy_id=-1
+		}
+		advisor = {
+			slot = navy_chief
+			traits = { cnav_indirect_approach_doctrine }
+			idea_token = UKR_svyatoslav_shramchenko_navy
+		}
+	}
+	UKR_andriy_pokrovskyi={
+		name="Andriy Pokrovs'kyi"
+		portraits={
+			army={
+				large="gfx/leaders/UKR/Military/Portrait_Andriy_Pokrovskyi.png"
+			}
+			army={ 
+			    small="gfx/interface/ministers/UKR/military/UKR_nav_Andriy_Pokrovskyi.tga"
+			}
+		}
+		navy_leader={
+			traits={ navy_career_officer aviation_enthusiast }
+			skill=3
+			attack_skill=3
+			defense_skill=3
+			maneuvering_skill=1
+			coordination_skill=1
+			legacy_id=-1
+		}
+		advisor = {
+		    slot = navy_chief
+			idea_token = UKR_andriy_pokrovskyi_navy
+			traits = { cnav_open_seas_doctrine }
+		}
+	}
+	UKR_mykhailo_bilynskyi={
+		name="Mykhailo Bilyns'kyi"
+		portraits={
+			army={
+				large="gfx/leaders/UKR/Military/Portrait_Myhailo_Bilynskyi.png"
+			}
+		}
+		navy_leader={
+			traits={ gentlemanly seawolf }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			maneuvering_skill=1
+			coordination_skill=1
+			legacy_id=-1
+		}
+	}
+	UKR_oleksandr_hadd={
+		name="Oleksandr Hadd"
+		portraits={
+			army={
+				large="gfx/leaders/UKR/Military/Portrait_Oleksandr_Hadd.png"
+			}
+			army={
+				small="gfx/interface/ministers/UKR/military/UKR_nav_Oleksandr_Hadd.tga"
+			}
+		}
+		navy_leader={
+			traits={ gentlemanly }
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			maneuvering_skill=1
+			coordination_skill=1
+			legacy_id=-1
+		}
+		advisor = {
+		    slot = navy_chief
+			idea_token = UKR_oleksandr_hadd
+			traits = { cnav_power_projection_doctrine }
+		}
+		advisor = {
+		    slot = theorist
+			idea_token = UKR_oleksandr_hadd_theo
+			traits = { submarine_specialist }
+		}
+	}
+	
+	UKR_oleksandr_ragoza = {
+		name="Oleksandr Ragoza"
+		portraits={
+			civilian = {
+				small="gfx/interface/ministers/UKR/intel/UKR_des_Oleksandr_Ragoza.tga"
+			}
+		}
+		advisor = {
+		    slot = head_of_intel
+			idea_token = UKR_oleksandr_ragoza_intel
+			traits = { int_dismal_enigma }
+		}
+		advisor = {
+		    slot = high_command
+			idea_token = UKR_oleksandr_ragoza_command
+			traits = { army_artillery_2 }
+		}
+	}
+	UKR_borys_guber = {
+		name="Borys Guber"
+		portraits={
+			civilian = {
+				small="gfx/interface/ministers/UKR/military/UKR_air_Borys_Guber.tga"
+			}
+		}
+		advisor = {
+		    slot = air_chief
+			idea_token = UKR_borys_guber_air
+			traits = { cair_vertical_envelopment_doctrine }
+		}
+	}
+	UKR_levko_matsiyevych = {
+		name="Levko Matsieyevych"
+		portraits={
+			civilian = {
+				small="gfx/interface/ministers/UKR/military/UKR_air_Levko_Matsiyevych.tga"
+			}
+		}
+		advisor = {
+		    slot = air_chief
+			idea_token = UKR_levko_matsiyevych_air
+			traits = { cair_carpet_bombing_doctrine }
+		}
+	}
+	UKR_petro_franko = {
+		name="Petro Franko"
+		portraits={
+			civilian = {
+				small="gfx/interface/ministers/UKR/military/UKR_air_Petro_Franko.tga"
+			}
+		}
+		advisor = {
+		    slot = air_chief
+			idea_token = UKR_petro_franko_air
+			traits = { cair_air_superiority_doctrine }
+		}
+		advisor = {
+		    slot = theorist
+			idea_token = UKR_petro_franko_theo
+			traits = { assault_avaition }
+		}
+	}
+	
+	
+}

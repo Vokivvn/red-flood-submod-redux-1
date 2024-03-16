@@ -1,0 +1,432 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			FRA = {
+				if = {
+					limit = {
+						has_game_rule = {
+							rule = FRA_ai_route
+							option = RANDOM
+						}
+					}
+					random_list = {
+						40 = { FRA = { set_country_flag = FRA_ai_path_1 } }
+						40 = { FRA = { set_country_flag = FRA_ai_path_2 } }
+						20 = { FRA = { set_country_flag = FRA_ai_path_3 } }
+					}
+				}
+			}
+			IRE = {
+				if = {
+					limit = {
+						has_game_rule = {
+							rule = RF_april_fools_2021
+							option = no
+						}
+					}
+					load_focus_tree = {
+						tree = generic_focus
+					}
+				}
+			}
+		}
+	}
+	on_declare_war = {
+		effect = {
+			if = {
+				limit = {
+					OR = {
+						FROM = { original_tag = GER }
+						FROM = { original_tag = FRA }
+					}
+					OR = {
+						tag = FRA
+						tag = GER
+					}
+					NOT = {
+						has_global_flag = ww2_Super_Event_Visible
+						has_global_flag = ww2_super_fired
+					}
+				}
+				news_event = {
+					id = news.100
+				}
+				set_global_flag = ww2_super_fired
+			}
+			if = {
+				limit = {
+					OR = {
+						FROM = { original_tag = ENG }
+						FROM = { original_tag = FRA }
+					}
+					OR = {
+						tag = FRA
+						tag = ENG
+					}
+					NOT = {
+						has_global_flag = ww2_Super_Event_Visible
+						has_global_flag = ww2_super_fired
+					}
+				}
+				news_event = {
+					id = news.101
+				}
+				set_global_flag = ww2_super_fired
+			}
+		}
+	}
+	on_capitulation_immediate = {
+		effect = {
+			if = {
+				limit = {
+					ROOT = { tag = FRA }
+					FROM = { tag = GER }
+					all_country = {
+						is_major = yes
+						is_in_faction_with = FRA
+						has_capitulated = yes
+					}
+				}
+				GER  = {
+					white_peace = {
+						tag = FRA
+						message = GER_victory_FRA
+					}
+					remove_wargoal = {
+						type = all
+						target = FRA
+					}
+					if = {
+						limit = {
+							FRA= {
+								is_in_faction_with = FIU
+							}
+						}
+						annex_country = {
+							target = FIU
+						}
+					}
+					if = {
+						limit = {
+							FRA= {
+								is_in_faction_with = IRE
+							}
+						}
+						annex_country = {
+							target = IRE
+						}
+					}
+					if = {
+						limit = {
+							FRA= {
+								is_in_faction_with = CYN
+							}
+						}
+						annex_country = {
+							target = CYN
+						}
+					}
+					if = {
+						limit = {
+							FRA= {
+								is_in_faction_with = SEN
+							}
+						}
+						annex_country = {
+							target = SEN
+						}
+					}
+					if = {
+						limit = {
+							FRA= {
+								is_in_faction_with = ETH
+							}
+						}
+						annex_country = {
+							target = ETH
+						}
+					}
+				}
+				if = {
+					limit = {
+						POL = {
+							owns_state = 91 
+							is_subject = no
+							has_war_with = ROS
+						}
+					}
+					if = {
+						limit = {
+							FRA= {
+								is_in_faction_with = ROS
+							}
+						}
+						POL = {
+							annex_country = {
+								target = ROS
+							}
+						}
+					}
+				}else = {
+					GER = {
+						if = {
+						limit = {
+							FRA= {
+								is_in_faction_with = ROS
+							}
+						}
+						annex_country = {
+							target = ROS
+						}
+						}
+					}
+				}
+				if = {
+					limit = {
+						UKR = {
+							owns_state = 91 
+							is_subject = no
+							has_war_with = ROS
+						}
+					}
+					if = {
+						limit = {
+							FRA= {
+								is_in_faction_with = ROS
+							}
+						}
+						UKR = {
+							annex_country = {
+								target = ROS
+							}
+						}
+					}
+				}else = {
+					GER = {
+						if = {
+						limit = {
+							FRA= {
+								is_in_faction_with = ROS
+							}
+						}
+						annex_country = {
+							target = ROS
+						}
+						}
+					}
+				}
+				GER = {
+					annex_country = {
+						target = FRA
+					}
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					ROOT = { tag = SPA }
+					FROM = { tag = SPR }
+				}
+				SPR = {
+					white_peace = {
+						tag = SPA
+						message = SPR_WIN_SPA_tt
+					}
+					annex_country = {
+						target = SPA
+					}			
+				}
+				if = {
+					limit = {
+						SPR = {
+							NOT = {
+								has_war_with = SPA
+								has_war_with = CNT
+							}
+						}
+					}
+					SPR = {
+						remove_ideas = { 
+							SPR_death
+							SPR_death2
+						}
+						country_event = {
+							id = spain_cw.5
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					ROOT = { tag = CNT }
+					FROM = { tag = SPR }
+				}
+				SPR = {
+					white_peace = {
+						tag = CNT
+						message = SPR_WIN_CNT_tt
+					}
+					annex_country = {
+						target = CNT
+					}			
+				}
+				if = {
+					limit = {
+						SPR = {
+							NOT = {
+								has_war_with = SPA
+								has_war_with = CNT
+							}
+						}
+					}
+					SPR = {
+						remove_ideas = { 
+							SPR_death
+							SPR_death2
+						}
+						country_event = {
+							id = spain_cw.5
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					ROOT = { tag = SPR }
+					FROM = { tag = SPA }
+				}
+				SPA = {
+					white_peace = {
+						tag = SPR
+						message = SPA_WIN_SPR_tt
+					}
+					annex_country = {
+						target = SPR
+					}			
+				}
+				if = {
+					limit = {
+						SPA = {
+							NOT = {
+								has_war_with = SPR
+								has_war_with = CNT
+							}
+						}
+					}
+					SPA = {
+						remove_ideas = { 
+							SPR_death
+							SPR_death2
+						}
+						country_event = {
+							id = spain_cw.5
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					ROOT = { tag = CNT }
+					FROM = { tag = SPA }
+				}
+				SPA = {
+					white_peace = {
+						tag = CNT
+						message = SPA_WIN_CNT_tt
+					}
+					annex_country = {
+						target = CNT
+					}			
+				}
+				if = {
+					limit = {
+						SPA = {
+							NOT = {
+								has_war_with = SPR
+								has_war_with = CNT
+							}
+						}
+					}
+					SPA = {
+						remove_ideas = { 
+							SPR_death
+							SPR_death2
+						}
+						country_event = {
+							id = spain_cw.5
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					ROOT = { tag = SPR }
+					FROM = { tag = CNT }
+				}
+				CNT = {
+					white_peace = {
+						tag = SPR
+						message = CNT_WIN_SPR_tt
+					}
+					annex_country = {
+						target = SPR
+					}			
+				}
+				if = {
+					limit = {
+						CNT = {
+							NOT = {
+								has_war_with = SPR
+								has_war_with = SPA
+							}
+						}
+					}
+					CNT = {
+						remove_ideas = { 
+							SPR_death
+							SPR_death2
+						}
+						country_event = {
+							id = spain_cw.5
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					ROOT = { tag = SPA }
+					FROM = { tag = CNT }
+				}
+				CNT = {
+					white_peace = {
+						tag = SPA
+						message = CNT_WIN_SPA_tt
+					}
+					annex_country = {
+						target = SPA
+					}			
+				}
+				if = {
+					limit = {
+						CNT = {
+							NOT = {
+								has_war_with = SPR
+								has_war_with = SPA
+							}
+						}
+					}
+					CNT = {
+						remove_ideas = { 
+							SPR_death
+							SPR_death2
+						}
+						country_event = {
+							id = spain_cw.5
+						}
+					}
+				}
+			}
+		}
+	}
+}

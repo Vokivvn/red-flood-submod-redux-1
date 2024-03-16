@@ -1,0 +1,54 @@
+ideas = {
+	country = {
+		SIA_political_conflict = {
+			picture = SIA_political_conflict
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				political_power_gain = -0.1
+				stability_factor = -0.05
+				liberalism_drift = 0.01
+				conservatism_drift = 0.01
+				progressivism_drift = 0.01
+				revisionist_socialism_drift = 0.01
+				despotism_drift = 0.01
+				reactionism_drift = 0.01
+			}
+		}
+		SIA_chinese_immigrants = {
+			picture = SIA_chinese_immigrants
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				monthly_population = 0.2
+				production_factory_efficiency_gain_factor = 0.05
+				industrial_capacity_factory = 0.05
+			}
+		}
+		SIA_foreign_X_territorial_rights = {
+			picture = SIA_treaty_ports
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = -0.02
+				political_power_gain = -0.05
+			}
+		}
+		SIA_econ_recovery = {
+			picture = SIA_econ_recovery
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				consumer_goods_expected_value = 0.05
+				production_factory_max_efficiency_factor = -0.10
+				industrial_capacity_factory = -0.15
+				industrial_capacity_dockyard = -0.15
+				production_speed_buildings_factor = -0.10
+			}
+		}
+		SIA_rama_vii = {
+			picture = SIA_rama_vii
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = 0.07
+				political_power_gain = -0.10
+			}
+		}
+	}
+}

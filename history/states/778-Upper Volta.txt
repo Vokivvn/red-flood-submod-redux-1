@@ -1,0 +1,22 @@
+
+state={
+	id=778
+	name="STATE_778" # Upper Volta
+	manpower = 3186184
+	
+	state_category = town
+	history={
+		owner = UPV
+		add_core_of = UPV
+		victory_points = {
+			10836 10
+		}
+		buildings = {
+			infrastructure = 2
+		}
+	}
+
+	provinces={
+		2001 7950 7983 8071 10836 12851 12707 13363	13364	13365	13366	13367	13368	13369	13370	13371	13372	13373	13379	13380 13381 13382 13383 13384		
+	}
+}

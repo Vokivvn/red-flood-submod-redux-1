@@ -1,0 +1,14 @@
+characters = {
+	MAR_abdulmecid_ii = {
+		name = "II. Abdülmecid"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MAR/Portrait_MAR_Abdulmecid_II.png"
+			}
+		}
+		country_leader = {
+			ideology = constitutional_monarchy
+			expire = "1965.1.1.1"
+		}
+	}
+}

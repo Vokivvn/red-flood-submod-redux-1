@@ -1,0 +1,14 @@
+characters = {
+    SLV_drago={
+		name="Drago Marušič"
+		portraits={
+			civilian={
+				large="gfx/leaders/SLV/Drago.png"
+			}
+		}
+		country_leader={
+			ideology=left_populism
+			expire="1965.1.1.1"
+		}
+	}
+}

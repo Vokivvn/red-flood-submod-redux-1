@@ -1,0 +1,48 @@
+﻿division_template = {
+	name = "Brigada del Ejército"			# Represents regional reserve mixed brigades
+	division_names_group = SPAN_INFB_02
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }
+ 	}
+}
+
+
+units = {
+	division= {	# "1a Brigada del Ejército"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 8113
+		division_template = "Brigada del Ejército"	
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.6
+	}
+	division= {	# "2a Brigada del Ejército"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 10912
+		division_template = "Brigada del Ejército"	
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.6
+	}
+	division= {	# "3a Brigada del Ejército"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 1944
+		division_template = "Brigada del Ejército"	
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.6
+	}
+}

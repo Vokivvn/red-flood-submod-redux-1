@@ -1,0 +1,129 @@
+ideas = {
+	country = {
+	
+		PCN_lebensborn = {
+			removal_cost = -1
+			allowed = {
+				original_tag = PCN
+			}
+			modifier = {
+				monthly_population = 2.0
+				stability_factor = -0.05
+				consumer_goods_expected_value = 0.05
+			}
+		}
+		
+		PCN_militarism = {
+			removal_cost = -1
+			allowed = {
+				original_tag = PCN
+			}
+			modifier = {
+				conscription = 0.02
+				army_core_attack_factor = 0.1
+			}
+		}
+		
+		PCN_light_of_westernism = {
+			removal_cost = -1
+			allowed = {
+				original_tag = PCN
+			}
+			modifier = {
+				stability_factor = 0.10
+				research_speed_factor = 0.10
+			}
+		}
+		
+		PCN_askari = {
+			removal_cost = -1
+			allowed = {
+				original_tag = PCN
+			}
+			modifier = {
+				conscription = 0.05
+				stability_factor = 0.10
+				war_support_factor = 0.10
+			}
+		}
+		
+		PCN_welfare_state = {
+			removal_cost = -1
+			allowed = {
+				original_tag = PCN
+			}
+			modifier = {
+				consumer_goods_expected_value = -0.05
+				political_power_gain = -0.10
+			}
+		}
+		
+		PCN_industrialized = {
+			removal_cost = -1
+			allowed = {
+				original_tag = PCN
+			}
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.20
+				industrial_capacity_factory = 0.15
+			}
+		}
+		
+		PCN_mob_rule = {
+			removal_cost = -1
+			allowed = {
+				original_tag = PCN
+			}
+			modifier = {
+				research_speed_factor = -0.2
+				political_power_gain = 1
+			}
+		}
+		PCN_westernized = {
+			removal_cost = -1
+			allowed = {
+				original_tag = PCN
+			}
+			modifier = {
+				research_speed_factor = 0.15
+				political_power_gain = 0.50
+				progressivism_drift = 0.05
+			}
+		}
+		
+		PCN_true_democracy = {
+			removal_cost = -1
+			allowed = {
+				original_tag = PCN
+			}
+			modifier = {
+				political_power_gain = 0.50
+				progressivism_drift = 0.05
+				political_power_cost = -0.50
+			}
+		}
+		
+		PCN_renewed_thirst = {
+			removal_cost = -1
+			allowed = {
+				original_tag = PCN
+			}
+			modifier = {
+				army_core_defence_factor = 0.25
+				army_core_attack_factor = 0.25
+			}
+		}
+		
+		PCN_domination = {
+			removal_cost = -1
+			allowed = {
+				original_tag = PCN
+			}
+			modifier = {
+				stability_factor = -0.1
+				reactionism_drift = 0.10
+			}
+		}
+	}
+
+}

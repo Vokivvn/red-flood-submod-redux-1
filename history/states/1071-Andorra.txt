@@ -1,0 +1,19 @@
+state={
+	id = 1071
+	name = "STATE_1071"
+	manpower = 5973
+	
+	state_category = enclave
+	
+	history={
+		owner = ADR
+		add_core_of = ADR
+		victory_points = { 1901 10 }
+		buildings = {
+			infrastructure = 2
+		}
+	}
+	provinces={
+		1901
+	}
+}

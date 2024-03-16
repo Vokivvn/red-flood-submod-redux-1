@@ -1,0 +1,86 @@
+characters = {
+	DEN_christian_christensen = {
+		name = "Christian Christensen"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/DEN/Portrait_Christian_Christensen.png"
+			}
+		}
+		country_leader = {
+			ideology = individualist_anarchism
+			expire = "1965.1.1.1"
+		}
+	}
+	DEN_aksel_larsen = {
+		name = "Aksel Larsen"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/DEN/Portrait_Aksel_Larsen.png"
+			}
+		}
+		country_leader = {
+			ideology = leninism
+			expire = "1965.1.1.1"
+		}
+	}
+	DEN_marie_sophie_nielsen = {
+		name = "Marie Sophie-Nielsen"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/DEN/Portrait_Marie_Nielsen.png"
+			}
+		}
+		country_leader = {
+			ideology = spartakism
+			expire = "1965.1.1.1"
+		}
+	}
+	DEN_thorvald_stauning = {
+		name = "Thorvald Stauning"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/DEN/Portrait_Thorvald_Stauning.png"
+			}
+		}
+		country_leader = {
+			ideology = democratic_socialism
+			expire = "1965.1.1.1"
+		}
+	}
+	DEN_peter_munch = {
+		name = "Peter Munch"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/DEN/Portrait_Peter_Munch.png"
+			}
+		}
+		country_leader = {
+			ideology = progressive_democracy
+			expire = "1965.1.1.1"
+		}
+	}
+	DEN_arne_sørensen = {
+		name = "Arne Sørensen"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/DEN/Portrait_Arne_Sørensen.png"
+			}
+		}
+		country_leader = {
+			ideology = national_conservatism
+			expire = "1965.1.1.1"
+		}
+	}
+	DEN_peter_freuchen = {
+		name = "Peter Freuchen"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/DEN/Portrait_Peter_Freuchen.png"
+			}
+		}
+		country_leader = {
+			ideology = vperedism
+			expire = "1965.1.1.1"
+		}
+	}
+}

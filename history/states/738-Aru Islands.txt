@@ -1,0 +1,25 @@
+state={
+	id=738
+	name="STATE_738"
+	manpower=170600
+
+	state_category = small_island
+
+	history={
+		owner = DEI
+		victory_points = { #Toeal
+			4579 1
+		}
+		buildings = {
+			infrastructure = 1
+			4579 = {
+				naval_base = 1
+			}
+		}
+		add_core_of = DEI
+	}
+
+	provinces={
+		4579 13592 13593
+	}
+}

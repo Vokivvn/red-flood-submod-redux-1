@@ -1,0 +1,17 @@
+characters={
+	UGD_martin_dibobe={
+		name="Martin Dibobe"
+		portraits={
+			civilian={
+				large="gfx/leaders/UGD/Portrait_Uganda_Martin_Dibobe.png"
+			}
+		}
+		country_leader={
+			desc="POLITICS_DIBOBE_DESC"
+			ideology=folk_socialism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+
+}

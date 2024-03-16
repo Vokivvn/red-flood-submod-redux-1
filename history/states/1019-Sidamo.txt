@@ -1,0 +1,26 @@
+state={
+	id=1019
+	name="STATE_1019"
+	manpower = 751240
+	resources={
+		chromium=15
+		steel=7
+	}
+	
+	state_category = town
+
+	history={
+		owner = ITA
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+		add_claim_by = ITA
+		add_core_of = ETH
+		add_claim_by = ET2
+	}
+
+	provinces={
+		8036 8062 10775 
+	}
+}

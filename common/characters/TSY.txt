@@ -1,0 +1,14 @@
+characters={
+	TSY_Bryner = {
+		name = "Boris Bryner"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/TSY/Portrait_TSY_Brynner.png"
+			}
+		}
+		country_leader = {
+			expire = "1965.1.1"
+			ideology = plutocracy
+		}
+	}
+}

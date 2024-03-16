@@ -1,0 +1,29 @@
+state={
+	id=997
+	name="STATE_997"
+	manpower =  438026
+		resources={
+		chromium= 10
+	}
+	
+	state_category = rural
+	
+	history={
+		owner = MAG
+		add_core_of = MAG
+		add_core_of = MLG
+		victory_points = {
+			7939 2
+		}
+		buildings = {
+			infrastructure = 2
+			7939 = {
+			    naval_base = 2
+			}
+		}
+	}
+
+	provinces={
+		7939 5222 13458 2068 13488 13487 13457 1994
+	}
+}

@@ -1,0 +1,79 @@
+###########
+# Ireland #
+###########
+ideas = {
+
+#################
+# Country ideas #
+#################
+
+	country = {
+		IRE_new_high_king = {
+			picture = IRE_new_high_king
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = +0.15
+			}
+		}
+		
+		IRE_banner_for_all_none = {
+			picture = IRE_banner_for_all_none
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				political_power_gain = -0.25
+			}
+		}
+
+		#ignore
+		IRE_spooky_scary_skellingtons = {
+			modifier = {
+				experience_loss_factor = -1
+				conscription = 1
+			}
+		}
+		IRE_spookier_scarier_skellingtons = {
+			modifier = {
+				experience_loss_factor = -3
+				conscription = 1
+			}
+		}
+		IRE_spooky_scary_speedy_skellingtons = {
+			modifier = {
+				army_speed_factor = 3
+				experience_loss_factor = -1
+				conscription = 1
+			}
+		}
+	}
+	
+#############
+# Companies #
+#############
+
+	#### General ####
+	industrial_concern = {
+	
+	}
+	
+	#### Weapons ####
+	materiel_manufacturer = {
+	
+	}
+	
+	#### Naval ####
+	naval_manufacturer = {
+	
+	}
+
+
+	#### Air ####
+	aircraft_manufacturer = {
+	
+	}
+#############
+# Theorist	#
+#############
+	theorist = {
+		
+	}
+}

@@ -1,0 +1,164 @@
+characters = {
+	FJN_sa_zhenbing = {
+		name = "Sa Zhenbing"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/FJN/Portrait_FJN_Sa_Zhen_Bing.png"
+			}
+		}
+		country_leader = {
+			ideology = democratic_socialism
+			expire = "1952.4.10"
+			desc = POLITICS_SA_ZHEN_BING_DESC
+		}
+	}
+	FJN_wang_jingwei = {
+		name = "Wang Jingwei"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/FJN/Portrait_Wang_Jingwei.png"
+			}
+			army = {
+				large="gfx/leaders/FJN/Portrait_Wang_Jingwei_g.png"
+			}
+		}
+		country_leader = {
+			ideology = social_nationalism
+			expire = "1965.1.1.1"
+			desc = POLITICS_JINGWEI_DESC
+		}
+		corps_commander = {
+			traits = { trickster politically_connected }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 2
+		}
+	}
+	FJN_cai_tingkai = {
+		name = "Cai Tingkai"
+		portraits = {
+			army = {
+				large= "gfx/leaders/FJN/Portrait_Cai_Tingkai.png"
+			}
+		}
+		
+		corps_commander = {
+			traits = {
+				politically_connected
+			}
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+		}
+	}
+	FJN_chen_mingshu = {
+		name = "Chen Mingshu"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/FJN/Portrait_Chen_Mingshu_RevSoc.png"
+			}
+			army={
+				large = "gfx/leaders/FJN/Portrait_Chen_Mingshu_General.png"
+			}
+		}
+		corps_commander = {
+			traits = {
+				politically_connected
+			}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 3
+			logistics_skill = 2
+		}
+	}
+	FJN_huang_quixiang ={
+		name = "Huang Qixiang"
+		portraits={
+			army ={ 
+				large = "gfx/leaders/FJN/Portrait_Huang_Qixiang.png"
+			}
+		}
+		
+		corps_commander = {
+			traits = {
+				politically_connected
+			}
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+		}
+	}
+	FJN_zhang_bojun = {
+		name = "Zhang Bojun"
+		portraits={
+			civilian={
+				large ="gfx/leaders/FJN/Portrait_Zhang_Bojun_PopSoc.png"
+			}
+			army ={
+				large ="gfx/leaders/FJN/Portrait_Zhang_Bojun_General.png"
+			}
+		}
+		country_leader = {
+			ideology = spartakism
+			expire = "1965.1.1.1"
+			desc = POLITICS_BOJUN_DESC
+			traits = { }
+		}
+		corps_commander={
+			traits = {
+				politically_connected
+			}
+			skill = 3
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 2
+		}
+	}
+	FJN_deng_yanda = {
+		name = "Deng Yanda"
+		portraits={
+			army = {
+				large = "gfx/leaders/FJN/Portrait_Deng_Yanda.png"
+			}
+		}	
+		corps_commander={
+			traits = {
+				politically_connected
+			}
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 3
+		}
+	}
+	FJN_jiang_guangnai = {
+		name = "Jiang Guangnai"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/FJN/Portrait_Jiang_Guangnai_Progressive.png"
+			}
+			army={
+				large = "gfx/leaders/FJN/Portrait_Jiang_Guangnai_General.png"
+			}
+		}
+		corps_commander={
+			traits = {
+				politically_connected
+			}
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
+}

@@ -1,0 +1,129 @@
+﻿division_template = {
+	name = "Rebel Militia"
+	
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+}
+
+units = {
+	division = {
+		name = "1st Java Militia"
+		location = 13564
+		division_template = "Rebel Militia"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "2nd Java Militia"
+		location = 13564
+		division_template = "Rebel Militia"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "3rd Java Militia"
+		location = 1413
+		division_template = "Rebel Militia"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "4th Java Militia"
+		location = 1413
+		division_template = "Rebel Militia"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "5th Java Militia"
+		location = 13602
+		division_template = "Rebel Militia"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+	}
+
+	division = {
+		name = "1st Priangan Militia"
+		location = 7421
+		division_template = "Rebel Militia"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "2nd Priangan Militia"
+		location = 7421
+		division_template = "Rebel Militia"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "3rd Priangan Militia"
+		location = 1425
+		division_template = "Rebel Militia"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "4th Priangan Militia"
+		location = 13561
+		division_template = "Rebel Militia"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+	}
+
+	division = {
+		name = "6th Java Militia"
+		location = 1209
+		division_template = "Rebel Militia"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+	}
+
+	division = {
+		name = "1st Padang Militia"
+		location = 1460
+		division_template = "Rebel Militia"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "2nd Padang Militia"
+		location = 10354
+		division_template = "Rebel Militia"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "3rd Padang Militia"
+		location = 10354
+		division_template = "Rebel Militia"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "4th Padang Militia"
+		location = 10382
+		division_template = "Rebel Militia"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+	}
+
+	division = {
+		name = "1st Palembang Militia"
+		location = 1401
+		division_template = "Rebel Militia"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "2nd Palembang Militia"
+		location = 12296
+		division_template = "Rebel Militia"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+	}
+}

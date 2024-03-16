@@ -1,0 +1,47 @@
+characters = {
+	NTB_lampiao = {
+		name = "Lampião"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/NTB/Portrait_NTB_Virgulino_Ferreira_da_Silva.png"
+			}
+		}
+		country_leader = {
+			ideology = oligarchy
+			expire = "1965.1.1.1"
+			traits = { popular_figurehead }
+		}
+	}
+	NTB_cristino_corisco_gomes_da_silva_cleto = {
+		name = "Cristino 'Corisco' Gomes da Silva Cleto"
+		portraits = {
+			army = {
+				large = "gfx/leaders/NTB/Portrait_NTB_Corisco.png"
+			}
+		}
+		corps_commander = {
+			traits = { commando cavalry_officer war_hero politically_connected }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
+	NTB_antonio_silvino = {
+		name = "Antônio Silvino"
+		portraits = {
+			army = {
+				large = "gfx/leaders/NTB/Portrait_NTB_Antonio_Silvino.png"
+			}
+		}
+		corps_commander = {
+			traits = { old_guard brilliant_strategist cavalry_officer war_hero politically_connected }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 3
+		}
+	}
+}

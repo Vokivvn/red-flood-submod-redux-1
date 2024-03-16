@@ -1,0 +1,388 @@
+### DAI Ideas
+
+ideas = {
+
+	##############
+	# Country ideas
+	##############
+	country = {
+	
+		DAI_acolonialstate = {
+			removal_cost = -1
+			picture = DAI_Cowardly_Leadership
+			allowed = {
+				original_tag = DAI
+			}
+			modifier = {
+				conscription_factor = -0.5
+			}
+		}
+		
+		DAI_nihonisation = {
+			removal_cost = -1
+			picture = DAI_Nihonisation 
+			allowed = {
+				original_tag = DAI
+			}
+			modifier = {
+				monthly_population = 0.65
+				political_power_factor	= -0.25
+				consumer_goods_expected_value = -0.15
+				production_speed_buildings_factor = 0.8
+				stability_factor = -0.10				
+			}
+			
+			targeted_modifier = { tag = JAP mic_to_target_factor = 1 }
+		}
+		
+		DAI_united = {
+			removal_cost = -1
+			picture = DAI_Riding_Discontent
+			allowed = {
+				original_tag = DAI
+			}
+			modifier = {
+				stability_factor = -0.2
+				war_support_factor = -0.2
+			}
+		}
+
+		DAI_Mandarins_Warlordism = {
+			removal_cost = -1
+			picture = DAI_Mandarins_Warlordism
+			allowed = {
+				original_tag = DAI
+			}
+			modifier = {
+				political_power_factor = 0.15
+			}
+		}
+
+	}
+
+	hidden_ideas = {
+		DAI_libwar = {
+			removal_cost = -1
+			picture = civil_war_economy
+			allowed = {
+				original_tag = VIN
+				original_tag = SMC
+			}
+			modifier = {
+				ai_focus_aggressive_factor = 1
+				forced_surrender_limit = -0.58
+				breakthrough_factor = 1
+				army_attack_factor = 1
+				army_attack_speed_factor = 1
+				army_speed_factor = 1
+			}
+		}
+		DAI_libwar_imperial = {
+			removal_cost = -1
+			picture = civil_war_economy
+			allowed = {
+				original_tag = DAI
+			}
+			modifier = {
+				ai_focus_aggressive_factor = 1
+				forced_surrender_limit = -0.1
+				breakthrough_factor = 1
+				army_attack_factor = 1
+				army_attack_speed_factor = 1
+				army_speed_factor = 1
+			}
+		}
+	}
+
+
+
+
+
+
+	##############
+	# Companies
+	##############
+
+	#### General ####
+	industrial_concern = {
+		##Infrastructure
+		##CEE Public Infrastructure
+		DAI_cee = {
+			picture = DAI_cee
+			allowed = {
+				original_tag = DAI
+			}
+			traits = {
+				industrial_concern
+				construction_company
+			}
+		}
+		##Hoa-Xa Annam Company
+		DAI_hoa-xa = {
+			picture = DAI_hoaxa
+			allowed = {
+				original_tag = DAI
+			}
+			traits = {
+				industrial_concern
+			}
+			modifier = {
+				production_speed_infrastructure_factor = 0.15
+				local_resources_factor = 0.15
+			}
+		}
+		##Electronics
+		##SICREM
+		DAI_sicrem = {
+			picture = DAI_sicrem
+			allowed = {
+				original_tag = DAI
+			}
+			traits = {
+				electronics_concern
+				electronics_manufacturer
+				regular
+			}
+			research_bonus = {
+				electronics = 0.1
+			}
+		}
+
+		DAI_Nguyen_Van_Ban = {
+			picture = DAI_Nguyen_Van_Ba
+			cost = 50
+			allowed = {
+				original_tag = DAI
+			}
+			traits = {
+				DAI_mic_president_afima
+			}
+		}
+
+		DAI_sumitomo = {
+			picture = sumitomo
+			cost = 250
+			allowed = { original_tag = DAI }
+			available = {
+				is_puppet_of = JAP
+			}
+			traits = { electronics_manufacturer }
+			modifier = {
+				production_speed_radar_station_factor = 0.1
+			}
+			research_bonus = {
+				electronics = 0.1
+				industry = 0.05
+			}
+		}
+	}
+
+	#### Weapons Manufacturer ####
+	materiel_manufacturer = {
+		##Guns
+		##Makitton Arsenal
+		DAI_marsenal = {
+			picture = DAI_marsenal
+			allowed = {
+				original_tag = DAI
+			}
+			traits = {
+				infantry_equipment_producer_offense_0
+			}
+			research_bonus = {
+				infantry_weapons = 0.15
+			}
+		}
+		##Royal Phu Xuan Armory
+		DAI_pxarmory = {
+			picture = DAI_pxarmory
+			allowed = {
+				original_tag = DAI
+			}
+			traits = {
+				infantry_equipment_producer_allround_0
+			}
+			research_bonus = {
+				infantry_weapons = 0.10
+			}
+		}
+
+		##Artillery
+		##Hoang Gia Artillery
+		DAI_hgarsenal = {
+			picture = DAI_hgartillery
+			allowed = {
+				original_tag = DAI
+			}
+			traits = {
+				artillery_producer_offense_0
+			}
+			research_bonus = {
+				artillery = 0.15
+			}
+		}
+
+		DAI_tokyo_arsenal = {
+			picture = tokyo_arsenal
+			cost = 250
+			allowed = { original_tag = DAI }
+			available = {
+				is_puppet_of = DAI
+			}
+			traits = { infantry_equipment_producer_mass_2 }
+			modifier = {}
+			research_bonus = {
+				infantry_weapons = 0.1
+			}
+		}
+	}
+
+	#### Heavy Equipment Manufacturer ####
+	tank_manufacturer = {
+		##tank
+		##Hoang Gia Armour
+		DAI_hgtank = {
+			picture = DAI_hgtank
+			allowed = {
+				original_tag = DAI
+			}
+			traits = {
+				small_tank_producer_mass_0
+			}
+			research_bonus = {
+				armor = 0.10
+			}
+		}
+		##Imperial
+		DAI_imperialtank = {
+			picture = DAI_hoaxa
+			allowed = {
+				original_tag = DAI
+			}
+			traits = {
+				small_tank_producer_offense_0
+			}
+			research_bonus = {
+				industry = 0.10
+			}
+		}
+		##motorized
+		##STAI
+		DAI_stai = {
+			picture = DAI_stai
+			cost = 75
+			allowed = {
+				original_tag = DAI
+			}
+			traits = {
+				motorised_equipment_producer_mass_2
+			}
+			equipment_bonus = {
+				motorized_equipment = {
+					armor_value = -0.1
+					soft_attack = -0.1
+					instant = yes
+				}
+				mechanized_equipment = {
+					armor_value = -0.1
+					soft_attack = -0.1
+					instant = yes
+				}
+			}
+		}
+		DAI_bainnier = {
+			picture = DAI_bainnier
+			cost = 150
+			allowed = {
+				original_tag = DAI
+			}
+			traits = {
+				motorised_equipment_producer_offense_1	
+			}
+			equipment_bonus = {
+				motorized_equipment = {
+					armor_value = 0.05
+					instant = yes
+				}
+			}
+		}
+
+		DAI_nissan_motor = {
+			picture = nissan
+			cost = 250
+			allowed = { original_tag = DAI }
+			available = {
+				is_puppet_of = DAI
+			}
+			traits = { motorised_equipment_producer_offense_1 }
+			modifier = {}
+			research_bonus = {
+				motorized_equipment = 0.05
+			}
+		}
+
+	}
+
+	#### Air and Naval Manufacturer ####
+	naval_manufacturer = {
+		##Bason Port
+		DAI_basonport = {
+			picture = DAI_bason
+			allowed = {
+				original_tag = DAI
+			}
+			traits = {
+				small_ship_producer_mass_0
+			}
+			research_bonus = {
+				naval_equipment = 0.10
+			}
+		}
+		##Imperial Ship
+		DAI_hgport = {
+			picture = DAI_hgjunk
+			allowed = {
+				original_tag = DAI
+			}
+			traits = {
+				capital_ship_producer_offense_0
+			}
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+		}
+		DAI_kure = {
+			picture = kure_naval_arsenal
+			cost = 250
+			allowed = { original_tag = DAI }
+			available = {
+				is_puppet_of = DAI
+			}
+			traits = { cruiser_producer_defense_1 }
+			modifier = {}
+			research_bonus = {
+				naval_equipment = 0.05
+			}
+		}
+	}
+
+	#### Air ####
+	aircraft_manufacturer = {
+		designer = yes
+		DAI_mitsubishi = {
+			picture = mitsubishi
+			cost = 250
+			allowed = { original_tag = DAI }
+			available = {
+				is_puppet_of = DAI
+			}
+			traits = { bomber_producer_offense_1 }
+			modifier = {}
+			research_bonus = {
+				air_equipment = 0.05
+			}
+		}
+
+	}
+
+}

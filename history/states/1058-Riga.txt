@@ -1,0 +1,28 @@
+state={
+	id=1058
+	name="STATE_1058"
+	manpower = 641501
+
+	state_category = city
+
+	history={
+		owner = WRU
+		victory_points = {
+			9340 30
+		}
+		buildings = {
+			infrastructure = 3
+			arms_factory = 3
+			industrial_complex = 3
+			9340 = {
+				naval_base = 6
+			}
+		}
+		add_core_of = LAT
+		add_core_of = WRU
+	}
+
+	provinces={
+		9340
+	}
+}

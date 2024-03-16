@@ -1,0 +1,103 @@
+﻿capital = 9
+set_research_slots = 3 
+set_stability = 0.5
+
+oob = CZE
+if = { limit = { has_dlc = "By Blood Alone" } set_air_oob = "CZE_air" }
+if = { limit = {  NOT = { has_dlc = "By Blood Alone" } }  set_air_oob = "CZE_air_legacy" }
+
+if = {
+	limit = { NOT = { has_dlc = "No Step Back" } }
+	set_technology = {
+		gwtank = 1
+		basic_light_tank = 1
+		improved_light_tank = 1
+	}
+}
+if = {
+	limit = { has_dlc = "No Step Back" }
+	set_technology = {
+		gwtank_chassis = 1
+		basic_light_tank_chassis = 1
+		improved_light_tank_chassis = 1
+	}
+}
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+	set_technology = {
+		aa_lmg = 1
+		engines_1 = 1
+		engines_2 = 1
+		iw_small_airframe = 1
+		iw_medium_airframe = 1
+		early_bombs = 1
+	}
+}
+if = {
+	limit = { NOT = { has_dlc = "By Blood Alone" } }
+	set_technology = {
+		early_fighter = 1
+		early_bomber = 1
+		CAS1 = 1
+	}
+}
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1
+	tech_recon = 1
+	tech_mountaineers = 1
+	gw_artillery = 1
+	interwar_antiair = 1
+	fuel_silos = 1
+	basic_train = 1
+}
+
+set_politics = {
+	ruling_party = right_authoritarianism
+	last_election = "1933.10.25"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	vanguard_socialism = 5
+	popular_socialism = 20
+	anarchism = 5
+	revisionist_socialism = 5
+	progressivism = 5
+	liberalism = 5
+	conservatism = 5
+	right_authoritarianism = 30
+	despotism = 5
+	reactionism = 5
+	accelerationism = 10
+}
+
+recruit_character = CZE_bohuslav_vrbenský
+recruit_character = CZE_josef_patejdl
+recruit_character = CZE_vaclav_bolen
+recruit_character = CZE_jiří_stříbrný
+recruit_character = CZE_j_k_v_roman_I
+#recruit_character = CZE_alois_muna
+#recruit_character = CZE_karel_kindl
+recruit_character = CZE_jan_šrámek
+recruit_character = CZE_kare_schwarzenber
+recruit_character = CZE_ladislav_kobsinek
+#recruit_character = CZE_lída_baarová
+recruit_character = CZE_toyen
+recruit_character = CZE_jaroslav_hasek
+#recruit_character = CZE_zdeněk_fierlinger
+#recruit_character = CZE_františek_mašek
+recruit_character = CZE_josef_snejdarek
+recruit_character = CZE_richard_tesarik
+recruit_character = CZE_vojtěch_luža
+recruit_character = CZE_josef_votruba
+recruit_character = CZE_ludvík_svoboda
+recruit_character = CZE_ján_golian
+recruit_character = CZE_václav_morávek
+recruit_character = CZE_Karel_Englis
+
+
+
+

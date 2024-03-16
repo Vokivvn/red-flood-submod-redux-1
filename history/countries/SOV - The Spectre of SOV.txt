@@ -1,0 +1,8 @@
+﻿###############
+### WARNING ###
+###############
+# This tag exists to end the continuous struggle of erasing SOV from the imported vanilla files
+# It doesn't play normally at all, for example fuck you
+###############
+
+capital = 1

@@ -1,0 +1,21 @@
+state={ 
+	id=821
+	name="STATE_821" 
+
+	history={
+		add_core_of = CAM
+		add_core_of = DAI
+		owner = DAI
+		buildings = {
+			infrastructure = 2
+		}
+		victory_points = { 1620 2 }
+	}
+
+	provinces={
+		1620 4596 7645 10204 12167 4330
+	}
+	manpower = 456825 #based on the estimate from ElectrifyingBreadCat
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

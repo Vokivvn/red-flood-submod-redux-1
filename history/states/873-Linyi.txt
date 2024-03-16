@@ -1,0 +1,19 @@
+state = {
+	id = 873
+	name = "STATE_873"
+	manpower = 10000000
+	state_category = town
+	history = {
+		owner = BYJ
+		add_core_of = BYJ
+		buildings = {
+			infrastructure = 1
+		}
+		victory_points = {
+			1124 3
+		}
+	}
+	provinces = {
+		1124 1154 4181 7055 9971 12015
+	}
+}

@@ -1,0 +1,41 @@
+ideas = {
+	country = {
+		TUK_ulema = {
+			removal_cost = -1
+			picture = KAV_council_reforms
+			allowed = {
+				original_tag = TUK
+			}
+			modifier= {
+				stability_factor = -0.10
+				political_power_gain = -0.10
+			}
+		}
+		TUK_birth = {
+			removal_cost = -1
+			picture = KAV_council_reforms
+			allowed = {
+				original_tag = TUK
+			}
+			modifier= {
+				army_defence_factor = 0.1
+				monthly_population = 0.1
+				trade_opinion_factor = 0.05
+			}
+		}
+	}
+	hidden_ideas = {
+		TUK_hiddenbuff = {
+			removal_cost = -1
+			allowed = {
+				original_tag = TUK
+			}
+			modifier = {
+				army_attack_factor = 0.1
+				army_defence_factor = 0.05
+				production_speed_buildings_factor = 0.1
+				supply_consumption_factor = -0.1
+			}
+		}
+	}
+}

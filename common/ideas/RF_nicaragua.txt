@@ -1,0 +1,40 @@
+ideas = {
+
+#################
+# Country ideas #
+#################
+
+	country = {
+		NIC_dying_admin = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				right_authoritarianism_drift = -0.01
+				army_morale_factor = -0.15
+				stability_factor = -0.10
+				war_support_factor = -0.10
+			}
+			picture = generic_idea_RF_idea_skull_metal
+		}
+		NIC_sandinistas = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				command_power_gain = -0.5
+				production_speed_buildings_factor = -0.2
+				military_leader_cost_factor = 0.5
+			}
+			picture = generic_idea_RF_idea_vanguard
+		}
+		NIC_guarda_nacional = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				conscription = -0.07
+				offence = -0.1
+				defence = -0.1
+			}
+			picture = generic_idea_RF_idea_1911
+		}
+	}
+###########
+#MINISTERS#
+###########
+}

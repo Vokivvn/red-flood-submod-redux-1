@@ -1,0 +1,22 @@
+# Useful triggers for the annexation codebase
+
+#Country Scope
+ROOT_can_grant_land = {
+	exists = yes
+	NOT = { tag = ROOT }
+	OR = {
+		is_ally_with = ROOT
+		AND = {
+			is_hostile = no
+			at_war_with_or_justifying_wargoal_against_ROOT = no
+		}
+	}
+}
+
+#State Scope
+state_owner_can_grant_land = {
+	is_claim_or_core_of_owner = yes
+	owner = {
+		ROOT_can_grant_land = yes
+	}
+}

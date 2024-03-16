@@ -1,0 +1,14 @@
+characters = {
+	CHL_juan_esteban_montero = {
+		name = "Juan Esteban Montero"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/CHL/Portrait_Juan_Esteban_Montero.png"
+			}
+		}
+		country_leader = {
+			ideology = social_liberalism
+			expire = "1965.1.1.1"
+		}
+	}
+}

@@ -1,0 +1,14 @@
+characters = {
+	ADN_stewart_symes = {
+		name = "Stewart Symes"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ADN/Stewart_Symes.png"
+			}
+		}
+		country_leader = {
+			ideology = colonial_government
+			expire = "1965.1.1.1"
+		}
+	}
+}

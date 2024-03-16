@@ -1,0 +1,182 @@
+focus_tree = {
+	id = japan_civilwar
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 0
+			tag = JAP
+		}
+	}
+	
+	default = no
+
+	continuous_focus_position = { x = 50 y = 2000 }
+
+	focus = {
+		id = JAP_will_of_the_emperor
+		icon = GFX_focus_JAP_will_of_the_emperor
+		x = 8
+		y = 0
+		cost = 1
+		available_if_capitulated = yes
+		available = { }
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			
+			hidden_effect = {
+				add_popularity = {
+					ideology = reactionism
+					popularity = 0.1
+				}
+				add_popularity = {
+					ideology = despotism
+					popularity = 0.1
+				}
+				add_popularity = {
+					ideology = right_authoritarianism
+					popularity = 0.1
+				}
+			}
+			add_political_power = 50
+			add_command_power = 15
+			add_stability = 0.1
+			add_war_support = 0.1
+		}
+	}
+
+focus = {
+	id = JAP_arming_the_patriots
+	icon = GFX_focus_JAP_arming_the_patriots
+	x = 8
+	y = 1
+	cost = 1
+	available_if_capitulated = yes
+	prerequisite = {
+		focus = JAP_will_of_the_emperor
+	}
+	available = { }
+	bypass = { }        
+	ai_will_do = {
+		factor = 1
+	}
+	
+	completion_reward = {
+		hidden_effect = {
+			division_template = {
+				name = "Imperial Volunteers"
+				regiments = {
+					militia = { x = 0 y = 0 }
+					militia = { x = 0 y = 1 }
+					militia = { x = 0 y = 2 }
+					militia = { x = 1 y = 0 }
+					militia = { x = 1 y = 1 }
+					militia = { x = 1 y = 2 }
+				}
+			}
+			random_owned_controlled_state = {
+				prioritize = { 1296 }
+				create_unit = {
+					division = "name = \"Imperial Volunteers\" division_template = \"Imperial Volunteers\" start_experience_factor = 0.5"
+					owner = JAP
+				}
+				create_unit = {
+					division = "name = \"Imperial Volunteers\" division_template = \"Imperial Volunteers\" start_experience_factor = 0.5"
+					owner = JAP
+				}
+				create_unit = {
+					division = "name = \"Imperial Volunteers\" division_template = \"Imperial Volunteers\" start_experience_factor = 0.5"
+					owner = JAP
+				}
+				create_unit = {
+					division = "name = \"Imperial Volunteers\" division_template = \"Imperial Volunteers\" start_experience_factor = 0.5"
+					owner = JAP
+				}
+				create_unit = {
+					division = "name = \"Imperial Volunteers\" division_template = \"Imperial Volunteers\" start_experience_factor = 0.5"
+					owner = JAP
+				}
+				create_unit = {
+					division = "name = \"Imperial Volunteers\" division_template = \"Imperial Volunteers\" start_experience_factor = 0.5"
+					owner = JAP
+				}
+				create_unit = {
+					division = "name = \"Imperial Volunteers\" division_template = \"Imperial Volunteers\" start_experience_factor = 0.5"
+					owner = JAP
+				}
+				create_unit = {
+					division = "name = \"Imperial Volunteers\" division_template = \"Imperial Volunteers\" start_experience_factor = 0.5"
+					owner = JAP
+				}
+				create_unit = {
+					division = "name = \"Imperial Volunteers\" division_template = \"Imperial Volunteers\" start_experience_factor = 0.5"
+					owner = JAP
+				}
+				create_unit = {
+					division = "name = \"Imperial Volunteers\" division_template = \"Imperial Volunteers\" start_experience_factor = 0.5"
+					owner = JAP
+				}
+				create_unit = {
+					division = "name = \"Imperial Volunteers\" division_template = \"Imperial Volunteers\" start_experience_factor = 0.5"
+					owner = JAP
+				}
+				create_unit = {
+					division = "name = \"Imperial Volunteers\" division_template = \"Imperial Volunteers\" start_experience_factor = 0.5"
+					owner = JAP
+				}
+			}
+			}
+		}
+	}
+
+	focus = {
+		id = JAP_securing_the_south
+		icon = GFX_focus_JAP_securing_the_south
+		x = 8
+		y = 1
+		cost = 1
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = JAP_will_of_the_emperor
+		}
+		available = { }
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+
+			every_state = {
+				limit = {
+					OR = {
+						state = 528
+						state = 529
+						state = 906
+						state = 907
+						state = 908
+						state = 1267
+						state = 1268
+						state = 1269
+						state = 1270
+						state = 1271
+						state = 1272
+						state = 1273
+						state = 1274
+						state = 1275
+						state = 1276
+						state = 1277
+						state = 1278
+					}
+				}
+				add_dynamic_modifier = {
+					modifier = unplanned_offensive
+				}
+				set_state_flag = JAP_unplanned_offensive_flag
+			}
+}
+	}
+}

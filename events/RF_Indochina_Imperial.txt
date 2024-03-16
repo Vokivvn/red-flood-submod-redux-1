@@ -1,0 +1,522 @@
+#####################################
+#	Indochina EVENTS - BABA + ARIEL	#And Hours Too #Also Pintar 
+#####################################
+
+add_namespace = dainam
+
+country_event = {
+	id = dainam.1 #The country splits
+	title = dainam.1.t
+	desc = dainam.1.desc
+	picture = GFX_DAI_gov_collapse
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = dainam.1.a
+		hidden_effect = {
+			every_state = {
+				limit = {
+					OR = {
+						state = 877
+						state = 728
+						state = 591
+						state = 875
+						state = 983
+						state = 286
+					}
+				}
+				transfer_state_to = DAI
+			}
+			DAI = {
+				every_state = {
+					limit = {
+						OR = {
+							#ELF
+							state = 1118
+							state = 880
+							state = 1117
+							state = 1116
+							state = 816
+							state = 1111
+							state = 1112
+							state = 815
+							state = 1114
+							state = 671
+							state = 1115
+							state = 1113
+
+							#INVF
+							state = 1106 
+							state = 982
+							state = 1104
+							state = 1107
+							state = 979
+							state = 820
+							state = 821
+							state = 1109
+							state = 1110
+						}
+					}
+					set_demilitarized_zone = yes
+				}
+				remove_ideas = {
+					DAI_nihonisation
+					DAI_Mandarins_Warlordism
+					DAI_united
+					DAI_acolonialstate
+				}
+				country_event = {
+					id = dainam.2
+					days = 14
+				}
+				create_intelligence_agency = {
+					name = "So Mat-Thám"
+				}
+			}
+		}
+	}
+}
+country_event = {
+	id = dainam.2 #The violence has escalated
+	title = dainam.2.t
+	desc = dainam.2.desc
+	#picture = GFX_saigon_protest
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = dainam.2.a
+		hidden_effect = {
+			set_global_flag = DAI_libwar
+			every_state = {
+				limit = {
+					OR = {
+						#INVF
+						state = 1106
+						state = 982
+						state = 1104
+						state = 1107
+						state = 979
+						state = 820
+						state = 821
+						state = 1109
+						state = 1110
+					}
+				}
+				transfer_state_to = SMC
+			}
+			every_state = {
+				limit = {
+					OR = {
+						#ELF
+						state = 1118
+						state = 880
+						state = 1117
+						state = 1116
+						state = 816
+						state = 1111
+						state = 1112
+						state = 815
+						state = 1114
+						state = 671
+						state = 1115
+						state = 1113
+					}
+				}
+				transfer_state_to = VIN
+			}
+			every_state = {
+				limit = {
+					is_core_of = DAI
+				}
+				add_core_of = VIN
+				add_core_of = SMC
+			}
+			DAI = {
+				add_country_leader_role = {
+					character = "DAI_Hideki_Tojo"
+					country_leader = {
+						ideology = military_dictatorship
+						expire = "1965.1.1.1"
+					}
+					promote_leader = yes
+				}
+				set_cosmetic_tag = DAI_Imperial_CW
+				load_oob = "DAI_civilwar"
+				add_ideas = DAI_libwar_imperial
+			}
+			SMC = {
+				inherit_technology = DAI
+				load_oob = "SMC_civil_war"
+				declare_war_on = {
+					target = DAI
+					type = annex_everything
+				}
+				add_ideas = DAI_libwar
+			}
+			VIN = {
+				inherit_technology = DAI
+				load_oob = "VIN_civil_war"
+				declare_war_on = {
+					target = DAI
+					type = annex_everything
+				}
+				add_ideas = DAI_libwar
+			}
+			news_event = {
+				id = news.106
+			}
+		}
+	}
+	option = {
+		name = dainam.2.b
+		hidden_effect = {
+			set_global_flag = DAI_libwar
+			every_state = {
+				limit = {
+					OR = {
+						#INVF
+						state = 1106
+						state = 982
+						state = 1104
+						state = 1107
+						state = 979
+						state = 820
+						state = 821
+						state = 1109
+						state = 1110
+					}
+				}
+				transfer_state_to = SMC
+			}
+			every_state = {
+				limit = {
+					OR = {
+						#ELF
+						state = 1118
+						state = 880
+						state = 1117
+						state = 1116
+						state = 816
+						state = 1111
+						state = 1112
+						state = 815
+						state = 1114
+						state = 671
+						state = 1115
+						state = 1113
+					}
+				}
+				transfer_state_to = VIN
+			}
+			every_state = {
+				limit = {
+					is_core_of = DAI
+				}
+				add_core_of = VIN
+				add_core_of = SMC
+			}
+			DAI = {
+				add_country_leader_role = {
+					character = "DAI_Hideki_Tojo"
+					country_leader = {
+						ideology = military_dictatorship
+						expire = "1965.1.1.1"
+					}
+					promote_leader = yes
+				}
+				set_cosmetic_tag = DAI_Imperial_CW
+				load_oob = "DAI_civilwar"
+				add_ideas = DAI_libwar_imperial
+			}
+			SMC = {
+				inherit_technology = DAI
+				load_oob = "SMC_civil_war"
+				declare_war_on = {
+					target = DAI
+					type = annex_everything
+				}
+				add_ideas = DAI_libwar
+			}
+			VIN = {
+				inherit_technology = DAI
+				load_oob = "VIN_civil_war"
+				declare_war_on = {
+					target = DAI
+					type = annex_everything
+				}
+				add_ideas = DAI_libwar
+			}
+			news_event = {
+				id = news.106
+			}
+		}
+		VIN = {
+			change_tag_from = ROOT
+		}
+	}
+	option = {
+		name = dainam.2.c
+		hidden_effect = {
+			set_global_flag = DAI_libwar
+			every_state = {
+				limit = {
+					OR = {
+						#INVF
+						state = 1106
+						state = 982
+						state = 1104
+						state = 1107
+						state = 979
+						state = 820
+						state = 821
+						state = 1109
+						state = 1110
+					}
+				}
+				transfer_state_to = SMC
+			}
+			every_state = {
+				limit = {
+					OR = {
+						#ELF
+						state = 1118
+						state = 880
+						state = 1117
+						state = 1116
+						state = 816
+						state = 1111
+						state = 1112
+						state = 815
+						state = 1114
+						state = 671
+						state = 1115
+						state = 1113
+					}
+				}
+				transfer_state_to = VIN
+			}
+			every_state = {
+				limit = {
+					is_core_of = DAI
+				}
+				add_core_of = VIN
+				add_core_of = SMC
+			}
+			DAI = {
+				add_country_leader_role = {
+					character = "DAI_Hideki_Tojo"
+					country_leader = {
+						ideology = military_dictatorship
+						expire = "1965.1.1.1"
+					}
+					promote_leader = yes
+				}
+				set_cosmetic_tag = DAI_Imperial_CW
+				load_oob = "DAI_civilwar"
+				add_ideas = DAI_libwar_imperial
+			}
+			SMC = {
+				inherit_technology = DAI
+				load_oob = "SMC_civil_war"
+				declare_war_on = {
+					target = DAI
+					type = annex_everything
+				}
+				add_ideas = DAI_libwar
+			}
+			VIN = {
+				inherit_technology = DAI
+				load_oob = "VIN_civil_war"
+				declare_war_on = {
+					target = DAI
+					type = annex_everything
+				}
+				add_ideas = DAI_libwar
+			}
+			news_event = {
+				id = news.106
+			}
+		}
+		SMC = {
+			change_tag_from = ROOT
+		}
+	}
+}
+country_event = {
+	id = dainam.3 #Civil war
+	title = dainam.3.t
+	desc = dainam.3.desc
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = dainam.3.a
+		VIN = {
+			declare_war_on = {
+				target = SMC
+				type = annex_everything
+			}
+		}
+	}
+}
+
+#Post-liberation war
+
+country_event = {
+	id = dainam.4 #succession event
+	title = dainam.4.t
+	desc = dainam.4.desc
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = dainam.4.a
+		DAI = {
+			add_country_leader_role = {
+				character = "DAI_Bao_Dai"
+				country_leader = {
+					ideology = absolute_monarchy
+					expire = "1965.1.1.1"
+				}
+				promote_leader = yes
+			}
+			set_cosmetic_tag = DAI_Empire
+			set_politics = {
+				ruling_party = despotism
+				elections_allowed = no
+			}
+		}
+		news_event = {
+			id = news.222
+		}
+	}
+	option = {
+		name = dainam.4.b
+		DAI = {
+			drop_cosmetic_tag = yes
+			set_politics = {
+				ruling_party = right_authoritarianism
+				elections_allowed = no
+			}
+		}
+		news_event = {
+			id = news.223
+		}
+	}
+	option = {
+		name = dainam.4.c
+		DAI = {
+			set_cosmetic_tag = DAI_JAP
+			set_politics = {
+				ruling_party = despotism
+				elections_allowed = no
+			}
+		}
+		news_event = {
+			id = news.224
+		}
+	}
+}
+
+#Japan stuffs
+country_event = {
+	id = dainam.99
+	title = dainam.99.t
+	desc = dainam.99.desc
+	#picture = GFX_saigon_protest
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = dainam.99.a
+		ai_chance = { factor = 100 }
+	}
+}
+country_event = {
+	id = dainam.100
+	title = dainam.100.t
+	desc = dainam.100.desc
+	picture = GFX_saigon_protest
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = dainam.100.a
+		ai_chance = { factor = 100 }
+		add_stability = -0.05
+		custom_effect_tooltip = "The Indochinese anti-colonial movement grows more powerful..."
+	}
+}
+country_event = {
+	id = dainam.101
+	title = dainam.101.t
+	desc = dainam.101.desc
+	picture = GFX_DAI_annam_walking_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = dainam.101.a
+		ai_chance = { base = 3 }
+		add_political_power = -25
+		add_manpower = -4000
+		JAP = {
+			add_manpower = 4000
+			hidden_effect = {
+				load_oob = "JAP_DAI_volunteers"
+			}
+		}
+		army_experience = 10
+		add_opinion_modifier = {
+			target = JAP
+			modifier = aided_cause
+		}
+		reverse_add_opinion_modifier = {
+			target = JAP
+			modifier = aided_cause
+		}
+		send_equipment = {
+			equipment = infantry_equipment
+			amount = 600
+			target = JAP
+		}
+		if = {
+			limit = {
+			has_dlc = "Together for Victory"
+			}
+			add_autonomy_score = {
+				value = -100
+			}
+		}
+	}
+	option = {
+		name = dainam.101.b
+		ai_chance = { base = 1 }
+		add_political_power = 25
+		add_opinion_modifier = {
+			target = JAP
+			modifier = condemn_aggression
+		}
+		reverse_add_opinion_modifier = {
+			target = JAP
+			modifier = condemn_aggression
+		}
+		if = {
+			limit = {
+				has_dlc = "Together for Victory"
+			}
+			add_autonomy_score = {
+				value = 100
+			}
+		}
+	}
+}

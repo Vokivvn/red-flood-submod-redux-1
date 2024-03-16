@@ -1,0 +1,44 @@
+add_namespace = TER
+
+
+country_event = { #Elections
+	id = TER.1
+	title = TER.1.t
+	desc = TER.1.d
+	picture = TER_walk
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #Kaminsky
+		name = TER.1.a
+		TER = {
+			add_ideas = TER_feast_for_crows
+			promote_character = TER_Kaminski
+		}
+		}
+
+	option = { #Biskupsky
+		name = TER.1.b
+		TER = {
+			set_politics = {
+				ruling_party = conservatism
+				elections_allowed = no
+			}
+			add_ideas = TER_gold_from_dust
+		}
+		
+		}
+		
+	option = { #Vedists
+		name = TER.1.c
+		TER = {
+			set_politics = {
+				ruling_party = accelerationism
+				elections_allowed = no
+			}
+			add_ideas = TER_great_awakening
+		}
+		
+		}
+}

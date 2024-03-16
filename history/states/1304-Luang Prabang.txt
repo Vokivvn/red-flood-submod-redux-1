@@ -1,0 +1,23 @@
+state={
+	id=1304
+	name="STATE_1304"
+
+	history={
+		owner = SIA
+		add_core_of = SIA
+		victory_points = {
+			4613 1
+		}
+		add_core_of = LAO
+		buildings = {
+			infrastructure = 1
+		}
+	}
+
+	provinces={
+		4568 4613 7103
+	}
+	manpower=201000 #this one seems to be about right, based on what I saw from ECB
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

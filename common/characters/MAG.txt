@@ -1,0 +1,197 @@
+characters = {
+	MAG_razaf_I = {
+		name = "Razaf"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MAG/portrait_Razafinkarefo.tga"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_RAZAF_I_DESC"
+			ideology = national_rejuvenatism
+			expire = "1965.1.1.1"
+		}
+	}
+	MAG_jean_ralaimongo = {
+		name = "Jean Ralaimongo"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/leader_unknown.dds"
+			}
+		}
+		country_leader = {
+			ideology = folk_socialism
+			expire = "1965.1.1.1"
+		}
+	}
+	MAG_norbert_zafimahova = {
+		name = "Norbert Zafimahova"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/leader_unknown.dds"
+			}
+		}
+		country_leader = {
+			ideology = liberal_conservatism
+			expire = "1965.1.1.1"
+		}
+	}
+	MAG_philibert_tsiranana = {
+		name = "Philibert Tsiranana"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/leader_unknown.dds"
+			}
+		}
+		country_leader = {
+			ideology = left_populism
+			expire = "1965.1.1.1"
+		}
+	}
+	MAG_jean_joseph_rabearivelo = {
+		name = "Jean-Joseph Rabearivelo"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/leader_unknown.dds"
+			}
+		}
+		
+		advisor = {
+			slot = head_of_government
+			idea_token = MAG_jean_joseph_rabearivelo_hog
+			allowed = {
+				original_tag = MAG
+			}
+			cost = 1
+		}
+	}
+	MAG_gabriel_ramanantsoa = {
+		name = "Gabriel Ramanantsoa"
+		portraits = {
+			army = {
+				large = "gfx/leaders/leader_unknown.dds"
+			}
+		}
+		corps_commander = {
+			traits = { politically_connected brilliant_strategist  }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 3
+		}
+		advisor = {
+			slot = head_of_intel
+			idea_token = MAG_gabriel_ramanantsoa_int
+			allowed = {
+				original_tag = MAG
+			}
+			cost = 1
+		}
+	}
+	MAG_monja_jaona = {
+		name = "Monja Jaona"
+		portraits = {
+			army = {
+				large = "gfx/leaders/leader_unknown.dds"
+			}
+		}
+		corps_commander = {
+			traits = { politically_connected adaptable commando war_hero }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 3
+		}
+	}
+	MAG_joseph_andrianavalona_ravoahangy = {
+		name = "Joseph Andrianavalona Ravoahangy"
+		portraits = {
+			army = {
+				large = "gfx/leaders/leader_unknown.dds"
+			}
+		}
+		corps_commander = {
+			traits = { politically_connected infantry_officer trait_engineer }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	MAG_joseph_raseta = {
+		name = "Joseph Raseta"
+		portraits = {
+			army = {
+				large = "gfx/leaders/leader_unknown.dds"
+			}
+		}
+		corps_commander = {
+			traits = { politically_connected defensive_doctrine war_hero }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	MAG_samuel_rakotondrabe = {
+		name = "Samuel Rakotondrabe"
+		portraits = {
+			army = {
+				large = "gfx/leaders/leader_unknown.dds"
+			}
+		}
+		corps_commander = {
+			traits = { politically_connected armor_officer }
+			skill = 1
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+		}
+		advisor = {
+			slot = economy_minister
+			allowed = {
+				original_tag = MAG
+			}
+			cost = 1
+			idea_token = MAG_samuel_rakotondrabe_eco
+		}
+	}
+	MAG_jacques_rabemananjara = {
+		name = "Jacques Rabemananjara"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/leader_unknown.dds" #placeholder, do not worry
+			}
+		}
+		advisor = {
+			slot = foreign_minister
+			cost = 1
+			allowed = {
+				original_tag = MAG
+			}
+			idea_token = MAG_jacques_rabemananjara_for
+		}
+	}
+	MAG_ravelojaona = {
+		name = "Ravelojaona"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/leader_unknown.dds" #placeholder, do not worry
+			}
+		}
+		advisor = {
+			slot = security_minister
+			cost = 1
+			allowed = {
+				original_tag = MAG
+			}
+			idea_token = MAG_ravelojaona_sec
+		}
+		
+	}
+}

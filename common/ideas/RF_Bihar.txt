@@ -1,0 +1,27 @@
+ideas = {
+	#################
+	# Country ideas #
+	#################
+		country = {
+			BIH_home_of_the_congress = {
+				modifier = {
+					political_power_factor = 0.1
+					revisionist_socialism_drift = 0.02
+					progressivism_drift = 0.02
+				}
+				picture = generic_idea_RF_idea_liberty
+			}
+			BIH_young_army = {
+				modifier = {
+					conscription = 0.02
+					training_time_army_factor = -0.1
+					army_attack_factor = 0.05
+					army_defence_factor = -0.05
+				}
+				picture = generic_idea_RF_idea_soldier2
+			}
+		}
+	###########
+	#MINISTERS#
+	###########
+}

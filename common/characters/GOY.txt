@@ -1,0 +1,14 @@
+characters = {
+	GOY_pedro_ludovico_teixeira = {
+		name = "Pedro Ludovico Teixeira"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/GOY/Portrait_GOY_PLT.png"
+			}
+		}
+		country_leader = {
+			ideology = technocracy
+			expire = "1965.1.1.1"
+		}
+	}
+}

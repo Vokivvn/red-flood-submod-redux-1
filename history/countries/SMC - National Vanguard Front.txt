@@ -1,0 +1,95 @@
+﻿capital = 286
+
+set_technology = {
+	### MOD ###
+	### Navy ###
+	early_submarine = 1
+	early_destroyer = 1
+	basic_destroyer = 1
+	early_light_cruiser = 1
+	early_heavy_cruiser = 1
+	basic_heavy_cruiser = 1
+	early_battleship = 1
+	transport = 1
+	### Tanks ###
+	### INF ###
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1
+	tech_engineers = 1
+	tech_recon = 1
+	gw_artillery = 1
+}
+
+recruit_character = SMC_Council_of_the_Future
+recruit_character = SMC_Yvonne
+recruit_character = SMC_Phan_Xich_Long
+recruit_character = SMC_Nguyen_Thanh_Nam
+recruit_character = SMC_Pham_Cong_Tac
+recruit_character = SMC_Ta_Thu_Thau
+
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+	set_technology = {
+		iw_small_airframe = 1
+		aa_lmg = 1
+		aa_cannon_1 = 1
+		early_bombs = 1
+		engines_1 = 1
+	}
+}
+if = {
+	limit = { NOT = { has_dlc = "By Blood Alone" } }
+	set_technology = {
+		early_fighter = 1
+		CAS1 = 1
+	}
+}
+
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	set_technology = {
+		early_submarine = 1
+		early_heavy_cruiser = 1
+	}
+}
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		early_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		early_ship_hull_cruiser = 1
+		basic_battery = 1
+		basic_light_battery = 1
+		coastal_defense_ships = 1
+	}
+}
+
+set_research_slots = 3
+set_convoys = 30
+
+set_stability = 0.5
+set_cosmetic_tag = SMC_INVF_CW
+
+set_politics = {
+	ruling_party = accelerationism
+	last_election = "1936.6.15"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	vanguard_socialism = 5
+	popular_socialism = 1
+	anarchism = 0
+	revisionist_socialism = 0
+	progressivism = 0
+	liberalism = 1
+	conservatism = 1
+	right_authoritarianism = 10
+	despotism = 80
+	reactionism = 1
+	accelerationism = 1
+}
+

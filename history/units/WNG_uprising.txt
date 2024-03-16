@@ -1,0 +1,34 @@
+﻿division_template = {
+	name = "Muris Sup"
+	
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+}
+
+units = {
+	division = {
+		name = "1st Koreri Division"
+		location = #
+		division_template = "Muris Sup"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "2nd Koreri Division"
+		location = #
+		division_template = "Muris Sup"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "3rd Koreri Division"
+		location = #
+		division_template = "Muris Sup"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+	}
+}

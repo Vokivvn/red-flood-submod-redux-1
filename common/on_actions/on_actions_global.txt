@@ -1,0 +1,1709 @@
+### GLOBAL ON ACTIONS FILE ###
+### COUNTRY-SPECIFIC ACTIONS SHOULD GO INTO THEIR OWN FILES ###
+### DON'T EDIT THIS FILE WITHOUT CHECKING IN THE CODING CHANNEL FIRST ###
+
+on_actions = {
+
+	on_startup = {
+		effect = {
+			#Set MP flag
+			if = {
+				limit = {
+					check_variable = { global.players^num > 1 }
+				}
+				set_global_flag = is_mp
+			}
+			else = {
+				set_global_flag = is_not_mp
+			}
+
+			#UI Setup
+			for_each_scope_loop = {
+				array = global.players
+				set_country_flag = show_welcome_splash
+			}
+
+			#Events
+			random_scope_in_array = {
+				array = global.players
+				#country_event = {
+				#	id = news.9
+				#	days = 629
+				#}
+			}
+
+			#Ambition Areas
+			every_state = { create_ambition_areas = yes }
+
+			#this is temporary so the AI doesn't shit itself
+			every_country = {
+				set_technology = {
+					basic_train = 1
+					popup = no
+				}
+				add_equipment_to_stockpile = {
+					type = train_equipment
+					amount = 35
+					producer = ROOT
+				}
+			}
+		}
+	}
+
+	#ROOT is new controller #FROM is old controller #FROM.FROM is state ID
+	on_state_control_changed = {
+		effect = {
+			### Annexation Check
+			if = {
+				limit = {
+					owns_state = FROM.FROM
+					FROM.FROM = { has_state_flag = annexation_trigger_state }
+				}
+				recheck_annexations = yes
+			}
+		}
+	}
+
+	#ROOT is winner, FROM is loser (called for all winners against all losers)
+	on_peaceconference_started = {
+		effect = {
+			log = "[GetDateText] on_peaceconference_started ROOT = [Root.GetName] FROM = [From.GetName]"
+
+			#set up PC country arrays
+			if = {
+				limit = { NOT = { has_global_flag = RF_set_up_pc_arrays } }
+				set_global_flag = RF_set_up_pc_arrays
+				every_country = {
+					limit = { pc_is_winner = yes }
+					add_to_array = { global.pc_winners_array = THIS }
+					if = {
+						limit = { is_major = yes }
+						set_global_flag = pc_has_major_winner
+					}
+					if = {
+						limit = { is_subject = no }
+						set_global_flag = pc_has_non_subject_winner
+					}
+				}
+				every_country = {
+					limit = { pc_is_loser = yes }
+					add_to_array = { global.pc_losers_array = THIS }
+				}
+			}
+		}
+	}
+
+	#ROOT is winner #FROM is loser
+	on_peaceconference_ended = {
+		effect = {
+			log = "[GetDateText] on_peaceconference_ended ROOT = [Root.GetName] FROM = [From.GetName]"
+
+			#post-PC data cleanup
+			if = {
+				limit = {
+					set_temp_variable = { last_winner_index = global.pc_winners_array^num }
+					subtract_from_temp_variable = { last_winner_index = 1 }
+					check_variable = { global.pc_winners_array^last_winner_index = ROOT }
+
+					set_temp_variable = { last_loser_index = global.pc_losers_array^num }
+					subtract_from_temp_variable = { last_loser_index = 1 }
+					check_variable = { global.pc_losers_array^last_loser_index = FROM }
+				}
+				clr_global_flag = RF_set_up_pc_arrays
+				clr_global_flag = pc_has_major_winner
+				clr_global_flag = pc_has_non_subject_winner
+				clear_array = global.pc_winners_array
+				clear_array = global.pc_losers_array
+				every_country = { recheck_annexations = yes }
+			}
+
+			# Remove the force-surrender idea, just in case it's still there
+			FROM = {
+				remove_ideas = ready_to_surrender
+			}
+
+			# Check impassables for valid paired_impassable state
+			if = {
+				limit = {
+					NOT = { 782 = { OR = { is_owned_by = SEN is_owned_by = FRA } } }
+				}
+				782 = { set_variable = { paired_impassable = 556.id } }#Mali
+			}
+			if = {
+				limit = {
+					NOT = { 977 = { OR = { is_owned_by = TUA is_owned_by = FRA } } }
+				}
+				977 = { set_variable = { paired_impassable = 939.id } } #Upper Niger
+			}
+			if = {
+				limit = {
+					NOT = { 1198 = { OR = { is_owned_by = SOK is_owned_by = ITA is_owned_by = FIU } } }
+				}
+				1198 = { set_variable = { paired_impassable = 977.id } } #Nigerian Desert
+			}
+			if = {
+				limit = {
+					NOT = { 1199 = { is_owned_by = SOK } }
+				}
+				1199 = { set_variable = { paired_impassable = 273.id } } #Libyan Desert
+			}
+			if = {
+				limit = {
+					NOT = { 775 = { OR = { is_owned_by = SOK is_owned_by = ITA is_owned_by = FIU } } }
+				}
+				775 = { set_variable = { paired_impassable = 774.id } } #Chad
+			}
+
+			### transfer impassables to the correct targets
+			for_each_scope_loop = {
+				array = global.paired_impassable_states
+				if = {
+					limit = { NOT = { is_owned_by = var:paired_impassable:owner } }
+					transfer_state_to = paired_impassable:owner
+				}
+			}
+
+			### civil war tags should always annex each other
+			if = {
+				limit = {
+					FROM = {
+						exists = yes #so that we don't keep checking this for every winner-loser pair
+						has_capitulated = yes
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							#Italy
+							AND = {
+								tag = FIU
+								FROM = { tag = ITA }
+							}
+							#Germany
+							AND = {
+								OR = {
+									tag = GER
+									tag = PRS
+								}
+								FROM = {
+									OR = {
+										tag = GER
+										tag = PRS
+									}
+								}
+							}
+						}
+					}
+					annex_country = { target = FROM transfer_troops = yes }
+				}
+			}
+		}
+	}
+
+	# ROOT is capitulated country, FROM is winner
+	on_capitulation = {
+		effect = {
+			log = "[GetDateText] [Root.GetName] has capitulated to [From.GetName]"
+		}
+	}
+
+	# ROOT is previously capitulated country
+	on_uncapitulation = {
+		effect = {
+			log = "[GetDateText] [Root.GetName] has uncapitulated"
+		}
+	}
+
+	# FROM = country giving access, ROOT = country asking for access
+	on_military_access = {
+		effect = {
+			log = "[GetDateText] [Root.GetName] has asked for military access to [From.GetName]"
+		}
+	}
+
+	# FROM = country receiving access, ROOT = country offering access
+	on_offer_military_access = {
+		effect = {
+			log = "[GetDateText] [Root.GetName] has offered military access to [From.GetName]"
+		}
+	}
+
+	# FROM = country being called, ROOT = country calling
+	on_call_allies = {
+		effect = {
+			log = "[GetDateText] [Root.GetName] has called its ally [From.GetName] into its war"
+		}
+	}
+
+	# FROM = country being joined, ROOT = country joining
+	on_join_allies = {
+		effect = {
+			log = "[GetDateText] [Root.GetName] is joining [From.GetName] in its war"
+		}
+	}
+
+	# FROM = country receiving goods, ROOT = country sending goods
+	on_lend_lease = {
+		effect = {
+			log = "[GetDateText] [Root.GetName] is offering a lend lease to [From.GetName]"
+		}
+	}
+
+	# FROM = country requesting goods, ROOT = country sending goods
+	on_incoming_lend_lease = {
+		effect = {
+			log = "[GetDateText] [From.GetName] has requested a lend lease from [From.GetName]"
+		}
+	}
+
+	# FROM = country receiving volunteers, ROOT = country sending volunteers
+	on_send_volunteers = {
+		effect = {
+			log = "[GetDateText] [Root.GetName] is sending volunteers to [From.GetName]"
+		}
+	}
+
+	# FROM = country on whom the wargoal is being generated, ROOT = country generating wargoal
+	on_generate_wargoal = {
+		effect = {
+			log = "[GetDateText] [Root.GetName] is generating a wargoal on [From.GetName]"
+		}
+	}
+
+	# FROM = country giving control of the state, ROOT = country asking for control of the state
+	on_ask_for_state_control = {
+		effect = {
+			log = "[GetDateText] [Root.GetName] is asking for state control from [From.GetName]"
+		}
+	}
+
+	# FROM = country accepting control of the state, ROOT = country giving control of the state
+	on_give_state_control = {
+		effect = {
+			log = "[GetDateText] [Root.GetName] is giving state control to [From.GetName]"
+		}
+	}
+
+	# Ace pilots
+	# country, FROM = ace
+	on_ace_promoted = {
+		random_events = {
+			100 = ace_promoted.1
+			5 = ace_promoted.2
+		}
+	}
+
+	# country, FROM = ace, PREV = enemy ace
+	# This event fires twice, once for each ace.
+	on_aces_killed_each_other = {
+		random_events = {
+			100 = aces_killed_each_other.1
+		}
+	}
+
+	# country, FROM = our ace,
+	# PREV = enemy ace, has killed FROM
+	on_ace_killed_by_ace = {
+		random_events = {
+			100 = ace_killed_by_ace.1
+		}
+	}
+
+	# country, FROM = our ace,
+	# PREV = enemy ace, killed by FROM
+	on_ace_killed_other_ace = {
+		random_events = {
+			100 = ace_killed_other_ace.1
+		}
+	}
+
+	# country, FROM = ace
+	on_ace_killed = {
+		random_events = {
+			100 = ace_died.1
+		}
+	}
+
+	#FROM is faction leader on join faction requests. THIS DOES NOT FIRE ON ADD_TO_FACTION EFFECT! USE ON_OFFER_JOIN_FACTION!
+	on_join_faction = {
+		effect = {
+			log = "[GetDateText] [Root.GetName] on_join_faction FROM = [From.GetName]"
+		}
+	}
+
+	# When a new faction is formed
+	on_faction_formed = {
+		effect = {
+			log = "[GetDateText] [Root.GetName] on_faction_formed"
+		}
+	}
+
+	on_army_leader_daily = {}
+
+	on_army_leader_promoted = {
+		effect = {
+			log = "[GetDateText] [Root.GetName] on_army_leader_promoted [From.GetName]"
+			add_timed_unit_leader_trait = {
+				trait = recently_promoted
+				days = 100
+			}
+		}
+	}
+
+	# New Scopes
+	# Scope is the country owner of the PotF, FROM is the country of the killer
+	on_pride_of_the_fleet_sunk = {
+		effect = {
+			log = "[GetDateText] [Root.GetName] on_pride_of_the_fleet_sunk [From.GetName]"
+
+		}
+	}
+
+	#ROOT is winner #FROM gets annexed - This fires just before FROM gets annexed, meaning the country and everything it owns still exists. It will also fire on_annex and on_civil_war_end
+	on_civil_war_end_before_annexation = {
+		effect = {
+			log = "[GetDateText] [Root.GetName] on_civil_war_end_before_annexation [From.GetName]"
+
+		}
+	}
+	on_civil_war_end = {
+		effect = {
+			log = "[GetDateText] [Root.GetName] on_civil_war_end [From.GetName]"
+
+		}
+	}
+	on_unit_leader_created = {
+		effect = {
+			log = "[GetDateText] [Root.GetName] on_unit_leader_created"
+			if = {
+				limit = { is_exiled_leader = yes }
+				From.From = { save_event_target_as = exile_nation }
+				add_unit_leader_trait = exiled_leader
+				unit_leader_event = { id = mtg_exile_leader_added.1 }
+			}
+		}
+	}
+
+	on_government_exiled = {
+		effect = {
+			log = "[GetDateText] [Root.GetName] on_government_exiled"
+		}
+	}
+
+	#Root is exile
+	#From is new host
+	#FromFrom is old host
+	on_host_changed_from_capitulation = {
+		effect = {
+			#Transfer exile leaders to new host
+			From.From = {
+				every_army_leader = {
+					limit = { is_exiled_leader_from = Root }
+					set_nationality = Root.From
+				}
+			}
+		}
+	}
+
+	#Root is exile
+	#From is old host
+	on_exile_government_reinstated = {
+		effect = {
+			From = {
+				every_army_leader = {
+					limit = { is_exiled_leader_from = Root }
+					set_nationality = Root
+				}
+			}
+			Root = {
+				every_army_leader = {
+					limit = { is_exiled_leader_from = Root }
+					remove_unit_leader_trait = exiled_leader
+					remove_exile_tag = yes
+				}
+			}
+		}
+	}
+
+	on_war = {
+		effect = {
+			log = "[GetDateText]: [From.GetName]: on_war"
+			# Check for puppets at war with their overlord
+			if = {
+				limit = {
+					is_subject = yes
+					any_enemy_country = { has_subject = ROOT }
+				}
+				overlord = {
+					set_autonomy = {
+						target = ROOT
+						autonomy_state = autonomy_free
+					}
+				}
+			}
+		}
+	}
+
+	#ROOT = attacking side
+	#FROM = defending side
+	#fired when two countries end up at war with each other (on_war is fired when a country goes to war against anyone and is not fired again when it enters war against another country unless it went to peace first)
+	on_war_relation_added = {
+		effect = {
+			log = "[GetDateText]: on_war_relation_added attacker: [Root.GetName] defender: [From.GetName]"
+		}
+	}
+	on_puppet = {
+		effect = {
+			ROOT = {
+				load_focus_tree = {
+					tree = generic_focus
+				}
+			}
+			if = {
+				limit = {
+					FROM = {
+						has_country_flag = RF_omit_default_puppeting
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							original_tag = KAV
+							NOT = {
+								has_country_leader = {
+									character = KAV_igor_severyanin
+								}
+							}
+						}
+					}
+					ROOT = {
+						set_country_leader_ideology = vperedism
+					}
+				}
+			}
+			else = {
+				if = {
+					limit = {
+						FROM = {
+							has_country_leader_ideology = futurism
+							
+						}
+					}
+					ROOT = {
+						set_country_leader_ideology = futurism
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_country_leader_ideology = national_rejuvenatism
+							
+						}
+					}
+					ROOT = {
+						set_country_leader_ideology = national_rejuvenatism
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_country_leader_ideology = technocracy
+							
+						}
+					}
+					ROOT = {
+						set_country_leader_ideology = technocracy
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_country_leader_ideology = vperedism
+							
+						}
+					}
+					ROOT = {
+						set_country_leader_ideology = vperedism
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_country_leader_ideology = surrealism
+							
+						}
+					}
+					ROOT = {
+						set_country_leader_ideology = surrealism
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_country_leader_ideology = fiumanism
+							
+						}
+					}
+					ROOT = {
+						set_country_leader_ideology = fiumanism
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_country_leader_ideology = social_anarchism
+							
+						}
+					}
+					ROOT = {
+						set_country_leader_ideology = social_anarchism
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_country_leader_ideology = individualist_anarchism
+							
+						}
+					}
+					ROOT = {
+						set_country_leader_ideology = individualist_anarchism
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_country_leader_ideology = mystical_anarchism
+							
+						}
+					}
+					ROOT = {
+						set_country_leader_ideology = mystical_anarchism
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_country_leader_ideology = stratocratic_anarchism
+							
+						}
+					}
+					ROOT = {
+						set_country_leader_ideology = stratocratic_anarchism
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_country_leader_ideology = national_anarchism
+							
+						}
+					}
+					ROOT = {
+						set_country_leader_ideology = national_anarchism
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_country_leader_ideology = leninism
+							
+						}
+					}
+					ROOT = {
+						set_country_leader_ideology = leninism
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_country_leader_ideology = national_vanguardism
+							
+						}
+					}
+					ROOT = {
+						set_country_leader_ideology = national_vanguardism
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_country_leader_ideology = state_socialism
+							
+						}
+					}
+					ROOT = {
+						set_country_leader_ideology = state_socialism
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_country_leader_ideology = social_republicanism
+							
+						}
+					}
+					ROOT = {
+						set_country_leader_ideology = social_republicanism
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_country_leader_ideology = stratocratic_socialism
+							
+						}
+					}
+					ROOT = {
+						set_country_leader_ideology = stratocratic_socialism
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_country_leader_ideology = spartakism
+							
+						}
+					}
+					ROOT = {
+						set_country_leader_ideology = spartakism
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_country_leader_ideology = syndicalism
+							
+						}
+					}
+					ROOT = {
+						set_country_leader_ideology = syndicalism
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_country_leader_ideology = folk_socialism
+							
+						}
+					}
+					ROOT = {
+						set_country_leader_ideology = folk_socialism
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_country_leader_ideology = national_syndicalism
+							
+						}
+					}
+					ROOT = {
+						set_country_leader_ideology = national_syndicalism
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_country_leader_ideology = democratic_socialism
+							
+						}
+					}
+					ROOT = {
+						set_country_leader_ideology = democratic_socialism
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_country_leader_ideology = religious_socialism
+							
+						}
+					}
+					ROOT = {
+						set_country_leader_ideology = religious_socialism
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_country_leader_ideology = agrarian_socialism
+							
+						}
+					}
+					ROOT = {
+						set_country_leader_ideology = agrarian_socialism
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_country_leader_ideology = utopian_socialism
+							
+						}
+					}
+					ROOT = {
+						set_country_leader_ideology = utopian_socialism
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_country_leader_ideology = esoteric_socialism
+							
+						}
+					}
+					ROOT = {
+						set_country_leader_ideology = esoteric_socialism
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_country_leader_ideology = progressive_democracy
+							
+						}
+					}
+					ROOT = {
+						set_country_leader_ideology = progressive_democracy
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_country_leader_ideology = left_populism
+							
+						}
+					}
+					ROOT = {
+						set_country_leader_ideology = left_populism
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_country_leader_ideology = social_nationalism
+							
+						}
+					}
+					ROOT = {
+						set_country_leader_ideology = social_nationalism
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_country_leader_ideology = liberal_socialism
+							
+						}
+					}
+					ROOT = {
+						set_country_leader_ideology = liberal_socialism
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_country_leader_ideology = progressive_corporatism
+							
+						}
+					}
+					ROOT = {
+						set_country_leader_ideology = progressive_corporatism
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_country_leader_ideology = social_liberalism
+							
+						}
+					}
+					ROOT = {
+						set_country_leader_ideology = social_liberalism
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_country_leader_ideology = classical_liberalism
+							
+						}
+					}
+					ROOT = {
+						set_country_leader_ideology = classical_liberalism
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_country_leader_ideology = libertarian_capitalism
+							
+						}
+					}
+					ROOT = {
+						set_country_leader_ideology = libertarian_capitalism
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_country_leader_ideology = national_liberalism
+							
+						}
+					}
+					ROOT = {
+						set_country_leader_ideology = national_liberalism
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_country_leader_ideology = social_conservatism
+							
+						}
+					}
+					ROOT = {
+						set_country_leader_ideology = social_conservatism
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_country_leader_ideology = liberal_conservatism
+							
+						}
+					}
+					ROOT = {
+						set_country_leader_ideology = liberal_conservatism
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_country_leader_ideology = national_conservatism
+							
+						}
+					}
+					ROOT = {
+						set_country_leader_ideology = national_conservatism
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_country_leader_ideology = right_populism
+							
+						}
+					}
+					ROOT = {
+						set_country_leader_ideology = right_populism
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_country_leader_ideology = anocracy
+							
+						}
+					}
+					ROOT = {
+						set_country_leader_ideology = anocracy
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_country_leader_ideology = oligarchy
+							
+						}
+					}
+					ROOT = {
+						set_country_leader_ideology = oligarchy
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_country_leader_ideology = praetorian_oligarchy
+							
+						}
+					}
+					ROOT = {
+						set_country_leader_ideology = praetorian_oligarchy
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_country_leader_ideology = plutocracy
+							
+						}
+					}
+					ROOT = {
+						set_country_leader_ideology = plutocracy
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_country_leader_ideology = national_democracy
+							
+						}
+					}
+					ROOT = {
+						set_country_leader_ideology = national_democracy
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_country_leader_ideology = absolute_monarchy
+							
+						}
+					}
+					ROOT = {
+						set_country_leader_ideology = absolute_monarchy
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_country_leader_ideology = constitutional_monarchy
+							
+						}
+					}
+					ROOT = {
+						set_country_leader_ideology = constitutional_monarchy
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_country_leader_ideology = constitutional_dictatorship
+							
+						}
+					}
+					ROOT = {
+						set_country_leader_ideology = constitutional_dictatorship
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_country_leader_ideology = military_dictatorship
+							
+						}
+					}
+					ROOT = {
+						set_country_leader_ideology = military_dictatorship
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_country_leader_ideology = theocracy
+							
+						}
+					}
+					ROOT = {
+						set_country_leader_ideology = theocracy
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_country_leader_ideology = personalist_dictatorship
+							
+						}
+					}
+					ROOT = {
+						set_country_leader_ideology = personalist_dictatorship
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_country_leader_ideology = revolutionary_nationalism
+							
+						}
+					}
+					ROOT = {
+						set_country_leader_ideology = revolutionary_nationalism
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_country_leader_ideology = reactionary_populism
+							
+						}
+					}
+					ROOT = {
+						set_country_leader_ideology = reactionary_populism
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_country_leader_ideology = religious_fundamentalism
+							
+						}
+					}
+					ROOT = {
+						set_country_leader_ideology = religious_fundamentalism
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_country_leader_ideology = esoteric_reactionism
+							
+						}
+					}
+					ROOT = {
+						set_country_leader_ideology = esoteric_reactionism
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_country_leader_ideology = aristocratic_reaction
+							
+						}
+					}
+					ROOT = {
+						set_country_leader_ideology = aristocratic_reaction
+					}
+				}
+			}
+		}
+	}
+	on_release_as_puppet = {
+		effect = {
+			ROOT = {
+				load_focus_tree = {
+					tree = generic_focus
+				}
+			}
+			if = {
+				limit = {
+					FROM = {
+						has_country_flag = RF_omit_default_puppeting
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							original_tag = KAV
+							NOT = {
+								has_country_leader = {
+									character = KAV_igor_severyanin
+								}
+							}
+						}
+					}
+					ROOT = {
+						set_country_leader_ideology = vperedism
+					}
+				}
+			}
+			else = {
+				if = {
+					limit = {
+						FROM = {
+							has_country_leader_ideology = futurism
+							
+						}
+					}
+					ROOT = {
+						set_country_leader_ideology = futurism
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_country_leader_ideology = national_rejuvenatism
+							
+						}
+					}
+					ROOT = {
+						set_country_leader_ideology = national_rejuvenatism
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_country_leader_ideology = technocracy
+							
+						}
+					}
+					ROOT = {
+						set_country_leader_ideology = technocracy
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_country_leader_ideology = vperedism
+							
+						}
+					}
+					ROOT = {
+						set_country_leader_ideology = vperedism
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_country_leader_ideology = surrealism
+							
+						}
+					}
+					ROOT = {
+						set_country_leader_ideology = surrealism
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_country_leader_ideology = fiumanism
+							
+						}
+					}
+					ROOT = {
+						set_country_leader_ideology = fiumanism
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_country_leader_ideology = social_anarchism
+							
+						}
+					}
+					ROOT = {
+						set_country_leader_ideology = social_anarchism
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_country_leader_ideology = individualist_anarchism
+							
+						}
+					}
+					ROOT = {
+						set_country_leader_ideology = individualist_anarchism
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_country_leader_ideology = mystical_anarchism
+							
+						}
+					}
+					ROOT = {
+						set_country_leader_ideology = mystical_anarchism
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_country_leader_ideology = stratocratic_anarchism
+							
+						}
+					}
+					ROOT = {
+						set_country_leader_ideology = stratocratic_anarchism
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_country_leader_ideology = national_anarchism
+							
+						}
+					}
+					ROOT = {
+						set_country_leader_ideology = national_anarchism
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_country_leader_ideology = leninism
+							
+						}
+					}
+					ROOT = {
+						set_country_leader_ideology = leninism
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_country_leader_ideology = national_vanguardism
+							
+						}
+					}
+					ROOT = {
+						set_country_leader_ideology = national_vanguardism
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_country_leader_ideology = state_socialism
+							
+						}
+					}
+					ROOT = {
+						set_country_leader_ideology = state_socialism
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_country_leader_ideology = social_republicanism
+							
+						}
+					}
+					ROOT = {
+						set_country_leader_ideology = social_republicanism
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_country_leader_ideology = stratocratic_socialism
+							
+						}
+					}
+					ROOT = {
+						set_country_leader_ideology = stratocratic_socialism
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_country_leader_ideology = spartakism
+							
+						}
+					}
+					ROOT = {
+						set_country_leader_ideology = spartakism
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_country_leader_ideology = syndicalism
+							
+						}
+					}
+					ROOT = {
+						set_country_leader_ideology = syndicalism
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_country_leader_ideology = folk_socialism
+							
+						}
+					}
+					ROOT = {
+						set_country_leader_ideology = folk_socialism
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_country_leader_ideology = national_syndicalism
+							
+						}
+					}
+					ROOT = {
+						set_country_leader_ideology = national_syndicalism
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_country_leader_ideology = democratic_socialism
+							
+						}
+					}
+					ROOT = {
+						set_country_leader_ideology = democratic_socialism
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_country_leader_ideology = religious_socialism
+							
+						}
+					}
+					ROOT = {
+						set_country_leader_ideology = religious_socialism
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_country_leader_ideology = agrarian_socialism
+							
+						}
+					}
+					ROOT = {
+						set_country_leader_ideology = agrarian_socialism
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_country_leader_ideology = utopian_socialism
+							
+						}
+					}
+					ROOT = {
+						set_country_leader_ideology = utopian_socialism
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_country_leader_ideology = esoteric_socialism
+							
+						}
+					}
+					ROOT = {
+						set_country_leader_ideology = esoteric_socialism
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_country_leader_ideology = progressive_democracy
+							
+						}
+					}
+					ROOT = {
+						set_country_leader_ideology = progressive_democracy
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_country_leader_ideology = left_populism
+							
+						}
+					}
+					ROOT = {
+						set_country_leader_ideology = left_populism
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_country_leader_ideology = social_nationalism
+							
+						}
+					}
+					ROOT = {
+						set_country_leader_ideology = social_nationalism
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_country_leader_ideology = liberal_socialism
+							
+						}
+					}
+					ROOT = {
+						set_country_leader_ideology = liberal_socialism
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_country_leader_ideology = progressive_corporatism
+							
+						}
+					}
+					ROOT = {
+						set_country_leader_ideology = progressive_corporatism
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_country_leader_ideology = social_liberalism
+							
+						}
+					}
+					ROOT = {
+						set_country_leader_ideology = social_liberalism
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_country_leader_ideology = classical_liberalism
+							
+						}
+					}
+					ROOT = {
+						set_country_leader_ideology = classical_liberalism
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_country_leader_ideology = libertarian_capitalism
+							
+						}
+					}
+					ROOT = {
+						set_country_leader_ideology = libertarian_capitalism
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_country_leader_ideology = national_liberalism
+							
+						}
+					}
+					ROOT = {
+						set_country_leader_ideology = national_liberalism
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_country_leader_ideology = social_conservatism
+							
+						}
+					}
+					ROOT = {
+						set_country_leader_ideology = social_conservatism
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_country_leader_ideology = liberal_conservatism
+							
+						}
+					}
+					ROOT = {
+						set_country_leader_ideology = liberal_conservatism
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_country_leader_ideology = national_conservatism
+							
+						}
+					}
+					ROOT = {
+						set_country_leader_ideology = national_conservatism
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_country_leader_ideology = right_populism
+							
+						}
+					}
+					ROOT = {
+						set_country_leader_ideology = right_populism
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_country_leader_ideology = anocracy
+							
+						}
+					}
+					ROOT = {
+						set_country_leader_ideology = anocracy
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_country_leader_ideology = oligarchy
+							
+						}
+					}
+					ROOT = {
+						set_country_leader_ideology = oligarchy
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_country_leader_ideology = praetorian_oligarchy
+							
+						}
+					}
+					ROOT = {
+						set_country_leader_ideology = praetorian_oligarchy
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_country_leader_ideology = plutocracy
+							
+						}
+					}
+					ROOT = {
+						set_country_leader_ideology = plutocracy
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_country_leader_ideology = national_democracy
+							
+						}
+					}
+					ROOT = {
+						set_country_leader_ideology = national_democracy
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_country_leader_ideology = absolute_monarchy
+							
+						}
+					}
+					ROOT = {
+						set_country_leader_ideology = absolute_monarchy
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_country_leader_ideology = constitutional_monarchy
+							
+						}
+					}
+					ROOT = {
+						set_country_leader_ideology = constitutional_monarchy
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_country_leader_ideology = constitutional_dictatorship
+							
+						}
+					}
+					ROOT = {
+						set_country_leader_ideology = constitutional_dictatorship
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_country_leader_ideology = military_dictatorship
+							
+						}
+					}
+					ROOT = {
+						set_country_leader_ideology = military_dictatorship
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_country_leader_ideology = theocracy
+							
+						}
+					}
+					ROOT = {
+						set_country_leader_ideology = theocracy
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_country_leader_ideology = personalist_dictatorship
+							
+						}
+					}
+					ROOT = {
+						set_country_leader_ideology = personalist_dictatorship
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_country_leader_ideology = revolutionary_nationalism
+							
+						}
+					}
+					ROOT = {
+						set_country_leader_ideology = revolutionary_nationalism
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_country_leader_ideology = reactionary_populism
+							
+						}
+					}
+					ROOT = {
+						set_country_leader_ideology = reactionary_populism
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_country_leader_ideology = religious_fundamentalism
+							
+						}
+					}
+					ROOT = {
+						set_country_leader_ideology = religious_fundamentalism
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_country_leader_ideology = esoteric_reactionism
+							
+						}
+					}
+					ROOT = {
+						set_country_leader_ideology = esoteric_reactionism
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_country_leader_ideology = aristocratic_reaction
+							
+						}
+					}
+					ROOT = {
+						set_country_leader_ideology = aristocratic_reaction
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,183 @@
+add_namespace = leb
+
+country_event = {
+	id = leb.1
+	title = leb.1.t
+	desc = leb.1.desc
+	picture = GFX_report_event_welcome_to_lebanon
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = leb.1.a
+		ai_chance = {
+			factor = 1
+		}
+		if = {
+			limit = {
+				OR = {
+					LEB = {
+						AND = {
+							has_war_with = SYR
+							controls_state = 553
+							surrender_progress > 0.5
+						}
+					}
+					LEB = {
+						AND = {
+							has_war_with = SNP
+							controls_state = 553
+							surrender_progress > 0.5
+						}
+					}
+					LEB = {
+						AND = {
+							has_war_with = CCD
+							controls_state = 553
+							surrender_progress > 0.5
+						}
+					}
+				}
+			}
+			554 = {
+				owner = {
+					white_peace = {
+						tag = LEB
+						message = LEB_syria_win_tt
+					}
+				}
+			}
+			set_province_name = { id = 4206 name = LEB_event_leb_1_a_province_4206 }
+			set_province_name = { id = 1065 name = LEB_event_leb_1_a_province_1065 }
+			set_province_name = { id = 1108 name = LEB_event_leb_1_a_province_1108 }
+			454 = {
+				set_state_name = LEB_event_leb_1_a_state_454
+			}
+			LEB = {
+				transfer_state = 454
+				transfer_state = 1092
+				if = {
+					limit = {
+						NOT = {
+							ALW = {
+								owns_state = 1086
+							}
+						}
+					}
+					transfer_state = 1086
+				}
+				set_cosmetic_tag = LEB_talibkino
+			}
+			SYR = { remove_ideas = ISR_minority_revolt_2 }
+			SNP = { remove_ideas = ISR_minority_revolt_2 }
+			CCD = { remove_ideas = ISR_minority_revolt_2 }
+			554 = {
+				owner = {
+					add_state_claim = 553
+					remove_state_core = 553
+					add_state_claim = 454
+					remove_state_core = 454
+					add_state_claim = 1092
+					remove_state_core = 1092
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						ALW = {
+							owns_state = 1086
+						}
+					}
+				}
+				554 = {
+					owner = {
+						add_state_claim = 1086
+						remove_state_core = 1086
+					}
+				}
+				set_province_name = { id = 1088 name = LEB_event_leb_1_a_province_1088 }
+				set_province_name = { id = 10087 name = LEB_event_leb_1_a_province_10087 } 
+				1086 = {
+					add_claim_by = LEB
+					set_state_name = LEB_event_leb_1_a_state_1086
+					add_compliance = 50
+				}
+			}
+		}
+	}
+}
+country_event = {
+	id = leb.2
+	title = leb.2.t
+	desc = leb.2.desc
+	picture = GFX_report_event_welcome_to_lebanon
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = leb.2.a
+		ai_chance = {
+			factor = 1
+		}
+		if = {
+			limit = {
+				ISR = {
+					NOT = {
+						owns_state = 454
+						has_country_flag = ISR_independence_secured
+					}
+				}
+			}
+			554 = {
+				owner = {
+					declare_war_on = {
+						target = LEB
+						type = annex_everything
+					}
+				}
+			}
+			hidden_effect = {
+				country_event = {
+					id = leb.1
+					days = 60
+				}
+			}
+		}
+	}
+}
+country_event = {
+	id = leb.3
+	title = leb.3.t
+	desc = leb.3.desc
+	picture = GFX_report_event_welcome_to_lebanon
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = leb.3.a
+		ai_chance = {
+			factor = 1
+		}
+		set_cosmetic_tag = LEB_talibkino
+	}
+}
+country_event = {
+	id = leb.4
+	title = leb.3.t
+	desc = leb.3.desc
+	picture = GFX_report_event_welcome_to_lebanon
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = leb.3.a
+		ai_chance = {
+			factor = 1
+		}
+		drop_cosmetic_tag = yes
+	}
+}

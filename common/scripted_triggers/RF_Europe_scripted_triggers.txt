@@ -1,0 +1,4 @@
+warschauer_vertrag={
+    has_country_flag = warschauer_vertrag
+	NOT = { has_country_flag = remove_idea }
+}

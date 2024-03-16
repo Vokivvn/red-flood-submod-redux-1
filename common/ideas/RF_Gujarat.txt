@@ -1,0 +1,26 @@
+ideas = {
+	#################
+	# Country ideas #
+	#################
+		country = {
+			INC_cut_off_congress = {
+				modifier = {
+					political_power_factor = 0.2
+					liberalism_drift = 0.01
+					army_morale_factor = -0.1
+				}
+				picture = generic_idea_RF_idea_duel
+			}
+			INC_congress_schism = {
+				modifier = {
+					political_power_factor = -0.05
+					progressivism_drift = 0.01
+					stability_factor = -0.05
+				}
+				picture = generic_idea_RF_idea_liberty
+			}
+		}
+	###########
+	#MINISTERS#
+	###########
+}

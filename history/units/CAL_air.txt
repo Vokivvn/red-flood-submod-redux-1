@@ -1,0 +1,222 @@
+instant_effect = {
+	create_equipment_variant = {
+		name = "P-6" #export models only
+		type = small_plane_airframe_0
+		modules = {
+			fixed_main_weapon_slot = light_mg_2x
+			engine_type_slot = engine_1_1x
+			special_type_slot_1 = empty
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "P-26A" #
+		type = small_plane_airframe_0
+		modules = {
+			fixed_main_weapon_slot = light_mg_2x
+			engine_type_slot = engine_1_1x
+			special_type_slot_1 = empty
+		}
+		obsolete = yes
+		icon = "GFX_USA_light_plane_2_medium"
+	}
+	create_equipment_variant = {
+		name = "O2U" #
+		type = small_plane_cas_airframe_0
+		modules = {
+			fixed_main_weapon_slot = bomb_locks
+			fixed_auxiliary_weapon_slot_1 = light_mg_2x
+			engine_type_slot = engine_1_1x
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "SBU Corsair" #
+		type = cv_small_plane_cas_airframe_0
+		modules = {
+			fixed_main_weapon_slot = bomb_locks
+			engine_type_slot = engine_1_1x
+			special_type_slot_1 = dive_brakes_small
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "BM-2" #
+		type = cv_small_plane_naval_bomber_airframe_0
+		modules = {
+			fixed_main_weapon_slot = torpedo_mounting
+			engine_type_slot = engine_1_1x
+			special_type_slot_1 = empty
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "A-12" #
+		type = small_plane_cas_airframe_0
+		modules = {
+			fixed_main_weapon_slot = small_bomb_bay
+			fixed_auxiliary_weapon_slot_1 = light_mg_4x
+			engine_type_slot = engine_1_1x
+			special_type_slot_1 = empty
+		}
+		obsolete = yes
+		icon = "GFX_USA_CAS1_medium"
+	}
+	create_equipment_variant = {
+		name = "A-17" #
+		type = small_plane_cas_airframe_1
+		modules = {
+			fixed_main_weapon_slot = small_bomb_bay
+			fixed_auxiliary_weapon_slot_1 = light_mg_4x
+			engine_type_slot = engine_2_1x
+			special_type_slot_1 = empty
+		}
+		icon = "GFX_USA_CAS1_medium"
+	}
+	create_equipment_variant = {
+		name = "P-35A" #
+		type = small_plane_airframe_1
+		modules = {
+			fixed_main_weapon_slot = light_mg_2x
+			fixed_auxiliary_weapon_slot_1 = heavy_mg_2x
+			engine_type_slot = engine_2_1x
+			special_type_slot_1 = empty
+		}
+		icon = "GFX_USA_light_plane_4_medium"
+	}
+	create_equipment_variant = {
+		name = "P-36A" #
+		type = small_plane_airframe_1
+		modules = {
+			fixed_main_weapon_slot = light_mg_4x
+			fixed_auxiliary_weapon_slot_1 = light_mg_2x
+			engine_type_slot = engine_2_1x
+			special_type_slot_1 = empty
+		}
+		icon = "GFX_USA_fighter1_medium"
+	}
+	create_equipment_variant = {
+		name = "B-6A" #also covers other Keystone bombers
+		type = medium_plane_airframe_0
+		modules = {
+			fixed_main_weapon_slot = medium_bomb_bay
+			engine_type_slot = engine_1_2x
+			special_type_slot_1 = lmg_defense_turret
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "B-10" #
+		type = medium_plane_airframe_1
+		modules = {
+			fixed_main_weapon_slot = medium_bomb_bay
+			engine_type_slot = engine_1_2x
+			special_type_slot_1 = lmg_defense_turret
+		}
+		icon = "GFX_medium_plane_1_medium"
+	}
+	create_equipment_variant = {
+		name = "B-18" #
+		type = medium_plane_airframe_1
+		modules = {
+			fixed_main_weapon_slot = medium_bomb_bay
+			engine_type_slot = engine_2_2x
+			special_type_slot_1 = lmg_defense_turret
+		}
+		icon = "GFX_USA_early_bomber_medium"
+	}
+	create_equipment_variant = {
+		name = "P2Y" #
+		type = medium_plane_airframe_0
+		modules = {
+			fixed_main_weapon_slot = medium_bomb_bay
+			fixed_auxiliary_weapon_slot_1 = bomb_locks
+			engine_type_slot = engine_2_2x
+			special_type_slot_1 = flying_boat_medium
+			special_type_slot_2 = lmg_defense_turret
+		}
+		obsolete = yes
+		icon = "GFX_USA_naval_bomber1_medium"
+	}
+	create_equipment_variant = {
+		name = "PBY" #
+		type = medium_plane_airframe_1
+		modules = {
+			fixed_main_weapon_slot = medium_bomb_bay
+			fixed_auxiliary_weapon_slot_1 = torpedo_mounting
+			engine_type_slot = engine_2_2x
+			special_type_slot_1 = flying_boat_medium
+			special_type_slot_2 = lmg_defense_turret
+		}
+		icon = "GFX_USA_naval_bomber1_medium"
+	}
+	create_equipment_variant = {
+		name = "F4B" #also covers F2F
+		type = cv_small_plane_airframe_0
+		modules = {
+			fixed_main_weapon_slot = light_mg_2x
+			engine_type_slot = engine_1_1x
+			special_type_slot_1 = empty
+		}
+		obsolete = yes
+		icon = "GFX_USA_cv_fighter1_medium"
+	}
+	create_equipment_variant = {
+		name = "F3F" #
+		type = cv_small_plane_airframe_0
+		modules = {
+			fixed_main_weapon_slot = light_mg_2x
+			engine_type_slot = engine_2_1x
+			special_type_slot_1 = empty
+		}
+		icon = "GFX_USA_cv_fighter1_medium"
+	}
+}
+
+air_wings = {
+	### 1 USAAF Wing -- Los Angeles
+	378 = {
+		# 7th Bombardment Group 
+		# 19th Bombardment Group 
+		medium_plane_airframe_0 = {
+			owner = "USA" 
+			amount = 60
+			version_name = "B-6A"
+		}
+		# 17th Attack Group 
+		small_plane_cas_airframe_0 = {
+			owner = "USA" 
+			amount = 48
+			version_name = "A-12"
+		}
+	}
+	### USN Pacific Naval Patrol Division -- San Diego
+	378 = { 
+		# Naval Patrol Wing 1 
+		# Naval Patrol Wing 2 
+		medium_plane_airframe_0 =  {
+			owner = "USA" 
+			amount = 72
+			version_name = "P2Y"
+		}
+	}
+
+	"USS Ranger" = {
+		cv_small_plane_airframe_0 =  { owner = "USA" amount = 8 version_name = "F4B"} # historical: 36
+		cv_small_plane_cas_airframe_0 =  { owner = "USA" amount = 10 version_name = "SBU Corsair" } # historical: 15
+		cv_small_plane_cas_airframe_0 =  { owner = "USA" amount = 4 version_name = "SBU Corsair" } # historical: 15
+		cv_small_plane_naval_bomber_airframe_0 =  { owner = "USA" amount = 8 version_name = "BM-2" } # historical: 12			
+	}
+	"USS Lexington" = {
+		cv_small_plane_airframe_0 =  { owner = "USA" amount = 8 version_name = "F4B"} # historical: 16
+		cv_small_plane_cas_airframe_0 =  { owner = "USA" amount = 10 version_name = "SBU Corsair" } # historical: 30
+		cv_small_plane_cas_airframe_0 =  { owner = "USA" amount = 4 version_name = "SBU Corsair" } # historical: 30
+		cv_small_plane_naval_bomber_airframe_0 =  { owner = "USA" amount = 8 version_name = "BM-2" } # historical: 12
+	}
+	"USS Saratoga" = {
+		cv_small_plane_airframe_0 =  { owner = "USA" amount = 8 version_name = "F4B"} # historical: 16
+		cv_small_plane_cas_airframe_0 =  { owner = "USA" amount = 10 version_name = "SBU Corsair" } # historical: 30
+		cv_small_plane_cas_airframe_0 =  { owner = "USA" amount = 4 version_name = "SBU Corsair" } # historical: 30
+		cv_small_plane_naval_bomber_airframe_0 =  { owner = "USA" amount = 8 version_name = "BM-2" } # historical: 12
+	}
+}

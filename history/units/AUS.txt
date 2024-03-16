@@ -1,0 +1,386 @@
+﻿division_template = {
+	name = "Infanterie Division"
+	division_names_group = AUS_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }   # Pioneer Bn
+	}
+}
+
+division_template = {
+	name = "Alpenjäger Division"
+	division_names_group = AUS_MNT_01
+
+	regiments = {
+		mountaineers = { x = 0 y = 0 }
+		mountaineers = { x = 0 y = 1 }
+		mountaineers = { x = 0 y = 2 }
+		mountaineers = { x = 1 y = 0 }
+		mountaineers = { x = 1 y = 1 }
+		mountaineers = { x = 1 y = 2 }
+		mountaineers = { x = 2 y = 0 }
+		mountaineers = { x = 2 y = 1 }
+		mountaineers = { x = 2 y = 2 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }   # Pioneer Bn
+	}
+}
+
+division_template = {
+	name = "Schnelle Division"  		# Schnelle-Division (cavalry)
+	division_names_group = AUS_CAV_01
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }      # Light tank (tankette) bn
+	}
+}
+
+division_template = {
+	name = "Panzerdivision" 				# Light Tank
+	division_names_group = AUS_CAV_01
+	regiments = {
+		light_armor = { x = 0 y = 0 }
+		light_armor = { x = 0 y = 1 }
+        light_armor = { x = 1 y = 0 }
+		light_armor = { x = 1 y = 1 }
+		motorized = { x = 2 y = 0 }
+		motorized = { x = 2 y = 1 }
+	}
+}
+
+units = {
+	##### Österreichisches Bundesheer #####
+	# I Korps
+	division= {	
+		name = "1. Schnelle Division"
+		location = 11666  # Vienna
+		division_template = "Schnelle Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+
+	}
+	division= {	
+		name = "2. Schnelle Division"
+		location = 9627
+		division_template = "Schnelle Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+
+	}
+	division= {	
+		name = "3. Schnelle Division"
+		location = 11542
+		division_template = "Schnelle Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+
+	}
+	division= {	
+		name = "4. Schnelle Division"
+		location = 11542
+		division_template = "Panzerdivision"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+
+	}
+	division= {	
+		name = "5. Schnelle Division"
+		location = 11666
+		division_template = "Panzerdivision"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+
+	}
+	division= {	# "1. Division"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 1
+		}
+		location = 11666  # Vienna
+		division_template = "Infanterie Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+
+	}
+	division= {	# "2. Division"			# Used to form 44. Infanterie-division post-Anschluss
+		division_name = {
+				is_name_ordered = yes
+				name_order = 2
+		}
+		location = 11666  # Vienna
+		division_template = "Infanterie Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+
+	}
+	division= {	# "2. Division"			# Used to form 44. Infanterie-division post-Anschluss
+		division_name = {
+				is_name_ordered = yes
+				name_order = 2
+		}
+		location = 11666  # Vienna
+		division_template = "Infanterie Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+
+	}
+	division= {	# "3. Division"			# Used to form 44. Infanterie--division post-Anschluss
+		division_name = {
+				is_name_ordered = yes
+				name_order = 3
+		}
+		location = 11651 # St Poelten
+		division_template = "Infanterie Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+
+	}
+	division= {	# "2. Division"			# Used to form 44. Infanterie-division post-Anschluss
+		division_name = {
+				is_name_ordered = yes
+				name_order = 2
+		}
+		location = 11666  # Vienna
+		division_template = "Infanterie Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+
+	}
+	division= {	# "2. Division"			# Used to form 44. Infanterie-division post-Anschluss
+		division_name = {
+				is_name_ordered = yes
+				name_order = 2
+		}
+		location = 11666  # Vienna
+		division_template = "Infanterie Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+
+	}
+	# II Korps
+	division= {	# "4. Division"			# Used to form 45. Infanterie--division post-Anschluss
+		division_name = {
+				is_name_ordered = yes
+				name_order = 4
+		}
+		location = 9665 # Linz
+		division_template = "Infanterie Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+
+	}
+	division= {	# "5. Division"		
+		division_name = {
+				is_name_ordered = yes
+				name_order = 5
+		}
+		location = 3569
+		division_template = "Infanterie Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+
+	}
+	division= {	# "6. Division"		
+		division_name = {
+				is_name_ordered = yes
+				name_order = 6
+		}
+		location = 9541
+		division_template = "Infanterie Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+
+	}
+	division= {	# "7. Division"		
+		division_name = {
+				is_name_ordered = yes
+				name_order = 7
+		}
+		location = 3703
+		division_template = "Infanterie Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+
+	}
+	division= {	# "8. Division"		
+		division_name = {
+				is_name_ordered = yes
+				name_order = 8
+		}
+		location = 3583
+		division_template = "Infanterie Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+
+	}
+	division= {	# "9. Division"		
+		division_name = {
+				is_name_ordered = yes
+				name_order = 9
+		}
+		location = 11414
+		division_template = "Infanterie Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+
+	}
+	division= {	# "10. Division"		
+		division_name = {
+				is_name_ordered = yes
+				name_order = 10
+		}
+		location = 6470
+		division_template = "Infanterie Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+
+	}
+	division= {	# "11. Division"		
+		division_name = {
+				is_name_ordered = yes
+				name_order = 11
+		}
+		location = 6418
+		division_template = "Infanterie Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+
+	}
+	division= {	# "12. Division"		
+		division_name = {
+				is_name_ordered = yes
+				name_order = 12
+		}
+		location = 3673
+		division_template = "Infanterie Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+
+	}
+	division= {	# "13. Division"		
+		division_name = {
+				is_name_ordered = yes
+				name_order = 13
+		}
+		location = 9627
+		division_template = "Infanterie Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+
+	}
+	division= {	# "14. Division"		
+		division_name = {
+				is_name_ordered = yes
+				name_order = 14
+		}
+		location = 11556
+		division_template = "Infanterie Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+
+	}
+	division= {	# "15. Division"		
+		division_name = {
+				is_name_ordered = yes
+				name_order = 15
+		}
+		location = 11542
+		division_template = "Infanterie Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+
+	}
+	division= {	# "16. Division"		
+		division_name = {
+				is_name_ordered = yes
+				name_order = 16
+		}
+		location = 11542
+		division_template = "Infanterie Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+
+	}
+	division= {	# "5. Division"			# Used to form 3. Gebirgs-division post-Anschluss
+		division_name = {
+				is_name_ordered = yes
+				name_order = 5
+		}
+		location = 9648  # Graz
+		division_template = "Alpenjäger Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+
+	}
+	division= {	# "6. Division"			# Used to form 2. Gebirgs-division post-Anschluss
+		division_name = {
+				is_name_ordered = yes
+				name_order = 6
+		}
+		location = 673  # Innsbruck
+		division_template = "Alpenjäger Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+
+	}
+	division= {	# "7. Division"			# Used to form 3. Gebirgs-division post-Anschluss
+		division_name = {
+				is_name_ordered = yes
+				name_order = 7
+		}
+		location = 688  # Salzburg
+		division_template = "Alpenjäger Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+
+	}
+
+	division= {	
+		name = "8. Brigade"				# Used to form 2. Gebirgs-division post-Anschluss
+		location = 11666  # Vienna
+		division_template = "Alpenjäger Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+
+	}
+}
+
+### Starting Production ###
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "AUS"
+		}
+		requested_factories = 1
+		progress = 0.54
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+			creator = "AUS"
+		}
+		requested_factories = 1
+		progress = 0.74
+		efficiency = 100
+	}
+}

@@ -1,0 +1,27 @@
+characters = {
+	KHW_mirsaid_sultan_galiev= {
+		name = "Mirsaid Sultan-Galiev"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/KHW/Galiev.png"
+				small = "gfx/interface/ministers/KHW/KHW_Galiev.png"
+			}
+			army = {
+				large = "gfx/leaders/KHW/Galiev_General.png"
+				small = "gfx/interface/ministers/KHW/KHW_Galiev.png"
+			}
+		}
+		country_leader = {
+			ideology = national_vanguardism
+			expire = "1965.1.1.1"
+		}
+		corps_commander = {
+			traits = { media_personality organizer }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 3
+			logistics_skill = 3
+		}
+	}
+}

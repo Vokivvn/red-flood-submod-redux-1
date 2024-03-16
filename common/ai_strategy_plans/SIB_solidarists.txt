@@ -1,0 +1,17 @@
+Siberia_Solidarists = {
+	name = "SibSol"
+	desc = "Placeholder"
+	enable = {
+        original_tag = SIB
+		has_game_rule = {
+			rule = SIB_ai_route
+			option = SIB_STATE
+		}
+	}
+	ai_national_focuses = {
+		SIB_third_power
+        SIB_solidarisation
+        SIB_intrasigence_day
+        SIB_quo_vadis
+	}
+}

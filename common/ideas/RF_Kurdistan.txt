@@ -1,0 +1,17 @@
+ideas = {
+	country = {
+		KUR_AKOC = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				consumer_goods_expected_value = 0.05
+				local_resources_factor = 0.2
+			}
+			targeted_modifier = {
+				tag = ENG
+				license_purchase_cost = -0.5
+				trade_opinion_factor = -0.25
+			}
+			picture = generic_idea_RF_idea_bourgeoisie
+		}
+	}
+}

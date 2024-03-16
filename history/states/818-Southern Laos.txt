@@ -1,0 +1,22 @@
+state={
+	id=818
+	name="STATE_818"
+
+	history={
+		owner = DAI
+		add_core_of = LAO
+		add_core_of = DAI
+		buildings = {
+			infrastructure = 1
+		}
+		victory_points = { 1520 1 }
+	}
+
+	provinces={
+		1520 4260 4539 10195 10238
+	}
+	
+	manpower=484000
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

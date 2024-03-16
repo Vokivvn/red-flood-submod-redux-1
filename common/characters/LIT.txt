@@ -1,0 +1,80 @@
+characters = {
+	LIT_antanas_snieckus = {
+		name = "Antanas Sniečkus"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/LIT/Portrait_Lithuania_Antanas_Snieckus.png"
+			}
+		}
+		country_leader = {
+			ideology = state_socialism
+			expire = "1965.1.1.1"
+		}
+	}
+	LIT_petras_cvirka = {
+		name = "Petras Cvirka"
+		country_leader = {
+			ideology = spartakism
+			expire = "1965.1.1.1"
+		}
+	}
+	LIT_alexander_berkman = {
+		name = "Alexander Berkman"
+		country_leader = {
+			ideology = social_anarchism
+			expire = "1965.1.1.1"
+		}
+	}
+	LIT_juozas_vitas = {
+		name = "Juozas Vitas"
+		country_leader = {
+			ideology = religious_socialism
+			expire = "1965.1.1.1"
+		}
+	}
+	LIT_dmytro = {
+		name = "Dmytro Klyachkivsky"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/BLR/BLR_dmytro.png"
+			}
+		}
+		country_leader = {
+			ideology = military_dictatorship
+			expire = "1965.1.1.1"
+		}
+	}
+	LIT_kazys = {
+		name = "Kazys Grinius"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/LIT/Portrait_Kazys_Grinius.png"
+			}
+		}
+		country_leader = {
+			ideology = social_nationalism
+			expire = "1965.1.1.1"
+		}
+	}
+	LIT_antanas_smetona = {
+		name = "Antanas Smetona"
+		country_leader = {
+			ideology = anocracy
+			expire = "1965.1.1.1"
+		}
+	}
+	LIT_augustinas_voldemaras = {
+		name = "Augustinas Voldemaras"
+		country_leader = {
+			ideology = reactionary_populism
+			expire = "1965.1.1.1"
+		}
+	}
+	LIT_vytautas_kairiukstis = {
+		name = "Vytautas Kairiūkštis"
+		country_leader = {
+			ideology = national_rejuvenatism
+			expire = "1965.1.1.1"
+		}
+	}
+}

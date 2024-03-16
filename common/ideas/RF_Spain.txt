@@ -1,0 +1,63 @@
+ideas = {
+	
+	country = {
+		
+	   SPR_spanish_spring = { 
+	        removal_cost = -1 
+			picture = SPR_spring
+			allowed = { 
+			    original_tag = SPR
+			}
+			modifier = {  
+			}
+		}
+		
+		SPR_black_triennium = { 
+	        removal_cost = -1 
+			picture = SPR_triennium
+			allowed = { 
+			    original_tag = SPR
+			}
+			modifier = {  
+			}
+		}
+		
+		SPR_behemoth_leviathan = { 
+	        removal_cost = -1 
+			picture = SPR_lerroux
+			allowed = { 
+			    original_tag = SPR
+			}
+			modifier = {  
+			}
+		}
+		
+		SPR_separatism = { 
+	        removal_cost = -1 
+			picture = SPR_separatism
+			allowed = { 
+			    original_tag = SPR
+			}
+			modifier = {  
+			}
+		}
+
+	
+	}
+	hidden_ideas = {	
+		SPR_death = { 
+	        removal_cost = -1 
+			#picture = SPR_separatism
+			modifier = {  
+				forced_surrender_limit = -0.30
+			}
+		}
+		#SPR_death2 = {
+			#removal_cost = -1 
+			#picture = SPR_separatism
+			#modifier = {  
+			#	forced_surrender_limit = -0.15
+			#}
+		#}
+	}
+}

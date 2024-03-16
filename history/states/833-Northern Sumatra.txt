@@ -1,0 +1,24 @@
+state={
+	id=833
+	name="STATE_833"
+	manpower = 1064500
+
+	state_category = town
+
+	history = {
+		owner = DEI
+		victory_points = { #Koetaradja
+			7658 3
+		}
+		add_core_of = DEI
+		buildings = {
+			infrastructure = 2
+			7658 = {
+				naval_base = 2
+			}
+		}
+	}
+	provinces={
+		 7658 12488 10509 13555 13556 13601
+	}
+}

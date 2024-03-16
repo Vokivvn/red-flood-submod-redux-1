@@ -1,0 +1,159 @@
+
+continent = {
+	name = north_america
+	operative = {
+		female = {
+			"GFX_Portrait_Operative_EuroFemale1"
+			"GFX_Portrait_Operative_EuroFemale2"
+			"GFX_Portrait_Operative_EuroFemale3"
+			"GFX_Portrait_Operative_EuroFemale4"
+			"GFX_Portrait_Operative_EuroFemale5"
+			"GFX_Portrait_Operative_EuroFemale6"
+			"GFX_Portrait_Operative_EuroFemale7"
+		}
+		male = {
+			"GFX_Portrait_Operative_EuroMale1"
+			"GFX_Portrait_Operative_EuroMale2"
+			"GFX_Portrait_Operative_EuroMale3"
+			"GFX_Portrait_Operative_EuroMale4"
+			"GFX_Portrait_Operative_EuroMale5"
+			"GFX_Portrait_Operative_EuroMale6"
+		}
+	}
+}
+
+continent = {
+	name = europe
+	operative = {
+		female = {
+			"GFX_Portrait_Operative_EuroFemale1"
+			"GFX_Portrait_Operative_EuroFemale2"
+			"GFX_Portrait_Operative_EuroFemale3"
+			"GFX_Portrait_Operative_EuroFemale4"
+			"GFX_Portrait_Operative_EuroFemale5"
+			"GFX_Portrait_Operative_EuroFemale6"
+			"GFX_Portrait_Operative_EuroFemale7"
+		}
+		male = {
+			"GFX_Portrait_Operative_EuroMale1"
+			"GFX_Portrait_Operative_EuroMale2"
+			"GFX_Portrait_Operative_EuroMale3"
+			"GFX_Portrait_Operative_EuroMale4"
+			"GFX_Portrait_Operative_EuroMale5"
+			"GFX_Portrait_Operative_EuroMale6"
+		}
+	}
+}
+
+continent = {
+	name = africa
+	operative = {
+		female = {
+			"GFX_Portrait_Operative_AfricaFemale1"
+			"GFX_Portrait_Operative_AfricaFemale2"
+			"GFX_Portrait_Operative_AfricaFemale3"
+		}
+		male = {
+			"GFX_Portrait_Operative_AfricaMale1"
+			"GFX_Portrait_Operative_AfricaMale2"
+			"GFX_Portrait_Operative_AfricaMale3"
+			"GFX_Portrait_Operative_AfricaMale4"
+			"GFX_Portrait_Operative_AfricaMale5"
+			"GFX_Portrait_Operative_AfricaMale6"
+		}
+	}
+}
+
+continent = {
+	name = middle_east
+	operative = {
+		female = {
+			"GFX_Portrait_Operative_MiddleEastFemale1"
+			"GFX_Portrait_Operative_MiddleEastFemale2"
+		}
+		male = {
+			"GFX_Portrait_Operative_MiddleEastMale1"
+			"GFX_Portrait_Operative_EuroMale2"
+			"GFX_Portrait_Operative_EuroMale3"
+		}
+	}
+}
+
+continent = {
+	name = asia
+	operative = {
+		female = {
+			"GFX_Portrait_Operative_AsianFemale1"
+			"GFX_Portrait_Operative_AsianFemale2"
+			"GFX_Portrait_Operative_AsianFemale3"
+			"GFX_Portrait_Operative_AsianFemale4"
+			"GFX_Portrait_Operative_AsianFemale5"
+		}
+		male = {
+			"GFX_Portrait_Operative_AsianMale1"
+			"GFX_Portrait_Operative_AsianMale2"
+			"GFX_Portrait_Operative_AsianMale3"
+			"GFX_Portrait_Operative_AsianMale4"
+			"GFX_Portrait_Operative_AsianMale5"
+		}
+	}
+}
+
+continent = {
+	name = south_america
+	operative = {
+		female = {
+			"GFX_Portrait_Operative_AfricaFemale3"
+			"GFX_Portrait_Operative_EuroFemale7"
+			"GFX_Portrait_Operative_EuroFemale6"
+		}
+		male = {
+			"GFX_Portrait_Operative_AfricaMale3"
+			"GFX_Portrait_Operative_AsianMale2"
+			"GFX_Portrait_Operative_MiddleEastMale1"
+			"GFX_Portrait_Operative_EuroMale3"
+		}
+	}
+}
+
+continent = {
+	name = australia
+	operative = {
+		female = {
+			"GFX_Portrait_Operative_EuroFemale1"
+			"GFX_Portrait_Operative_EuroFemale2"
+			"GFX_Portrait_Operative_EuroFemale3"
+			"GFX_Portrait_Operative_EuroFemale4"
+			"GFX_Portrait_Operative_EuroFemale5"
+			"GFX_Portrait_Operative_EuroFemale6"
+			"GFX_Portrait_Operative_EuroFemale7"
+		}
+		male = {
+			"GFX_Portrait_Operative_EuroMale1"
+			"GFX_Portrait_Operative_EuroMale2"
+			"GFX_Portrait_Operative_EuroMale3"
+			"GFX_Portrait_Operative_EuroMale4"
+			"GFX_Portrait_Operative_EuroMale5"
+			"GFX_Portrait_Operative_EuroMale6"
+		}
+	}
+}
+
+#RAJ = {
+#	operative = {
+#		female = {
+#			"portrait_india_generic_operative_female_1"
+#			"portrait_india_generic_operative_female_2"
+#			"portrait_india_generic_operative_female_3"
+#			"portrait_india_generic_operative_female_4"
+#			"portrait_india_generic_operative_female_5"
+#		}
+#		male = {
+#			"portrait_india_generic_operative_male_1"
+#			"portrait_india_generic_operative_male_2"
+#			"portrait_india_generic_operative_male_3"
+#			"portrait_india_generic_operative_male_4"
+#			"portrait_india_generic_operative_male_5"
+#		}
+#	}
+#}

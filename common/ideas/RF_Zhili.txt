@@ -1,0 +1,20 @@
+ideas = {
+	country = {
+		SHA_anti_japan_diplo = {
+			removal_cost = -1
+			picture = generic_idea_RF_idea_speeches
+			targeted_modifier = {
+				tag = JAP
+				trade_opinion_factor = -1
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = JPR
+				trade_opinion_factor = -1
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+			}
+		}
+	}
+}

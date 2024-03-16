@@ -1,0 +1,28 @@
+state={
+	id=1230
+	name="STATE_1230"
+	manpower = 7688300
+
+	state_category = large_town
+
+	history={
+		owner = DEI
+		victory_points = { #Tjilatjap
+			4434 3
+		}
+		victory_points = { #Pacalongan
+			12277 3
+		}
+		add_core_of = DEI
+		buildings = {
+			infrastructure = 3
+			4434 = {
+				naval_base = 3
+			}
+		}
+	}
+
+	provinces={
+		12277 7642 4434 7223 13562
+	}
+}

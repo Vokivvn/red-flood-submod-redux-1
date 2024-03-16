@@ -1,0 +1,25 @@
+
+state={
+	id=1218
+	name="STATE_1218" # North West Bengal
+	manpower = 4521500
+
+	state_category = large_town
+
+	resources={
+	
+	}
+
+	history={
+		owner = BIH
+		add_core_of = BIH
+		add_claim_by = BNG
+		buildings = {
+			infrastructure = 3
+		}
+	}
+
+	provinces={
+		7565 12338
+	}
+}

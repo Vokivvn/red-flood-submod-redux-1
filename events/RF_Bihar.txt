@@ -1,0 +1,678 @@
+add_namespace = bihar
+#hello and welcome to indian socialist X games. First event is double rails, minimum 2 on 2 off to win
+country_event = {
+	id = bihar.1
+	title = bihar.1.title
+	desc = bihar.1.desc
+	picture = GFX_report_event_soviet_in_riga
+
+	fire_only_once = yes
+	trigger = {
+		tag = BIH
+		NEP = {
+			has_full_control_of_state = 883
+		}
+		date > 1936.6.6
+	}
+
+	option = {	#
+		name = bihar.1.a
+		ai_chance = { base = 3 }
+		NEP = {
+			country_event = {
+				id = bihar.2
+			}
+		}
+	}
+	option = {	#
+		name = bihar.1.b
+		ai_chance = { base = 0 }
+		add_political_power = -10
+	}
+}
+#would you like to sacrifice your precious Sikkim protectorate?
+country_event = {
+	id = bihar.2
+	title = bihar.2.title
+	desc = bihar.2.desc
+	picture = GFX_report_event_soviet_in_riga
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {	#yes
+		name = bihar.2.a
+		ai_chance = { base = 3 }
+		BIH = {
+			country_event = {
+				id = bihar.3
+			}
+		}
+	}
+	option = {	#no
+		name = bihar.2.b
+		ai_chance = { base = 2 }
+		BIH = {
+			country_event = {
+				id = bihar.4
+			}
+		}
+	}
+	option = {	#third way, oooo
+		name = bihar.2.c
+		ai_chance = { base = 1 }
+		BIH = {
+			country_event = {
+				id = bihar.5
+			}
+		}
+	}
+}
+#Nepal was a little biatch, lool
+country_event = {
+	id = bihar.3
+	title = bihar.3.title
+	desc = bihar.3.desc
+	picture = GFX_report_event_soviet_in_riga
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {	#
+		name = bihar.3.a
+		ai_chance = { base = 1}
+		883 = {
+			transfer_state_to = BIH
+			remove_claim_by = BIH
+			add_core_of = BIH
+		}
+		set_country_flag = BIH_sikkim_win_1
+		country_event = {
+			id = bihar.6
+		}
+	}
+}
+#Nepal was not a biatch, sad times
+country_event = {
+	id = bihar.4
+	title = bihar.4.title
+	desc = bihar.4.desc
+	picture = GFX_report_event_soviet_in_riga
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {	#
+		name = bihar.4.a
+		ai_chance = { base = 1 }
+		add_popularity = {
+			ideology = progressivism
+			popularity = -0.07
+		}
+		add_popularity = {
+			ideology = revisionist_socialism
+			popularity = 0.07
+		}
+		add_popularity = {
+			ideology = liberalism
+			popularity = 0.07
+		}
+		BIH = {
+			remove_state_claim = 883
+		}
+		set_country_flag = BIH_sikkim_loss_1
+		country_event = {
+			id = bihar.6
+		}
+	}
+}
+#compromise suggested - honestly not a bad idea
+country_event = {
+	id = bihar.5
+	title = bihar.5.title
+	desc = bihar.5.desc
+	picture = GFX_report_event_soviet_in_riga
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {	#good deal
+		name = bihar.5.a
+		ai_chance = { base = 1 }
+		883 = {
+			set_demilitarized_zone = yes
+		}
+		BIH = {
+			diplomatic_relation = {
+				country = NEP
+				relation = guarantee
+				active = yes
+			}
+		}
+		add_opinion_modifier = {
+			target = NEP
+			modifier = offered_support
+		}
+		NEP = {
+			add_opinion_modifier = {
+				target = BIH
+				modifier = offered_support
+			}
+		}
+		set_country_flag = BIH_sikkim_neutral
+		country_event = {
+			id = bihar.6
+		}
+	}
+	option = {	#my deal is better - border conflict?
+		name = bihar.5.b
+		ai_chance = { base = 0 }
+		add_political_power = -25
+		add_manpower = -53
+		set_country_flag = BIH_sikkim_win_2
+		country_event = {
+			id = bihar.6
+		}
+	}
+	option = {	#my deal is better - border conflict?
+		name = bihar.5.c
+		ai_chance = { base = 0 }
+		add_political_power = -10
+		add_manpower = -241
+		set_country_flag = BIH_sikkim_loss_2
+		country_event = {
+			id = bihar.6
+		}
+	}
+}
+#The Sikkim crisis outcome
+country_event = {
+	id = bihar.6
+	title = bihar.6.title
+	desc = bihar.6.desc
+	picture = GFX_report_event_soviet_in_riga
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			ASM = {
+				country_event = {
+					id = bihar.14
+					days = 150
+				}
+			}
+		}
+	}
+
+	option = {	#got it no fight - big win for Bose
+		name = bihar.6.a
+		ai_chance = { base = 3 }
+		trigger = {
+			has_country_flag = BIH_sikkim_win_1
+		}
+		add_political_power = 20
+	}
+	option = {	#did not get it no fight - smol loss for Bose
+		name = bihar.6.b
+		ai_chance = { base = 1 }
+		trigger = {
+			has_country_flag = BIH_sikkim_loss_1
+		}
+		add_popularity = {
+			ideology = progressivism
+			popularity = -0.1
+		}
+		hidden_effect = {
+			country_event = {
+				id = bihar.13
+				days = 14
+			}
+		}
+	}
+	option = {	#took the compromise - neutral
+		name = bihar.6.c
+		ai_chance = { base = 1 }
+		trigger = {
+			has_country_flag = BIH_sikkim_neutral
+		}
+	}
+	option = {	#got it with fight - smol win
+		name = bihar.6.d
+		ai_chance = { base = 3 }
+		trigger = {
+			has_country_flag = BIH_sikkim_win_2
+		}
+		add_political_power = 10
+	}
+	option = {	#did not get it with fight - Bose is fucking shit fam
+		name = bihar.6.e
+		ai_chance = { base = 2 }
+		trigger = {
+			has_country_flag = BIH_sikkim_loss_2
+		}
+		add_popularity = {
+			ideology = progressivism
+			popularity = -0.2
+		}
+		hidden_effect = {
+			country_event = {
+				id = bihar.12
+				days = 14
+			}
+		}
+	}
+}
+#theosophy chain
+country_event = {
+	id = bihar.7
+	title = bihar.7.title
+	desc = bihar.7.desc
+	picture = GFX_report_event_soviet_in_riga
+
+	fire_only_once = yes
+	trigger = {
+		has_full_control_of_state = 426
+		date > 1936.9.9
+	}
+
+	option = {	#The theosophists and their place in the INC
+		name = bihar.7.a
+		ai_chance = { base = 1}
+		hidden_effect = {
+			country_event = {
+				id = bihar.8
+			}
+		}
+	}
+}
+country_event = {
+	id = bihar.8
+	title = bihar.8.title
+	desc = bihar.8.desc
+	picture = GFX_report_event_soviet_in_riga
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {	#The prophet, the faith and the struggle
+		name = bihar.8.a
+		ai_chance = { base = 1}
+		hidden_effect = {
+			country_event = {
+				id = bihar.9
+			}
+		}
+	}
+}
+country_event = {
+	id = bihar.9
+	title = bihar.9.title
+	desc = bihar.9.desc
+	picture = GFX_report_event_soviet_in_riga
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {	#Arrange an arson attack - either burns down HQ making the society irrelevant or galvanises them against you
+		name = bihar.9.a
+		ai_chance = { base = 1}
+		hidden_effect = {
+			country_event = {
+				id = bihar.10
+			}
+		}
+	}
+	option = {	#Allow the society to proliferate as an ally/internal clique
+		name = bihar.9.b
+		ai_chance = { base = 1}
+		hidden_effect = {
+			country_event = {
+				id = bihar.11
+			}
+		}
+	}
+}
+country_event = {
+	id = bihar.10
+	title = bihar.10.title
+	desc = bihar.10.desc
+	picture = GFX_report_event_soviet_in_riga
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {	#Burns down HQ making the society irrelevant
+		name = bihar.10.a
+		ai_chance = { base = 1}
+		add_stability = -0.2
+		426 = {
+			remove_claim_by = ORS
+		}		
+	}
+	option = {	#Galvanises them against you
+		name = bihar.10.b
+		ai_chance = { base = 1}
+		add_stability = -0.2
+	}
+}
+country_event = {
+	id = bihar.11
+	title = bihar.11.title
+	desc = bihar.11.desc
+	picture = GFX_report_event_soviet_in_riga
+
+	fire_only_once = yes
+	trigger = {
+		tag = BIH
+		has_full_control_of_state = 1219
+		date > 1940.01.01
+		has_war = no
+	}
+
+	option = {	#
+		name = bihar.11.a
+		ai_chance = { base = 1}
+		add_state_claim = 430
+		add_state_claim = 1220
+		add_state_claim = 1221
+		declare_war_on = {
+			target = BNG
+			type = annex_everything
+		}
+	}
+}
+country_event = {
+	id = bihar.12
+	title = bihar.12.title
+	desc = bihar.12.desc
+	picture = GFX_report_event_soviet_in_riga
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = bihar.12.a
+		ai_chance = { base = 1 }
+		set_politics = {
+			ruling_party = revisionist_socialism
+			elections_allowed = no
+		}
+		add_popularity = { 
+            ideology = revisionist_socialism
+            popularity = 0.2
+		}
+	}
+}
+country_event = {
+	id = bihar.13
+	title = bihar.13.title
+	desc = bihar.13.desc
+	picture = GFX_report_event_soviet_in_riga
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = bihar.13.a
+		ai_chance = { base = 1 }
+		add_popularity = { 
+            ideology = progressivism
+            popularity = -0.1
+		}
+	}
+}
+country_event = {
+	id = bihar.14
+	title = bihar.14.title
+	desc = bihar.14.desc
+	picture = GFX_report_event_soviet_in_riga
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = bihar.14.a
+		ai_chance = { base = 1 }
+		set_politics = {
+			ruling_party = liberalism
+			elections_allowed = no
+		}
+		add_popularity = { 
+            ideology = liberalism
+            popularity = 0.2
+		}
+		hidden_effect = {
+			ASM = {
+				country_event = {
+					id = india.4
+					days = 91
+				}
+			}
+		}
+	}
+	option = {
+		name = bihar.14.b
+		ai_chance = { base = 1 }
+		set_politics = {
+			ruling_party = progressivism
+			elections_allowed = no
+		}
+		add_popularity = { 
+            ideology = progressivism
+            popularity = 0.2
+		}
+		hidden_effect = {
+			ASM = {
+				country_event = {
+					id = india.4
+					days = 91
+				}
+			}
+		}
+	}
+	option = {
+		name = bihar.14.c
+		ai_chance = { base = 2 }
+		add_popularity = { 
+            ideology = conservatism
+            popularity = 0.2
+		}
+		hidden_effect = {
+			ASM = {
+				country_event = {
+					id = india.4
+					days = 91
+				}
+			}
+		}
+	}
+}
+country_event = {
+	id = bihar.111
+	title = bihar.111.title
+	desc = bihar.111.desc
+	picture = GFX_report_event_soviet_in_riga
+
+	fire_only_once = yes
+	trigger = {
+		tag = BIH
+		BIH = {
+			surrender_progress > 0.3
+			has_war_with = BNG
+			
+		}
+		BNG = {
+			has_full_control_of_state = 1219
+		}
+	}
+	option = {	#
+		name = bihar.111.a
+		ai_chance = { base = 100 }
+		trigger = {
+			BNG = {
+				has_full_control_of_state = 1219
+				has_full_control_of_state = 1080
+			}
+			BIH = {
+				has_full_control_of_state = 431
+				has_full_control_of_state = 1218
+			}
+		}
+		BNG = {
+			transfer_state = 1219
+			transfer_state = 1080
+		}
+		white_peace = {
+			tag = BNG
+			message = BIH_white_peace1
+		}
+		set_truce = {
+			target = BNG
+			days = 365
+		}
+	}
+	option = {	#
+		name = bihar.111.b
+		ai_chance = { base = 100 }
+		trigger = {
+			BNG = {
+				has_full_control_of_state = 1219
+				has_full_control_of_state = 1080
+				has_full_control_of_state = 431
+				has_full_control_of_state = 1218
+			}
+		}
+		BNG = {
+			transfer_state = 1219
+			transfer_state = 1080
+			transfer_state = 431
+			transfer_state = 1218
+		}
+		NEP = {
+			transfer_state = 883
+			if = {
+				limit = {
+					NOT = {
+						883 = {
+							is_core_of = NEP
+						}
+					}
+				}
+				add_state_core = 883
+			}
+		}
+		BUR = {
+			transfer_state = 894
+		}
+		ASM = {
+			transfer_state = 432
+			transfer_state = 434
+			transfer_state = 1081
+			add_state_core = 432
+			add_state_core = 434
+			add_state_core = 1081
+		}
+		white_peace = {
+			tag = BNG
+			message = BIH_white_peace2
+		}
+		set_truce = {
+			target = BNG
+			days = 365
+		}
+	}
+	option = {	#
+		name = bihar.111.c
+		ai_chance = { base = 100 }
+		trigger = {
+			BNG = {
+				has_full_control_of_state = 1219
+			}
+			BIH = {
+				has_full_control_of_state = 431
+				has_full_control_of_state = 1218
+				has_full_control_of_state = 432
+			}
+		}
+		BNG = {
+			transfer_state = 1219
+		}
+		white_peace = {
+			tag = BNG
+			message = BIH_white_peace3
+		}
+		set_truce = {
+			target = BNG
+			days = 365
+		}
+	}
+	option = {	#
+		name = bihar.111.d
+		ai_chance = { base = 100 }
+		trigger = {
+			BNG = {
+				has_full_control_of_state = 1219
+				has_full_control_of_state = 1080
+				has_full_control_of_state = 431
+			}
+			BIH = {
+				has_full_control_of_state = 435
+				has_full_control_of_state = 1218
+			}
+		}
+		BNG = {
+			transfer_state = 1219
+			transfer_state = 1080
+			transfer_state = 431
+		}
+		white_peace = {
+			tag = BNG
+			message = BIH_white_peace4
+		}
+		set_truce = {
+			target = BNG
+			days = 365
+		}
+	}
+	option = {	#
+		name = bihar.111.e
+		ai_chance = { base = 100 }
+		trigger = {
+			BNG = {
+				has_full_control_of_state = 1219
+				has_full_control_of_state = 1080
+				has_full_control_of_state = 432
+				has_full_control_of_state = 434
+				has_full_control_of_state = 894
+				has_full_control_of_state = 1081
+			}
+			BIH = {
+				has_full_control_of_state = 431
+				has_full_control_of_state = 1218
+			}
+		}
+		BNG = {
+			transfer_state = 1219
+			transfer_state = 1080
+			transfer_state = 432
+			transfer_state = 434
+			transfer_state = 894
+			transfer_state = 1081
+		}
+		white_peace = {
+			tag = BNG
+			message = BIH_white_peace5
+		}
+		set_truce = {
+			target = BNG
+			days = 365
+		}
+	}
+	option = {	#no deal
+		name = bihar.111.f
+		ai_chance = { base = 0 }
+		add_political_power = -10
+		add_war_support = 0.05
+	}
+}

@@ -1,0 +1,62 @@
+characters = {
+	HYD_burgula_ramakrishna_rao = {
+		name = "Burgula Ramakrishna Rao"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/HYD/Portrait_Burgula_Ramakrishna_Rao.png"
+			}
+		}
+		country_leader = {
+			ideology = democratic_socialism
+			expire = "1965.1.1.1"
+		}
+	}
+	HYD_bahadur_yar_jung = {
+		name = "Bahadur Yar Jung"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/HYD/Portrait_Bahadur_Yar_Jung.png"
+			}
+		}
+		country_leader = {
+			ideology = social_conservatism
+			expire = "1944.1.1.1"
+		}
+	}
+	HYD_kasim_razvi = {
+		name = "Syed Kasim Razvi"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/HYD/Portrait_Kasim_Razvi.png"
+			}
+			army = {
+				large = "gfx/leaders/HYD/Portrait_Kasim_Razvi_General.png"
+			}
+		}
+		corps_commander = {
+			traits = {}
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+		}
+		country_leader = {
+			ideology = praetorian_oligarchy
+			expire = "1970.1.1.1"
+		}
+	}
+	HYD_osman_ali_khan = {
+		name = "Osman Ali Khan"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/HYD/Portrait_Osman_Ali_Khan.png"
+			}
+		}
+		country_leader = {
+			ideology = absolute_monarchy
+			expire = "1965.1.1.1"
+			traits = { headstrong }
+		}
+	}
+}

@@ -1,0 +1,32 @@
+ideas = {
+
+#################
+# Country ideas #
+#################
+	country = {
+		PNJ_autoritarian_minority_rule = {
+			modifier = {
+				stability_factor = -0.25
+				war_support_factor = -0.25
+				political_power_gain = -0.25
+				production_speed_buildings_factor = -0.1
+				consumer_goods_expected_value = 0.2
+			}
+			picture = generic_idea_RF_idea_truncheon
+		}
+		PNJ_elite_sikh_army = {
+			modifier = {
+				defence = 0.05
+				army_morale_factor = 0.05
+				army_org_factor = 0.05
+				training_time_army_factor = 0.1
+			}
+			picture = generic_idea_RF_idea_bomb1
+		}
+	}
+###########
+#MINISTERS#
+###########
+
+	
+}

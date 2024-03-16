@@ -1,0 +1,254 @@
+ideas = {
+	country = {
+		ALT_prophecies = {
+			picture = ALT_soc_prophecies
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				army_morale_factor = 0.10
+				monthly_population = 0.20
+			}
+		}
+		ALT_national_church = {
+			picture = ALT_oirot
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = 0.10
+				consumer_goods_expected_value = -0.10
+				war_support_factor = 0.10
+			}
+		}
+		ALT_conservativesocialism = {
+			picture = ALT_conservatism_soc
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				consumer_goods_expected_value = -0.10
+			}
+		}
+		ALT_conservativesocialism_1 = {
+			picture = ALT_conservatism_soc
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				consumer_goods_expected_value = -0.12
+				conservatism_drift = 0.03
+				stability_factor = -0.10
+			}
+		}
+		ALT_landreform = {
+			picture = ALT_reforms
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				monthly_population = 0.1
+				production_speed_buildings_factor = 0.05
+			}
+		}
+		ALT_democracytradition = {
+			picture = ALT_tradition
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				consumer_goods_expected_value = -0.10
+			}
+		}
+		ALT_harmony_karakorum = {
+			picture = ALT_karakorum
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				conservatism_drift = 0.03
+				stability_factor = 0.10
+				production_speed_buildings_factor = 0.10
+			}
+		}
+		ALT_destroy_superstition = {
+			picture = ALT_superstition
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				research_speed_factor = 0.05
+				political_power_gain = 0.25
+				stability_weekly = 0.001
+			}
+		}
+		ALT_socialist_synarchy = {
+			picture = ALT_soc_synarchist
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				war_support_factor = 0.10
+				army_morale_factor = 0.15
+			}
+		}
+		ALT_secret_priests = {
+			picture = ALT_priesthood
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				encryption_factor = 0.5
+				consumer_goods_expected_value = -0.1
+				war_support_factor = 0.10
+				army_morale_factor = 0.10
+			}
+		}
+		ALT_hyperborea = {
+			picture = ALT_hyperborea
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				industrial_capacity_factory = 0.1
+				production_factory_max_efficiency_factor = 0.05
+			}
+		}
+		ALT_universal_rythm = {
+			picture = ALT_rythm
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				production_speed_buildings_factor = 0.10
+				research_speed_factor = 0.08
+			}
+		}
+		ALT_shamanism = {
+			picture = ALT_shamanism
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				army_morale_factor = 0.1
+				stability_factor = 0.1
+			}
+		}
+		ALT_red_star_tantra = {
+			picture = ALT_red_tantra
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.3
+				consumer_goods_expected_value = -0.10
+				army_morale_factor = 0.1
+				stability_factor = 0.1
+			}
+		}
+		ALT_gold_science = {
+			picture = ALT_science
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				research_speed_factor = 0.08
+				production_speed_buildings_factor = 0.10 
+			}
+		}
+		ALT_gold_science_1 = {
+			picture = ALT_science
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				research_speed_factor = 0.06
+				production_speed_buildings_factor = 0.15
+				compliance_growth_on_our_occupied_states = -0.10
+				stability_weekly = 0.001
+			}
+		}
+		ALT_occult = {
+			picture = ALT_research
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				research_speed_factor = 0.1
+			}
+		}
+		ALT_soul_engineer = {
+			picture = ALT_souls
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				production_speed_buildings_factor = 0.06
+				army_morale_factor = 0.1
+			}
+		}
+		ALT_agartha_calling = {
+			picture = ALT_agartha
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				planning_speed = 0.15 
+				army_speed_factor = 0.08
+			}
+		}
+		ALT_OGPU = {
+			picture = ALT_OGPU
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				production_speed_buildings_factor = 0.15 
+				army_morale_factor = 0.1
+				encryption_factor = -0.25
+				decryption_factor = -0.25
+			}
+		}
+		ALT_concrete = {
+			picture = generic_research_bonus
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				research_speed_factor = 0.05
+				production_speed_arms_factory_factor = 0.10
+				production_speed_buildings_factor = 0.10
+				production_speed_bunker_factor = 0.10
+				production_speed_infrastructure_factor = 0.10
+			}
+		}
+		ALT_tur = {
+			picture = generic_morale_bonus
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				research_speed_factor = 0.05
+				political_power_gain = 0.01
+				consumer_goods_expected_value = -0.05
+			}
+		}
+		ALT_rus = {
+			picture = prc_low_popular_support3
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				research_speed_factor = 0.05
+				political_power_gain = -0.05
+				war_support_factor = 0.20
+			}
+		}
+		ALT_dual = {
+			picture = triumphant_will
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				research_speed_factor = 0.05
+				stability_factor = 0.10
+			}
+		}
+		ALT_consumer = {
+			picture = generic_goods_red_bonus
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				consumer_goods_expected_value = 0.03
+				stability_factor = 0.10
+			}
+		}
+		ALT_peace = {
+			picture = generic_democratic_drift_bonus
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = 0.20
+				war_support_factor = -0.30
+				enemy_justify_war_goal_time = 0.90
+			}
+		}
+	}
+
+}

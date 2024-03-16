@@ -1,0 +1,563 @@
+ideas = {
+	country = {
+
+		# WRU #
+
+		WRU_russiansettlement = {
+			picture = WRU_rus_settlment
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				monthly_population = 0.4
+			}
+		}
+		WRU_gov_contracts = {
+			picture = WRU_contracts
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				consumer_goods_expected_value = -0.05
+			}
+		}
+		WRU_gov_contracts_1 = {
+			picture = WRU_contracts
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				consumer_goods_expected_value = -0.05
+				min_export = 0.05
+			}
+		}
+		WRU_collapsed_economy = {
+			picture = WRU_collapse
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				consumer_goods_expected_value = 0.3
+				production_speed_buildings_factor = -0.3
+				industrial_capacity_factory = -0.15
+				industrial_capacity_dockyard = -0.15
+				research_speed_factor = -0.2
+			}
+		}
+		WRU_yunarmija = {
+			picture = WRU_yunar
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				conscription = 0.02
+				training_time_factor = -0.1
+			}
+		}
+		WRU_patriotten_squads = {
+			picture = WRU_corps_rubonia
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				conscription = 0.01
+				political_power_factor = -0.1
+			}
+		}
+		WRU_paramilitary_conscription = {
+			picture = WRU_paramilitary
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				conscription = 0.02
+				training_time_factor = -0.05
+			}
+		}
+		WRU_minorities_conscription = {
+			picture = WRU_polish_tatars_belarus
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				conscription = 0.01
+				stability_weekly = -0.01
+			}
+		}
+		WRU_minorities_conscription_1 = {
+			picture = WRU_polish_tatars_belarus
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				conscription = 0.01
+				stability_weekly = -0.02
+				war_support_weekly = -0.05
+			}
+		}
+		WRU_victorious_armies_of_avalov = {
+			picture = WRU_avalov_victory
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				conscription = 0.01
+				stability_weekly = 0.01
+				war_support_weekly = 0.01
+			}
+		}
+		WRU_revitalized_zemstvo = {
+			picture = WRU_revitalized
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				consumer_goods_expected_value = -0.05
+				min_export = -0.05
+			}
+		}
+		WRU_council_of_baltic_lands = {
+			picture = WRU_baltic_council
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				consumer_goods_expected_value = -0.05
+				min_export = -0.05
+				conscription = 0.02
+				stability_weekly = 0.01
+				war_support_weekly = 0.01
+				right_authoritarianism_drift = 0.10
+				monthly_population = 0.1
+			}
+		}
+		WRU_neue_ostsiedlung = {
+			picture = WRU_new_agriculture
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				monthly_population = 0.2
+			}
+		}
+		WRU_neue_ostsiedlung_1 = {
+			picture = WRU_new_agriculture
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				monthly_population = 0.2
+				production_speed_buildings_factor = 0.05
+			}
+		}
+		WRU_neue_ostsiedlung_2 = {
+			picture = WRU_new_agriculture
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				monthly_population = 0.2
+				production_speed_buildings_factor = 0.05
+				industrial_capacity_factory = 0.05
+			}
+		}
+		WRU_baltic_german_army = {
+			picture = WRU_german_baltic_army
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				conscription = 0.02
+				attrition = -0.05
+			}
+		}
+		WRU_baltic_prussian_unity_prop = {
+			picture = WRU_unity_propaganda
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				despotism_drift = 0.10
+			}
+		}
+		WRU_teutonic_charge_idea = {
+			picture = WRU_teuton_attack
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				despotism_drift = 0.10
+				monthly_population = 0.2
+				production_speed_buildings_factor = 0.05
+				industrial_capacity_factory = 0.05
+				conscription = 0.02
+				attrition = -0.1
+				army_speed_factor = 0.1
+			}
+		}
+
+		# WRT #
+
+		WRT_state_orthodoxy = {
+			picture = WRT_orthodoxy
+			allowed = {
+				tag = WRT
+			}
+			modifier = {
+				reactionism_drift = 0.03
+			}
+		}
+		WRT_permanent_russian_colonization = {
+			picture = WRT_permanent_colonisation
+			allowed = {
+				tag = WRT
+			}
+			modifier = {
+				stability_factor = -0.1
+				monthly_population = 0.1
+				political_power_factor = 0.05
+			}
+		}
+		WRT_permanent_russian_colonization_1 = {
+			picture = WRT_permanent_colonisation
+			allowed = {
+				tag = WRT
+			}
+			modifier = {
+				stability_factor = -0.2
+				monthly_population = 0.2
+				political_power_factor = 0.05
+				reactionism_drift = 0.03
+			}
+		}
+		WRT_enemies_of_russia_purged = {
+			picture = WRT_enemies_purged
+			allowed = {
+				tag = WRT
+			}
+			modifier = {
+				stability_factor = -0.1
+				right_authoritarianism_drift = -0.1
+				monthly_population = -0.02
+				stability_weekly = 0.02
+			}
+		}
+		WRT_russian_way = {
+			picture = WRT_way_of_russians
+			allowed = {
+				tag = WRT
+			}
+			modifier = {
+				resistance_target = -0.05
+			}
+		}
+		WRT_russian_way_1 = {
+			picture = WRT_way_of_russians
+			allowed = {
+				tag = WRT
+			}
+			modifier = {
+				resistance_target = -0.05
+				research_speed_factor = -0.05
+				production_speed_buildings_factor = -0.05
+				monthly_population = 0.05
+			}
+		}
+		WRT_russian_way_2 = {
+			picture = WRT_way_of_russians
+			allowed = {
+				tag = WRT
+			}
+			modifier = {
+				resistance_target = -0.05
+				research_speed_factor = -0.05
+				production_speed_buildings_factor = -0.05
+				monthly_population = 0.05
+				political_power_factor = 0.1
+			}
+		}
+		WRT_baltic_military = {
+			picture = WRU_army_rus_baltic
+			allowed = {
+				tag = WRT
+			}
+			modifier = {
+				conscription_factor = 0.2
+				attrition = -0.1
+			}
+			equipment_bonus = {
+				motorized_equipment = {
+					build_cost_ic = -0.15 instant = yes
+				}
+			}
+		}
+		WRT_baltic_russian_identity = {
+			picture = WRU_new_agriculture
+			allowed = {
+				tag = WRT
+			}
+			modifier = {
+				army_morale_factor = 0.05
+				reactionism_drift = 0.03
+			}
+		}
+		WRT_russian_truth_idea = {
+			picture = WRT_truth
+			allowed = {
+				tag = WRT
+			}
+			modifier = {
+				reactionism_drift = 0.1
+				stability_factor = -0.2
+				monthly_population = 0.25
+				political_power_factor = 0.15
+				resistance_target = -0.05
+				research_speed_factor = -0.05
+				production_speed_buildings_factor = -0.05
+				conscription_factor = 0.2
+				attrition = -0.1
+				army_morale_factor = 0.05
+				surrender_limit = 0.05
+			}
+			equipment_bonus = {
+				motorized_equipment = {
+					build_cost_ic = -0.15 instant = yes
+				}
+			}
+		}
+
+		WRT_5_year_plan_idea = {
+			picture = WRT_quinquennal_plan
+			allowed = {
+				tag = WRT
+			}
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				industrial_capacity_factory = 0.1
+				production_factory_max_efficiency_factor = 0.1
+			}
+		}
+		WRT_5_year_plan_idea1 = {
+			picture = WRT_quinquennal_plan
+			allowed = {
+				tag = WRT
+			}
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				industrial_capacity_factory = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				consumer_goods_expected_value = -0.05
+				vanguard_socialism_drift = 0.03
+			}
+		}
+		WRT_5_year_plan_idea2 = {
+			picture = WRT_quinquennal_plan
+			allowed = {
+				tag = WRT
+			}
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				industrial_capacity_factory = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				consumer_goods_expected_value = -0.07
+				vanguard_socialism_drift = 0.06
+			}
+		}
+		WRT_5_year_plan_idea3 = {
+			picture = WRT_quinquennal_plan
+			allowed = {
+				tag = WRT
+			}
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				industrial_capacity_factory = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				consumer_goods_expected_value = -0.1
+				vanguard_socialism_drift = 0.1
+				research_speed_factor = 0.05
+			}
+		}
+		WRT_ubeg = {
+			picture = WRT_socialist_electricity 
+			allowed = {
+				tag = WRT
+			}
+			modifier = {
+				research_speed_factor = 0.05
+			}
+		}
+		WRT_german_military_mission = {
+			picture = WRT_german_mission
+			allowed = {
+				tag = WRT
+			}
+			modifier = {
+				attrition = -0.05
+			}
+			targeted_modifier = {
+				tag = GER
+				license_purchase_cost = -0.8
+			}
+		}
+		WRT_german_military_mission1 = {
+			picture = WRT_german_mission
+			allowed = {
+				tag = WRT
+			}
+			modifier = {
+				attrition = -0.1
+			}
+			targeted_modifier = {
+				tag = GER
+				license_purchase_cost = -0.8
+			}
+		}
+		WRT_socialist_education = {
+			picture = WRT_socialists_schools
+			allowed = {
+				tag = WRT
+			}
+			modifier = {
+				attrition = -0.1
+				vanguard_socialism_drift = 0.05
+				conscription_factor = 0.1
+				research_speed_factor = 0.02
+			}
+			targeted_modifier = {
+				tag = GER
+				license_purchase_cost = -0.8
+			}
+		}
+		WRT_all_powerful_red_army = {
+			picture = WRT_strongest_red_army
+			allowed = {
+				tag = WRT
+			}
+			modifier = {
+				attrition = -0.1
+				vanguard_socialism_drift = 0.05
+				conscription_factor = 0.25
+				non_core_manpower = 0.1
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
+			}
+			targeted_modifier = {
+				tag = GER
+				license_purchase_cost = -0.8
+			}
+		}
+
+		#WRR
+
+		WRR_sicherheitssektion = {
+			picture = WRR_violent_aktion
+			allowed = {
+				original_tag = WRR
+			}
+			modifier = {
+				resistance_target = -0.05
+				required_garrison_factor = -0.5
+			}
+		}
+		WRR_positive_christianity_idea = {
+			picture = WRR_christ_good
+			allowed = {
+				original_tag = WRR
+			}
+			modifier = {
+				army_core_defence_factor = 0.05
+				reactionism_drift = 0.02
+			}
+		}
+		WRR_positive_christianity_idea1 = {
+			picture = WRR_christ_good
+			allowed = {
+				original_tag = WRR
+			}
+			modifier = {
+				army_core_attack_factor = 0.05
+				reactionism_drift = 0.04
+				army_core_defence_factor = 0.05
+			}
+		}
+		WRR_positive_christianity_idea2 = {
+			picture = WRR_christ_good
+			allowed = {
+				original_tag = WRR
+			}
+			modifier = {
+				army_core_attack_factor = 0.05
+				reactionism_drift = 0.1
+				army_core_defence_factor = 0.05
+				industrial_capacity_factory = 0.05
+			}
+		}
+		WRR_germanized_ranks = {
+			picture = WRR_german_soldier_army
+			allowed = {
+				original_tag = WRR
+			}
+			modifier = {
+				right_authoritarianism_drift = -0.05
+				attrition = -0.1
+			}
+		}
+		WRR_baltischwehr = {
+			picture = WRR_draugr_army
+			allowed = {
+				original_tag = WRR
+			}
+			modifier = {
+				right_authoritarianism_drift = -0.05
+				attrition = -0.1
+				conscription = 0.03
+				max_planning_factor = 0.15
+			}
+		}
+		WRR_baltischwehr1 = {
+			picture = WRR_draugr_army
+			allowed = {
+				original_tag = WRR
+			}
+			modifier = {
+				right_authoritarianism_drift = -0.05
+				attrition = -0.1
+				conscription = 0.05
+				max_planning_factor = 0.15
+				army_org_factor = 0.1
+			}
+		}
+		WRR_baltic_frontier_colonization = {
+			picture = WRR_colonization_of_east
+			allowed = {
+				original_tag = WRR
+			}
+			modifier = {
+				monthly_population = 0.1
+			}
+		}
+		WRR_baltic_frontier_colonization1 = {
+			picture = WRR_colonization_of_east
+			allowed = {
+				original_tag = WRR
+			}
+			modifier = {
+				monthly_population = 0.2
+				production_factory_max_efficiency_factor = 0.1
+			}
+		}
+		WRR_vhtn_idea = {
+			picture = WRR_balt_germ_tech
+			allowed = {
+				original_tag = WRR
+			}
+			modifier = {
+				industrial_capacity_factory = 0.1
+				production_factory_max_efficiency_factor = 0.05
+				line_change_production_efficiency_factor = 0.05
+			}
+		}
+		WRR_pagan_agitation = {
+			picture = WRR_pagan_strikes
+			allowed = {
+				original_tag = WRR
+			}
+			modifier = {
+				political_power_factor = -0.1
+				stability_factor = -0.15
+				war_support_factor = -0.15
+			}
+			cancel = { WRR = { exists = no } }
+		}
+		WRR_peterburg_infiltration = {
+			picture = WRR_german_baltic_strikes
+			allowed = {
+				original_tag = WRR
+			}
+			modifier = {
+				political_power_factor = -0.1
+				stability_factor = -0.15
+				war_support_factor = -0.15
+			}
+			cancel = { WRR = { exists = no } }
+		}
+	}
+
+	tank_manufacturer = {
+		designer = yes
+	
+		WRT_russo_balt = {
+			allowed = {
+				tag = WRT
+			}
+			research_bonus = {
+				cat_mechanized_equipment = 0.1
+			}
+			traits = { motorised_equipment_producer_offense_2 }
+		}
+	}
+}

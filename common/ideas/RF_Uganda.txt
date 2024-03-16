@@ -1,0 +1,12 @@
+ideas = {
+	country = {
+		UGD_guerilla_warfare = {
+			picture = UGD_guerilla_warfare
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
+			}
+		}
+	}
+}

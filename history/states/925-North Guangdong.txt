@@ -1,0 +1,25 @@
+state={
+	id=925
+	name="STATE_925"
+	resources={
+		tungsten=28
+	}
+	manpower = 1780295
+	state_category = town
+
+	history={
+		owner = GDP
+		add_core_of = GDP
+		buildings = {
+			infrastructure = 2
+			}
+		victory_points = {
+			10080 1
+		}
+	}
+
+
+	provinces={
+		1120 9970 9997 10080 12014
+	}
+}

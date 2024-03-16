@@ -1,0 +1,84 @@
+DEI_indies_war = {
+	DEI_ceasefire = {
+		allowed = { tag = DEI }
+		activation = {
+			has_global_flag = DEI_uprising
+			DEI = {
+				surrender_progress > 0.70
+			}
+		}
+		available = {
+			NOT = {
+				DEI = {
+					surrender_progress > 0.70
+				}
+			}
+		}
+		days_mission_timeout = 45
+		timeout_effect = {
+			hidden_effect = {
+				clr_global_flag = DEI_uprising
+				set_global_flag = DEI_rebels_win
+				every_state = {
+					limit = {
+						OR = {
+							#Sumatra
+							state = 833
+							state = 1258
+							state = 1235
+							state = 672
+							state = 1236
+							state = 1224
+							state = 1225
+							state = 1226
+							state = 1227
+							state = 1228
+							state = 1229
+
+							#Java
+							state = 1250
+							state = 335
+							state = 1251
+							state = 1252
+							state = 1230
+							state = 1253
+							state = 1231
+							state = 834
+							state = 1254
+							state = 1255
+						}
+					}
+					INA = { transfer_state = PREV }
+					remove_core_of = DEI
+					add_claim_by = DEI
+				}
+				INA = {
+					white_peace = {
+						tag = DEI
+						message = DEI_REVOLT_INA_WIN_tt
+					}
+					set_capital = { state = 335 }
+					country_event = {
+						id = ina.1
+						days = 105
+					}
+				}
+				HOL = {
+					set_autonomy = {
+						target = DEI
+						autonomous_state = autonomy_puppet
+					}
+				}
+				DEI = {
+					set_capital = { state = 1240 }
+					set_politics = {
+						ruling_party = right_authoritarianism
+						last_election = "1933.10.25"
+						election_frequency = 48
+						elections_allowed = no
+					}
+				}
+			}
+		}
+	}
+}

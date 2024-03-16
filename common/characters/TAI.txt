@@ -1,0 +1,403 @@
+characters={
+	TAI_provisional_independence_council={
+		name="Provisional Independence Council"
+		portraits={
+			civilian={
+				large="gfx/leaders/TAI/Portrait_Council_Taiwan.png"
+			}
+		}
+		country_leader={
+			desc="PIC_DESC"
+			ideology=provisional_government
+			expire="1940.1.1.1"
+			id=-1
+		}
+	}
+	TAI_xie_xuehong={
+		name="Xie Xuehong"
+		portraits={
+			civilian={
+				large="gfx/leaders/TAI/Portrait_Xie_Xuehong.png"
+			}
+		}
+		country_leader={
+			desc="XIE_DESC"
+			ideology=leninism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	TAI_tan_tingpho={
+		name="Tan Ting-pho"
+		portraits={
+			civilian={
+				large="gfx/leaders/TAI/Portrait_Tan_Ting_Pho.png"
+			}
+		}
+		country_leader={
+			desc="TAN_TINGPHO_DESC"
+			ideology=fiumanism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	TAI_chiang_weishui={
+		name="Chiang Wei-shui"
+		portraits={
+			civilian={
+				large="gfx/leaders/TAI/Portrait_Chiang_Wei.png"
+			}
+		}
+		country_leader={
+			desc="CHIANG_WEI_DESC"
+			ideology=democratic_socialism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	TAI_jiang_kanghu={
+		name="Jiang Kanghu"
+		portraits={
+			civilian={
+				large="gfx/leaders/TAI/Portrait_Jiang_Khanghu_socialist.png"
+			}
+			civilian={
+				large="gfx/leaders/TAI/Portrait_Jiang_Khanghu_anarchist.png"
+			}
+		}
+	}
+	TAI_cai_peihuo={
+		name="Cai Pei-Huo"
+		portraits={
+			civilian={
+				large="gfx/leaders/TAI/Portrait_Cai_Peihuo.png"
+			}
+		}
+		country_leader={
+			desc="CAI_PEIHUO_DESC"
+			ideology=left_populism
+			expire="1965.1.1.1"
+			id=-1
+		}
+		advisor = {
+		    slot = head_of_government
+			available = {
+				OR = {
+					has_government = progressivism
+					has_government = revisionist_socialism
+				}
+			}
+			idea_token = TAI_cai_peihuo_minister
+			traits = { hog_political_protege }
+		}
+	}
+	TAI_thomas_liao={
+		name="Thomas Liao"
+		portraits={
+			civilian={
+				large="gfx/leaders/TAI/Portrait_Thomas_Liao.png"
+			}
+		}
+		country_leader={
+			desc="THOMAS_LIAO_DESC"
+			ideology=classical_liberalism
+			expire="1965.1.1.1"
+			id=-1
+		}
+		advisor = {
+		    slot = economy_minister
+			available = {
+				has_government = conservatism
+			}
+			idea_token = TAI_lin_hsiungcheng_eco
+			traits = { economy_minister eco_keynesian_economy }
+		}
+		advisor = {
+		    slot = foreign_minister
+			available = {
+				has_government = conservatism
+			}
+			idea_token = TAI_lin_hsiungcheng_for
+			traits = { economy_minister for_great_compromiser }
+		}
+	}
+	TAI_lin_hsiungcheng={
+		name="Lin Hsiung-cheng"
+		portraits={
+			civilian={
+				large="gfx/leaders/TAI/Portrait_Lin_Hsiung_Cheng.png"
+			}
+		}
+		country_leader={
+			desc="LIN_DESC"
+			ideology=national_conservatism
+			expire="1965.1.1.1"
+			id=-1
+		}
+		advisor = {
+		    slot = foreign_minister
+			available = {
+				has_government = conservatism  
+			}
+			idea_token = TAI_lin_hsiungcheng_for
+			traits = { foreign_minister for_apologetic_clerk }
+		}
+		advisor = {
+		    slot = economy_minister
+			available = {
+				OR = {
+					has_government = accelerationism
+					has_government = conservatism
+				}
+			}
+			idea_token = TAI_lin_hsiungcheng_eco
+			traits = { eco_bank_president }
+		}
+	}
+	TAI_chiang_ting={
+		name="Chiang Ting"
+		portraits={
+			army={
+				large="gfx/leaders/TAI/Portrait_Chiang_Ting.png"
+			}
+		}
+		corps_commander={
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=1
+			logistics_skill=2
+			legacy_id=-1
+		}
+		advisor = {
+		    slot = high_command
+			idea_token = TAI_chiang_ting_hc
+			traits = { cos_school_of_psychology }
+		}
+	}
+	TAI_yu_qingfang={
+		name="Yu Qingfang"
+		portraits={
+			army={
+				large="gfx/leaders/TAI/Portrait_Yu_Qingfang.png"
+			}
+		}
+		corps_commander={
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=3
+			logistics_skill=2
+			legacy_id=-1
+		}
+		advisor = {
+		    slot = high_command
+			idea_token = TAI_yu_qingfang_hc
+			traits = { cos_school_of_mass_combat }
+		}
+	}
+	TAI_x = {
+		name="Liu Qiguang"
+		portraits={
+			civilian = {
+
+			}
+		}
+		advisor = {
+		    slot = head_of_intel
+			available = {
+				has_government = vanguard_socialism
+			}
+			idea_token = TAI_x
+			traits = { int_logistics_specialist }
+		}
+	}
+	TAI_z = {
+		name="Li Weiguang"
+		portraits={
+			civilian = {
+				
+			}
+		}
+		advisor = {
+		    slot = head_of_intel
+			available = {
+				OR = {
+					has_government = progressivism
+					has_government = revisionist_socialism
+				}
+			}
+			idea_token = TAI_z
+			traits = { int_dismal_enigma }
+		}
+	}
+	TAI_Yang_Zhaojia = {
+		name="Yang Zhaojia"
+		portraits={
+			civilian = {
+				
+			}
+		}
+		advisor = {
+		    slot = economy_minister
+			available = {
+				OR = {
+					has_government = progressivism
+					has_government = revisionist_socialism
+				}
+			}
+			idea_token = TAI_yang_zhaojia_minister
+			traits = { eco_mixed_economy }
+		}
+	}
+	TAI_Yang_Kehuang = {
+		name="Yang Kehuang"
+		portraits={
+			civilian = {
+				
+			}
+		}
+		advisor = {
+		    slot = head_of_government
+			available = {
+				has_government = vanguard_socialism
+			}
+			idea_token = TAI_yang_kehuang
+			traits = { hog_silent_workhorse }
+		}
+	}
+	TAI_Lian_Wenqing = {
+		name="Lian Wenqing"
+		portraits={
+			civilian = {
+				
+			}
+		}
+		advisor = {
+		    slot = economy_minister
+			available = {
+				has_government = vanguard_socialism
+			}
+			idea_token = TAI_lian_wenqing
+			traits = { eco_administrative_genius }
+		}
+	}
+	TAI_Chen_Fengyuan = {
+		name="Chen Fengyuan"
+		portraits={
+			civilian = {
+				
+			}
+		}
+		advisor = {
+		    slot = economy_minister
+			available = {
+				has_government = accelerationism
+			}
+			idea_token = TAI_chen_fengyuan
+			traits = { eco_bank_president }
+		}
+	}
+	TAI_Yan_Yunnian = {
+		name="Yan Yunnian"
+		portraits={
+			civilian = {
+				
+			}
+		}
+		advisor = {
+		    slot = economy_minister
+			available = {
+				has_government = accelerationism
+			}
+			idea_token = TAI_yan_yunnian
+			traits = { eco_construction_magnate }
+		}
+	}
+	TAI_Li_Meishu = {
+		name="Li Meishu"
+		portraits={
+			civilian = {
+				
+			}
+		}
+		advisor = {
+		    slot = head_of_government
+			available = {
+				has_government = accelerationism
+			}
+			idea_token = TAI_
+			traits = { hog_political_protege }
+		}
+	}
+	TAI_Wang_Minchuan = {
+		name="Wang Minchuan"
+		portraits={
+			civilian = {
+				
+			}
+		}
+		advisor = {
+		    slot = head_of_intel
+			available = {
+				has_government = accelerationism
+			}
+			idea_token = TAI_wang_minchuan
+			traits = { int_political_specialist }
+		}
+	}
+	TAI_Lin_xiantang = {
+		name="Lin Xiantang"
+		portraits={
+			civilian = {
+				
+			}
+		}
+		advisor = {
+		    slot = head_of_government
+			available = {
+				OR = {
+					has_government = progressivism
+					has_government = revisionist_socialism
+				}
+			}
+			idea_token = TAI_lin_xiantang
+			traits = { hog_pragmatic_statesman }
+		}
+	}
+	TAI_Ye_Qiumu = {
+		name="Ye Qiumu"
+		portraits={
+			civilian = {
+				
+			}
+		}
+		advisor = {
+		    slot = foreign_minister
+			available = {
+				OR = {
+					has_government = progressivism
+					has_government = revisionist_socialism
+				}
+			}
+			idea_token = TAI_
+			traits = { for_apologetic_clerk }
+		}
+	}
+	TAI_Jian_Ji = {
+		name="Jian Ji"
+		portraits={
+			civilian = {
+				
+			}
+		}
+		advisor = {
+		    slot = foreign_minister
+			available = {
+				has_government = vanguard_socialism
+			}
+			idea_token = TAI_jian_ji
+			traits = { for_biased_intellectual }
+		}
+	}
+}

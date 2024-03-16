@@ -1,0 +1,418 @@
+ideas = {
+	country = {
+		PER_APOC = {
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				consumer_goods_expected_value = 0.05
+				local_resources_factor = 0.2
+				min_export = 0.05
+			}
+			targeted_modifier = {
+				tag = ENG
+				license_purchase_cost = -0.5
+				trade_opinion_factor = -0.25
+			}
+			picture = PER_APOC_spirit
+		}
+		PER_APOC_MOAR = {
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				consumer_goods_expected_value = 0.07
+				local_resources_factor = 0.25
+				min_export = 0.1
+			}
+			targeted_modifier = {
+				tag = ENG
+				license_purchase_cost = -0.6
+				trade_opinion_factor = -0.35
+			}
+			picture = PER_APOC_spirit
+		}
+		PER_starting_denbts = {
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				consumer_goods_expected_value = 0.06
+				stability_factor = -0.06
+				political_power_factor = -0.15
+				popular_socialism_drift = 0.02
+			}
+			picture = generic_idea_RF_idea_empty_safe
+		}
+		PER_more_denbts = {
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				consumer_goods_expected_value = 0.12
+				stability_factor = -0.12
+				political_power_factor = -0.3
+				popular_socialism_drift = 0.04
+			}
+			picture = generic_idea_RF_idea_empty_safe
+		}
+		PER_farsi_kemalism = {
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				research_speed_factor = 0.06
+				political_power_factor = 0.25
+				reactionism_drift = -0.05
+			}
+			picture = PER_Shahs_White_Revolution_spirit
+		}
+		PER_SAVAK = {
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				root_out_resistance_effectiveness_factor = 0.1
+				political_power_factor = -0.1
+				despotism_drift = 0.03
+			}
+			picture = PER_SAVAK_spirit
+		}
+		PER_white_terror = {
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				popular_socialism_drift = -0.1
+				vanguard_socialism_drift = -0.1
+			}
+			picture = PER_White_Terror_spirit
+		}
+		PER_OILgarchy = {
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				country_resource_oil = 0.25
+				max_fuel_factor = 0.5
+				production_speed_fuel_silo_factor = 0.5
+				production_speed_synthetic_refinery_factor = 0.5
+				production_speed_infrastructure_factor = 0.5
+				production_speed_industrial_complex_factor = 0.5
+				production_speed_naval_base_factor = 0.5
+			}
+			picture = PER_OILGarchy_spirit
+		}
+		PER_APOC_profit = {
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				consumer_goods_expected_value = 0.1
+				local_resources_factor = 0.05
+				industrial_capacity_factory = 0.05
+				production_factory_max_efficiency_factor = 0.05
+				line_change_production_efficiency_factor = 0.05
+			}
+			picture = generic_idea_RF_idea_gold
+		}
+		PER_oil_serfs = {
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				conscription_factor = -0.1
+				right_authoritarianism_drift = 0.03
+				research_speed_factor = 0.03
+			}
+			picture = PER_Anglo_Persian_Reforms
+		}
+		PER_oil_serfs2 = {
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				conscription_factor = -0.2
+				right_authoritarianism_drift = 0.05
+				research_speed_factor = 0.05
+				production_speed_industrial_complex_factor = 0.1
+			}
+			picture = PER_Anglo_Persian_Reforms
+		}
+		PER_loyal_army = {
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
+				army_org_factor = 0.05
+			}
+			picture = generic_idea_RF_idea_officer_hat
+		}
+		PER_protect_against_OSS = {
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				encryption_factor = 0.2
+				decryption_factor = 0.2
+			}
+			picture = PER_White_Terror_spirit
+		}
+		PER_womens_rights = {
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				liberalism_drift = 0.03
+				reactionism_drift = -0.03
+				production_factory_start_efficiency_factor = 0.05
+				production_factory_max_efficiency_factor = 0.05
+				stability_factor = 0.03
+				war_support_factor = -0.03
+			}
+			picture = PER_Womens_Rights_spirit
+		}
+		PER_volunteers_idea = {
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				send_volunteer_divisions_required = -1
+				send_volunteer_factor = 0.5
+				air_volunteer_cap = 10
+			}
+			picture = PER_Mercenaries_spirit
+		}
+		PER_market_dominance_idea = {
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				min_export = 0.5
+				trade_opinion_factor = -0.25
+				consumer_goods_expected_value = -0.07
+			}
+			picture = PER_Anglo_Persian_Reforms
+		}
+		PER_anglo_persian_education = {
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				research_speed_factor = 0.07
+				right_authoritarianism_drift = 0.03
+				political_power_factor = 0.1
+			}
+			picture = generic_idea_RF_idea_lion_head
+		}
+		PER_soldiers_of_fortune_idea = {
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				minimum_training_level = -0.5
+				training_time_army_factor = -0.25
+				army_leader_cost_factor = -0.5
+				army_leader_start_level = 3
+			}
+			picture = PER_Mercenaries_spirit
+		}
+		PER_private_armies = {
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				special_forces_cap = 0.5
+				special_forces_training_time_factor = -0.5
+				supply_consumption_factor = -0.1
+			}
+			picture = PER_Mercenaries_spirit
+		}
+		PER_SAVAK_operation_persopolis = {
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				despotism_drift = 0.07
+				political_power_factor = -0.1
+				compliance_gain = 0.2
+			}
+			picture = PER_SAVAK_spirit
+		}
+		###############################
+		###	RPR	###
+		RPR_pain = {
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				vanguard_socialism_drift = 0.05
+				weekly_manpower = 500
+				army_attack_factor = 0.05
+			}
+			picture = RPR_Beyond_pain_and_suffering_spirit
+		}
+		PER_RPR_white_terror = {
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				surrender_limit = -0.1
+				army_morale_factor = -0.1
+				despotism_drift = -0.1
+				weekly_manpower = -125
+			}
+			picture = PER_White_Terror_spirit
+		}
+		RPR_socialist_education_idea = {
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				research_speed_factor = 0.05
+				production_speed_buildings_factor = 0.05
+				production_factory_start_efficiency_factor = 0.1
+			}
+			picture = RPR_Socialist_education_spirit
+		}
+		RPR_mass_conscription_idea = {
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				recruitable_population = 0.1
+				training_time_army_factor = -0.1
+			}
+			picture = RPR_Army_of_Workers_and_Peasants_spirit
+		}
+		RPR_workers_and_peasants = {
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				conscription_factor = 0.15
+				training_time_army_factor = -0.1
+				experience_gain_army_factor = -0.05
+				army_leader_cost_factor = -0.25
+				promote_cost_factor = 0.25
+				dig_in_speed_factor = 0.1
+				max_dig_in_factor = 0.1
+			}
+			picture = RPR_Army_of_Workers_and_Peasants_spirit
+		}
+		RPR_tudeh_reform_egal = {
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				popular_socialism_drift = 0.03
+				political_power_factor = 0.1
+				production_speed_buildings_factor = 0.1
+			}
+			picture = RPR_Egalitarianism_spirit
+		}
+		RPR_german_advisors = {
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.05
+				production_speed_arms_factory_factor = 0.05
+				production_speed_rail_way_factor = 0.05
+			}
+			targeted_modifier = {
+				tag = GER
+				license_purchase_cost = -0.5
+				trade_opinion_factor = -0.25
+			}
+			picture = ZHR_germaninstructors
+		}
+		RPR_tudeh_reform_rahbar = {
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				popular_socialism_drift = 0.05
+				war_support_factor = 0.1
+				stability_factor = 0.1
+			}
+			picture = RPR_Rahbar_spirit
+		}
+		RPR_tudeh_reform_judiciary = {
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				political_power_factor = 0.1
+				progressivism_drift= 0.03
+			}
+			picture = generic_idea_RF_idea_law
+		}
+		RPR_econ_reform_councils = {
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				local_resources_factor = 0.15
+				production_speed_infrastructure_factor = 0.1
+				industry_repair_factor = 0.1
+				political_power_factor = -0.1
+			}
+			picture = RPR_Agrarian_Socialism_spirit
+		}
+		RPR_land_reform_trade = {
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				consumer_goods_expected_value = -0.1
+			}
+			picture = generic_idea_RF_idea_agreement
+		}
+		RPR_defence_of_the_rev = {
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				army_morale_factor = 0.1
+				air_attack_factor = 0.1
+				naval_morale_factor = 0.1
+			}
+			picture = generic_idea_RF_idea_revolution
+		}
+		RPR_mild_reforms = {
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				production_factory_efficiency_gain_factor = -0.05
+			}
+			picture = GER_raterepublick
+		}
+		RPR_call_unity = {
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = 0.05
+				war_support_factor = 0.05
+				vanguard_socialism_drift = 0.05
+				political_power_factor = 0.1
+			}
+			picture = RPR_Urbanite_Population_spirit
+		}
+		RPR_marxist_islam_idea = {
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				consumer_goods_expected_value = 0.05
+				vanguard_socialism_drift = 0.05
+			}
+			picture = RPR_Islam_and_Communism
+		}
+		RPR_urbanites = {
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				consumer_goods_expected_value = 0.03
+				vanguard_socialism_drift = 0.03
+				research_speed_factor = 0.05
+				production_speed_infrastructure_factor = 0.15 
+			}
+			picture = RPR_Urbanite_Population_spirit
+		}
+		RPR_farmers = {
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				consumer_goods_expected_value = -0.03
+				political_power_gain = -0.05
+				stability_factor = 0.10
+				popular_socialism_drift = 0.03
+			}
+			picture = RPR_Farmers_and_Herders
+		}
+		RPR_industrialists = {
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				consumer_goods_expected_value = 0.05
+				political_power_gain = 0.10
+				stability_factor = -0.07
+				vanguard_socialism_drift = 0.03
+				production_speed_buildings_factor = 0.3
+			}
+			picture = RPR_Industrialists_spirit
+		}
+	}
+
+}

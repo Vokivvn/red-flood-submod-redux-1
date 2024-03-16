@@ -1,0 +1,43 @@
+#############
+# Westralia #
+#############
+ideas = {
+
+#################
+# Country ideas #
+#################
+
+
+	
+#############
+# Companies #
+#############
+
+	#### General ####
+	industrial_concern = {
+	
+	}
+	
+	#### Weapons ####
+	materiel_manufacturer = {
+	
+	}
+	
+	#### Naval ####
+	naval_manufacturer = {
+	
+	}
+
+
+	#### Air ####
+	aircraft_manufacturer = {
+	
+	}
+	
+#############
+# Theorist	#
+#############
+	theorist = {
+		
+	}
+}

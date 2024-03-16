@@ -1,0 +1,30 @@
+
+state={
+	id=906
+	name="STATE_906" # Kyoto
+	manpower = 1703000
+	state_category = large_town
+	resources = {
+		tungsten = 8
+	}
+	history={
+		owner = JAP
+		add_core_of = JAP
+		buildings = {
+			infrastructure = 3
+			dockyard = 4
+			1136 = {
+				naval_base = 6
+			}
+		}
+		victory_points = {
+			11960 20
+		}
+		victory_points = {
+			1136 1
+		}
+	}
+	provinces={
+		11960 1136
+	}
+}

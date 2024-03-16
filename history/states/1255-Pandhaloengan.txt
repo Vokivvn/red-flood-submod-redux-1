@@ -1,0 +1,22 @@
+state={
+	id=1255
+	name="STATE_1255"
+	manpower = 3216500
+
+	state_category = large_town
+
+	history={
+		owner = DEI
+		victory_points = { #Bondowoso
+			7654 3
+		}
+		add_core_of = DEI
+		buildings = {
+			infrastructure = 2
+		}
+	}
+
+	provinces={
+		12472 7654
+	}
+}

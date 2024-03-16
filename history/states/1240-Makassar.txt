@@ -1,0 +1,25 @@
+state={
+	id=1240
+	name="STATE_1240"
+	manpower = 1088400
+
+	state_category = town
+
+	history= {
+		owner = DEI
+		victory_points = { #Makassar
+			10263 5
+		}
+		add_core_of = DEI
+		buildings = {
+			infrastructure = 2
+			air_base = 2
+			10263 = {
+				naval_base = 3
+			}
+		}
+	}
+	provinces={
+		10263 4349
+	}
+}

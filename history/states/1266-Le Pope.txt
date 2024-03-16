@@ -1,0 +1,21 @@
+state={
+	id=1266
+	name="STATE_1266"
+	manpower = 652
+
+	state_category = enclave
+
+	history= {
+		owner = LEO
+		victory_points = {
+			13620 20
+		}
+		add_core_of = LEO
+		buildings = {
+			infrastructure = 3
+		}
+	}
+	provinces={
+		13620
+	}
+}

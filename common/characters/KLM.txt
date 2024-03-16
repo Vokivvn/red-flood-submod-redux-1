@@ -1,0 +1,14 @@
+characters = {
+	KLM_Danzan = {
+		name = "Danzan Tundutov"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/KLM/Portrait_Danzan_Tundutov.png"
+			}
+		}
+		country_leader = {
+			ideology = national_liberalism
+			expire = "1965.1.1.1"
+		}
+	}
+}

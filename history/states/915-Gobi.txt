@@ -1,0 +1,25 @@
+state={
+	id=915
+	name="STATE_915"
+	resources={
+		oil=1
+	}
+	history={
+		owner = MPA
+		add_core_of = MPA
+		add_core_of = MON
+		buildings = {
+			infrastructure = 1
+			arms_factory = 1
+		}
+        victory_points={
+			12669 3
+		}
+	}
+	provinces={
+		10558 12669 10689 7806 4786 12541 1781 10560 7864 4858 10634 10695 12544 4729 10704 1725 12614
+	}
+	manpower=33947
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

@@ -1,0 +1,93 @@
+HUN_intervention_category = {
+	HUN_integrate_slovakia = {
+		allowed = { original_tag = HUN }
+		visible = {
+			date > 1939.6.1
+			SLO = { is_puppet_of = HUN }
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		complete_effect = {
+			SLO = {
+				every_unit_leader = { set_nationality = HUN }
+			}
+			HUN = {
+				set_cosmetic_tag = HUN_uni
+				add_state_core = 70 
+				add_state_core = 71
+				annex_country = {
+					target = SLO
+					transfer_troops = yes
+				 }
+			}
+		}
+	}
+	HUN_intervention = {
+		allowed = {
+			original_tag = HUN
+			always = no
+		}
+		available = { SLO = { exists = no } }
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 30
+		timeout_effect = {
+			custom_effect_tooltip = "HUN_FAILURE_TT"
+			hidden_effect = {
+				white_peace = {
+					tag = SLO
+					message = HUN_REV_FAILURE
+				}
+				set_truce = {
+					target = SLO
+					days = 720
+				}
+				SLO = {
+					transfer_state = 664
+					transfer_state = 73
+					country_lock_all_division_template = no
+					remove_dynamic_modifier = {
+						modifier = warsaw_pact
+					}
+				}
+				AUS = { give_guarantee = SLO }
+				POL = {
+					diplomatic_relation = {
+						country = SLO
+						relation = military_access
+						active = no
+					}
+				}
+				GER = { add_to_faction = HUN }
+				set_country_flag = HUN_politics_changing
+				news_event = news.157
+			}
+		}
+		complete_effect = {
+			add_stability = 0.3
+			custom_effect_tooltip = "HUN_SUCCESS_TT"
+			hidden_effect = {
+				GER = { add_to_faction = HUN }
+				set_autonomy = {
+					target = SLO
+					autonomy_state = socialistrepublic
+				}
+				SLO = {
+					transfer_state = 70
+					transfer_state = 71
+					set_cosmetic_tag = SLO_SSR
+					set_country_flag = SLO_failure
+					country_lock_all_division_template = no
+					swap_ideas = {
+						remove_idea = SLO_thunder
+						add_idea = SLO_yard
+		    		}
+					set_country_flag = warschauer_vertrag
+					wp_add_member = yes
+				}
+				set_country_flag = HUN_politics_staying
+			}
+		}
+	}
+} 

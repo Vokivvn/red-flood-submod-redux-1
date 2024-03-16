@@ -1,0 +1,867 @@
+characters = {
+	AUS_franz_ii_von_habsburg_lothringen = {
+		name = "Franz Ferdinand"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/AUS/Portrait_Franz_Ferdinand.png"
+				small = "gfx/interface/ministers/AUS/Franz_Ferdinand.png"
+			}
+		}
+		country_leader = {
+			desc = POLITICS_Franz_DESC
+			ideology = social_conservatism
+			expire = "1965.1.1.1"
+			traits = {
+				popular_figurehead
+			}
+		}
+		country_leader = {
+			ideology = absolute_monarchy
+			expire = "1965.1.1.1"
+			traits = {
+				popular_figurehead
+			}
+		}
+		advisor = {
+			slot = head_of_intel
+			idea_token = AUS_Franz_ii_int
+			allowed = {
+				original_tag = AUS
+			}
+			available = {
+				has_country_leader = {
+					character = AUS_franz_ii_von_habsburg_lothringen
+				}
+			}
+			traits = {
+				AUS_int_hands_on_monarch
+			}
+		}
+	}
+	AUS_imperial_council = {
+		name = "Imperial Council"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/AUS/Portrait_AUS_Imperial_Council.png" #Become country leader in austria.1
+			}
+		}
+	}
+	AUS_karl_seitz = {
+		name = "Karl Seitz"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/AUS/Portrait_karl.png"
+				small = "gfx/interface/ministers/AUS/Karl_Seitz.png"
+			}
+		}
+		country_leader = {
+			ideology = progressive_democracy
+			expire = "1965.1.1.1"
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = AUS_karl_seitz_sec
+			allowed = {
+				original_tag = AUS
+			}
+			visible = {
+				has_country_leader = { character = AUS_Karl_I }
+			}
+			available = {
+				has_completed_focus = AUS_loyal_ally
+			}
+			traits = {
+				AUS_sec_seitz
+			}
+		}
+	}
+	AUS_adolf_hitler = {
+		name = "Adolf Pölzl"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/AUS/AUS_hitler.png"
+				small = "gfx/interface/ministers/AUS/Adolf_Hitler.png"
+			}
+			army = {
+				large = "gfx/leaders/AUS/AUS_hitler_general.png"
+				small = "gfx/interface/ministers/AUS/Adolf_Hitler.png"
+			}
+		}
+		country_leader = {
+			desc = POLITICS_Hitler_DESC
+			expire = "1965.1.1"
+			ideology = national_democracy
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = AUS_adolf_hitler_hog
+			allowed = {
+				original_tag = AUS
+			}
+			available = {
+				has_country_leader = {
+					character = AUS_adolf_hitler
+				}
+			}
+			traits = {
+				hog_reformist_soldier
+			}
+		}
+	}
+	
+	AUS_Otto_I_von_Habsburg_Lothringen = {
+		name = "Franz Joseph II"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/AUS/AUS_otto.png" #Become country leader in austria.5
+			}
+		}
+	}
+	AUS_ludwig_von_mises = {
+		name = "Ludwig von Mises"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/AUS/AUS_mises.png"
+				small = "gfx/interface/ministers/AUS/Ludwig_von_Mises.png"
+			}
+		}
+		country_leader = {
+			desc = POLITICS_Mises_DESC
+			expire = "1965.1.1"
+			ideology = libertarian_capitalism
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = AUS_ludwig_von_mises_eco
+			allowed = {
+				original_tag = AUS
+			}
+			available = {
+				OR = {
+					hidden_trigger = {
+						has_country_leader = {
+							character = AUS_Karl_I2
+						}
+					}
+					has_country_leader = {
+						character = AUS_franz_ii_von_habsburg_lothringen
+					}
+					has_country_leader = {
+						character = AUS_Otto_I_von_Habsburg_Lothringen
+					}
+					AND = {
+						has_country_leader ={
+							character = AUS_Karl_I
+						}
+						NOT = {
+							has_completed_focus = AUS_dissolve_council
+						}
+					}
+				}
+			}
+			traits = {
+				eco_laissez_faire_capitalist
+			}
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = AUS_ludwig_von_mises_hog
+			allowed = {
+				original_tag = AUS
+			}
+			available = {
+				has_country_leader = {
+					character = AUS_ludwig_von_mises
+				}
+			}
+			traits = {
+				hog_corporate_suit
+			}
+		}
+	}
+	AUS_Karl_I = {
+		name = "Karl"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/AUS/AUS_karl.png"
+				small = "gfx/interface/ministers/AUS/Karl_I.png"
+			}
+		}
+		country_leader = {
+			desc = POLITICS_Karl_DESC
+			expire = "1965.1.1"
+			ideology = constitutional_monarchy
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = AUS_karl_I_eco
+			allowed = {
+				original_tag = AUS
+			}
+			visible = {
+				has_country_leader = {
+					character = AUS_Karl_I
+				}
+			}
+			available = {
+				has_country_leader = {
+					character = AUS_Karl_I
+				}
+			}
+			traits = {
+				eco_military_entrepreneur
+			}
+		}
+	}
+	AUS_Karl_I2 = {
+		name = "Karl"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/AUS/AUS_karl_con.png" #Become country leader in austria.3
+			}
+		}
+	}
+	AUS_georg_trakl = {
+		name = "Georg Trakl"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/AUS/AUS_Furry.png"
+			}
+		}
+		country_leader = {
+			ideology = surrealism
+			expire = "1965.1.1.1"
+		}
+	}
+	
+	#habsburg ministers
+	
+	AUS_Ignaz_Seipel = {
+		name = "Ignaz Seipel"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/AUS/Ignaz_Seipel.png"
+			}
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = AUS_Ignaz_Seipel_hog
+			allowed = {
+				original_tag = AUS
+			}
+			available = {
+				OR = {
+					has_country_leader = {
+						character = AUS_franz_ii_von_habsburg_lothringen
+					}
+					has_country_leader = {
+						character = AUS_Karl_I2
+					}
+					has_country_leader = {
+						character = AUS_Otto_I_von_Habsburg_Lothringen
+					}
+				}
+			}
+			traits = {
+				hog_pragmatic_statesman
+			}
+		}
+	}
+	AUS_Leopold_Graf_Berchtold = {
+		name = "Leopold Graf Berchtold"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/AUS/Leopold_Graf_Berchtold.png"
+			}
+		}
+		advisor = {
+			slot = foreign_minister
+			idea_token = AUS_Leopold_Graf_Berchtold_for
+			allowed = {
+				original_tag = AUS
+			}
+			available = {
+				OR = {
+					hidden_trigger = {
+						has_country_leader = {
+							character = AUS_Karl_I
+						}
+					}
+					has_country_leader = {
+						character = AUS_franz_ii_von_habsburg_lothringen
+					}
+					has_country_leader = {
+						character = AUS_Karl_I2
+					}
+					has_country_leader = {
+						character = AUS_Otto_I_von_Habsburg_Lothringen
+					}
+					has_country_leader = {
+						character = AUS_ludwig_von_mises
+					}
+				}
+			}
+			traits = {
+				hog_pragmatic_statesman
+			}
+		}
+	}
+	AUS_Aurel_Popovici = {
+		name = "Aurel Popovici"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/AUS/Aurel_Popovici.png"
+			}
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = AUS_Aurel_Popovici_sec
+			allowed = {
+				original_tag = AUS
+			}
+			available = {
+				OR = {
+					has_country_leader = {
+						character = AUS_franz_ii_von_habsburg_lothringen
+					}
+					has_country_leader = {
+						character = AUS_Karl_I2
+					}
+					has_country_leader = {
+						character = AUS_Otto_I_von_Habsburg_Lothringen
+					}
+				}
+			}
+			traits = {
+				sec_compassionate_gentleman
+			}
+		}
+	}
+	
+	AUS_Johannes_Schober = {
+		name = "Johannes Schober"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/AUS/Johannes_Schober.png"
+			}
+		}
+		advisor = {
+			slot = head_of_intel
+			idea_token = AUS_Johannes_Schober_int
+			allowed = {
+				original_tag = AUS
+			}
+			available = {
+				OR = {
+					hidden_trigger = {
+						has_country_leader = {
+							character = AUS_Karl_I
+						}
+					}
+					has_country_leader = {
+						character = AUS_Karl_I2
+					}
+					has_country_leader = {
+						character = AUS_Otto_I_von_Habsburg_Lothringen
+					}
+					has_country_leader = {
+						character = AUS_ludwig_von_mises
+					}
+				}
+			}
+			traits = {
+				int_civilian_specialist
+			}
+		}
+	}
+	
+	AUS_Richard_von_Coudenhove_Kalergi = {
+		name = "Richard von Coudenhove-Kalergi"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/AUS/Richard_von_Coudenhove-Kalergi.png"
+			}
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = AUS_Richard_von_Coudenhove_Kalergi_hog
+			allowed = {
+				original_tag = AUS
+			}
+			available = {
+				has_completed_focus = AUS_a_new_face
+			}
+			visible = {
+				has_country_leader = {
+					character = AUS_Karl_I
+				}
+			}
+			traits = {
+				AUS_hog_kalergi
+			}
+		}
+	}
+	AUS_kalergi_upgrade = {
+		name = "Richard von Coudenhove-Kalergi"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/AUS/Richard_von_Coudenhove-Kalergi.png"
+			}
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = AUS_kalergi_upgrade_hog
+			allowed = {
+				original_tag = AUS
+			}
+			available = {
+				has_completed_focus = AUS_heed_minister_president
+			}
+			visible = {
+				has_completed_focus = AUS_heed_minister_president
+			}
+			traits = {
+				AUS_hog_kalergi_upgrade
+			}
+		}
+	}
+	AUS_karl_seitz_upgrade = {
+		name = "Karl Seitz"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/AUS/Portrait_karl.png"
+				small = "gfx/interface/ministers/AUS/Karl_Seitz.png"
+			}
+		}
+		country_leader = {
+			ideology = progressive_democracy
+			expire = "1965.1.1.1"
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = AUS_karl_seitz_sec_upgrade
+			allowed = {
+				original_tag = AUS
+			}
+			visible = {
+				has_completed_focus = AUS_hark_the_council
+			}
+			available = {
+				has_completed_focus = AUS_hark_the_council
+			}
+			traits = {
+				AUS_sec_seitz_upgrade
+			}
+		}
+	}
+	
+	#mises ministers
+	
+	AUS_Gottfried_Haberler = {
+		name = "Gottfried Haberler"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/AUS/Gottfried_Haberler.png"
+			}
+		}
+		advisor = {
+			idea_token = AUS_gottfried_haberler_eco
+			slot = economy_minister
+			allowed = {
+				original_tag = AUS
+			}
+			available = {
+				has_country_leader = {
+					character = AUS_ludwig_von_mises
+				}
+			}
+			traits = {
+				eco_laissez_faire_capitalist
+			}
+		}
+	}
+	
+	AUS_Hans_Kelsen = {
+		name = "Hans Kelsen"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/AUS/Hans_Kelsen.png"
+			}
+		}
+		advisor = {
+			idea_token = AUS_hans_kelsen_sec
+			slot = security_minister
+			allowed = {
+				original_tag = AUS
+			}
+			available = {
+				has_country_leader = {
+					character = AUS_ludwig_von_mises
+				}
+			}
+			traits = {
+				sec_silent_lawyer
+			}
+		}
+	}
+	
+	#hilter ministers
+
+	AUS_Gottfried_Feder = {
+		name = "Gottfried Feder"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/AUS/Gottfried_Feder.png"
+			}
+		}
+		advisor = {
+			idea_token = AUS_gottfried_feder_eco
+			slot = economy_minister
+			allowed = {
+				original_tag = AUS
+			}
+			available = {
+				has_country_leader = {
+					character = AUS_adolf_hitler
+				}
+			}
+			traits = {
+				eco_construction_magnate
+			}
+		}
+	}
+	AUS_Hans_Krebs = {
+		name = "Hans Krebs"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/AUS/Hans_Krebs.png"
+			}
+		}
+		advisor = {
+			idea_token = AUS_hans_krebs_for
+			slot = foreign_minister
+			allowed = {
+				original_tag = AUS
+			}
+			available = {
+				has_country_leader = {
+					character = AUS_adolf_hitler
+				}
+			}
+			traits = {
+				for_iron_fisted_brute
+			}
+		}
+	}
+	AUS_Engelbert_Dolfuss = {
+		name = "Engelbert Dolfuss"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/AUS/Engelbert_Dolfuss.png"
+			}
+		}
+		advisor = {
+			idea_token = AUS_engelbert_dolfuss_sec
+			slot = security_minister
+			allowed = {
+				original_tag = AUS
+			}
+			available = {
+				has_country_leader = {
+					character = AUS_adolf_hitler
+				}
+			}
+			traits = {
+				sec_silent_lawyer
+			}
+		}
+	}
+	AUS_kurt_schuschnigg = {
+		name = "Kurt Schuschnigg"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/AUS/Kurt_Schuschnigg.png"
+			}
+		}
+		advisor = {
+			slot = head_of_intel
+			idea_token = AUS_kurt_schuschnigg_sec
+			allowed = {
+				original_tag = AUS
+			}
+			available = {
+				has_country_leader = {
+					character = AUS_adolf_hitler
+				}
+			}
+			traits = {
+				int_political_specialist
+			}
+		}
+	}
+	
+	AUS_erwin_rommel = {
+		name = "Erwin Rommel"
+		portraits = {
+			army = {
+				large = "gfx/leaders/AUS/AUS_rommel.png"
+				small = "gfx/interface/ministers/AUS/Erwin_Rommel.png"
+			}
+		}
+		corps_commander = {
+			traits = { trickster trait_reckless war_hero armor_officer media_personality }
+			skill = 4
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 3
+		}
+		advisor = {
+			idea_token = AUS_erwin_rommel_carm
+			slot = army_chief
+			allowed = {
+				original_tag = AUS
+			}
+			traits = {
+				army_chief_maneuver_3
+			}
+		}
+	}
+	AUS_lothar_rendulic = {
+		name = "Lothar Rendulic"
+		portraits = {
+			army = {
+				large = "gfx/leaders/AUS/AUS_rendulic.png"
+				small = "gfx/interface/ministers/AUS/AUS_rendulic_minister.tga"
+			}
+		}
+		corps_commander = {
+			traits = { trickster  armor_officer organizer}
+			skill = 4
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 3
+		}
+		advisor = {
+			slot = high_command
+			idea_token = AUS_lothar_rendulic_cos
+			allowed = {
+				original_tag = AUS
+			}
+			traits = {
+				army_commando_2
+			}
+		}			
+	}
+	AUS_wilhelm_list = {
+		name = "Wilhelm List"
+		portraits = {
+			army = {
+				large = "gfx/leaders/AUS/AUS_list.png"
+			}
+		}
+		field_marshal = {
+			traits = { career_officer inflexible_strategist }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2		
+		}
+	}
+	AUS_franz_bohme = {
+		name = "Franz Böhme"
+		portraits = {
+			army = {
+				large = "gfx/leaders/AUS/AUS_bohme.png"
+			}
+		}
+		corps_commander = {
+			traits = { defensive_doctrine brilliant_strategist trait_cautious politically_connected }
+			skill = 4
+			attack_skill = 5
+			defense_skill = 4
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	AUS_wilhelm_keitel = {
+		name = "Wilhelm Keitel"
+		portraits = {
+			army = {
+				large = "gfx/leaders/AUS/AUS_keitel.png"
+				small = "gfx/interface/ministers/AUS/AUS_keitel_minister.tga"
+			}
+		}
+		field_marshal = {
+			traits = { infantry_officer }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 1
+			logistics_skill = 3
+		}
+		advisor = {
+			idea_token = AUS_wilhelm_keitel_carm
+			slot = army_chief
+			allowed = {
+				original_tag = AUS
+			}
+			traits = {
+				army_chief_defensive_2
+			}
+		}
+	}
+	AUS_ferdinand_schorner = {
+		name = "Ferdinand Schörner"
+		portraits = {
+			army = {
+				large = "gfx/leaders/AUS/AUS_schroner.png"
+			}
+		}
+		corps_commander = {
+			traits = { infantry_officer }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 4
+		}
+	}
+	AUS_eduard_dietl = {
+		name = "Eduard Dietl"
+		portraits = {
+			army = {
+				large = "gfx/leaders/AUS/AUS_dietl.png"
+			}
+		}
+		corps_commander = {
+			traits = { trait_cautious }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 1
+			logistics_skill = 3		
+		}
+	}
+	AUS_erhard_raus = {
+		name = "Erhard Raus"
+		portraits = {
+			army = {
+				large = "gfx/leaders/AUS/AUS_raus.png"
+				small = "gfx/interface/ministers/AUS/AUS_raus_minister.tga"
+			}
+		}
+		corps_commander = {
+			traits = { career_officer  inflexible_strategist}
+			skill = 3
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 1
+			logistics_skill = 3		
+		}
+		advisor = {
+			idea_token = AUS_erhard_raus_cos
+			slot = high_command
+			allowed = {
+				original_tag = AUS
+			}
+			traits = {
+				army_armored_2
+			}
+		}
+	}
+	AUS_alexander_lohr = {
+		name = "Alexander Löhr"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/AUS/AUS_alexander_lohr.tga"
+			}
+		}
+		advisor = {
+			slot = air_chief
+			idea_token = AUS_alexander_lohr_cair
+			allowed = {
+				original_tag = AUS
+			}
+			traits = {
+				air_chief_night_operations_2
+			}
+		}
+	}
+	AUS_Emil_Uzlac = {
+		name = "Emil Uzlac"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/AUS/Emil_Uzlac.png"
+			}
+		}
+		advisor = {
+			idea_token = AUS_emil_uzlac_cos
+			slot = high_command
+			allowed = {
+				original_tag = AUS
+			}
+			traits = {
+				air_air_combat_training_2
+			}
+		}
+	}
+	AUS_Edmund_Glaise_Horstenau = {
+		name = "Edmund Glaise-Horstenau"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/AUS/Edmund_Glaise-Horstenau.png"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = AUS_edmund_glaise_horstenau_cos
+			allowed = {
+				original_tag = AUS
+			}
+			traits = {
+				army_regrouping_2
+			}
+		}
+	}
+	AUS_Gunther_Burstyn = {
+		name = "Gunther Burstyn"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/AUS/Gunther_Burstyn.png"
+			}
+		}
+		advisor = {
+			idea_token = AUS_gunther_burstyn_theorist
+			slot = theorist
+			allowed = {
+				original_tag = AUS
+			}
+			traits = {
+				mobile_warfare_expert
+			}
+		}
+	}
+	AUS_Alfred_Jansa = {
+		name = "Alfred Jansa"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/AUS/Alfred_Jansa.png"
+			}
+		}
+		advisor = {
+			idea_token = AUS_Alfred_Jansa_theorist
+			slot = theorist
+			allowed = {
+				original_tag = AUS
+			}
+			traits = {
+				military_theorist
+			}
+		}
+	}
+}
+
+

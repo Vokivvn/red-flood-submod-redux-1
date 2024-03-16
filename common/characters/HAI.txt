@@ -1,0 +1,14 @@
+characters = {
+	HAI_louis_borno = {
+		name = "Louis Borno"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/HAI/Portrait_Louis_Borno.png"
+			}
+		}
+		country_leader = {
+			ideology = anocracy
+			expire = "1965.1.1.1"
+		}
+	}
+}

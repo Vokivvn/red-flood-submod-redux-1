@@ -1,0 +1,90 @@
+﻿capital = 438
+set_research_slots = 3
+set_stability = 0.5
+
+oob = "UPI"
+if = { limit = { has_dlc = "By Blood Alone" } set_air_oob = "UPI_air" }
+if = { limit = {  NOT = { has_dlc = "By Blood Alone" } }  set_air_oob = "UPI_air_legacy" }
+
+
+add_ideas = {
+	RAJ_shared_economy
+	UPI_brutal_putdowns
+	UPI_shadow_gallipoli
+	UPI_alone_unsupplied_cutoff
+}
+
+set_truce = {
+	target = ARY
+	days = 730
+}
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1
+	tech_recon = 1
+	tech_engineers = 1
+	tech_trucks =1
+	motorised_infantry = 1
+	gw_artillery = 1
+	basic_train = 1
+}
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+	set_technology = {
+		iw_small_airframe = 1
+		aa_lmg = 1
+		aa_cannon_1 = 1
+		early_bombs = 1
+		engines_1 = 1
+	}
+}
+if = {
+	limit = { NOT = { has_dlc = "By Blood Alone" } }
+	set_technology = {
+		early_fighter = 1
+		CAS1 = 1
+	}
+}
+
+set_politics = {
+	ruling_party = despotism
+	last_election = "1933.10.25"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	vanguard_socialism = 20
+	popular_socialism = 0
+	anarchism = 15
+	revisionist_socialism = 5
+	progressivism = 0
+	liberalism = 0
+	conservatism = 0
+	right_authoritarianism = 10
+	despotism = 30
+	reactionism = 20
+	accelerationism = 0 
+}
+
+recruit_character = UPI_churchills_suicide
+recruit_character = UPI_the_avatar
+recruit_character = UPI_reginald_dyer
+recruit_character = UPI_noel_beresfordpeirse
+recruit_character = UPI_douglas_gracey
+recruit_character = UPI_jack_churchill
+recruit_character = UPI_francis_tucker
+recruit_character = UPI_asit_mukheri
+recruit_character = UPI_maurice_hallett
+recruit_character = UPI_mahanambrata_brahmachari
+recruit_character = UPI_harry_graham_haig
+recruit_character = UPI_orde_wingate
+recruit_character = UPI_bangalore_venkata_raman
+recruit_character = UPI_michael_o_dwyer
+recruit_character = UPI_Doomer_Churchill
+recruit_character = UPI_Bloomer_Churchill
+recruit_character = UPI_Bloomer_Churchill_2
+recruit_character = UPI_collapsed_government
+recruit_character = UPI_acharya_narendra_deva
+

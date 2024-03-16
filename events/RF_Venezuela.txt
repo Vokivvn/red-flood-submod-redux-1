@@ -1,0 +1,60 @@
+add_namespace = VEN
+
+country_event = {
+	id = VEN.1
+	title = VEN.1.t
+	desc = VEN.1.desc
+	#picture = 
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = VEN.1.a
+		retire_country_leader = yes
+		add_country_leader_role = {
+			character = VEN_alberto_adriani
+			promote_leader = yes
+			country_leader = {
+				ideology = progressive_corporatism
+				expire = "1965.1.1.1"
+			}
+		}
+	}
+}
+
+country_event = {
+	id = VEN.2
+	title = VEN.2.t
+	desc = VEN.2.desc
+	#picture = 
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = VEN.2.a
+		swap_ideas = {
+			remove_idea = VEN_shadow_of_the_seven_sisters
+			add_idea = VEN_shadow_of_the_seven_sisters_2
+		}
+		489 = {
+			add_resource = {
+				type = oil
+				amount = 155
+			}
+		}
+		1190 = {
+			add_resource = {
+				type = oil
+				amount = 32
+			}
+		}
+		1191 = {
+			add_resource = {
+				type = oil
+				amount = 27
+			}
+		}
+	}
+}
+
+

@@ -1,0 +1,51 @@
+characters = {
+	BUR_u_saw = {
+		name = "U Saw"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/BUR/Portrait_u_saw_lib.png"
+			}
+		}
+		country_leader = {
+			ideology = social_liberalism
+			expire = "1965.1.1.1"
+			traits = {
+				popular_figurehead
+			}
+		}
+	}
+	BUR_chit_hlaing = {
+		name = "Chit Hlaing"
+		country_leader = {
+			ideology = national_conservatism
+			expire = "1965.1.1.1"
+		}
+	}
+	BUR_ba_thaung = {
+		name = "Ba Thaung"
+		country_leader = {
+			ideology = left_populism
+			expire = "1965.1.1.1"
+		}
+	}
+	BUR_u_nu = {
+		name = "U Nu"
+		country_leader = {
+			ideology = democratic_socialism
+			expire = "1965.1.1.1"
+			traits = {
+				popular_figurehead
+			}
+		}
+	}
+	BUR_than_tun = {
+		name = "Than Tun"
+		country_leader = {
+			ideology = spartakism
+			expire = "1965.1.1.1"
+			traits = {
+				popular_figurehead
+			}
+		}
+	}
+}

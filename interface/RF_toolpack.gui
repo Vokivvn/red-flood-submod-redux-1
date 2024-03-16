@@ -1,0 +1,203 @@
+guiTypes = {
+	containerWindowType = {
+		name = "state_transfer_expand_tool_container"
+		position = { x = 440 y = -10 }
+
+		buttonType = {
+			name = "expand_container"
+			quadTextureSprite = "GFX_production_line_arrow_right"
+			position = { x = 0 y = 0 }
+			clicksound = click_ok
+			oversound = ui_menu_over
+			pdx_tooltip = "expand_tooltip_loc"
+			pdx_tooltip_delayed = "expand_tooltip_desc"
+		}
+	}
+	
+	containerWindowType = {
+		name = "RF_state_transfer_tool_container"
+		position = { x = 438 y = -11 }
+		size = { width = 205 height = 460 }
+
+		fade_time = 500
+		fade_type = linear
+
+		background = {
+			name = "Background"
+			spriteType = "GFX_tiled_decisions_bg_small"
+		}
+
+		buttonType = {
+			name = "collapse_container"
+			quadTextureSprite = "GFX_production_line_arrow_left"
+			position = { x = 0 y = 0 }
+			clicksound = click_ok
+			oversound = ui_menu_over
+			pdx_tooltip = "collapse_tooltip_loc"
+		}
+
+		instantTextboxType = {
+			name = "title"
+			position = { x = 40 y = 6 }
+			font = "hoi_18mbs"
+			text = "st_state_name"
+			maxWidth = 150
+			maxHeight = 23
+			format = left
+		}
+	
+		instantTextboxType = {
+			name = "country"
+			position = { x = 20 y = 26 }
+			font = "hoi_18mbs"
+			text = "[This.Owner.GetNameWithFlag]"
+			maxWidth = 177
+			maxHeight = 15
+			format = left
+		}
+		
+		buttonType = {
+			name = "mark_state" 
+			position = { x = 18 y = 70 }
+			shortcut = "ctrl+z"	
+			quadTextureSprite ="GFX_stt_mark"
+			pdx_tooltip = "mark_tooltip_loc"
+			pdx_tooltip_delayed = "mark_tooltip_desc"
+		}
+		
+		buttonType = {
+			name = "mark_all_states"
+			position = { x = 78 y = 70 }
+			shortcut = "ctrl+a"
+			quadTextureSprite ="GFX_stt_markall"
+			pdx_tooltip = "MARK_ALL_STATES"
+			pdx_tooltip_delayed = "MARK_ALL_STATES_DELAYED"
+		}
+		
+		buttonType = {
+			name = "clear_all_markings"
+			position = { x = 138 y = 70 }
+			shortcut = "ctrl+x"
+			quadTextureSprite = "GFX_stt_unmarkall"
+			pdx_tooltip = "CLEAR_ALL_MARKINGS"
+			pdx_tooltip_delayed = "CLEAR_ALL_MARKINGS_DELAYED"
+		}
+		
+		buttonType = {
+			name = "add_cores"
+			position = { x = 18 y = 125 }
+			shortcut = "ctrl+r"
+			quadTextureSprite ="GFX_stt_addcore"
+			pdx_tooltip = "add_core_loc"
+			pdx_tooltip_delayed = "ADD_CORE_STATES_DELAYED"
+		}
+		
+		buttonType = {
+			name = "remove_cores"
+			position = { x = 18 y = 180 }
+			shortcut = "ctrl+r"
+			quadTextureSprite ="GFX_stt_removecore"
+			pdx_tooltip = "remove_core_loc"
+			pdx_tooltip_delayed = "REMOVE_CORE_STATES_DELAYED"
+		}
+		
+		buttonType = {
+			name = "add_claims"
+			position = { x = 78 y = 125 }
+			shortcut = "ctrl+r"
+			quadTextureSprite ="GFX_stt_addclaim"
+			pdx_tooltip = "add_claim_loc"
+			pdx_tooltip_delayed = "ADD_CLAIM_STATES_DELAYED"
+		}
+		
+		buttonType = {
+			name = "remove_claims"
+			position = { x = 78 y = 180 }
+			shortcut = "ctrl+r"
+			quadTextureSprite ="GFX_stt_removeclaim"
+			pdx_tooltip = "remove_claim_loc"
+			pdx_tooltip_delayed = "REMOVE_CLAIM_STATES_DELAYED"
+		}
+		
+		buttonType = {
+			name = "award_states"
+			position = { x = 138 y = 150 }
+			shortcut = "ctrl+t"
+			quadTextureSprite ="GFX_stt_transfer"
+			pdx_tooltip = "AWARD_STATES"
+			pdx_tooltip_delayed = "AWARD_STATES_DELAYED"
+		}
+
+		iconType = {
+			name = "container_divider"
+			spriteType = "GFX_container_divider"
+			position = { x = 5 y = 233 }
+		}
+
+		buttonType = {
+			name = "mark_country"
+			position = { x = 78 y = 250 }
+			quadTextureSprite ="GFX_stt_mark_country"
+			pdx_tooltip = "mark_country_tooltip_loc"
+			pdx_tooltip_delayed = "mark_country_tooltip_desc"
+		}
+		
+		instantTextboxType = {
+			name = "marked_country"
+			position = { x = 20 y = 295 }
+			font = "hoi_18mbs"
+			text = "[marked_country.GetNameWithFlag]"
+			maxWidth = 177
+			maxHeight = 23
+			format = left
+		}
+		
+		buttonType = {
+			name = "add_puppet"
+			position = { x = 18 y = 345 }
+			quadTextureSprite ="GFX_stt_add_puppet"
+			pdx_tooltip = "ADD_PUPPET_LOC"
+			pdx_tooltip_delayed = "ADD_PUPPET_LOC_DELAYED"
+		}
+		
+		buttonType = {
+			name = "remove_puppet"
+			position = { x = 18 y = 400 }
+			quadTextureSprite ="GFX_stt_remove_puppet"
+			pdx_tooltip = "REMOVE_PUPPET_LOC"
+			pdx_tooltip_delayed = "REMOVE_PUPPET_LOC_DELAYED"
+		}
+		
+		buttonType = {
+			name = "add_faction"
+			position = { x = 78 y = 345 }
+			quadTextureSprite ="GFX_stt_add_faction"
+			pdx_tooltip = "ADD_FACTION_LOC"
+			pdx_tooltip_delayed = "ADD_FACTION_LOC_DELAYED"
+		}
+		
+		buttonType = {
+			name = "remove_faction"
+			position = { x = 78 y = 400 }
+			quadTextureSprite ="GFX_stt_remove_faction"
+			pdx_tooltip = "REMOVE_FACTION_LOC"
+			pdx_tooltip_delayed = "REMOVE_FACTION_LOC_DELAYED"
+		}
+				
+		buttonType = {
+			name = "add_war"
+			position = { x = 138 y = 345 }
+			quadTextureSprite ="GFX_stt_war"
+			pdx_tooltip = "ADD_WAR_LOC"
+			pdx_tooltip_delayed = "ADD_WAR_LOC_DELAYED"
+		}
+
+		buttonType = {
+			name = "add_peace"
+			position = { x = 138 y = 400 }
+			quadTextureSprite ="GFX_stt_peace"
+			pdx_tooltip = "ADD_PEACE_LOC"
+			pdx_tooltip_delayed = "ADD_PEACE_LOC_DELAYED"
+		}
+	}
+}

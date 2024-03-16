@@ -1,0 +1,27 @@
+state={
+	id=1236
+	name="STATE_1236"
+	manpower = 316500
+
+	state_category = town
+
+	history = {
+		owner = DEI
+		victory_points = { #Tandjoengpinang
+			12113 3
+		}
+		victory_points = { #Rengat
+			12343 1
+		}
+		add_core_of = DEI
+		buildings = {
+			infrastructure = 2
+			12113 = {
+				naval_base = 2
+			}
+		}
+	}
+	provinces={
+		13559 12343 10225 12184 12113 13600
+	}
+}

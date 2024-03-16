@@ -1,0 +1,12 @@
+﻿
+air_wings = {
+	425 = { 
+		### AHQ India -- Fairey Gordons, Battles
+		small_plane_cas_airframe_0 = {
+			owner = "MYS" 
+			amount = 24
+			creator = "ENG"
+			version_name = "Fairey Gordon"
+		}
+	}
+}

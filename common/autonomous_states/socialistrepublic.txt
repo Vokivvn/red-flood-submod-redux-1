@@ -1,0 +1,48 @@
+autonomy_state = {
+	id = socialistrepublic
+	
+    use_overlord_color = no
+
+	min_freedom_level = 0.5
+	
+	manpower_influence = 0.1
+	
+	rule = {
+		can_not_declare_war = yes
+		can_decline_call_to_war = no
+	}
+	
+	modifier = {
+
+	}
+	
+	ai_subject_wants_higher = {
+		factor = 0.0
+	}
+	
+	ai_overlord_wants_lower = {
+		factor = 1.0
+	}
+
+	ai_overlord_wants_garrison = {
+		always = no
+	}
+
+	allowed = {
+		OR = {
+            has_government = revisionist_socialism 
+            has_government = vanguard_socialism 
+            has_government = accelerationism 
+            has_government = popular_socialism 
+            has_government = progressivism
+        }
+	}
+
+	can_take_level = {
+		always = no
+	}
+
+	can_lose_level = {
+		always = no
+	}
+}

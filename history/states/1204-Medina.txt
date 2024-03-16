@@ -1,0 +1,23 @@
+state={
+	id=1204
+	name="STATE_1204"
+	manpower = 208203
+	
+	state_category = pastoral
+
+	history={
+		owner = ALJ
+		victory_points = {
+			10835 5 
+		}
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = ALJ
+		add_claim_by = SAU
+	}
+
+	provinces={
+		4981 2033 10835 12758 8092 7934 
+	}
+}

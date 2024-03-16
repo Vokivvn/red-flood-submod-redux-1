@@ -1,0 +1,34 @@
+MON_fopo = {
+	MON_transsib = {
+		cost = 0
+		fire_only_once = yes
+		days_remove = 1
+		allowed = { tag = MON }
+		visible = { 
+			owns_state = 1213 
+            owns_state = 563 
+            owns_state = 564
+            NOT = {
+                country_exists = ZHR
+            }
+		}
+		available = {
+			owns_state = 1213 
+            owns_state = 563 
+            owns_state = 564
+		}
+		complete_effect  = {
+			every_country = {
+				limit = {
+					owns_state = 570
+				}
+				transfer_state = 1213
+				transfer_state = 563
+				transfer_state = 564
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}	
+}

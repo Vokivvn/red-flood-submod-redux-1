@@ -1,0 +1,31 @@
+state={
+	id=188
+	name="STATE_188"
+	manpower = 454956
+
+
+	state_category = rural
+
+	history = {
+		owner = PRS
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			281 = {
+				bunker = 8
+			}
+			3384 = {
+				bunker = 8
+			}
+			9327 = {
+				bunker = 8
+			}
+		}
+		add_core_of = PRS
+		add_core_of = GER
+
+	}
+	provinces={
+		281 348 3384 9398 9327
+	}
+}

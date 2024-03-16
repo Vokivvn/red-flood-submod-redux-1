@@ -1,0 +1,52 @@
+JKR_the_prelude_decisions = {
+	allowed = {
+		original_tag = JKR
+	}
+	priority = 100
+	visible = {
+		has_completed_focus = JKR_the_prelude
+	}
+}
+KOR_fending_off_japan_white = {
+	allowed = {
+		OR = {
+			original_tag = JKR
+			original_tag = KOR
+		}
+	}
+	priority = 100
+	visible = {
+		has_defensive_war_with = JAP
+	}
+	
+}
+KOR_fending_off_japan_red = {
+	allowed = {
+		OR = {
+			original_tag = JKR
+			original_tag = KOR
+		}
+	}
+	priority = 100
+	visible = {
+		has_defensive_war_with = JPR
+	}
+	
+}
+
+KOR_independence_war = {
+	allowed = {
+		original_tag = KOR
+	}
+	priority = 1000
+	visible = {
+		has_country_flag = kor_looming_war
+	}
+}
+
+IKR_rejoin_japan = {
+	allowed = {
+		original_tag = IKR
+	}
+	priority = 1000
+	}

@@ -1,0 +1,11 @@
+﻿
+air_wings = {
+	875 = {
+		small_plane_airframe_0 = {
+			owner = "DAI" 
+			amount = 20
+			creator = "JAP"
+			version_name = "Ki-10"
+		}
+	}
+}

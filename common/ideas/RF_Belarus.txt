@@ -1,0 +1,435 @@
+ideas = {
+	country = {
+		BLR_warschauer_vertrag = {
+			removal_cost = -1
+			picture = GER_warschauer_vertrag
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				trade_opinion_factor = 0.10
+			}
+			targeted_modifier = {
+				tag = PRS
+				attack_bonus_against = 0.1
+			}
+		}
+		BLR_welfare_state = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				consumer_goods_expected_value = -0.1
+			}
+			picture = BLR_icon_welfare_state
+		}
+		BLR_human_rights_court = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				resistance_target = -0.1
+				stability_weekly = 0.01
+			}
+			picture = BLR_icon_human_rights_court
+		}
+		BLR_deregulation = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				conversion_cost_civ_to_mil_factor = -0.1
+				conversion_cost_mil_to_civ_factor = -0.1
+			}
+			picture = BLR_icon_deregulation
+		}
+		BLR_patriotic_education = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				conscription_factor = 0.1
+			}
+			picture = BLR_icon_patriotic_education
+		}
+		BLR_free_press = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				political_power_factor = 0.1
+				drift_defence_factor = -0.15
+			}
+			picture = BLR_icon_free_press
+		}
+
+		BLR_empire_of_five_races = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				conscription_factor = 0.2
+				resistance_target = -0.15
+			}
+			picture = BLR_icon_five_races
+		}
+
+		BLR_rcap = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				revisionist_socialism_drift = 0.1
+			}
+			picture = BLR_icon_rcap
+		}
+		BLR_agrsoc = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				consumer_goods_expected_value = -0.07
+				production_speed_industrial_complex_factor = 0.1
+				stability_factor = 0.05	
+			}
+			picture = BLR_icon_agrarian_socialism
+		}
+		BLR_socialist_black_market = {
+			cancel = { has_country_flag = remove_idea }
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.1 instant = yes
+					reliability = 0.01
+				}
+				artillery_equipment = {
+					build_cost_ic = -0.1 instant = yes
+					reliability = 0.01
+				}
+			}
+			modifier = {
+				trade_opinion_factor = 0.1
+			}
+			picture = BLR_icon_socialist_black_market
+		}
+		BLR_united_again = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				conscription = 0.015
+			}
+			picture = BLR_icon_united_partisants
+		}
+		BLR_alliance_with_black_cat = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				army_core_defence_factor = 0.15
+				army_core_attack_factor = 0.07
+			}
+			picture = BLR_icon_alliance_black_cat
+		}
+
+		BLR_purge_on_atamans_clique = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				despotism_drift = -0.1
+				stability_factor = -0.05
+			}
+			picture = BLR_icon_purge_on_clique
+		}
+		BLR_black_cat_paramilitary = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				conscription = 0.025
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					instant = yes
+					reliability = 0.02
+				}
+			}
+			picture = BLR_icon_black_cat_paramilitary
+		}
+		BLR_ethnic_nationalism = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				political_power_factor = 0.4
+				stability_factor = -0.05
+			}
+			picture = BLR_icon_ethnic_nationalism
+		}
+		BLR_ethnic_nationalism_1 = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				political_power_factor = 0.4
+				stability_factor = -0.15
+				resistance_target = -0.15
+			}
+			picture = BLR_icon_ethnic_nationalism
+		}
+		BLR_karycnievy_teror = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				resistance_target = -0.05
+			}
+			picture = BLR_icon_karycnievy_teror
+		}
+		BLR_national_economics = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				industrial_capacity_factory = 0.15
+				consumer_goods_expected_value = -0.07
+			}
+			picture = BLR_icon_national_economics
+		}
+		BLR_reactionary_beacon = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				reactionism_drift = 0.1
+				research_speed_factor = -0.05
+			}
+			picture = BLR_icon_reactionary_beacon
+		}
+		BLR_reactionary_beacon_1 = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				reactionism_drift = 0.1
+				research_speed_factor = -0.05
+				attrition = -0.05
+			}
+			picture = BLR_icon_reactionary_beacon
+		}
+		BLR_hermits = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				army_core_defence_factor = 0.15
+				political_power_factor = 0.2
+			}
+			picture = BLR_icon_hermit_kingdom
+		}
+
+		BLR_synchronization = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
+				political_power_factor = 0.25
+				resistance_target = -0.1
+			}
+			picture = BLR_icon_synchronization
+		}
+		BLR_teachings_of_new_messiah = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				industrial_capacity_factory = 0.2
+				industrial_capacity_dockyard = 0.2
+				political_power_factor = 0.3
+				resistance_target = -0.1
+				conscription_factor = 0.05
+			}
+			picture = BLR_icon_teachings_of_modern_messiah
+		}
+		BLR_teachings_of_new_messiah_1 = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				industrial_capacity_factory = 0.2
+				industrial_capacity_dockyard = 0.25
+				political_power_factor = 0.3
+				resistance_target = -0.1
+				conscription = 0.03
+				army_core_defence_factor = 0.1
+				consumer_goods_expected_value = -0.05
+			}
+			picture = BLR_icon_teachings_of_modern_messiah
+		}
+		BLR_new_education = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				research_speed_factor = 0.05
+			}
+			picture = BLR_icon_new_byelorussian_education
+		}
+		BLR_new_education_1 = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				research_speed_factor = 0.05
+				accelerationism_drift = 0.07
+			}
+			picture = BLR_icon_new_byelorussian_education
+		}
+		BLR_new_education_2 = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				research_speed_factor = 0.08
+				accelerationism_drift = 0.07
+				license_purchase_cost = -0.2
+			}
+			picture = BLR_icon_new_byelorussian_education
+		}
+		BLR_new_culture = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				attrition = -0.05
+				conversion_cost_mil_to_civ_factor = -0.1
+				conversion_cost_civ_to_mil_factor = -0.1
+			}
+			picture = BLR_icon_new_byelorussian_culture
+		}
+		BLR_new_culture_1 = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				attrition = -0.05
+				conversion_cost_mil_to_civ_factor = -0.1
+				conversion_cost_civ_to_mil_factor = -0.1
+				accelerationism_drift = 0.07
+				political_power_factor = 0.1
+			}
+			picture = BLR_icon_new_byelorussian_culture
+		}
+		BLR_brotherhood_of_elohim = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				conscription = 0.04
+				consumer_goods_expected_value = -0.05
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					instant = yes
+					reliability = 0.04
+				}
+			}
+			picture = BLR_icon_brotherhood_of_elohim
+		}
+	}
+
+	industrial_concern = {
+		Minsk_Polytechnic_Institute = {
+			allowed = {
+				original_tag = BLR
+			}
+			traits = {
+				electronics_manufacturer
+			}
+			modifier = {
+				production_speed_radar_station_factor = 0.05
+				production_speed_industrial_complex_factor = 0.1
+			}
+			research_bonus = {
+				electronics = 0.1
+			}
+		}
+		Minsk_Factory_Complex = {
+			allowed = {
+				original_tag = BLR
+			}
+			traits = {
+				industrial_manufacturer
+			}
+			modifier = {
+				production_speed_arms_factory_factor = 0.1
+				production_speed_infrastructure_factor = 0.05
+			}
+			research_bonus = {
+				industry = 0.1
+			}
+		}
+	}
+
+	materiel_manufacturer = {
+		designer = yes
+		Minsk_Arsenal = {
+			allowed = {
+				original_tag = BLR
+			}
+			traits = {
+				artillery_producer_mass_1
+			}
+			research_bonus = {
+				artillery = 0.1
+			}
+		}
+		Grodno_Military_Research_Institute = {
+			allowed = {
+				original_tag = BLR
+			}
+			traits = {
+				infantry_equipment_producer_allround_1
+			}
+			research_bonus = {
+				infantry_weapons = 0.1
+			}
+		}
+	}
+
+	tank_manufacturer = {
+		designer = yes
+		Armor_Research_Institute = {
+			allowed = {
+				original_tag = BLR
+			}
+			traits = {
+				small_tank_producer_offense_1
+			}
+			research_bonus = {
+				armor = 0.1
+			}
+		}
+		MAZ_company = {
+			allowed = {
+				original_tag = BLR
+			}
+			traits = {
+				motorised_equipment_producer_offense_1
+			}
+			research_bonus = {
+				motorized_equipment = 0.1
+			}
+		}
+	}
+
+	naval_manufacturer = {
+		designer = yes
+		Baltic_Shipyards = {
+			allowed = {
+				original_tag = BLR
+			}
+			traits = {
+				cruiser_producer_defense_1
+			}
+			research_bonus = {
+				dd_tech = 0.1
+				ss_tech = 0.1
+				bb_tech = 0.1
+			}
+		}
+	}
+	
+	#### Air ####
+	aircraft_manufacturer = {
+		designer = yes
+		Atamanska_Sport_Aircraft_Factory = {
+			allowed = {
+				original_tag = BLR
+			}
+			traits = {
+				fighter_producer_offense_1
+			}
+			research_bonus = {
+				light_fighter = 0.1
+			}
+		}
+		Astrouski_Aircraft_Bureau = {
+			allowed = {
+				original_tag = BLR
+			}
+			traits = {
+				bomber_producer_offense_1
+			}
+			research_bonus = {
+				tactical_bomber = 0.1
+			}
+		}
+		Radchenka_Design_Bureau = {
+			allowed = {
+				original_tag = BLR
+			}
+			traits = {
+				bomber_producer_mass_1
+			}
+			research_bonus = {
+				tactical_bomber = 0.1
+			}
+		}
+		Hydroaeronautics_Club = {
+			allowed = {
+				original_tag = BLR
+			}
+			traits = {
+				nav_cas_producer_offense_1
+			}
+			research_bonus = {
+				naval_bomber = 0.15
+			}
+		}
+	}
+}

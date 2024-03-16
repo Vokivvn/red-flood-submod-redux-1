@@ -1,0 +1,3697 @@
+PER_mos_empire = {
+
+	#borders#
+	
+	PER_demandkurdishborder = {
+		cost = 25
+		complete_effect  = {
+			KUR = {
+				country_event = {
+					id = per.36
+					days = 3
+				}
+			}
+			hidden_effect = {
+				add_state_core = 889
+				remove_state_claim = 889
+			}
+		}
+		visible = {
+			has_completed_focus = PER_take_back_what_was_lost
+		}
+		available = {
+			AND = 
+			{
+				889 ={
+					is_owned_by = KUR
+
+				}
+				KUR = {
+					exists = yes
+				}
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	PER_demandafghanborder = {
+		cost = 50
+		complete_effect  = {
+			AFG = {
+				country_event = {
+					id = per.37
+					days = 3
+				}
+			}
+			PER = {
+				add_state_core = 885
+			}
+		}
+		visible = {
+			has_completed_focus = PER_take_back_what_was_lost
+		}
+		available = {
+			AND = 
+			{
+				AFG = {
+					exists = yes
+				}
+				885 = {
+					is_owned_by = AFG
+				}
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	PER_demandtibriz = {
+		cost = 50
+		complete_effect  = {
+			ROS = {
+				country_event = {
+					id = per.38
+					days = 3
+				}
+			}
+		}
+		visible = {
+			has_completed_focus = PER_take_back_what_was_lost
+		}
+		available = {
+			AND = {
+				united_russia = yes
+				is_neighbor_of = ROS
+				891 = {
+					is_owned_by = ROS
+				}
+				229 = {
+					is_owned_by = ROS
+				}
+				1054 = {
+					is_owned_by = ROS
+				}
+			}
+
+		}
+		
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	PER_demandbalochistan = {
+		cost = 25
+		complete_effect  = {
+			DIN = {
+				country_event = {
+					id = per.39
+					days = 3
+				}
+			}
+			PER = {
+				add_state_core = 444
+				add_state_core = 1222
+				add_state_core = 993
+			}
+		}
+		visible = {
+			has_completed_focus = PER_take_back_what_was_lost
+		}
+		available = {
+			AND = 
+			{
+				DIN = {
+					exists = yes
+				}
+				444 = {
+					is_owned_by = DIN
+				}
+				1222 = {
+					is_owned_by = DIN
+				}
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+}
+
+PER_mos_empire2 = {
+
+	#conquests#
+	
+	PER_azeris = {
+		cost = 75
+		complete_effect  = {
+			create_wargoal = {
+				type = annex_everything
+				target = AZR
+			}
+			add_state_core = 420
+			add_state_core = 419
+			add_state_core = 960
+			add_state_core = 229
+			add_state_core = 1054
+			add_state_core = 891
+		}
+		visible = {
+			has_completed_focus = PER_unite_the_middle_east
+		}
+		available = {
+			has_war = no
+			OR = {
+				AZR = {
+					AND = {
+						exists = yes
+						has_war = no
+						is_subject = no
+						any_neighbor_country = {
+							OR = {
+								tag = PER
+								is_in_faction_with = PER
+							}
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	PER_kurds = {
+		cost = 50
+		complete_effect  = {
+			create_wargoal = {
+				type = annex_everything
+				target = KUR
+			}
+			add_state_core = 354
+			add_state_core = 350
+			add_state_core = 1131
+			add_state_core = 1132
+		}
+		visible = {
+			has_completed_focus = PER_unite_the_middle_east
+		}
+		available = {
+			has_war = no
+			KUR = {
+				AND = {
+					exists = yes
+					has_war = no
+					is_subject = no
+					any_neighbor_country = {
+						OR = {
+							tag = PER
+							is_in_faction_with = PER
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	PER_afghanis = {
+		cost = 75
+		complete_effect  = {
+			create_wargoal = {
+				type = annex_everything
+				target = AFG
+			}
+			add_state_core = 415
+			add_state_core = 267
+			add_state_core = 884
+			add_state_core = 442
+			add_state_core = 445
+		}
+		visible = {
+			has_completed_focus = PER_unite_the_middle_east
+		}
+		available = {
+			has_war = no
+			AFG = {
+				AND = {
+					exists = yes
+					has_war = no
+					is_subject = no
+					any_neighbor_country = {
+						OR = {
+							tag = PER
+							is_in_faction_with = PER
+						}
+					}
+				}
+			}
+			
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	PER_turkmen = {
+		cost = 50
+		complete_effect  = {
+			create_wargoal = {
+				type = annex_everything
+				target = TUC
+			}
+			add_state_core = 1037
+			add_state_core = 584
+			add_state_core = 850
+		}
+		visible = {
+			has_completed_focus = PER_unite_the_middle_east
+		}
+		available = {
+			has_war = no
+			TUC = {
+				AND = {
+					exists = yes
+					has_war = no
+					is_in_faction = no
+					is_subject = no
+					any_neighbor_country = {
+						OR = {
+							tag = PER
+							is_in_faction_with = PER
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+
+PER_mos_empire3 = {
+
+	PER_euphrates = {
+		cost = 50
+		complete_effect  = {
+			create_wargoal = {
+				type = take_core_state
+				target = 680.owner
+			}
+			add_state_core = 680
+		}
+		visible = {
+			has_completed_focus = PER_build_an_empire_of_our_own
+		}
+		available = {
+			has_war = no
+			SNP = {
+				AND = {
+					exists = yes
+					has_war = no
+					is_subject = no
+					any_neighbor_country = {
+						OR = {
+							tag = PER
+							is_in_faction_with = PER
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	PER_assyrians = {
+		cost = 50
+		complete_effect  = {
+			create_wargoal = {
+				type = annex_everything
+				target = ASY
+			}
+			add_state_core = 1051
+			add_state_core = 807
+		}
+		visible = {
+			has_completed_focus = PER_build_an_empire_of_our_own
+		}
+		available = {
+			has_war = no
+			ASY = {
+				AND = {
+					exists = yes
+					has_war = no
+					is_subject = no
+					any_neighbor_country = {
+						OR = {
+							tag = PER
+							is_in_faction_with = PER
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	PER_bukhara = {
+		cost = 75
+		complete_effect  = {
+			create_wargoal = {
+				type = annex_everything
+				target = BKR
+			}
+			add_state_core = 742
+			add_state_core = 1038
+			add_state_core = 840
+			add_state_core = 851
+		}
+		visible = {
+			has_completed_focus = PER_build_an_empire_of_our_own
+		}
+		available = {
+			has_war = no
+			BKR = {
+				AND = {
+					exists = yes
+					has_war = no
+					is_in_faction = no
+					is_subject = no
+					any_neighbor_country = {
+						OR = {
+							tag = PER
+							is_in_faction_with = PER
+						}
+					}
+				}
+			}
+			
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	PER_fergana = {
+		cost = 25
+		complete_effect  = {
+			create_wargoal = {
+				type = take_core_state
+				target = 1041.owner
+			}
+			add_state_core = 1041
+		}
+		visible = {
+			has_completed_focus = PER_build_an_empire_of_our_own
+		}
+		available = {
+			has_war = no
+			OR = {
+				KOK = {
+					AND = {
+						exists = yes
+						is_in_faction = no
+						has_war = no
+						is_subject = no
+						has_full_control_of_state = 1041
+						any_neighbor_country = {
+							OR = {
+								tag = PER
+								is_in_faction_with = PER
+							}
+						}
+					}
+				}
+				TUK = {
+					AND = {
+						exists = yes
+						has_war = no
+						is_subject = no
+						is_in_faction = no
+						has_full_control_of_state = 1041
+						any_neighbor_country = {
+							OR = {
+								tag = PER
+								is_in_faction_with = PER
+							}
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	PER_iraq = {
+		cost = 50
+		complete_effect  = {
+			IRQ = {
+				leave_faction = yes
+			}
+			ENG = {
+				end_puppet = IRQ
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = IRQ
+			}
+			add_state_core = 675
+			add_state_core = 676
+			add_state_core = 291
+			add_state_core = 1087
+			add_state_core = 1123
+			add_state_core = 1088
+			
+		}
+		visible = {
+			has_completed_focus = PER_build_an_empire_of_our_own
+		}
+		available = {
+			has_war = no
+			IRQ = {
+				AND = {
+					exists = yes
+					has_war = no
+				}
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+}
+
+PER_mos_empire4 = {
+
+	PER_strike_kuwait = {
+		cost = 0
+		days_remove = 14
+		custom_cost_text = PER_strike_kuwait_cost_text
+		custom_cost_trigger = {
+			has_manpower > 3999
+			has_army_experience > 9
+			command_power > 9
+			has_political_power > 49
+		}
+		remove_effect = {
+			add_state_claim = 656
+			hidden_effect = {
+				add_manpower = -4000
+				army_experience = -10
+				add_command_power = -10
+				add_political_power = -50
+			}
+			ENG = {
+				country_event = {
+					id = per.42
+				}
+			}
+		}
+		visible = {
+			has_completed_focus = PER_strike_back_at_the_empire
+		}
+		available = {
+			ENG = {
+				has_full_control_of_state = 656
+			}			
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	PER_strike_qatar = {
+		cost = 0
+		days_remove = 14
+		custom_cost_text = PER_strike_qatar_cost_text
+		custom_cost_trigger = {
+			has_manpower > 4999
+			has_army_experience > 9
+			command_power > 19
+			has_political_power > 49
+		}
+		remove_effect = {
+			add_state_claim = 765
+			hidden_effect = {
+				add_manpower = -5000
+				army_experience = -10
+				add_command_power = -20
+				add_political_power = -50
+			}
+			ENG = {
+				country_event = {
+					id = per.43
+				}
+			}
+		}
+		visible = {
+			has_completed_focus = PER_strike_back_at_the_empire
+		}
+		available = {
+			ENG = {
+				has_full_control_of_state = 765
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	PER_strike_dubai = {
+		cost = 0
+		days_remove = 14
+		custom_cost_text = PER_strike_dubai_cost_text
+		custom_cost_trigger = {
+			has_manpower > 4999
+			has_army_experience > 14
+			command_power > 24
+			has_political_power > 49
+		}
+		remove_effect = {
+			add_state_claim = 658
+			hidden_effect = {
+				add_manpower = -5000
+				army_experience = -15
+				add_command_power = -25
+				add_political_power = -50
+			}
+			ENG = {
+				country_event = {
+					id = per.44
+				}
+			}
+		}
+		visible = {
+			has_completed_focus = PER_strike_back_at_the_empire
+		}
+		available = {
+			ENG = {
+				has_full_control_of_state = 658
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	PER_strike_oman = {
+		cost = 0
+		days_remove = 14
+		custom_cost_text = PER_strike_oman_cost_text
+		custom_cost_trigger = {
+			has_manpower > 19999
+			has_army_experience > 24
+			command_power > 49
+			has_political_power > 74
+		}
+		remove_effect = {
+			add_state_claim = 294
+			add_state_claim = 994
+			OMA = {
+				country_event = {
+					id = per.40
+				}
+			}
+			hidden_effect = {
+				add_manpower = -15000
+				army_experience = -25
+				add_command_power = -50
+				add_political_power = -75
+			}
+		}
+		visible = {
+			has_completed_focus = PER_strike_back_at_the_empire
+		}
+		available = {
+			OMA = {
+				has_full_control_of_state = 294
+				has_full_control_of_state = 994
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	#PER_strike_aden = {
+	#	cost = 0
+	#	days_remove = 14
+	#	custom_cost_text = PER_strike_aden_cost_text
+	#	custom_cost_trigger = {
+	#		has_manpower > 4999
+	#		has_army_experience > 14
+	#		command_power > 24
+	#		has_political_power > 49
+	#	}
+	#	remove_effect = {
+	#		add_state_claim = 659
+	#		hidden_effect = {
+	#			add_manpower = -10000
+	#			army_experience = -15
+	#			add_command_power = -25
+	#			add_political_power = -50
+	#		}
+	#		ENG = {
+	#			country_event = {
+	#				id = per.45
+	#			}
+	#		}
+	#	}
+	#	visible = {
+	#		has_completed_focus = PER_strike_back_at_the_empire
+	#	}
+	#	available = {
+	#		ENG = {
+	#			has_full_control_of_state = 659
+	#		}
+	#	}
+	#	fire_only_once = yes
+	#	ai_will_do = {
+	#		factor = 1
+	#	}
+	#}
+	
+	#PER_strike_yemen = {
+	#	cost = 0
+	#	days_remove = 14
+	#	custom_cost_text = PER_strike_yemen_cost_text
+	#	custom_cost_trigger = {
+	#		has_manpower > 19999
+	#		has_army_experience > 24
+	#		command_power > 49
+	#		has_political_power > 74
+	#	}
+	#	remove_effect = {
+	#		add_state_claim = 293
+	#		YEM = {
+	#			country_event = {
+	#				id = per.41
+	#			}
+	#		}
+	#		hidden_effect = {
+	#			add_manpower = -15000
+	#			army_experience = -25
+	#			add_command_power = -50
+	#			add_political_power = -75
+	#		}
+	#	}
+	#	visible = {
+	#		has_completed_focus = PER_strike_back_at_the_empire
+	#	}
+	#	available = {
+	#		YEM = {
+	#			has_full_control_of_state = 293
+	#		}
+	#	}
+	#	fire_only_once = yes
+	#
+	#	ai_will_do = {
+	#		factor = 1
+	#	}
+	#}
+	
+}
+PER_APOC_decisions0 = {
+	PER_gulf_oil_kuwait = {
+		cost = 25
+		complete_effect  = {
+			add_resource = {
+				type = oil
+				amount = 6
+				state = 656
+			}
+		}
+		visible = {
+			has_completed_focus = PER_what_we_need_is_oil
+			date > 1937.6.6
+		}
+		available = {
+			OR = {
+				has_full_control_of_state = 656
+				ENG = {
+					has_full_control_of_state = 656
+				}
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	PER_gulf_oil_qatar = {
+		cost = 25
+		complete_effect  = {
+			add_resource = {
+				type = oil
+				amount = 6
+				state = 765
+			}
+		}
+		visible = {
+			has_completed_focus = PER_what_we_need_is_oil
+			date > 1939.9.9
+		}
+		available = {
+			OR = {
+				has_full_control_of_state = 765
+				ENG = {
+					has_full_control_of_state = 765
+				}
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+PER_APOC_decisions1 = {
+
+	PER_baku = {
+		cost = 50
+		complete_effect  = {
+			add_state_claim = 960
+			add_state_claim = 229
+			add_state_claim = 1054
+			create_wargoal = {
+				type = annex_everything
+				target = AZR
+			}
+		}
+		visible = {
+			has_country_flag = PER_baku_oil_fields_flag
+		}
+		available = {
+			OR = {
+				AZR = {
+					exists = yes
+					is_subject = no
+				}
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+}
+
+PER_APOC_decisions2euro = {
+
+	PER_business_hol = {
+		cost = 50
+		complete_effect  = {
+			HOL = {
+				country_event = {
+					id = per.521
+				}
+			}
+		}
+		visible = {
+			has_completed_focus = PER_in_europe
+		}
+		available = {
+			HOL = {
+				exists = yes
+				is_subject = no
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	PER_business_swe = {
+		cost = 50
+		complete_effect  = {
+			SWE = {
+				country_event = {
+					id = per.521
+				}
+			}
+		}
+		visible = {
+			has_completed_focus = PER_in_europe
+		}
+		available = {
+			SWE = {
+				exists = yes
+				is_subject = no
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	PER_business_spa = {
+		cost = 50
+		complete_effect  = {
+			if = {
+				limit = {
+					SPA = {
+						exists = yes
+						has_war = no
+					}
+				}
+				SPA = {
+					country_event = {
+						id = per.521
+					}
+				}
+			}
+			if = {
+				limit = {
+					SPR = {
+						exists = yes
+						has_war = no
+					}
+				}
+				SPR = {
+					country_event = {
+						id = per.521
+					}
+				}
+			}
+		}
+		visible = {
+			has_completed_focus = PER_in_europe
+		}
+		available = {
+			OR = {
+				SPA = {
+					exists = yes
+					is_subject = no
+				}
+				SPR = {
+					exists = yes
+					is_subject = no
+				}
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	PER_business_por = {
+		cost = 50
+		complete_effect  = {
+			POR = {
+				country_event = {
+					id = per.521
+				}
+			}
+		}
+		visible = {
+			has_completed_focus = PER_in_europe
+		}
+		available = {
+			POR = {
+				exists = yes
+				is_subject = no
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	PER_business_ita = {
+		cost = 50
+		complete_effect  = {
+			ITA = {
+				country_event = {
+					id = per.521
+				}
+			}
+		}
+		visible = {
+			has_completed_focus = PER_in_europe
+		}
+		available = {
+			ITA = {
+				exists = yes
+				is_subject = no
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	PER_business_gre = {
+		cost = 50
+		complete_effect  = {
+			GRE = {
+				country_event = {
+					id = per.521
+				}
+			}
+		}
+		visible = {
+			has_completed_focus = PER_in_europe
+		}
+		available = {
+			GRE = {
+				exists = yes
+				is_subject = no
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+}
+
+PER_APOC_decisions3americas = {
+
+	PER_business_usa = {
+		cost = 50
+		complete_effect  = {
+			USA = {
+				country_event = {
+					id = per.521
+				}
+			}
+		}
+		visible = {
+			has_completed_focus = PER_in_the_americas
+		}
+		available = {
+			USA = {
+				exists = yes
+				is_subject = no
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	PER_business_mex = {
+		cost = 50
+		complete_effect  = {
+			MEX = {
+				country_event = {
+					id = per.521
+				}
+			}
+		}
+		visible = {
+			has_completed_focus = PER_in_the_americas
+		}
+		available = {
+			MEX = {
+				exists = yes
+				is_subject = no
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	PER_business_can = {
+		cost = 50
+		complete_effect  = {
+			CAN = {
+				country_event = {
+					id = per.521
+				}
+			}
+		}
+		visible = {
+			has_completed_focus = PER_in_the_americas
+		}
+		available = {
+			CAN = {
+				exists = yes
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	PER_business_brr = {
+		cost = 50
+		complete_effect  = {
+			BRR = {
+				country_event = {
+					id = per.521
+				}
+			}
+		}
+		visible = {
+			has_completed_focus = PER_in_the_americas
+		}
+		available = {
+			BRR = {
+				exists = yes
+				is_subject = no
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+}
+
+PER_APOC_decisions4asia = {
+
+	PER_business_sia = {
+		cost = 50
+		complete_effect  = {
+			SIA = {
+				country_event = {
+					id = per.521
+				}
+			}
+		}
+		visible = {
+			has_completed_focus = PER_in_asia
+		}
+		available = {
+			SIA = {
+				exists = yes
+				is_subject = no
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	PER_business_upi = {
+		cost = 50
+		complete_effect  = {
+			UPI = {
+				country_event = {
+					id = per.521
+				}
+			}
+		}
+		visible = {
+			has_completed_focus = PER_in_asia
+		}
+		available = {
+			UPI = {
+				exists = yes
+				is_subject = no
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	PER_business_mad = {
+		cost = 50
+		complete_effect  = {
+			MAD = {
+				country_event = {
+					id = per.521
+				}
+			}
+		}
+		visible = {
+			has_completed_focus = PER_in_asia
+		}
+		available = {
+			MAD = {
+				exists = yes
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	PER_business_ast = {
+		cost = 50
+		complete_effect  = {
+			AST = {
+				country_event = {
+					id = per.521
+				}
+			}
+		}
+		visible = {
+			has_completed_focus = PER_in_asia
+		}
+		available = {
+			AST = {
+				exists = yes
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	PER_business_nzl = {
+		cost = 50
+		complete_effect  = {
+			NZL = {
+				country_event = {
+					id = per.521
+				}
+			}
+		}
+		visible = {
+			has_completed_focus = PER_in_asia
+		}
+		available = {
+			NZL = {
+				exists = yes
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	PER_business_byj = {
+		cost = 50
+		complete_effect  = {
+			BYJ = {
+				country_event = {
+					id = per.521
+				}
+			}
+		}
+		visible = {
+			has_completed_focus = PER_in_asia
+		}
+		available = {
+			BYJ = {
+				exists = yes
+				is_subject = no
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	PER_business_sha = {
+		cost = 50
+		complete_effect  = {
+			SHA = {
+				country_event = {
+					id = per.521
+				}
+			}
+		}
+		visible = {
+			has_completed_focus = PER_in_asia
+		}
+		available = {
+			SHA = {
+				exists = yes
+				is_subject = no
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	PER_business_jgj = {
+		cost = 50
+		complete_effect  = {
+			JGJ = {
+				country_event = {
+					id = per.521
+				}
+			}
+		}
+		visible = {
+			has_completed_focus = PER_in_asia
+		}
+		available = {
+			JGJ = {
+				exists = yes
+				is_subject = no
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	PER_business_kck = {
+		cost = 50
+		complete_effect  = {
+			KCK = {
+				country_event = {
+					id = per.521
+				}
+			}
+		}
+		visible = {
+			has_completed_focus = PER_in_asia
+		}
+		available = {
+			KCK = {
+				exists = yes
+				is_subject = no
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+}
+PER_APOC_northern_exploration = {
+	PER_explore_the_north1 = {
+		cost = 50
+		complete_effect  = {
+			add_resource = {
+				type = oil
+				amount = 3
+				state = 416
+			}
+			add_resource = {
+				type = oil
+				amount = 3
+				state = 266
+			}
+			set_country_flag = PER_APOC_northern1
+		}
+		visible = {
+			has_completed_focus = PER_start_exploration_in_the_north
+		}
+		available = {
+			has_full_control_of_state = 416
+			has_full_control_of_state = 266
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	PER_explore_the_north2 = {
+		cost = 50
+		complete_effect  = {
+			add_resource = {
+				type = oil
+				amount = 4
+				state = 416
+			}
+			add_resource = {
+				type = oil
+				amount = 4
+				state = 266
+			}
+		}
+		visible = {
+			has_completed_focus = PER_start_exploration_in_the_north
+			has_country_flag = PER_APOC_northern1
+		}
+		available = {
+			has_full_control_of_state = 416
+			has_full_control_of_state = 266
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+#reds
+
+PER_RPR_eskandari_decisions = {
+
+	RPR_lib_persification_arabs = {
+		cost = 0
+		custom_cost_text = RPR_persification_cost_arabs_text
+		custom_cost_trigger = {
+			has_manpower > 29999
+			has_political_power > 44
+			command_power > 24
+		}
+		complete_effect  = {
+			hidden_effect = {
+				add_manpower = -30000
+				add_political_power = -45
+				add_command_power = -25
+			}
+			add_state_core = 675
+			add_state_core = 291
+			add_state_core = 1087
+			add_state_core = 1123
+			add_state_core = 1088
+		}
+		visible = {
+			has_completed_focus = RPR_pursue_persification_policies
+		}
+		available = {
+			has_full_control_of_state = 675
+			has_full_control_of_state = 291
+			has_full_control_of_state = 1087
+			has_full_control_of_state = 1123
+			has_full_control_of_state = 1088
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	RPR_lib_persification_kurds = {
+		cost = 0
+		custom_cost_text = RPR_persification_cost_kurds_text
+		custom_cost_trigger = {
+			has_manpower > 19999
+			has_political_power > 29
+			command_power > 24
+		}
+		complete_effect  = {
+			hidden_effect = {
+				add_manpower = -20000
+				add_political_power = -30
+				add_command_power = -25
+			}
+			add_state_core = 676
+			add_state_core = 1051
+		}
+		visible = {
+			has_completed_focus = RPR_pursue_persification_policies
+		}
+		available = {
+			has_full_control_of_state = 676
+			has_full_control_of_state = 1051
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	RPR_lib_persification_kurds_more = {
+		cost = 0
+		custom_cost_text = RPR_persification_cost_kurds_more_text
+		custom_cost_trigger = {
+			has_manpower > 29999
+			has_political_power > 44
+			command_power > 24
+		}
+		complete_effect  = {
+			hidden_effect = {
+				add_manpower = -30000
+				add_political_power = -45
+				add_command_power = -25
+			}
+			add_state_core = 350
+			add_state_core = 352
+			add_state_core = 1131
+			add_state_core = 1132
+		}
+		visible = {
+			has_completed_focus = RPR_pursue_persification_policies
+		}
+		available = {
+			has_full_control_of_state = 350
+			has_full_control_of_state = 352
+			has_full_control_of_state = 1131
+			has_full_control_of_state = 1132
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	RPR_lib_persification_assyrians = {
+		cost = 0
+		custom_cost_text = RPR_persification_cost_assyrians_text
+		custom_cost_trigger = {
+			has_manpower > 9999
+			has_political_power > 14
+			command_power > 24
+		}
+		complete_effect  = {
+			hidden_effect = {
+				add_manpower = -20000
+				add_political_power = -15
+				add_command_power = -25
+			}
+			add_state_core = 807
+			add_state_core = 1051
+			add_state_core = 889
+			889 = {
+				remove_core_of = ASY
+			}
+		}
+		visible = {
+			has_completed_focus = RPR_pursue_persification_policies
+		}
+		available = {
+			has_full_control_of_state = 807
+			has_full_control_of_state = 1051
+			has_full_control_of_state = 889
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	RPR_lib_persification_azeris2 = {
+		cost = 0
+		custom_cost_text = RPR_persification_cost_azeris_text2
+		custom_cost_trigger = {
+			has_manpower > 19999
+			has_political_power > 29
+			command_power > 24
+		}
+		complete_effect  = {
+			hidden_effect = {
+				add_manpower = -20000
+				add_political_power = -30
+				add_command_power = -25
+			}
+			add_state_core = 229
+			add_state_core = 1054
+			add_state_core = 891
+		}
+		visible = {
+			has_completed_focus = RPR_pursue_persification_policies
+		}
+		available = {
+			has_full_control_of_state = 229
+			has_full_control_of_state = 1054
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	RPR_lib_persification_azeris = {
+		cost = 0
+		custom_cost_text = RPR_persification_cost_azeris_text
+		custom_cost_trigger = {
+			has_manpower > 29999
+			has_political_power > 44
+			command_power > 24
+		}
+		complete_effect  = {
+			hidden_effect = {
+				add_manpower = -30000
+				add_political_power = -45
+				add_command_power = -25
+			}
+			add_state_core = 419
+			add_state_core = 420
+			add_state_core = 960
+			add_state_core = 955
+		}
+		visible = {
+			has_completed_focus = RPR_pursue_persification_policies
+		}
+		available = {
+			has_full_control_of_state = 419
+			has_full_control_of_state = 420
+			has_full_control_of_state = 960
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	RPR_lib_persification_turkmen = {
+		cost = 0
+		custom_cost_text = RPR_persification_cost_turkmen_text
+		custom_cost_trigger = {
+			has_manpower > 29999
+			has_political_power > 44
+			command_power > 24
+		}
+		complete_effect  = {
+			hidden_effect = {
+				add_manpower = -30000
+				add_political_power = -45
+				add_command_power = -25
+			}
+			add_state_core = 1037
+			add_state_core = 584
+			add_state_core = 850
+		}
+		visible = {
+			has_completed_focus = RPR_pursue_persification_policies
+		}
+		available = {
+			has_full_control_of_state = 1037
+			has_full_control_of_state = 584
+			has_full_control_of_state = 850
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	RPR_lib_persification_balochis = {
+		cost = 0
+		custom_cost_text = RPR_persification_cost_balochis_text
+		custom_cost_trigger = {
+			has_manpower > 19999
+			has_political_power > 29
+			command_power > 24
+		}
+		complete_effect  = {
+			hidden_effect = {
+				add_manpower = -20000
+				add_political_power = -30
+				add_command_power = -25
+			}
+			add_state_core = 444
+			add_state_core = 993
+		}
+		visible = {
+			has_completed_focus = RPR_pursue_persification_policies
+		}
+		available = {
+			has_full_control_of_state = 444
+			has_full_control_of_state = 993
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	RPR_lib_persification_pashtuns = {
+		cost = 0
+		custom_cost_text = RPR_persification_cost_pashtuns_text
+		custom_cost_trigger = {
+			has_manpower > 99999
+			has_political_power > 74
+			command_power > 24
+		}
+		complete_effect  = {
+			hidden_effect = {
+				add_manpower = -50000
+				add_political_power = -75
+				add_command_power = -25
+			}
+			add_state_core = 415
+			add_state_core = 267
+			add_state_core = 442
+			add_state_core = 885
+			add_state_core = 445
+		}
+		visible = {
+			has_completed_focus = RPR_pursue_persification_policies
+		}
+		available = {
+			has_full_control_of_state = 415
+			has_full_control_of_state = 267
+			has_full_control_of_state = 442
+			has_full_control_of_state = 885
+			has_full_control_of_state = 445
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	RPR_lib_persification_tajiks = {
+		cost = 0
+		custom_cost_text = RPR_persification_cost_tajiks_text
+		custom_cost_trigger = {
+			has_manpower > 19999
+			has_political_power > 29
+			command_power > 24
+		}
+		complete_effect  = {
+			hidden_effect = {
+				add_manpower = -20000
+				add_political_power = -30
+				add_command_power = -25
+			}
+			add_state_core = 884
+			add_state_core = 742
+			add_state_core = 1041
+		}
+		visible = {
+			has_completed_focus = RPR_pursue_persification_policies
+		}
+		available = {
+			has_full_control_of_state = 444
+			has_full_control_of_state = 993
+			has_full_control_of_state = 1041
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	RPR_lib_persification_uzbeks = {
+		cost = 0
+		custom_cost_text = RPR_persification_cost_uzbeks_text
+		custom_cost_trigger = {
+			has_manpower > 29999
+			has_political_power > 44
+			command_power > 24
+		}
+		complete_effect  = {
+			hidden_effect = {
+				add_manpower = -30000
+				add_political_power = -45
+				add_command_power = -25
+			}
+			add_state_core = 840
+			add_state_core = 1038
+			add_state_core = 851
+		}
+		visible = {
+			has_completed_focus = RPR_pursue_persification_policies
+		}
+		available = {
+			has_full_control_of_state = 840
+			has_full_control_of_state = 1038
+			has_full_control_of_state = 851
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+}
+PER_RPR_tudeh_expansion_decisions = {
+	RPR_tudeh_expansion_iraq = {
+		cost = 50
+		complete_effect  = {
+			IRQ = {
+				leave_faction = yes
+			}
+			ENG = {
+				end_puppet = IRQ
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = IRQ
+			}
+		}
+		visible = {
+			has_completed_focus = RPR_restore_the_old_borders
+		}
+		available = {
+			has_war = no
+			IRQ = {
+				exists = yes
+				any_neighbor_country = {
+					OR = {
+						tag = RPR
+						is_in_faction_with = RPR
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	RPR_tudeh_expansion_kurds = {
+		cost = 50
+		complete_effect  = {
+			KUR = {
+				remove_state_claim = 421
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = KUR
+			}
+		}
+		visible = {
+			has_completed_focus = RPR_restore_the_old_borders
+		}
+		available = {
+			has_war = no
+			KUR = {
+				exists = yes
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	RPR_tudeh_expansion_kurds_more = {
+		cost = 50
+		complete_effect  = {
+			create_wargoal = {
+				type = take_state
+				target = 680.owner
+			}
+		}
+		visible = {
+			has_completed_focus = RPR_restore_the_old_borders
+		}
+		available = {
+			has_war = no
+			SNP = {
+				exists = yes
+				has_full_control_of_state = 680
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	RPR_tudeh_expansion_azer = {
+		cost = 50
+		complete_effect  = {
+			create_wargoal = {
+				type = annex_everything
+				target = AZR
+			}
+		}
+		visible = {
+			has_completed_focus = RPR_restore_the_old_borders
+		}
+		available = {
+			has_war = no
+			AZR = {
+				exists = yes
+				any_neighbor_country = {
+					OR = {
+						tag = RPR
+						is_in_faction_with = RPR
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	RPR_tudeh_expansion_afghan = {
+		cost = 50
+		complete_effect  = {
+			create_wargoal = {
+				type = annex_everything
+				target = AFG
+			}
+		}
+		visible = {
+			has_completed_focus = RPR_restore_the_old_borders
+		}
+		available = {
+			has_war = no
+			AFG = {
+				exists = yes
+				any_neighbor_country = {
+					OR = {
+						tag = RPR
+						is_in_faction_with = RPR
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	RPR_tudeh_expansion_transcaspia = {
+		cost = 50
+		complete_effect  = {
+			create_wargoal = {
+				type = annex_everything
+				target = TUC
+			}
+		}
+		visible = {
+			has_completed_focus = RPR_restore_the_old_borders
+		}
+		available = {
+			has_war = no
+			TUC = {
+				exists = yes
+				is_in_faction = no
+				any_neighbor_country = {
+					OR = {
+						tag = RPR
+						is_in_faction_with = RPR
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+PER_RPR_tudeh_liberation_decisions = {
+	RPR_tudeh_liberation_turkey = {
+		cost = 50
+		complete_effect  = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = TUR
+			}
+		}
+		visible = {
+			has_completed_focus = RPR_liberation_not_imperialism
+		}
+		available = {
+			has_war = no
+			OR = {
+				MAR = {
+					exists = yes
+					any_neighbor_country = {
+						OR = {
+							tag = RPR
+							is_in_faction_with = RPR
+						}
+					}
+					NOT = {
+						OR = {
+							has_government = vanguard_socialism
+							has_government = popular_socialism
+							has_government = revisionist_socialism
+							has_government = progressivism
+						}
+					}
+				}
+				TUR = {
+					exists = yes
+					any_neighbor_country = {
+						OR = {
+							tag = RPR
+							is_in_faction_with = RPR
+						}
+					}
+					NOT = {
+						OR = {
+							has_government = vanguard_socialism
+							has_government = popular_socialism
+							has_government = revisionist_socialism
+							has_government = progressivism
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	RPR_tudeh_liberation_armenia = {
+		cost = 50
+		complete_effect  = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = ARM
+			}
+		}
+		visible = {
+			has_completed_focus = RPR_liberation_not_imperialism
+		}
+		available = {
+			has_war = no
+			ARM = {
+				exists = yes
+				is_in_faction = no
+				any_neighbor_country = {
+					OR = {
+						tag = RPR
+						is_in_faction_with = RPR
+					}
+				}
+				NOT = {
+					OR = {
+						has_government = vanguard_socialism
+						has_government = popular_socialism
+						has_government = revisionist_socialism
+						has_government = progressivism
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	RPR_tudeh_liberation_iraq = {
+		cost = 50
+		complete_effect  = {
+			IRQ = {
+				leave_faction = yes
+			}
+			ENG = {
+				end_puppet = IRQ
+			}
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = IRQ
+			}
+		}
+		visible = {
+			has_completed_focus = RPR_liberation_not_imperialism
+		}
+		available = {
+			has_war = no
+			IRQ = {
+				exists = yes
+				any_neighbor_country = {
+					OR = {
+						tag = RPR
+						is_in_faction_with = RPR
+					}
+				}
+				NOT = {
+					OR = {
+						has_government = vanguard_socialism
+						has_government = popular_socialism
+						has_government = revisionist_socialism
+						has_government = progressivism
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	RPR_tudeh_liberation_kurds = {
+		cost = 50
+		complete_effect  = {
+			KUR = {
+				remove_state_core = 421
+			}
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = KUR
+			}
+		}
+		visible = {
+			has_completed_focus = RPR_liberation_not_imperialism
+		}
+		available = {
+			has_war = no
+			KUR = {
+				exists = yes
+				any_neighbor_country = {
+					OR = {
+						tag = RPR
+						is_in_faction_with = RPR
+					}
+				}
+				NOT = {
+					OR = {
+						has_government = vanguard_socialism
+						has_government = popular_socialism
+						has_government = revisionist_socialism
+						has_government = progressivism
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	RPR_tudeh_liberation_azeris = {
+		cost = 50
+		complete_effect  = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = AZR
+			}
+		}
+		visible = {
+			has_completed_focus = RPR_liberation_not_imperialism
+		}
+		available = {
+			has_war = no
+			AZR = {
+				exists = yes
+				any_neighbor_country = {
+					OR = {
+						tag = RPR
+						is_in_faction_with = RPR
+					}
+				}
+				NOT = {
+					OR = {
+						has_government = vanguard_socialism
+						has_government = popular_socialism
+						has_government = revisionist_socialism
+						has_government = progressivism
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	RPR_tudeh_liberation_afghan = {
+		cost = 50
+		complete_effect  = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = AFG
+			}
+		}
+		visible = {
+			has_completed_focus = RPR_liberation_not_imperialism
+		}
+		available = {
+			has_war = no
+			AFG = {
+				exists = yes
+				any_neighbor_country = {
+					OR = {
+						tag = RPR
+						is_in_faction_with = RPR
+					}
+				}
+				NOT = {
+					OR = {
+						has_government = vanguard_socialism
+						has_government = popular_socialism
+						has_government = revisionist_socialism
+						has_government = progressivism
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	RPR_tudeh_liberation_transcaspia = {
+		cost = 50
+		complete_effect  = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = TUC
+			}
+		}
+		visible = {
+			has_completed_focus = RPR_liberation_not_imperialism
+		}
+		available = {
+			has_war = no
+			TUC = {
+				exists = yes
+				is_in_faction = no
+				any_neighbor_country = {
+					OR = {
+						tag = RPR
+						is_in_faction_with = RPR
+					}
+				}
+				NOT = {
+					OR = {
+						has_government = vanguard_socialism
+						has_government = popular_socialism
+						has_government = revisionist_socialism
+						has_government = progressivism
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+#
+PER_RPR_jangle_decisions = {
+
+	RPR_jangle_persification_arabs = {
+		cost = 0
+		custom_cost_text = RPR_jangle_persification_cost_arabs_text
+		custom_cost_trigger = {
+			has_manpower > 29999
+			has_political_power > 44
+			command_power > 24
+		}
+		complete_effect  = {
+			hidden_effect = {
+				add_manpower = -30000
+				add_political_power = -45
+				add_command_power = -25
+			}
+			add_state_core = 675
+			add_state_core = 291
+			add_state_core = 1087
+			add_state_core = 1088
+			add_state_core = 1123
+		}
+		visible = {
+			has_completed_focus = RPR_nationalists_socialists_persians
+		}
+		available = {
+			has_full_control_of_state = 675
+			has_full_control_of_state = 291
+			has_full_control_of_state = 1087
+			has_full_control_of_state = 1088
+			has_full_control_of_state = 1123
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	RPR_jangle_persification_kurds = {
+		cost = 0
+		custom_cost_text = RPR_jangle_persification_cost_kurds_text
+		custom_cost_trigger = {
+			has_manpower > 19999
+			has_political_power > 29
+			command_power > 24
+		}
+		complete_effect  = {
+			hidden_effect = {
+				add_manpower = -20000
+				add_political_power = -30
+				add_command_power = -25
+			}
+			add_state_core = 676
+			add_state_core = 889
+			KUR = {
+				remove_state_core = 888
+				remove_state_claim = 421
+			}
+		}
+		visible = {
+			has_completed_focus = RPR_nationalists_socialists_persians
+		}
+		available = {
+			has_full_control_of_state = 676
+			has_full_control_of_state = 889
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	RPR_jangle_persification_kurds_more = {
+		cost = 0
+		custom_cost_text = RPR_jangle_persification_cost_kurds_more_text
+		custom_cost_trigger = {
+			has_manpower > 29999
+			has_political_power > 44
+			command_power > 24
+		}
+		complete_effect  = {
+			hidden_effect = {
+				add_manpower = -30000
+				add_political_power = -45
+				add_command_power = -25
+			}
+			add_state_core = 350
+			add_state_core = 352
+			add_state_core = 1131
+			add_state_core = 1132
+		}
+		visible = {
+			has_completed_focus = RPR_nationalists_socialists_persians
+		}
+		available = {
+			has_full_control_of_state = 350
+			has_full_control_of_state = 352
+			has_full_control_of_state = 1131
+			has_full_control_of_state = 1132
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	RPR_jangle_persification_assyrians = {
+		cost = 0
+		custom_cost_text = RPR_jangle_persification_cost_assyrians_text
+		custom_cost_trigger = {
+			has_manpower > 9999
+			has_political_power > 15
+			command_power > 24
+		}
+		complete_effect  = {
+			hidden_effect = {
+				add_manpower = -10000
+				add_political_power = -15
+				add_command_power = -25
+			}
+			add_state_core = 1051
+			add_state_core = 807
+			ASY = {
+				remove_state_core = 889
+			}
+		}
+		visible = {
+			has_completed_focus = RPR_nationalists_socialists_persians
+		}
+		available = {
+			has_full_control_of_state = 1051
+			has_full_control_of_state = 807
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	RPR_jangle_persification_azeris = {
+		cost = 0
+		custom_cost_text = RPR_jangle_persification_cost_azeris_text
+		custom_cost_trigger = {
+			has_manpower > 29999
+			has_political_power > 44
+			command_power > 24
+		}
+		complete_effect  = {
+			hidden_effect = {
+				add_manpower = -30000
+				add_political_power = -45
+				add_command_power = -25
+			}
+			add_state_core = 960
+			add_state_core = 419
+			add_state_core = 420
+			add_state_core = 955
+		}
+		visible = {
+			has_completed_focus = RPR_nationalists_socialists_persians
+		}
+		available = {
+			has_full_control_of_state = 960
+			has_full_control_of_state = 419
+			has_full_control_of_state = 420
+			has_full_control_of_state = 955
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	RPR_jangle_persification_azeris2 = {
+		cost = 0
+		custom_cost_text = RPR_jangle_persification_cost_azeris_text2
+		custom_cost_trigger = {
+			has_manpower > 19999
+			has_political_power > 29
+			command_power > 24
+		}
+		complete_effect  = {
+			hidden_effect = {
+				add_manpower = -20000
+				add_political_power = -30
+				add_command_power = -25
+			}
+			add_state_core = 229
+			add_state_core = 1054
+			add_state_core = 891
+		}
+		visible = {
+			has_completed_focus = RPR_nationalists_socialists_persians
+		}
+		available = {
+			has_full_control_of_state = 229
+			has_full_control_of_state = 1054
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	RPR_jangle_persification_turkmen = {
+		cost = 0
+		custom_cost_text = RPR_jangle_persification_cost_turkmen_text
+		custom_cost_trigger = {
+			has_manpower > 29999
+			has_political_power > 44
+			command_power > 24
+		}
+		complete_effect  = {
+			hidden_effect = {
+				add_manpower = -30000
+				add_political_power = -45
+				add_command_power = -25
+			}
+			add_state_core = 1037
+			add_state_core = 584
+			add_state_core = 850
+		}
+		visible = {
+			has_completed_focus = RPR_nationalists_socialists_persians
+		}
+		available = {
+			has_full_control_of_state = 1037
+			has_full_control_of_state = 584
+			has_full_control_of_state = 850
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	RPR_jangle_persification_balochis = {
+		cost = 0
+		custom_cost_text = RPR_jangle_persification_cost_balochis_text
+		custom_cost_trigger = {
+			has_manpower > 19999
+			has_political_power > 29
+			command_power > 24
+		}
+		complete_effect  = {
+			hidden_effect = {
+				add_manpower = -20000
+				add_political_power = -30
+				add_command_power = -25
+			}
+			add_state_core = 444
+			add_state_core = 993
+		}
+		visible = {
+			has_completed_focus = RPR_nationalists_socialists_persians
+		}
+		available = {
+			has_full_control_of_state = 444
+			has_full_control_of_state = 993
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	RPR_jangle_persification_pashtuns = {
+		cost = 0
+		custom_cost_text = RPR_jangle_persification_cost_pashtuns_text
+		custom_cost_trigger = {
+			has_manpower > 99999
+			has_political_power > 74
+			command_power > 24
+		}
+		complete_effect  = {
+			hidden_effect = {
+				add_manpower = -50000
+				add_political_power = -75
+				add_command_power = -25
+			}
+			add_state_core = 415
+			add_state_core = 267
+			add_state_core = 442
+			add_state_core = 885
+			add_state_core = 445
+		}
+		visible = {
+			has_completed_focus = RPR_nationalists_socialists_persians
+		}
+		available = {
+			has_full_control_of_state = 415
+			has_full_control_of_state = 267
+			has_full_control_of_state = 442
+			has_full_control_of_state = 885
+			has_full_control_of_state = 445
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	RPR_jangle_persification_tajiks = {
+		cost = 0
+		custom_cost_text = RPR_jangle_persification_cost_tajiks_text
+		custom_cost_trigger = {
+			has_manpower > 19999
+			has_political_power > 29
+			command_power > 24
+		}
+		complete_effect  = {
+			hidden_effect = {
+				add_manpower = -20000
+				add_political_power = -30
+				add_command_power = -25
+			}
+			add_state_core = 884
+			add_state_core = 742
+			add_state_core = 1041
+		}
+		visible = {
+			has_completed_focus = RPR_nationalists_socialists_persians
+		}
+		available = {
+			has_full_control_of_state = 444
+			has_full_control_of_state = 993
+			has_full_control_of_state = 1041
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	RPR_jangle_persification_uzbeks = {
+		cost = 0
+		custom_cost_text = RPR_jangle_persification_cost_uzbeks_text
+		custom_cost_trigger = {
+			has_manpower > 29999
+			has_political_power > 44
+			command_power > 24
+		}
+		complete_effect  = {
+			hidden_effect = {
+				add_manpower = -30000
+				add_political_power = -45
+				add_command_power = -25
+			}
+			add_state_core = 840
+			add_state_core = 1038
+			add_state_core = 851
+		}
+		visible = {
+			has_completed_focus = RPR_nationalists_socialists_persians
+		}
+		available = {
+			has_full_control_of_state = 840
+			has_full_control_of_state = 1038
+			has_full_control_of_state = 851
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+PER_RPR_jangle_expansion_decisions = {
+	RPR_afghanis = {
+		cost = 50
+		complete_effect  = {
+			create_wargoal = {
+				type = annex_everything
+				target = AFG
+			}
+		}
+		visible = {
+			has_completed_focus = RPR_liberate_our_eastern_brothers
+		}
+		available = {
+			has_war = no
+			AFG = {
+				AND = {
+					exists = yes
+					has_war = no
+					is_subject = no
+					any_neighbor_country = {
+						OR = {
+							tag = RPR
+							is_in_faction_with = RPR
+						}
+					}
+				}
+			}
+			
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	RPR_bukhara = {
+		cost = 50
+		complete_effect  = {
+			create_wargoal = {
+				type = annex_everything
+				target = BKR
+			}
+		}
+		visible = {
+			has_completed_focus = RPR_liberate_our_eastern_brothers
+		}
+		available = {
+			has_war = no
+			BKR = {
+				AND = {
+					exists = yes
+					has_war = no
+					is_subject = no
+					any_neighbor_country = {
+						OR = {
+							tag = RPR
+							is_in_faction_with = RPR
+						}
+					}
+				}
+			}
+			
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	RPR_transcaspia = {
+		cost = 50
+		complete_effect  = {
+			create_wargoal = {
+				type = annex_everything
+				target = TUC
+			}
+		}
+		visible = {
+			has_completed_focus = RPR_liberate_our_eastern_brothers
+		}
+		available = {
+			has_war = no
+			TUC = {
+				AND = {
+					exists = yes
+					has_war = no
+					is_subject = no
+					is_in_faction = no
+					any_neighbor_country = {
+						OR = {
+							tag = RPR
+							is_in_faction_with = RPR
+						}
+					}
+				}
+			}
+			
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	RPR_armenia = {
+		cost = 50
+		complete_effect  = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = ARM
+			}
+		}
+		visible = {
+			has_completed_focus = RPR_freedom_of_the_caucasians
+		}
+		available = {
+			has_war = no
+			ARM = {
+				AND = {
+					exists = yes
+					is_in_faction = no
+					has_war = no
+					is_subject = no
+					any_neighbor_country = {
+						OR = {
+							tag = RPR
+							is_in_faction_with = RPR
+						}
+					}
+				}
+			}
+			
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	RPR_assyria = {
+		cost = 50
+		complete_effect  = {
+			create_wargoal = {
+				type = annex_everything
+				target = ASY
+			}
+		}
+		visible = {
+			has_completed_focus = RPR_freedom_of_the_caucasians
+		}
+		available = {
+			has_war = no
+			ASY = {
+				AND = {
+					exists = yes
+					has_war = no
+					is_subject = no
+					any_neighbor_country = {
+						OR = {
+							tag = RPR
+							is_in_faction_with = RPR
+						}
+					}
+				}
+			}
+			
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	RPR_azerbaijan = {
+		cost = 50
+		complete_effect  = {
+			create_wargoal = {
+				type = annex_everything
+				target = AZR
+			}
+		}
+		visible = {
+			has_completed_focus = RPR_iran_reborn_from_agony
+		}
+		available = {
+			has_war = no
+			AZR = {
+				AND = {
+					exists = yes
+					has_war = no
+					is_subject = no
+					any_neighbor_country = {
+						OR = {
+							tag = RPR
+							is_in_faction_with = RPR
+						}
+					}
+				}
+			}
+			
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	RPR_kurdistan = {
+		cost = 50
+		complete_effect  = {
+			KUR = {
+				remove_state_core = 421
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = KUR
+			}
+		}
+		visible = {
+			has_completed_focus = RPR_iran_reborn_from_agony
+		}
+		available = {
+			has_war = no
+			KUR = {
+				AND = {
+					exists = yes
+					has_war = no
+					is_subject = no
+					any_neighbor_country = {
+						OR = {
+							tag = RPR
+							is_in_faction_with = RPR
+						}
+					}
+				}
+			}
+			
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	RPR_iraq = {
+		cost = 50
+		complete_effect  = {
+			IRQ = {
+				leave_faction = yes
+			}
+			ENG = {
+				end_puppet = IRQ
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = IRQ
+			}
+		}
+		visible = {
+			has_completed_focus = RPR_equality_to_the_euphrates
+		}
+		available = {
+			has_war = no
+			IRQ = {
+				AND = {
+					exists = yes
+					has_war = no
+					any_neighbor_country = {
+						OR = {
+							tag = RPR
+							is_in_faction_with = RPR
+						}
+					}
+				}
+			}
+			
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	RPR_aljazira = {
+		cost = 50
+		complete_effect  = {
+			create_wargoal = {
+				type = take_state
+				target = SNP
+			}
+		}
+		visible = {
+			has_completed_focus = RPR_equality_to_the_euphrates
+		}
+		available = {
+			SNP = {
+				AND = {
+					exists = yes
+					has_war = no
+					is_subject = no
+					any_neighbor_country = {
+						OR = {
+							tag = RPR
+							is_in_faction_with = RPR
+						}
+					}
+				}
+			}
+			
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+#### RED PERSIA MECHANICS ####
+RPR_class_struggle = {
+	RPR_favor_industrialists = {
+		cost = 100
+		visible = {
+			has_country_flag = RPR_class_conflict_mechanic_flag
+		}
+		fire_only_once = no
+		complete_effect = {
+			add_timed_idea = {
+				idea = RPR_industrialists
+				days = 150
+			}
+			custom_effect_tooltip = "RPR_industrialists_tooltip_10"
+			hidden_effect = {
+				add_to_variable = {
+				var = RPR_industrialist_influence
+				value = 0.10
+						}
+				add_to_variable = {
+				var = RPR_farmer_influence
+				value = -0.15
+						}
+				add_to_variable = {
+				var = RPR_urbanite_influence
+				value = 0.05
+				}
+			}
+		}
+	}
+	RPR_favor_farmers = {
+		cost = 100
+		visible = {
+			has_country_flag = RPR_class_conflict_mechanic_flag
+		}
+		fire_only_once = no
+		complete_effect = {
+			add_timed_idea = {
+				idea = RPR_farmers
+				days = 150
+			}
+			custom_effect_tooltip = "RPR_farm_tooltip_10"
+			hidden_effect = {
+				add_to_variable = {
+					var = RPR_farmer_influence
+					value = 0.10
+				}
+				add_to_variable = {
+					var = RPR_urbanite_influence
+					value = -0.05
+				}
+				add_to_variable = {
+					var = RPR_industrialist_influence
+					value = -0.05
+				}
+			}
+		}
+	}
+	RPR_expand_urban_zones = {
+		cost = 100
+		visible = {
+			has_country_flag = RPR_class_conflict_mechanic_flag
+		}
+		fire_only_once = no
+		complete_effect = {
+			add_timed_idea = {
+				idea = RPR_urbanites
+				days = 150
+			}
+			custom_effect_tooltip = "RPR_urbanite_tooltip_10"
+			hidden_effect = {
+				add_to_variable = {
+					var = RPR_urbanite_influence
+					value = 0.05
+				}
+				add_to_variable = {
+					var = RPR_farmer_influence
+					value = -0.10
+				}
+				add_to_variable = {
+					var = RPR_industrialist_influence
+					value = 0.05
+				}
+			}
+		}
+	}
+}
+#### STARTING DECISION ####
+PER_starting_mechanic = {
+	PER_pay_debts = {
+		cost = 15
+		complete_effect  = {
+			custom_effect_tooltip = "PER_denbts_tooltip_5"
+			hidden_effect = {
+			add_to_variable = {
+				var = PER_debts_to_ENG
+				value = 0.05
+				}
+			}
+		}
+		visible = {
+			has_country_flag = PER_starting_mechanic_flag
+		}
+		available = {
+			has_war = no
+			check_variable = {
+				var = PER_debts_to_ENG
+				value = 1
+				compare = less_than
+			}
+		}
+		fire_only_once = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	PER_default_on_debts = {
+		allowed = {
+			tag = PER
+		}
+		available = {
+			has_country_flag = PER_starting_mechanic_flag
+			has_war = no
+		}
+		activation = {
+			has_country_flag = PER_civil_war_mechanic_flag
+		}
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 10
+		timeout_effect = {
+			clr_country_flag = PER_starting_mechanic_flag
+			clr_country_flag = PER_civil_war_mechanic_flag
+		}
+		complete_effect = {
+		   add_political_power = 50
+			clr_country_flag = PER_starting_mechanic_flag
+			clr_country_flag = PER_civil_war_mechanic_flag
+		}
+	}
+}
+#### APOC MECHANIC ####
+
+PER_fire_on_the_world_scw = {
+	PER_sell_guns_to_scw_regen = {
+		custom_cost_trigger = {
+			has_equipment = {
+				infantry_equipment_1 > 999
+			}
+		}
+		custom_cost_text = 1000_infantry_equipment
+		complete_effect = {
+		}
+        days_remove = 10
+        remove_effect = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+			}
+			random_owned_controlled_state = {
+				add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+				}
+			}
+			SPA = {
+			add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 1000
+			producer = PER
+					}
+				}
+			PER = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = -1000
+					producer = PER
+				}
+			}
+			add_to_variable = {
+				var = PER_commitment_to_spain
+				value = 0.2
+			}
+        }
+		visible = {
+			has_global_flag = spain_cw
+		}
+		available = {
+			has_war = no
+			check_variable = {
+				var = PER_commitment_to_spain
+				value = 1
+				compare = less_than
+			}
+		}
+		fire_only_once = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	PER_sell_guns_to_scw_repub = {
+		custom_cost_trigger = {
+			has_equipment = {
+				infantry_equipment_1 > 999
+			}
+		}
+		custom_cost_text = 1000_infantry_equipment
+		complete_effect = {
+		}
+        days_remove = 10
+        remove_effect = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+			}
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			SPR = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 1000
+					producer = PER
+				}
+			}
+			PER = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = -1000
+					producer = PER
+				}
+			}
+			add_to_variable = {
+				var = PER_commitment_to_spain
+				value = 0.2
+			}
+        }
+		visible = {
+			has_global_flag = spain_cw
+		}
+		available = {
+			has_war = no
+			check_variable = {
+				var = PER_commitment_to_spain
+				value = 1
+				compare = less_than
+			}
+		}
+		fire_only_once = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+PER_fire_on_the_world_fiume_italy = {
+	PER_sell_guns_to_italy = {
+		custom_cost_trigger = {
+			has_equipment = {
+				infantry_equipment_1 > 999
+			}
+		}
+		custom_cost_text = 1000_infantry_equipment
+		complete_effect = {
+		}
+        days_remove = 10
+        remove_effect = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}		
+			}
+			ITA = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 1000
+					producer = PER
+				}
+			}
+			PER = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = -1000
+					producer = PER
+				}
+			}
+			add_to_variable = {
+				var = PER_commitment_to_fiw
+				value = 0.2
+			}
+        }
+		visible = {
+			ITA = {
+				has_war_with = FIU
+			}
+			has_war = no
+			check_variable = {
+				var = PER_commitment_to_fiw
+				value = 1
+				compare = less_than
+			}
+		}
+		fire_only_once = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	PER_sell_guns_to_fiume = {
+		custom_cost_trigger = {
+		has_equipment = {
+		infantry_equipment_1 > 999
+			}
+		}
+		custom_cost_text = 1000_infantry_equipment
+		complete_effect = {
+		}
+        days_remove = 10
+        remove_effect = {
+			random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}		
+			}
+			FIU = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 1000
+					producer = PER
+				}
+			}
+			PER = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = -1000
+					producer = PER
+				}
+			}
+			add_to_variable = {
+				var = PER_commitment_to_fiw
+				value = 0.2
+			}
+        }
+		visible = {
+			ITA = {
+				has_war_with = FIU
+			}
+			has_war = no
+			check_variable = {
+				var = PER_commitment_to_fiw
+				value = 1
+				compare = less_than
+			}
+		}
+		fire_only_once = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+PER_fire_on_the_world_franco_german_war = {
+	PER_sell_guns_to_germany = {
+		custom_cost_trigger = {
+		has_equipment = {
+		infantry_equipment_1 > 999
+			}
+		}
+		custom_cost_text = 1000_infantry_equipment
+		complete_effect = {
+		}
+        days_remove = 10
+        remove_effect = {
+		random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}		
+		}
+		add_to_variable = {
+			var = PER_commitment_to_FGW
+			value = 0.2
+		}
+		GER = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 1000
+				producer = PER
+			}
+		}
+		PER = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -1000
+				producer = PER
+			}
+		}
+        }
+		visible = {
+			GER = {
+				has_war_with = FRA
+			}
+			has_war = no
+			check_variable = {
+				var = PER_commitment_to_FGW
+				value = 1
+				compare = less_than
+			}
+		}
+		fire_only_once = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	PER_sell_guns_to_france = {
+		custom_cost_trigger = {
+		has_equipment = {
+		infantry_equipment_1 > 999
+			}
+		}
+		custom_cost_text = 1000_infantry_equipment
+		complete_effect = {
+		}
+        days_remove = 10
+        remove_effect = {
+			random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			FRA = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 1000
+					producer = PER
+				}
+			}
+			PER = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = -1000
+					producer = PER
+				}
+			}
+			add_to_variable = {
+				var = PER_commitment_to_FGW
+				value = 0.2
+			}
+        }
+		visible = {
+			GER = {
+				has_war_with = FRA
+			}
+			has_war = no
+			check_variable = {
+				var = PER_commitment_to_FGW
+				value = 1
+				compare = less_than
+			}
+		}
+		fire_only_once = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+PER_fire_on_the_world_zhr_reconquest = {
+	PER_sell_guns_to_zhr = {
+		custom_cost_trigger = {
+		has_equipment = {
+		infantry_equipment_1 > 999
+			}
+		}
+		custom_cost_text = 1000_infantry_equipment
+		complete_effect = {
+		}
+        days_remove = 10
+        remove_effect = {
+			random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}		
+			}
+			add_to_variable = {
+				var = PER_commitment_to_ZHR
+				value = 0.2
+			}
+			ZHR = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 1000
+					producer = PER
+				}
+			}
+			PER = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = -1000
+					producer = PER
+				}
+			}
+        }
+		visible = {
+			OR = {
+				ZHR = {
+					has_war_with = RUS
+				}
+				ZHR = {
+					has_war_with = SRU
+				}
+				ZHR = {
+					has_war_with = KCK
+				}
+				ZHR = {
+					has_war_with = SIB
+				}
+				ZHR = {
+					has_war_with = ORE
+				}
+			}
+			has_war = no
+			check_variable = {
+				var = PER_commitment_to_ZHR
+				value = 1
+				compare = less_than
+			}
+		}
+		fire_only_once = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	PER_sell_guns_to_siberia = {
+		custom_cost_trigger = {
+		has_equipment = {
+		infantry_equipment_1 > 999
+			}
+		}
+		custom_cost_text = 1000_infantry_equipment
+		complete_effect = {
+		}
+        days_remove = 10
+        remove_effect = {
+			random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}		
+			}
+			SIB = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 1000
+					producer = PER
+				}
+			}
+			PER = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = -1000
+					producer = PER
+				}
+			}
+			add_to_variable = {
+				var = PER_commitment_to_ZHR
+				value = 0.2
+			}
+        }
+		visible = {
+			OR = {
+				ZHR = {
+					has_war_with = RUS
+				}
+				ZHR = {
+					has_war_with = SRU
+				}
+				ZHR = {
+					has_war_with = KCK
+				}
+				ZHR = {
+					has_war_with = SIB
+				}
+				ZHR = {
+					has_war_with = ORE
+				}
+			}
+			has_war = no
+			check_variable = {
+				var = PER_commitment_to_ZHR
+				value = 1
+				compare = less_than
+			}
+		}
+		fire_only_once = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	PER_sell_guns_to_sru = {
+		custom_cost_trigger = {
+		has_equipment = {
+		infantry_equipment_1 > 999
+			}
+		}
+		custom_cost_text = 1000_infantry_equipment
+		complete_effect = {
+		}
+        days_remove = 10
+        remove_effect = {
+			random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+				}		
+			}
+			SRU = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 1000
+					producer = PER
+				}
+			}
+			PER = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = -1000
+					producer = PER
+				}
+			}
+			add_to_variable = {
+				var = PER_commitment_to_ZHR
+				value = 0.2
+			}
+		}
+		visible = {
+			OR = {
+				ZHR = {
+					has_war_with = RUS
+				}
+				ZHR = {
+					has_war_with = SRU
+				}
+				ZHR = {
+					has_war_with = KCK
+				}
+				ZHR = {
+					has_war_with = SIB
+				}
+				ZHR = {
+					has_war_with = ORE
+				}
+			}
+			has_war = no
+			check_variable = {
+				var = PER_commitment_to_ZHR
+				value = 1
+				compare = less_than
+			}
+		}
+		fire_only_once = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	PER_sell_guns_to_rus = {
+		custom_cost_trigger = {
+		has_equipment = {
+		infantry_equipment_1 > 999
+			}
+		}
+		custom_cost_text = 1000_infantry_equipment
+		complete_effect = {
+		}
+        days_remove = 10
+        remove_effect = {
+			random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+				}		
+			}
+			RUS = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 1000
+					producer = PER
+				}
+			}
+			PER = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = -1000
+					producer = PER
+				}
+			}
+			add_to_variable = {
+				var = PER_commitment_to_ZHR
+				value = 0.2
+			}
+		}
+		visible = {
+			OR = {
+				ZHR = {
+				has_war_with = RUS
+				}
+				ZHR = {
+				has_war_with = SRU
+				}
+				ZHR = {
+				has_war_with = KCK
+				}
+				ZHR = {
+				has_war_with = SIB
+				}
+				ZHR = {
+				has_war_with = ORE
+				}
+			}
+			has_war = no
+			check_variable = {
+				var = PER_commitment_to_ZHR
+				value = 1
+				compare = less_than
+			}
+		}
+		fire_only_once = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

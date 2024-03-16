@@ -1,0 +1,18 @@
+focus_tree = {
+	id = RF_Empty
+	country = {
+		factor = 0
+		modifier = {
+			add = 2137
+			OR = {
+				tag = LEO
+				tag = ATU
+			}
+		}
+	}
+	continuous_focus_position = { x = 100 y = 1200 }
+	
+	default = no
+
+	
+}

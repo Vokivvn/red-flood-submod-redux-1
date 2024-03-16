@@ -1,0 +1,23 @@
+state={
+	id=940
+	name=STATE_940
+	manpower = 159241
+
+	state_category = town
+
+	history = {
+			victory_points = {
+			4927 1
+		}
+		owner = UPV
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+		add_core_of = UPV
+	}
+
+	provinces={
+		12794 8116 7954 7930 4927 5045 13374 13377 13378
+	}
+}

@@ -1,0 +1,14 @@
+characters = {
+	CHA_Al_Siddiq = {
+		name = "Al-Siddiq al-Mahdi"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/CHA/Portrait_CHA_Al_Siddiq.png"
+			}
+		}
+		country_leader = {
+			ideology = religious_fundamentalism
+			expire = "1965.1.1.1"
+		}
+	}
+}

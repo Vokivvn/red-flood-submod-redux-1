@@ -1,0 +1,34 @@
+on_actions = {
+
+	#ROOT is winner #FROM is loser
+	on_capitulation_immediate = {
+		effect = {
+
+			############# End of Japanese Civil War
+			if = { #The commies win
+				limit = {
+					tag = JAP
+					FROM = { tag = JPR }
+				}
+				clr_global_flag = JAP_revolution
+				country_event = { id = japan.202 days = 2 }
+				ROOT = { transfer_navy = { target = FROM } }
+				FRA = {
+					unlock_national_focus = FRA_looking_into_orient
+				}
+			}
+			if = { #The Imperial Loyalists win
+				limit = {
+					tag = JPR
+					FROM = { tag = JAP }
+				}
+				clr_global_flag = JAP_revolution
+				country_event = { id = japan.201 days = 2 }
+				ROOT = { transfer_navy = { target = FROM } }
+				FRA = {
+					unlock_national_focus = FRA_looking_into_orient
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,23 @@
+
+state={
+	id=1298
+	name="STATE_1298"
+	manpower = 1120345
+	state_category = town
+
+	history={
+		owner = SRU
+		add_core_of = SRU
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+		victory_points = {
+			3335 10
+		}
+	}
+
+	provinces={
+		288 352 398 3226 3306 3335 3345 3364 3390 6252 6305 6411 9261 9301 11284
+	}
+}

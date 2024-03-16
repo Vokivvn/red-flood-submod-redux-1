@@ -1,0 +1,33 @@
+
+state={
+	id=831
+	name="STATE_831"
+	manpower = 490155
+
+	state_category = city
+
+	resources={
+		steel=20
+		aluminium = 15
+	}
+
+	history={
+		owner = ENG
+		victory_points = {
+			12299 20
+		}
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			air_base = 4
+			12299 = {
+				naval_base = 8
+				coastal_bunker = 3
+			}
+		}
+	}
+
+	provinces={
+		12299
+	}
+}

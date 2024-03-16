@@ -1,0 +1,41 @@
+ideas = {
+	country = {
+		KHW_front = {
+			removal_cost = -1
+			picture = KHW_front
+			allowed = {
+				original_tag = KHW
+			}
+			modifier= {
+				stability_factor = -0.05
+				political_power_gain = -0.25
+			}
+		}
+		KHW_army = {
+			removal_cost = -1
+			picture = KHW_tra
+			allowed = {
+				original_tag = KHW
+			}
+			modifier= {
+				army_attack_factor = 0.05
+				army_org_factor = 0.1
+				war_support_factor = 0.1
+			}
+		}
+	}
+	hidden_ideas = {
+		KHW_hiddenbuff = {
+			removal_cost = -1
+			allowed = {
+				original_tag = TUK
+			}
+			modifier = {
+				army_attack_factor = 0.1
+				army_defence_factor = 0.05
+				production_speed_buildings_factor = 0.1
+				supply_consumption_factor = -0.1
+			}
+		}
+	}
+}

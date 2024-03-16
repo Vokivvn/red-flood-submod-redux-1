@@ -1,0 +1,198 @@
+add_namespace = SAU
+
+country_event = {
+	id = SAU.1
+	title = SAU.1.t
+	desc = SAU.1.d
+	picture = GFX_report_event_airplane_factory
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = SAU.1.a
+		ai_chance = { 
+			base = 3
+		}
+		ALJ = {
+			leave_faction = yes
+		}
+		declare_war_on = {
+			target = ALJ
+			type = annex_everything
+		}
+		news_event = {
+			id = news.344
+		}
+	}
+}
+country_event = {
+	id = SAU.3
+	title = SAU.3.t
+	desc = SAU.3.d
+	picture = GFX_report_event_airplane_factory
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = SAU.3.a
+		ai_chance = { 
+			base = 3
+		}
+		declare_war_on = {
+			target = YEM
+			type = annex_everything
+		}
+		if = {
+			limit = { owns_state = 294 }
+			news_event = {
+				id = news.347
+			}
+		}
+		if = {
+			limit = { NOT = { owns_state = 294 } }
+			news_event = {
+				id = news.3471
+			}
+		}
+		country_event = {
+			id = SAU.33
+			days = 135
+		}
+	}
+}
+country_event = {
+	id = SAU.33
+	title = SAU.33.t
+	desc = SAU.33.d
+	picture = GFX_report_event_airplane_factory
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = SAU.33.a
+		ai_chance = { 
+			base = 3
+		}
+		if = {
+			limit = {
+				NOT = {
+					SAU = {
+						has_country_flag = SAU_yemen
+					}
+				}
+				AND = {
+					YEM = {
+						has_war_with = SAU
+						controls_state = 293
+						surrender_progress < 0.5
+					}
+				}
+			}
+			white_peace = {
+				tag = YEM
+			}
+		}
+	}
+}
+country_event = {
+	id = SAU.4
+	title = SAU.4.t
+	desc = SAU.4.d
+	picture = GFX_report_event_airplane_factory
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = SAU.4.a
+		ai_chance = { 
+			base = 3
+		}
+		ENG = {
+			end_puppet = OMA
+			set_state_owner = 994
+			set_state_owner = 1214
+		}
+		OMA = {
+			leave_faction = yes
+			set_politics = {
+			ruling_party = despotism
+			}
+		}
+		declare_war_on = {
+			target = OMA
+			type = annex_everything
+		}
+		news_event = {
+			id = news.346
+		}
+		country_event = {
+			id = SAU.44
+			days = 90
+		}
+	}
+}
+
+country_event = {
+	id = SAU.44
+	title = SAU.44.t
+	desc = SAU.44.d
+	picture = GFX_report_event_airplane_factory
+
+	fire_only_once = yes
+	is_triggered_only = yes
+		
+	option = {
+		name = SAU.44.a
+		ai_chance = { 
+			base = 3
+		}
+		if = {
+			limit = {
+				AND = {
+					OMA = {
+						has_war_with = SAU
+						controls_state = 294
+						surrender_progress < 0.5
+					}
+				}
+			}
+			white_peace = {
+				tag = OMA
+			}
+		}
+	}
+}
+
+
+country_event = {
+	id = SAU.2
+	title = SAU.2.t
+	desc = SAU.2.d
+	picture = GFX_report_event_airplane_factory
+
+	fire_only_once = yes
+
+	trigger = {
+		tag  = SAU
+		SAU = {
+			owns_state = 1204
+			has_war = no
+		}
+	}
+
+	option = {
+		name = SAU.2.a
+		ai_chance = { 
+			base = 3
+		}
+		set_cosmetic_tag = SAU_ALJ
+		add_state_core = 1122
+		add_state_core = 679
+		add_state_core = 1204
+		add_state_core = 1203
+	}
+}

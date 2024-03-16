@@ -1,0 +1,16 @@
+characters={
+	VMT_william_h_wills={
+		name="William Henry Wills"
+		portraits={
+			civilian={
+				large="gfx/leaders/VMT/Portrait_William_H_Wills.png"
+			}
+		}
+		country_leader={
+			ideology=social_liberalism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	
+}

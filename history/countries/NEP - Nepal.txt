@@ -1,0 +1,55 @@
+﻿capital = 323
+
+oob = "NEP"
+
+set_research_slots = 2 
+
+add_ideas = {
+#
+}
+
+set_technology = {
+	infantry_weapons = 1
+	gw_artillery = 1
+	basic_train = 1
+	tech_mountaineers = 1
+}
+
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+	set_technology = {
+		iw_small_airframe = 1
+		aa_lmg = 1
+		engines_1 = 1
+	}
+}
+if = {
+	limit = { NOT = { has_dlc = "By Blood Alone" } }
+	set_technology = {
+		early_fighter = 1
+	}
+}
+
+set_politics = {
+	ruling_party = despotism
+	last_election = "1933.10.25"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	vanguard_socialism = 10
+	popular_socialism = 0
+	anarchism = 0
+	revisionist_socialism = 0
+	progressivism = 10
+	liberalism = 0
+	conservatism = 20
+	right_authoritarianism = 0
+	despotism = 20
+	reactionism = 30
+	accelerationism = 10
+}
+
+set_stability = 0.5
+
+recruit_character = NEP_tribhuvan_bir_bikram_shah

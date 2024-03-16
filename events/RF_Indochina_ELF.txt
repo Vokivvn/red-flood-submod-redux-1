@@ -1,0 +1,153 @@
+#####################################
+#	Indochina EVENTS - BABA + ARIEL	#And Hours Too #Also Pintar 
+#####################################
+
+add_namespace = viet
+
+country_event = {
+	id = viet.1 #Diem's crisis
+	title = viet.1.t
+	desc = viet.1.desc
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = viet.1.a
+		VIN = {
+			drop_cosmetic_tag = yes
+			set_politics = {
+				ruling_party = revisionist_socialism
+				elections_allowed = no
+			}
+		}
+		news_event = {
+			id = news.218
+		}
+	}
+	option = {
+		name = viet.1.b
+		VIN = {
+			drop_cosmetic_tag = yes
+			set_politics = {
+				ruling_party = vanguard_socialism
+				elections_allowed = no
+			}
+		}
+		news_event = {
+			id = news.219
+		}
+		hidden_effect = {
+			VIN = {
+				country_event = {
+					id = viet.2
+					days = 105
+				}
+			}
+		}
+	}
+	option = {
+		name = viet.1.c
+		VIN = {
+			drop_cosmetic_tag = yes
+			add_country_leader_role = {
+				character = "VIN_Nguyen_Thai_Hoc"
+				country_leader = {
+					ideology = progressive_democracy
+					expire = "1965.1.1.1"
+				}
+				promote_leader = yes
+			}
+			set_politics = {
+				ruling_party = progressivism
+				elections_allowed = no
+			}
+			country_event = {
+				id = viet.4
+				days = 35
+			}
+		}
+		news_event = {
+			id = news.221
+		}
+	}
+}
+country_event = {
+	id = viet.2 #Syndies coup
+	title = viet.2.t
+	desc = viet.2.desc
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = viet.2.a
+		VIN = {
+			set_politics = {
+				ruling_party = popular_socialism
+				elections_allowed = no
+			}
+			country_event = {
+				id = viet.3
+				days = 35
+			}
+		}
+		news_event = {
+			id = news.220
+		}
+	}
+	option = {
+		name = viet.2.b
+	}
+}
+country_event = {
+	id = viet.3 #Syndies choose a leader
+	title = viet.3.t
+	desc = viet.3.desc
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = viet.3.a
+	}
+	option = {
+		name = viet.3.b
+		VIN = {
+			set_cosmetic_tag = VIN_Nhu
+			add_country_leader_role = {
+				character = "VIN_Ngo_Dinh_Nhu"
+				country_leader = {
+					ideology = syndicalism
+					expire = "1965.1.1.1"
+				}
+				promote_leader = yes
+			}
+			set_politics = {
+				ruling_party = popular_socialism
+				elections_allowed = no
+			}
+		}
+	}
+}
+country_event = {
+	id = viet.4 #VNQDD choose a leader
+	title = viet.4.t
+	desc = viet.4.desc
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = viet.4.a
+	}
+	option = {
+		name = viet.4.b
+		VIN = {
+			set_politics = {
+				ruling_party = conservatism
+				elections_allowed = no
+			}
+		}
+	}
+}

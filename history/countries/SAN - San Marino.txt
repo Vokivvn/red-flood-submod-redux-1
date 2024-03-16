@@ -1,0 +1,31 @@
+﻿capital = 1072
+
+set_research_slots = 0
+
+set_politics = {
+	ruling_party = despotism
+	last_election = "1923.10.27"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	vanguard_socialism = 0
+	popular_socialism = 0
+	anarchism = 5
+	revisionist_socialism = 13
+	progressivism = 0
+	liberalism = 0
+	conservatism = 0
+	right_authoritarianism = 0
+	despotism = 63
+	reactionism = 19
+	accelerationism = 0
+}
+
+set_stability = 1
+
+recruit_character = SAN_benito_mussolini
+recruit_character = SAN_benito_mussolini_revsoc
+recruit_character = SAN_benito_mussolini_anarkkkiddy
+recruit_character = SAN_benito_mussolini_trvdoid
+recruit_character = SAN_benito_mussolini_fvstpilled

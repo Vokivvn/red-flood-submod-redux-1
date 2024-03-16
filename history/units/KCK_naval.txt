@@ -1,0 +1,76 @@
+
+instant_effect = {
+ create_equipment_variant = {
+		name = "Kamchatskaya Class"
+		type = ship_hull_light_1
+		name_group = GER_TB_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_1
+			fixed_ship_anti_air_slot = empty
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = light_ship_engine_1
+			fixed_ship_torpedo_slot = empty
+			rear_1_custom_slot = ship_mine_layer_1
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Delfin Class"
+		type = ship_hull_submarine_1
+		name_group = GER_SS_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_torpedo_slot = ship_torpedo_sub_1
+			fixed_ship_engine_slot = sub_ship_engine_1
+			rear_1_custom_slot = empty
+		}
+	}
+	create_equipment_variant = {
+		name = "Stark Class"
+		type = ship_hull_cruiser_1
+		name_group = GER_CL_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_medium_battery_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+			fixed_ship_armor_slot = empty
+			mid_1_custom_slot = ship_torpedo_1
+			mid_2_custom_slot = ship_torpedo_1
+		}
+		obsolete = yes
+	}
+
+}
+
+
+units= {
+	fleet = {
+		name = "Tikhookeanskaya Flotiliya"		
+		naval_base = 4728
+		task_force = {		
+			name = "Kamchatskaya Eskadra I"			
+			location = 4728
+			ship = { name = "Manchzhur" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = KCK version_name = "Kamchatskaya Class" } } }
+			ship = { name = "Groznyi" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = KCK version_name = "Kamchatskaya Class" } } }
+			ship = { name = "Peresvet" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = KCK version_name = "Kamchatskaya Class"} } }
+			ship = { name = "Angara" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = KCK version_name = "Kamchatskaya Class" } } }
+			ship = { name = "Delfin" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = KCK version_name = "Delfin Class"} } }				
+			ship = { name = "Skat" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = KCK version_name = "Delfin Class"} } }	
+			ship = { name = "Admiral Stark" definition = battleship equipment = { ship_hull_cruiser_1 = { amount = 1 owner = KCK version_name = "Stark Class"} } }				
+		}
+		task_force = {
+			name = "Kamchatskaya Eskadra II"			
+			location = 4728
+			ship = { name = "Retvizan" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = KCK  version_name = "Kamchatskaya Class"} } }
+			ship = { name = "Tsesarevich" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = KCK  version_name = "Kamchatskaya Class"} } }
+			ship = { name = "Kasatka" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = KCK version_name = "Delfin Class"} } }	
+			ship = { name = "Nalim" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = KCK version_name = "Delfin Class"} } }	
+			ship = { name = "Zhemchug" definition = light_cruiser equipment = { ship_hull_light_1 = { amount = 1 owner = KCK  version_name = "Kamchatskaya Class"} } }
+			ship = { name = "Askold" definition = heavy_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = KCK version_name = "Stark Class"} } }
+		}	
+	}
+}

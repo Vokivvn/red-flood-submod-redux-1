@@ -1,0 +1,26 @@
+characters = {
+	CRO_ante_pavelić = {
+		name = "Ante Pavelić"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/CRO/Portrait_CRO_Ante_Pavelic.png"
+			}
+		}
+		country_leader = {
+			ideology = reactionary_populism
+			expire = "1965.1.1.1"
+		}
+	}
+	CRO_vladko = {
+		name = "Vladko Maček"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/CRO/Portrait_CRO_Vladko_Macek.png"
+			}
+		}
+		country_leader = {
+			ideology = social_conservatism
+			expire = "1965.1.1.1"
+		}
+	}
+}

@@ -1,0 +1,94 @@
+characters = {
+	MON_duan_qirui = {
+		name = "Duan Qirui"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MON/Portrait_MON_Duan_Qirui.png"
+			}
+			army = {
+				large = "gfx/leaders/MON/Portrait_MON_Duan_Qirui_g.png"
+			}
+		}
+		country_leader = {
+			ideology = oligarchy
+			expire = "1965.1.1.1"
+			desc = POLITICS_DUAN_QIRUI_DESC
+		}
+		field_marshal = {
+			traits = { 
+				defensive_doctrine
+				politically_connected
+			}
+			skill = 3
+			attack_skill = 3
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 2
+		}
+	}
+	MON_xu_shuzheng = {
+		name = "Xu Shuzheng"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MON/Portrait_MON_Xu_Shuzheng.png"
+			}
+			army = {
+				large = "gfx/leaders/MON/Portrait_MON_Xu_Shuzheng_g.png"
+			}
+		}
+		country_leader = {
+			ideology = oligarchy
+			expire = "1965.1.1.1"
+			desc = POLITICS_XU_SHUZHENG_DESC
+		}
+		corps_commander = {
+			traits = { career_officer  }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+		}
+	}
+	MON_wang_yitang = {
+		name = "Wang Yitang"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MON/Portrait_MON_Wang_Yitang.png"
+			}
+		}
+		country_leader = {
+			ideology = national_conservatism
+			expire = "1965.1.1.1"
+			desc = POLITICS_WANG_YTIANG_DESC
+		}
+	}
+	MON_yuan_keding = {
+		name = "Yuan Keding"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MON/Portrait_Yuan_Keding.png"
+			}
+		}
+		country_leader = {
+			ideology = absolute_monarchy
+			expire = "1965.1.1.1"
+		}
+	}
+	MON_prince_darijaya = {
+		name = "Prince Darijaya"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MON/Portrait_Prince_Darijaya.png"
+			}
+		}
+		corps_commander = {
+			traits = { }
+			skill = 1 
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+}

@@ -1,0 +1,27 @@
+add_namespace = trk
+
+country_event = {
+	id = trk.1
+	title = trk.1.t
+	desc = trk.1.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = trk.1.a
+		RUS = {
+			set_autonomy = {
+				target = TRK
+				autonomy_state = autonomy_free
+			}
+		}
+		remove_ideas = RUS_warlord_indifference
+		remove_dynamic_modifier = {
+			modifier = second_smuta
+		}
+		set_cosmetic_tag = TRK_independent
+		set_country_flag = TRK_free
+		clr_country_flag = TRK_loyal
+		mark_focus_tree_layout_dirty = yes
+	}
+}

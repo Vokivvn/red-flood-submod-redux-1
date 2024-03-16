@@ -1,0 +1,55 @@
+﻿instant_effect = {
+	create_equipment_variant = {
+		name = "Fokker C.X" #also represents Fokker C.V
+		type = small_plane_cas_airframe_0
+		modules = {
+			fixed_main_weapon_slot = bomb_locks
+			fixed_auxiliary_weapon_slot_1 = light_mg_2x
+			engine_type_slot = engine_1_1x
+			special_type_slot_1 = empty
+		}
+	}
+	create_equipment_variant = {
+		name = "Fokker T.IV"
+		type = medium_plane_airframe_0
+		modules = {
+			fixed_main_weapon_slot = medium_bomb_bay
+			fixed_auxiliary_weapon_slot_1 = torpedo_mounting
+			engine_type_slot = engine_1_2x
+			special_type_slot_1 = flying_boat_medium
+		}
+	}
+}
+
+### Air Wings
+air_wings = {
+	# Luchtvaartafdeling -- NONE
+	# Note: All European aircraft were built by Fokker or ordered from USA starting in 1938
+
+	# Militaire Luchtvaart van het Koninklijk Nederlands-Indisch Leger (ML-KNIL) -- Celebes
+	# Note: ML-KNIL would increase in size during 1937-40 with USA models:
+	#	Curtis P-36 Hawks (H-75), CW-21 Interceptors, Brewster Buffaloes, Martin B-10s (WH-1--WH-3s)
+	1240 = {
+		
+		### There are some HOL planes in the USA_air file because they won't load here
+		
+		small_plane_cas_airframe_0 = {		
+			owner = "HOL" 
+			amount = 12
+			version_name = "Fokker C.X"
+		}
+		medium_plane_airframe_0 = {		
+			owner = "HOL" 
+			amount = 24
+			version_name = "Fokker T.IV"
+		}
+	}
+	7 = {
+		small_plane_cas_airframe_0 = {		
+			owner = "HOL" 
+			amount = 12
+			version_name = "Fokker C.X"
+		}
+
+	}
+}

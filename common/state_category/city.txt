@@ -1,0 +1,14 @@
+state_categories={
+	city = {
+		local_building_slots = 6
+	
+		color = { 0 255 255 }
+
+	}
+	city_mini = {
+		local_building_slots = 4
+	
+		color = { 0 255 255 }
+
+	}
+}

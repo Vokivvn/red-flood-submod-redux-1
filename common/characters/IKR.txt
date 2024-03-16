@@ -1,0 +1,373 @@
+characters = {
+	IKR_ugaki_kazushige = {
+		name = "Ugaki Kazushige"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/IKR/Portrait_Ugaki_Kazushige_civie.png"
+			}
+			army = {
+				large = "gfx/leaders/IKR/Portrait_Ugaki_Kazushige_general.png"
+			}
+		}
+		country_leader = {
+			ideology = military_dictatorship
+			expire = "1965.1.1.1"
+		}
+		field_marshal  = {
+			traits = { career_officer JAP_samurai_lineage }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 3
+		}
+	}
+	IKR_syngman_rhee = {
+		name = "Syngman Rhee"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/IKR/Portrait_Syngman_Rhee.png"
+			}
+		}
+		country_leader = {
+			ideology = anocracy
+			expire = "1965.1.1.1"
+		}
+	}
+	IKR_ahn_changho = {
+		name = "Ahn Changho"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/IKR/Portrait_Ahn_Changho.png"
+			}
+		}
+		country_leader = {
+			ideology = national_conservatism
+			expire = "1965.1.1.1"
+		}
+	}
+	IKR_kim_koo = {
+		name = "Kim Koo"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/IKR/Portrait_Kim_Koo.png"
+			}
+		}
+		country_leader = {
+			ideology = libertarian_capitalism
+			expire = "1965.1.1.1"
+		}
+	}
+	IKR_yuh_woon_hyung = {
+		name = "Yuh Woon-hyung"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/IKR/Portrait_Yuh_Woon_hyung.png"
+			}
+		}
+		country_leader = {
+			ideology = social_nationalism
+			expire = "1965.1.1.1"
+		}
+	}
+	IKR_choe_chang_ik = {
+		name = "Choe Chang-ik"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/IKR/Portrait_Choe_Chiang_ik.png"
+			}
+		}
+		country_leader = {
+			ideology = spartakism
+			expire = "1965.1.1.1"
+		}
+	}
+	IKR_cho_man_sik = {
+		name = "Cho Man-sik"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/IKR/Portrait_Cho_Man_sik.png"
+			}
+		}
+		country_leader = {
+			ideology = agrarian_socialism
+			expire = "1965.1.1.1"
+		}
+	}
+	IKR_kim_chwa_chin = {
+		name = "Kim Chwa-chin"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/IKR/Portrait_Kim_Chwa_chin.png"
+			}
+		}
+		country_leader = {
+			ideology = social_anarchism
+			expire = "1965.1.1.1"
+		}
+	}
+	IKR_pak_hon_yong = {
+		name = "Pak Hon-yong"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/IKR/Portrait_Pak_Hon_Yong.png"
+			}
+		}
+		country_leader = {
+			ideology = leninism
+			expire = "1965.1.1.1"
+		}
+	}
+	IKR_sin_chaeho = {
+		name = "Sin Chaeho"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/IKR/Portrait_Sin_Chaeho_accel.png"
+			}
+		}
+		country_leader = {
+			ideology = national_rejuvenatism
+			expire = "1965.1.1.1"
+		}
+	}
+	IKR_yasuhito = {
+		name = "Yasuhito"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/IKR/Portrait_IKR_Yasuhito.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_YASUHITO_IKR_DESC"
+			ideology = absolute_monarchy
+			expire = "1965.1.1.1"
+		}
+	}
+	IKR_koki_hirota = {	#STARTING#
+		name = KOR_koki_hirota_hog
+		portraits = {
+			army = {
+				small = "GFX_idea_hirota"
+			}
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = IKR_koki_hirota_hog
+			allowed = {
+				original_tag = IKR
+			}
+			visible = {
+				has_completed_focus = IKR_and_his_homeless_court
+			}
+			traits = { 
+				head_of_government
+				hog_pragmatic_statesman
+			}
+		}
+	}
+
+	IKR_yosuke_matsuoka = {
+		name = KOR_yosuke_matsuoka_for
+		portraits = {
+			army = {
+				small = "GFX_idea_matsuoka"
+			}
+		}
+		advisor = {
+			slot = foreign_minister
+			idea_token = IKR_yosuke_matsuoka_for
+			allowed = {
+				original_tag = IKR
+			}
+			visible = {
+				has_completed_focus = IKR_and_his_homeless_court
+			}
+			traits = { 
+				foreign_minister
+				for_ideological_crusader
+			}
+		}
+	}
+	IKR_teijiro_toyoda = {
+		name = "Teijiro Toyada"
+		portraits = {
+			army = {
+				small = "GFX_idea_teijiro"
+				large = "gfx/leaders/IKR/Portrait_Teijiro_Toyoda.png"
+			}
+		}
+		advisor = {
+			slot = foreign_minister
+			idea_token = IKR_teijiro_toyoda_for
+			allowed = {
+				original_tag = IKR
+			}
+			traits = { 
+				foreign_minister
+				for_biased_intellectual
+			}
+		}
+		navy_leader = {
+			traits = { battleship_adherent naval_lineage }
+			skill = 3
+			attack_skill = 4
+			defense_skill = 2
+			maneuvering_skill = 2
+			coordination_skill = 2
+		}
+	}
+
+	IKR_machida_chuji = {
+		name = KOR_machida_chuji_eco
+		portraits = {
+			army = {
+				small = "GFX_idea_machida"
+			}
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = IKR_machida_chuji_eco
+			allowed = {
+				original_tag = IKR
+			}
+			visible = {
+				has_completed_focus = IKR_and_his_homeless_court
+			}
+			traits = { 
+				economy_minister
+				eco_balanced_budget_economy
+			}
+		}
+	}
+
+	IKR_gotaro_ogawa = {
+		name = KOR_gotaro_ogawa_eco
+		portraits = {
+			army = {
+				small = "GFX_idea_ogawa"
+			}
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = IKR_gotaro_ogawa_eco
+			allowed = {
+				original_tag = IKR
+			}
+			visible = {
+				has_completed_focus = IKR_and_his_homeless_court
+			}
+			traits = { 
+				economy_minister
+				eco_laissez_faire_capitalist
+			}
+		}
+	}
+	IKR_yamanashi_hanzo = {
+		name = "Yamanashi Hanzō"
+		portraits = {
+			army = {
+				small = "GFX_idea_hanzo"
+				large = "gfx/leaders/IKR/Portrait_Yamanashi_Hanzo_g.png"
+			}
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = KOR_yamanashi_hanzo_sec
+			allowed = {
+				original_tag = IKR
+			}
+			available = {
+				tag = IKR
+			}
+			traits = { 
+				security_minister
+				sec_secret_police_chief
+			}
+		}
+		corps_commander = {
+			traits = { JAP_samurai_lineage old_guard politically_connected }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+		}
+	}
+	IKR_koiso_kuniaki = {
+		name = "Koiso Kuniaki"
+		portraits = {
+			army = {
+				small = "GFX_idea_kuniaki"
+				large = "gfx/leaders/IKR/Portrait_Kuniaki_Koiso.png"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = KOR_jap_kuniaki_koiso_cof
+			allowed = {
+				original_tag = IKR
+			}
+			available = {
+				tag = IKR
+				has_government = despotism
+			}
+			traits = { 
+				cos_school_of_psychology
+			}
+		}
+		corps_commander = {
+			traits = { JAP_samurai_lineage old_guard politically_connected }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+		}
+	}
+	IKR_minami_jiro = {
+		name = "Minami Jirō"
+		portraits = {
+			army = {
+				small = "GFX_idea_jiro"
+				large = "gfx/leaders/IKR/Portrait_Minami_Jiro.png"
+			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = KOR_minami_jiro_coa
+			allowed = {
+				original_tag = IKR
+			}
+			available = {
+				tag = IKR
+				has_government = despotism
+			}
+			traits = {
+				carm_decisive_battle_doctrine
+			}
+		}
+		corps_commander = {
+			traits = { trickster career_officer infantry_officer }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 3
+		}
+	}
+	IKR_z_int = {
+		name = KOR_z_int
+		advisor = {
+			slot = head_of_intel
+			idea_token = IKR_z_int
+			allowed = {
+				original_tag = IKR
+			}
+			traits = { 
+				head_of_intel
+				int_logistics_specialist
+			}
+		}
+	}
+
+}

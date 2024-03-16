@@ -1,0 +1,121 @@
+﻿capital = 538
+
+oob = "PCN"
+
+set_research_slots = 3 
+
+add_ideas = {
+	limited_conscription
+	partial_economic_mobilisation
+}
+
+
+if = {
+	limit = {
+		not = { has_dlc = "Man the Guns"}
+	}
+	set_technology = {
+		early_submarine = 1
+		early_destroyer = 1
+		basic_destroyer = 1
+		early_light_cruiser = 1
+		basic_light_cruiser = 1
+		early_heavy_cruiser = 1
+		early_battleship = 1
+		transport = 1
+	}
+}
+if = {
+	limit = { has_dlc = "Man the Guns"}
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		early_ship_hull_light = 1
+		basic_ship_hull_light = 1
+		early_ship_hull_cruiser = 1
+		basic_ship_hull_cruiser = 1
+		early_ship_hull_heavy = 1
+		basic_battery = 1
+		basic_light_battery = 1
+		basic_torpedo = 1
+		submarine_mine_laying = 1
+		mtg_transport = 1
+	}
+}
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	support_weapons = 1
+	tech_support = 1		
+	tech_recon = 1
+	tech_engineers = 1
+	tech_trucks =1
+	motorised_infantry = 1
+	pcn_jungle_bugfix = 1
+	gw_artillery = 1
+}
+
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+	set_technology = {
+		iw_small_airframe = 1
+		aa_lmg = 1
+		aa_cannon_1 = 1
+		early_bombs = 1
+		engines_1 = 1
+	}
+}
+if = {
+	limit = { NOT = { has_dlc = "By Blood Alone" } }
+	set_technology = {
+		early_fighter = 1
+		CAS1 = 1
+	}
+}
+
+# Events
+country_event = { id = pcn.3 days = 91 }
+country_event = { id = pcn.4 days = 1220 }
+country_event = { id = pcn.5 days = 1127 }
+
+
+# Politics
+set_politics = {
+	ruling_party = right_authoritarianism
+	last_election = "1933.10.25"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+
+set_popularities = {
+	vanguard_socialism = 0
+	popular_socialism = 0
+	anarchism = 0
+	revisionist_socialism = 0
+	progressivism = 10
+	liberalism = 0
+	conservatism = 0
+	right_authoritarianism = 70
+	despotism = 0
+	reactionism = 20
+	accelerationism = 0
+}
+
+set_stability = 0.2
+
+add_manpower = 20000
+
+recruit_character = PCN_Karl_Ebermaier
+recruit_character = PCN_louis_brody
+recruit_character = PCN_hans_huttig
+recruit_character = PCN_siegfried_muller
+recruit_character = PCN_paul_ogorzow
+recruit_character = PCN_franz_ritter_von_epp
+recruit_character = PCN_Theodor_von_Hippel
+recruit_character = PCN_Paul_Von_Lettow
+recruit_character = PCN_Heinrich_Kirchheim
+recruit_character = PCN_Muhammed_Husan
+recruit_character = PCN_Julian_Scherner

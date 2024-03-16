@@ -1,0 +1,33 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			# Faction Buttons
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = faction_button_options
+						option = ALLOWED
+					}
+				}
+				set_global_flag = RF_faction_buttons_present
+				every_country = {
+					limit = { is_ai = no }
+					set_rule = { can_create_factions = yes }
+				}
+				every_country = {
+					set_rule = { can_join_factions = yes }
+				}
+			}
+			# Tool Pack
+			if = {
+				limit = {
+					OR = {
+						is_debug = yes
+						has_game_rule = { rule = tool_pack_options option = TOOL_PACK_ON }
+					}
+				}
+				set_global_flag = expand_collapse_container
+			}
+		}
+	}
+}

@@ -1,0 +1,30 @@
+state={
+	id=1309
+	name="STATE_1309"
+	manpower=3403900
+
+	state_category=city
+	history={
+		owner = SIA
+		buildings = {
+			infrastructure = 2
+			arms_factory = 2
+			industrial_complex = 2
+			dockyard = 1
+			air_base = 5
+			7408 = {
+				naval_base = 3
+			}
+		}
+		victory_points = {
+			7408 20
+		}
+		add_core_of = SIA
+
+	}
+	provinces={
+		7408
+	}
+
+	buildings_max_level_factor=1.000
+}

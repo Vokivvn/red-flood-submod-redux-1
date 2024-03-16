@@ -1,0 +1,382 @@
+ideas = {
+	country = {
+		DKB_ukrainian_education = {
+			picture = DKB_ukrainian_education
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				research_speed_factor = 0.05
+				political_power_factor = 0.1
+			}
+		}
+		DKB_ukrainian_education1 = {
+			picture = DKB_ukrainian_education
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				research_speed_factor = 0.07
+				right_authoritarianism_drift = 0.03
+				political_power_factor = 0.1
+			}
+		}
+		DKB_ukrainian_education2 = {
+			picture = DKB_ukrainian_education
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				research_speed_factor = 0.1
+				right_authoritarianism_drift = 0.05
+				political_power_factor = 0.1
+			}
+		}
+		DKB_hryvnia_currency = {
+			picture = DKB_hryvnia
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				production_factory_max_efficiency_factor = 0.07
+				industrial_capacity_factory = 0.05
+			}
+		}
+		DKB_hryvnia_currency1 = {
+			picture = DKB_hryvnia
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				production_factory_max_efficiency_factor = 0.12
+				industrial_capacity_factory = 0.05
+				right_authoritarianism_drift = 0.03
+			}
+		}
+		DKB_hryvnia_currency2 = {
+			picture = DKB_hryvnia
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				production_factory_max_efficiency_factor = 0.12
+				industrial_capacity_factory = 0.1
+				right_authoritarianism_drift = 0.05	
+			}
+		}
+		DKB_decentralized_army = {
+			picture = SIB_patriotism
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				max_planning = -0.1
+				planning_speed = 0.15
+			}
+		}
+		DKB_decentralized_army1 = {
+			picture = SIB_patriotism
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				max_planning = -0.1
+				planning_speed = 0.15
+				experience_gain_army_factor = 0.1
+			}
+		}
+		DKB_legal_immigration = {
+			picture = DKB_legal_immigration 
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				non_core_manpower = 0.05
+				monthly_population = 0.05
+				political_power_factor = 0.05
+			}
+		}
+		DKB_legal_immigration1 = {
+			picture = DKB_legal_immigration
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				non_core_manpower = 0.15
+				monthly_population = 0.1
+				political_power_factor = 0.05
+			}
+		}
+		DKB_legal_immigration2 = {
+			picture = DKB_legal_immigration
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				non_core_manpower = 0.2
+				monthly_population = 0.1
+				political_power_factor = 0.05
+			}
+		}
+		DKB_open_to_europe_idea = {
+			picture = DKB_open_to_europe
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				consumer_goods_expected_value = -0.05
+				trade_opinion_factor = 0.15
+			}
+		}
+
+		DKB_federalism = {
+			picture = PRS_power_of_freikorps
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				political_power_factor = -0.05
+			 	army_org_factor = 0.1
+			}
+		}
+		DKB_pluralistic_education = {
+			picture = DKB_pluralistic_education
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				research_speed_factor = 0.1
+			}
+		}
+		DKB_open_to_world_idea = {
+			picture = DKB_open_to_world
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				consumer_goods_expected_value = -0.05
+				trade_opinion_factor = 0.15
+				non_core_manpower = 0.15
+			}
+		}
+		DKB_open_to_world_idea1 = {
+			picture = DKB_open_to_world
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				consumer_goods_expected_value = -0.05
+				trade_opinion_factor = 0.15
+				non_core_manpower = 0.15
+				political_power_factor = 0.1
+			 	send_volunteer_size = 2
+				send_volunteers_tension = -0.2
+				improve_relations_maintain_cost_factor = -0.45
+			}
+		}
+
+		DKB_open_to_russia_idea = {
+			picture = DKB_open_to_russia
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				consumer_goods_expected_value = -0.05
+			}
+			targeted_modifier = {
+				tag = RUS
+				license_purchase_cost  = -0.75
+			}
+			targeted_modifier = {
+				tag = SRU
+				license_purchase_cost  = -0.75
+			}
+		}
+		DKB_open_to_russia_idea1 = {
+			picture = DKB_open_to_russia
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				consumer_goods_expected_value = -0.05
+				despotism_drift = 0.05
+				non_core_manpower = 0.1
+			}
+			targeted_modifier = {
+				tag = RUS
+				license_purchase_cost  = -0.75
+			}
+			targeted_modifier = {
+				tag = SRU
+				license_purchase_cost  = -0.75
+			}
+		}
+		DKB_russification = {
+			picture = SIB_russification_by_education
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				despotism_drift = 0.05
+				stability_factor = -0.05
+			 	political_power_factor = 0.05
+			}
+		}
+		DKB_russian_immigration = {
+			picture = DKB_russian_immigration
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				monthly_population = 0.15
+			}
+		}
+		DKB_ruble_currency = {
+			picture = DKB_ruble
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+			 	industrial_capacity_factory = 0.1
+			 	industrial_capacity_dockyard = 0.1
+			 	political_power_factor = 0.1
+			}
+		}
+		DKB_centralized_army = {
+			picture = PRS_power_of_freikorps
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				max_planning = 0.1
+				research_speed_factor = 0.1
+				training_time_army_factor = -0.05
+			 	army_morale_factor = -0.1
+			}
+		}
+
+		DKB_npp = {
+			picture = SIB_popularland
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				industrial_capacity_factory = -0.05
+			}
+		}
+		DKB_chervonets_currency = {
+			picture = DKB_chervonets
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				consumer_goods_expected_value = -0.02
+				liberalism_drift = -0.05
+				conservatism_drift = -0.05
+			}
+		}
+		DKB_slavic_scythian_supremacy = {
+			picture = DKB_slavic_scythian
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				conscription_factor = -0.05
+				political_power_factor = 0.15
+				resistance_target = -0.1
+				right_authoritarianism_drift = -0.05
+			}
+		}
+		DKB_purge_of_russian_monarchists = {
+			picture = DKB_purge_monarchists
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				political_power_factor = 0.15
+				army_core_attack_factor = 0.05
+			 	army_morale_factor = -0.05
+				despotism_drift = -0.05
+			}
+		}
+		DKB_revolutionary_anti_communism = {
+			picture = DKB_revolutionary_anti_com
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				production_factory_max_efficiency_factor = 0.05
+				vanguard_socialism_drift = -0.05
+				popular_socialism_drift = -0.05
+				revisionist_socialism_drift = -0.05
+				accelerationism_drift = -0.05
+			}
+			targeted_modifier = {
+				tag = GER
+				defense_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = HUN
+				defense_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = ZHR
+				defense_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = KAV
+				defense_bonus_against = 0.1
+			}
+		}
+		DKB_scythian_rebirth = {
+			picture = DKB_scythian_rebirth
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				political_power_factor = 0.3
+				max_surrender_limit_offset = 0.05
+				reactionism_drift = 0.15
+				production_factory_max_efficiency_factor = 0.05
+				army_core_attack_factor = 0.05
+			 	army_morale_factor = -0.05
+				conscription_factor = 0.05
+				resistance_target = -0.1
+				consumer_goods_expected_value = -0.02
+				production_speed_buildings_factor = 0.15
+			}
+			targeted_modifier = {
+				tag = RUS
+				defense_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = GER
+				defense_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = HUN
+				defense_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = ZHR
+				defense_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = KAV
+				defense_bonus_against = 0.1
+			}
+		}
+		DKB_totalitarian_state = {
+			picture = DKB_totalitarian
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				resistance_target = -0.1
+				political_power_factor = 0.1
+			}
+		}
+		DKB_barbarian_warriors = {
+			picture = DKB_gorgulovite_youth
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				army_core_attack_factor = 0.1
+				army_speed_factor = 0.07
+			}
+		}
+		DKB_peasant_society = {
+			picture = DKB_ruble
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				consumer_goods_expected_value = -0.1
+				monthly_population = 0.75
+				research_speed_factor = -0.07
+				production_speed_buildings_factor = -0.1 
+			}
+		}
+		DKB_all_russians = {
+			picture = DKB_legal_immigration
+			allowed = { 
+				original_tag = DKB
+			}
+			modifier = { 
+				production_factory_start_efficiency_factor = 0.15
+				supply_node_range = 0.12
+			}
+		}
+		DKB_brotherhood = {
+			picture = DKB_commissars_orchestras
+			allowed = { 
+				original_tag = DKB
+			}
+			modifier = { 
+				stability_weekly  = 0.003
+				out_of_supply_factor = -0.09
+			}
+		}
+		DKB_heart_of_nature = {
+			picture = DKB_slavic_scythian
+			allowed = { 
+				original_tag = DKB
+			}
+			modifier = { 
+				army_core_defence_factor = 0.05
+				research_speed_factor = 0.12
+				cas_damage_reduction = 0.15
+			}
+		}
+		DKB_chosen_of_vozhd = {
+			picture = DKB_chosen_of_vozhd
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+			 	minimum_training_level = -0.1
+				conscription_factor = 0.025
+			 	surrender_limit = 0.10
+			}
+		}
+	}
+}

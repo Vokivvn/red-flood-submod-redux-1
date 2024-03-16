@@ -1,0 +1,9 @@
+DEI_indies_war = {
+	allowed = {
+		tag = DEI
+	}
+	visible = {
+		always = yes
+	}
+	priority = 1
+}

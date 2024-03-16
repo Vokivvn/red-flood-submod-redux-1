@@ -1,0 +1,57 @@
+characters={
+	WLL_françois_bovesse={
+		name="François Bovesse"
+		portraits={
+			civilian={
+				large="gfx/leaders/WLL/Portrait_WLL_Francois_Bovesse.png"
+			}
+		}
+		country_leader={
+			desc="POLITICS_KING_ALBERT_DESC"
+			ideology=social_liberalism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	WLL_m.c.l._keyaerts={
+		name="M.C.L. Keyaerts"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_europe_generic_land_2.png"
+			}
+			army={
+				large="gfx/leaders/Europe/Portrait_Europe_Generic_land_2.png"
+			}
+		}
+		corps_commander={
+			traits={ trait_mountaineer hill_fighter }
+			skill=4
+			attack_skill=3
+			defense_skill=2
+			planning_skill=4
+			logistics_skill=4
+			legacy_id=-1
+		}
+	}
+	WLL_georges_timmermans={
+		name="Georges Timmermans"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_europe_generic_navy_3.png"
+			}
+			army={
+				large="gfx/leaders/Europe/Portrait_Europe_Generic_navy_3.png"
+			}
+		}
+		navy_leader={
+			traits={ bold }
+			skill=4
+			attack_skill=4
+			defense_skill=2
+			maneuvering_skill=1
+			coordination_skill=1
+			legacy_id=-1
+		}
+	}
+	
+}

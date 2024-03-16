@@ -1,0 +1,89 @@
+characters = {
+	EST_eestimaa_päästekomitee = {
+		name = "Eestimaa Päästekomitee"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/EST/Portrait_EST_Eestimaa_Paastekomitee.png"
+			}
+		}
+		country_leader = {
+			ideology = progressive_democracy
+			expire = "1965.1.1.1"
+		}
+	}
+	EST_Jaan_Tonisson = {
+		name = "Jaan Tõnisson"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/EST/Portrait_Estonia_Jaan_Tonisson.png"
+			}
+		}
+		country_leader = {
+			expire = "1965.1.1"
+			ideology = progressive_democracy
+		}
+	}
+	EST_Uku = {
+		name = "Uku Masing"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/EST/Portrait_Estonia_Uku.png"
+			}
+		}
+		country_leader = {
+			expire = "1965.1.1"
+			ideology = zadrugism
+		}
+	}
+	EST_konstantin_pats = {
+		name = "Konstantin Päts"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/EST/Portrait_Estonia_Konstantin_Pats.png"
+			}
+		}
+		country_leader = {
+			expire = "1965.1.1"
+			ideology = anocracy
+		}
+	}
+	EST_johan_laidoner = {
+		name = "Johan Laidoner"
+		portraits = {
+		}
+		corps_commander = {
+			traits = { winter_specialist }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	EST_karl_pärnoja = {
+		name = "Karl Pärnoja"
+		portraits = {
+		}
+		corps_commander = {
+			traits = { trickster }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	EST_alexander_von_salza = {
+		name = "Alexander von Salza"
+		portraits = {
+		}
+		navy_leader = {
+			traits = { blockade_runner }
+			skill = 2
+			attack_skill = 3
+			defense_skill = 2
+			maneuvering_skill = 1
+			coordination_skill = 2
+		}
+	}
+}

@@ -1,0 +1,1837 @@
+UKR_worker_englightenment = {
+	infantry_bonus = {
+		cost = research_decision_cost
+		ai_will_do = {
+			factor = 100
+		}
+		icon = GFX_KAV_join_league_solar
+		fire_only_once = yes
+		visible = {
+			has_completed_focus = UKR_enlightenment_of_the_workers
+		}
+		complete_effect = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = infantry_weapons
+			}
+			add_manpower = -100
+		}
+	}
+	artillery_bonus = {
+		cost = 75
+		ai_will_do = {
+			factor = 100
+		}
+		icon = GFX_KAV_join_league_solar
+		fire_only_once = yes
+		visible = {
+			has_completed_focus = UKR_enlightenment_of_the_workers
+		}
+		complete_effect = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = artillery
+			}
+			add_manpower = -100
+		}
+	}
+	support_bonus = {
+		cost = research_decision_cost
+		ai_will_do = {
+			factor = 100
+		}
+		icon = GFX_KAV_join_league_solar
+		fire_only_once = yes
+		visible = {
+			has_completed_focus = UKR_enlightenment_of_the_workers
+		}
+		complete_effect = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = support_tech
+			}
+			add_manpower = -100
+		}
+	}
+	armor_bonus = {
+		cost = research_decision_cost
+		ai_will_do = {
+			factor = 100
+		}
+		icon = GFX_KAV_join_league_solar
+		fire_only_once = yes
+		visible = {
+			has_completed_focus = UKR_enlightenment_of_the_workers
+		}
+		complete_effect = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = armor
+			}
+			add_manpower = -100
+		}
+	}
+	production_bonus = {
+		cost = research_decision_cost
+		ai_will_do = {
+			factor = 100
+		}
+		icon = GFX_KAV_join_league_solar
+		fire_only_once = yes
+		visible = {
+			has_completed_focus = UKR_enlightenment_of_the_workers
+		}
+		complete_effect = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = industry
+			}
+			add_manpower = -100
+		}
+	}
+	electronics_bonus = {
+		cost = research_decision_cost
+		ai_will_do = {
+			factor = 100
+		}
+		icon = GFX_KAV_join_league_solar
+		fire_only_once = yes
+		visible = {
+			OR={
+				has_completed_focus = UKR_enlightenment_of_the_workers
+			}
+		}
+		complete_effect = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = electronics
+			}
+			add_manpower = -100
+		}
+	}
+}
+
+
+UKR_sabotage_the_moskkkals = {
+	sabotage_sevastopol = {
+		cost = 15
+		ai_will_do = {
+			factor = 100
+		}
+		icon = ger_military_buildup
+		fire_only_once = yes
+		visible = {
+			OR={
+				has_completed_focus = UKR_towards_the_total_liberation
+				has_completed_focus = UKR_nothing_can_hide_from_fanaticism
+			}
+		}
+		available = {
+			has_equipment = {
+				infantry_equipment > 1199
+			}
+			NOT = {
+				137 = {
+					is_fully_controlled_by = UKR
+				}
+			}
+		}
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -1200
+				producer = UKR
+			}
+			army_experience = 10
+			137 = {
+				damage_building = {
+					type = naval_base 
+					damage = 4
+				}
+			}
+		}
+	}
+	sabotage_yekaterinoslav = {
+		cost = 15
+		ai_will_do = {
+			factor = 100
+		}
+		icon = ger_military_buildup
+		fire_only_once = yes
+		visible = {
+			OR={
+				has_completed_focus = UKR_towards_the_total_liberation
+				has_completed_focus = UKR_nothing_can_hide_from_fanaticism
+			}
+		}
+		available = {
+			has_equipment = {
+				infantry_equipment > 299
+			}
+			NOT = {
+				853 = {
+					is_fully_controlled_by = UKR
+				}
+			}
+		}
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -300
+				producer = UKR
+			}
+			army_experience = 10
+			853 = {
+				damage_building = {
+					type = industrial_complex
+					damage = 1
+				}
+			}
+		}
+	}
+	sabotage_kharkov = {
+		cost = 15
+		ai_will_do = {
+			factor = 100
+		}
+		icon = ger_military_buildup
+		fire_only_once = yes
+		visible = {
+			OR={
+				has_completed_focus = UKR_towards_the_total_liberation
+				has_completed_focus = UKR_nothing_can_hide_from_fanaticism
+			}
+		}
+		available = {
+			has_equipment = {
+				infantry_equipment > 599
+			}
+			NOT = {
+				221 = {
+					is_fully_controlled_by = UKR
+				}
+			}
+		}
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -600
+				producer = UKR
+			}
+			army_experience = 10
+			221 = {
+				damage_building = {
+					type = arms_factory 
+					damage = 2
+				}
+			}
+		}
+	}
+	sabotage_rostov = {
+		cost = 15
+		ai_will_do = {
+			factor = 100
+		}
+		icon = ger_military_buildup
+		fire_only_once = yes
+		visible = {
+			OR={
+				has_completed_focus = UKR_towards_the_total_liberation
+				has_completed_focus = UKR_nothing_can_hide_from_fanaticism
+			}
+		}
+		available = {
+			has_equipment = {
+				infantry_equipment > 199
+			}
+			NOT = {
+				221 = {
+					is_fully_controlled_by = UKR
+				}
+			}
+		}
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -200
+				producer = UKR
+			}
+			army_experience = 10
+			218 = {
+				damage_building = {
+					type = naval_base
+					damage = 1
+				}
+			}
+		}
+	}
+}
+UKR_from_vistula_to_pacific = {
+	form_baltics={
+		ai_will_do = {
+			factor = 10
+		}
+		icon = GFX_STE_ukrainian_decision_icon
+		fire_only_once = no 
+		visible={
+			owns_state = 1058
+		}
+		complete_effect={
+
+			every_state = {
+				limit = {
+					OR = {
+						state=933
+						state=1058
+						state=11
+						state=96
+						state=189
+						state=190
+						state=12
+						state=210
+						state=13
+						state=191
+					}
+				}
+				add_to_array = {
+					array = bandera_wru_states
+					value = THIS.id
+				}
+			}
+			every_state = {
+				limit = {
+					is_controlled_by_ROOT_or_ally = yes
+					is_in_array = {
+						array = bandera_wru_states
+						value = THIS.id
+					}
+				}
+				add_core_of = BLR
+				transfer_state_to = BLR
+			}
+		}
+	}
+	form_russia={
+		ai_will_do = {
+			factor = 10
+		}
+		icon = GFX_STE_ukrainian_decision_icon
+		fire_only_once = no
+		visible={
+			owns_state = 195
+		}
+		complete_effect={
+			if={
+				limit={
+					UKR={
+						any_owned_state = {
+							is_core_of = FIN
+						}
+					}
+					FIN = {
+						exists = no
+					}
+				}
+				puppet=FIN
+				FIN={
+					load_focus_tree = generic_focus
+				}
+				every_state = {
+					limit = {
+						OR = {
+							state=146
+							state=150
+							state=111
+							state=149
+							state=856
+							state=148
+							state=149
+						}
+					}
+					add_to_array = {
+						array = fin_bandera_states
+						value = THIS.id
+					}
+				}
+				every_state = {
+					limit = {
+						is_in_array = {
+							array = fin_bandera_states
+							value = THIS.id
+						}
+						is_controlled_by_ROOT_or_ally = yes
+					}
+					add_core_of = FIN
+					transfer_state_to = FIN
+				}
+			}
+			BLR={
+				transfer_state = 241
+				transfer_state = 857
+			}
+			puppet=RUS
+			RUS={
+				set_cosmetic_tag = RUS_bandera
+				load_focus_tree = generic_focus
+				set_politics = {
+					ruling_party = despotism
+					elections_allowed = yes
+				}
+				set_party_name = {
+					ideology = despotism
+					long_name = POL_bandera_party_long
+					name = POL_bandera_party
+				}
+				promote_character = RUS_Shukeyvch
+			}
+			every_state = {
+				limit = {
+					OR = {
+						state=208
+						state=209
+						state=858
+						state=195
+						state=263
+						state=246
+						state=242
+						state=243
+						state=205
+						state=219
+						state=223
+						state=254
+						state=252
+						state=256
+						state=249
+						state=651
+						state=398
+						state=399
+						state=400
+						state=351
+						state=248
+						state=253
+						state=247
+						state=264
+						state=244
+						state=214
+						state=397
+						state=262
+						state=581
+						state=573
+						state=216
+						state=215
+						state=147
+						state=213
+						state=722
+					}
+				}
+				add_to_array = {
+					array = rus_bandera_states
+					value = THIS.id
+				}
+			}
+			every_state = {
+				limit = {
+					is_in_array = {
+						array = rus_bandera_states
+						value = THIS.id
+					}
+					is_controlled_by_ROOT_or_ally = yes
+				}
+				add_core_of = RUS
+				transfer_state_to = RUS
+			}
+		}
+	}
+	form_siberia={
+		ai_will_do = {
+			factor = 10
+		}
+		icon = GFX_STE_ukrainian_decision_icon
+		fire_only_once = no
+		visible={
+			owns_state = 574
+		}
+		complete_effect={
+			puppet=SIB
+			SIB={
+				set_cosmetic_tag = SIB_bandera
+				load_focus_tree = generic_focus
+				set_politics = {
+					ruling_party = despotism
+					elections_allowed = yes
+				}
+				set_party_name = {
+					ideology = despotism
+					long_name = POL_bandera_party_long
+					name = POL_bandera_party
+				}
+				promote_character = SIB_grigoriy_kupetsky
+			}
+			every_state = {
+				limit = {
+					OR = {
+						state=653
+						state=804
+						state=579
+						state=580
+						state=403
+						state=578
+						state=577
+						state=576
+						state=568
+						state=567
+						
+						state=565
+						state=575
+						state=516
+						state=574
+						state=1036
+						state=644
+						state=562
+						state=637
+					}
+				}
+				add_to_array = {
+					array = sib_bandera_states
+					value = THIS.id
+				}
+			}
+			every_state = {
+				limit = {
+					is_in_array = {
+						array = sib_bandera_states
+						value = THIS.id
+					}
+					is_controlled_by_ROOT_or_ally = yes
+				}
+				add_core_of = SIB
+				transfer_state_to = SIB
+			}
+		}
+	}
+	form_central_asia={
+		ai_will_do = {
+			factor = 10
+		}
+		icon = GFX_STE_ukrainian_decision_icon
+		fire_only_once = no
+		visible={
+			owns_state = 405
+		}
+		complete_effect={
+			puppet=TUK
+			TUK={
+				load_focus_tree = generic_focus
+			}
+			every_state = {
+				limit = {
+					OR = {
+						state=405
+						state=1041
+						state=1042
+						state=585
+						state=1040
+						state=1039
+						state=849
+						state=1037
+						state=584
+						state=850
+						state=851
+						state=1038
+						state=840
+						state=742
+					}
+				}
+				add_to_array = {
+					array = tuk_bandera_states
+					value = THIS.id
+				}
+			}
+			every_state = {
+				limit = {
+					is_in_array = {
+						array = tuk_bandera_states
+						value = THIS
+					}
+					is_controlled_by_ROOT_or_ally = yes
+				}
+				add_core_of = TUK
+				transfer_state_to = TUK
+			}
+		}
+	}
+	form_caucasus={
+		ai_will_do = {
+			factor = 10
+		}
+		icon = GFX_STE_ukrainian_decision_icon
+		fire_only_once = no
+		visible={
+			owns_state = 231
+		}
+		complete_effect={
+			puppet=GEO
+			puppet=AZR
+			puppet=ARM
+			GEO = {
+				load_focus_tree = generic_focus
+			}
+			ARM = {
+				load_focus_tree = generic_focus
+			}
+			AZR={
+				load_focus_tree = generic_focus
+			}
+			every_state = {
+				limit = {
+					OR = {
+						state = 1056
+						state = 1138 
+						state = 1136 
+						state = 1141 
+						state = 231 
+						state = 1139 
+					}
+				}
+				add_to_array = {
+					array = geo_bandera_states
+					value = THIS.id
+				}
+			}
+			every_state = {
+				limit = {
+					OR = {
+						state = 1140 
+						state = 890 
+						state = 891 
+						state = 230 
+						state = 1134 
+						state = 955
+						state = 1133
+						state = 1135 
+						state = 353
+					}
+				}
+				add_to_array = {
+					array = arm_bandera_states
+					value = THIS.id
+				}
+			}
+			every_state = {
+				limit = {
+					OR = {
+						state = 229
+						state = 960
+						state = 1054
+					}
+				}
+				add_to_array = {
+					array = azr_bandera_states
+					value = THIS.id
+				}
+			}
+			every_state = {
+				limit = {
+					is_in_array = {
+						array = geo_bandera_states
+						value = THIS.id
+					}
+					is_controlled_by_ROOT_or_ally = yes
+				}
+				add_core_of = GEO
+				transfer_state_to = GEO
+			}
+			every_state = {
+				limit = {
+					is_in_array = {
+						array = arm_bandera_states
+						value = THIS.id
+					}
+					is_controlled_by_ROOT_or_ally = yes
+				}
+				add_core_of = ARM
+				transfer_state_to = ARM
+			}
+			every_state = {
+				limit = {
+					is_in_array = {
+						array = azr_bandera_states
+						value = THIS.id
+					}
+					is_controlled_by_ROOT_or_ally = yes
+				}
+				add_core_of = AZR
+				transfer_state_to = AZR
+			}
+		}
+	}
+	invade_intermarium = {
+		cost = 15
+		ai_will_do = {
+			factor = 100
+		}
+		icon = GFX_STE_ukrainian_decision_icon
+		fire_only_once = yes
+		visible = {
+			has_completed_focus = UKR_lyakhy_za_visla
+			BLR={
+				is_in_faction_with = POL
+			}
+		}
+		days_remove = 3
+		remove_effect = {
+			create_wargoal = {
+				type = annex_everything
+				target = BLR
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = POL
+			}
+			94 = {	
+				add_claim_by = UKR
+			}
+			194 = {	
+				add_claim_by = UKR
+			}
+			975 = {
+				add_claim_by = UKR
+			}
+			1299 = {
+				add_claim_by = UKR
+			}
+			92 = {
+				add_claim_by = UKR
+			}
+			1321 = {
+				add_claim_by = UKR
+			}
+		}
+	}
+	invade_belarus = {
+		cost = 15
+		ai_will_do = {
+			factor = 100
+		}
+		icon = GFX_STE_ukrainian_decision_icon
+		fire_only_once = yes
+		visible = {
+			has_completed_focus = UKR_to_minsk_and_beyond
+			NOT ={
+				BLR={
+					is_puppet_of=UKR
+				}
+				BLR={
+					is_in_faction_with = POL
+				}
+			}
+		}
+		days_remove = 3
+		remove_effect = {
+			create_wargoal = {
+				type = annex_everything
+				target = BLR
+			}
+			94 = {	
+				add_claim_by = UKR
+			}
+			194 = {	
+				add_claim_by = UKR
+			}
+		}
+	}
+	UKR_integrate_belarus = {
+		cost = 50
+		ai_will_do = {
+			factor = 100
+		}
+		icon = GFX_STE_ukrainian_decision_icon
+		fire_only_once = yes
+		visible = {
+			has_completed_focus = UKR_to_minsk_and_beyond
+		}
+		available = {
+			94 = {
+				compliance > 30
+			}
+			num_of_civilian_factories > 2
+			controls_state = 94
+			controls_state = 194
+		}
+		days_remove = 50
+		remove_effect = {
+			add_state_core = 94
+			add_state_core = 194
+			add_state_core = 1299
+			random_owned_controlled_state = {
+				remove_building = {
+					type = industrial_complex
+					level = 1
+				} 
+			}
+		}
+	}
+	invade_poland = {
+		cost = 15
+		ai_will_do = {
+			factor = 100
+		}
+		icon = GFX_STE_ukrainian_decision_icon
+		fire_only_once = yes
+		visible = {
+			has_completed_focus = UKR_lyakhy_za_visla
+			NOT={
+				POL={
+					is_puppet_of=UKR
+				}
+				BLR={
+					is_in_faction_with = POL
+				}
+			}
+		}
+		days_remove = 3
+		remove_effect = {
+			create_wargoal = {
+				type = take_core_state
+				target = POL
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = LIT
+			}
+			975 = {
+				add_claim_by = UKR
+			}
+			92 = {
+				add_claim_by = UKR
+			}
+			1321 = {
+				add_claim_by = UKR
+			}
+		}
+	}
+	integrate_lviv = {
+		cost = 75
+		ai_will_do = {
+			factor = 100
+		}
+		icon = GFX_STE_ukrainian_decision_icon
+		fire_only_once = yes
+		visible = {
+			has_completed_focus = UKR_lyakhy_za_visla
+		}
+		available = {
+			92 = {
+				compliance > 30
+			}
+			num_of_civilian_factories > 1
+			controls_state = 92
+		}
+		days_remove = 50
+		remove_effect = {
+			add_state_core = 92
+			add_state_core = 1321
+			add_state_core = 975
+			random_owned_controlled_state = {
+				remove_building = {
+			 		type = industrial_complex
+					level = 1
+				} 
+			}
+		}
+	}
+	invade_russia = {
+		cost = 15
+		ai_will_do = {
+			factor = 100
+		}
+		icon = GFX_STE_ukrainian_decision_icon
+		fire_only_once = yes
+		visible = {
+			has_completed_focus = UKR_redemption_of_khmelnytskyi
+			or = {
+				is_neighbor_of = RUS
+				is_neighbor_of = SRU
+			}
+			RUS = {
+				is_subject = no
+			}
+			SRU = {
+				is_subject = no
+			}
+		}
+		available = {
+			POL = {
+				is_puppet_of = UKR
+			}
+			controls_state = 91
+			or = {
+				is_neighbor_of = RUS
+				is_neighbor_of = SRU
+			}
+			has_war = no
+		}
+		days_remove = 3
+		remove_effect = {
+			create_wargoal = {
+				type = take_core_state
+				target = RUS
+			}
+			create_wargoal = {
+				type = take_core_state
+				target = SRU
+			}
+			create_wargoal = {
+				type = take_core_state
+				target = WRU
+			}
+			create_wargoal = {
+				type = take_core_state
+				target = WRR
+			}
+			create_wargoal = {
+				type = take_core_state
+				target = WRT
+			}
+		}
+	}
+	integrate_chernozemie = {
+		cost = 375
+		ai_will_do = {
+			factor = 100
+		}
+		icon = GFX_STE_ukrainian_decision_icon
+		fire_only_once = yes
+		visible = {
+			has_completed_focus = UKR_redemption_of_khmelnytskyi
+		}
+		available = {
+			255 = {
+				compliance > 30
+			}
+			num_of_civilian_factories > 15
+			controls_state = 255
+		}
+		days_remove = 50
+		remove_effect = {
+					add_state_core = 224
+					add_state_core = 240
+					add_state_core = 859
+					add_state_core = 222
+					add_state_core = 258
+					add_state_core = 260
+					add_state_core = 257
+					add_state_core = 255
+					add_state_core = 250
+					add_state_core = 251
+					add_state_core = 401
+					add_state_core = 220
+					add_state_core = 239
+			random_owned_controlled_state = {
+				remove_building = {
+					type = industrial_complex
+					level = 2
+				}
+			}
+			random_owned_controlled_state = {
+				remove_building = {
+					type = industrial_complex
+					level = 2
+				}
+			}
+			random_owned_controlled_state = {
+				remove_building = {
+					type = industrial_complex
+					level = 2
+				} 
+			}
+		random_owned_controlled_state = {
+				remove_building = {
+			 type = industrial_complex
+			 level = 2
+				 }
+		}
+		random_owned_controlled_state = {
+				remove_building = {
+			 type = industrial_complex
+			 level = 2
+				 }
+		}
+		}
+		}
+	invade_seu = {
+		cost = 15
+		ai_will_do = {
+			factor = 100
+		}
+		icon = GFX_STE_ukrainian_decision_icon
+		fire_only_once = yes
+		visible = {
+			has_completed_focus = UKR_redemption_of_khmelnytskyi
+			is_neighbor_of = DKB
+			DKB = {
+				is_subject = no
+			}
+		}
+		available = {
+			is_neighbor_of = DKB
+		}
+		days_remove = 3
+		remove_effect = {
+			create_wargoal = {
+				type = annex_everything
+				target = DKB
+			}
+			if={
+				limit={
+					KAV={
+						owns_state=234
+					}
+				}
+				create_wargoal = {
+				type = annex_everything
+				target = KAV
+			}
+			}
+		}
+	}
+	integrate_the_cossack_hosts = {
+		cost = 100
+		ai_will_do = {
+			factor = 100
+		}
+		icon = GFX_STE_ukrainian_decision_icon
+		fire_only_once = yes
+		visible = {
+			has_completed_focus = UKR_redemption_of_khmelnytskyi
+		}
+		available = {
+			234 = {
+				compliance > 30
+			}
+			num_of_civilian_factories > 3
+			controls_state = 234
+		}
+		days_remove = 50
+		remove_effect  = {
+			set_province_name = {
+				id = 3529
+				name = UKR_3529_banderohrad
+				}
+			add_state_core = 234
+			add_state_core = 236
+			add_state_core = 238
+			add_state_core = 855
+			add_state_core = 218
+			add_state_core = 245
+			add_state_core = 265
+			add_state_core = 1055
+			add_state_core = 235
+			add_state_core = 1137
+			add_state_core = 233
+			add_state_core = 1053
+			add_state_core = 232
+			add_state_core = 1057
+			add_state_core = 237
+			add_state_core = 217
+			add_state_core = 841
+			add_state_core = 407
+		random_owned_controlled_state = {
+				remove_building = {
+			 type = industrial_complex
+			 level = 2
+				 }
+		}
+		random_owned_controlled_state = {
+				remove_building = {
+			 type = industrial_complex
+			 level = 1
+				 }
+		}
+		}
+		}
+	invade_steppes = {
+		cost = 15
+		ai_will_do = {
+			factor = 100
+		}
+		icon = GFX_STE_ukrainian_decision_icon
+		fire_only_once = yes
+		visible = {
+			has_completed_focus = UKR_redemption_of_khmelnytskyi
+			OR = {
+				is_neighbor_of = ORE
+				is_neighbor_of = TRK
+				is_neighbor_of = TUK
+				is_neighbor_of = TUC
+				is_neighbor_of = KHW
+				is_neighbor_of = BKR
+			}
+			TRK = {
+				is_subject = no
+			}
+			ORE = {
+				is_subject = no
+			}
+			TUC = {
+				is_subject = no
+			}
+			TUK = {
+				is_subject = no
+			}
+			KHW = {
+				is_subject = no
+			}
+			BKR = {
+				is_subject = no
+			}
+		}
+		available = {
+			OR = {
+				is_neighbor_of = ORE
+				is_neighbor_of = TRK
+				is_neighbor_of = TUK
+				is_neighbor_of = TUC
+				is_neighbor_of = KHW
+				is_neighbor_of = BKR
+			}
+		}
+		days_remove = 3
+		remove_effect = {
+			create_wargoal = {
+				type = annex_everything
+				target = ORE
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = TRK
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = TUK
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = TUC
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = KHW
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = BKR
+			}
+		}
+	}
+	invade_kavkaz = {
+		cost = 15
+		ai_will_do = {
+			factor = 100
+		}
+		icon = GFX_STE_ukrainian_decision_icon
+		fire_only_once = yes
+		visible = {
+			has_completed_focus = UKR_redemption_of_khmelnytskyi
+			is_neighbor_of = KAV
+			KAV = {
+				is_subject = no
+			}
+		}
+		available = {
+			is_neighbor_of = KAV
+		}
+		days_remove = 3
+		remove_effect = {
+			create_wargoal = {
+				type = annex_everything
+				target = KAV
+			}
+		}
+	}
+	integrate_the_kazakh_steppe = {
+		cost = 100
+		ai_will_do = {
+			factor = 100
+		}
+		icon = GFX_STE_ukrainian_decision_icon
+		fire_only_once = yes
+		visible = {
+			has_completed_focus = UKR_redemption_of_khmelnytskyi
+		}
+		available = {
+			590 = {
+				compliance > 30
+			}
+			num_of_civilian_factories > 3
+			controls_state = 652
+			controls_state = 590
+		}
+		days_remove = 50
+		remove_effect  = {
+			add_state_core = 402 
+			add_state_core = 652 
+			add_state_core = 587 
+			add_state_core = 406 
+			add_state_core = 732 
+			add_state_core = 572
+			add_state_core = 582 
+			add_state_core = 852
+			add_state_core = 1043
+			add_state_core = 590
+			add_state_core = 404
+			add_state_core = 583
+			add_state_core = 571 
+			add_state_core = 588 
+			add_state_core = 589 
+			add_state_core = 842
+			add_state_core = 586
+			random_owned_controlled_state = {
+				remove_building = {
+					type = industrial_complex
+					level = 2
+				}
+			}
+			random_owned_controlled_state = {
+				remove_building = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+		}
+	}
+	invade_siberia = {
+		cost = 15
+		ai_will_do = {
+			factor = 100
+		}
+		icon = GFX_STE_ukrainian_decision_icon
+		fire_only_once = yes
+		visible = {
+			has_completed_focus = UKR_siberia_is_ukrainian
+			is_neighbor_of = SIB
+			SIB = {
+				is_subject = no
+			}
+		}
+		available = {
+			is_neighbor_of = SIB
+		}
+		days_remove = 3
+		remove_effect = {
+			create_wargoal = {
+				type = take_claimed_state
+				target = SIB
+			}
+		}
+	}
+	integrate_siberia = {
+		cost = 150
+		ai_will_do = {
+			factor = 100
+		}
+		icon = GFX_STE_ukrainian_decision_icon
+		fire_only_once = yes
+		visible = {
+			has_completed_focus = UKR_siberia_is_ukrainian
+		}
+		available = {
+			num_of_civilian_factories > 5
+			controls_state = 570
+			570 = {
+				compliance > 30
+			}
+		}
+		days_remove = 50
+		remove_effect  = {
+			add_state_core = 570
+			add_state_core = 569
+			add_state_core = 566
+			add_state_core = 964
+			add_state_core = 40 
+			random_owned_controlled_state = {
+				remove_building = {
+			 		type = industrial_complex
+			 		level = 2
+				}
+			}
+			random_owned_controlled_state = {
+				remove_building = {
+			 		type = industrial_complex
+			 		level = 1
+				}
+			}
+		}
+	}
+	invade_mongolia = {
+		cost = 15
+		ai_will_do = {
+			factor = 100
+		}
+		icon = GFX_STE_ukrainian_decision_icon
+		fire_only_once = yes
+		visible = {
+			has_completed_focus = UKR_siberia_is_ukrainian
+			OR={
+				is_neighbor_of = ALT
+				is_neighbor_of = TAN
+				is_neighbor_of = MPA
+				is_neighbor_of = KHU
+				is_neighbor_of = MON
+				is_neighbor_of = MO2
+			}
+		}
+		available = {
+			OR={
+				is_neighbor_of = ALT
+				is_neighbor_of = TAN
+				is_neighbor_of = MPA
+				is_neighbor_of = KHU
+				is_neighbor_of = MON
+				is_neighbor_of = MO2
+			}
+		}
+		days_remove = 3
+		remove_effect = {
+			create_wargoal = {
+				type = annex_everything
+				target = ALT
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = TAN 
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = MPA
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = KHU
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = MON
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = MO2
+			}
+		}
+	}
+	integrate_mongolia = {
+		cost = 150
+		ai_will_do = {
+			factor = 100
+		}
+		icon = GFX_STE_ukrainian_decision_icon
+		fire_only_once = yes
+		visible = {
+			has_completed_focus = UKR_siberia_is_ukrainian
+		}
+		available = {
+			num_of_civilian_factories > 4
+			controls_state = 330
+			330 = {
+				compliance > 30
+			}
+		}
+		days_remove = 50
+		remove_effect  = {
+			add_state_core = 961
+			add_state_core = 1213
+			add_state_core = 654
+			add_state_core = 898
+			add_state_core = 838
+			add_state_core = 793
+			add_state_core = 618
+			add_state_core = 915
+			add_state_core = 1149
+			add_state_core = 329
+			add_state_core = 962
+			add_state_core = 330
+			add_state_core = 1150
+			add_state_core = 612
+			add_state_core = 1151
+			add_state_core = 914
+			add_state_core = 564
+			add_state_core = 563
+			random_owned_controlled_state = {
+				remove_building = {
+					type = industrial_complex
+					level = 2
+				}
+			}
+			random_owned_controlled_state = {
+				remove_building = {
+					type = industrial_complex
+					level = 2
+				}
+			}
+		}
+	}
+	banderite_sweep_zhr = {
+		cost = 15
+		ai_will_do = {
+			factor = 100
+		}
+		icon = GFX_STE_ukrainian_decision_icon
+		fire_only_once = yes
+		visible = {
+			has_completed_focus = UKR_far_east_is_green
+			ZHR = {
+				is_subject = no
+			}
+			ARC = {
+				is_subject = no
+			}
+			PRI = {
+				is_subject = no
+			}
+			FCR = {
+				is_subject = no
+			}
+			MNS = {
+				is_subject = no
+			}
+			HAR = {
+				is_subject = no
+			}
+			GUK = {
+				is_subject = no
+			}
+			PSL = {
+				is_subject = no
+			}
+			OR = {
+				is_neighbor_of = ZHR
+				is_neighbor_of = ARC
+				is_neighbor_of = PRI
+				is_neighbor_of = MNS
+				is_neighbor_of = PSL
+				is_neighbor_of = OLN
+				is_neighbor_of = GUK 
+				is_neighbor_of = FCR
+			}
+		}
+		available = {
+			OR = {
+				is_neighbor_of = ZHR
+				is_neighbor_of = ARC
+				is_neighbor_of = PRI
+				is_neighbor_of = MNS
+				is_neighbor_of = PSL
+				is_neighbor_of = OLN
+				is_neighbor_of = GUK 
+				is_neighbor_of = FCR
+			}
+		}
+		days_remove = 3
+		remove_effect = {
+			create_wargoal = {
+				type = annex_everything
+				target = ZHR
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = HAR
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = PRI
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = MNS
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = ARC
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = PSL
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = OLN
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = FCR
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = KCK
+			}
+		}
+	}
+	integrate_far_east = {
+		cost = 200
+		ai_will_do = {
+			factor = 100
+		}
+		icon = GFX_STE_ukrainian_decision_icon
+		fire_only_once = yes
+		visible = {
+			has_completed_focus = UKR_far_east_is_green
+		}
+		available = {
+			num_of_civilian_factories > 7
+			owns_state = 978
+			978 = {
+				compliance > 30
+			}
+		}
+		days_remove = 50
+		remove_effect  = {
+			add_state_core = 761
+			add_state_core = 912
+			add_state_core = 714
+			add_state_core = 1202
+			add_state_core = 657
+			add_state_core = 561
+			add_state_core = 560
+			add_state_core = 409
+			add_state_core = 930
+			add_state_core = 810
+			add_state_core = 881
+			add_state_core = 978
+			add_state_core = 408
+			add_state_core = 717
+			random_owned_controlled_state = {
+				remove_building = {
+					type = industrial_complex
+					level = 2
+				}
+			}
+			random_owned_controlled_state = {
+				remove_building = {
+					type = industrial_complex
+					level = 2
+				}
+			}
+			random_owned_controlled_state = {
+				remove_building = {
+					type = industrial_complex
+					level = 2
+				}
+			}
+			random_owned_controlled_state = {
+				remove_building = {
+					type = industrial_complex
+					level = 1
+				}
+			} 
+		}
+	}
+	green_ukraine_reunification = {
+		cost = 25
+		ai_will_do = {
+			factor = 100
+		}
+		icon = GFX_STE_ukrainian_decision_icon
+		fire_only_once = yes
+		visible = {
+			has_completed_focus = UKR_far_east_is_green
+			is_neighbor_of = GUK
+		}
+		available = {
+			is_neighbor_of = GUK
+		}
+		days_remove = 3
+		remove_effect  = {
+			if = {
+				limit = {
+					GUK = {
+						exists = yes 
+						has_government = reactionism
+					}
+				}
+				country_event = { id = ukraine.1 }
+			}else = {
+				create_wargoal = {
+					type = annex_everything
+					target = GUK
+				}
+			}
+		}
+	}
+	march_across_the_carpathians = {
+		cost = 25
+		ai_will_do = {
+			factor = 100
+		}
+		icon = GFX_STE_ukrainian_decision_icon
+		fire_only_once = yes
+		visible = {
+			has_completed_focus = UKR_slava_ukraini
+		}
+		available = {
+			num_of_civilian_factories > 2
+		}
+		days_remove = 14
+		remove_effect  = {
+			add_state_core = 80
+			add_state_core = 1014
+			add_state_core = 78
+			add_state_core = 766
+			create_wargoal = {
+				type = annex_everything
+				target = MOL
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = ROM
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = TRS
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = HUN
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = SLO
+			}
+		}
+	}
+}
+UKR_the_5_years_plan = {
+	UKR_developing_the_cities_connections = {
+		cost = 30
+		ai_will_do = {
+			factor = 100
+		}
+		icon = GFX_KAV_join_league_solar
+		fire_only_once = no
+		visible = {
+			has_completed_focus = UKR_total_reconstruction_of_ukraine
+			NOT = { 
+				has_completed_focus = UKR_never_ending_economic_plans
+			}
+		}
+		days_remove = 45
+		complete_effect = {
+			add_stability = -0.02
+		}
+		remove_effect  = {
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	UKR_the_civilian_industry = {
+		cost = 55
+		ai_will_do = {
+			factor = 100
+		}
+		icon = GFX_KAV_join_league_solar
+		fire_only_once = no
+		visible = {
+			has_completed_focus = UKR_total_reconstruction_of_ukraine
+			NOT = { 
+				has_completed_focus = UKR_never_ending_economic_plans
+			}
+		}
+		days_remove = 45
+		complete_effect = {
+			add_stability = -0.04
+		}
+		remove_effect = {
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	UKR_building_up_army = {
+		cost = 70
+		ai_will_do = {
+			factor = 100
+		}
+		icon = GFX_KAV_join_league_solar
+		fire_only_once = no
+		visible = {
+			has_completed_focus = UKR_total_reconstruction_of_ukraine
+			NOT = { 
+				has_completed_focus = UKR_never_ending_economic_plans
+			}
+		}
+		days_remove = 45
+		complete_effect = {
+			add_stability = -0.06
+		}
+		remove_effect  = {
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	UKR_developing_the_cities_connections1 = {
+		cost = 20
+		ai_will_do = {
+			factor = 100
+		}
+		icon = GFX_KAV_join_league_solar
+		fire_only_once = no
+		visible = {
+			has_completed_focus = UKR_never_ending_economic_plans
+		}
+		days_remove = 45
+		complete_effect = {
+			add_stability = -0.01
+		}
+		remove_effect = {
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	UKR_the_civilian_industry1 = {
+		cost = 40
+		ai_will_do = {
+			factor = 100
+		}
+		icon = gGFX_KAV_join_league_solar
+		fire_only_once = no
+		visible = {
+			has_completed_focus = UKR_never_ending_economic_plans
+		}
+		days_remove = 50
+		complete_effect = {
+			add_stability = -0.025
+		}
+		remove_effect  = {
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	UKR_building_up_army1 = {
+		cost = 55
+		ai_will_do = {
+			factor = 100
+		}
+		icon = GFX_KAV_join_league_solar
+		fire_only_once = no
+		visible = {
+			has_completed_focus = UKR_never_ending_economic_plans
+		}
+		days_remove = 55
+		complete_effect = {
+			add_stability = -0.04
+		}
+		remove_effect  = {
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+}
+UKR_securing_our_utopia = {
+
+}
+UKR_diplomatic_decisions = {
+	UKR_prepare_war = {
+		fire_only_once = yes
+		days_remove = 7
+		ai_will_do = {
+			factor = 100
+		}
+		visible={
+			united_russia = yes
+			UKR_ROS_peaceful_deal = no
+		}
+		remove_effect = {
+			hidden_effect = {
+				ROS = { country_event = intermarium.10 }
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 5000
+				producer = UKR
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 2500
+				producer = UKR
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 1500
+				producer = UKR
+			}
+			add_equipment_to_stockpile = {
+				type = motorized_equipment
+				amount = 2000
+				producer = UKR
+			}
+		}
+	}
+	UKR_demand_leftbank = {
+		fire_only_once = yes
+		days_remove = 57
+		ai_will_do = {
+			factor = 100
+		}
+		visible={
+			united_russia = yes
+			is_neighbor_of = ROS
+			NOT = {
+				OR = {
+					is_neighbor_of = RUS
+					is_neighbor_of = SRU
+				}
+			}
+		}
+		available = {
+			has_war = no
+		}
+		#war_with_on_remove = ROS #Flagged as error 
+		remove_effect = {
+			country_event = intermarium.1
+		}
+	}
+}

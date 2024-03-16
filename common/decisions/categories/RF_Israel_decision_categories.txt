@@ -1,0 +1,121 @@
+ISR_war_decisions = {
+	allowed = {
+		original_tag = ISR
+	}
+	priority = 100
+	visible = {
+		AND = {
+			has_completed_focus = ISR_fightforthezionistcause
+			NOT = {
+				has_country_flag = ISR_independence_secured
+			}
+		}
+	}
+}
+ISR_einstein_decisions = {
+	allowed = {
+		original_tag = ISR
+	}
+	priority = 100
+	visible = {
+		has_completed_focus = ISR_promotearabintegration
+	}
+}
+ISR_bengurion_decisions1 = {
+	allowed = {
+		original_tag = ISR
+	}
+	priority = 100
+	visible = {
+		has_completed_focus = ISR_destroybritishinfluence
+	}
+}
+ISR_jabotinsky_decisions1 = {
+	allowed = {
+		original_tag = ISR
+	}
+	priority = 100
+	visible = {
+		has_completed_focus = ISR_jabotinskytakesover
+		has_completed_focus = ISR_bengurionascendstopower
+	}
+}
+ISR_jabotinsky_decisions2 = {
+	allowed = {
+		original_tag = ISR
+	}
+	priority = 100
+	visible = {
+		has_completed_focus = ISR_ourproperborders
+	}
+}
+ISR_stern_decisions1 = {
+	allowed = {
+		original_tag = ISR
+	}
+	priority = 100
+	visible = {
+		has_completed_focus = ISR_euphratestothenile
+	}
+}
+ISR_stern_decisions2 = {
+	allowed = {
+		original_tag = ISR
+	}
+	priority = 100
+	visible = {
+		has_completed_focus = ISR_asternruleinzion
+	}
+}
+ISR_stern_decisions3 = {
+	allowed = {
+		original_tag = ISR
+	}
+	priority = 100
+	visible = {
+		has_completed_focus = ISR_revivediplomacy
+	}
+}
+ISR_suez_category = {
+	allowed = {
+		original_tag = ISR
+	}
+	visible = {
+		has_completed_focus = ISR_euphratestothenile
+		has_full_control_of_state = 453
+	}
+}
+ISR_stern_decisions4 = {
+	allowed = {
+		original_tag = ISR
+	}
+	priority = 100
+	visible = {
+		has_completed_focus = ISR_thethirdtemple
+	}
+}
+ISR_return_lands_decisions = {
+	allowed = {
+		original_tag = ISR
+		
+	}
+	priority = 100
+	visible = {
+		OR = {
+			has_full_control_of_state = 447
+			has_full_control_of_state = 292
+			has_full_control_of_state = 291
+		}
+		OR = {
+			EGY = {
+				exists = no
+			}
+			IRQ = {
+				exists = no
+			}
+			SAU = {
+				exists = no
+			}
+		}
+	}
+}

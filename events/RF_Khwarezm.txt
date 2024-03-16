@@ -1,0 +1,212 @@
+add_namespace = khiva
+
+country_event = {
+	id = khiva.1
+	title = khiva.1.t
+	desc = khiva.1.desc
+	picture = GFX_GER_march_action
+	
+	is_triggered_only = yes
+	
+	option = { #khiva war on TUC
+		name = khiva.1.a
+		declare_war_on = {
+			target = TUC
+			type = annex_everything
+		}
+	}
+}
+country_event = {
+	id = khiva.2
+	title = khiva.2.t
+	desc = khiva.2.desc
+	picture = GFX_GER_march_action
+	fire_only_once = yes
+
+	trigger = {
+		tag = KHW
+		owns_state = 584
+	}
+	
+	option = { #khiva cores on TUC
+		name = khiva.2.a
+		add_state_core = 584
+		add_state_core = 1037
+		add_state_core = 850
+		hidden_effect = {
+			BKR = {
+				country_event = {
+					id = bkr.2
+					days = 15
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = khiva.3
+	title = khiva.3.t
+	desc = khiva.3.desc
+	picture = GFX_GER_march_action
+	fire_only_once = yes
+
+	trigger = {
+		tag = KHW
+		 owns_state = 1038
+	}
+	
+	option = { #khiva cores on bukhara
+		name = khiva.3.a
+		add_state_core = 851
+		add_state_core = 1038
+		add_state_core = 840 
+		add_state_core = 742
+		hidden_effect = {
+			country_event = {
+				id = khiva.4
+				days = 30
+			}
+			country_event = {
+				id = khiva.6
+				days = 60
+			}
+		}
+	}
+}
+
+country_event = {
+	id = khiva.4
+	title = khiva.4.t
+	desc = khiva.4.desc
+	picture = GFX_GER_march_action
+	fire_only_once = yes
+
+	trigger = {
+		 tag = KHW
+		 owns_state = 1038
+	}
+	
+	option = { #war on turkestan
+		name = khiva.4.a
+		declare_war_on = {
+			target = TUK
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = TRK
+			type = annex_everything
+		}
+	}
+}
+
+country_event = {
+	id = khiva.5
+	title = khiva.5.t
+	desc = khiva.5.desc
+	picture = GFX_GER_march_action
+	fire_only_once = yes
+
+	trigger = {
+		tag = KHW
+		owns_state = 586
+	}
+	
+	option = { #cores on turkestan
+		name = khiva.5.a
+		add_state_core = 405
+		add_state_core = 1040 
+		add_state_core = 585
+		add_state_core = 1042
+		add_state_core = 1041
+		add_state_core = 852
+		add_state_core = 1043
+		add_state_core = 586
+		add_state_core = 842
+		remove_ideas = KHW_hiddenbuff
+		if = {
+			limit = {
+				has_government = vanguard_socialism
+			}
+			set_cosmetic_tag = KHW_galiev_uni
+		}
+		if = {
+			limit = {
+				has_government = accelerationism
+			}
+			set_cosmetic_tag = KHW_tulip_uni
+		}
+		if = {
+			limit = {
+				has_government = revisionist_socialism
+			}
+			set_cosmetic_tag = KHW_kivan_uni
+		}
+	}
+}
+
+country_event = {
+	id = khiva.6
+	title = khiva.6.t
+	desc = khiva.6.desc
+	picture = GFX_GER_march_action
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = { #
+		name = khiva.6.a
+		ai_chance = { factor = 0 }
+		set_politics = {
+			ruling_party = accelerationism
+		}
+		add_popularity = {
+			ideology = accelerationism
+			popularity = 0.15
+		}
+		hidden_effect = {
+			country_event = {
+				id = khiva.7
+				days = 30
+			}
+		}
+	}
+	option = { #
+		name = khiva.6.b
+		ai_chance = { factor = 100 }
+		add_popularity = {
+			ideology = vanguard_socialism
+			popularity = 0.15
+		}
+	}
+}
+
+country_event = {
+	id = khiva.7
+	title = khiva.7.t
+	desc = khiva.7.desc
+	picture = GFX_GER_march_action
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { #
+		name = khiva.7.a
+		ai_chance = { factor = 40 }
+		set_politics = {
+			ruling_party = revisionist_socialism
+		}
+		add_popularity = {
+			ideology = revisionist_socialism
+			popularity = 0.15
+		}
+	}
+	option = { #
+		name = khiva.7.b
+		ai_chance = { factor = 60 }
+		add_popularity = {
+			ideology = accelerationism
+			popularity = 0.15
+		}
+	}
+}
+

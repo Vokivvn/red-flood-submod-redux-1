@@ -1,0 +1,160 @@
+﻿capital = 1058
+set_research_slots = 3
+set_convoys = 175
+set_stability = 0.5
+
+oob = "WRU"
+set_naval_oob = "WRU_naval"
+set_air_oob = "WRU_air"
+
+set_country_flag = is_russian_warlord
+
+add_ideas = {
+	RUS_warlord_indifference
+
+	limited_conscription
+	export_focus
+	civilian_economy
+}
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1
+	tech_recon = 1
+	tech_engineers = 1
+	tech_trucks =1
+	motorised_infantry = 1
+	gw_artillery = 1
+}
+if = {
+	limit = { NOT = { has_dlc = "No Step Back" } }
+	set_technology = {
+		gwtank = 1
+	}
+}
+if = {
+	limit = { has_dlc = "No Step Back" }
+	set_technology = {
+		gwtank_chassis = 1
+		engine_tech_1 = 1
+	}
+}
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	set_technology = {
+		early_submarine = 1
+		basic_submarine = 1
+		early_destroyer = 1
+		early_light_cruiser = 1
+		early_heavy_cruiser = 1
+		early_battleship = 1
+		early_battlecruiser = 1
+		transport = 1
+	}
+}
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		early_ship_hull_light = 1
+		basic_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		early_ship_hull_cruiser = 1
+		basic_ship_hull_cruiser = 1
+		early_ship_hull_heavy = 1
+		basic_battery = 1
+		basic_light_battery = 1
+		basic_torpedo = 1
+		basic_depth_charges = 1
+		mtg_transport = 1
+	}
+}
+#NSB
+if = {
+	limit = { NOT = { has_dlc = "No Step Back" } }
+	set_technology = {
+		gwtank = 1
+		basic_light_tank = 1
+	}
+}
+if = {
+	limit = { has_dlc = "No Step Back" }
+	set_technology = {
+		gwtank_chassis = 1
+		basic_light_tank_chassis = 1
+		improved_light_tank_chassis = 1
+		engine_tech_1 = 1
+		engine_tech_2 = 1
+	}
+}
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+	set_technology = {
+		iw_small_airframe = 1
+		aa_lmg = 1
+		aa_cannon_1 = 1
+		early_bombs = 1
+		engines_1 = 1
+		engines_2 = 1
+		iw_medium_airframe = 1
+		iw_large_airframe = 1
+		basic_small_airframe = 1
+		basic_medium_airframe = 1
+		aircraft_construction = 1
+	}
+}
+if = {
+	limit = { NOT = { has_dlc = "By Blood Alone" } }
+	set_technology = {
+		early_fighter = 1
+		fighter1 = 1
+		early_bomber = 1
+		strategic_bomber1 = 1
+		naval_bomber1 = 1
+	}
+}
+
+set_politics = {
+	ruling_party = despotism
+	last_election = "1933.10.25"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	vanguard_socialism = 10
+	popular_socialism = 0
+	anarchism = 0
+	revisionist_socialism = 0
+	progressivism = 10
+	liberalism = 5
+	conservatism = 5
+	right_authoritarianism = 20
+	despotism = 25
+	reactionism = 5
+	accelerationism = 20
+}
+
+recruit_character = WRU_pavel_bermondtavalov
+recruit_character = WRU_georgiy_leykhtenbergskiy
+recruit_character = WRU_jaan_anvelt
+recruit_character = WRU_anatol_leonid_fürst_von_lieven
+recruit_character = WRU_paul_von_rennenkampff
+recruit_character = WRU_aleksandr_rodzianko
+recruit_character = WRU_pyotr_von_glazenap
+recruit_character = WRU_alexis_friedrich_leonid_von_der_pahlen
+recruit_character = WRU_aleksandr_razvozov
+recruit_character = WRU_aleksei_krylov
+recruit_character = WRU_ivan_bubnov
+recruit_character = WRU_heinrich_eduard_von_stryk
+recruit_character = WRU_alexei_lobanov_rostovskiy
+recruit_character = WRU_sergey_nabokov
+recruit_character = WRU_sergey_kelopovskiy
+recruit_character = WRU_sergey_shydlovskiy
+recruit_character = WRU_josef_bischoff
+recruit_character = WRU_viktor_utgof
+
+recruit_character = WRU_council_of_baltic_lands
+recruit_character = WRU_Erhard_Kroeger

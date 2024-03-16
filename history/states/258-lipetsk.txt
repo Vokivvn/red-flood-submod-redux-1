@@ -1,0 +1,24 @@
+
+state={
+	id=258
+	name="STATE_258"
+	manpower = 1082096
+	
+	state_category = town
+
+	history={
+		owner = SRU
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = SRU
+		victory_points={
+			3291 3
+		}
+	}
+
+	provinces={
+		356 3291 3318 3346 
+		11214 384 11337 328 11283 302
+	}
+}

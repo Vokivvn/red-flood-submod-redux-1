@@ -1,0 +1,32 @@
+
+state={
+	id=76
+	name="STATE_76"
+
+	history={
+		owner = TRS
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+
+		}
+		victory_points = {
+			6711 20
+		}
+		victory_points = {
+			746 5
+		}
+		add_claim_by = ROM
+		add_claim_by = MOL
+		add_core_of = TRS
+
+	}
+
+	provinces={
+		727 746 3709 6711 6714 9687 9704 11676 
+	}
+	manpower=2052700
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

@@ -1,0 +1,37 @@
+state={
+	id=335
+	name="STATE_335" #Batavia
+	manpower = 2810700
+
+	state_category = city
+
+	resources={
+		rubber=70 # was: 242
+		oil=5 # was: 16
+	}
+
+	history={
+		owner = DEI
+		victory_points = { #Batavia
+			7381 10
+		}
+		victory_points = { #Buitenzorg
+			4406 5
+		}
+		add_core_of = DEI
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 1
+			arms_factory = 1
+			dockyard = 1
+			air_base = 3
+			7381 = {
+				naval_base = 6
+			}
+		}
+	}
+
+	provinces={
+		7381 4406
+	}
+}

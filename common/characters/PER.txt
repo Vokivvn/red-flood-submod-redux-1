@@ -1,0 +1,1433 @@
+characters = {
+	PER_reza_shah_pahlavi = {
+		name = "Reza Shah Pahlavi"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/PER/Portrait_Reza_Shah.png"
+			}
+		}
+		country_leader = {
+			ideology = oligarchy
+			expire = "1965.1.1.1"
+		}
+	}
+	PER_reza_radmanesh = {
+		name = "Reza Radmanesh"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/PER/Portrait_Reza_Radmanesh.png"
+			}
+			army = {
+				small = "GFX_idea_RPR_Reza_Radmanesh_minister"
+			}
+		}
+		country_leader = {
+			ideology = spartakism
+			expire = "1965.1.1.1"
+		}
+		advisor = {
+			slot = foreign_minister
+			idea_token = PER_reza_radmanesh_for
+			allowed = {
+				original_tag = RPR
+			}
+			traits = {
+				foreign_minister
+				for_ideological_crusader	
+			}
+			available = {
+				has_government = popular_socialism
+			}
+		}
+	}
+	PER_abol_ghasem_kashani = {
+		name = "Abol-Ghasem Kashani"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/PER/Portrait_Abol_Ghasem_Kashani.png"
+			}
+		}
+		country_leader = {
+			ideology = religious_fundamentalism
+			expire = "1965.1.1.1"
+		}
+	}
+	PER_mohammad_mosaddegh = {
+		name = "Mohammad Mosaddegh"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/PER/Portrait_PER_Mohammad_Mosaddegh.png"
+			}
+		}
+		country_leader = {
+			ideology = left_populism
+			expire = "1965.1.1.1"
+		}
+	}
+	PER_ahmad_qavam = {
+		name = "Ahmad Qavam"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/PER/Portrait_Ahmad_Qavam.png"
+			}
+		}
+		country_leader = {
+			ideology = social_conservatism
+			expire = "1965.1.1.1"
+		}
+	}
+	PER_mohammed_reza_pahlavi = {
+		name = "Mohammed Reza Pahlavi"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/PER/Portrait_Mo_Reza_Shah.png"
+			}
+		}
+		country_leader = {
+			desc = "SHAH_JNR_DESC"
+			ideology = oligarchy
+			expire = "1965.1.1.1"
+			traits = {
+				PER_mo_pahlavi
+			}
+		}
+	}
+	PER_William_Fraser = {
+		name = PER_William_Fraser
+		portraits = {
+			army = {
+				small = "GFX_idea_PER_William_Fraser_minister"
+			}
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = PER_William_Fraser_hog
+			allowed = {
+				original_tag = PER
+			}
+			visible = {
+				has_completed_focus = PER_knockknock_mr_pahlavi
+			}
+			traits = {
+				head_of_government
+				hog_smiling_oilman
+			}
+			available = {
+				has_government = right_authoritarianism
+			}
+		}
+	}
+
+	PER_Sayyed_Zia_Tabatabai = {
+		name = PER_Sayyed_Zia_Tabatabai
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/PER/Portrait_sayyed_zia_tabatabai.png"
+			}
+			army = {
+				small = "GFX_idea_PER_Sayyed_Zia_Tabatabai_minister"
+			}
+		}
+		country_leader = {
+			desc = "RW_TABATABAI_DESC"
+			expire = "1965.1.1"
+			ideology = anocracy
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = PER_Sayyed_Zia_Tabatabai_hog
+			allowed = {
+				original_tag = PER
+			}
+			visible = {
+				has_completed_focus = PER_knockknock_mr_pahlavi
+			}
+			traits = {
+				head_of_government
+				hog_silent_workhorse
+			}
+			available = {
+				has_government = right_authoritarianism
+			}
+		}
+	}
+	PER_Iraj_Eskandari = {
+		name = PER_Iraj_Eskandari
+		portraits = {
+			army = {
+				small = "GFX_idea_RPR_Iraj_Eskandari_minister"
+			}
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = PER_Iraj_Eskandari_hog
+			allowed = {
+				original_tag = RPR
+			}
+			traits = {
+				head_of_government
+				hog_silent_workhorse
+			}
+			available = {
+				has_government = popular_socialism
+			}
+		}
+	}
+	PER_Mirza_Kuchik_Khan = {
+		name = PER_Mirza_Kuchik_Khan
+		portraits = {
+			army = {
+				small = "GFX_idea_RPR_Mirza_Kochak_Khan_minister"
+			}
+			civilian = {
+				large = "gfx/leaders/PER/Portrait_Mirza_Kochak_Khan.png"
+			}
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = PER_Mirza_Kuchik_Khan_hog
+			allowed = {
+				original_tag = RPR
+			}
+			traits = {
+				head_of_government
+				hog_flamboyant_tough_guy
+			}
+			available = {
+				has_government = vanguard_socialism
+			}
+		}
+		country_leader = {
+			ideology = social_republicanism
+			expire = "1965.1.1.1"
+			traits = {
+				RPR_kochik_khan
+			}
+		}
+	}
+	PER_John_Le_Rougetel = {
+		portraits = {
+			army = {
+				small = "GFX_idea_PER_John_Le_Rougetel_minister"
+			}
+		}
+		advisor = {
+			slot = foreign_minister
+			idea_token = PER_John_Le_Rougetel_for
+			allowed = {
+				original_tag = PER
+			}
+			visible = {
+				has_completed_focus = PER_knockknock_mr_pahlavi
+			}
+			traits = {
+				foreign_minister
+				for_apologetic_clerk
+			}
+			available = {
+				has_government = right_authoritarianism
+			}
+		}
+	}
+
+	PER_Jafar_Pishevari = {
+		name = PER_Jafar_Pishevari
+		portraits = {
+			army = {
+				small = "GFX_idea_RPR_Jafar_Pishevari_minister"
+			}
+		}
+		advisor = {
+			slot = foreign_minister
+			idea_token = PER_Jafar_Pishevari_for
+			allowed = {
+				original_tag = RPR
+			}
+			traits = {
+				foreign_minister
+				for_great_compromiser
+			}
+			available = {
+				has_government = vanguard_socialism
+			}
+		}
+	}
+
+	PER_Hossein_Ala = {
+		name = PER_Hossein_Ala
+		portraits = {
+			army = {
+				small = "GFX_idea_PER_Hossein_Ala_minister"
+			}
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = PER_Hossein_Ala_eco
+			allowed = {
+				original_tag = PER
+			}
+			traits = {
+				economy_minister
+				eco_administrative_genius
+			}
+			available = {
+				OR = {
+					has_government = despotism
+					has_government = right_authoritarianism
+				}
+			}
+		}
+	}
+	PER_Neville_Gass = {
+		name = PER_Neville_Gass
+		portraits = {
+			army = {
+				small = "GFX_idea_PER_Neville_Gass_minister"
+			}
+		}
+		advisor = {
+			slot = foreign_minister
+			idea_token = PER_Neville_Gass
+			allowed = {
+				original_tag = PER
+			}
+			visible = {
+				has_completed_focus = PER_knockknock_mr_pahlavi
+			}
+			traits = {
+				economy_minister
+				eco_laissez_faire_capitalist		
+			}
+			available = {
+				has_government = right_authoritarianism
+			}
+		}
+	}
+	PER_Mohammad_Bahrami = {
+		name = PER_Mohammad_Bahrami
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/PER/Portrait_Mohammad_Bahrami.png"
+			}
+			army = {
+				small = "GFX_idea_RPR_Mohammad_Bahrami_minister"
+			}
+		}
+		country_leader = {
+			expire = "1965.1.1"
+			ideology = spartakism
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = PER_Mohammad_Bahrami_eco
+			allowed = {
+				original_tag = RPR
+			}
+			traits = {
+				economy_minister
+				eco_reformer	
+			}
+			available = {
+				has_government = popular_socialism
+			}
+		}
+	}
+	PER_Heshmat_Taleqani = {
+		name = PER_Heshmat_Taleqani
+		portraits = {
+			army = {
+				small = "GFX_idea_RPR_Heshmat_Taleqani_minister"
+			}
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = PER_Heshmat_Taleqani_eco
+			allowed = {
+				original_tag = RPR
+			}
+			traits = {
+				economy_minister
+				eco_planned_economy_proponent	
+			}
+			available = {
+				has_government = vanguard_socialism
+			}
+		}
+	}
+
+	PER_haydar_khan_amooghli = {
+		name="Haydar Khan Amo-oghli"
+		portraits={
+			army={
+				large="gfx/leaders/RPR/Portrait_Haydar_Khan_Amo_oghli.png"
+				small = "GFX_idea_RPR_Haydar_Khan_minister"
+			}
+		}
+		corps_commander={
+			traits={ trait_cautious }
+			skill=3
+			attack_skill=3
+			defense_skill=1
+			planning_skill=3
+			logistics_skill=1
+			legacy_id=-1
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = PER_Haydar_Khan_carm
+			allowed = {
+				original_tag = RPR
+			}
+			traits = {
+				army_chief
+				carm_guns_and_butter_doctrine
+			}
+		}
+		advisor = {
+			slot = head_of_intel
+			idea_token = PER_Haydar_Khan_int
+			allowed = {
+				original_tag = RPR
+			}
+			traits = {
+				head_of_intel
+				int_logistics_specialist				
+			}
+			available = {
+				has_government = vanguard_socialism
+			}
+		}
+	}
+
+	PER_Eric_Carlberg = {
+		name = PER_Eric_Carlberg
+		portraits = {
+			army = {
+				small = "GFX_idea_PER_Eric_Carlberg_minister"
+			}
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = PER_Eric_Carlberg_sec
+			allowed = {
+				original_tag = PER
+			}
+			traits = {
+				security_minister
+				sec_crime_fighter
+			}
+			available = {
+				OR = {
+					has_government = despotism
+					has_government = right_authoritarianism
+				}
+			}
+		}
+	}
+
+	PER_Anders_Anden = {
+		name = PER_Anders_Anden
+		portraits = {
+			army = {
+				small = "GFX_idea_PER_Anders_Anden_minister"
+			}
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = PER_Anders_Anden_sec
+			allowed = {
+				original_tag = PER
+			}
+			visible = {
+				has_completed_focus = PER_knockknock_mr_pahlavi
+			}
+			traits = {
+				security_minister
+				sec_secret_police_chief
+			}
+			available = {
+				has_government = right_authoritarianism
+			}
+		}
+	}
+	PER_Noureddin_Alamouti = {
+		name = PER_Noureddin_Alamouti
+		portraits = {
+			army = {
+				small = "GFX_idea_RPR_Noureddin_Alamouti_minister"
+			}
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = PER_Noureddin_Alamouti_sec
+			allowed = {
+				original_tag = RPR
+			}
+			traits = {
+				security_minister
+				sec_prince_of_terror
+			}
+			available = {
+				has_government = vanguard_socialism
+			}
+		}
+	}
+
+	PER_Hassan_Pakravan = {
+		name = PER_Hassan_Pakravan
+		portraits = {
+			army = {
+				small = "GFX_idea_PER_Hassan_Pakravan_minister"
+			}
+		}
+		advisor = {
+			slot = head_of_intel
+			idea_token = PER_Hassan_Pakravan_int
+			allowed = {
+				original_tag = PER
+			}
+			traits = {
+				head_of_intel
+				int_dismal_enigma				
+			}
+			available = {
+				OR = {
+					has_government = despotism
+					has_government = right_authoritarianism
+				}
+			}
+		}
+	}
+	PER_Boris_Moller = {
+		name = PER_Boris_Moller
+		portraits = {
+			army = {
+				small = "GFX_idea_PER_Boris_Moller_minister"
+			}
+		}
+		advisor = {
+			slot = head_of_intel
+			idea_token = PER_Boris_Moller_int
+			allowed = {
+				original_tag = PER
+			}
+			visible = {
+				has_completed_focus = PER_knockknock_mr_pahlavi
+			}
+			available = {
+				has_government = right_authoritarianism
+			}
+			traits = {
+				head_of_intel
+				int_logistics_specialist				
+			}
+		}
+	}
+	PER_Soleiman_Eskandari = {
+		name = PER_Soleiman_Eskandari
+		portraits = {
+			army = {
+				small = "GFX_idea_RPR_Soleiman_Eskandari_minister"
+			}
+		}
+		advisor = {
+			slot = head_of_intel
+			idea_token = PER_Soleiman_Eskandari_int
+			allowed = {
+				original_tag = RPR
+			}
+			traits = {
+				head_of_intel
+				int_political_specialist				
+			}
+			available = {
+				has_government = popular_socialism
+			}
+		}
+	}
+
+	PER_Amanullah_Jahanbani = {
+		name = "Amanullah Jahabani"
+		portraits = {
+			army = {
+				small = "GFX_idea_PER_Amanullah_JahanbanI_minister"
+				large = "gfx/leaders/PER/Portrait_Am_Djanhanbani.png"
+			}
+		}
+		corps_commander = {
+			traits = { trait_cautious bearer_of_artillery }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = PER_amanullah_jahabani_staff
+			allowed = {
+				original_tag = PER
+			}
+			available = {
+				OR = {
+					has_government = despotism
+					has_government = right_authoritarianism
+				}
+			}
+			traits = {
+				army_chief
+				carm_static_defence_doctrine
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = PER_Amanullah_Jahanbani_staff
+			allowed = {
+				original_tag = PER
+			}
+			available = {
+				OR = {
+					has_government = despotism
+					has_government = right_authoritarianism
+				}
+			}
+			traits = {
+				cos_school_of_mass_combat
+			}
+		}
+	}
+	PER_Edgar_Myles = {
+		name = PER_Edgar_Myles_staff
+		portraits = {
+			army = {
+				small = "GFX_idea_PER_Edgar_Myles_minister"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = PER_Edgar_Myles_staff
+			allowed = {
+				original_tag = PER
+			}
+			visible = {
+				has_completed_focus = PER_knockknock_mr_pahlavi
+			}
+			available = {
+				has_government = right_authoritarianism
+			}
+			traits = {
+				cos_school_of_commando_operations
+			}
+		}
+	}
+	PER_Ehsanollah_Khan = {
+		name = PER_Ehsanollah_Khan_staff
+		portraits = {
+			army = {
+				small = "GFX_idea_RPR_Ehsanollah_Khan_minister"
+				#large = ""
+			}
+		}
+		corps_commander = {
+			traits = { politically_connected }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+		}
+		advisor = {
+			slot = high_command
+			idea_token = PER_Ehsanollah_Khan_staff
+			allowed = {
+				original_tag = RPR
+			}
+			traits = {
+				cos_school_of_mass_combat
+			}
+		}
+	}
+
+	PER_Thomas_Riversdale = {
+		name = PER_Thomas_Riversdale_carm
+		portraits = {
+			army = {
+				small = "GFX_idea_PER_Thomas_Riversdale_minister"
+			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = PER_Thomas_Riversdale_carm
+			allowed = {
+				original_tag = PER
+			}
+			visible = {
+				has_completed_focus = PER_knockknock_mr_pahlavi
+			}
+			traits = {
+				army_chief
+				carm_commando_doctrine
+			}
+			available = {
+				has_government = right_authoritarianism
+			}
+		}
+	}
+
+	PER_Gholamali_Bayandor = {
+		name = PER_Gholamali_Bayandor_con
+		portraits = {
+			army = {
+				small = "GFX_idea_PER_Gholamali_Bayandor_minister"
+			}
+		}
+		advisor = {
+			slot = navy_chief
+			idea_token = PER_Gholamali_Bayandor_con
+			allowed = {
+				original_tag = PER
+			}
+			available = {
+				OR = {
+					has_government = despotism
+					has_government = right_authoritarianism
+				}
+			}
+			traits = {
+				navy_chief
+				cnav_base_control_doctrine
+			}
+		}
+	}
+	PER_Rudolf_Burmester = {
+		name = PER_Rudolf_Burmester_con
+		portraits = {
+			army = {
+				small = "GFX_idea_PER_Rudolf_Burmeester_minister"
+			}
+		}
+		advisor = {
+			slot = navy_chief
+			idea_token = PER_Rudolf_Burmester_con
+			allowed = {
+				original_tag = PER
+			}
+			visible = {
+				has_completed_focus = PER_knockknock_mr_pahlavi
+			}
+			available = {
+				has_government = right_authoritarianism
+			}
+			traits = {
+				navy_chief
+				cnav_open_seas_doctrine
+			}
+		}
+	}
+	PER_Alexei_Dombrowski = {
+		name = PER_Alexei_Dombrowski_con
+		portraits = {
+			army = {
+				small = "GFX_idea_RPR_Alexei_Dombrowski_minister"
+			}
+		}
+		advisor = {
+			slot = navy_chief
+			idea_token = PER_Alexei_Dombrowski_con
+			allowed = {
+				original_tag = RPR
+			}
+			traits = {
+				navy_chief
+				cnav_open_seas_doctrine
+			}
+		}
+	}
+
+	PER_Effat_Tejaratchi_coaf = {
+		name = PER_Effat_Tejaratchi_coaf
+		portraits = {
+			army = {
+				small = "GFX_idea_PER_Effat_Tejaratchi_minister"
+			}
+		}
+		advisor = {
+			slot = air_chief
+			idea_token = PER_Effat_Tejaratchi_coaf
+			allowed = {
+				original_tag = PER
+			}
+			available = {
+				date > 1939.01.01
+				OR = {
+					has_government = despotism
+					has_government = right_authoritarianism
+				}
+			}
+			traits = {
+				cair_air_superiority_doctrine
+			}
+		}
+	}
+	PER_Edgar_Ludlow_Hewitt_coaf = {
+		name = PER_Edgar_Ludlow_Hewitt_coaf
+		portraits = {
+			army = {
+				small = "GFX_idea_PER_Edgar_Ludlow_Hewitt_minister"
+			}
+		}
+		advisor = {
+			slot = air_chief
+			idea_token = PER_Edgar_Ludlow_Hewitt_coaf
+			allowed = {
+				original_tag = PER
+			}
+			visible = {
+				has_completed_focus = PER_knockknock_mr_pahlavi
+			}
+			available = {
+				has_government = right_authoritarianism
+			}
+			traits = {
+				air_chief
+				cair_carpet_bombing_doctrine
+			}
+		}
+	}
+	PER_Abdossamad_Kambakhsh = {
+		name = PER_Abdossamad_Kambakhsh_coaf
+		portraits = {
+			army = {
+				small = "GFX_idea_RPR_Abdossamad_Kambakhsh_minister"
+			}
+		}
+		advisor = {
+			slot = air_chief
+			idea_token = PER_Abdossamad_Kambakhsh_coaf
+			allowed = {
+				original_tag = RPR
+			}
+			traits = {
+				air_chief
+				cair_battlefield_support_doctrine
+			}
+		}
+	}
+
+	PER_Per_Glimstedt = {
+		name = PER_Per_Glimstedt_theorist
+		portraits = {
+			army = {
+				small = "GFX_idea_PER_Per_Glimstedt_minister"
+			}
+		}
+		advisor = {
+			slot = theorist
+			idea_token = PER_Per_Glimstedt_theorist
+			allowed = {
+				original_tag = PER
+			}
+			available = {
+				OR = {
+					has_government = despotism
+					has_government = right_authoritarianism
+				}
+			}
+			traits = {
+				military_theorist
+			}
+		}
+	}
+	PER_Arthur_Sullivan = {
+		name = PER_Arthur_Sullivan_theorist
+		portraits = {
+			army = {
+				small = "GFX_idea_PER_Arthur_Sullivan_minister"
+			}
+		}
+		advisor = {
+			slot = theorist
+			idea_token = PER_Arthur_Sullivan_theorist
+			allowed = {
+				original_tag = PER
+			}
+			visible = {
+				has_completed_focus = PER_knockknock_mr_pahlavi
+			}
+			available = {
+				has_government = right_authoritarianism
+			}
+			traits = {
+				superior_firepower_theorist
+			}
+			research_bonus = {
+				cat_superior_firepower = 0.1
+			}
+		}
+	}
+	PER_Fereydoun_Keshavarz = {
+		name = PER_Fereydoun_Keshavarz_theorist
+		portraits = {
+			army = {
+				small = "GFX_idea_RPR_Fereydoun_Keshavrz_minister"
+			}
+		}
+		advisor = {
+			slot = theorist
+			idea_token = PER_Fereydoun_Keshavarz_theorist
+			allowed = {
+				original_tag = RPR
+			}
+			visible = {
+				OR = {
+					has_government = popular_socialism
+					has_government = vanguard_socialism
+				}
+			}
+			available = {
+				has_completed_focus = RPR_invite_german_advisors
+				date > 1940.1.1
+			}
+			traits = {
+				nuclear_theorist
+			}
+			research_bonus = {
+				nuclear = 0.1
+			}
+		}
+	}
+
+	PER_fazlollah_zahedi = {
+		name = "Fazlollah Zahedi"
+		portraits = {
+			army = {
+				large = "gfx/leaders/PER/Portrait_Fazlollah_Zahedi.png"
+			}
+			army = {
+				small = "GFX_idea_PER_Fazlollah_Zahedi_minister"
+			}
+		}
+		corps_commander = {
+			traits = { career_officer }
+			skill = 2
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 1
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = PER_Fazlollah_Zahedi_hog
+			allowed = {
+				original_tag = PER
+			}
+			traits = {
+				head_of_government
+				hog_old_general
+			}
+			available = {
+				OR = {
+					has_government = despotism
+					has_government = right_authoritarianism
+				}
+			}
+		}
+	}
+	PER_john_cadman = {
+		name = "John Cadman"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/PER/Portrait_John_Cadman.png"
+			}
+		}
+		country_leader = {
+			desc = "RW_CADMAN_DESC"
+			expire = "1965.1.1"
+			ideology = plutocracy
+			traits = {
+
+			}
+		}
+	}
+	
+	PER_hasan_arfa = {
+		name = "Hasan Arfa"
+		portraits = {
+			army = {
+				large = "gfx/leaders/PER/Portrait_Hasan_arfa.png"
+			}
+			army = {
+				small = "GFX_idea_PER_Hasan_Arfa_minister"
+			}
+		}
+		corps_commander = {
+			traits = { cavalry_officer }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 1
+			logistics_skill = 2
+		}
+		advisor = {
+			slot = foreign_minister
+			idea_token = PER_Hasan_Arfa_for
+			allowed = {
+				original_tag = PER
+			}
+			traits = {
+				foreign_minister
+				for_general_staffer	
+			}
+			available = {
+				OR = {
+					has_government = despotism
+					has_government = right_authoritarianism
+				}
+			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = PER_Hasan_Arfa_carm
+			allowed = {
+				original_tag = PER
+			}
+			available = {
+				OR = {
+					has_government = despotism
+					has_government = right_authoritarianism
+				}
+			}
+			traits = {
+				army_chief
+				carm_elastic_defence_doctrine
+			}
+		}
+	}
+	PER_hassan_alavikia = {
+		name = "Hasan Alavikia"
+		portraits = {
+			army = {
+				#large = "gfx/leaders/PER/Portrait_Hasan_arfa.png"
+			}
+			army = {
+				small = "GFX_idea_PER_Hasan_Alavikia_minister"
+			}
+		}
+		corps_commander = {
+			traits = {  }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = PER_Hassan_Alavikia_sec
+			allowed = {
+				original_tag = PER
+			}
+			traits = {
+				security_minister
+				sec_secret_police_chief	
+			}
+			available = {
+				has_completed_focus = PER_create_savak
+				has_government = despotism
+			}
+		}
+		advisor = {
+			slot = theorist
+			idea_token = PER_Hassan_Alavikia_theorist
+			allowed = {
+				original_tag = PER
+			}
+			available = {
+				has_government = despotism
+				has_completed_focus = PER_create_savak
+			}
+			traits = {
+				electronic_theorist
+			}
+			research_bonus = {
+				electronics = 0.1
+			}
+		}
+	}
+	PER_mohammad_ali_foroughi = {
+		name = "Mohammad-Ali Foroughi"
+		portraits = {
+			army = {
+				small = "GFX_idea_PER_Mohammad_Ali_Foroughi_minister"
+			}
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = PER_Mohammad_Ali_Foroughi_hog
+			allowed = {
+				original_tag = PER
+			}
+			available = {
+				OR = {
+					has_government = despotism
+					has_government = right_authoritarianism
+				}
+			}
+			traits = {
+				head_of_government
+				hog_pragmatic_statesman
+			}
+		}
+		advisor = {
+			slot = foreign_minister
+			idea_token = PER_Mohammad_Ali_Foroughi_for
+			allowed = {
+				original_tag = PER
+			}
+			available = {
+				OR = {
+					has_government = despotism
+					has_government = right_authoritarianism
+				}
+			}
+			traits = {
+				foreign_minister
+				for_great_compromiser
+			}
+		}
+	}
+	PER_mahmoud_djam = {
+		name = "Mahmoud Djam"
+		portraits = {
+			army = {
+				small = "GFX_idea_PER_Mahmoud_Djam_minister"
+			}
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = PER_Mahmoud_Djam_hog
+			allowed = {
+				original_tag = PER
+			}
+			available = {
+				OR = {
+					has_government = despotism
+					has_government = right_authoritarianism
+				}
+			}
+			traits = {
+				head_of_government
+				hog_silent_workhorse
+			}
+		}
+	}
+	PER_firouz_nosrat_ed_dowleh_iii = {
+		name = "Firouz Nosrat-ed-Dowleh III"
+		portraits = {
+			army = {
+				small = "GFX_idea_PER_Firouz_Nosrat_ed_Dowleh_III_minister"
+			}
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = PER_Firouz_Nosrat_ed_Dowleh_III_eco
+			allowed = {
+				original_tag = PER
+			}
+			available = {
+				OR = {
+					has_government = despotism
+					has_government = right_authoritarianism
+				}
+			}
+			traits = {
+				economy_minister
+				eco_corrupt_kleptocrat
+			}
+		}
+	}
+	PER_sayyed_hassan_taghizadeh = {
+		name = "Sayyed Taghizadeh"
+		portraits = {
+			army = {
+				small = "GFX_idea_PER_Sayyed_Hassan_Taghizadeh_minister"
+			}
+		}
+		advisor = {
+			slot = foreign_minister
+			idea_token = PER_Sayyed_Taghizadeh_for
+			allowed = {
+				original_tag = PER
+			}
+			available = {
+				OR = {
+					has_government = despotism
+					has_government = right_authoritarianism
+				}
+			}
+			traits = {
+				foreign_minister
+				for_biased_intellectual
+			}
+		}
+	}
+	PER_ali_akbar_davar = {
+		name = "Ali-Akbar Davar"
+		portraits = {
+			army = {
+				small = "GFX_idea_PER_Ali_Akbar_Davar_minister"
+			}
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = PER_ali_akbar_davar_econ
+			allowed = {
+				original_tag = PER
+			}
+			available = {
+				OR = {
+					has_government = despotism
+					has_government = right_authoritarianism
+				}
+			}
+			traits = {
+				economy_minister
+				eco_reformer
+			}
+		}
+	}
+	PER_mohammad_hosayn_aryom = {
+		name = "Mohammad-Hosayn Aryom"
+		portraits = {
+			army = {
+				#large = "gfx/leaders/PER/Portrait_Hasan_arfa.png"
+			}
+			army = {
+				small = "GFX_idea_PER_Mohammad_Hosayn_Ayrom_minister"
+			}
+		}
+		corps_commander = {
+			traits = {  }
+			skill = 2
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = PER_mohammad_hosayn_aryom_sec
+			allowed = {
+				original_tag = PER
+			}
+			traits = {
+				security_minister
+				sec_back_stabber	
+			}
+			available = {
+				OR = {
+					has_government = despotism
+					has_government = right_authoritarianism
+				}
+			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = PER_mohammad_hosayn_aryom_carm
+			allowed = {
+				original_tag = PER
+			}
+			available = {
+				OR = {
+					has_government = despotism
+					has_government = right_authoritarianism
+				}
+			}
+			traits = {
+				army_chief
+				army_cavalry_2
+			}
+		}
+	}
+	PER_ali_khan_mansur = {
+		name = "Ali Khan Mansur"
+		portraits = {
+			army = {
+				small = "GFX_idea_PER_Ali_Mansur_minister"
+			}
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = PER_ali_khan_mansur_hog
+			allowed = {
+				original_tag = PER
+			}
+			available = {
+				OR = {
+					has_government = despotism
+					has_government = right_authoritarianism
+				}
+			}
+			traits = {
+				head_of_government
+				hog_naive_optimist
+			}
+		}
+	}
+	PER_ahmad_amir_ahmadi = {
+		name = "Ahmad Amir-Ahmadi"
+		portraits = {
+			army = {
+				#large = "gfx/leaders/PER/Portrait_Hasan_arfa.png"
+			}
+			army = {
+				small = "GFX_idea_PER_Ahmad_Amir_Ahmadi_minister"
+			}
+		}
+		corps_commander = {
+			traits = {  }
+			skill = 2
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = PER_ahmad_amir_ahmadi_carm
+			allowed = {
+				original_tag = PER
+			}
+			traits = {
+				army_chief
+				carm_elastic_defence_doctrine	
+			}
+			available = {
+				OR ={
+					has_government = despotism
+					has_government = right_authoritarianism
+				}
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = PER_ahmad_amir_ahmadi_staff
+			allowed = {
+				original_tag = PER
+			}
+			available = {
+				OR = {
+					has_government = despotism
+					has_government = right_authoritarianism
+				}
+			}
+			traits = {
+				cos_school_of_defence
+			}
+		}
+	}
+	PER_assadollah_hosseinpour = {
+		name = "Assadollah Hosseinpour"
+		portraits = {
+			army = {
+				#large = "gfx/leaders/PER/Portrait_Hasan_arfa.png"
+			}
+			army = {
+				small = "GFX_idea_PER_Assadollah_Hosseinpour_minister"
+			}
+		}
+		corps_commander = {
+			traits = { old_guard }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 3
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = PER_assadollah_hosseinpour_carm
+			allowed = {
+				original_tag = PER
+			}
+			traits = {
+				army_chief
+				carm_doctrine_of_autonomy	
+			}
+			available = {
+				OR ={
+					has_government = despotism
+					has_government = right_authoritarianism
+				}
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = PER_assadollah_hosseinpour_staff
+			allowed = {
+				original_tag = PER
+			}
+			available = {
+				OR = {
+					has_government = despotism
+					has_government = right_authoritarianism
+				}
+			}
+			traits = {
+				cos_school_of_mass_combat
+			}
+		}
+	}
+	PER_karim_buzarjomehri = {
+		name = "Karim Buzarjomehri"
+		portraits = {
+			army = {
+				#large = "gfx/leaders/PER/Portrait_Hasan_arfa.png"
+			}
+			army = {
+				small = "GFX_idea_PER_Karim_Buzarjomehri_minister"
+			}
+		}
+		corps_commander = {
+			traits = { old_guard politically_connected }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 2
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = PER_karim_buzarjomehri_carm
+			allowed = {
+				original_tag = PER
+			}
+			traits = {
+				army_chief
+				carm_static_defence_doctrine	
+			}
+			available = {
+				OR ={
+					has_government = despotism
+					has_government = right_authoritarianism
+				}
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = PER_karim_buzarjomehri_staff
+			allowed = {
+				original_tag = PER
+			}
+			available = {
+				OR = {
+					has_government = despotism
+					has_government = right_authoritarianism
+				}
+			}
+			traits = {
+				cos_school_of_psychology
+			}
+		}
+	}
+}

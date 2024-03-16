@@ -1,0 +1,12 @@
+characters = {
+	GXC_huang_shaohong = {
+		name = "Huang Shaohong"
+		country_leader = {
+			ideology = military_dictatorship
+			expire = "1965.1.1.1"
+			traits = {
+				popular_figurehead
+			}
+		}
+	}
+}

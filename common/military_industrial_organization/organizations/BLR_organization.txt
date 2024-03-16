@@ -1,0 +1,75 @@
+################################
+#materiel_manufacturer##############
+################################
+BLR_Minsk_Arsenal_organization = {
+	include = generic_infantry_equipment_organization
+	icon = GFX_idea_Minsk_Arsenal
+	allowed = {
+		original_tag = BLR 
+	}
+}
+BLR_Grodno_Military_Research_Institute_organization = {
+	include = generic_infantry_equipment_organization
+	icon = GFX_idea_Grodno_Military_Research_Institute
+	allowed = {
+		original_tag = BLR 
+	}
+}
+################################
+#tank_manufacturer##############
+################################
+BLR_Armor_Research_Institute_organization = {
+	include = generic_tank_organization
+	icon = GFX_idea_Armor_Research_Institute
+	allowed = {
+		original_tag = BLR 
+	}
+}
+BLR_MAZ_company_organization = {
+	include = generic_tank_organization
+	icon = GFX_idea_MAZ_company
+	allowed = {
+		original_tag = BLR 
+	}
+}
+################################
+#naval_manufacturer##############
+################################
+BLR_Baltic_Shipyards_organization = {
+	include = generic_task_force_ship_organization
+	icon = GFX_idea_Baltic_Shipyards
+	allowed = {
+		original_tag = BLR 
+	}
+}
+################################
+#aircraft_manufacturer##############
+################################
+BLR_Atamanska_Sport_Aircraft_Factory_organization = {
+	include = generic_general_aircraft_organization
+	icon = GFX_idea_Atamanska_Sport_Aircraft_Factory
+	allowed = {
+		original_tag = BLR 
+	}
+}
+BLR_Astrouski_Aircraft_Bureau_organization = {
+	include = generic_general_aircraft_organization
+	icon = GFX_idea_Astrouski_Aircraft_Bureau
+	allowed = {
+		original_tag = BLR 
+	}
+}
+BLR_Radchenka_Design_Bureau_organization = {
+	include = generic_general_aircraft_organization
+	icon = GFX_idea_Radchenka_Design_Bureau
+	allowed = {
+		original_tag = BLR 
+	}
+}
+BLR_Hydroaeronautics_Club_organization = {
+	include = generic_general_aircraft_organization
+	icon = GFX_idea_Hydroaeronautics_Club
+	allowed = {
+		original_tag = BLR 
+	}
+}

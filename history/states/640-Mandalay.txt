@@ -1,0 +1,23 @@
+state={
+	id=640
+	name="STATE_640"
+
+	history={
+		owner = BUR
+		add_core_of = BUR
+		buildings = {
+			infrastructure = 1
+			air_base = 1
+		}
+		victory_points = {
+			10386 1
+		}
+	}
+
+	provinces={
+		10486 4588 12464 12335 10386 12492
+	}
+	manpower=956400
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

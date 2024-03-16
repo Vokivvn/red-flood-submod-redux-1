@@ -1,0 +1,26 @@
+characters = {
+	EGY_fuad_I = {
+		name = "Fuad"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/EGY/portrait_fuad_II.png"
+			}
+		}
+		country_leader = {
+			ideology = oligarchy
+			expire = "1965.1.1.1"
+		}
+	}
+	EGY_farouk_I = { 
+		name = "Farouk"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/EGY/EGY_Farouk.png"
+			}
+		}
+		country_leader = {
+			ideology = absolute_monarchy
+			expire = "1965.1.1.1"
+		}
+	}
+}

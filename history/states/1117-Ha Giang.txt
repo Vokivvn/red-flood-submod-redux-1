@@ -1,0 +1,21 @@
+state = {
+	id = 1117
+	name = "STATE_1117"
+
+	history = {
+		owner = DAI
+		add_core_of = DAI
+		buildings = {
+			infrastructure = 1
+		}
+		victory_points = { 12065 2 }
+	}
+
+	provinces = {
+		7518 12065
+	}
+
+	manpower = 20000
+	buildings_max_level_factor = 1
+	state_category = rural
+}

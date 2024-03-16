@@ -1,0 +1,14 @@
+characters = {
+	BCQ_joao_punaro_bley = {
+		name = "João Punaro Bley"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/BCQ/Portrait_BCQ_Joao_Punaro_Bley.png"
+			}
+		}
+		country_leader = {
+			ideology = oligarchy
+			expire = "1965.1.1.1"
+		}
+	}
+}

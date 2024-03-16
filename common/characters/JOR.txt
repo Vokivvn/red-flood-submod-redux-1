@@ -1,0 +1,26 @@
+﻿characters = {
+	JOR_amin_al_husseini = {
+		name = "Amin al-Husseini"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/JOR/JOR_Amin.png"
+			}
+		}
+		country_leader = {
+			ideology = religious_fundamentalism
+			expire = "1965.1.1.1"
+		}
+	}
+	JOR_ZOG = {
+		name = "Transjordanian Occupation Authority"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/JOR/JOR_ZOG.png"
+			}
+		}
+		country_leader = {
+			ideology = praetorian_oligarchy
+			expire = "1965.1.1.1"
+		}
+	}
+}

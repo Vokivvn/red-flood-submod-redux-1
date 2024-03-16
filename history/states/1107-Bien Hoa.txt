@@ -1,0 +1,23 @@
+state = {
+	id=1107
+	name="STATE_1107"
+
+	history={
+		add_core_of = DAI
+		owner = DAI
+		buildings = {
+			infrastructure = 2
+		}
+		victory_points = {
+			7347 2
+		}
+	}
+
+	provinces = {
+		10261 7238 7347
+	}
+
+	manpower = 20000 #probably needs to be looked at, like all of these
+	buildings_max_level_factor=1.000
+	state_category=town
+}

@@ -1,0 +1,33 @@
+characters={
+	YEM_yahya_muhammad_hamid_eddin={
+		name="Yahya Hamid ad-Din"
+		portraits={
+			civilian={
+				large="gfx/leaders/YEM/portrait_YEM_imam_yahya.png"
+			}
+		}
+		country_leader={
+			
+			ideology=theocracy
+			traits={ popular_figurehead }
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	YEM_abdullah_al_wazir={
+		name="Abdullah bin Ahmad al-Wazir"
+		portraits={
+			civilian={
+				large="gfx/leaders/YEM/portrait_abdullah_al_wazir.png"
+			}
+		}
+		country_leader={
+			
+			ideology=social_conservatism
+			traits={ popular_figurehead }
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	
+}

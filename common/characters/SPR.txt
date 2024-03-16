@@ -1,0 +1,333 @@
+characters = {
+	SPR_ramón_franco = {
+		name = "Ramón Franco"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SPR/Portrait_SPR_Ramon_Franco.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_RAMON_FRANCO_DESC"
+			ideology = constitutional_dictatorship
+			expire = "1965.1.1.1"
+			id = -1
+		}
+	}
+	SPR_alejandro_lerroux = {
+		name = "Alejandro Lerroux"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SPR/Portrait_Alejandro_Lerroux.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_LERROUX_DESC"
+			ideology = social_nationalism
+			expire = "1965.1.1.1"
+			id = -1
+		}
+	}
+	SPR_ramon_serrano_suner = {
+		name = "Ramón Serrano Suñer"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SPR/Portrait_SPR_Suner.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_SUNER_DESC"
+			ideology = national_democracy
+			expire = "1965.1.1.1"
+		}
+	}
+	SPR_francisco_largo_caballero = {
+		name = "Francisco Largo Caballero"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SPR/Portrait_SPR_Caballero.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_CABALLERO_DESC"
+			ideology = syndicalism
+			expire = "1965.1.1.1"
+		}
+	}
+	SPR_josé_ortega_y_gasset = {
+		name = "José Ortega y Gasset"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SPR/Portrait_SPR_My_Beloved.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_ORTEGA_DESC"
+			ideology = national_liberalism
+			expire = "1965.1.1.1"
+		}
+	}
+	SPR_Fernando_de_los_rios = {
+		name = "Fernando de los Ríos"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SPR/Portrait_SPR_Rios.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_RIOS_DESC"
+			ideology = democratic_socialism
+			expire = "1965.1.1.1"
+		}
+	}
+	SPR_josé_maria_hinojosa = {
+		name = "José Maria Hinojosa"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SPR/Portrait_SPR_Hinojosa.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_HINOJOSA_DESC"
+			ideology = national_conservatism
+			expire = "1965.1.1.1"
+		}
+	}
+	SPR_vicente_uribe = {
+		name = "Vicente Uribe"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SPR/Portrait_SPR_Uribe.png"
+			}
+		}
+	}
+	SPR_andreu_nin = {
+		name = "Andrés Nin"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SPR/Portrait_SPR_Nin.png"
+			}
+		}
+	}
+	SPR_julian_besteiro = {
+		name = "Julián Besteiro"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SPR/Portrait_SPR_Oomfie.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_BESTEIRO_DESC"
+			ideology = spartakism
+			expire = "1965.1.1.1"
+		}
+	}
+	SPR_jesus_hernandez = {
+		name = "Miguel Hernández"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SPR/Portrait_Hernandez.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_HERNANDEZ_DESC"
+			ideology = futurism
+			expire = "1965.1.1.1"
+		}
+	}
+	SPR_josé_diaz = {
+		name = "José Diaz"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SPR/Portrait_Jose_Diaz.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_DIAZ_DESC"
+			ideology = leninism
+			expire = "1965.1.1.1"
+			id = -1
+		}
+	}
+	SPR_ramón_gómez_de_la_serna = {
+		name = "Ramón Gómez de la Serna"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SPA/Portrait_SPA_Ramon_Gomez_Serna.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_DE_LA_SERNA_DESC"
+			ideology = national_rejuvenatism
+			expire = "1965.1.1.1"
+			id = -1
+		}
+	}
+	SPR_buenaventura_durruti = {
+		name = "Buenaventura Durruti"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SPR/CNT_Buenaventura.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_DURRUTI_DESC"
+			ideology = stratocratic_anarchism
+			expire = "1965.1.1.1"
+			id = -1
+		}
+	}
+	SPR_francisco_franco = {
+		name = "Francisco Franco"
+		portraits = {
+			army = {
+				large = "gfx/leaders/SPR/Portrait_SPR_Franco.png"
+			}
+		}
+		field_marshal = {
+			traits = { brilliant_strategist fast_planner }
+			skill = 4
+			attack_skill = 4
+			defense_skill = 2
+			planning_skill = 5
+			logistics_skill = 2
+			legacy_id = 50
+		}
+	}
+	SPR_vincente_rojo_lluch = {
+		name = "Vincente Rojo Lluch"
+		portraits = {
+			army = {
+				large = "gfx/leaders/SPR/SPR_Vincente_Rojo_LLuch.png"
+			}
+		}
+		field_marshal = {
+			traits = { brilliant_strategist fast_planner }
+			skill = 3
+			attack_skill = 4
+			defense_skill = 2
+			planning_skill = 5
+			logistics_skill = 2
+			legacy_id = -1
+		}
+	}
+	SPR_segismundo_casado = {
+		name = "Segismundo Casado"
+		portraits = {
+			army = {
+				large = "gfx/leaders/SPR/SPR_Segismundo_Casado.png"
+			}
+		}
+		corps_commander = {
+			traits = { war_hero infantry_leader }
+			skill = 2
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 1
+			legacy_id = -1
+		}
+	}
+	SPR_carlos_romero_gimenez = {
+		name = "Carlos Romero Gimenez"
+		portraits = {
+			army = {
+				large = "gfx/leaders/SPR/SPR_Carlos_Romero_Giménez.png"
+			}
+		}
+		corps_commander = {
+			traits = { war_hero infantry_leader }
+			skill = 2
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 1
+			legacy_id = -1
+		}
+	}
+	SPR_dominic_batet = {
+		name = "Dominic Batet"
+		portraits = {
+			army = {
+				large = "gfx/leaders/SPR/SPR_Dominic_Batet.png"
+			}
+		}
+		corps_commander = {
+			traits = { war_hero infantry_leader }
+			skill = 2
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 1
+			legacy_id = -1
+		}
+	}
+	SPR_francisco_llano_de_la_encomienda = {
+		name = "Francisco Llano de la Encomienda"
+		portraits = {
+			army = {
+				large = "gfx/leaders/SPR/SPR_Francisco_Llano_de_la_Encomienda.png"
+			}
+		}
+		corps_commander = {
+			traits = { war_hero infantry_leader }
+			skill = 2
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 1
+			legacy_id = -1
+		}
+	}
+	SPR_jose_asensio_torrado = {
+		name = "Jose Asensio Torrado"
+		portraits = {
+			army = {
+				large = "gfx/leaders/SPR/SPR_José_Asensio_Torrado.png"
+			}
+		}
+		corps_commander = {
+			traits = { war_hero infantry_leader }
+			skill = 2
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 1
+			legacy_id = -1
+		}
+	}
+	SPR_jose_miaja = {
+		name = "Jose Miaja"
+		portraits = {
+			army = {
+				large = "gfx/leaders/SPR/SPR_José_Miaja.png"
+			}
+		}
+		corps_commander = {
+			traits = { war_hero infantry_leader }
+			skill = 2
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 1
+			legacy_id = -1
+		}
+	}
+	SPR_juan_hernandez_saravia = {
+		name = "Juan Hernandez Saravia"
+		portraits = {
+			army = {
+				large = "gfx/leaders/SPR/SPR_Juan_Hernández_Saravia.png"
+			}
+		}
+		corps_commander = {
+			traits = { war_hero infantry_leader }
+			skill = 2
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 1
+			legacy_id = -1
+		}
+	}
+	
+}

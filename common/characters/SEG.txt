@@ -1,0 +1,28 @@
+characters = {
+	SEG_zimmerman = {
+		name = "Donald Z. Zimmerman"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/SEG/Portrait_Donald_Z_Zimmerman.png"
+			}
+		}
+		country_leader = {
+			ideology = praetorian_oligarchy
+			expire = "1965.1.1.1"
+			id=-1
+		}
+	}
+	SEG_larper = {
+		name = "Chief Red Cloud"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/SEG/Portrait_Elwood_Tanner.png"
+			}
+		}
+		country_leader = {
+			ideology = esoteric_reactionism
+			expire = "1965.1.1.1"
+			id=-1
+		}
+	}
+}

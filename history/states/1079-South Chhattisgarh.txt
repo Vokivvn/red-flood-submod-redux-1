@@ -1,0 +1,28 @@
+
+state={
+	id=1079
+	name="STATE_1079" #Chhattisgarh
+	manpower = 4120100
+
+	state_category = rural
+
+	resources={
+		
+	}
+
+	history={
+		owner = BIH
+		add_core_of = BIH
+		add_claim_by = ORS
+		buildings = {
+			infrastructure = 2
+		}
+		victory_points = {
+			12241 2
+		}
+	}
+
+	provinces={
+		1579 1622 7428 7465 10469 12241 12490
+	}
+}

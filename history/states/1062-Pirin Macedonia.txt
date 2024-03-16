@@ -1,0 +1,28 @@
+
+state={
+	id=1062
+	name="STATE_1062"
+	manpower = 230000
+	
+	
+	state_category = rural
+
+	history={
+		owner = BUL
+
+		victory_points = {
+			6886 3
+		}
+
+		buildings = {
+			infrastructure = 3
+			arms_factory = 1
+		}
+		add_core_of = BUL
+		add_claim_by = YUG
+	}
+
+	provinces={
+		907 6886 3833
+	}
+}

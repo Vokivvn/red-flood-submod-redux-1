@@ -1,0 +1,158 @@
+﻿division_template = {
+	name = "Sanjiao Jūn"				# Represents local militia groups (generally poorly-equipped )
+	division_names_group = CHI_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }	
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+}
+division_template = {
+	name = "Qibing Jūn"				# Represents (two-division) cavalry corps (generally poorly-equipped)
+	division_names_group = CHI_CAV_01
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+	}
+}
+division_template = {
+	name = "Shāndì Jūnduì"		#Mountaineer
+	division_names_group = CHI_INF_01
+
+	regiments = {
+		mountaineers = { x = 0 y = 0 }
+	    mountaineers = { x = 0 y = 1 }
+		mountaineers = { x = 1 y = 0 }
+		mountaineers = { x = 1 y = 1 }
+	}
+}
+### OOB ###
+units = {
+	division = {
+		location = 4295
+		division_template = "Sanjiao Jūn"		# Provincial militia unit (poor equipment and training)
+		start_equipment_factor = 0.8
+		start_experience_factor = 0.2
+	}
+	division = {
+		location = 4167
+		division_template = "Sanjiao Jūn"		# Provincial militia unit (poor equipment and training)
+		start_equipment_factor = 0.8
+		start_experience_factor = 0.2
+	}
+	division = {
+		location = 7418
+		division_template = "Sanjiao Jūn"		# Provincial militia unit (poor equipment and training)
+		start_equipment_factor = 0.8
+		start_experience_factor = 0.2
+	}
+	division = {
+		location = 8072
+		division_template = "Sanjiao Jūn"		# Provincial militia unit (poor equipment and training)
+		start_equipment_factor = 0.8
+		start_experience_factor = 0.2
+	}
+	division = {
+		location = 7948
+		division_template = "Sanjiao Jūn"		# Provincial militia unit (poor equipment and training)
+		start_equipment_factor = 0.8
+		start_experience_factor = 0.2
+	}
+	division = {
+		location = 7596
+		division_template = "Sanjiao Jūn"		# Provincial militia unit (poor equipment and training)
+		start_equipment_factor = 0.8
+		start_experience_factor = 0.2
+	}
+	division = {
+		location = 7609
+		division_template = "Sanjiao Jūn"		# Provincial militia unit (poor equipment and training)
+		start_equipment_factor = 0.8
+		start_experience_factor = 0.2
+	}
+	division = {
+		location = 4009
+		division_template = "Sanjiao Jūn"		# Provincial militia unit (poor equipment and training)
+		start_equipment_factor = 0.8
+		start_experience_factor = 0.2
+	}
+	division = {
+		location = 7459
+		division_template = "Sanjiao Jūn"		# Provincial militia unit (poor equipment and training)
+		start_equipment_factor = 0.8
+		start_experience_factor = 0.2
+	}
+	division = {
+		location = 10880
+		division_template = "Sanjiao Jūn"		# Provincial militia unit (poor equipment and training)
+		start_equipment_factor = 0.8
+		start_experience_factor = 0.2
+	}
+	division = {
+		location = 1734
+		division_template = "Sanjiao Jūn"		# Provincial militia unit (poor equipment and training)
+		start_equipment_factor = 0.8
+		start_experience_factor = 0.2
+	}
+	division = {
+		location = 1458
+		division_template = "Sanjiao Jūn"		# Provincial militia unit (poor equipment and training)
+		start_equipment_factor = 0.8
+		start_experience_factor = 0.2
+	}
+	division = {
+		location = 5007
+		division_template = "Qibing Jūn"		# Provincial militia unit (poor equipment and training)
+		start_equipment_factor = 0.8
+		start_experience_factor = 0.2
+	}
+	division = {
+		location = 7208
+		division_template = "Qibing Jūn"		# Provincial militia unit (poor equipment and training)
+		start_equipment_factor = 0.8
+		start_experience_factor = 0.2
+	}
+	division = {
+		location = 7659
+		division_template = "Qibing Jūn"		# Provincial militia unit (poor equipment and training)
+		start_equipment_factor = 0.8
+		start_experience_factor = 0.2
+	}
+	division = {
+		location = 2006
+		division_template = "Qibing Jūn"		# Provincial militia unit (poor equipment and training)
+		start_equipment_factor = 0.8
+		start_experience_factor = 0.2
+	}
+	division = {
+		location = 12156
+		division_template = "Shāndì Jūnduì"		# Provincial militia unit (poor equipment and training)
+		start_equipment_factor = 0.8
+		start_experience_factor = 0.2
+	}
+	division = {
+		location = 8049
+		division_template = "Shāndì Jūnduì"		# Provincial militia unit (poor equipment and training)
+		start_equipment_factor = 0.8
+		start_experience_factor = 0.2
+	}
+}
+#########################
+## STARTING PRODUCTION ##
+#########################
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_0
+			creator = "JGJ"
+		}
+		requested_factories = 2
+		progress = 0.7
+		efficiency = 70
+	}	
+}

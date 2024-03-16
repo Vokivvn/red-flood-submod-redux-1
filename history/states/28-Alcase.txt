@@ -1,0 +1,25 @@
+
+state={
+	id=28
+	name="STATE_28" #German Alsace
+	manpower = 879600
+
+	state_category = city
+
+	history={
+		owner = GER
+		victory_points = { 6529 3 }
+		victory_points = { 9503 20 }
+		victory_points = { 678 2 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 3
+		}
+		add_core_of = GER
+		add_claim_by = PRS
+	}
+
+	provinces={
+		549 1346 6529 9503 678
+	}
+}

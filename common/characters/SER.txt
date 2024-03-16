@@ -1,0 +1,28 @@
+characters = {
+	SER_ljubomir_micić = {
+		name = "Ljubomir Micić"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/SER/Portrait_YUG_Ljubomir_Micic.png"
+			}
+		}
+		country_leader = {
+			ideology = futurism
+			expire = "1965.1.1.1"
+			id=-1
+		}
+	}
+	SER_dragisa= {
+		name = "Dragisa Cvetković"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/SER/Dragisa.png"
+			}
+		}
+		country_leader = {
+			ideology = social_liberalism
+			expire = "1965.1.1.1"
+		}
+	}
+
+}

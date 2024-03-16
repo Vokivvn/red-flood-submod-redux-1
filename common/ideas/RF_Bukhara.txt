@@ -1,0 +1,51 @@
+ideas = {
+	country = {
+		BKR_god = {
+			removal_cost = -1
+			picture = BKR_god
+			allowed = {
+				original_tag = BKR
+			}
+			modifier= {
+				war_support_factor = 0.1
+				stability_factor = 0.05
+			}
+		}
+		BKR_prophet = {
+			removal_cost = -1
+			picture = BKR_prophet
+			allowed = {
+				original_tag = BKR
+			}
+			modifier= {
+				army_morale_factor = 0.05
+				army_attack_factor = 0.05
+			}
+		}
+		BKR_prince = {
+			removal_cost = -1
+			picture = BKR_prince
+			allowed = {
+				original_tag = BKR
+			}
+			modifier= {
+				stability_factor = -0.05
+				political_power_gain = 0.25
+			}
+		}
+	}
+	hidden_ideas = {
+		BKR_hiddenbuff = {
+			removal_cost = -1
+			allowed = {
+				original_tag = TUK
+			}
+			modifier = {
+				army_attack_factor = 0.1
+				army_defence_factor = 0.05
+				production_speed_buildings_factor = 0.1
+				supply_consumption_factor = -0.1
+			}
+		}
+	}
+}

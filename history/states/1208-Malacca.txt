@@ -1,0 +1,35 @@
+
+state={
+	id=1208
+	name="STATE_1208"
+	manpower = 1065540
+
+	state_category = rural
+
+	history={
+		owner = MAL
+		victory_points = {
+			10297 5
+		}
+		victory_points = {
+			13544 2
+		}
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			arms_factory = 1
+			air_base = 2
+			10297 = {
+				naval_base = 5
+			}
+			13544 = {
+				naval_base = 3
+			}
+		}
+		add_core_of = MAL
+	}
+
+	provinces={
+		4412 10297 13543 13544
+	}
+}

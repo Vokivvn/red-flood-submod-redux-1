@@ -1,0 +1,27 @@
+state= {
+	id=1233
+	name="STATE_1233"
+	manpower = 246600
+
+	state_category = rural
+
+	history= {
+		owner = DEI
+		victory_points = { #Samarinda
+			10237 3
+		}
+		victory_points = { #Balikpapan
+			12225 2
+		}
+		add_core_of = DEI
+		buildings = {
+			infrastructure = 1
+			10237 = {
+				naval_base = 2
+			}
+		}
+	}
+	provinces={
+		13580 13581 13582 13583 1252 4323 7299 12196 7355 10237 12225 12252
+	}
+}

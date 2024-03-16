@@ -1,0 +1,164 @@
+##### Division Templates #####
+division_template = {
+	name = "Infanterie-Division"			# Infantry Division
+	division_names_group = GER_INF_01
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }		#
+		artillery = { x = 0 y = 1 }	#
+	}
+}
+
+division_template = {
+	name = "Kavallerie Division"	# Cavarly Division
+	division_names_group = GER_CAV_01
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+		cavalry = { x = 2 y = 0 }
+		cavalry = { x = 2 y = 1 }
+		cavalry = { x = 2 y = 2 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 }	# 
+	}
+}
+
+division_template = {
+	name = "Infanterie-Division (mot.)"			# Motorized Division
+	division_names_group = GER_MOT_01
+	regiments = {
+		motorized = { x = 0 y = 0 }
+		motorized = { x = 0 y = 1 }
+		motorized = { x = 0 y = 2 }
+		motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+		motorized = { x = 1 y = 2 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }		#
+	}
+}
+##### OOB #####
+units = {
+	division = {
+		name = "1. Infanterie-Division"#(HQ-Revel)
+		location = 3152
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "2. Infanterie-Division"#(HQ-Pskov)
+		location = 9221
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "3. Infanterie-Division"#(HQ-Dvinsk)
+		location = 310
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+	}		
+	division = {
+		name = "4. Infanterie-Division"#(HQ-Riga)
+		location = 9340
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+	}	
+	division = {
+		name = "5. Infanterie-Division"#(HQ-Yuriev)
+		location = 9221
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "6. Infanterie-Division"#(HQ-Riga)
+		location = 9340
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+	}	
+	division = {
+		name = "7. Infanterie-Division"#(HQ-Vitebsk)
+		location = 11302
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "8. Infanterie-Division"#(HQ-Vitebsk)
+		location = 3174
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "9. Infanterie-Division"#(HQ-Vitebsk)
+		location = 3388
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.2
+	}
+	division = {
+		name = "1. Kavallerie Division"#(HQ-Dvinsk)
+		location = 310
+		division_template = "Kavallerie Division"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "2. Kavallerie Division"#(HQ-Vitebsk)
+		location = 6459
+		division_template = "Kavallerie Division"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "3. Kavallerie Division"#(HQ-Riga)
+		location = 9340
+		division_template = "Kavallerie Division"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "1. Infanterie-Division (mot.)"#(HQ-Revel)
+		location = 3152
+		division_template = "Infanterie-Division (mot.)"
+		start_experience_factor = 0.3
+	}
+}
+
+
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+		}
+		requested_factories = 2
+		progress = 0.82
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = artillery_equipment_1
+		}
+		requested_factories = 1
+		progress = 0.83
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+		}
+		requested_factories = 1
+		progress = 0.44
+		efficiency = 100
+	}
+}

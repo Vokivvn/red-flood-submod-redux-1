@@ -1,0 +1,127 @@
+
+ideas = {
+	country = {
+		TRK_peasants = {
+			removal_cost = -1
+			picture = TRK_plight
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = -0.1
+				production_factory_max_efficiency_factor = -0.1
+				production_speed_buildings_factor = -0.1
+				recruitable_population_factor = -0.5
+			}
+		}
+		TRK_taxes = {
+			removal_cost = -1
+			picture = STE_workshops
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				consumer_goods_expected_value = -0.1
+				monthly_population = -0.05
+			}
+		}
+		TRK_nobility = {
+			removal_cost = -1
+			picture = STE_cossack
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = 0.1
+				despotism_drift = 0.01
+			}
+		}
+		TRK_outlaw_haven= {
+			removal_cost = -1
+			picture = STE_cossack
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				weekly_manpower = 250
+				consumer_goods_expected_value = -0.1 
+				war_support_factor = 0.05
+			}
+		}
+		TRK_endless_raids = {
+			removal_cost = -1
+			picture = TRK_raids
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				non_core_manpower = -1
+				war_support_factor = 0.1
+				army_org_factor = -0.05
+				army_attack_factor = 0.05
+				trade_opinion_factor = -0.3
+			}
+		}
+		TRK_offensive = {
+			removal_cost = -1
+			picture = STE_workshops
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				production_factory_max_efficiency_factor = 0.05
+				production_speed_buildings_factor = 0.1
+				industry_repair_factor = 0.1
+			}
+		}
+		TRK_attack = {
+			picture = STE_cossack_banditry
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				army_speed_factor = 0.1
+				equipment_capture = 0.1
+			}
+		}
+		TRK_attack1 = {
+			picture = STE_russian_colonial
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				subversive_activites_upkeep = -0.3
+				resistance_target = -0.5
+				resistance_activity = -0.5
+				no_compliance_gain = 1
+			}
+		}
+		TRK_churkas = {
+			picture = STE_levies
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				production_speed_buildings_factor = 0.1
+			}
+		}
+		TRK_industry = {
+			picture = STE_levies
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				stability_factor = -0.15
+			}
+		}
+		TRK_shock = {
+			picture = STE_cossack
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				army_attack_factor = 0.05
+				army_defence_factor = -0.10
+			}
+		}
+		TRK_roads = {
+			removal_cost = -1
+			picture = STE_workshops
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				trade_opinion_factor = 0.05
+				opinion_gain_monthly = 2
+				recruitable_population_factor = 0.02
+			}
+		}
+		TRK_horde = {
+			removal_cost = -1
+			picture = STE_cossack
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				political_power_gain = 0.65
+				army_attack_factor = 0.1
+			}
+		}
+	}
+}

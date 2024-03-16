@@ -1,0 +1,384 @@
+AAT_yakutia = {
+	AAT_return = {
+		icon = decision_generic_nationalism
+		fire_only_once = yes
+		allowed = {
+			tag = MNS
+		}
+		visible = {
+			565 = { is_core_of = var:565.owner } #Siberia
+		}
+		ai_will_do = {
+			factor = 110
+		}
+		remove_effect = {
+			every_owned_state = {
+				limit = {
+					OR = {
+						state = 574
+						state = 1036 
+						state = 562
+						state = 644
+						state = 637
+					}
+				}
+				var:565.owner = { transfer_state = PREV }
+			}
+		}
+	}
+}
+
+AAT_chinese_reunification = {
+	AAT_claim_manchuria = {
+		icon = decision_generic_nationalism
+		fire_only_once = yes
+		allowed = { tag = MNS }
+		visible = {
+			country_exists = MAN
+		}
+		available = {
+			has_full_control_of_state = 978
+			is_neighbor_of = MAN
+		}
+		war_with_on_remove = MAN
+		remove_effect = {
+			every_state = {
+				limit = {
+					is_core_of = MAN
+					NOT = { is_core_of = MNS }
+				}
+				add_core_of = MNS
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = MAN
+			}
+		}
+	}
+
+	AAT_assault_beiyang = {
+		icon = decision_generic_nationalism
+		fire_only_once = yes
+		allowed = { tag = MNS }
+		visible = {
+			has_completed_focus = MNS_heilong_clique
+			OR = {
+				country_exists = BYJ
+				country_exists = MNG
+				country_exists = SHA
+				country_exists = JGJ
+			}
+		}
+		available = {
+			MAN = { exists = no }
+			OR = {
+				is_neighbor_of = BYJ
+				is_neighbor_of = MNG
+				is_neighbor_of = SHA
+				is_neighbor_of = JGJ
+			}
+		}
+		war_with_on_remove = BYJ
+		war_with_on_remove = MNG
+		war_with_on_remove = SHA
+		war_with_on_remove = JGJ
+		remove_effect = {
+			every_state = {
+				limit = {
+					OR = {
+						is_core_of = BYJ
+						is_core_of = MNG
+						is_core_of = SHA
+						is_core_of = JGJ
+					}
+					NOT = { is_core_of = MNS }
+				}
+				add_core_of = MNS
+			}
+			every_country = {
+				limit = {
+					OR = {
+						tag = BYJ
+						tag = MNG
+						tag = SHA
+						tag = JGJ
+					}
+				}
+				MNS = {
+					create_wargoal = {
+						type = annex_everything
+						target = PREV
+					}
+				}
+			}
+		}
+	}
+
+	AAT_claim_the_borderlands = {
+		icon = decision_generic_nationalism
+		fire_only_once = yes
+		allowed = { tag = MNS }
+		visible = {
+			OR = {
+				country_exists = XSM
+				country_exists = SZC
+				country_exists = MON
+			}
+		}
+		available = {
+			NOT = {
+				country_exists = MAN
+				country_exists = BYJ
+				country_exists = MNG
+				country_exists = SHA
+				country_exists = JGJ
+			}
+			OR = {
+				is_neighbor_of = XSM
+				is_neighbor_of = SZC
+				is_neighbor_of = MON
+			}
+		}
+		war_with_on_remove = XSM
+		war_with_on_remove = SZC
+		war_with_on_remove = MON
+		remove_effect = {
+			every_state = {
+				limit = {
+					OR = {
+						is_core_of = XSM
+						is_core_of = SZC
+						is_core_of = MON
+					}
+					NOT = { is_core_of = MNS }
+				}
+				add_core_of = MNS
+			}
+
+			if = {
+				limit = { MON = { has_completed_focus = Mongolia_greatermongolia exists = yes } }
+				create_wargoal = {
+					type = annex_everything
+					target = MON
+				}
+			}
+			every_country = {
+				limit = {
+					OR = {
+						tag = XSM
+						tag = SZC
+					}
+				}
+				MNS = {
+					create_wargoal = {
+						type = annex_everything
+						target = PREV
+					}
+				}
+			}
+		}
+	}
+
+	AAT_destroy_the_guomindang = {
+		icon = decision_generic_nationalism
+		fire_only_once = yes
+		allowed = { tag = MNS }
+		visible = {
+			OR = {
+				is_neighbor_of = XIA
+				is_neighbor_of = YUN
+				is_neighbor_of = GDP
+				is_neighbor_of = FJN
+				is_neighbor_of = KMT
+			}
+		}
+		available = {
+			NOT = {
+				country_exists = BYJ
+				country_exists = SZC
+				country_exists = XSM
+				country_exists = MAN
+			}
+			OR = {
+				is_neighbor_of = XIA
+				is_neighbor_of = YUN
+				is_neighbor_of = GDP
+				is_neighbor_of = FJN
+				is_neighbor_of = KMT
+			}
+		}
+		war_with_on_remove = XIA
+		war_with_on_remove = YUN
+		war_with_on_remove = GDP
+		war_with_on_remove = FJN
+		war_with_on_remove = KMT
+		remove_effect = {
+			every_state = {
+				limit = {
+					OR = {
+						is_core_of = XIA
+						is_core_of = YUN
+						is_core_of = GDP
+						is_core_of = FJN
+						is_core_of = KMT
+					}
+					NOT = { is_core_of = MNS }
+				}
+				add_core_of = MNS
+			}
+			every_country = {
+				limit = {
+					OR = {
+						tag = XIA
+						tag = YUN
+						tag = GDP
+						tag = FJN
+						tag = KMT
+					}
+				}
+				MNS = {
+					create_wargoal = {
+						type = annex_everything
+						target = PREV
+					}
+				}
+			}
+		}
+	}
+
+	AAT_retake_the_wayward_provinces = {
+		icon = decision_generic_nationalism
+		fire_only_once = yes
+		allowed = { tag = MNS }
+		visible = {
+			OR = {
+				country_exists = TIB
+				country_exists = SIK
+			}
+		}
+		available = {
+			NOT = {
+				country_exists = BYJ
+				country_exists = SZC
+				country_exists = XSM
+				country_exists = MAN
+				country_exists = XIA
+				country_exists = YUN
+				country_exists = GDP
+				country_exists = FJN
+				country_exists = KMT
+			}
+			OR = {
+				is_neighbor_of = TIB
+				is_neighbor_of = SIK
+			}
+		}
+		war_with_on_remove = TIB
+		war_with_on_remove = SIK
+		remove_effect = {
+			every_state = {
+				limit = {
+					OR = {
+						is_core_of = TIB
+						is_core_of = SIK
+					}
+					NOT = { is_core_of = MNS }
+				}
+				add_core_of = MNS
+			}
+			every_country = {
+				limit = {
+					OR = {
+						tag = TIB
+						tag = SIK
+					}
+				}
+				MNS = {
+					create_wargoal = {
+						type = annex_everything
+						target = PREV
+					}
+				}
+			}
+		}
+	}
+
+	AAT_retake_taiwan = {
+		icon = decision_generic_nationalism
+		fire_only_once = yes
+		allowed = { tag = MNS }
+		visible = {
+			country_exists = TAI
+		}
+		available = {
+			NOT = {
+				country_exists = BYJ
+				country_exists = SZC
+				country_exists = XSM
+				country_exists = MAN
+				country_exists = XIA
+				country_exists = YUN
+				country_exists = GDP
+				country_exists = FJN
+				country_exists = KMT
+				country_exists = TIB
+				country_exists = SIK
+			}
+		}
+		war_with_on_remove = TAI
+		remove_effect = {
+			every_state = {
+				limit = {
+					is_core_of = TAI
+					NOT = { is_core_of = MNS }
+				}
+				add_core_of = MNS
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = TAI
+			}
+		}
+	}
+
+	MNS_choona_unification = {
+		icon = decision_generic_nationalism
+		allowed = { tag = MNS }
+		ai_will_do = {
+            factor = 100
+        }
+		fire_only_once = yes
+		available = {
+			owns_state = 934
+			owns_state = 926
+			owns_state = 325
+			owns_state = 791
+			owns_state = 613
+			owns_state = 927
+			owns_state = 608
+			owns_state = 283
+			owns_state = 791
+			owns_state = 716
+		}
+		remove_effect = {
+			set_capital = { state = 608 }
+			if = {
+				limit = { has_completed_focus = MNS_yihequan_past }
+				set_cosmetic_tag = MNS_choona
+				set_party_name = {
+					ideology = despotism
+					long_name = MNS_dogmeat_long
+					name = MNS_dogmeat
+				}
+			}
+			else = {
+				set_cosmetic_tag = MNS_pan_asia
+				set_party_name = {
+					ideology = despotism
+					long_name = MNS_date_long
+					name = MNS_date
+				}
+			}
+		}
+	}
+}

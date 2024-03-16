@@ -1,0 +1,10 @@
+HUN_intervention_category = {
+	picture = GFX_decision_cat_picture_HUN_intervention
+	priority = 1000
+	allowed = {
+		original_tag = HUN
+	}
+	visible = {
+		is_subject = no
+	}
+} 

@@ -1,0 +1,458 @@
+DIPLOMACY_GUARANTEE_ENABLE_TRIGGER_OVERRIDES_GAME = {
+	if = {
+		limit = {
+			ROOT = {
+				is_ai = no
+			}
+			always = yes
+		}
+	}	
+	else = {
+		custom_trigger_tooltip = {
+			tooltip = "This feature is disabled by default in Red Flood."
+			always = no
+		}
+	}
+}
+
+DIPLOMACY_GUARANTEE_ENABLE_TRIGGER = {
+	if = {
+		limit = {
+			ROOT = {
+				is_ai = no
+			}
+			always = yes
+		}
+	}	
+	else = {
+		custom_trigger_tooltip = {
+			tooltip = "This feature is disabled by default in Red Flood."
+			always = no
+		}
+	}
+}
+
+DIPLOMACY_REVOKE_GUARANTEE_ENABLE_TRIGGER = {
+	if = {
+		limit = {
+			ROOT = {
+				is_ai = no
+			}
+			always = yes
+		}
+	}	
+	else = {
+		custom_trigger_tooltip = {
+			tooltip = "This feature is disabled by default in Red Flood."
+			always = no
+		}
+	}
+}
+
+DIPLOMACY_RELEASE_NATION_ENABLE_TRIGGER = {
+	if = {
+		limit = {
+			ROOT = {
+				is_ai = no
+			}
+			always = yes
+		}
+	}	
+	else = {
+		custom_trigger_tooltip = {
+			tooltip = "This feature is disabled by default in Red Flood."
+			always = no
+		}
+	}
+}
+DIPLOMACY_RETURN_TERRITORY_ENABLE_TRIGGER = {
+	if = {
+		limit = {
+			ROOT = {
+				is_ai = no
+			}
+			always = yes
+		}
+	}	
+	else = {
+		custom_trigger_tooltip = {
+			tooltip = "This feature is disabled by default in Red Flood."
+			always = no
+		}
+	}
+}
+
+DIPLOMACY_DOCKING_RIGHTS_ENABLE_TRIGGER = {
+	if = {
+		limit = {
+			ROOT = {
+				is_ai = no
+			}
+			always = yes
+		}
+	}	
+	else = {
+		custom_trigger_tooltip = {
+			tooltip = "This feature is disabled by default in Red Flood."
+			always = no
+		}
+	}
+}
+DIPLOMACY_OFFER_DOCKING_RIGHTS_ENABLE_TRIGGER = {
+	if = {
+		limit = {
+			ROOT = {
+				is_ai = no
+			}
+			always = yes
+		}
+	}	
+	else = {
+		custom_trigger_tooltip = {
+			tooltip = "This feature is disabled by default in Red Flood."
+			always = no
+		}
+	}
+}
+DIPLOMACY_LEND_LEASE_ENABLE_TRIGGER = {
+	if = {
+		limit = {
+			ROOT = {
+				is_ai = no
+			}
+			always = yes
+		}
+	}	
+	else = {
+		custom_trigger_tooltip = {
+			tooltip = "This feature is disabled by default in Red Flood."
+			always = no
+		}
+	}
+}
+DIPLOMACY_INCOMING_LEND_LEASE_ENABLE_TRIGGER = {
+	if = {
+		limit = {
+			ROOT = {
+				is_ai = no
+			}
+			always = yes
+		}
+	}	
+	else = {
+		custom_trigger_tooltip = {
+			tooltip = "This feature is disabled by default in Red Flood."
+			always = no
+		}
+	}
+}
+DIPLOMACY_REQUEST_LICENSED_PRODUCTION_ENABLE_TRIGGER = {
+	if = {
+		limit = {
+			ROOT = {
+				is_ai = no
+			}
+			always = yes
+		}
+	}	
+	else = {
+		custom_trigger_tooltip = {
+			tooltip = "This feature is disabled by default in Red Flood."
+			always = no
+		}
+	}
+}
+DIPLOMACY_GENERATE_WARGOAL_ENABLE_TRIGGER = {
+	if = {
+		limit = {
+			ROOT = {
+				is_ai = no
+			}
+			always = yes
+		}
+	}	
+	else = {
+		custom_trigger_tooltip = {
+			tooltip = "This feature is disabled by default in Red Flood."
+			always = no
+		}
+	}
+}
+DIPLOMACY_BOOST_PARTY_POPULARITY_ENABLE_TRIGGER = {
+	if = {
+		limit = {
+			ROOT = {
+				is_ai = no
+			}
+			always = yes
+		}
+	}	
+	else = {
+		custom_trigger_tooltip = {
+			tooltip = "This feature is disabled by default in Red Flood."
+			always = no
+		}
+	}
+}
+DIPLOMACY_STAGE_COUP_ENABLE_TRIGGER = {
+	if = {
+		limit = {
+			ROOT = {
+				is_ai = no
+			}
+			always = yes
+		}
+	}	
+	else = {
+		custom_trigger_tooltip = {
+			tooltip = "This feature is disabled by default in Red Flood."
+			always = no
+		}
+	}
+}
+DIPLOMACY_LEAVE_FACTION_ENABLE_TRIGGER = {
+	if = {
+		limit = {
+			ROOT = {
+				is_ai = no
+			}
+			always = yes
+		}
+	}	
+	else = {
+		custom_trigger_tooltip = {
+			tooltip = "This feature is disabled by default in Red Flood."
+			always = no
+		}
+	}
+}
+DIPLOMACY_ASSUME_FACTION_LEADERSHIP_ENABLE_TRIGGER = {
+	if = {
+		limit = {
+			ROOT = {
+				is_ai = no
+			}
+			always = yes
+		}
+	}	
+	else = {
+		custom_trigger_tooltip = {
+			tooltip = "This feature is disabled by default in Red Flood."
+			always = no
+		}
+	}
+}
+DIPLOMACY_KICK_FROM_FACTION_ENABLE_TRIGGER = {
+	if = {
+		limit = {
+			ROOT = {
+				is_ai = no
+			}
+			always = yes
+		}
+	}	
+	else = {
+		custom_trigger_tooltip = {
+			tooltip = "This feature is disabled by default in Red Flood."
+			always = no
+		}
+	}
+}
+DIPLOMACY_SEND_ATTACHE_ENABLE_TRIGGER = {
+	if = {
+		limit = {
+			ROOT = {
+				is_ai = no
+			}
+			always = yes
+		}
+	}	
+	else = {
+		custom_trigger_tooltip = {
+			tooltip = "This feature is disabled by default in Red Flood."
+			always = no
+		}
+	}
+}
+DIPLOMACY_SEND_VOLUNTEERS_ENABLE_TRIGGER = {
+	if = {
+		limit = {
+			ROOT = {
+				is_ai = no
+			}
+			always = yes
+		}
+	}	
+	else = {
+		custom_trigger_tooltip = {
+			tooltip = "This feature is disabled by default in Red Flood."
+			always = no
+		}
+	}
+}
+
+DIPLOMACY_NONAGGRESSIONPACT_ENABLE_TRIGGER = {
+	if = {
+		limit = {
+			ROOT = {
+				is_ai = no
+			}
+			always = yes
+		}
+	}	
+	else = {
+		custom_trigger_tooltip = {
+			tooltip = "This feature is disabled by default in Red Flood."
+			always = no
+		}
+	}
+}
+
+DIPLOMACY_MILACC_ENABLE_TRIGGER = {
+	if = {
+		limit = {
+			ROOT = {
+				is_ai = no
+			}
+			always = yes
+		}
+	}	
+	else = {
+		custom_trigger_tooltip = {
+			tooltip = "This feature is disabled by default in Red Flood."
+			always = no
+		}
+	}
+}
+DIPLOMACY_REVOKE_MILACC_ENABLE_TRIGGER = {
+	if = {
+		limit = {
+			ROOT = {
+				is_ai = no
+			}
+			always = yes
+		}
+	}	
+	else = {
+		custom_trigger_tooltip = {
+			tooltip = "This feature is disabled by default in Red Flood."
+			always = no
+		}
+	}
+}
+DIPLOMACY_OFFER_MILACC_ENABLE_TRIGGER = {
+	if = {
+		limit = {
+			ROOT = {
+				is_ai = no
+			}
+			always = yes
+		}
+	}	
+	else = {
+		custom_trigger_tooltip = {
+			tooltip = "This feature is disabled by default in Red Flood."
+			always = no
+		}
+	}
+}
+DIPLOMACY_JOIN_FACTION_ENABLE_TRIGGER = {
+	if = {
+		limit = {
+			ROOT = {
+				is_ai = no
+			}
+			always = yes
+		}
+	}	
+	else = {
+		custom_trigger_tooltip = {
+			tooltip = "This feature is disabled by default in Red Flood."
+			always = no
+		}
+	}
+}
+
+DIPLOMACY_CREATE_FACTION_ENABLE_TRIGGER = {
+	if = {
+		limit = {
+			ROOT = {
+				is_ai = no
+			}
+			always = yes
+		}
+	}	
+	else = {
+		custom_trigger_tooltip = {
+			tooltip = "This feature is disabled by default in Red Flood."
+			always = no
+		}
+	}
+}
+
+DIPLOMACY_OFFER_JOIN_FACTION_ENABLE_TRIGGER = {
+	if = {
+		limit = {
+			ROOT = {
+				is_ai = no
+			}
+			always = yes
+		}
+	}	
+	else = {
+		custom_trigger_tooltip = {
+			tooltip = "This feature is disabled by default in Red Flood."
+			always = no
+		}
+	}
+}
+
+DIPLOMACY_REQUEST_ACCESS_TO_LICENCE_PRODUCTION_ENABLE_TRIGGER = {
+	if = {
+		limit = {
+			ROOT = {
+				is_ai = no
+			}
+			always = yes
+		}
+	}	
+	else = {
+		custom_trigger_tooltip = {
+			tooltip = "This feature is disabled by default in Red Flood."
+			always = no
+		}
+	}
+}
+
+DIPLOMACY_JOIN_ALLY_ENABLE_TRIGGER = {
+	if = {
+		limit = {
+			has_idea = RUS_warlord_indifference
+		}
+		custom_trigger_tooltip = {
+			tooltip = russian_warlord_cannot_join_ally_war
+			FROM = {
+				NOT = {
+					tag = RUS
+				}
+			}
+		}
+	}
+}
+
+DIPLOMACY_CALL_ALLY_ENABLE_TRIGGER = {
+	if = {
+		limit = {
+			tag = RUS
+		}
+		custom_trigger_tooltip = {
+			tooltip = russian_warlord_cannot_call_ally_war
+			FROM = {
+				NOT = {
+					has_idea = RUS_warlord_indifference
+				}
+			}
+		}
+	
+}
+}

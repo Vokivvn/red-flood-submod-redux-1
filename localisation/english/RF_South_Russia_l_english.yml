@@ -1,0 +1,61 @@
+﻿l_english:
+#COUNTRY NAME#
+SRU_subject:0 "Novorossiyan Governorate-General"
+SRU_non_rus:0 "South Russia"
+SRU_non_rus_DEF:0 "South Russia"
+SRU_non_rus_ADJ:0 "South Russian"
+
+#PARTIES#
+SRU_anarchism_party:0 "NROGR"
+SRU_anarchism_party_long:0 "Narodno i Rabochaya Osvoboditel'naya Gvardiya Rodiny"
+SRU_vanguard_socialism_party:0 "RSDRP(b)-L"
+SRU_vanguard_socialism_party_long:0 "Rossiyskaya Sotsial-Demokraticheskaya Rabochaya Partiya (bolshevikov) - Leninisty"
+SRU_popular_socialism_party:0 "RSDRP(m)"
+SRU_popular_socialism_party_long:0 "Rossiyskaya Sotsial-Demokraticheskaya Rabochaya Partiya (menshevikov)"
+SRU_revisionist_socialism_party:0 "BSR"
+SRU_revisionist_socialism_party_long:0 "Bratstvo Svobodnoy Rossii"
+SRU_progressivism_party:0 "TNSP"
+SRU_progressivism_party_long:0 "Trudovaya Narodno-Sotsialisticheskaya Partiya"
+SRU_liberalism_party:0 "PB(PMO)"
+SRU_liberalism_party_long:0 "Progressivnyy Blok - Partiya Mirnogo Obnovleniya"
+SRU_conservatism_party:0 "PB(VNS)"
+SRU_conservatism_party_long:0 "Progressivnyy Blok - Vserossiyskiy Natsional'nyy Soyuz"
+SRU_right_authoritarianism_party:0 "SGOR"
+SRU_right_authoritarianism_party_long:0 "Soyuz Gosudarstvennogo Obyedineniya Rossii"
+SRU_despotism_party:0 "RNSUV"
+SRU_despotism_party_long:0 "Russkii Natsionalnii Soyuz Uchastnikov Voyni"
+SRU_despotism_party_alt:0 "PAS"
+SRU_despotism_party_alt_long:0 "Polskyi Administrativnyi Sovet"
+SRU_despotism_party_emperor:0 "SGOR"
+SRU_despotism_party_emperor_long:0 "Soyuz Gosudarstvennogo Obyedineniya Rossii"
+SRU_reactionism_party:0 "RNID"
+SRU_reactionism_party_long:0 "Rossiiskoe Narodno-Imperskoe (Shtabs-Kapitanskoe) Dvizhenie"
+SRU_accelerationism_party:0 "RSDRP(b)-V"
+SRU_accelerationism_party_long:0 "Rossiyskaya Sotsial-Demokraticheskaya Rabochaya Partiya (bolshevikov) - Vpered"
+
+
+
+#LEADER DESCRITIONS#
+
+#IDEAS#
+
+#CUSTOM TOOLTIPS AND FLAGS#
+SRU_unified:0 "Russian Empire"
+SRU_unified_DEF:0 "the Russian Empire"
+SRU_unified_ADJ:0 "Russian"
+
+SRU_drozd:0 "Russian Empire"
+SRU_drozd_DEF:0 "the Russian Empire"
+SRU_drozd_ADJ:0 "Russian"
+
+
+#DECISIONS (1.5 Update)#
+#FOCUSES#
+SRU_prepare:0 "Prepare for The Duma"
+SRU_build:0 "Rebuild our Industry"
+SRU_gun:0 "Expand the Kharkov Arms Manufactories"
+SRU_troll:0 "Drozdovsky's visit To Yalta"
+
+sru.1.t:0 "Get Trolled"
+sru.1.d:0 "Now get sent to the Russia Realm"
+sru.1.a:0 "Le troll face"

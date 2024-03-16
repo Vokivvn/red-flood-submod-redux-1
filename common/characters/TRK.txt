@@ -1,0 +1,67 @@
+characters={
+	TRK_boris_annenkov = {
+		name = "Boris Annenkov"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/TRK/Portrait_Boris_Annenkov.png"
+			}
+			army = {
+				large = "gfx/leaders/TRK/Portrait_Boris_Annenkov.png"
+			}
+		}
+		country_leader = {
+			ideology = military_dictatorship
+			expire = "1965.1.1.1"
+		}
+		field_marshal={
+			traits={ career_officer brilliant_strategist}
+			skill=3
+			attack_skill=3
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+		}
+	}
+	TRK_vladimir_gulidov={
+		name="Vladimir Gulidov"
+		portraits={
+			army={
+				large="gfx/leaders/TRK/Portrait_Vladimir_Gulidov.png"
+			}
+			civilian = {
+				large="gfx/leaders/TRK/Portrait_Vladimir_Gulidov.png"
+			}
+		}
+		country_leader={
+			ideology=oligarchy
+			expire="1965.1.1.1"
+		}
+		corps_commander={
+			traits={ politically_connected }
+			skill=4
+			attack_skill=2
+			defense_skill=3
+			planning_skill=3
+			logistics_skill=2
+			legacy_id=9020
+		}
+	}
+	TRK_konstantin_monstrov = {
+		name = "Konstantin Monstrov"
+		portraits={
+			army={
+				small="gfx/interface/ministers/STE/STE_Aleksandr_Vagin.png"
+				large="gfx/leaders/TRK/Portrait_Vagin.png"
+			}
+		}
+		corps_commander={
+			traits={ infantry_officer }
+			skill=1
+			attack_skill=2
+			defense_skill=1
+			planning_skill=2
+			logistics_skill=1
+		}
+	}
+	
+}

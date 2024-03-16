@@ -1,0 +1,44 @@
+ideas = {
+	country = {
+		ROM_divide = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				enemy_justify_war_goal_time = 50
+				justify_war_goal_time = 50
+				hidden_modifier = {
+					conscription = 0.002
+					consumer_goods_expected_value = -0.05
+					guarantee_cost = 50
+					surrender_limit = 0.1
+					ai_join_ally_desire_factor = -1000
+				}
+				custom_modifier_tooltip = ROM_DIVIDE_TT
+			}
+		
+		}
+		ROM_frn_idea = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				despotism_drift = 0.03
+				stability_factor = 0.05
+				war_support_factor = 0.1
+			}
+		}
+		ROM_hedonist_king = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				despotism_drift = -0.01
+				stability_factor = -0.1
+				custom_modifier_tooltip = ROM_CAREFUL_TT
+			}
+		}
+		ROM_legitimate_government = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				war_support_factor = 0.1
+				conscription = 0.005
+				production_factory_efficiency_gain_factor = 0.05
+			}
+		}
+	}
+}

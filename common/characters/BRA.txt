@@ -1,0 +1,671 @@
+characters = {
+	BRA_luís_carlos_prestes = {
+		name = "Luís Carlos Prestes"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/BRA/Portrait_BRA_Luis_Carlos_Prestes.png"
+			}
+		}
+		country_leader = {
+			ideology = spartakism
+			expire = "1965.1.1.1"
+		}
+	}
+	BRA_filinto_müller = {
+		name = "Filinto Müller"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/BRA/Portrait_BRA_filinto_muller.png"
+			}
+			army = {
+				large="gfx/leaders/BRA/Portrait_BRA_filinto_muller_general.png"
+			}
+		}
+		country_leader = {
+			ideology = stratocratic_socialism
+			expire = "1965.1.1.1"
+		}
+		field_marshal = {
+			traits = { offensive_doctrine politically_connected war_hero }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 2
+		}
+	}
+	BRA_Carlos_Duarte_Costa = {
+		name = "Carlos Duarte Costa"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/BRA/BRA_Carlos_Duarte_Costa.png"
+			}
+		}
+		country_leader = {
+			ideology = religious_socialism
+			expire = "1965.1.1.1"
+		}
+	}
+	BRA_joao_amazonas = {
+		name = "João Amazonas"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/BRA/BRA_Joao_Amazonas.png"
+			}
+			army = {
+				small = "GFX_idea_BRA_amazonas_eco"
+			}
+		}
+
+		advisor = {
+			allowed = {
+			    original_tag = BRA
+			}
+			cost = 150
+			slot = economy_minister
+			available = {
+				has_government = vanguard_socialism
+			}
+			idea_token = BRA_amazonas_eco 
+			traits = {
+			    eco_planned_economy_proponent
+			}
+		}
+	}
+	BRA_chamber_of_deputies = {
+		name = "Chamber of Deputies"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/BRA/Portrait_BRA_Chamber.png"
+			}
+		}
+		country_leader = {
+			ideology = oligarchy
+			expire = "1965.1.1.1"
+		}
+	}
+	BRA_isidoro_dias_lopes = {
+		name = "Isidoro Dias Lopes"
+		portraits = {
+			army = {
+				large="gfx/leaders/BRA/Portrait_BRA_Isidoro_Dias_Lopes.png"
+				small = "GFX_idea_BRA_lopes_inter"
+			}
+		}
+		field_marshal = {
+			traits = { old_guard offensive_doctrine infantry_officer brilliant_strategist politically_connected war_hero }
+			skill = 4
+			attack_skill = 4
+			defense_skill = 4
+			planning_skill = 4
+			logistics_skill = 5
+		}
+		advisor = {
+			allowed = {
+			    original_tag = BRA
+			}
+			cost = 150
+			slot = security_minister
+			available = {
+				has_government = vanguard_socialism
+			}
+			idea_token = BRA_lopes_inter 
+			traits = {
+			    sec_secret_police_chief
+			}
+		}
+		advisor = {
+			allowed = {
+			    original_tag = BRA
+			}
+			cost = 150
+			slot = army_chief
+			available = {
+				has_government = vanguard_socialism
+			}
+			idea_token = BRA_lopes_army 
+			traits = {
+			    cos_school_of_mass_combat
+			}
+		}
+	}
+	BRA_joao_cabanas = {
+		name = "João Cabanas"
+		portraits = {
+			army = {
+				large="gfx/leaders/BRA/Portrait_BRA_Joao_Cabanas.png"
+			}
+		}
+		corps_commander = {
+			traits = { infantry_officer adaptable }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	BRA_henrique_cordeiro_oest = {
+		name = "Henrique Cordeiro Oest"
+		portraits = {
+			army = {
+				large="gfx/leaders/BRA/Portrait_BRA_Henrique_Oest.png"
+			}
+		}
+		corps_commander = {
+			traits = { career_officer infantry_leader }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	BRA_agildo_barat = {
+		name = "Agildo Barat"
+		portraits = {
+			army = {
+				large="gfx/leaders/BRA/Portrait_BRA_Agildo_Barat.png"
+			}
+		}
+		corps_commander = {
+			traits = { infantry_officer trait_cautious }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	BRA_kardiac_lemme = {
+		name = "Kardiac Lemme"
+		portraits = {
+			army = {
+				large="gfx/leaders/BRA/Portrait_BRA_Kardiac_Lemme.png"
+			}
+		}
+		corps_commander = {
+			traits = { infantry_officer adaptable }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	BRA_eugenio_pinto = {
+		name = "Eugenio Pinto"
+		portraits = {
+			army = {
+				large="gfx/leaders/BRA/Portrait_BRA_Eugenio_Pinto.png"
+			}
+		}
+		corps_commander = {
+			traits = { commando trait_engineer }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	BRA_jefferson_cardim_de_alencar_osório = {
+		name = "Jefferson Cardim de Alencar Osório"
+		portraits = {
+			army = {
+				large="gfx/leaders/BRA/Portrait_BRA_Jefferson_Osorio.png"
+				small = "GFX_idea_BRA_osorio_air"
+			}
+		}
+		corps_commander = {
+			traits = { jungle_rat ranger }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+		advisor = {
+			allowed = {
+			    original_tag = BRA
+			}
+			cost = 150
+			slot = air_chief
+			available = {
+				OR = {
+					has_government = popular_socialism
+					has_government = revisionist_socialism
+				}
+			}
+			idea_token = BRA_osorio_air
+			traits = {
+			    cair_battlefield_support_doctrine
+			}
+		}
+	}
+	BRA_vladimir_herzog = {
+		name = "Vladimir Herzog"
+		portraits = {
+			army = {
+				small = "GFX_idea_BRA_herzog_hog"
+			}
+		}
+		advisor = {
+			allowed = {
+			    original_tag = BRA
+			}
+			cost = 150
+			slot = head_of_government
+			available = {
+				has_government = revisionist_socialism
+			}
+			idea_token = BRA_herzog_hog
+			traits = {
+			    hog_pragmatic_statesman
+			}
+		}
+	}
+	BRA_lila_ripoll = {
+		name = "Lila Ripoll"
+		portraits = {
+			army = {
+				small = "GFX_idea_BRA_lila_ripoll_hog"
+			}
+		}
+		advisor = {
+			allowed = {
+			    original_tag = BRA
+			}
+			cost = 150
+			slot = head_of_government
+			available = {
+				has_government = popular_socialism
+			}
+			idea_token = BRA_lila_ripoll_hog 
+			traits = {
+			    hog_ambitious_union_boss
+			}
+		}
+	}
+	BRA_heitor_ferreira_lima = {
+		name = "Heitor Ferreira Lima"
+		portraits = {
+			army = {
+				small = "GFX_idea_BRA_hfl_hog"
+			}
+		}
+		advisor = {
+			allowed = {
+			    original_tag = BRA
+			}
+			cost = 150
+			slot = head_of_government
+			available = {
+				has_government = vanguard_socialism
+			}
+			idea_token = BRA_heitor_ferreira_lima_hog
+			traits = {
+			    hog_totalist_chairman
+			}
+		}
+	}
+	BRA_alberto_pasqualini = {
+		name = "Alberto Pasqualini"
+		portraits = {
+			army = {
+				small = "GFX_idea_BRA_alberto_pasqualini_hog"
+			}
+		}
+		advisor = {
+			allowed = {
+			    original_tag = BRA
+			}
+			cost = 150
+			slot = head_of_government
+			available = {
+				has_government = anarchism
+			}
+			idea_token = BRA_alberto_pasqualini_hog
+			traits = {
+			    hog_local_tyrant
+			}
+		}
+	}
+	BRA_otto_alcides_ohlweiler = {
+		name = "Otto Alcides Ohlweiler"
+		portraits = {
+			army = {
+				small = "GFX_idea_BRA_ohlweiler_eco"
+			}
+		}
+		advisor = {
+			allowed = {
+			    original_tag = BRA
+			}
+			cost = 150
+			slot = economy_minister
+			available = {
+				has_government = revisionist_socialism
+			}
+			idea_token = BRA_ohlweiler_eco
+			traits = {
+			    eco_mixed_economy
+			}
+		}
+	}
+	BRA_oswald_de_andrade = {
+		name = "Oswald de Andrade"
+		portraits = {
+			army = {
+				small = "GFX_idea_BRA_oswald_de_andrade"
+			}
+		}
+		advisor = {
+			allowed = {
+			    original_tag = BRA
+			}
+			cost = 150
+			slot = economy_minister
+			available = {
+				has_government = popular_socialism
+			}
+			idea_token = BRA_oswald_de_andrade
+			traits = {
+			    eco_reformer
+			}
+		}
+	}
+	BRA_pedro_ventura_pomar = {
+		name = "Pedro Ventura Pomar"
+		portraits = {
+			army = {
+				small = "GFX_idea_BRA_pomar_eco"
+			}
+		}
+		advisor = {
+			allowed = {
+			    original_tag = BRA
+			}
+			cost = 150
+			slot = economy_minister
+			available = {
+				has_government = anarchism
+			}
+			idea_token = BRA_pomar_eco 
+			traits = {
+			    eco_theoretical_scientist
+			}
+		}
+	}
+	BRA_djalma_maranhao = {
+		name = "Djalma Maranhão"
+		portraits = {
+			army = {
+				small = "GFX_idea_BRA_maranhao_fore"
+			}
+		}
+		advisor = {
+			allowed = {
+			    original_tag = BRA
+			}
+			cost = 150
+			slot = foreign_minister
+			available = {
+				has_government = revisionist_socialism
+			}
+			idea_token = BRA_maranhao_fore 
+			traits = {
+			    for_biased_intellectual
+			}
+		}
+	}
+	BRA_apolonio_de_carvalho = {
+		name = "Apolônio de Carvalho"
+		portraits = {
+			army = {
+				small = "GFX_idea_BRA_carvalho_fore"
+			}
+		}
+		advisor = {
+			allowed = {
+			    original_tag = BRA
+			}
+			cost = 150
+			slot = foreign_minister
+			available = {
+				has_government = popular_socialism
+			}
+			idea_token = BRA_carvalho_fore
+			traits = {
+			    for_ideological_crusader
+
+			}
+		}
+	}
+	BRA_cristiano_cordeiro = {
+		name = "Cristiano Cordeiro"
+		portraits = {
+			army = {
+				small = "GFX_idea_BRA_cordeiro_fore"
+			}
+		}
+		advisor = {
+			allowed = {
+			    original_tag = BRA
+			}
+			cost = 150
+			slot = foreign_minister
+			available = {
+				has_government = vanguard_socialism
+			}
+			idea_token = BRA_cordeiro_fore
+			traits = {
+			    for_the_cloak_n_dagger_schemer
+			}
+		}
+	}
+	BRA_carlos_drumond_de_andrade = {
+		name = "Carlos Drumond de Andrade"
+		portraits = {
+			army = {
+				small = "GFX_idea_BRA_carlos_andrade_fore"
+			}
+		}
+		advisor = {
+			allowed = {
+			    original_tag = BRA
+			}
+			cost = 150
+			slot = foreign_minister
+			available = {
+				has_government = anarchism
+			}
+			idea_token = BRA_carlos_andrade_fore 
+			traits = {
+			    for_the_cloak_n_dagger_schemer
+			}
+		}
+	}
+	BRA_dom_francisco_de_aquino_correia = {
+		name = "Dom Francisco de Aquino Correia S.D.B"
+		portraits = {
+			army = {
+				small = "GFX_idea_BRA_correia_inter"
+			}
+		}
+		advisor = {
+			allowed = {
+			    original_tag = BRA
+			}
+			cost = 150
+			slot = security_minister
+			available = {
+				has_government = revisionist_socialism
+			}
+			idea_token = BRA_correia_inter 
+			traits = {
+			    sec_compassionate_gentleman
+			}
+		}
+	}
+	BRA_carlos_marighella = {
+		name = "Carlos Marighella"
+		portraits = {
+			army = {
+				small = "GFX_idea_BRA_marighella_inter"
+			}
+		}
+		advisor = {
+			allowed = {
+			    original_tag = BRA
+			}
+			cost = 150
+			slot = security_minister
+			available = {
+				has_government = popular_socialism
+			}
+			idea_token = BRA_marighella_inter
+			traits = {
+			    sec_health_and_safety
+			}
+		}
+	}
+	BRA_maria_werneck_de_castro = {
+		name = "Maria Werneck de Castro"
+		portraits = {
+			army = {
+				small = "GFX_idea_BRA_castro_inter"
+			}
+		}
+		advisor = {
+			allowed = {
+			    original_tag = BRA
+			}
+			cost = 150
+			slot = security_minister
+			available = {
+				has_government = anarchism
+			}
+			idea_token = BRA_castro_inter 
+			traits = {
+			    sec_silent_lawyer
+			}
+		}
+	}
+	BRA_jose_linhares = {
+		name = "José Linhares"
+		portraits = {
+			army = {
+				small = "GFX_idea_BRA_linhares_army"
+			}
+		}
+		advisor = {
+			allowed = {
+			    original_tag = BRA
+			}
+			cost = 150
+			slot = army_chief
+			available = {
+				has_government = revisionist_socialism
+			}
+			idea_token = BRA_linhares_army 
+			traits = {
+			    cos_school_of_psychology
+			}
+		}
+	}
+	BRA_elza_monnerat = {
+		name = "Elza Monnerat"
+		portraits = {
+			army = {
+				small = "GFX_idea_BRA_monnerat_army"
+			}
+		}
+		advisor = {
+			allowed = {
+			    original_tag = BRA
+			}
+			cost = 150
+			slot = army_chief
+			available = {
+				OR = {
+					has_government = vanguard_socialism
+					has_government = anarchism
+				}
+			}
+			idea_token = BRA_monnerat_army 
+			traits = {
+			    cos_school_of_commando_operations
+			}
+		}
+	}
+	BRA_mauricio_grabois = {
+		name = "Mauricio Grabois"
+		portraits = {
+			army = {
+				small = "GFX_idea_BRA_grabois_army"
+			}
+		}
+		advisor = {
+			allowed = {
+			    original_tag = BRA
+			}
+			cost = 150
+			slot = army_chief
+			available = {
+				OR = {
+					has_government = vanguard_socialism
+					has_government = popular_socialism
+				}
+			}
+			idea_token = BRA_grabois_army
+			traits = {
+			    cos_school_of_commando_operations
+			}
+		}
+	}
+	BRA_angelo_arroyo = {
+		name = "Ângelo Arroyo"
+		portraits = {
+			army = {
+				small = "GFX_idea_BRA_arroyo_nav"
+			}
+		}
+		advisor = {
+			allowed = {
+			    original_tag = BRA
+			}
+			cost = 150
+			slot = navy_chief
+			available = {
+
+			}
+			idea_token = BRA_arroyo_nav
+			traits = {
+			    cnav_base_control_doctrine
+			}
+		}
+	}
+	BRA_osvaldo_orlando_da_costa = {
+		name = "Osvaldo Orlando da Costa"
+		portraits = {
+			army = {
+				small = "GFX_idea_BRA_osvaldo_costa_air"
+			}
+		}
+		advisor = {
+			allowed = {
+			    original_tag = BRA
+			}
+			cost = 150
+			slot = air_chief
+			available = {
+				has_government = vanguard_socialism
+			}
+			idea_token = BRA_osvaldo_costa_air 
+			traits = {
+			    cair_carpet_bombing_doctrine
+			}
+		}
+	}
+}

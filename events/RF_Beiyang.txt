@@ -1,0 +1,466 @@
+#####################
+#	Beiyang - Baba	#
+#####################
+
+add_namespace = byj
+
+country_event = { # BYJ annexes MAN - AI only focus
+	id = byj.1
+	title = byj.1.t
+	desc = byj.1.d
+	picture = report_event_japanese_soldiers_03
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = byj.1.a
+		ai_chance = { factor = 1 }
+		annex_country = {
+			target = MAN
+			transfer_troops = yes
+		}
+		hidden_effect = {
+			every_state = {
+				limit = {
+					OR = {
+						state = 745
+						state = 610
+						state = 715
+						state = 328
+						state = 717
+						state = 809
+						state = 716
+						state = 789
+					}
+				}
+				add_core_of = BYJ
+			}
+			BYJ = {
+				remove_ideas = {
+					BYJ_fengtian_threat
+				}
+			}
+			MAN = {
+				every_unit_leader = {
+					set_nationality = BYJ
+				}
+			}
+		}
+	}
+}
+country_event = { #The rebellions
+	id = byj.2
+	title = byj.2.t
+	desc = byj.2.d
+	picture = report_event_japanese_soldiers_03
+	
+	fire_only_once = yes
+	trigger = {
+		tag = BYJ
+		NOT = {
+			has_war_with = MAN
+		}
+		MAN = {
+			has_full_control_of_state = 608
+		}
+	}
+	mean_time_to_happen = { days = 30 }
+	immediate = {
+		hidden_effect = {
+			#news_event = {		#event not written yet
+			#	id = news.298
+			#}
+		}
+	}
+	option = {
+		name = byj.2.a
+		ai_chance = { factor = 1 }
+		every_state = {
+			limit = {
+				OR = {
+					state = 792
+					state = 607
+					state = 870
+				}
+			}
+			add_core_of = MNG
+			MNG = { transfer_state = PREV }
+		}
+		MNG = {
+			load_oob = "MNG"
+		}
+		every_state = {
+			limit = {
+				OR = {
+					state = 622
+					state = 744
+					state = 620
+					state = 917
+					state = 746
+				}
+			}
+			add_core_of = JGJ
+			JGJ = { transfer_state = PREV }
+		}
+		JGJ = {
+			load_oob = "JGJ"
+		}
+		every_state = {
+			limit = {
+				OR = {
+					state = 597
+					state = 893
+					state = 918
+					state = 873
+					state = 865
+					state = 598
+					state = 868
+					state = 606
+					state = 878
+					state = 879
+					state = 743
+					state = 839
+				}
+			}
+			add_core_of = SHA
+			SHA = { transfer_state = PREV }
+		}
+		SHA = {
+			load_oob = "SHA"
+		}
+		BYJ = {
+			declare_war_on = {
+				target = MNG
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = JGJ
+				type = annex_everything
+			}
+			add_to_faction = SHA
+			set_politics = {
+				ruling_party = despotism
+				elections_allowed = no
+			}
+			set_cosmetic_tag = BYJ_shanxi
+			set_country_flag = BYJ_rebellions
+		}
+	}
+	option = {
+		name = byj.2.b
+		ai_chance = { factor = 1 }
+		every_state = {
+			limit = {
+				OR = {
+					state = 792
+					state = 607
+					state = 870
+				}
+			}
+			add_core_of = MNG
+			MNG = { transfer_state = PREV }
+		}
+		MNG = {
+			load_oob = "MNG"
+			change_tag_from = BYJ
+		}
+		every_state = {
+			limit = {
+				OR = {
+					state = 622
+					state = 744
+					state = 620
+					state = 917
+					state = 746
+				}
+			}
+			add_core_of = JGJ
+			JGJ = { transfer_state = PREV }
+		}
+		JGJ = {
+			load_oob = "JGJ"
+		}
+		every_state = {
+			limit = {
+				OR = {
+					state = 597
+					state = 893
+					state = 918
+					state = 873
+					state = 865
+					state = 598
+					state = 868
+					state = 606
+					state = 878
+					state = 879
+					state = 743
+					state = 839
+				}
+			}
+			add_core_of = SHA
+			SHA = { transfer_state = PREV }
+		}
+		SHA = {
+			load_oob = "SHA"
+		}
+		BYJ = {
+			declare_war_on = {
+				target = MNG
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = JGJ
+				type = annex_everything
+			}
+			add_to_faction = SHA
+			set_politics = {
+				ruling_party = despotism
+				elections_allowed = no
+			}
+			set_cosmetic_tag = BYJ_shanxi
+			set_country_flag = BYJ_rebellions
+		}
+	}
+	option = {
+		name = byj.2.c
+		ai_chance = { factor = 1 }
+		every_state = {
+			limit = {
+				OR = {
+					state = 792
+					state = 607
+					state = 870
+				}
+			}
+			add_core_of = MNG
+			MNG = { transfer_state = PREV }
+		}
+		MNG = {
+			load_oob = "MNG"
+		}
+		every_state = {
+			limit = {
+				OR = {
+					state = 622
+					state = 744
+					state = 620
+					state = 917
+					state = 746
+				}
+			}
+			add_core_of = JGJ
+			JGJ = { transfer_state = PREV }
+		}
+		JGJ = {
+			load_oob = "JGJ"
+			change_tag_from = BYJ
+		}
+		every_state = {
+			limit = {
+				OR = {
+					state = 597
+					state = 893
+					state = 918
+					state = 873
+					state = 865
+					state = 598
+					state = 868
+					state = 606
+					state = 878
+					state = 879
+					state = 743
+					state = 839
+				}
+			}
+			add_core_of = SHA
+			SHA = { transfer_state = PREV }
+		}
+		SHA = {
+			load_oob = "SHA"
+		}
+		BYJ = {
+			declare_war_on = {
+				target = MNG
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = JGJ
+				type = annex_everything
+			}
+			add_to_faction = SHA
+			set_politics = {
+				ruling_party = despotism
+				elections_allowed = no
+			}
+			set_cosmetic_tag = BYJ_shanxi
+			set_country_flag = BYJ_rebellions
+		}
+	}
+	option = {
+		name = byj.2.d
+		ai_chance = { factor = 1 }
+		every_state = {
+			limit = {
+				OR = {
+					state = 792
+					state = 607
+					state = 870
+				}
+			}
+			add_core_of = MNG
+			MNG = { transfer_state = PREV }
+		}
+		MNG = {
+			load_oob = "MNG"
+		}
+		every_state = {
+			limit = {
+				OR = {
+					state = 622
+					state = 744
+					state = 620
+					state = 917
+					state = 746
+				}
+			}
+			add_core_of = JGJ
+			JGJ = { transfer_state = PREV }
+		}
+		JGJ = {
+			load_oob = "JGJ"
+		}
+		every_state = {
+			limit = {
+				OR = {
+					state = 597
+					state = 893
+					state = 918
+					state = 873
+					state = 865
+					state = 598
+					state = 868
+					state = 606
+					state = 878
+					state = 879
+					state = 743
+					state = 839
+				}
+			}
+			add_core_of = SHA
+			SHA = { transfer_state = PREV }
+		}
+		SHA = {
+			load_oob = "SHA"
+			change_tag_from = BYJ
+		}
+		BYJ = {
+			declare_war_on = {
+				target = MNG
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = JGJ
+				type = annex_everything
+			}
+			add_to_faction = SHA
+			set_politics = {
+				ruling_party = despotism
+				elections_allowed = no
+			}
+			set_cosmetic_tag = BYJ_shanxi
+			set_country_flag = BYJ_rebellions
+		}
+	}
+}
+country_event = {
+	id = byj.201
+	title = byj.201.t
+	desc = byj.201.d
+	picture = report_event_japanese_soldiers_03
+	
+	fire_only_once = yes
+	trigger = {
+		has_country_flag = BYJ_rebellions
+		NOT = {
+			AND = {
+				country_exists = MNG
+				country_exists = JGJ
+			}
+		}
+		has_war = no
+	}
+	option = {
+		name = byj.201.a
+		ai_chance = { factor = 1 }
+		drop_cosmetic_tag = yes
+		every_state = {
+			limit = {
+				is_core_of = MNG
+			}
+			remove_core_of = MNG
+		}
+		every_state = {
+			limit = {
+				is_core_of = JGJ
+			}
+			remove_core_of = JGJ
+		}
+		add_stability = 0.05
+		hidden_effect = {
+			#news_event = {		#event not written yet
+			#	id = news.299
+			#}
+		}
+	}
+}
+country_event = { # Division of Mantetsu - BYJ part
+	id = byj.3
+	title = byj.3.t
+	desc = byj.3.d
+	picture = report_event_japanese_soldiers_03
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = byj.3.a
+		ai_chance = { factor = 1 }
+		every_state = {
+			limit = {
+				OR = {
+					state = 745
+					state = 610
+					state = 715
+					state = 328
+					state = 717
+					state = 809
+					state = 716
+					state = 789
+				}
+			}
+			add_core_of = BYJ
+		}
+		every_state = {
+			limit = {
+				OR = {
+					state = 608
+					state = 609
+					state = 837
+				}
+				owner = { OR = { tag = MAN is_ally_with = ROOT } }
+			}
+			add_core_of = BYJ
+			transfer_state_to = BYJ
+		}
+		BYJ = {
+			declare_war_on = {
+				target = MAN
+				type = annex_everything
+			}
+			remove_ideas = {
+				BYJ_fengtian_threat
+			}
+		}
+	}
+}

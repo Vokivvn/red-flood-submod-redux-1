@@ -1,0 +1,24 @@
+state={
+	id=1259
+	name="STATE_1259"
+	manpower = 45300
+
+	state_category = pastoral
+
+	history= {
+		owner = WNG
+		victory_points = { #Hollandia
+			12371 3
+		}
+		add_core_of = WNG
+		buildings = {
+			infrastructure = 1
+			12371 = {
+				naval_base = 1
+			}
+		}
+	}
+	provinces={
+		12371 7529 10396 10369
+	}
+}

@@ -1,0 +1,137 @@
+﻿l_english:
+
+## ALT
+ALT_decision_ALT_rename_khuree_province_4801:0 "Ulan-Bator"
+
+## AUS
+AUS_NF_AUS_handling_half_germans_province_11542:0 "Prag"
+AUS_NF_AUS_handling_half_germans_province_3569:0 "Brünn"
+AUS_NF_AUS_handling_half_germans_province_9541:0 "Budweis"
+AUS_NF_AUS_handling_half_germans_province_6418:0 "Pilsen"
+
+## BRA
+BRA_event_brazil_34_a_province_5112:0 "Santosū"
+BRA_event_brazil_34_a_province_10513:0 "Sanpaūro"
+
+## BRR
+BRR_NF_BRR_build_the_pindorama_province_10513:0 "Pindorama"
+
+## DAN
+DAN_event_danzig_4_a_province_362:0 "Gedanum"
+DAN_event_danzig_4_b_province_362:0 "Gdańsk"
+DAN_event_danzig_7_a_province_362:0 "Danzig"
+
+## EST
+EST_NF_EST_restoration_of_independence_province_3152:0 "Tallinn"
+
+## FCQ
+FCQ_event_fcq_2_a_province_10405:0 "Nossas Senhora do Desterro"
+FCQ_event_fcq_2_b_province_10405:0 "Deimosville"
+
+## FIN
+FIN_NF_FIN_slowly_reverse_russification_province_11105:0 "Helsinki"
+FIN_NF_FIN_seyns_execution_province_11105:0 "Helsinki"
+FIN_NF_FIN_seyns_execution_province_3083:0 "Turku"
+FIN_NF_FIN_seyns_execution_province_3137:0 "Tampere"
+FIN_NF_FIN_seyns_execution_province_9206:0 "Viipuri"
+FIN_NF_FIN_seyns_execution_province_3122:0 "Vaasa"
+
+## GCC
+GCC_event_gcc_3_a_province_10405:0 "Góispolis"
+GCC_event_gcc_3_c_province_10405:0 "Monteirópolis"
+
+## GER
+GER_decision_GER_france_release_province_11506:0 "Paris"
+
+## ISR
+ISR_decision_ISR_jabo_settle_bank_province_7107:0 "Shechem"
+ISR_decision_ISR_jabo_settle_bank_province_1086:0 "Yerushalayim"
+ISR_decision_ISR_jabo_settle_jordan_province_4017:0 "Ma'on"
+ISR_decision_ISR_jabo_settle_jordan_province_7151:0 "Ammon"
+ISR_decision_ISR_jabo_settle_jordan_province_7001:0 "Jabbok"
+ISR_decision_ISR_stern_cores_palestine_province_7107:0 "Shechem"
+ISR_decision_ISR_stern_cores_palestine_province_1086:0 "Yerushalayim"
+ISR_decision_ISR_stern_cores_jordan_province_4017:0 "Ma'on"
+ISR_decision_ISR_stern_cores_jordan_province_7151:0 "Ammon"
+ISR_decision_ISR_stern_cores_jordan_province_7001:0 "Jabbok"
+ISR_decision_ISR_stern_cores_syria_province_4111:0 "Dammeseq"
+
+ISR_NF_ISR_defenceoftheyishuv_province_4206:0 "Tel-Aviv"
+ISR_NF_ISR_defenceoftheyishuv_province_1065:0 "Heifa"
+ISR_NF_ISR_the18principlesofthelehi_province_4206:0 "Tel-Aviv"
+ISR_NF_ISR_restoreoldjerusalem_province_1086:0 "Yerushalayim"
+ISR_NF_ISR_developthecities_province_4206:0 "Tel-Aviv"
+
+## JKR
+JKR_NF_JKR_korea_is_ours_province_6944:0 "Raijin-Sonbong"
+JKR_NF_JKR_the_north_is_ours_province_6944:0 "Raijin-Sonbong"
+JKR_NF_JKR_revolution_province_6922:0 "Seongjin"
+
+## KCK
+KCK_decision_KCK_decision_create_magadan_province_12683:0 "Magadan"
+
+## LEB
+LEB_event_leb_1_a_province_4206:0 "Japhet"
+LEB_event_leb_1_a_province_1065:0 "Sycaminon"
+LEB_event_leb_1_a_province_1108:0 "Athar"
+LEB_event_leb_1_a_province_1088:0 "Ramitha"
+LEB_event_leb_1_a_province_10087:0 "Antarados"
+
+## MAN
+MAN_event_man_17_a_province_11771:0 "Shenyang"
+MAN_event_man_17_a_province_4572:0 "Changchun"
+
+## POL
+POL_decision_POL_russia_and_nevsk_1_province_3151:0 "Nevsk"
+POL_decision_POL_russia_and_nevsk_1_province_11523:0 "Engels"
+POL_decision_POL_russia_and_nevsk_3151:0 "Nevsk"
+POL_decision_POL_russia_and_nevsk_11523:0 "Engels"
+
+POL_NF_POL_migration_wilno_province_9483:0 "Szawle"
+POL_NF_POL_migration_wilno_province_3320:0 "Wilno"
+POL_NF_POL_migration_wilno_province_6296:0 "Kowno"
+POL_NF_POL_belarus_integration_province_3392:0 "Brześć"
+
+## ROM
+ROM_event_romania_6_g_province_9617:0 "Karl Marx" #placeholder name
+
+## RUS
+RUS_decision_integrate_ukraine_province_525:0 "Kiev"
+
+RUS_scripted_effect_Unification_unify_russia_socialist_effects_province_3734:0 "Krasnodar"
+RUS_scripted_effect_Unification_unify_russia_socialist_effects_province_3529:0 "Stalingrad"
+RUS_scripted_effect_Unification_unify_russia_socialist_effects_province_7274:0 "Novosibirsk"
+RUS_scripted_effect_Unification_unify_russia_socialist_effects_province_3151:0 "Krasnograd"
+RUS_scripted_effect_Unification_unify_russia_socialist_effects_KAV_severyanin_province_3151:0 "Severyanin"
+RUS_scripted_effect_Unification_unify_russia_socialist_effects_KAV_greater_eurasia_province_3529:0 "Stalingrad"
+RUS_scripted_effect_Unification_unify_russia_socialist_effects_KAV_greater_eurasia_province_3151:0 "Krasnograd"
+RUS_scripted_effect_Unification_unify_russia_socialist_effects_KAV_the_transmutation_of_koba_province_3529:0 "Stalingrad"
+RUS_scripted_effect_Unification_unify_russia_socialist_effects_KAV_the_transmutation_of_koba_province_3151:0 "Mayakovsk"
+
+## TAI
+TAI_event_tai_1_a_province_1091:0 "Chiayi"
+TAI_event_tai_1_a_province_7186:0 "Taipei"
+TAI_event_tai_1_a_province_12068:0 "Kaohsiung"
+
+## UKR
+UKR_event_ukraine_41_a_province_525:0 "Lazarodar"
+
+##UPI
+UPI_NF_KAL_annihilate_anglo_province_4299:0 "Lakhanpur"
+UPI_NF_KAL_annihilate_anglo_province_5055:0 "Prayagraj"
+UPI_NF_KAL_annihilate_anglo_province_12137:0 "Kanpur"
+
+## USA
+USA_event_usa_350_a_province_6897:0 "Tségháhoodzání"
+USA_event_usa_350_b_province_6897:0 "Tségháhoodzání"
+USA_event_usa_6897_a_province_6897:0 "Tségháhoodzání"
+
+## on actions Middle East
+LEB_on_action_province_4206:0 "Japhet"
+LEB_on_action_province_1065:0 "Sycaminon"
+LEB_on_action_province_1108:0 "Athar"
+LEB_on_action_province_1088:0 "Ramitha"
+LEB_on_action_province_10087:0 "Antarados"
+
+ISR_on_action_province_4206:0 "Yafa"
+ISR_on_action_province_1065:0 "Hayfa"

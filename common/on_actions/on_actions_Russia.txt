@@ -1,0 +1,4804 @@
+on_actions = {
+ 
+	on_monthly = {
+		effect = {
+			if = {
+				limit = {
+					any_country = { has_variable = smuta_surrender_limit }
+					is_russian_warlord = yes
+					has_war = yes
+					NOT = {
+						AND = {
+							OR = {
+								tag = RUS
+								tag = SRU
+							}
+							OR = {
+								has_war_with = SRU
+								has_war_with = RUS
+							}
+						}
+					}
+				}
+				if = {
+					limit = { is_ai = yes }
+					add_to_variable = { smuta_surrender_limit = -0.03 }
+					clamp_variable = { 
+						var = smuta_surrender_limit
+						min = -0.76
+					}
+				}
+				else_if = {
+					limit = {
+						NOT = { has_variable = smuta_surrender_limit }
+					}
+					set_variable = { smuta_surrender_limit = -0.20 }
+				}
+			}
+		}
+	}
+
+	on_peace = {
+		effect = {
+			if = {
+				limit = {
+					any_country = { has_variable = smuta_surrender_limit }
+					has_variable = smuta_surrender_limit
+					is_russian_warlord = yes
+				}
+				set_variable = { smuta_surrender_limit = -0.20 }
+			}
+		}
+	}
+
+	on_capitulation_immediate = {
+		effect = {
+			if = {
+				limit = {
+					FROM = { tag = UKR }
+					UKR = { has_completed_focus = UKR_the_rise_of_the_banderites }
+				}
+				if = {
+					limit = { ROOT = { tag = BLR } }
+					UKR = {
+						white_peace = {
+							tag = BLR
+							message = UKR_bandera_beats_belarus
+						}
+						remove_wargoal = {
+							type = all
+							target = BLR
+						}
+						every_state = {
+							limit = {
+								state = 94
+								state = 194
+								state = 1299
+							}
+							add_claim_by = UKR
+							transfer_state_to = UKR
+						}
+						puppet = BLR
+					}
+					BLR = {
+						set_cosmetic_tag = BLR_bandera
+						load_focus_tree = generic_focus
+						set_politics = {
+							ruling_party = despotism
+							elections_allowed = no
+						}
+						set_party_name = {
+							ideology = despotism
+							long_name = POL_bandera_party_long
+							name = POL_bandera_party
+						}
+						promote_character = BLR_dmytro
+					}
+				}
+
+				else_if = {
+					limit = { ROOT = { tag = LIT } }
+					UKR = {
+						white_peace = {
+							tag = LIT
+						}
+						remove_wargoal = {
+							type = all
+							target = LIT
+						}
+					}
+					BLR = {
+						set_cosmetic_tag = BLR_bandera
+						load_focus_tree = generic_focus
+						set_politics = {
+							ruling_party = despotism
+							elections_allowed = no
+						}
+						set_party_name = {
+							ideology = despotism
+							long_name = POL_bandera_party_long
+							name = POL_bandera_party
+						}
+						promote_character = BLR_dmytro
+					}
+					BLR = {
+						annex_country = {
+							target = LIT
+						}
+					}
+					every_state = {
+						limit = {
+							is_core_of = LIT
+						}
+						add_claim_by = BLR
+					}
+				}
+
+				else_if = {
+					limit = { ROOT = { tag = POL } }
+					UKR = {
+						country_event = {
+							id = ukraine.18
+							days = 10
+						}
+						white_peace = {
+							tag = POL 
+							message = UKR_bandera_beats_poland
+						}
+						remove_wargoal = {
+							type = all
+							target = POL
+						}
+						remove_wargoal = {
+							type = all
+							target = LIT
+						}
+						remove_wargoal = {
+							type = all
+							target = BLR
+						}
+						transfer_state = 91
+						transfer_state = 89
+						transfer_state = 88
+						transfer_state = 91
+						transfer_state = 92
+						transfer_state = 975
+						transfer_state = 1299
+						transfer_state = 94
+						transfer_state = 194
+						puppet = POL
+						puppet = BLR
+					}
+					POL = {
+						every_state = {
+							limit = {
+								is_core_of = BLR
+							}
+							transfer_state_to = BLR
+							remove_core_of = POL
+						}
+						every_state = {
+							limit = {
+								is_core_of = LIT
+							}
+							transfer_state_to = LIT
+							remove_core_of = POL
+						}
+						set_cosmetic_tag = POL_bandera
+						remove_ideas = {
+							POL_warschauer_vertrag
+							POL_christiancharity
+							POL_spending
+							POL_lowerstate
+							POL_huzarzy_smierci
+							POL_masteryovermatter
+							POL_dreamofzadruga
+							POL_forfreedom
+							POL_cult_marshal
+							POL_ukremigration
+							POL_unitedinspirit
+							POL_sharingresponsibilities
+							POL_eastandwest
+							POL_partisantweaponry
+							POL_absolutedevotion
+							POL_likestorks
+							POL_polishadministrators
+							POL_prometheus
+							POL_christiancharity
+							POL_selfmanagement
+							POL_absolutedevotion
+							POL_newdemocracy
+							POL_cult_marshal
+							POL_zermatic
+							POL_politicalinterest
+							POL_neweraneweconomy
+							POL_ubi
+							POL_cult_zymierski
+						}
+						load_focus_tree = generic_focus
+						set_politics = {
+							ruling_party = despotism
+							elections_allowed = no
+						}
+						set_party_name = {
+							ideology = despotism
+							long_name = POL_bandera_party_long
+							name = POL_bandera_party
+						}
+						promote_character = POL_mykola_lebed
+						clr_country_flag = warschauer_vertrag
+						WP_lose_member = yes
+					}
+					BLR = {
+						set_cosmetic_tag = BLR_bandera
+						remove_ideas = {
+							BLR_welfare_state
+							BLR_human_rights_court
+							BLR_deregulation
+							BLR_patriotic_education
+							BLR_free_press
+						}
+						load_focus_tree = generic_focus
+						set_politics = {
+							ruling_party = despotism
+							elections_allowed = no
+						}
+						set_party_name = {
+							ideology = despotism
+							long_name = POL_bandera_party_long
+							name = POL_bandera_party
+						}
+						promote_character = BLR_dmytro
+						clr_country_flag = warschauer_vertrag
+						WP_lose_member = yes
+					}
+					BLR = {
+						annex_country = {
+							target = LIT
+						}
+					}
+				}
+
+				else_if = {
+					limit = {
+						ROOT = { tag = ROS }
+						FROM = {
+							OR = {
+								tag = LIT 
+								AND = {
+									tag = POL
+									is_puppet = no
+								}
+								AND = {
+									tag = UKR
+									NOT = {
+										has_government = despotism
+									}
+								}
+								AND = {
+									tag = BLR
+									NOT = {
+										OR = {
+											has_government = revisionist_socialism
+											has_completed_focus = BLR_foreign_clique
+										}
+									}
+								}
+							}
+						}
+						NOT = {
+							BLR = {
+								has_government = revisionist_socialism
+								has_completed_focus = BLR_foreign_clique
+							}
+						}
+					}
+					POL = {
+						news_event = {
+							id = news.51
+						}
+						white_peace = {
+							tag = ROS
+							message = intermarium_beats_russia
+						}
+						every_country = {
+							limit = {
+								OR = {
+									is_puppet_of = ROS
+									tag = ROS
+								}
+							}
+							POL = {
+								annex_country = {
+									target = PREV
+								}
+							}
+						}
+						every_state = {
+							limit = {
+								is_owned_by = POL
+								OR = {
+									is_core_of = ORE
+									is_core_of = RUS 
+									is_core_of = SRU 
+									is_core_of = DKB 
+									is_core_of = KAV 
+									is_core_of = TRK 
+									is_core_of = ARM 
+									is_core_of = TRK 
+									is_core_of = TUK 
+									is_core_of = KHW 
+									is_core_of = BKR 
+									is_core_of = TUC 
+									is_core_of = SIB 
+									is_core_of = MO2 
+									is_core_of = MON 
+									is_core_of = ALT 
+									is_core_of = TAN 
+									is_core_of = MPA 
+									is_core_of = KHU 
+									is_core_of = ZHR 
+									is_core_of = FCR 
+									is_core_of = KCK 
+									is_core_of = HAR 
+									is_core_of = PRI 
+									is_core_of = MNS 
+									is_core_of = ARC 
+									is_core_of = PSL 
+									is_core_of = GUK 
+									is_core_of = FIN 
+									is_core_of = FIR
+								}
+							}
+							remove_core_of = PREV
+						}
+						if = {
+							limit = {
+								POL = {
+									is_in_faction_with = UKR
+								}
+							}
+							UKR = {
+								add_state_core = 854 
+								add_state_core = 853 
+								add_state_core = 259 
+								add_state_core = 221 
+								add_state_core = 225 
+								add_state_core = 200 
+								add_state_core = 196 
+								add_state_core = 137 
+								add_state_core = 227
+								add_state_core = 228
+								transfer_state = 854 
+								transfer_state = 853 
+								transfer_state = 259 
+								transfer_state = 221 
+								transfer_state = 225 
+								transfer_state = 200 
+								transfer_state = 196 
+								transfer_state = 137 
+								transfer_state = 227
+								transfer_state = 228
+							}
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					ROOT = { tag = KHW }
+					FROM = { tag = ROS }
+				}
+				white_peace = {
+					message = ROS_CONQUERS_KHW
+				}
+				FROM = {
+					annex_country = {
+						target = ROOT
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					ROOT = { tag = TUC }
+					FROM = { tag = ROS }
+				}
+				white_peace = {
+					message = ROS_CONQUERS_TUC
+				}
+				FROM = {
+					annex_country = {
+						target = ROOT
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					ROOT = { tag = TRK }
+					FROM = { tag = ROS }
+				}
+				white_peace = {
+					message = ROS_CONQUERS_TRK
+				}
+				FROM = {
+					annex_country = {
+						target = ROOT
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					ROOT = { tag = BKR }
+					FROM = { tag = ROS }
+				}
+				white_peace = {
+					message = ROS_CONQUERS_BKR
+				}
+				FROM = {
+					annex_country = {
+						target = ROOT
+					}
+				}
+			} 
+
+			else_if = {
+				limit = {
+					ROOT = { tag = POL }
+					FROM = { tag = ROS }
+				}
+				ROS = {
+					set_country_flag = intermarium_solved
+					set_country_flag = total_polish_death
+					white_peace = {
+						tag = POL
+						message = SOV_beats_intermarium
+					}
+					every_country = {
+						limit = {
+							OR = {
+								is_in_faction_with = POL
+								tag = POL
+								tag = BLR
+								tag = LIT
+							}
+						}
+						PREV = {
+							annex_country = {
+								target = PREV
+							}
+						}
+					}
+					every_state = {
+						limit = { is_core_of = POL }
+						remove_core_of = POL
+					}
+				}
+				if = {
+					limit = {
+						PRS = {
+							exists = yes 
+							is_subject = no
+						}
+					}
+					DAN = {
+						country_event = danzig.7
+					}
+				}
+			}
+
+							#General
+			else_if = {
+				limit = {
+					any_country = { #Don't fire if there are no russian_warlords
+						NOT = { has_country_flag = is_russian_warlord }
+					}
+					ROOT = { #Annexee
+						OR = {
+							has_country_flag = is_russian_warlord
+							tag = FIN
+							tag = FIR
+							tag = EST
+							tag = LAT
+							tag = ARM
+							tag = KHW
+							tag = TUC
+							tag = TUK
+							tag = BKR
+							tag = KHU
+						}
+					}
+					FROM = { has_country_flag = is_russian_warlord } #Annexer
+				}
+				if = {
+					limit = {
+						FIN = {
+							is_puppet_of = ROOT
+						}
+					}
+					FIN = {
+						separate_peace_all_wars = yes
+					}
+					POL = {
+						add_to_faction = FIN
+					}
+				}
+				if = {
+					limit = { FROM = { OR = { tag = SRU tag = RUS } } }
+					if = {
+						limit = { ROOT = { tag = ARM } }
+						FROM = {
+							white_peace = {
+								message = RUS_CONQUERS_ARM
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = GUK } }
+						FROM = {
+							white_peace = {
+								message = RUS_CONQUERS_GUK
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = HAR } }
+						FROM = {
+							white_peace = {
+								message = RUS_CONQUERS_HAR
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { OR = { tag = RUS tag = SRU } } }
+						FROM = {
+							if = {
+								limit = { FROM = { tag = SRU } }
+								set_country_flag = bypass_below_checks
+								country_event = russia.20
+								white_peace = {
+									message = SRU_CONQUERS_RUS
+									tag = ROOT
+								}
+							}
+							else = {
+								set_country_flag = bypass_below_checks
+								country_event = russia.19
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = SIB } }
+						FROM = {
+							white_peace = {
+								message = RUS_CONQUERS_SIB
+								tag = ROOT
+							}
+							every_state = {
+								limit = {
+									OR = {
+										state = 567
+										state = 575
+										state = 565
+										state = 566
+										state = 964
+									}
+									owner = { tag = ROOT }
+								}
+								var:574.owner = { transfer_state = PREV }
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = DKB } }
+						FROM = {
+							white_peace = {
+								message = RUS_CONQUERS_DKB
+								tag = ROOT
+							}
+						}
+						#if = {
+						#	limit = { DKB = { owns_state = 652 } }
+						#	every_state = {
+						#		limit = {
+						#			OR = {
+						#				state = 571 
+						#				state = 588
+						#				state = 590 
+						#				state = 583 
+						#				state = 572 
+						#				state = 732 
+						#				state = 406 
+						#				state = 404 
+						#				state = 589
+						#			}
+						#			owner = { tag = ROOT }
+						#		}
+						#		var:570.owner = { transfer_state = PREV }
+						#	}
+						#}
+					}
+					else_if = {
+						limit = { ROOT = { tag = ORE } }
+						FROM = {
+							white_peace = {
+								message = RUS_CONQUERS_ORE
+								tag = ROOT
+							}
+						#	if = {
+						#		limit = { ORE = { owns_state = 652 } }
+						#		every_state = {
+						#			limit = {
+						#				OR = {
+						#					state = 571 
+						#					state = 588
+						#					state = 590 
+						#					state = 583 
+						#					state = 572 
+						#					state = 732 
+						#					state = 406 
+						#					state = 404 
+						#					state = 589
+						#				}
+						#				owner = { tag = ROOT }
+						#			}
+						#			var:570.owner = { transfer_state = PREV }
+						#		}
+						#	}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = TRK } }
+						FROM = {
+							white_peace = {
+								message = RUS_CONQUERS_TRK
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = FIN } FIN = { is_in_faction = no } }
+						FROM = {
+							white_peace = {
+								message = RUS_CONQUERS_FIN
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = FIR } }
+						FROM = {
+							white_peace = {
+								message = RUS_CONQUERS_FIR
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = WRU } }
+						FROM = {
+							white_peace = {
+								message = RUS_CONQUERS_WRU
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = WRT } }
+						FROM = {
+							white_peace = {
+								message = RUS_CONQUERS_WRT
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = WRR } }
+						FROM = {
+							white_peace = {
+								message = RUS_CONQUERS_WRR
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = EST } EST = { is_in_faction = no } }
+						FROM = {
+							white_peace = {
+								message = RUS_CONQUERS_EST
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = LAT } LAT = { is_in_faction = no } }
+						FROM = {
+							white_peace = {
+								message = RUS_CONQUERS_LAT
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = KCK } }
+						FROM = {
+							white_peace = {
+								message = RUS_CONQUERS_KCK
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = ZHR } }
+						FROM = {
+							white_peace = {
+								message = RUS_CONQUERS_ZHR
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = KHW } }
+						FROM = {
+							white_peace = {
+								message = RUS_CONQUERS_KHW
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = TUC } }
+						FROM = {
+							white_peace = {
+								message = RUS_CONQUERS_TUC
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = BKR } }
+						FROM = {
+							white_peace = {
+								message = RUS_CONQUERS_BKR
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = TUK } }
+						FROM = {
+							white_peace = {
+								message = RUS_CONQUERS_TUK
+								tag = ROOT
+							}
+							annex_country = {
+								target = KHW
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = KAV } }
+						FROM = {
+							white_peace = {
+								message = RUS_CONQUERS_KAV
+								tag = ROOT
+							}
+
+							if = {
+								limit = { KAV = { owns_state = 652 } }
+								every_state = {
+									limit = {
+										OR = {
+											state = 571
+											state = 588
+											state = 590
+											state = 583
+											state = 572
+											state = 732
+											state = 406
+											state = 404
+											state = 589
+										}
+										owner = { tag = ROOT }
+									}
+									var:570.owner = { transfer_state = PREV }
+								}
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = PRI } }
+						FROM = {
+							white_peace = {
+								message = RUS_CONQUERS_PRI
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = ALT } }
+						FROM = {
+							white_peace = {
+								message = RUS_CONQUERS_ALT
+								tag = ROOT
+							}
+							remove_wargoal = {
+								type = all
+								target = MPA
+							}
+							annex_country = {
+								target = MPA
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = TAN } }
+						FROM = {
+							white_peace = {
+								message = RUS_CONQUERS_TAN
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = MON } }
+						FROM = {
+							white_peace = {
+								message = RUS_CONQUERS_MON
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = MO2 } }
+						FROM = {
+							white_peace = {
+								message = RUS_CONQUERS_MO2
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = ARC } }
+						FROM = {
+							white_peace = {
+								message = RUS_CONQUERS_ARC
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = FCR } }
+						FROM = {
+							white_peace = {
+								message = RUS_CONQUERS_FCR
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = PSL } }
+						FROM = {
+							white_peace = {
+								message = RUS_CONQUERS_PSL
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = MNS } }
+						FROM = {
+							white_peace = {
+								message = RUS_CONQUERS_MNS
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = KHU } }
+						FROM = {
+							white_peace = {
+								message = RUS_CONQUERS_KHU
+								tag = ROOT
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { FROM = { tag = KAV } }
+					if = {
+						limit = { ROOT = { tag = ARM } }
+						FROM = {
+							white_peace = {
+								message = KAV_CONQUERS_ARM
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = GUK } }
+						FROM = {
+							white_peace = {
+								message = KAV_CONQUERS_GUK
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = HAR } }
+						FROM = {
+							white_peace = {
+								message = KAV_CONQUERS_HAR
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = SRU } }
+						FROM = {
+							white_peace = {
+								message = KAV_CONQUERS_SRU
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = RUS } }
+						FROM = {
+							white_peace = {
+								message = KAV_CONQUERS_RUS
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = SIB } }
+						FROM = {
+							white_peace = {
+								message = KAV_CONQUERS_SIB
+								tag = ROOT
+							}
+							every_state = {
+								limit = {
+									OR = {
+										state = 567
+										state = 575
+										state = 565
+										state = 566
+										state = 964
+									}
+									owner = { tag = ROOT }
+								}
+								var:574.owner = { transfer_state = PREV }
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = DKB } }
+						FROM = {
+							white_peace = {
+								message = KAV_CONQUERS_DKB
+								tag = ROOT
+							}
+							if = {
+								limit = { ORE = { exists = yes } }
+								every_state = {
+									limit = {
+										OR = {
+											state = 841
+											state = 236
+											state = 217
+										}
+										owner = { tag = ROOT }
+									}
+									ORE = { transfer_state = PREV }
+								}
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = ORE } }
+						FROM = {
+							white_peace = {
+								message = KAV_CONQUERS_ORE
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = TRK } }
+						FROM = {
+							white_peace = {
+								message = KAV_CONQUERS_TRK
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = FIN } FIN = { is_in_faction = no } }
+						FROM = {
+							white_peace = {
+								message = KAV_CONQUERS_FIN
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = FIR } }
+						FROM = {
+							white_peace = {
+								message = KAV_CONQUERS_FIR
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = WRU } }
+						FROM = {
+							white_peace = {
+								message = KAV_CONQUERS_WRU
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = WRT } }
+						FROM = {
+							white_peace = {
+								message = KAV_CONQUERS_WRT
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = WRR } }
+						FROM = {
+							white_peace = {
+								message = KAV_CONQUERS_WRR
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = EST } EST = { is_in_faction = no } }
+						FROM = {
+							white_peace = {
+								message = KAV_CONQUERS_EST
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = LAT } LAT = { is_in_faction = no } }
+						FROM = {
+							white_peace = {
+								message = KAV_CONQUERS_LAT
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = KCK } }
+						FROM = {
+							white_peace = {
+								message = KAV_CONQUERS_KCK
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = ZHR } }
+						FROM = {
+							white_peace = {
+								message = KAV_CONQUERS_ZHR
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = KHW } }
+						FROM = {
+							white_peace = {
+								message = KAV_CONQUERS_KHW
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = TUC } }
+						FROM = {
+							white_peace = {
+								message = KAV_CONQUERS_TUC
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = BKR } }
+						FROM = {
+							white_peace = {
+								message = KAV_CONQUERS_BKR
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = TUK } }
+						FROM = {
+							white_peace = {
+								message = KAV_CONQUERS_TUK
+								tag = ROOT
+							}
+							annex_country = {
+								target = KHW
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = PRI } }
+						FROM = {
+							white_peace = {
+								message = KAV_CONQUERS_PRI
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = ALT } }
+						FROM = {
+							white_peace = {
+								message = KAV_CONQUERS_ALT
+								tag = ROOT
+							}
+							remove_wargoal = {
+								type = all
+								target = MPA
+							}
+							annex_country = {
+								target = MPA
+							}
+
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = TAN } }
+						FROM = {
+							white_peace = {
+								message = KAV_CONQUERS_TAN
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = MON } }
+						FROM = {
+							white_peace = {
+								message = KAV_CONQUERS_MON
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = MO2 } }
+						FROM = {
+							white_peace = {
+								message = KAV_CONQUERS_MO2
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = ARC } }
+						FROM = {
+							white_peace = {
+								message = KAV_CONQUERS_ARC
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = FCR } }
+						FROM = {
+							white_peace = {
+								message = KAV_CONQUERS_FCR
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = PSL } }
+						FROM = {
+							white_peace = {
+								message = KAV_CONQUERS_PSL
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = MNS } }
+						FROM = {
+							white_peace = {
+								message = KAV_CONQUERS_MNS
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = KHU } }
+						FROM = {
+							white_peace = {
+								message = KAV_CONQUERS_KHU
+								tag = ROOT
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { FROM = { tag = DKB } }
+					if = {
+						limit = { ROOT = { tag = ARM } }
+						FROM = {
+							white_peace = {
+								message = DKB_CONQUERS_ARM
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = KAV } }
+						FROM = {
+							white_peace = {
+								message = DKB_CONQUERS_KAV
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = GUK } }
+						FROM = {
+							white_peace = {
+								message = DKB_CONQUERS_GUK
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = HAR } }
+						FROM = {
+							white_peace = {
+								message = DKB_CONQUERS_HAR
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = SRU } }
+						FROM = {
+							white_peace = {
+								message = DKB_CONQUERS_SRU
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = RUS } }
+						FROM = {
+							white_peace = {
+								message = DKB_CONQUERS_RUS
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = SIB } }
+						FROM = {
+							white_peace = {
+								message = DKB_CONQUERS_SIB
+								tag = ROOT
+							}
+							every_state = {
+								limit = {
+									OR = {
+										state = 567
+										state = 575
+										state = 565
+										state = 566
+										state = 964
+									}
+									owner = { tag = ROOT }
+								}
+								var:574.owner = { transfer_state = PREV }
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = ORE } }
+						FROM = {
+							white_peace = {
+								message = DKB_CONQUERS_ORE
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = TRK } }
+						FROM = {
+							white_peace = {
+								message = DKB_CONQUERS_TRK
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = FIN } FIN = { is_in_faction = no } }
+						FROM = {
+							white_peace = {
+								message = DKB_CONQUERS_FIN
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = FIR } }
+						FROM = {
+							white_peace = {
+								message = DKB_CONQUERS_FIR
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = WRU } }
+						FROM = {
+							white_peace = {
+								message = DKB_CONQUERS_WRU
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = WRT } }
+						FROM = {
+							white_peace = {
+								message = DKB_CONQUERS_WRT
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = WRR } }
+						FROM = {
+							white_peace = {
+								message = DKB_CONQUERS_WRR
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = EST } EST = { is_in_faction = no } }
+						FROM = {
+							white_peace = {
+								message = DKB_CONQUERS_EST
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = LAT } LAT = { is_in_faction = no } }
+						FROM = {
+							white_peace = {
+								message = DKB_CONQUERS_LAT
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = KAV } }
+						FROM = {
+							white_peace = {
+								message = DKB_CONQUERS_KAV
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = KCK } }
+						FROM = {
+							white_peace = {
+								message = DKB_CONQUERS_KCK
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = ZHR } }
+						FROM = {
+							white_peace = {
+								message = DKB_CONQUERS_ZHR
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = KHW } }
+						FROM = {
+							white_peace = {
+								message = DKB_CONQUERS_KHW
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = TUC } }
+						FROM = {
+							white_peace = {
+								message = DKB_CONQUERS_TUC
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = BKR } }
+						FROM = {
+							white_peace = {
+								message = DKB_CONQUERS_BKR
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = TUK } }
+						FROM = {
+							white_peace = {
+								message = DKB_CONQUERS_TUK
+								tag = ROOT
+							}
+							annex_country = {
+								target = KHW
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = PRI } }
+						FROM = {
+							white_peace = {
+								message = DKB_CONQUERS_PRI
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = ALT } }
+						FROM = {
+							white_peace = {
+								message = DKB_CONQUERS_ALT
+								tag = ROOT
+							}
+							remove_wargoal = {
+								type = all
+								target = MPA
+							}
+							annex_country = {
+								target = MPA
+							}
+
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = TAN } }
+						FROM = {
+							white_peace = {
+								message = DKB_CONQUERS_TAN
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = MON } }
+						FROM = {
+							white_peace = {
+								message = DKB_CONQUERS_MON
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = MO2 } }
+						FROM = {
+							white_peace = {
+								message = DKB_CONQUERS_MO2
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = ARC } }
+						FROM = {
+							white_peace = {
+								message = DKB_CONQUERS_ARC
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = FCR } }
+						FROM = {
+							white_peace = {
+								message = DKB_CONQUERS_FCR
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = PSL } }
+						FROM = {
+							white_peace = {
+								message = DKB_CONQUERS_PSL
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = MNS } }
+						FROM = {
+							white_peace = {
+								message = DKB_CONQUERS_MNS
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = KHU } }
+						FROM = {
+							white_peace = {
+								message = DKB_CONQUERS_KHU
+								tag = ROOT
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { FROM = { tag = ORE } }
+					if = {
+						limit = { ROOT = { tag = ARM } }
+						FROM = {
+							white_peace = {
+								message = ORE_CONQUERS_ARM
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = GUK } }
+						FROM = {
+							white_peace = {
+								message = ORE_CONQUERS_GUK
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = HAR } }
+						FROM = {
+							white_peace = {
+								message = ORE_CONQUERS_HAR
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = SRU } }
+						FROM = {
+							white_peace = {
+								message = ORE_CONQUERS_SRU
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = RUS } }
+						FROM = {
+							white_peace = {
+								message = ORE_CONQUERS_RUS
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = SIB } }
+						FROM = {
+							white_peace = {
+								message = ORE_CONQUERS_SIB
+								tag = ROOT
+							}
+							every_state = {
+								limit = {
+									OR = {
+										state = 567
+										state = 575
+										state = 565
+										state = 566
+										state = 964
+									}
+									owner = { tag = ROOT }
+								}
+								var:574.owner = { transfer_state = PREV }
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = TRK } }
+						FROM = {
+							white_peace = {
+								message = ORE_CONQUERS_TRK
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = FIN } FIN = { is_in_faction = no } }
+						FROM = {
+							white_peace = {
+								message = ORE_CONQUERS_FIN
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = DKB } }
+						FROM = {
+							white_peace = {
+								message = ORE_CONQUERS_DKB
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = FIR } }
+						FROM = {
+							white_peace = {
+								message = ORE_CONQUERS_FIR
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = WRU } }
+						FROM = {
+							white_peace = {
+								message = ORE_CONQUERS_WRU
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = WRT } }
+						FROM = {
+							white_peace = {
+								message = ORE_CONQUERS_WRT
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = WRR } }
+						FROM = {
+							white_peace = {
+								message = ORE_CONQUERS_WRR
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = KAV } }
+						FROM = {
+							white_peace = {
+								message = ORE_CONQUERS_KAV
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = EST } EST = { is_in_faction = no } }
+						FROM = {
+							white_peace = {
+								message = ORE_CONQUERS_EST
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = LAT } LAT = { is_in_faction = no } }
+						FROM = {
+							white_peace = {
+								message = ORE_CONQUERS_LAT
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = KCK } }
+						FROM = {
+							white_peace = {
+								message = ORE_CONQUERS_KCK
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = ZHR } }
+						FROM = {
+							white_peace = {
+								message = ORE_CONQUERS_ZHR
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = KHW } }
+						FROM = {
+							white_peace = {
+								message = ORE_CONQUERS_KHW
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = TUC } }
+						FROM = {
+							white_peace = {
+								message = ORE_CONQUERS_TUC
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = BKR } }
+						FROM = {
+							white_peace = {
+								message = ORE_CONQUERS_BKR
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = TUK } }
+						FROM = {
+							white_peace = {
+								message = ORE_CONQUERS_TUK
+								tag = ROOT
+							}
+							annex_country = {
+								target = KHW
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = PRI } }
+						FROM = {
+							white_peace = {
+								message = ORE_CONQUERS_PRI
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = ALT } }
+						FROM = {
+							white_peace = {
+								message = ORE_CONQUERS_ALT
+								tag = ROOT
+							}
+							remove_wargoal = {
+								type = all
+								target = MPA
+							}
+							annex_country = {
+								target = MPA
+							}
+
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = TAN } }
+						FROM = {
+							white_peace = {
+								message = ORE_CONQUERS_TAN
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = MON } }
+						FROM = {
+							white_peace = {
+								message = ORE_CONQUERS_MON
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = MO2 } }
+						FROM = {
+							white_peace = {
+								message = ORE_CONQUERS_MO2
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = ARC } }
+						FROM = {
+							white_peace = {
+								message = ORE_CONQUERS_ARC
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = FCR } }
+						FROM = {
+							white_peace = {
+								message = ORE_CONQUERS_FCR
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = PSL } }
+						FROM = {
+							white_peace = {
+								message = ORE_CONQUERS_PSL
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = MNS } }
+						FROM = {
+							white_peace = {
+								message = ORE_CONQUERS_MNS
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = KHU } }
+						FROM = {
+							white_peace = {
+								message = ORE_CONQUERS_KHU
+								tag = ROOT
+							}
+						}
+					}
+				}
+
+				else_if = {
+					limit = { FROM = { tag = KCK } }
+					if = {
+						limit = { ROOT = { tag = ARM } }
+						FROM = {
+							white_peace = {
+								message = KCK_CONQUERS_ARM
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = GUK } }
+						FROM = {
+							white_peace = {
+								message = KCK_CONQUERS_GUK
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = HAR } }
+						FROM = {
+							white_peace = {
+								message = KCK_CONQUERS_HAR
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = SRU } }
+						FROM = {
+							white_peace = {
+								message = KCK_CONQUERS_SRU
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = RUS } }
+						FROM = {
+							white_peace = {
+								message = KCK_CONQUERS_RUS
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = ORE } }
+						FROM = {
+							white_peace = {
+								message = KCK_CONQUERS_ORE
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = TRK } }
+						FROM = {
+							white_peace = {
+								message = KCK_CONQUERS_TRK
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = FIN } FIN = { is_in_faction = no } }
+						FROM = {
+							white_peace = {
+								message = KCK_CONQUERS_FIN
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = DKB } }
+						FROM = {
+							white_peace = {
+								message = KCK_CONQUERS_DKB
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = FIR } }
+						FROM = {
+							white_peace = {
+								message = KCK_CONQUERS_FIR
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = WRU } }
+						FROM = {
+							white_peace = {
+								message = KCK_CONQUERS_WRU
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = WRT } }
+						FROM = {
+							white_peace = {
+								message = KCK_CONQUERS_WRT
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = WRR } }
+						FROM = {
+							white_peace = {
+								message = KCK_CONQUERS_WRR
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = KAV } }
+						FROM = {
+							white_peace = {
+								message = KCK_CONQUERS_KAV
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = EST } EST = { is_in_faction = no } }
+						FROM = {
+							white_peace = {
+								message = KCK_CONQUERS_EST
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = LAT } LAT = { is_in_faction = no } }
+						FROM = {
+							white_peace = {
+								message = KCK_CONQUERS_LAT
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = SIB } }
+						FROM = {
+							white_peace = {
+								message = KCK_CONQUERS_SIB
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = ZHR } }
+						FROM = {
+							white_peace = {
+								message = KCK_CONQUERS_ZHR
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = KHW } }
+						FROM = {
+							white_peace = {
+								message = KCK_CONQUERS_KHW
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = TUC } }
+						FROM = {
+							white_peace = {
+								message = KCK_CONQUERS_TUC
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = BKR } }
+						FROM = {
+							white_peace = {
+								message = KCK_CONQUERS_BKR
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = TUK } }
+						FROM = {
+							white_peace = {
+								message = KCK_CONQUERS_TUK
+								tag = ROOT
+							}
+							annex_country = {
+								target = KHW
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = PRI } }
+						FROM = {
+							white_peace = {
+								message = KCK_CONQUERS_PRI
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = ALT } }
+						FROM = {
+							white_peace = {
+								message = KCK_CONQUERS_ALT
+								tag = ROOT
+							}
+							remove_wargoal = {
+								type = all
+								target = MPA
+							}
+							annex_country = {
+								target = MPA
+							}
+
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = TAN } }
+						FROM = {
+							white_peace = {
+								message = KCK_CONQUERS_TAN
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = MON } }
+						FROM = {
+							white_peace = {
+								message = KCK_CONQUERS_MON
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = MO2 } }
+						FROM = {
+							white_peace = {
+								message = KCK_CONQUERS_MO2
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = ARC } }
+						FROM = {
+							white_peace = {
+								message = KCK_CONQUERS_ARC
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = FCR } }
+						FROM = {
+							white_peace = {
+								message = KCK_CONQUERS_FCR
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = PSL } }
+						FROM = {
+							white_peace = {
+								message = KCK_CONQUERS_PSL
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = MNS } }
+						FROM = {
+							white_peace = {
+								message = KCK_CONQUERS_MNS
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = KHU } }
+						FROM = {
+							white_peace = {
+								message = KCK_CONQUERS_KHU
+								tag = ROOT
+							}
+						}
+					}
+				}
+			
+				else_if = {
+					limit = { FROM = { tag = ZHR } }
+					if = {
+						limit = { ROOT = { tag = ARM } }
+						FROM = {
+							white_peace = {
+								message = ZHR_CONQUERS_ARM
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = GUK } }
+						FROM = {
+							white_peace = {
+								message = ZHR_CONQUERS_GUK
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = HAR } }
+						FROM = {
+							white_peace = {
+								message = ZHR_CONQUERS_HAR
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = SRU } }
+						FROM = {
+							white_peace = {
+								message = ZHR_CONQUERS_SRU
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = RUS } }
+						FROM = {
+							white_peace = {
+								message = ZHR_CONQUERS_RUS
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = ORE } }
+						FROM = {
+							white_peace = {
+								message = ZHR_CONQUERS_ORE
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = TRK } }
+						FROM = {
+							white_peace = {
+								message = ZHR_CONQUERS_TRK
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = FIN } FIN = { is_in_faction = no } }
+						FROM = {
+							white_peace = {
+								message = ZHR_CONQUERS_FIN
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = DKB } }
+						FROM = {
+							white_peace = {
+								message = ZHR_CONQUERS_DKB
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = FIR } }
+						FROM = {
+							white_peace = {
+								message = ZHR_CONQUERS_FIR
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = WRU } }
+						FROM = {
+							white_peace = {
+								message = ZHR_CONQUERS_WRU
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = WRT } }
+						FROM = {
+							white_peace = {
+								message = ZHR_CONQUERS_WRT
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = WRR } }
+						FROM = {
+							white_peace = {
+								message = ZHR_CONQUERS_WRR
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = KAV } }
+						FROM = {
+							white_peace = {
+								message = ZHR_CONQUERS_KAV
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = EST } EST = { is_in_faction = no } }
+						FROM = {
+							white_peace = {
+								message = ZHR_CONQUERS_EST
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = LAT } LAT = { is_in_faction = no } }
+						FROM = {
+							white_peace = {
+								message = ZHR_CONQUERS_LAT
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = SIB } }
+						FROM = {
+							white_peace = {
+								message = ZHR_CONQUERS_SIB
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = KCK } }
+						FROM = {
+							white_peace = {
+								message = ZHR_CONQUERS_KCK
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = KHW } }
+						FROM = {
+							white_peace = {
+								message = ZHR_CONQUERS_KHW
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = TUC } }
+						FROM = {
+							white_peace = {
+								message = ZHR_CONQUERS_TUC
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = BKR } }
+						FROM = {
+							white_peace = {
+								message = ZHR_CONQUERS_BKR
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = TUK } }
+						FROM = {
+							white_peace = {
+								message = ZHR_CONQUERS_TUK
+								tag = ROOT
+							}
+							annex_country = {
+								target = KHW
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = PRI } }
+						FROM = {
+							white_peace = {
+								message = ZHR_CONQUERS_PRI
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = ALT } }
+						FROM = {
+							white_peace = {
+								message = ZHR_CONQUERS_ALT
+								tag = ROOT
+							}
+							remove_wargoal = {
+								type = all
+								target = MPA
+							}
+							annex_country = {
+								target = MPA
+							}
+
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = TAN } }
+						FROM = {
+							white_peace = {
+								message = ZHR_CONQUERS_TAN
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = MON } }
+						FROM = {
+							white_peace = {
+								message = ZHR_CONQUERS_MON
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = MO2 } }
+						FROM = {
+							white_peace = {
+								message = ZHR_CONQUERS_MO2
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = ARC } }
+						FROM = {
+							white_peace = {
+								message = ZHR_CONQUERS_ARC
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = FCR } }
+						FROM = {
+							white_peace = {
+								message = ZHR_CONQUERS_FCR
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = PSL } }
+						FROM = {
+							white_peace = {
+								message = ZHR_CONQUERS_PSL
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = MNS } }
+						FROM = {
+							white_peace = {
+								message = ZHR_CONQUERS_MNS
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = KHU } }
+						FROM = {
+							white_peace = {
+								message = ZHR_CONQUERS_KHU
+								tag = ROOT
+							}
+						}
+					}
+				}
+
+				else_if = {
+					limit = { FROM = { tag = HAR } }
+					if = {
+						limit = { ROOT = { tag = ARM } }
+						FROM = {
+							white_peace = {
+								message = HAR_CONQUERS_ARM
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = GUK } }
+						FROM = {
+							white_peace = {
+								message = HAR_CONQUERS_GUK
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = ALT } }
+						FROM = {
+							white_peace = {
+								message = HAR_CONQUERS_ALT
+								tag = ROOT
+							}
+							remove_wargoal = {
+								type = all
+								target = MPA
+							}
+							annex_country = {
+								target = MPA
+							}
+
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = SRU } }
+						FROM = {
+							white_peace = {
+								message = HAR_CONQUERS_SRU
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = RUS } }
+						FROM = {
+							white_peace = {
+								message = HAR_CONQUERS_RUS
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = ORE } }
+						FROM = {
+							white_peace = {
+								message = HAR_CONQUERS_ORE
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = TRK } }
+						FROM = {
+							white_peace = {
+								message = HAR_CONQUERS_TRK
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = FIN } FIN = { is_in_faction = no } }
+						FROM = {
+							white_peace = {
+								message = HAR_CONQUERS_FIN
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = DKB } }
+						FROM = {
+							white_peace = {
+								message = HAR_CONQUERS_DKB
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = FIR } }
+						FROM = {
+							white_peace = {
+								message = HAR_CONQUERS_FIR
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = WRU } }
+						FROM = {
+							white_peace = {
+								message = HAR_CONQUERS_WRU
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = WRT } }
+						FROM = {
+							white_peace = {
+								message = HAR_CONQUERS_WRT
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = WRR } }
+						FROM = {
+							white_peace = {
+								message = HAR_CONQUERS_WRR
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = KAV } }
+						FROM = {
+							white_peace = {
+								message = HAR_CONQUERS_KAV
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = EST } EST = { is_in_faction = no } }
+						FROM = {
+							white_peace = {
+								message = HAR_CONQUERS_EST
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = LAT } LAT = { is_in_faction = no } }
+						FROM = {
+							white_peace = {
+								message = HAR_CONQUERS_LAT
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = SIB } }
+						FROM = {
+							white_peace = {
+								message = HAR_CONQUERS_SIB
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = KCK } }
+						FROM = {
+							white_peace = {
+								message = HAR_CONQUERS_KCK
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = KHW } }
+						FROM = {
+							white_peace = {
+								message = HAR_CONQUERS_KHW
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = TUC } }
+						FROM = {
+							white_peace = {
+								message = HAR_CONQUERS_TUC
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = BKR } }
+						FROM = {
+							white_peace = {
+								message = HAR_CONQUERS_BKR
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = TUK } }
+						FROM = {
+							white_peace = {
+								message = HAR_CONQUERS_TUK
+								tag = ROOT
+							}
+							annex_country = {
+								target = KHW
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = PRI } }
+						FROM = {
+							white_peace = {
+								message = HAR_CONQUERS_PRI
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = ZHR } }
+						FROM = {
+							white_peace = {
+								message = HAR_CONQUERS_ZHR
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = TAN } }
+						FROM = {
+							white_peace = {
+								message = HAR_CONQUERS_TAN
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = MON } }
+						FROM = {
+							white_peace = {
+								message = HAR_CONQUERS_MON
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = MO2 } }
+						FROM = {
+							white_peace = {
+								message = HAR_CONQUERS_MO2
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = ARC } }
+						FROM = {
+							white_peace = {
+								message = HAR_CONQUERS_ARC
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = FCR } }
+						FROM = {
+							white_peace = {
+								message = HAR_CONQUERS_FCR
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = PSL } }
+						FROM = {
+							white_peace = {
+								message = HAR_CONQUERS_PSL
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = MNS } }
+						FROM = {
+							white_peace = {
+								message = HAR_CONQUERS_MNS
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = KHU } }
+						FROM = {
+							white_peace = {
+								message = HAR_CONQUERS_KHU
+								tag = ROOT
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { FROM = { tag = PRI } }
+					if = {
+						limit = { ROOT = { tag = ARM } }
+						FROM = {
+							white_peace = {
+								message = PRI_CONQUERS_ARM
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = GUK } }
+						FROM = {
+							white_peace = {
+								message = PRI_CONQUERS_GUK
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = ALT } }
+						FROM = {
+							white_peace = {
+								message = PRI_CONQUERS_ALT
+								tag = ROOT
+							}
+							remove_wargoal = {
+								type = all
+								target = MPA
+							}
+							annex_country = {
+								target = MPA
+							}
+
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = SRU } }
+						FROM = {
+							white_peace = {
+								message = PRI_CONQUERS_SRU
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = RUS } }
+						FROM = {
+							white_peace = {
+								message = PRI_CONQUERS_RUS
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = ORE } }
+						FROM = {
+							white_peace = {
+								message = PRI_CONQUERS_ORE
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = TRK } }
+						FROM = {
+							white_peace = {
+								message = PRI_CONQUERS_TRK
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = FIN } FIN = { is_in_faction = no } }
+						FROM = {
+							white_peace = {
+								message = PRI_CONQUERS_FIN
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = DKB } }
+						FROM = {
+							white_peace = {
+								message = PRI_CONQUERS_DKB
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = FIR } }
+						FROM = {
+							white_peace = {
+								message = PRI_CONQUERS_FIR
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = WRU } }
+						FROM = {
+							white_peace = {
+								message = PRI_CONQUERS_WRU
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = WRT } }
+						FROM = {
+							white_peace = {
+								message = PRI_CONQUERS_WRT
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = WRR } }
+						FROM = {
+							white_peace = {
+								message = PRI_CONQUERS_WRR
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = KAV } }
+						FROM = {
+							white_peace = {
+								message = PRI_CONQUERS_KAV
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = EST } EST = { is_in_faction = no } }
+						FROM = {
+							white_peace = {
+								message = PRI_CONQUERS_EST
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = LAT } LAT = { is_in_faction = no } }
+						FROM = {
+							white_peace = {
+								message = PRI_CONQUERS_LAT
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = SIB } }
+						FROM = {
+							white_peace = {
+								message = PRI_CONQUERS_SIB
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = KCK } }
+						FROM = {
+							white_peace = {
+								message = PRI_CONQUERS_KCK
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = KHW } }
+						FROM = {
+							white_peace = {
+								message = PRI_CONQUERS_KHW
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = TUC } }
+						FROM = {
+							white_peace = {
+								message = PRI_CONQUERS_TUC
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = BKR } }
+						FROM = {
+							white_peace = {
+								message = PRI_CONQUERS_BKR
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = TUK } }
+						FROM = {
+							white_peace = {
+								message = PRI_CONQUERS_TUK
+								tag = ROOT
+							}
+							annex_country = {
+								target = KHW
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = HAR } }
+						FROM = {
+							white_peace = {
+								message = PRI_CONQUERS_HAR
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = ZHR } }
+						FROM = {
+							white_peace = {
+								message = PRI_CONQUERS_ZHR
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = TAN } }
+						FROM = {
+							white_peace = {
+								message = PRI_CONQUERS_TAN
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = MON } }
+						FROM = {
+							white_peace = {
+								message = PRI_CONQUERS_MON
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = MO2 } }
+						FROM = {
+							white_peace = {
+								message = PRI_CONQUERS_MO2
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = ARC } }
+						FROM = {
+							white_peace = {
+								message = PRI_CONQUERS_ARC
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = FCR } }
+						FROM = {
+							white_peace = {
+								message = PRI_CONQUERS_FCR
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = PSL } }
+						FROM = {
+							white_peace = {
+								message = PRI_CONQUERS_PSL
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = MNS } }
+						FROM = {
+							white_peace = {
+								message = PRI_CONQUERS_MNS
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = KHU } }
+						FROM = {
+							white_peace = {
+								message = PRI_CONQUERS_KHU
+								tag = ROOT
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { FROM = { tag = ARC } }
+					if = {
+						limit = { ROOT = { tag = ARM } }
+						FROM = {
+							white_peace = {
+								message = ARC_CONQUERS_ARM
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = GUK } }
+						FROM = {
+							white_peace = {
+								message = ARC_CONQUERS_GUK
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = ALT } }
+						FROM = {
+							white_peace = {
+								message = ARC_CONQUERS_ALT
+								tag = ROOT
+							}
+							remove_wargoal = {
+								type = all
+								target = MPA
+							}
+							annex_country = {
+								target = MPA
+							}
+
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = SRU } }
+						FROM = {
+							white_peace = {
+								message = ARC_CONQUERS_SRU
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = RUS } }
+						FROM = {
+							white_peace = {
+								message = ARC_CONQUERS_RUS
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = ORE } }
+						FROM = {
+							white_peace = {
+								message = ARC_CONQUERS_ORE
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = TRK } }
+						FROM = {
+							white_peace = {
+								message = ARC_CONQUERS_TRK
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = FIN } FIN = { is_in_faction = no } }
+						FROM = {
+							white_peace = {
+								message = ARC_CONQUERS_FIN
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = DKB } }
+						FROM = {
+							white_peace = {
+								message = ARC_CONQUERS_DKB
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = FIR } }
+						FROM = {
+							white_peace = {
+								message = ARC_CONQUERS_FIR
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = WRU } }
+						FROM = {
+							white_peace = {
+								message = ARC_CONQUERS_WRU
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = WRT } }
+						FROM = {
+							white_peace = {
+								message = ARC_CONQUERS_WRT
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = WRR } }
+						FROM = {
+							white_peace = {
+								message = ARC_CONQUERS_WRR
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = KAV } }
+						FROM = {
+							white_peace = {
+								message = ARC_CONQUERS_KAV
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = EST } EST = { is_in_faction = no } }
+						FROM = {
+							white_peace = {
+								message = ARC_CONQUERS_EST
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = LAT } LAT = { is_in_faction = no } }
+						FROM = {
+							white_peace = {
+								message = ARC_CONQUERS_LAT
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = SIB } }
+						FROM = {
+							white_peace = {
+								message = ARC_CONQUERS_SIB
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = KCK } }
+						FROM = {
+							white_peace = {
+								message = ARC_CONQUERS_KCK
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = KHW } }
+						FROM = {
+							white_peace = {
+								message = ARC_CONQUERS_KHW
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = TUC } }
+						FROM = {
+							white_peace = {
+								message = ARC_CONQUERS_TUC
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = BKR } }
+						FROM = {
+							white_peace = {
+								message = ARC_CONQUERS_BKR
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = TUK } }
+						FROM = {
+							white_peace = {
+								message = ARC_CONQUERS_TUK
+								tag = ROOT
+							}
+							annex_country = {
+								target = KHW
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = HAR } }
+						FROM = {
+							white_peace = {
+								message = ARC_CONQUERS_HAR
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = ZHR } }
+						FROM = {
+							white_peace = {
+								message = ARC_CONQUERS_ZHR
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = TAN } }
+						FROM = {
+							white_peace = {
+								message = ARC_CONQUERS_TAN
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = MON } }
+						FROM = {
+							white_peace = {
+								message = ARC_CONQUERS_MON
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = MO2 } }
+						FROM = {
+							white_peace = {
+								message = ARC_CONQUERS_MO2
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = PRI } }
+						FROM = {
+							white_peace = {
+								message = ARC_CONQUERS_PRI
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = FCR } }
+						FROM = {
+							white_peace = {
+								message = ARC_CONQUERS_FCR
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = PSL } }
+						FROM = {
+							white_peace = {
+								message = ARC_CONQUERS_PSL
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = MNS } }
+						FROM = {
+							white_peace = {
+								message = ARC_CONQUERS_MNS
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = KHU } }
+						FROM = {
+							white_peace = {
+								message = ARC_CONQUERS_KHU
+								tag = ROOT
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { FROM = { tag = PSL } }
+					if = {
+						limit = { ROOT = { tag = ARM } }
+						FROM = {
+							white_peace = {
+								message = PSL_CONQUERS_ARM
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = GUK } }
+						FROM = {
+							white_peace = {
+								message = PSL_CONQUERS_GUK
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = ALT } }
+						FROM = {
+							white_peace = {
+								message = PSL_CONQUERS_ALT
+								tag = ROOT
+							}
+							remove_wargoal = {
+								type = all
+								target = MPA
+							}
+							annex_country = {
+								target = MPA
+							}
+
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = SRU } }
+						FROM = {
+							white_peace = {
+								message = PSL_CONQUERS_SRU
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = RUS } }
+						FROM = {
+							white_peace = {
+								message = PSL_CONQUERS_RUS
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = ORE } }
+						FROM = {
+							white_peace = {
+								message = PSL_CONQUERS_ORE
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = TRK } }
+						FROM = {
+							white_peace = {
+								message = PSL_CONQUERS_TRK
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = FIN } FIN = { is_in_faction = no } }
+						FROM = {
+							white_peace = {
+								message = PSL_CONQUERS_FIN
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = DKB } }
+						FROM = {
+							white_peace = {
+								message = PSL_CONQUERS_DKB
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = FIR } }
+						FROM = {
+							white_peace = {
+								message = PSL_CONQUERS_FIR
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = WRU } }
+						FROM = {
+							white_peace = {
+								message = PSL_CONQUERS_WRU
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = WRT } }
+						FROM = {
+							white_peace = {
+								message = PSL_CONQUERS_WRT
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = WRR } }
+						FROM = {
+							white_peace = {
+								message = PSL_CONQUERS_WRR
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = KAV } }
+						FROM = {
+							white_peace = {
+								message = PSL_CONQUERS_KAV
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = EST } EST = { is_in_faction = no } }
+						FROM = {
+							white_peace = {
+								message = PSL_CONQUERS_EST
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = LAT } LAT = { is_in_faction = no } }
+						FROM = {
+							white_peace = {
+								message = PSL_CONQUERS_LAT
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = SIB } }
+						FROM = {
+							white_peace = {
+								message = PSL_CONQUERS_SIB
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = KCK } }
+						FROM = {
+							white_peace = {
+								message = PSL_CONQUERS_KCK
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = KHW } }
+						FROM = {
+							white_peace = {
+								message = PSL_CONQUERS_KHW
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = TUC } }
+						FROM = {
+							white_peace = {
+								message = PSL_CONQUERS_TUC
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = BKR } }
+						FROM = {
+							white_peace = {
+								message = PSL_CONQUERS_BKR
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = TUK } }
+						FROM = {
+							white_peace = {
+								message = PSL_CONQUERS_TUK
+								tag = ROOT
+							}
+							annex_country = {
+								target = KHW
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = HAR } }
+						FROM = {
+							white_peace = {
+								message = PSL_CONQUERS_HAR
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = ZHR } }
+						FROM = {
+							white_peace = {
+								message = PSL_CONQUERS_ZHR
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = TAN } }
+						FROM = {
+							white_peace = {
+								message = PSL_CONQUERS_TAN
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = MON } }
+						FROM = {
+							white_peace = {
+								message = PSL_CONQUERS_MON
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = MO2 } }
+						FROM = {
+							white_peace = {
+								message = PSL_CONQUERS_MO2
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = PRI } }
+						FROM = {
+							white_peace = {
+								message = PSL_CONQUERS_PRI
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = FCR } }
+						FROM = {
+							white_peace = {
+								message = PSL_CONQUERS_FCR
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = ARC } }
+						FROM = {
+							white_peace = {
+								message = PSL_CONQUERS_ARC
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = MNS } }
+						FROM = {
+							white_peace = {
+								message = PSL_CONQUERS_MNS
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = KHU } }
+						FROM = {
+							white_peace = {
+								message = PSL_CONQUERS_KHU
+								tag = ROOT
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { FROM = { tag = FCR } }
+					if = {
+						limit = { ROOT = { tag = ARM } }
+						FROM = {
+							white_peace = {
+								message = FCR_CONQUERS_ARM
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = GUK } }
+						FROM = {
+							white_peace = {
+								message = FCR_CONQUERS_GUK
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = ALT } }
+						FROM = {
+							white_peace = {
+								message = FCR_CONQUERS_ALT
+								tag = ROOT
+							}
+							remove_wargoal = {
+								type = all
+								target = MPA
+							}
+							annex_country = {
+								target = MPA
+							}
+
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = SRU } }
+						FROM = {
+							white_peace = {
+								message = FCR_CONQUERS_SRU
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = RUS } }
+						FROM = {
+							white_peace = {
+								message = FCR_CONQUERS_RUS
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = ORE } }
+						FROM = {
+							white_peace = {
+								message = FCR_CONQUERS_ORE
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = TRK } }
+						FROM = {
+							white_peace = {
+								message = FCR_CONQUERS_TRK
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = FIN } FIN = { is_in_faction = no } }
+						FROM = {
+							white_peace = {
+								message = FCR_CONQUERS_FIN
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = DKB } }
+						FROM = {
+							white_peace = {
+								message = FCR_CONQUERS_DKB
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = FIR } }
+						FROM = {
+							white_peace = {
+								message = FCR_CONQUERS_FIR
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = WRU } }
+						FROM = {
+							white_peace = {
+								message = FCR_CONQUERS_WRU
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = WRT } }
+						FROM = {
+							white_peace = {
+								message = FCR_CONQUERS_WRT
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = WRR } }
+						FROM = {
+							white_peace = {
+								message = FCR_CONQUERS_WRR
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = KAV } }
+						FROM = {
+							white_peace = {
+								message = FCR_CONQUERS_KAV
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = EST } EST = { is_in_faction = no } }
+						FROM = {
+							white_peace = {
+								message = FCR_CONQUERS_EST
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = LAT } LAT = { is_in_faction = no } }
+						FROM = {
+							white_peace = {
+								message = FCR_CONQUERS_LAT
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = SIB } }
+						FROM = {
+							white_peace = {
+								message = FCR_CONQUERS_SIB
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = KCK } }
+						FROM = {
+							white_peace = {
+								message = FCR_CONQUERS_KCK
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = KHW } }
+						FROM = {
+							white_peace = {
+								message = FCR_CONQUERS_KHW
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = TUC } }
+						FROM = {
+							white_peace = {
+								message = FCR_CONQUERS_TUC
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = BKR } }
+						FROM = {
+							white_peace = {
+								message = FCR_CONQUERS_BKR
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = TUK } }
+						FROM = {
+							white_peace = {
+								message = FCR_CONQUERS_TUK
+								tag = ROOT
+							}
+							annex_country = {
+								target = KHW
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = HAR } }
+						FROM = {
+							white_peace = {
+								message = FCR_CONQUERS_HAR
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = ZHR } }
+						FROM = {
+							white_peace = {
+								message = FCR_CONQUERS_ZHR
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = TAN } }
+						FROM = {
+							white_peace = {
+								message = FCR_CONQUERS_TAN
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = MON } }
+						FROM = {
+							white_peace = {
+								message = FCR_CONQUERS_MON
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = MO2 } }
+						FROM = {
+							white_peace = {
+								message = FCR_CONQUERS_MO2
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = PRI } }
+						FROM = {
+							white_peace = {
+								message = FCR_CONQUERS_PRI
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = PSL } }
+						FROM = {
+							white_peace = {
+								message = FCR_CONQUERS_PSL
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = ARC } }
+						FROM = {
+							white_peace = {
+								message = FCR_CONQUERS_ARC
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = MNS } }
+						FROM = {
+							white_peace = {
+								message = FCR_CONQUERS_MNS
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = KHU } }
+						FROM = {
+							white_peace = {
+								message = FCR_CONQUERS_KHU
+								tag = ROOT
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { FROM = { tag = TAN } }
+					if = {
+						limit = { ROOT = { tag = ARM } }
+						FROM = {
+							white_peace = {
+								message = TAN_CONQUERS_ARM
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = GUK } }
+						FROM = {
+							white_peace = {
+								message = TAN_CONQUERS_GUK
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = ALT } }
+						FROM = {
+							white_peace = {
+								message = TAN_CONQUERS_ALT
+								tag = ROOT
+							}
+							remove_wargoal = {
+								type = all
+								target = MPA
+							}
+							annex_country = {
+								target = MPA
+							}
+
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = SRU } }
+						FROM = {
+							white_peace = {
+								message = TAN_CONQUERS_SRU
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = RUS } }
+						FROM = {
+							white_peace = {
+								message = TAN_CONQUERS_RUS
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = ORE } }
+						FROM = {
+							white_peace = {
+								message = TAN_CONQUERS_ORE
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = TRK } }
+						FROM = {
+							white_peace = {
+								message = TAN_CONQUERS_TRK
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = FIN } FIN = { is_in_faction = no } }
+						FROM = {
+							white_peace = {
+								message = TAN_CONQUERS_FIN
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = DKB } }
+						FROM = {
+							white_peace = {
+								message = TAN_CONQUERS_DKB
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = FIR } }
+						FROM = {
+							white_peace = {
+								message = TAN_CONQUERS_FIR
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = WRU } }
+						FROM = {
+							white_peace = {
+								message = TAN_CONQUERS_WRU
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = WRT } }
+						FROM = {
+							white_peace = {
+								message = TAN_CONQUERS_WRT
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = WRR } }
+						FROM = {
+							white_peace = {
+								message = TAN_CONQUERS_WRR
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = KAV } }
+						FROM = {
+							white_peace = {
+								message = TAN_CONQUERS_KAV
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = EST } EST = { is_in_faction = no } }
+						FROM = {
+							white_peace = {
+								message = TAN_CONQUERS_EST
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = LAT } LAT = { is_in_faction = no } }
+						FROM = {
+							white_peace = {
+								message = TAN_CONQUERS_LAT
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = SIB } }
+						FROM = {
+							white_peace = {
+								message = TAN_CONQUERS_SIB
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = KCK } }
+						FROM = {
+							white_peace = {
+								message = TAN_CONQUERS_KCK
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = KHW } }
+						FROM = {
+							white_peace = {
+								message = TAN_CONQUERS_KHW
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = TUC } }
+						FROM = {
+							white_peace = {
+								message = TAN_CONQUERS_TUC
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = BKR } }
+						FROM = {
+							white_peace = {
+								message = TAN_CONQUERS_BKR
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = TUK } }
+						FROM = {
+							white_peace = {
+								message = TAN_CONQUERS_TUK
+								tag = ROOT
+							}
+							annex_country = {
+								target = KHW
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = HAR } }
+						FROM = {
+							white_peace = {
+								message = TAN_CONQUERS_HAR
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = ZHR } }
+						FROM = {
+							white_peace = {
+								message = TAN_CONQUERS_ZHR
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = FCR } }
+						FROM = {
+							white_peace = {
+								message = TAN_CONQUERS_FCR
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = MON } }
+						FROM = {
+							white_peace = {
+								message = TAN_CONQUERS_MON
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = MO2 } }
+						FROM = {
+							white_peace = {
+								message = TAN_CONQUERS_MO2
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = PRI } }
+						FROM = {
+							white_peace = {
+								message = TAN_CONQUERS_PRI
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = PSL } }
+						FROM = {
+							white_peace = {
+								message = TAN_CONQUERS_PSL
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = ARC } }
+						FROM = {
+							white_peace = {
+								message = TAN_CONQUERS_ARC
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = MNS } }
+						FROM = {
+							white_peace = {
+								message = TAN_CONQUERS_MNS
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = KHU } }
+						FROM = {
+							white_peace = {
+								message = TAN_CONQUERS_KHU
+								tag = ROOT
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { FROM = { tag = MO2 } }
+					if = {
+						limit = { ROOT = { tag = ARM } }
+						FROM = {
+							white_peace = {
+								message = MO2_CONQUERS_ARM
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = GUK } }
+						FROM = {
+							white_peace = {
+								message = MO2_CONQUERS_GUK
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = ALT } }
+						FROM = {
+							white_peace = {
+								message = MO2_CONQUERS_ALT
+								tag = ROOT
+							}
+							remove_wargoal = {
+								type = all
+								target = MPA
+							}
+							annex_country = {
+								target = MPA
+							}
+
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = SRU } }
+						FROM = {
+							white_peace = {
+								message = MO2_CONQUERS_SRU
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = RUS } }
+						FROM = {
+							white_peace = {
+								message = MO2_CONQUERS_RUS
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = ORE } }
+						FROM = {
+							white_peace = {
+								message = MO2_CONQUERS_ORE
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = TRK } }
+						FROM = {
+							white_peace = {
+								message = MO2_CONQUERS_TRK
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = FIN } FIN = { is_in_faction = no } }
+						FROM = {
+							white_peace = {
+								message = MO2_CONQUERS_FIN
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = DKB } }
+						FROM = {
+							white_peace = {
+								message = MO2_CONQUERS_DKB
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = FIR } }
+						FROM = {
+							white_peace = {
+								message = MO2_CONQUERS_FIR
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = WRU } }
+						FROM = {
+							white_peace = {
+								message = MO2_CONQUERS_WRU
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = WRT } }
+						FROM = {
+							white_peace = {
+								message = MO2_CONQUERS_WRT
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = WRR } }
+						FROM = {
+							white_peace = {
+								message = MO2_CONQUERS_WRR
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = KAV } }
+						FROM = {
+							white_peace = {
+								message = MO2_CONQUERS_KAV
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = EST } EST = { is_in_faction = no } }
+						FROM = {
+							white_peace = {
+								message = MO2_CONQUERS_EST
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = LAT } LAT = { is_in_faction = no } }
+						FROM = {
+							white_peace = {
+								message = MO2_CONQUERS_LAT
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = SIB } }
+						FROM = {
+							white_peace = {
+								message = MO2_CONQUERS_SIB
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = KCK } }
+						FROM = {
+							white_peace = {
+								message = MO2_CONQUERS_KCK
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = KHW } }
+						FROM = {
+							white_peace = {
+								message = MO2_CONQUERS_KHW
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = TUC } }
+						FROM = {
+							white_peace = {
+								message = MO2_CONQUERS_TUC
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = BKR } }
+						FROM = {
+							white_peace = {
+								message = MO2_CONQUERS_BKR
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = TUK } }
+						FROM = {
+							white_peace = {
+								message = MO2_CONQUERS_TUK
+								tag = ROOT
+							}
+							annex_country = {
+								target = KHW
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = HAR } }
+						FROM = {
+							white_peace = {
+								message = MO2_CONQUERS_HAR
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = ZHR } }
+						FROM = {
+							white_peace = {
+								message = MO2_CONQUERS_ZHR
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = FCR } }
+						FROM = {
+							white_peace = {
+								message = MO2_CONQUERS_FCR
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = MON } }
+						FROM = {
+							white_peace = {
+								message = MO2_CONQUERS_MON
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = TAN } }
+						FROM = {
+							white_peace = {
+								message = MO2_CONQUERS_TAN
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = PRI } }
+						FROM = {
+							white_peace = {
+								message = MO2_CONQUERS_PRI
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = PSL } }
+						FROM = {
+							white_peace = {
+								message = MO2_CONQUERS_PSL
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = ARC } }
+						FROM = {
+							white_peace = {
+								message = MO2_CONQUERS_ARC
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = MNS } }
+						FROM = {
+							white_peace = {
+								message = MO2_CONQUERS_MNS
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = KHU } }
+						FROM = {
+							white_peace = {
+								message = MO2_CONQUERS_KHU
+								tag = ROOT
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { FROM = { tag = GUK } }
+					if = {
+						limit = { ROOT = { tag = HAR } }
+						FROM = {
+							white_peace = {
+								message = GUK_CONQUERS_HAR
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = PRI } }
+						FROM = {
+							white_peace = {
+								message = GUK_CONQUERS_PRI
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = ARC } }
+						FROM = {
+							white_peace = {
+								message = GUK_CONQUERS_ARC
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = FCR } }
+						FROM = {
+							white_peace = {
+								message = GUK_CONQUERS_FCR
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = PSL } }
+						FROM = {
+							white_peace = {
+								message = GUK_CONQUERS_PSL
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = MNS } }
+						FROM = {
+							white_peace = {
+								message = GUK_CONQUERS_MNS
+								tag = ROOT
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { FROM = { tag = MNS } }
+					if = {
+						limit = { ROOT = { tag = HAR } }
+						FROM = {
+							white_peace = {
+								message = MNS_CONQUERS_HAR
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = PRI } }
+						FROM = {
+							white_peace = {
+								message = MNS_CONQUERS_PRI
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = ARC } }
+						FROM = {
+							white_peace = {
+								message = MNS_CONQUERS_ARC
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = FCR } }
+						FROM = {
+							white_peace = {
+								message = MNS_CONQUERS_FCR
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = PSL } }
+						FROM = {
+							white_peace = {
+								message = MNS_CONQUERS_PSL
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = GUK } }
+						FROM = {
+							white_peace = {
+								message = MNS_CONQUERS_GUK
+								tag = ROOT
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { FROM = { tag = FIN } }
+					if = {
+						limit = { ROOT = { tag = FIR } }
+						FROM = {
+							white_peace = {
+								message = FIN_CONQUERS_FIR
+								tag = ROOT
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { FROM = { tag = FIR } }
+					if = {
+						limit = { ROOT = { tag = FIN } }
+						FROM = {
+							white_peace = {
+								message = FIR_CONQUERS_FIN
+								tag = ROOT
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { FROM = { tag = MON } }
+					if = {
+						limit = { ROOT = { tag = ALT } }
+						FROM = {
+							white_peace = {
+								message = MON_CONQUERS_ALT
+								tag = ROOT
+							}
+							remove_wargoal = {
+								type = all
+								target = MPA
+							}
+							annex_country = {
+								target = MPA
+							}
+
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = TAN } }
+						FROM = {
+							white_peace = {
+								message = MON_CONQUERS_TAN
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = KHU } }
+						FROM = {
+							white_peace = {
+								message = MON_CONQUERS_KHU
+								tag = ROOT
+							}
+						}
+					}
+					else_if = {
+						limit = { ROOT = { tag = MO2 } }
+						FROM = {
+							white_peace = {
+								message = MON_CONQUERS_MO2
+								tag = ROOT
+							}
+						}
+					}
+				}
+				ROOT = {
+					transfer_navy = {
+						target = FROM
+					}
+				}
+				FROM = {
+					remove_wargoal = {
+						type = all
+						target = ROOT
+					}
+					annex_country = {
+						target = ROOT
+					}
+					if = {
+						limit = { ROOT = { is_puppet_of = RUS } }
+						annex_country = { target = ROOT }
+					}
+				}
+			}
+		}
+	}
+}

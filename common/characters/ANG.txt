@@ -1,0 +1,14 @@
+characters = {
+	ANG_Henrique_Galvao = {
+		name = "Henrique Galvão"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ANG/Portrait_Henrique_Galvao.png"
+			}
+		}
+		country_leader = {
+			ideology = colonial_government
+			expire = "1965.1.1.1"
+		}
+	}
+}

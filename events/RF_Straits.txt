@@ -1,0 +1,157 @@
+﻿### Sublime Porte ###
+
+
+add_namespace = mar
+
+country_event = {
+	id = mar.1
+	title = mar.1.t
+	desc = mar.1.d
+	picture = GFX_report_event_airplane_factory
+	is_triggered_only = yes
+
+	option = {
+	    name = mar.1.a
+		ai_chance = { 
+			base = 3
+		}
+		MAR = {
+			end_puppet = TUR
+			transfer_state = 339
+			transfer_state = 1126
+			transfer_state = 347
+			drop_cosmetic_tag = yes
+			set_cosmetic_tag = MAR_war
+			add_popularity = {
+				ideology = despotism
+				popularity = 0.15
+			}
+		}
+		1124 = {
+			damage_building = {
+				type = infrastructure
+				damage = 1
+			}
+			damage_building = {
+				type = industrial_complex
+				damage = 1
+			}
+		}
+		hidden_effect = {
+			MAR_abdulmecid_ii = {
+				remove_country_leader_role = {
+					ideology = constitutional_monarchy
+				}
+				add_country_leader_role = {
+					character = MAR_abdulmecid_ii
+					promote_leader = yes
+					country_leader = {
+						ideology = absolute_monarchy
+						expire = "1965.1.1"
+					}
+				}
+			}
+			every_country = {
+				limit = {
+					OR = {
+						tag = ENG
+						tag = GRE
+						tag = RUS
+						tag = ITA
+					}
+				}
+				country_event = { id = mar.2 }
+			}
+			339 = {
+				create_unit = {
+					division = "name = \"Izmir Regiment\" division_template = \"Infantry Division\"start_experience_factor = 0.3 start_equipment_factor = 0.8"
+					owner = MAR
+					prioritize_location = 4112
+				}
+				create_unit = {
+					division = "name = \"Aydin Regiment\" division_template = \"Infantry Division\" start_experience_factor = 0.3 start_equipment_factor = 0.8"
+					owner = MAR
+					prioritize_location = 9929
+				}
+			}
+			1126 = {
+				create_unit = {
+					division = "name = \"Balikesir Regiment\" division_template = \"Infantry Division\" start_experience_factor = 0.3"
+					owner = MAR
+					prioritize_location = 785
+				}
+				create_unit = {
+					division = "name = \"Kutahya Regiment\" division_template = \"Infantry Division\" start_experience_factor = 0.3 start_equipment_factor = 0.8"
+					owner = MAR
+					prioritize_location = 11831
+				}
+			}
+			347 = {
+				create_unit = {
+					division = "name = \"Bolu Regiment\" division_template = \"Infantry Division\" start_experience_factor = 0.3 start_equipment_factor = 0.8"
+					owner = MAR
+					prioritize_location = 890
+				}
+			}
+		}
+		TUR = {
+			country_event = {
+				id = turkey.999
+				days = 10
+			}
+		}
+	}
+}
+
+country_event = {	#end of the commission
+	id = mar.2
+	title = mar.2.t
+	desc = mar.2.d
+	picture = GFX_news_event_MAR_international_troops
+	is_triggered_only = yes
+	timeout_days = 7
+	option = {
+	    name = mar.2.a
+		ai_chance = { 
+			base = 10
+		}
+		ROOT = {
+			diplomatic_relation = {
+				country = MAR
+				relation = guarantee
+				active = no
+			}
+			diplomatic_relation = {
+				country = MAR
+				relation = military_access
+				active = no
+			}
+		}
+	}
+}
+country_event = {	#Sweet victory
+	id = mar.3
+	title = mar.3.t
+	desc = mar.3.d
+	picture = GFX_news_event_MAR_international_troops
+
+	fire_only_once = yes
+	trigger = {
+		tag = MAR
+		MAR = {
+			owns_state = 354
+			has_war = no
+			exists = yes
+		}
+	}
+	option = {
+	    name = mar.3.a
+		ai_chance = { 
+			base = 10
+		}
+		news_event = {
+			id = news.232
+		}
+		drop_cosmetic_tag = yes
+	}
+}

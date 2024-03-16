@@ -1,0 +1,20 @@
+state={
+	id=1249
+	name="STATE_1249"
+	manpower = 41300
+
+	impassable = yes
+
+	state_category = wasteland
+
+	history= {
+		owner = WNG
+		add_core_of = WNG
+		buildings = {
+			infrastructure = 1
+		}
+	}
+	provinces={
+		10436 7570 10990 8235 8250
+	}
+}

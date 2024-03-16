@@ -1,0 +1,105 @@
+division_template = {
+	name = "Dân-Quân Cong-Hòa" #Militia
+	division_names_group = VIN_INF_01
+	
+	regiments = {
+		Militia = { x = 0 y = 0 }
+		Militia = { x = 0 y = 1 }
+		Militia = { x = 1 y = 0 }
+		Militia = { x = 1 y = 1 }
+		Militia = { x = 2 y = 0 }
+	}
+}
+
+units = {
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 10016
+		division_template = "Pháo-Binh Hoàng-Gia"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 10016
+		division_template = "Pháo-Binh Hoàng-Gia"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 10016
+		division_template = "Co-Chuyen Binh Hoàng-Gia"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 10016
+		division_template = "Ngu-Lâm Quân"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 12332
+		division_template = "Dân-Quân Cong-Hòa"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 12332
+		division_template = "Dân-Quân Cong-Hòa"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 4075
+		division_template = "Thuy-Quân Luc-Chien Hoàng-Gia"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 4075
+		division_template = "Bo-Binh Hoàng-Gia"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 9948
+		division_template = "Dân-Quân Cong-Hòa"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+}

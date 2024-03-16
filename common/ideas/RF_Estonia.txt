@@ -1,0 +1,13 @@
+ideas = {
+	country = {
+		EST_baltic_regional_power = {
+			picture = PRS_junkerstaat 
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
+				consumer_goods_expected_value = -0.05
+			}
+		}
+	}
+}

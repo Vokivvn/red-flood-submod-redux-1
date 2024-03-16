@@ -1,0 +1,26 @@
+state={
+	id=1176
+	name="STATE_1176" # Leinster
+	manpower = 205050
+	resources={
+	
+	}
+	
+	state_category = town
+	
+	history={
+		owner = IRE
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = IRE
+		add_core_of = NIR
+		victory_points = {
+			369 2
+		}
+	}
+
+	provinces={
+		303 369 3359
+	}
+}

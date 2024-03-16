@@ -1,0 +1,113 @@
+﻿division_template = {
+	name = "Tankova Divizija"			# Tank Division
+
+	division_names_group = BUL_CAV_01
+
+	regiments = {
+		motorized = { x = 0 y = 0 }
+		motorized = { x = 0 y = 1 }
+		motorized = { x = 0 y = 2 }
+		motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+		motorized = { x = 1 y = 2 }
+		motorized = { x = 2 y = 0 }
+		motorized = { x = 2 y = 1 }
+		mot_artillery_brigade = { x = 3 y = 0 }
+		mot_artillery_brigade = { x = 3 y = 1 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 }
+		recon = { x = 0 y = 1 }
+	}
+}
+
+division_template = {
+	name = "Chervena Divizija"			# Motorized Division
+
+	division_names_group = BUL_CAV_01
+
+	regiments = {
+		motorized = { x = 0 y = 0 }
+		motorized = { x = 0 y = 1 }
+		motorized = { x = 0 y = 2 }
+		motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+		motorized = { x = 1 y = 2 }
+		anti_tank_brigade = { x = 2 y = 0 }
+		anti_tank_brigade = { x = 2 y = 1 }
+		artillery_brigade = { x = 2 y = 2 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 }
+		recon = { x = 0 y = 1 }
+	}
+}
+
+units = {
+	division = {
+		name = "1-va Tankova Divizija"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 949  # Sofia
+		division_template = "Tankova Divizija"
+		start_experience_factor = 0.2
+		
+	}
+	division = {
+		name = "2-ra Tankova Divizija"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 9783  # Varna
+		division_template = "Tankova Divizija"
+		start_experience_factor = 0.2
+		
+	}
+	division = {
+		#name = "3-ta Tankova Divizija"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 9610  # Pleven
+		division_template = "Tankova Divizija"
+		start_experience_factor = 0.2
+		
+	}
+	division = {
+		#name = "1-va Chervena Divizija"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 949  # Sofia
+		division_template = "Chervena Divizija"
+		start_experience_factor = 0.2
+		
+	}
+	division = {
+		#name = "2-ra Chervena Divizija"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 9783  # Varna
+		division_template = "Chervena Divizija"
+		start_experience_factor = 0.2
+		
+	}
+	division = {
+		#name = "3-ta Chervena Divizija"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 9610  # Pleven
+		division_template = "Chervena Divizija"
+		start_experience_factor = 0.2
+		
+	}
+}

@@ -1,0 +1,26 @@
+ALT_diplomatic_decisions = {
+	
+	icon = GFX_Russian_uni_socialist
+	picture = GFX_decision_category_russian_reuni
+	allowed = {
+		original_tag = ALT
+	}
+	priority = 200
+	visible = {
+		has_completed_focus = ALT_agartha_calling
+		is_subject = no
+	}
+}
+
+ALT_mongolian_unification = {
+	icon = GFX_Russian_uni_socialist
+	picture = GFX_decision_category_russian_reuni
+	allowed = {
+		original_tag = ALT
+	}
+	priority = 200
+	visible = {
+		has_completed_focus = ALT_deal_with_sukhbaatar
+		is_subject = no
+	}
+}

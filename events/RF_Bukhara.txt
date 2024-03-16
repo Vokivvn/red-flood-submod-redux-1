@@ -1,0 +1,112 @@
+add_namespace = bkr
+
+country_event = {
+	id = bkr.1
+	title = bkr.1.t
+	desc = bkr.1.desc
+	picture = GFX_GER_march_action
+	
+	is_triggered_only = yes
+	
+	option = { #war on transcaspia
+		name = bkr.1.a
+		declare_war_on = {
+			target = TUC
+			type = annex_everything
+		}
+	}
+}
+
+country_event = {
+	id = bkr.2
+	title = bkr.2.t
+	desc = bkr.2.desc
+	picture = GFX_GER_march_action
+	
+	is_triggered_only = yes
+	
+	option = { #war on khiva
+		name = bkr.2.a
+		declare_war_on = {
+			target = KHW
+			type = annex_everything
+		}
+
+	}
+}
+
+country_event = {
+	id = bkr.3
+	title = bkr.3.t 
+	desc = bkr.3.desc 
+	picture = GFX_GER_march_action
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		 tag = BKR
+		 owns_state = 1039
+		 owns_state = 584
+	}
+	option = {
+		name = bkr.3.a
+		add_state_core = 584
+		add_state_core = 1037
+		add_state_core = 850
+		add_state_core = 849
+		add_state_core = 1039
+	}
+}
+
+country_event = {
+	id = bkr.4
+	title = bkr.4.t
+	desc = bkr.4.desc
+	picture = GFX_GER_march_action
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		 tag = BKR
+		 owns_state = 1039
+		 owns_state = 584
+	}
+	
+	option = { #war on turkestan
+		name = bkr.4.a
+		declare_war_on = {
+			target = TUK
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = TRK
+			type = annex_everything
+		}
+	}
+}
+
+country_event = {
+	id = bkr.5
+	title = bkr.5.t
+	desc = bkr.5.desc
+	picture = GFX_GER_march_action
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = BKR
+		owns_state = 586
+	}
+	
+	option = { #cores on turkestan
+		name = bkr.5.a
+		add_state_core = 405
+		add_state_core = 1040 
+		add_state_core = 585
+		add_state_core = 1042
+		add_state_core = 1041
+		add_state_core = 852
+		add_state_core = 1043
+		add_state_core = 586
+		add_state_core = 842
+		remove_ideas = BKR_hiddenbuff
+		set_cosmetic_tag = BKR_uni
+	}
+}

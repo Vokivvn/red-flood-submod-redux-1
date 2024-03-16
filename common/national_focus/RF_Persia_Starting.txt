@@ -1,0 +1,323 @@
+focus_tree = {
+	id = PER
+	country = {
+		factor = 0
+		modifier = {
+			add = 1000
+			tag = PER
+		}
+	}
+	continuous_focus_position = { x = 5800 y = 1000 }
+	#Focus for APOC negotiations
+	focus = {
+		id = PER_ashes_of_greatness
+		icon = GFX_focus_Anglo_Oil_Persian_Company_renegotiations
+		x = 8
+		y = 0
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 2
+		}
+		available = {
+			
+		}
+		select_effect = {
+			#country event setting up Persian game
+			country_event = {
+				id = per.2
+			}
+		}
+		completion_reward = {
+			country_event = {
+				id = per.201 #negotations
+			}			
+			add_political_power = 25
+		}
+	}
+
+	#Focus for Closer Cooperation
+	focus = {
+		id = PER_more_concessions_to_the_british
+		icon = GFX_focus_Closer_Cooperation
+		x = 6
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = PER_ashes_of_greatness }
+		mutually_exclusive = { focus = PER_take_more_debts_once_again }
+		ai_will_do = {
+			factor = 2
+		}
+		available = {
+			has_country_flag = PER_starting_pro_anglo
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = PER_APOC
+				add_idea = PER_APOC_MOAR
+			}
+		}
+	}
+
+	#Focus for Spurn the Brits
+	focus = {
+		id = PER_take_more_debts_once_again
+		icon = GFX_focus_Spurn_the_Brits
+		x = 10
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = PER_ashes_of_greatness }
+		mutually_exclusive = { focus = PER_more_concessions_to_the_british }
+		ai_will_do = {
+			factor = 2
+		}
+		available = {
+			has_country_flag = PER_starting_anti_anglo
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = PER_starting_denbts
+				add_idea = PER_more_denbts
+			}
+		}
+	}
+
+	focus = {
+		id = PER_dealing_with_the_azeris
+		icon = GFX_focus_Dealing_with_the_Azeri
+		x = 8
+		y = 2
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = PER_more_concessions_to_the_british
+			focus = PER_take_more_debts_once_again
+		}
+		ai_will_do = {
+			factor = 2
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			country_event = {
+				id = per.9
+			}
+		}
+	}
+
+	focus = {
+		id = PER_azeri_harsh_repression
+		icon = GFX_focus_Harsh_Repression
+		x = 6
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = PER_dealing_with_the_azeris }
+		mutually_exclusive = { focus = PER_azeri_autonomy }
+		ai_will_do = {
+			factor = 2
+		}
+		available = {
+			has_country_flag = PER_starting_azeris_crushed
+		}
+		select_effect = {
+			419 = {
+				set_demilitarized_zone = no
+			}
+			420 = {
+				set_demilitarized_zone = no
+			}
+		}
+		completion_reward = {
+			add_political_power = -5
+			419 = {
+				add_compliance = 0.4
+			}
+			420 = {
+				add_compliance = 0.4
+			}
+		}
+	}
+
+	focus = {
+		id = PER_azeri_autonomy
+		icon = GFX_focus_Secular_Liberal_allowance
+		x = 10
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = PER_dealing_with_the_azeris }
+		mutually_exclusive = { focus = PER_azeri_harsh_repression }
+		ai_will_do = {
+			factor = 2
+		}
+		available = {
+			has_country_flag = PER_starting_azeris_placated
+		}
+		completion_reward = {
+			add_political_power = -75
+			add_state_core = 419
+			add_state_core = 420
+			add_popularity = {
+				ideology = popular_socialism
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = revisionist_socialism
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = vanguard_socialism
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = progressivism
+				popularity = 0.05
+			}
+		}
+	}
+
+	focus = {
+		id = PER_kurdish_oil_fields
+		icon = GFX_focus_The_Issue_of_the_Western_Oil_field
+		x = 8
+		y = 4
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = PER_azeri_harsh_repression
+			focus = PER_azeri_autonomy
+		}
+		ai_will_do = {
+			factor = 2
+		}
+		available = {
+			has_full_control_of_state = 421
+		}
+		select_effect = {
+			add_resource = {
+				type = oil
+				amount = -6
+				state = 421
+			}
+		}
+		completion_reward = {
+			country_event = {
+				id = per.91
+			}
+		}
+	}
+
+	focus = {
+		id = PER_kurds_intervention
+		icon = GFX_focus_Crush_the_Strikers
+		x = 6
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = PER_kurdish_oil_fields }
+		mutually_exclusive = { focus = PER_kurds_negotiations }
+		ai_will_do = {
+			factor = 2
+		}
+		available = {
+			has_country_flag = PER_starting_strikers_crushed
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = right_authoritarianism
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = liberalism
+				popularity = -0.05
+			}
+			add_political_power = 75
+			add_manpower = -500
+			add_stability = -0.02
+			add_war_support = -0.02
+			add_resource = {
+				type = oil
+				amount = 6
+				state = 421
+			}
+		}
+	}
+
+	focus = {
+		id = PER_kurds_negotiations
+		icon = GFX_focus_Attempt_to_Negotiate_a_settlement
+		x = 10
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = PER_kurdish_oil_fields }
+		mutually_exclusive = { focus = PER_kurds_intervention }
+		ai_will_do = {
+			factor = 2
+		}
+		available = {
+			has_country_flag = PER_starting_strikers_placated
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = right_authoritarianism
+				popularity = -0.1
+			}
+			add_popularity = {
+				ideology = liberalism
+				popularity = 0.05
+			}
+			add_political_power = 25
+			add_stability = 0.02
+			add_war_support = 0.02
+			add_resource = {
+				type = oil
+				amount = 3
+				state = 421
+			}
+		}
+	}
+
+	#Focus the next modernisation programme
+	focus = {
+		id = PER_send_more_iranians_to_work_for_the_british
+		icon = GFX_focus_The_Next_Modernization_Program
+		x = 8
+		y = 6
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = PER_kurds_intervention
+			focus = PER_kurds_negotiations
+		}
+		ai_will_do = {
+			factor = 2
+		}
+		available = {
+			
+		}
+		select_effect = {
+			country_event = {
+				id = per.101
+				days = 49
+			}
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 3
+				category = industry
+			}
+			country_event = {
+				id = per.1
+				days = 2
+			}
+		}
+	}
+
+#End of focuses 
+ }

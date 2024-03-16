@@ -1,0 +1,14 @@
+characters = {
+	DOM_horacio_vasquez = {
+		name = "Horacio Vasquez"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/DOM/Portrait_Horacio_Vasquez.png"
+			}
+		}
+		country_leader = {
+			ideology = social_conservatism
+			expire = "1965.1.1.1"
+		}
+	}
+}

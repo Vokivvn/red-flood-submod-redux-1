@@ -1,0 +1,21 @@
+state={
+	id=1198
+	name="STATE_1198"
+	
+	state_category = wasteland
+	impassable = yes
+
+	history={
+		owner = SOK
+		add_core_of = SOK
+		buildings = {
+			infrastructure = 0
+		}
+	}
+
+	provinces={
+		13536
+	}
+	manpower=7872
+	buildings_max_level_factor=1.000
+}

@@ -1,0 +1,133 @@
+﻿capital = 43
+set_research_slots = 3 
+set_stability = 0.5
+
+oob = "HUN"
+if = { limit = { has_dlc = "By Blood Alone" } set_air_oob = "HUN_air" }
+if = { limit = {  NOT = { has_dlc = "By Blood Alone" } }  set_air_oob = "HUN_air_legacy" }
+
+add_ideas = {
+	HUN_revolutions_children
+}
+
+set_variable = { warschauer_vertrag = true }
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1		
+	tech_recon = 1
+	gw_artillery = 1
+	fuel_silos = 1
+	basic_train = 1
+	tech_trucks =1
+	motorised_infantry = 1
+}
+
+if = {
+	limit = { NOT = { has_dlc = "No Step Back" } }
+	set_technology = {
+		gwtank = 1
+	}
+}
+if = {
+	limit = { has_dlc = "No Step Back" }
+	set_technology = {
+		gwtank_chassis = 1
+	}
+}
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+	set_technology = {
+		iw_small_airframe = 1
+		engines_1 = 1
+		early_bombs = 1
+	}
+}
+if = {
+	limit = { NOT = { has_dlc = "By Blood Alone" } }
+	set_technology = {
+		early_fighter = 1
+		CAS1 = 1
+	}
+}
+
+set_politics = {
+	ruling_party = vanguard_socialism
+	last_election = "1933.10.25"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_autonomy = {
+	target = TRS
+	autonomy_state = socialistrepublic
+}
+
+TRS = {
+	set_popularities = {
+		vanguard_socialism = 34
+		popular_socialism = 20
+		anarchism = 6
+		revisionist_socialism = 20
+		progressivism = 5
+		liberalism = 1
+		conservatism = 2
+		right_authoritarianism = 2
+		despotism = 2
+		reactionism = 1
+		accelerationism = 7
+	}
+}
+set_autonomy = {
+	target = SLO
+	autonomy_state = socialistrepublic
+}
+SLO = {
+	set_popularities = {
+		vanguard_socialism = 40
+		popular_socialism = 14
+		anarchism = 1
+		revisionist_socialism = 2
+		progressivism = 2
+		liberalism = 10
+		conservatism = 15
+		right_authoritarianism = 10
+		despotism = 5
+		reactionism = 1
+		accelerationism = 0
+	}
+}
+
+set_popularities = {
+	vanguard_socialism = 54
+	popular_socialism = 21
+	anarchism = 1
+	revisionist_socialism = 2
+	progressivism = 1
+	liberalism = 0
+	conservatism = 0
+	right_authoritarianism = 0
+	despotism = 11
+	reactionism = 4
+	accelerationism = 6
+}
+
+recruit_character = HUN_kun
+recruit_character = HUN_rakosi
+recruit_character = HUN_béla_miklós
+recruit_character = HUN_ferenc_szombathelyi
+recruit_character = HUN_jozsef_cserny
+recruit_character = HUN_lakatos_geza
+recruit_character = HUN_gusztav_jany
+
+recruit_character = HUN_Joseph_August_von_Habsburg_Lothringen
+recruit_character = HUN_George_Obrenovic
+recruit_character = HUN_Miklos_Horthy
+
+give_military_access = POL
+give_military_access = BLR 
+give_military_access = LIT 
+give_military_access = UKR
+
+

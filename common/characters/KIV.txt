@@ -1,0 +1,15 @@
+characters = {
+	KIV_our_protector = {
+		name = "Thabo Edwin"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/KIV/Portrait_Thabo_Edwin.png"
+			}
+		}
+		country_leader = {
+			ideology = national_vanguardism
+			expire = "1965.1.1.1"
+			traits = { popular_figurehead }
+		}
+	}
+}

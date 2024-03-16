@@ -1,0 +1,3124 @@
+characters = {
+	ENG_lewis = {
+		name = "Wyndham Lewis"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/ENG/Portrait_ENG_Wyndham_Lewis.png"
+			}
+		}
+		country_leader = {
+			ideology = futurism
+			expire = "1965.1.1.1"
+		}
+	}
+	ENG_austen_chamberlain = {
+		name = "Austen Chamberlain"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/ENG/Portrait_austen_chamberlain.png"
+			}
+			army = {
+				small = "GFX_idea_austen_chamberlain"
+			}
+		}
+		country_leader = {
+			ideology = social_conservatism
+			expire = "1965.1.1.1"
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = ENG_austen_chamberlain_hog
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				has_government = conservatism
+			}
+			traits = {
+				hog_pragmatic_statesman
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+	ENG_mark_sykes = {
+		name = "Mark Sykes"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ENG/Portrait_mark_sykes.png"
+			}
+			army = {
+				small = "GFX_idea_fom_mark_sykes"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_Mark_Sykes_DESC"
+			ideology = social_conservatism
+			expire = "1965.1.1.1"
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = ENG_mark_sykes_hog
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+					has_government = conservatism
+					has_idea = ENG_national_unity_government
+				}
+			}
+			traits = {
+				hog_political_protege
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		advisor = {
+			idea_token = ENG_mark_sykes_for
+			slot = foreign_minister
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+					has_government = conservatism
+					has_idea = ENG_national_unity_government
+				}
+			}
+			traits = {
+				for_great_compromiser
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+	ENG_herbert_morrison = {
+		name = "Herbert Morrison"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/ENG/Portrait_ENG_Herbert_Morrison.png"
+			}
+			army = {
+				small = "GFX_idea_herbert_morrison"
+			}
+		}
+		country_leader = {
+			ideology = progressive_democracy
+			expire = "1965.1.1.1"
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = ENG_herbert_morrison_hog
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+					has_government = progressivism
+					has_idea = ENG_national_unity_government
+				}
+			}
+			traits = {
+				hog_ambitious_union_boss
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		advisor = {
+			idea_token = ENG_herbert_morrison_sec
+			slot = security_minister
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+					has_government = progressivism
+					has_idea = ENG_national_unity_government
+				}
+			}
+			traits = {
+				sec_back_stabber
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+	ENG_christopher_addison = {
+		name = "Christopher Addison"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/ENG/Portrait_ENG_Christopher_Addison.png"
+			}
+			army = {
+				small = "GFX_idea_christopher_addison"
+			}
+		}
+		country_leader = {
+			ideology = social_liberalism
+			expire = "1965.1.1.1"
+		}
+		advisor = {
+			idea_token = ENG_christopher_addison_hog
+			slot = head_of_government
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+					has_government = liberalism
+					has_idea = ENG_national_unity_government
+				}
+			}
+			traits = {
+				hog_silent_workhorse
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		advisor = {
+			idea_token = ENG_christopher_addison_sec
+			slot = security_minister
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+					has_government = liberalism
+					has_idea = ENG_national_unity_government
+				}
+			}
+			traits = {
+				sec_silent_lawyer
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+	ENG_diana_mitford = {
+		name = "Diana Mitford"
+		portraits = {
+			army = {
+				small = "GFX_idea_diana_mitford"
+			}
+		}
+		advisor = {
+			idea_token = ENG_diana_mitford_hog
+			slot = head_of_government
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+					has_government = reactionism
+					has_government = despotism
+					has_government = accelerationism
+				}
+			}
+			traits = {
+				hog_backroom_backstabber
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+	ENG_jessica_mitford = {
+		name = "Jessica Mitford"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/ENG/Portrait_Jessica_Mitford.png"
+			}
+			army = {
+				small = "GFX_idea_jessica_mitford"
+			}
+		}
+		country_leader = {
+			ideology = leninism
+			expire = "1965.1.1.1"
+		}
+		advisor = {
+			idea_token = ENG_jessica_mitford_hog
+			slot = head_of_government
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+					has_government = vanguard_socialism
+					has_government = popular_socialism
+					has_government = anarchism
+					has_government = revisionist_socialism
+				}
+			}
+			traits = {
+				hog_political_protege
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+	ENG_arthur_horner = {
+		name = "Arthur Horner"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/ENG/Portrait_Arthur_Horner.png"
+			}
+			army = {
+				small = "GFX_idea_arthur_horner"
+			}
+		}
+		country_leader = {
+			ideology = syndicalism
+			expire = "1965.1.1.1"
+		}
+		advisor = {
+			idea_token = ENG_arthur_horner_hog
+			slot = head_of_government
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+					has_government = vanguard_socialism
+					has_government = popular_socialism
+					has_government = anarchism
+					has_government = revisionist_socialism
+				}
+			}
+			traits = {
+				hog_ambitious_union_boss
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		advisor = {
+			idea_token = ENG_arthur_horner_eco
+			slot = economy_minister
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+					has_government = vanguard_socialism
+					has_government = popular_socialism
+					has_government = anarchism
+					has_government = revisionist_socialism
+				}
+			}
+			traits = {
+				eco_administrative_genius
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+	ENG_tom_wintringham = {
+		name = "Tom Wintringham"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/ENG/Portrait_Tom_Writingham.png"
+			}
+			army = {
+				small = "GFX_idea_tom_wintringham"
+			}
+		}
+		country_leader = {
+			ideology = social_anarchism
+			expire = "1965.1.1.1"
+		}
+		advisor = {
+			idea_token = ENG_tom_wintringham_hog
+			slot = head_of_government
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+					has_government = vanguard_socialism
+					has_government = popular_socialism
+					has_government = anarchism
+					has_government = revisionist_socialism
+				}
+			}
+			traits = {
+				hog_pragmatic_statesman
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+	ENG_fenner_brockway = {
+		name = "Fenner Brockway"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/ENG/Portrait_Fenner_Brockway.png"
+			}
+		}
+		country_leader = {
+			ideology = democratic_socialism
+			expire = "1965.1.1.1"
+		}
+	}
+	ENG_john_hargrave = {
+		name = "John Hargrave"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/ENG/Portrait_John_Hargrave.png"
+			}
+		}
+		country_leader = {
+			ideology = anocracy
+			expire = "1965.1.1.1"
+		}
+	}
+	ENG_charles_maxwell_knight = {
+		name = "Charles Maxwell Knight"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/ENG/Portrait_Charles_Maxwell_Knight.png"
+			}
+			army = {
+				small = "GFX_idea_charles_maxwell_knight"
+			}
+		}
+		country_leader = {
+			ideology = constitutional_dictatorship
+			expire = "1965.1.1.1"
+		}
+		advisor = {
+			idea_token = ENG_charles_maxwell_knight_hog
+			slot = head_of_government
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+					has_government = right_authoritarianism
+					has_government = despotism
+				}
+			}
+			traits = {
+				hog_silent_workhorse
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		advisor = {
+			idea_token = ENG_charles_maxwell_knight_int
+			slot = head_of_intel
+			allowed = {
+				original_tag = ENG
+			}
+			traits = {
+				
+				int_political_specialist
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+	ENG_archibald_ramsay = {
+		name = "Archibald Ramsay"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/ENG/Portrait_Archibald_Ramsay.png"
+			}
+			army = {
+				small = "GFX_idea_archibald_ramsay"
+			}
+		}
+		country_leader = {
+			ideology = reactionary_populism
+			expire = "1965.1.1.1"
+		}
+		advisor = {
+			idea_token = ENG_archibald_ramsay_hog
+			slot = head_of_government
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+					has_government = reactionism
+					has_government = despotism
+				}
+			}
+			traits = {
+				
+				hog_flamboyant_tough_guy
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		advisor = {
+			idea_token = ENG_archibald_ramsay_eco
+			slot = economy_minister
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+					has_government = despotism
+					has_government = reactionism
+				}
+			}
+			traits = {
+				
+				eco_corrupt_kleptocrat
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+	ENG_alan_brooke = {
+		name = "Alan Brooke"
+		portraits = {
+			army = {
+				large="gfx/leaders/ENG/Portrait_Britain_Alan_Brooke.png"
+				small = "gfx/interface/ministers/ENG/ENG_alan_brooke.png"
+			}
+		}
+		field_marshal = {
+			traits = { defensive_doctrine trait_cautious career_officer }
+			skill = 5
+			attack_skill = 3
+			defense_skill = 5
+			planning_skill = 5
+			logistics_skill = 3
+		}
+		advisor = {
+			idea_token = ENG_alan_brooke_cos
+			slot = high_command
+			allowed = {
+				original_tag = ENG
+			}
+			traits = {
+				cos_school_of_mass_combat
+			}
+		}
+	}
+	ENG_bernard_montgomery = {
+		name = "Bernard Montgomery"
+		portraits = {
+			army = {
+				large="gfx/leaders/ENG/Portrait_Britain_Bernard_Montgomery.png"
+				small = "gfx/interface/ministers/ENG/ENG_Bernard_Montgomery.png"
+			}
+		}
+		field_marshal = {
+			traits = { logistics_wizard offensive_doctrine media_personality trait_cautious inflexible_strategist organizer }
+			skill = 4 
+			attack_skill = 2
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 4
+		}
+		advisor = {
+			idea_token = ENG_bernard_montgomery_cos
+			slot = high_command
+			allowed = {
+				original_tag = ENG
+			}
+			traits = {	
+				
+				cos_school_of_manoeuvre
+			}
+		}
+	}
+	ENG_claude_auchinleck = {
+		name = "Claude Auchinleck"
+		portraits = {
+			army = {
+				large="gfx/leaders/ENG/Portrait_Britain_Claude_Auchinleck.png"
+				small = "gfx/interface/ministers/ENG/ENG_army_claude_auchinleck.png"
+			}
+		}
+		advisor = {
+			idea_token = ENG_claude_auchinleck_for
+			slot = foreign_minister
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+					has_government = right_authoritarianism
+					has_government = despotism
+				}
+			}
+			traits = {
+				
+				for_biased_intellectual
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		advisor = {
+			idea_token = ENG_claude_auchinleck_ac
+			slot = army_chief
+			allowed = {
+				original_tag = ENG
+			}
+			traits = {
+				army_chief
+				carm_elastic_defence_doctrine
+			}
+		}
+		corps_commander = {
+			traits = { inflexible_strategist career_officer }
+			skill = 5
+			attack_skill = 3
+			defense_skill = 5
+			planning_skill = 3
+			logistics_skill = 5
+		}
+	}
+	ENG_neil_ritchie = {
+		name = "Neil Ritchie"
+		portraits = {
+			army = {
+				large="gfx/leaders/ENG/Portrait_Britain_Neil_Ritchie.png"
+			}
+		}
+		corps_commander = {
+			traits = { inflexible_strategist armor_officer politically_connected  }
+			skill = 4
+			attack_skill = 3
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 3
+		}
+	}
+	ENG_alan_cunningham = {
+		name = "Alan Cunningham"
+		portraits = {
+			army = {
+				large="gfx/leaders/ENG/Portrait_Britain_Alan_Cunningham.png"
+			}
+		}
+		corps_commander = {
+			traits = {}
+			skill = 4
+			attack_skill = 4
+			defense_skill = 1
+			planning_skill = 4
+			logistics_skill = 4
+		}
+	}
+	ENG_william_slim = {
+		name = "William Slim"
+		portraits = {
+			army = {
+				large="gfx/leaders/ENG/Portrait_Britain_William_Slim.png"
+			}
+		}
+		corps_commander = {
+			traits = { trickster war_hero }
+			skill = 5
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 5
+			logistics_skill = 5
+		}
+	}
+	ENG_richar_oconnor = {
+		name = "Richard O'Connor"
+		portraits = {
+			army = {
+				large="gfx/leaders/ENG/Portrait_Britain_Richard_OConnor.png"
+			}
+		}
+		corps_commander = {
+			traits = {  }
+			skill = 4
+			attack_skill = 2
+			defense_skill = 4
+			planning_skill = 4
+			logistics_skill = 3
+		}
+	}
+	ENG_william_platt = {
+		name = "William Platt"
+		portraits = {
+			army = {
+				large="gfx/leaders/ENG/Portrait_Britain_William_Platt.png"
+			}
+		}
+		corps_commander = {
+			traits = {  }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 3
+		}
+	}
+	ENG_george_giffard = {
+		name = "George Giffard"
+		portraits = {
+			army = {
+				large="gfx/leaders/ENG/Portrait_Britain_George_Giffard.png"
+			}
+		}
+		corps_commander = {
+			traits = { career_officer }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 3
+		}
+	}
+	ENG_harold_alexander = {
+		name = "Harold Alexander"
+		portraits = {
+			army = {
+				large="gfx/leaders/ENG/Portrait_Britain_Harold_Alexander.png"
+				small = "gfx/interface/ministers/ENG/ENG_harold_alexander.png"
+			}
+		}
+		advisor = {
+			idea_token = ENG_harold_alexander_ac
+			slot = army_chief
+			allowed = {
+				original_tag = ENG
+			}
+			traits = {
+				army_chief
+				carm_decisive_battle_doctrine
+			}
+		}
+		corps_commander = {
+			traits = { politically_connected }
+			skill = 5
+			attack_skill = 4
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 5
+		}
+	}
+	ENG_jackie_smyth = {
+		name = "Jackie Smyth"
+		portraits = {
+			army = {
+				large="gfx/leaders/ENG/Portrait_Britain_John_Jackie_Smyth.png"
+			}
+		}
+		corps_commander = {
+			traits = { old_guard }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	ENG_thomas_jacomb_hutton = {
+		name = "Thomas Jacomb Hutton"
+		portraits = {
+			army = {
+				large="gfx/leaders/ENG/Portrait_Britain_Thomas_Jacomb_Hutton.png"
+			}
+		}
+		corps_commander = {
+			traits = { old_guard }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+		}
+	}
+	ENG_arthur_percival = {
+		name = "Arthur Percival"
+		portraits = {
+			army = {
+				large="gfx/leaders/ENG/Portrait_Britain_Arthur_Percival.png"
+				small = "GFX_idea_arthur_percival"
+			}
+		}
+		corps_commander = {
+			traits = {  trait_cautious }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+		}
+		advisor ={
+			idea_token = ENG_arthur_percival_for
+			slot = foreign_minister
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+					has_government = right_authoritarianism
+					has_government = despotism
+				}
+			}
+			traits = {
+				
+				for_general_staffer
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+	ENG_merton_beckwith_smith = {
+		name = "Merton Beckwith-Smith"
+		portraits = {
+			army = {
+				large="gfx/leaders/ENG/Portrait_Britain_Merton_Beckwith_Smith.png"
+			}
+		}
+		corps_commander = {
+			traits = { commando }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	ENG_henry_pownall = {
+		name = "Henry Pownall"
+		portraits = {
+			army = {
+				large="gfx/leaders/ENG/Portrait_Britain_Henry_Pownall.png"
+			}
+		}
+		corps_commander = {
+			traits = {  trickster }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	ENG_john_vereker_lord_gort = {
+		name = "John Vereker Lord Gort"
+		portraits = {
+			army = {
+				large="gfx/leaders/ENG/Portrait_Britain_John_Vereker.png"
+			}
+		}
+		corps_commander = {
+			traits = { politically_connected trait_cautious }
+			skill = 4
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 4
+			logistics_skill = 3
+		}
+	}
+	ENG_henry_wilson = {
+		name = "Henry Wilson"
+		portraits = {
+			army = {
+				large="gfx/leaders/ENG/Portrait_Britain_Henry_Maitland_Wilson.png"
+				small = "GFX_idea_ENG_henry_wilson"
+			}
+		}
+		corps_commander = {
+			traits = { old_guard politically_connected }
+			skill = 4
+			attack_skill = 2
+			defense_skill = 4
+			planning_skill = 4
+			logistics_skill = 3
+		}
+		advisor = {
+			idea_token = ENG_henry_wilson_ac
+			slot = army_chief
+			allowed = {
+				original_tag = ENG
+			}
+			traits = {
+				army_chief
+				carm_static_defence_doctrine
+			}
+		}
+	}
+	ENG_william_gott = {
+		name = "William Gott"
+		portraits = {
+			army = {
+				large="gfx/leaders/ENG/Portrait_Britain_William_Gott.png"
+			}
+		}
+		corps_commander = {
+			traits = { armor_officer war_hero inflexible_strategist }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 3
+		}
+	}
+	ENG_jock_campbell= {
+		name = "Jock Campbell"
+		portraits = {
+			army = {
+				large="gfx/leaders/ENG/Portrait_Britain_Jock_Campbell.png"
+			}
+		}
+		corps_commander = {
+			traits = { armor_officer  }
+			skill = 4
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 4
+		}
+	}
+	ENG_oliver_leese = {
+		name = "Oliver Leese"
+		portraits = {
+			army = {
+				large="gfx/leaders/ENG/Portrait_Britain_Oliver_Leese.png"
+				small = "gfx/interface/ministers/ENG/ENG_oliver_leese.png"
+			}
+		}
+		corps_commander = {
+			traits = {  armor_officer harsh_leader politically_connected }
+			skill = 4
+			attack_skill = 4
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 4
+		}
+		advisor = {
+			idea_token = ENG_oliver_leese_ac
+			slot = army_chief
+			allowed = {
+				original_tag = ENG
+			}
+			traits = {
+				army_chief
+				carm_armoured_spearhead_doctrine
+			}
+		}
+	}
+	ENG_miles_dempsey = {
+		name = "Miles Dempsey"
+		portraits = {
+			army = {
+				large="gfx/leaders/ENG/Portrait_Britain_Miles_Dempsey.png"
+			}
+		}
+		corps_commander = {
+			traits = { brilliant_strategist infantry_officer career_officer }
+			skill = 4
+			attack_skill = 3
+			defense_skill = 4
+			planning_skill = 4
+			logistics_skill = 2
+		}
+	}
+	ENG_brian_horrocks = {
+		name = "Brian Horrocks"
+		portraits = {
+			army = {
+				large="gfx/leaders/ENG/Portrait_Britain_Brian_Horrocks.png"
+			}
+		}
+		corps_commander = {
+			traits = {  armor_officer career_officer war_hero }
+			skill = 3
+			attack_skill = 1
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 3
+		}
+	}
+	ENG_archibald_wavell = {
+		name = "Archibald Wavell"
+		portraits = {
+			army = {
+				large="gfx/leaders/ENG/Portrait_Britain_Archibald_Wavell.png"
+			}
+		}
+		corps_commander = {
+			traits = { career_officer }
+			skill = 4
+			attack_skill = 4
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 4
+		}
+	}
+	ENG_james_fownes_somerville = {
+		name = "James Fownes Somerville"
+		portraits = {
+			navy = {
+				large="gfx/leaders/ENG/Portrait_Britain_James_Fownes_Somerville.png"
+			}
+		}
+		navy_leader = {
+			traits = { superior_tactician aviation_enthusiast navy_career_officer }
+			skill = 5
+			attack_skill = 4
+			defense_skill = 3
+			maneuvering_skill = 4
+			coordination_skill = 5
+		}
+	}
+	ENG_henry_harwood = {
+		name = "Henry Harwood"
+		portraits = {
+			navy = {
+				large="gfx/leaders/ENG/Portrait_Britain_Henry_Harwood.png"
+			}
+		}
+		navy_leader = {
+			traits = { old_guard_navy bold }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			maneuvering_skill = 3
+			coordination_skill = 2
+		}
+	}
+	ENG_andrew_cunningham = {
+		name = "Andrew Cunningham"
+		portraits = {
+			navy = {
+				large="gfx/leaders/ENG/Portrait_Britain_Andrew_Cunningham.png"
+				small = "GFX_idea_ENG_navy_andrew_cunningham"
+			}
+		}
+		advisor ={
+			idea_token = ENG_andrew_cunningham_nc
+			slot = navy_chief
+			allowed = {
+				original_tag = ENG
+			}
+			traits = { cnav_decisive_battle_doctrine }
+		}
+		navy_leader = {
+			traits = { blockade_runner superior_tactician navy_career_officer bold gunnery_expert}
+			skill = 5
+			attack_skill = 5
+			defense_skill = 4
+			maneuvering_skill = 3
+			coordination_skill = 4
+		}
+	}
+	ENG_bruce_fraser = {
+		name = "Bruce Fraser"
+		portraits = {
+			navy = {
+				large="gfx/leaders/ENG/Portrait_Britain_Bruce_Fraser.png"
+			}
+		}
+		navy_leader = {
+			traits = { aviation_enthusiast naval_lineage blockade_runner }
+			skill = 4
+			attack_skill = 3
+			defense_skill = 2
+			maneuvering_skill = 4
+			coordination_skill = 4
+		}
+	}
+	ENG_john_tovey = {
+		name = "John Tovey"
+		portraits = {
+			navy = {
+				large="gfx/leaders/ENG/Portrait_Britain_John_Tovey.png"
+			}
+		}
+		navy_leader = {
+			traits = { gentlemanly naval_lineage superior_tactician }
+			skill = 4
+			attack_skill = 3
+			defense_skill = 3
+			maneuvering_skill = 2
+			coordination_skill = 5
+		}
+	}
+	ENG_bernard_rawlings = {
+		name = "Bernard Rawlings"
+		portraits = {
+			navy = {
+				large="gfx/leaders/ENG/Portrait_Britain_Bernard_Rawlings.png"
+			}
+		}
+		navy_leader = {
+			traits = { gentlemanly }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			maneuvering_skill = 3
+			coordination_skill = 2
+		}
+	}
+	ENG_john_cunningham = {
+		name = "John Cunningham"
+		portraits = {
+			navy = {
+				large="gfx/leaders/ENG/Portrait_Britain_John_Cunningham.png"
+			}
+		}
+		navy_leader = {
+			traits = { navy_career_officer green_water_expert }
+			skill = 4
+			attack_skill = 2
+			defense_skill = 4
+			maneuvering_skill = 4
+			coordination_skill = 3
+		}
+	}
+	ENG_charles_forbes = {
+		name = "Charles Forbes"
+		portraits = {
+			navy = {
+				large="gfx/leaders/ENG/Portrait_Britain_Charles_Forbes.png"
+			}
+		}
+		navy_leader = {
+			traits = { gunnery_expert fly_swatter }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			maneuvering_skill = 2
+			coordination_skill = 3
+		}
+	}
+	ENG_algernon_willis = {
+		name = "Algernon Willis"
+		portraits = {
+			navy = {
+				large="gfx/leaders/ENG/Portrait_Britain_Algernon_Willis.png"
+			}
+		}
+		navy_leader = {
+			traits = { battleship_adherent spotter }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			maneuvering_skill = 3
+			coordination_skill = 2
+		}
+	}
+	ENG_arthur_power = {
+		name = "Arthur Power"
+		portraits = {
+			navy = {
+				large="gfx/leaders/ENG/Portrait_Britain_Arthur_Power.png"
+			}
+		}
+		navy_leader = {
+			traits = { gunnery_expert }
+			skill = 2
+			attack_skill = 3
+			defense_skill = 1
+			maneuvering_skill = 1
+			coordination_skill = 2
+		}
+	}
+	
+	#fkjfakljfkjfhskjghskgskghkjshgkjshgkshjgkjfakljfkjfhskjghskgskghkjshgkjshgkshjgkjfakljfkjfhskjghskgskghkjshgkjshgkshjgkjfakljfkjfhskjghskgskghkjshgkjshgkshjgkjfakljfkjfhskjghskgskghkjshgkjshgkshjgkjfakljfkjfhskjghskgskghkjshgkjshgkshjg
+	
+	ENG_john_anderson = {
+		name = "John Anderson"
+		portraits = {
+			army = {
+				small = "GFX_idea_ecm_john_anderson"
+			}
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = ENG_john_anderson_hog
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+					has_government = conservatism
+					has_idea = ENG_national_unity_government
+				}
+			}
+			traits = {
+				
+				hog_flamboyant_tough_guy
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		advisor = {
+			idea_token = ENG_john_anderson_eco
+			slot = economy_minister
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+					has_government = conservatism
+					has_idea = ENG_national_unity_government
+				}
+			}
+			traits = {
+				
+				eco_balanced_budget_economy
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+	ENG_leopold_amery = {
+		name = "Leopold Amery"
+		portraits = {
+			army = {
+				small = "GFX_idea_leopold_amery"
+			}
+		}
+		advisor = {
+			idea_token = ENG_leopold_amery_hog
+			slot = head_of_government
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+					has_government = conservatism
+					has_idea = ENG_national_unity_government
+				}
+			}
+			traits = {
+				
+				hog_pragmatic_statesman
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+	
+	ENG_nancy_astor = {
+		name = "Nancy Astor"
+		portraits = {
+			army = {
+				small = "GFX_idea_nancy_astor"
+			}
+		}
+		advisor = {
+			idea_token = ENG_nancy_astor_hog
+			slot = head_of_government
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+					has_government = conservatism
+					has_idea = ENG_national_unity_government
+				}
+			}
+			traits = {
+				
+				hog_backroom_backstabber
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+	ENG_herbert_samuel = {
+		name = "Herbert Samuel"
+		portraits = {
+			army = {
+				small = "GFX_idea_herbert_samuel"
+			}
+		}
+		advisor = {
+			idea_token = ENG_herbert_samuel_hog
+			slot = head_of_government
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+					has_government = liberalism
+					has_idea = ENG_national_unity_government
+				}
+			}
+			traits = {
+				
+				hog_pragmatic_statesman
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+	ENG_clement_davis = {
+		name = "Clement Davis"
+		portraits = {
+			army = {
+				small = "GFX_idea_clement_davis"
+			}
+		}
+		advisor = {
+			idea_token = ENG_clement_davis_hog
+			slot = head_of_government
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+					has_government = liberalism
+					has_idea = ENG_national_unity_government
+				}
+			}
+			traits = {
+				
+				hog_naive_optimist
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+	ENG_goronwy_owen = {
+		name = "Goronwy Owen"
+		portraits = {
+			army = {
+				small = "GFX_idea_goronwy_owen"
+			}
+		}
+		advisor = {
+			idea_token = ENG_goronwy_owen_hog
+			slot = head_of_government
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+					has_government = liberalism
+					has_idea = ENG_national_unity_government
+				}
+			}
+			traits = {
+				
+				hog_ambitious_union_boss
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		advisor = {
+			idea_token = ENG_goronwy_owen_eco
+			slot = economy_minister
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+					has_government = liberalism
+					has_idea = ENG_national_unity_government
+				}
+			}
+			traits = {
+				
+				eco_bank_president
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+	ENG_clement_attlee = {
+		name = "Clement Attlee"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/ENG/clement_attlee.png"
+			}
+		}
+		advisor = {
+			idea_token = ENG_clement_attlee_hog
+			slot = head_of_government
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+					has_government = progressivism
+					has_idea = ENG_national_unity_government
+				}
+			}
+			traits = {
+				
+				hog_political_protege
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+	ENG_aneurin_bevan = {
+		name = "Aneurin Bevan"
+		portraits = {
+			army = {
+				small = "GFX_idea_aneurin_bevan"
+			}
+		}
+		advisor = {
+			idea_token = ENG_anthony_eden_hog
+			slot = head_of_government
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+					has_government = progressivism
+					has_idea = ENG_national_unity_government
+				}
+			}
+			traits = {
+				
+				hog_silent_workhorse
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+	ENG_Nancy_Mitford = {
+		name = "Nancy Mitford"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/ENG/Nancy_Mitford.png"
+			}
+		}
+		advisor = {
+			idea_token = ENG_Nancy_Mitford_hog
+			slot = head_of_government
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+					has_government = progressivism
+					has_idea = ENG_national_unity_government
+				}
+			}
+			traits = {
+				
+				hog_political_protege
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+	ENG_ernest_bevin = {
+		name = "Ernest Bevin"
+		portraits = {
+			army = {
+				small = "GFX_idea_ernest_bevin"
+			}
+		}
+		advisor = {
+			idea_token = ENG_ernest_bevin_hog
+			slot = head_of_government
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+					has_government = progressivism
+					has_idea = ENG_national_unity_government
+				}
+			}
+			traits = {
+				
+				hog_ambitious_union_boss
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		advisor = {
+			idea_token = ENG_ernest_bevin_for
+			slot = foreign_minister
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+					has_government = progressivism
+					has_idea = ENG_national_unity_government
+				}
+			}
+			traits = {
+				
+				for_ideological_crusader
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+	ENG_arthur_greenwood = {
+		name = "Arthur Greenwood"
+		portraits = {
+			army = {
+				small = "GFX_idea_arthur_greenwood"
+			}
+		}
+		advisor = {
+			idea_token = ENG_arthur_greenwood_hog
+			slot = head_of_government
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+					has_government = progressivism
+					has_idea = ENG_national_unity_government
+				}
+			}
+			traits = { hog_naive_optimist }
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+	ENG_edmund_ironside = {
+		name = "Edmund Ironside"
+		portraits = {
+			army = {
+				small = "GFX_idea_ENG_edmund_ironside"
+			}
+		}
+		advisor = {
+			idea_token = ENG_edmund_ironside_hog
+			slot = head_of_government
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+					has_government = right_authoritarianism
+					has_government = despotism
+				}
+			}
+			traits = {
+				
+				hog_old_general
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		advisor = {
+			idea_token = ENG_edmund_ironside_cos
+			slot = high_command
+			allowed = {
+				original_tag = ENG
+			}
+			traits = {
+				
+				cos_school_of_fire_support
+			}
+		}
+	}
+	ENG_lord_david_mitford = {
+		name = "Lord David Mitford"
+		portraits = {
+			army = {
+				small = "GFX_idea_lord_david_mitford"
+			}
+		}
+		advisor = {
+			idea_token = ENG_lord_david_mitford_hog
+			slot = head_of_government
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+					has_government = right_authoritarianism
+					has_government = reactionism
+					has_government = despotism
+				}
+			}
+			traits = {
+				
+				hog_corporate_suit
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+	ENG_rotha_lintorn_orman = {
+		name = "Rotha Lintorn Orman"
+		portraits = {
+			army = {
+				small = "GFX_idea_rotha_lintorn_orman"
+			}
+		}
+		advisor = {
+			idea_token = ENG_rotha_lintorn_orman_hog
+			slot = head_of_government
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+					has_government = reactionism
+					has_government = despotism
+				}
+			}
+			traits = {
+				
+				hog_happy_amateur
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+	
+	#foreign ministers
+	
+	ENG_edward_wood = {
+		name = "Edward Wood"
+		portraits = {
+			army = {
+				small = "GFX_idea_edward_wood"
+			}
+		}
+		advisor = {
+			idea_token = ENG_edward_wood_hog
+			slot = foreign_minister
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+					has_government = conservatism
+					has_idea = ENG_national_unity_government
+				}
+			}
+			traits = {
+				
+				for_biased_intellectual
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+	ENG_neville_chamberlain = {
+		name = "Neville Chamberlain"
+		portraits = {
+			army = {
+				small = "GFX_idea_neville_chamberlain"
+			}
+		}
+		advisor = {
+			idea_token = ENG_neville_chamberlain_for
+			slot = foreign_minister
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+					has_government = conservatism
+					has_idea = ENG_national_unity_government
+				}
+			}
+			traits = {
+				
+				for_great_compromiser
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+	ENG_anthony_eden = {
+		name = "Anthony Eden"
+		portraits = {
+			army = {
+				small = "GFX_idea_anthony_eden"
+			}
+		}
+		advisor = {
+			idea_token = ENG_anthony_eden_for
+			slot = foreign_minister
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+					has_government = conservatism
+					has_idea = ENG_national_unity_government
+				}
+			}
+			traits = {
+				
+				for_ideological_crusader
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+	ENG_john_simon = {
+		name = "John Simon"
+		portraits = {
+			army = {
+				small = "GFX_idea_john_simon"
+			}
+		}
+		advisor = {
+			idea_token = ENG_john_simon_for
+			slot = foreign_minister
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+					has_government = liberalism
+					has_idea = ENG_national_unity_government
+				}
+			}
+			traits = {
+				
+				for_ideological_crusader
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+	ENG_robert_cecil = {
+		name = "Robert Cecil"
+		portraits = {
+			army = {
+				small = "GFX_idea_robert_cecil"
+			}
+		}
+		advisor = {
+			idea_token = ENG_robert_cecil_for
+			slot = foreign_minister
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+					has_government = liberalism
+					has_idea = ENG_national_unity_government
+				}
+			}
+			traits = {
+				
+				for_ideological_crusader
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+	EMG_rufus_isaac = {
+		name = "Rufus Isaac"
+		portraits = {
+			army = {
+				small = "GFX_idea_rufus_isaac"
+			}
+		}
+		advisor = {
+			idea_token = ENG_rufus_isaac_for
+			slot = foreign_minister
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+					has_government = liberalism
+					has_idea = ENG_national_unity_government
+				}
+			}
+			traits = {
+				
+				for_great_compromiser
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+	ENG_walter_ruciman = {
+		name = "Walter Ruciman"
+		portraits = {
+			army = {
+				small = "GFX_idea_walter_ruciman"
+			}
+		}
+		advisor = {
+			idea_token = ENG_walter_ruciman_for
+			slot = foreign_minister
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+					has_government = liberalism
+					has_idea = ENG_national_unity_government
+				}
+			}
+			traits = {
+				
+				for_general_staffer
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+	ENG_stafford_cripps = {
+		name = "Stafford Cripps"
+		portraits = {
+			army = {
+				small = "GFX_idea_stafford_cripps"
+			}
+		}
+		advisor = {
+			idea_token = ENG_stafford_cripps_for
+			slot = foreign_minister
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+					has_government = progressivism
+					has_idea = ENG_national_unity_government
+				}
+			}
+			traits = {
+				
+				for_great_compromiser
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+	ENG_emanuel_shinwell = {
+		name = "Emanuel Shinwell"
+		portraits = {
+			army = {
+				small = "GFX_idea_emanuel_shinwell"
+			}
+		}
+		advisor = {
+			idea_token = ENG_emanuel_shinwell_for
+			slot = foreign_minister
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+					has_government = progressivism
+					has_idea = ENG_national_unity_government
+				}
+			}
+			traits = {
+				
+				for_the_cloak_n_dagger_schemer
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+	ENG_malcolm_macdonald = {
+		name = "Malcolm Macdonald"
+		portraits = {
+			army = {
+				small = "GFX_idea_malcolm_macdonald"
+			}
+		}
+		advisor = {
+			idea_token = ENG_malcolm_macdonald_for
+			slot = foreign_minister
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+					has_government = progressivism
+					has_idea = ENG_national_unity_government
+				}
+			}
+			traits = {
+				
+				for_biased_intellectual
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+	ENG_AK_chesterton = {
+		name = "A. K. Chesterton"
+		portraits = {
+			army = {	
+				small = "GFX_idea_AK_chesterton"
+			}
+		}
+		advisor = {
+			idea_token = ENG_AK_chesterton_for
+			slot = foreign_minister
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+					has_government = reactionism
+					has_government = despotism
+					has_government = accelerationism
+				}
+			}
+			traits = {
+				
+				for_iron_fisted_brute
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+	ENG_john_amery = {
+		name = "John Amery"
+		portraits = {
+			army = {
+				small = "GFX_idea_john_amery"
+			}
+		}
+		advisor = {
+			idea_token = ENG_john_amery_for
+			slot = foreign_minister
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+					has_government = reactionism
+					has_government = despotism
+					has_government = accelerationism
+				}
+			}
+			traits = {
+				
+				for_the_cloak_n_dagger_schemer
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+	ENG_harry_dobson = {
+		name = "Harry Dobson"
+		portraits = {
+			army = {
+				small = "GFX_idea_harry_dobson"
+			}
+		}
+		advisor = {
+			idea_token = ENG_harry_dobson_for
+			slot = foreign_minister
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+					has_government = vanguard_socialism
+					has_government = popular_socialism
+					has_government = anarchism
+					has_government = revisionist_socialism
+				}
+			}
+			traits = {
+				
+				for_apologetic_clerk
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+	ENG_rajani_dutt = {
+		name = "Rajani Dutt"
+		portraits = {
+			army = {
+				small = "GFX_idea_rajani_dutt"
+			}
+		}
+		advisor = {
+			idea_token = ENG_rajani_dutt_for
+			slot = foreign_minister
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+					has_government = vanguard_socialism
+					has_government = popular_socialism
+					has_government = anarchism
+					has_government = revisionist_socialism
+				}
+			}
+			traits = {
+				
+				for_ideological_crusader
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+	
+	#economy ministers
+	
+	ENG_alfred_robert_grindlay = {
+		name = "Alfred Robert Grindlay"
+		portraits = {
+			army = {
+				small = "GFX_idea_alfred_robert_grindlay"
+			}
+		}
+		advisor = {
+			idea_token = ENG_alfred_robert_grindlay_eco
+			slot = economy_minister
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+					has_government = conservatism
+					has_idea = ENG_national_unity_government
+				}
+			}
+			traits = {
+				
+				eco_construction_magnate
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+	ENG_kingsley_wood = {
+		name = "Kingsley Wood"
+		portraits = {
+			army = {
+				small = "GFX_idea_kingsley_wood"
+			}
+		}
+		advisor = {
+			idea_token = ENG_kingsley_wood_eco
+			slot = economy_minister
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+					has_government = conservatism
+					has_idea = ENG_national_unity_government
+				}
+			}
+			traits = {
+				
+				eco_keynesian_economy
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+	ENG_robert_horne = {
+		name = "Robert Horne"
+		portraits = {
+			army = {
+				small = "GFX_idea_robert_horne"
+			}
+		}
+		advisor = {
+			idea_token = ENG_robert_horne_eco
+			slot = economy_minister
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+					has_government = conservatism
+					has_idea = ENG_national_unity_government
+				}
+			}
+			traits = {
+				
+				eco_laissez_faire_capitalist
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+	ENG_archibald_sinclair = {
+		name = "Archibald Sinclair"
+		portraits = {
+			army = {
+				small = "GFX_idea_archibald_sinclair"
+			}
+		}
+		advisor = {
+			idea_token = ENG_archibald_sinclair_eco
+			slot = economy_minister
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+					has_government = liberalism
+					has_idea = ENG_national_unity_government
+				}
+			}
+			traits = {
+				
+				eco_laissez_faire_capitalist
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+	ENG_reginald_mckenna = {
+		name = "Reginald McKenna"
+		portraits = {
+			army = {
+				small = "GFX_idea_eng_reginald_mckenna"
+			}
+		}
+		advisor = {
+			idea_token = ENG_reginald_mckenna_eco
+			slot = economy_minister
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+					has_government = liberalism
+					has_idea = ENG_national_unity_government
+				}
+			}
+			traits = {
+				
+				eco_mixed_economy
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+	ENG_frank_hodges = {
+		name = "Frank Hodges"
+		portraits = {
+			army = {
+				small = "GFX_idea_frank_hodges"
+			}
+		}
+		advisor = {
+			idea_token = ENG_frank_hodges_eco
+			slot = economy_minister
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+					has_government = progressivism
+					has_idea = ENG_national_unity_government
+				}
+			}
+			traits = {
+				
+				eco_industrialiser
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+	ENG_john_keynes = {
+		name = "John Keynes"
+		portraits = {
+			army = {
+				small = "GFX_idea_john_keynes"
+			}
+		}
+		advisor = {
+			idea_token = ENG_john_keynes_eco
+			slot = economy_minister
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+					has_government = progressivism
+					has_idea = ENG_national_unity_government
+				}
+			}
+			traits = {
+				
+				eco_keynesian_economy
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+	ENG_oliver_bullied = {
+		name = "Oliver Bullied"
+		portraits = {
+			army = {
+				small = "GFX_idea_oliver_bullied"
+			}
+		}
+		advisor = {
+			idea_token = ENG_oliver_bullied_eco
+			slot = economy_minister
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+					has_government = progressivism
+					has_idea = ENG_national_unity_government
+				}
+			}
+			traits = {
+				
+				eco_railway_magnate
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+	ENG_stephen_owen_davis = {
+		name = "Stephen Owen Davis"
+		portraits = {
+			army = {
+				small = "GFX_idea_stephen_owen_davis"
+			}
+		}
+		advisor = {
+			idea_token = ENG_stephen_owen_davis_eco
+			slot = economy_minister
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+					has_government = progressivism
+					has_idea = ENG_national_unity_government
+				}
+			}
+			traits = {
+				
+				eco_industrialiser
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+	ENG_john_strachey = {
+		name = "John Strachey"
+		portraits = {
+			army = {
+				small = "GFX_idea_john_strachey"
+			}
+		}
+		advisor = {
+			idea_token = ENG_john_strachey_eco
+			slot = economy_minister
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+					has_government = progressivism
+					has_idea = ENG_national_unity_government
+				}
+			}
+			traits = {
+				
+				eco_planned_economy_proponent
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+	ENG_william_aitken = {
+		name = "William Aitken"
+		portraits = {
+			army = {
+				small = "GFX_idea_william_aitken"
+			}
+		}
+		advisor ={
+			idea_token = ENG_william_aitken_eco
+			slot = economy_minister
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+					has_government = despotism
+					has_government = reactionism
+					has_government = accelerationism
+				}
+			}
+			traits = {
+				
+				eco_corrupt_kleptocrat
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+	ENG_arthur_harris = {
+		name = "Arthur Harris"
+		portraits = {
+			army = {
+				small = "GFX_idea_arthur_harris"
+			}
+		}
+		advisor = {
+			idea_token = ENG_arthur_harris_eco
+			slot = economy_minister
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+					has_government = despotism
+					has_government = reactionism
+				}
+			}
+			traits = {
+				
+				eco_battlefield_support_proponent
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+	ENG_cecil_dudgeon = {
+		name = "Cecil Dudgeon"
+		portraits = {
+			army = {
+				small = "GFX_idea_cecil_dudgeon"
+			}
+		}
+		advisor = {
+			idea_token = ENG_cecil_dudgeon_eco
+			slot = economy_minister
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+					has_government = despotism
+					has_government = reactionism
+					has_government = accelerationism
+				}
+			}
+			traits = {
+				
+				eco_balanced_budget_economy
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+	ENG_william_gallacher = {
+		name = "William Gallacher"
+		portraits = {
+			army = {
+				small = "GFX_idea_william_gallacher"
+			}
+		}
+		advisor = {
+			idea_token = ENG_william_gallacher_eco
+			slot = economy_minister
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+					has_government = vanguard_socialism
+					has_government = popular_socialism
+					has_government = anarchism
+					has_government = revisionist_socialism
+				}
+			}
+			traits = {
+				
+				eco_planned_economy_proponent
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+	
+	#security ministers
+	
+	ENG_stanley_baldwin = {
+		name = "Stanley Baldwin"
+		portraits = {
+			army = {
+				small = "GFX_idea_stanley_baldwin"
+			}
+		}
+		advisor = {
+			idea_token = ENG_stanley_baldwin_sec
+			slot = security_minister
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+					has_government = conservatism
+					has_idea = ENG_national_unity_government
+				}
+			}
+			traits = { sec_compassionate_gentleman }
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+	ENG_arthur_boscawen = {
+		name = "Arthur Boscawen"
+		portraits = {
+			army = {
+				small = "GFX_idea_arthur_boscawen"
+			}
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = ENG_arthur_boscawen_sec
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+					has_government = conservatism
+					has_idea = ENG_national_unity_government
+				}
+			}
+			traits = {
+				
+				sec_health_and_safety
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+	ENG_esmond_harmsworth = {
+		name = "Esmond Harmsworth"
+		portraits = {
+			army = {
+				small = "GFX_idea_esmond_harmsworth"
+			}
+		}
+		advisor = {
+			idea_token = ENG_esmond_harmsworth_sec
+			slot = security_minister
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+					has_government = conservatism
+					has_idea = ENG_national_unity_government
+				}
+			}
+			traits = {
+				
+				sec_media_magnate
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+	ENG_herbert_asquith = {
+		name = "Herbert Asquith"
+		portraits = {
+			army = {
+				small = "GFX_idea_eng_herbert_asquith"
+			}
+		}
+		advisor = {
+			idea_token = ENG_herbert_asquith_sec
+			slot = security_minister
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+					has_government = liberalism
+					has_idea = ENG_national_unity_government
+				}
+			}
+			traits = {
+				
+				sec_compassionate_gentleman
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+	ENG_robert_hutchinson = {
+		name = "Robert Hutchinson"
+		portraits = {
+			army = {
+				small = "GFX_idea_eng_robert_hutchinson"
+			}
+		}
+		advisor = {
+			idea_token = ENG_robert_hutchinson_sec
+			slot = security_minister
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+					has_government = liberalism
+					has_idea = ENG_national_unity_government
+				}
+			}
+			traits = {
+				
+				sec_health_and_safety
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+	ENG_wilfred_owen = {
+		name = "Wilfred Owen"
+		portraits = {
+			army = {
+				small = "GFX_idea_wilfred_owen"
+			}
+		}
+		advisor = {
+			idea_token = ENG_wilfred_owen_sec
+			slot = security_minister
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+					has_government = progressivism
+					has_idea = ENG_national_unity_government
+				}
+			}
+			traits = {
+				
+				sec_man_of_the_people
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+	ENG_hamilton_fyfe = {
+		name = "Hamilton Fyfe"
+		portraits = {
+			army = {
+				small = "GFX_idea_hamilton_fyfe"
+			}
+		}
+		advisor = {
+			idea_token = ENG_hamilton_fyfe_sec
+			slot = security_minister
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+					has_government = progressivism
+					has_idea = ENG_national_unity_government
+				}
+			}
+			traits = {
+				
+				sec_media_magnate
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+	ENG_james_ede = {
+		name = "James Ede"
+		portraits = {
+			army = {
+				small = "GFX_idea_james_ede"
+			}
+		}
+		advisor = {
+			idea_token = ENG_james_ede_sec
+			slot = security_minister
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+					has_government = progressivism
+					has_idea = ENG_national_unity_government
+				}
+			}
+			traits = {
+				
+				sec_health_and_safety
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+	ENG_richard_tawney = {
+		name = "Richard Tawney"
+		portraits = {
+			army = {
+				small = "GFX_idea_richard_tawney"
+			}
+		}
+		advisor = {
+			idea_token = ENG_richard_tawney_sec
+			slot = security_minister
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+					has_government = progressivism
+					has_idea = ENG_national_unity_government
+				}
+			}
+			traits = {
+				
+				sec_silent_lawyer
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+	ENG_stewart_menzies = {
+		name = "Stewart Menzies"
+		portraits = {
+			army = {
+				small = "GFX_idea_int_stewart_menzies"
+			}
+		}
+		advisor = {
+			idea_token = ENG_stewart_menzies_sec
+			slot = security_minister
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+					has_government = right_authoritarianism
+					has_government = despotism
+					has_idea = ENG_national_unity_government
+				}
+			}
+			traits = {
+				
+				sec_secret_police_chief
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		advisor = {
+			idea_token = ENG_stewart_menzies_int
+			slot = head_of_intel
+			allowed = {
+				original_tag = ENG
+			}
+			traits = {
+				
+				int_technical_specialist
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+	ENG_william_joyce = {
+		name = "William Joyce"
+		portraits = {
+			army = {
+				small = "GFX_idea_william_joyce"
+			}
+		}
+		advisor = {
+			idea_token = ENG_william_joyce_sec
+			slot = security_minister
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+					has_government = despotism
+					has_government = reactionism
+					has_government = accelerationism
+				}
+			}
+			traits = {
+				
+				sec_prince_of_terror
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+	ENG_mary_sophia_allen = {
+		name = "Mary Sophia Allen"
+		portraits = {
+			army = {
+				small = "GFX_idea_mary_sophia_allen"
+			}
+		}
+		advisor = {
+			idea_token = ENG_mary_sophia_allen_sec
+			slot = security_minister
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+					has_government = reactionism
+					has_government = despotism
+					has_government = accelerationism
+				}
+			}
+			traits = {
+				
+				sec_secret_police_chief
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+	ENG_harry_pollitt = {
+		name = "Harry Pollitt"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/ENG/harry_pollitt.png"
+			}
+		}
+		advisor = {
+			idea_token = ENG_harry_pollitt_sec
+			slot = security_minister
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+					has_government = vanguard_socialism
+					has_government = popular_socialism
+					has_government = anarchism
+					has_government = revisionist_socialism
+				}
+			}
+			traits = {
+				
+				sec_crooked_kleptocrat
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+	ENG_thomas_nicholas = {
+		name = "Thomas Nicholas"
+		portraits = {
+			army = {
+				small = "GFX_idea_thomas_nicholas"
+			}
+		}
+		advisor = {
+			idea_token = ENG_thomas_nicholas_sec
+			slot = security_minister
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+					has_government = vanguard_socialism
+					has_government = popular_socialism
+					has_government = anarchism
+					has_government = revisionist_socialism
+				}
+			}
+			traits = {
+				
+				sec_compassionate_gentleman
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+	
+	#head of intel
+	
+	ENG_vernon_kell = {
+		name = "Vernon Kell"
+		portraits = {
+			army = {
+				small = "GFX_idea_vernon_kell"
+			}
+		}
+		advisor = {
+			slot = head_of_intel
+			idea_token = ENG_vernon_kell_int
+			allowed = {
+				original_tag = ENG
+			}
+			traits = {
+				
+				int_technical_specialist
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+	ENG_hugh_sinclair = {
+		name = "Hugh Sinclair"
+		portraits = {
+			army = {
+				small = "GFX_idea_hugh_sinclair"
+			}
+		}
+		advisor = {
+			idea_token = ENG_hugh_sinclair_int
+			slot = head_of_intel
+			allowed = {
+				original_tag = ENG
+			}
+			traits = {
+				
+				int_naval_intelligence_specialist
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+	ENG_david_petrie = {
+		name = "David Petrie"
+		portraits = {
+			army = {
+				small = "GFX_idea_david_petrie"
+			}
+		}
+		advisor = {
+			idea_token = ENG_david_petrie_int
+			slot = head_of_intel
+			allowed = {
+				original_tag = ENG
+			}
+			traits = {
+				
+				int_technical_specialist
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+	ENG_percy_sillitoe = {
+		name = "Percy Sillitoe"
+		portraits = {
+			army = {
+				small = "GFX_idea_percy_sillitoe"
+			}
+		}
+		advisor = {
+			idea_token = ENG_percy_sillitoe_int
+			slot = head_of_intel
+			allowed = {
+				original_tag = ENG
+			}
+			traits = {
+				
+				int_logistics_specialist
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+	ENG_guy_liddell = {
+		name = "Guy Liddell"
+		portraits = {
+			army = {
+				small = "GFX_idea_guy_liddell"
+			}
+		}
+		advisor = {
+			idea_token = ENG_guy_liddell_int
+			slot = head_of_intel
+			allowed = {
+				original_tag = ENG
+			}
+			traits = {
+				
+				int_technical_specialist
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+	ENG_joan_miller = {
+		name = "Joan Miller"
+		portraits = {
+			army = {
+				small = "GFX_idea_joan_miller"
+			}
+		}
+		advisor = {
+			idea_token = ENG_joan_miller_int
+			slot = head_of_intel
+			allowed = {
+				original_tag = ENG
+			}
+			traits = {
+				
+				int_technical_specialist
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+	
+	#chiefs of staff
+	
+	ENG_archibald_montgomery_massingberd = {
+		name = "Archibald Montgomery Massingberd"
+		portraits = {
+			army = {
+				small = "GFX_idea_archibald_montgomery_massingberd"
+			}
+		}
+		advisor = {
+			idea_token = ENG_archibald_montgomery_massingberd_cos
+			slot = high_command
+			allowed = {
+				original_tag = ENG
+			}
+			traits = {
+				
+				cos_school_of_defence
+			}
+		}
+	}
+	ENG_john_dill = {
+		name = "John Dill"
+		portraits = {
+			army = {
+				small = "GFX_idea_ENG_john_dill"
+			}
+		}
+		advisor = {
+			idea_token = ENG_john_dill_cos
+			slot = high_command
+			allowed = {
+				original_tag = ENG
+			}
+			traits = {
+				cos_school_of_psychology
+			}
+		}
+	}
+	ENG_bertram_ramsay = {
+		name = "Bertram Ramsay"
+		portraits = {
+			navy = {
+				small = "GFX_idea_ENG_bertram_ramsay"
+			}
+		}
+		advisor = {
+			idea_token = ENG_bertram_ramsay_cnav
+			slot = navy_chief
+				allowed = {
+				original_tag = ENG
+			}
+			traits = {
+				navy_chief
+				cnav_open_seas_doctrine
+			}
+		}
+	}
+	ENG_charles_lambe = {
+		name = "Charles Lambe"
+		portraits = {
+			navy = {
+				small = "GFX_idea_ENG_charles_lambe"
+			}
+		}
+		advisor = {
+			idea_token = ENG_charles_lambe_cnav
+			slot = navy_chief
+			allowed = {
+				original_tag = ENG
+			}
+			traits = {
+				navy_chief
+				cnav_indirect_approach_doctrine
+			}
+		}
+	}
+	ENG_tom_phillips = {
+		name = "Tom Phillips"
+		portraits = {
+			navy = {
+				small = "GFX_idea_ENG_tom_phillips"
+			}
+		}
+		advisor = {
+			idea_token = ENG_tom_phillips_cnav
+			slot = navy_chief
+			allowed = {
+				original_tag = ENG
+			}
+			traits = {
+				navy_chief
+				cnav_power_projection_doctrine
+			}
+		}
+	}
+	ENG_charles_portal = {
+		name = "Charles Portal"
+		portraits = {
+			army = {
+				small = "GFX_idea_ENG_charles_portal"
+			}
+		}
+		advisor = {
+			idea_token = ENG_charles_portal_cair
+			slot = air_chief
+			allowed = {
+				original_tag = ENG
+			}
+			traits = {
+				air_chief
+				cair_carpet_bombing_doctrine
+			}
+		}
+	}
+	ENG_hugh_dowding = {
+		name = "Hugh Dowding"
+		portraits = {
+			army = {
+				small = "GFX_idea_ENG_hugh_dowding"
+			}
+		}
+		advisor = {
+			idea_token = ENG_hugh_dowding_cair
+			slot = air_chief
+			allowed = {
+				original_tag = ENG
+			}
+			traits = {
+				air_chief
+				cair_air_superiority_doctrine
+			}
+		}
+	}
+	ENG_sholto_douglas = {
+		name = "Sholto Douglas"
+		portraits = {
+			army = {
+				small = "GFX_idea_ENG_sholto_douglas"
+			}
+		}
+		advisor = {
+			idea_token = ENG_sholto_douglas_cair
+			slot = air_chief
+			allowed = {
+				original_tag = ENG
+			}
+			traits = {
+				air_chief
+				cair_battlefield_support_doctrine
+			}
+		}
+	}
+	ENG_cyril_newall = {
+		name = "Cyril Newall"
+		portraits = {
+			army = {
+				small = "GFX_idea_ENG_cyril_newall"
+			}
+		}
+		advisor = {
+			idea_token = ENG_cyril_newall_cair
+			slot = air_chief
+			allowed = {
+				original_tag = ENG
+			}
+			traits = {
+				air_chief
+				cair_vertical_envelopment_doctrine
+			}
+		}
+	}
+}

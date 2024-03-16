@@ -1,0 +1,1003 @@
+##############
+# Generic
+##############
+ideas = {
+
+	hidden_ideas = {
+		#continuous focuses
+		continuous_naval_production = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_dockyard = 0.2
+			}
+		}
+		continuous_air_production = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			equipment_bonus = {
+				small_plane_airframe = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+				cv_small_plane_airframe = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+				small_plane_cas_airframe = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+				cv_small_plane_cas_airframe = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+				small_plane_naval_bomber_airframe = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+				cv_small_plane_naval_bomber_airframe = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+				medium_plane_airframe = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+				medium_plane_fighter_airframe = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+				medium_plane_scout_plane_airframe = {
+					instant = yes
+					build_cost_ic = -0.10	
+				}
+				large_plane_airframe = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+				large_plane_maritime_patrol_plane_airframe = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+				transport_plane_equipment = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+				guided_missile_equipment = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+			}
+		}
+	}
+
+	hidden_ideas = {
+			#anarchism
+		generic_held_rally_anarchist = {
+			allowed = {
+				has_government = anarchism
+			}
+			modifier = {
+				recruitable_population_factor = 0.1
+				drift_defence_factor = 0.15
+			}
+		}
+		generic_conference_anarchism = {
+			allowed = {
+				has_government = anarchism
+			}
+			modifier = {
+				military_leader_cost_factor = -0.15
+				economy_minister_cost_factor = -0.15
+				security_minister_cost_factor = -0.15
+			}
+		}
+		generic_appeal_anarchism = {
+			allowed = {
+				has_government = anarchism
+			}
+			modifier = {
+				anarchism_drift = 0.04
+				political_power_gain = 0.1
+				consumer_goods_expected_value = 0.05
+			}
+		}
+		
+		#vanguard_socialism#
+		generic_held_rally_vanguard_socialism = {
+			allowed = {
+				has_government = vanguard_socialism
+			}
+			modifier = {
+				recruitable_population_factor = 0.1
+				drift_defence_factor = 0.15
+			}
+		}
+		generic_conference_vanguard_socialism = {
+			allowed = {
+				has_government = vanguard_socialism
+			}
+			modifier = {
+				military_leader_cost_factor = -0.15
+				economy_minister_cost_factor = -0.15
+				security_minister_cost_factor = -0.15
+			}
+		}
+		generic_appeal_vanguard_socialism = {
+			allowed = {
+				has_government = vanguard_socialism
+			}
+			modifier = {
+				vanguard_socialism_drift = 0.04
+				political_power_gain = 0.1
+				consumer_goods_expected_value = 0.05
+			}
+		}
+		
+		#PopulistSoc#
+		generic_held_rally_popular_socialism = {
+			allowed = {
+				has_government = popular_socialism
+			}
+			modifier = {
+				recruitable_population_factor = 0.1
+				drift_defence_factor = 0.15
+			}
+		}
+		generic_conference_popular_socialism = {
+			allowed = {
+				has_government = popular_socialism
+			}
+			modifier = {
+				military_leader_cost_factor = -0.15
+				economy_minister_cost_factor = -0.15
+				security_minister_cost_factor = -0.15
+			}
+		}
+		generic_appeal_popular_socialism = {
+			allowed = {
+				has_government = popular_socialism
+			}
+			modifier = {
+				popular_socialism_drift = 0.04
+				political_power_gain = 0.1
+				consumer_goods_expected_value = 0.05
+			}
+		}
+		
+		#RevisionistSoc#
+		generic_held_rally_revisionist_socialism = {
+			allowed = {
+				has_government = revisionist_socialism
+			}
+			modifier = {
+				recruitable_population_factor = 0.1
+				drift_defence_factor = 0.15
+			}
+		}
+		generic_conference_revisionist_socialism = {
+			allowed = {
+				has_government = revisionist_socialism
+			}
+			modifier = {
+				military_leader_cost_factor = -0.15
+				economy_minister_cost_factor = -0.15
+				security_minister_cost_factor = -0.15
+			}
+		}
+		generic_appeal_revisionist_socialism = {
+			allowed = {
+				has_government = revisionist_socialism
+			}
+			modifier = {
+				revisionist_socialism_drift = 0.04
+				political_power_gain = 0.1
+				consumer_goods_expected_value = 0.05
+			}
+		}
+		
+		#Progs#
+		generic_held_rally_progressivism = {
+			allowed = {
+				has_government = progressivism
+			}
+			modifier = {
+				recruitable_population_factor = 0.1
+				drift_defence_factor = 0.15
+			}
+		}
+		generic_conference_progressivism = {
+			allowed = {
+				has_government = progressivism
+			}
+			modifier = {
+				military_leader_cost_factor = -0.15
+				economy_minister_cost_factor = -0.15
+				security_minister_cost_factor = -0.15
+			}
+		}
+		generic_appeal_progressivism = {
+			allowed = {
+				has_government = progressivism
+			}
+			modifier = {
+				progressivism_drift = 0.04
+				political_power_gain = 0.1
+				consumer_goods_expected_value = 0.05
+			}
+		}
+		
+		#Libs#
+		generic_held_rally_liberalism = {
+			allowed = {
+				has_government = liberalism
+			}
+			modifier = {
+				recruitable_population_factor = 0.1
+				drift_defence_factor = 0.15
+			}
+		}
+		generic_conference_liberalism = {
+			allowed = {
+				has_government = liberalism
+			}
+			modifier = {
+				military_leader_cost_factor = -0.15
+				economy_minister_cost_factor = -0.15
+				security_minister_cost_factor = -0.15
+			}
+		}
+		generic_appeal_liberalism = {
+			allowed = {
+				has_government = liberalism
+			}
+			modifier = {
+				liberalism_drift = 0.04
+				political_power_gain = 0.1
+				consumer_goods_expected_value = 0.05
+			}
+		}
+		
+		#Cons#
+		generic_held_rally_conservatism = {
+			allowed = {
+				has_government = conservatism
+			}
+			modifier = {
+				recruitable_population_factor = 0.1
+				drift_defence_factor = 0.15
+			}
+		}
+		generic_conference_conservatism = {
+			allowed = {
+				has_government = conservatism
+			}
+			modifier = {
+				military_leader_cost_factor = -0.15
+				economy_minister_cost_factor = -0.15
+				security_minister_cost_factor = -0.15
+			}
+		}
+		generic_appeal_conservatism = {
+			allowed = {
+				has_government = conservatism
+			}
+			modifier = {
+				conservatism_drift = 0.04
+				political_power_gain = 0.1
+				consumer_goods_expected_value = 0.05
+			}
+		}
+		
+		#Polyarchy#
+		generic_held_rally_right_authoritarianism = {
+			allowed = {
+				has_government = right_authoritarianism
+			}
+			modifier = {
+				recruitable_population_factor = 0.1
+				drift_defence_factor = 0.15
+			}
+		}
+		generic_conference_right_authoritarianism = {
+			allowed = {
+				has_government = right_authoritarianism
+			}
+			modifier = {
+				military_leader_cost_factor = -0.15
+				economy_minister_cost_factor = -0.15
+				security_minister_cost_factor = -0.15
+			}
+		}
+		generic_appeal_right_authoritarianism = {
+			allowed = {
+				has_government = right_authoritarianism
+			}
+			modifier = {
+				right_authoritarianism_drift = 0.04
+				political_power_gain = 0.1
+				consumer_goods_expected_value = 0.05
+			}
+		}
+		
+		#Despot#
+		generic_held_rally_despotism = {
+			allowed = {
+				has_government = despotism
+			}
+			modifier = {
+				recruitable_population_factor = 0.1
+				drift_defence_factor = 0.15
+			}
+		}
+		generic_conference_despotism = {
+			allowed = {
+				has_government = despotism
+			}
+			modifier = {
+				military_leader_cost_factor = -0.15
+				economy_minister_cost_factor = -0.15
+				security_minister_cost_factor = -0.15
+			}
+		}
+		generic_appeal_despotism = {
+			allowed = {
+				has_government = despotism
+			}
+			modifier = {
+				despotism_drift = 0.04
+				political_power_gain = 0.1
+				consumer_goods_expected_value = 0.05
+			}
+		}
+		
+		#Reactionism#
+		generic_held_rally_reactionism = {
+			allowed = {
+				has_government = reactionism
+			}
+			modifier = {
+				recruitable_population_factor = 0.1
+				drift_defence_factor = 0.15
+			}
+		}
+		generic_conference_reactionism = {
+			allowed = {
+				has_government = reactionism
+			}
+			modifier = {
+				military_leader_cost_factor = -0.15
+				economy_minister_cost_factor = -0.15
+				security_minister_cost_factor = -0.15
+			}
+		}
+		generic_appeal_reactionism = {
+			allowed = {
+				has_government = reactionism
+			}
+			modifier = {
+				reactionism_drift = 0.04
+				political_power_gain = 0.1
+				consumer_goods_expected_value = 0.05
+			}
+		}
+		
+		#accelerationism#
+		generic_held_rally_accelerationism = {
+			allowed = {
+				has_government = accelerationism
+			}
+			modifier = {
+				recruitable_population_factor = 0.1
+				drift_defence_factor = 0.15
+			}
+		}
+		generic_conference_accelerationism = {
+			allowed = {
+				has_government = accelerationism
+			}
+			modifier = {
+				military_leader_cost_factor = -0.15
+				economy_minister_cost_factor = -0.15
+				security_minister_cost_factor = -0.15
+			}
+		}
+		generic_appeal_accelerationism = {
+			allowed = {
+				has_government = accelerationism
+			}
+			modifier = {
+				accelerationism_drift = 0.04
+				political_power_gain = 0.1
+				consumer_goods_expected_value = 0.05
+			}
+		}
+		###
+		
+		#wartime#
+		
+		generic_emergency_production_idea = {
+			allowed = {
+				has_war = yes
+			}
+			cancel = {
+				has_war = no
+			}
+			modifier = {
+				conversion_cost_civ_to_mil_factor = -0.25
+				production_speed_buildings_factor = 0.07
+				production_factory_efficiency_gain_factor = 0.05
+			}
+		}
+		
+		generic_increased_war_effort_idea = {
+			allowed = {
+				has_war = yes
+			}
+			cancel = {
+				has_war = no
+			}
+			modifier = {
+				political_power_gain = 0.07
+				production_speed_buildings_factor = 0.07
+				mobilization_speed = 0.07
+				recruitable_population_factor = 0.5
+			}
+		}
+		
+		###
+		
+		#peacetime#
+		
+		generic_develop_civ_industry_idea = {
+			allowed = {
+				has_war = no
+			}
+			modifier = {
+				conversion_cost_mil_to_civ_factor = -0.25
+				production_speed_buildings_factor = 0.07
+			}
+		}
+		
+		generic_build_up_surplus_idea = {
+			allowed = {
+				has_war = no
+			}
+			cancel = {
+				has_war = yes
+			}
+			modifier = {
+				industrial_capacity_factory = 0.1
+				production_factory_start_efficiency_factor = 0.05
+			}
+		}
+		
+		generic_army_training_programmes_idea = {
+			allowed = {
+				has_war = no
+			}
+			modifier = {
+				experience_gain_army = 0.2
+			}
+		}
+		
+		generic_air_training_programmes_idea = {
+			allowed = {
+				has_war = no
+			}
+			modifier = {
+				experience_gain_air = 0.2
+			}
+		}
+		
+		generic_navy_training_programmes_idea = {
+			allowed = {
+				has_war = no
+				any_state = {
+					is_coastal = yes
+					is_controlled_by = ROOT
+				}
+			}
+			modifier = {
+				experience_gain_navy = 0.2
+			}
+		}
+		we_fight_alone = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				ai_call_ally_desire_factor = -50000
+				ai_join_ally_desire_factor = -50000
+			}
+		}
+		legitimately_just_die = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				offence = -0.3
+				defence = -0.3
+				army_org_factor = -0.3
+			}
+		}
+		###
+
+	}
+	country = {
+		#generic decisions#
+		#ideologies#
+		#anarchism#
+		
+	}
+	#### General ####
+	industrial_concern = {
+		generic_industrial_company1 = {
+			picture = rf_generic_industrial_company
+			allowed = {
+				uses_generic_concerns = yes
+			}
+			traits = {
+				industrial_manufacturer
+			}
+			modifier = {
+				production_speed_arms_factory_factor = 0.05
+				production_speed_industrial_complex_factor = 0.05
+			}
+			research_bonus = {
+				industry = 0.1
+			}
+		}
+		generic_industrial_company2 = {
+			picture = rf_generic_industrial_company
+			allowed = {
+				uses_generic_concerns = yes
+			}
+			traits = {
+				industrial_manufacturer
+			}
+			modifier = {
+				production_speed_arms_factory_factor = 0.1
+			}
+			research_bonus = {
+				industry = 0.1
+			}
+		}
+		generic_industrial_company3 = {
+			picture = rf_generic_industrial_company
+			allowed = {
+				uses_generic_concerns = yes
+			}
+			traits = {
+				industrial_manufacturer
+			}
+			modifier = {
+				production_speed_industrial_complex_factor = 0.1
+			}
+			research_bonus = {
+				industry = 0.1
+			}
+		}
+		generic_rail_company = {
+			picture = rf_generic_rail_company
+			allowed = {
+				uses_generic_concerns = yes
+			}
+			research_bonus = {
+				train_tech = 0.1
+			}
+			traits = { railway_company }
+			modifier = {
+				production_speed_rail_way_factor = 0.1
+			}
+		}
+		generic_electronics_company = {
+			picture = generic_electronic_company
+			allowed = {
+				uses_generic_concerns = yes
+			}
+			traits = {
+				electronics_manufacturer
+			}
+			modifier = {
+				production_speed_radar_station_factor = 0.15
+			}
+			research_bonus = {
+				electronics = 0.1
+			}
+		}
+		generic_synthetics_company = {
+			picture = generic_synth_company
+			allowed = { 
+				uses_generic_concerns = yes
+			}
+			traits = {
+				chemical_producer
+			}
+			modifier = {
+				production_speed_synthetic_refinery_factor = 0.1
+			}
+			research_bonus = {
+				synth_resources = 0.1
+				industry = 0.05
+			}
+		}
+	}
+
+	#### Weapons Manufacturer ####
+	materiel_manufacturer = {
+		designer = yes
+		generic_offense_arms_company = {
+			picture = generic_equipment_company
+			allowed = {
+				uses_generic_concerns = yes
+			}
+			traits = {
+				infantry_equipment_producer_offense_0
+			}
+			research_bonus = {
+				infantry_weapons = 0.1
+			}
+		}
+		generic_production_arms_company = {
+			picture = generic_equipment_company
+			allowed = { 
+				uses_generic_concerns = yes
+			}
+			traits = { infantry_equipment_producer_mass_1 }
+			modifier = {}
+			research_bonus = {
+				infantry_weapons = 0.05
+			}
+		}
+		generic_defensive_arms_company = {
+			picture = generic_equipment_company
+			allowed = { 
+				uses_generic_concerns = yes
+				
+			}
+			traits = { infantry_equipment_producer_defense_0 }
+			modifier = {}
+			research_bonus = {
+				infantry_weapons = 0.1
+			}
+		}
+		generic_artillery_company1 = {
+			picture = generic_arty_company
+			allowed = {
+				uses_generic_concerns = yes
+			}
+			traits = {
+				artillery_producer_offense_0
+			}
+			research_bonus = {
+				artillery = 0.05
+			}
+		}
+		generic_artillery_company2 = {
+			picture = generic_arty_company
+			allowed = {
+				uses_generic_concerns = yes
+			}
+			traits = {
+				artillery_producer_defense_0
+			}
+			research_bonus = {
+				artillery = 0.05
+			}
+		}
+		generic_artillery_company3 = {
+			picture = generic_arty_company
+			allowed = {
+				uses_generic_concerns = yes
+			}
+			traits = {
+				artillery_producer_mass_1
+			}
+			research_bonus = {
+				artillery = 0.05
+			}
+		}
+	}
+
+	#### Heavy Equipment Manufacturer ####
+	tank_manufacturer = {
+		designer = yes
+		generic_tank_company1 = {
+			picture = generic_light_tank_company
+			allowed = {
+				uses_generic_concerns = yes
+			}
+			traits = {
+				small_tank_producer_offense_0
+			}
+			research_bonus = {
+				armor = 0.05
+			}
+		}
+		generic_tank_company4 = {
+			picture = generic_light_tank_company
+			allowed = {
+				uses_generic_concerns = yes
+			}
+			traits = {
+				small_tank_producer_defense_0
+			}
+			research_bonus = {
+				armor = 0.05
+			}
+		}
+		generic_tank_company2 = {
+			picture = generic_medium_tank_company
+			allowed = {
+				uses_generic_concerns = yes
+			}
+			traits = {
+				medium_tank_producer_offense_0
+			}
+			research_bonus = {
+				armor = 0.05
+			}
+		}
+		generic_tank_company5 = {
+			picture = generic_medium_tank_company
+			allowed = {
+				uses_generic_concerns = yes
+			}
+			traits = {
+				medium_tank_producer_defense_0
+			}
+			research_bonus = {
+				armor = 0.05
+			}
+		}
+		generic_tank_company3 = {
+			picture = generic_heavy_tank_company
+			allowed = {
+				uses_generic_concerns = yes
+			}
+			traits = {
+				heavy_tank_producer_offense_0
+			}
+			research_bonus = {
+				armor = 0.05
+			}
+		}
+		generic_tank_company6 = {
+			picture = generic_heavy_tank_company
+			allowed = {
+				uses_generic_concerns = yes
+			}
+			traits = {
+				heavy_tank_producer_defense_0
+			}
+			research_bonus = {
+				armor = 0.05
+			}
+		}
+		generic_truck_company1 = {
+			picture = generic_truck_company
+			allowed = { 
+				uses_generic_concerns = yes
+				
+			}
+			traits = { motorised_equipment_producer_offense_0 }
+			research_bonus = {
+				motorized_equipment = 0.05
+			}
+		}
+		generic_truck_company2 = {
+			picture = generic_truck_company
+			allowed = { 
+				uses_generic_concerns = yes
+				
+			}
+			traits = { motorised_equipment_producer_defense_0 }
+			research_bonus = {
+				motorized_equipment = 0.05
+			}
+		}
+	}
+
+	#### Air and Naval Manufacturer ####
+	naval_manufacturer = {
+		designer = yes
+		generic_naval_company1 = {
+			picture = generic_screen_company
+			allowed = {
+				uses_generic_concerns = yes
+			}
+			available = {
+				any_state = {
+					is_coastal = yes
+					is_owned_and_controlled_by = ROOT
+				}
+			}
+			traits = {
+				small_ship_producer_offense_0
+			}
+			research_bonus = {
+				naval_equipment = 0.05
+			}
+		}
+		generic_naval_company4 = {
+			picture = generic_screen_company
+			allowed = {
+				uses_generic_concerns = yes
+			}
+			available = {
+				any_state = {
+					is_coastal = yes
+					is_owned_and_controlled_by = ROOT
+				}
+			}
+			traits = {
+				small_ship_producer_defense_0
+			}
+			research_bonus = {
+				naval_equipment = 0.05
+			}
+		}
+		generic_naval_company2 = {
+			picture = generic_capital_ship_company
+			allowed = {
+				uses_generic_concerns = yes
+			}
+			available = {
+				any_state = {
+					is_coastal = yes
+					is_owned_and_controlled_by = ROOT
+				}
+			}
+			traits = {
+				capital_ship_producer_offense_0
+			}
+			research_bonus = {
+				naval_equipment = 0.05
+			}
+		}
+		generic_naval_company5 = {
+			picture = generic_capital_ship_company
+			allowed = {
+				uses_generic_concerns = yes
+			}
+			available = {
+				any_state = {
+					is_coastal = yes
+					is_owned_and_controlled_by = ROOT
+				}
+			}
+			traits = {
+				capital_ship_producer_defense_0
+			}
+			research_bonus = {
+				naval_equipment = 0.05
+			}
+		}
+		generic_naval_company3 = {
+			picture = generic_cruiser_company
+			allowed = { 
+				uses_generic_concerns = yes
+			}
+			available = {
+				any_state = {
+					is_coastal = yes
+					is_owned_and_controlled_by = ROOT
+				}
+			}
+			
+			traits = { cruiser_producer_offense_0 }
+			modifier = {}
+			research_bonus = {
+				naval_equipment = 0.05
+			}
+		}
+		generic_naval_company6 = {
+			picture = generic_cruiser_company
+			allowed = { 
+				uses_generic_concerns = yes
+			}
+			available = {
+				any_state = {
+					is_coastal = yes
+					is_owned_and_controlled_by = ROOT
+				}
+			}
+			traits = { cruiser_producer_defense_0 }
+			modifier = {}
+			research_bonus = {
+				naval_equipment = 0.05
+			}
+		}
+	}
+	aircraft_manufacturer = {
+		designer = yes
+		generic_fighter_company1 = {
+			picture = rf_generic_fighter_company
+			allowed = {
+				uses_generic_concerns = yes
+			}
+			traits = {
+				fighter_producer_offense_0
+			}
+			research_bonus = {
+				air_equipment = 0.05
+			}
+		}
+		generic_fighter_company4 = {
+			picture = rf_generic_fighter_company
+			allowed = {
+				uses_generic_concerns = yes
+			}
+			traits = {
+				fighter_producer_defense_0
+			}
+			research_bonus = {
+				air_equipment = 0.05
+			}
+		}
+		generic_fighter_company2 = {
+			picture = generic_bomber_company
+			allowed = {
+				uses_generic_concerns = yes
+			}
+			traits = {
+				bomber_producer_offense_0
+			}
+			research_bonus = {
+				air_equipment = 0.05
+			}
+		}
+		generic_fighter_company5 = {
+			picture = generic_bomber_company
+			allowed = {
+				uses_generic_concerns = yes
+			}
+			traits = {
+				bomber_producer_defense_0
+			}
+			research_bonus = {
+				air_equipment = 0.05
+			}
+		}
+		generic_fighter_company3 = {
+			picture = generic_cas_company
+			allowed = { 
+				uses_generic_concerns = yes
+			}
+			traits = { nav_cas_producer_offense_0 }
+			modifier = {}
+			research_bonus = {
+				air_equipment = 0.05
+			}
+		}
+		generic_fighter_company6 = {
+			picture = generic_cas_company
+			allowed = { 
+				uses_generic_concerns = yes
+			}
+			traits = { nav_cas_producer_defense_0 }
+			modifier = {}
+			research_bonus = {
+				air_equipment = 0.05
+			}
+		}
+	}
+}

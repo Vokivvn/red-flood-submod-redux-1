@@ -1,0 +1,14 @@
+characters = {
+	SAP_ORistori = {
+		name = "Orestes Ristori"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/SAP/Portrait_SAP_OR.png"
+			}
+		}
+		country_leader = {
+			ideology = individualist_anarchism
+			expire = "1965.1.1.1"
+		}
+	}
+}

@@ -1,0 +1,87 @@
+ideas = {
+	country = {
+		HUN_warschauer_vertrag = {
+			removal_cost = -1
+			picture = GER_warschauer_vertrag
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				trade_opinion_factor = 0.10
+			}
+			targeted_modifier = {
+				tag = PRS
+				attack_bonus_against = 0.1
+			}
+		}
+		HUN_revolutions_children = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				vanguard_socialism_drift = 0.03
+				popular_socialism_drift = 0.01
+				progressivism_drift = 0.01
+				war_support_factor = 0.15
+				stability_factor = 0.15
+			}
+			targeted_modifier = {
+				tag = AUS
+				opinion_gain_monthly_factor = 0
+			}
+			targeted_modifier = {
+				tag = POL
+				trade_opinion_factor = 0.3
+			}
+			targeted_modifier = {
+				tag = YUG
+				trade_opinion_factor = 0.3
+			}
+		}
+		HUN_mentors_death = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				vanguard_socialism_drift = 0.03
+				popular_socialism_drift = 0.02
+				progressivism_drift = 0.02
+				liberalism_drift = 0.01
+				accelerationism_drift = 0.01
+				war_support_factor = -0.075
+				stability_factor = -0.075
+			}
+			targeted_modifier = {
+				tag = AUS
+				opinion_gain_monthly_factor = 0
+			}
+			targeted_modifier = {
+				tag = POL
+				trade_opinion_factor = 0.3
+			}
+			targeted_modifier = {
+				tag = YUG
+				trade_opinion_factor = 0.3
+			}
+		}
+		HUN_to_arms = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				vanguard_socialism_drift = -0.01
+				popular_socialism_drift = 0.02
+				progressivism_drift = 0.02
+				liberalism_drift = 0.02
+				accelerationism_drift = 0.02
+				war_support_factor = 0.15
+				stability_factor = -0.15
+				army_org_factor = -0.15
+			}
+			targeted_modifier = {
+				tag = AUS
+				opinion_gain_monthly_factor = 0
+			}
+			targeted_modifier = {
+				tag = POL
+				trade_opinion_factor = -0.3
+			}
+			targeted_modifier = {
+				tag = YUG
+				trade_opinion_factor = -0.3
+			}
+		}
+    }
+}

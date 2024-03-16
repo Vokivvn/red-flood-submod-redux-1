@@ -1,0 +1,14 @@
+characters = {
+	HON_josé_ángel_zúñiga_huete = {
+		name = "José Ángel Zúñiga Huete"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/HON/Portrait_Jose_Angel_Zuniga_Huete.png"
+			}
+		}
+		country_leader = {
+			ideology = social_liberalism
+			expire = "1965.1.1.1"
+		}
+	}
+}

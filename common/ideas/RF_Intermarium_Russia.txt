@@ -1,0 +1,309 @@
+ideas = {
+	country = {
+		ALT_sich = {
+			picture = ALT_sich
+			removal_cost = -1
+			allowed = {
+				original_tag = ALT
+			}
+			modifier = {
+				army_morale_factor = 0.10
+				stability_factor = 0.10
+				war_support_factor = 0.10
+			}
+		}
+		AZR_libs = {
+			picture = AZR_libs
+			removal_cost = -1
+			allowed = {
+				original_tag = AZR
+			}
+			modifier = {
+				liberalism_drift = 0.0002
+				stability_factor = 0.10
+			}
+		}
+		EST_milennium = {
+			picture = EST_milennium
+			removal_cost = -1
+			allowed = {
+				original_tag = EST
+			}
+			modifier = {
+				accelerationism_drift = 0.0002
+				consumer_goods_expected_value = -0.05
+				stability_factor = -0.05
+			}
+		}
+		LAT_tale = {
+			picture = LAT_tale
+			removal_cost = -1
+			allowed = {
+				original_tag = EST
+			}
+			modifier = {
+				accelerationism_drift = 0.0002
+				stability_factor = 0.05
+				army_morale_factor = 0.05
+			}
+		}
+		ORE_half = {
+			picture = ORE_half
+			removal_cost = -1
+			allowed = {
+				original_tag = ORE
+			}
+			modifier = {
+				war_support_factor = 0.15
+				despotism_drift = 0.0002
+				recruitable_population_factor = 0.02
+			}
+		}
+		MTR_imam = {
+			picture = MTR_imam
+			removal_cost = -1
+			allowed = {
+				original_tag = MTR
+			}
+			modifier = {
+				stability_factor = 0.05
+				reactionism_drift = 0.0002
+				war_support_factor = 0.05
+				consumer_goods_expected_value = -0.05
+			}
+		}
+		TAN_theocracy = {
+			picture = TAN_theocracy
+			removal_cost = -1
+			allowed = {
+				original_tag = TAN
+			}
+			modifier = {
+				revisionist_socialism_drift = 0.0002
+				monthly_population = 0.05
+			}
+		}
+		KUB_nat = {
+			picture = KUB_nat
+			removal_cost = -1
+			allowed = {
+				original_tag = KUB
+			}
+			modifier = {
+				vanguard_socialism_drift = 0.0002
+				stability_factor = 0.10
+				monthly_population = 0.05
+			}
+		}
+		ARM_nzdeh = {
+			picture = ARM_nzdeh
+			removal_cost = -1
+			allowed = {
+				original_tag = ARM
+			}
+			modifier = {
+				reactionism_drift = 0.0002
+				war_support_factor = 0.10
+			}
+		}
+		GEO_uuu = {
+			picture = GEO_uuu
+			removal_cost = -1
+			allowed = {
+				original_tag = ALT
+			}
+			modifier = {
+				accelerationism_drift = 0.0002
+				despotism_drift = 0.0002
+				popular_socialism_drift = 0.0002
+				stability_factor = 0.15
+			}
+		}
+		TER_feast_for_crows = {
+			picture = TER_feast
+			removal_cost = -1
+			allowed = {
+				original_tag = TER
+			}
+			modifier = {
+				army_morale_factor = 0.10
+				monthly_population = 0.05
+				local_resources_factor = -0.2
+				local_supplies = -0.2
+			}
+		}
+		TER_gold_from_dust = {
+			picture = TER_gold
+			removal_cost = -1
+			allowed = {
+				original_tag = TER
+			}
+			modifier = {
+				stability_factor = -0.2
+				industry_repair_factor = 0.1
+				consumer_goods_expected_value = 0.1
+			}
+		}
+		TSY_city = {
+			picture = TSY_city
+			removal_cost = -1
+			allowed = {
+				original_tag = AQT
+			}
+			modifier = {
+                stability_factor = -0.15
+                political_power_gain = 0.10
+				monthly_population = 0.2
+			}
+		}
+		AQT_volga = {
+			picture = AQT_volga
+			removal_cost = -1
+			allowed = {
+				original_tag = AQT
+			}
+			modifier = {
+				vanguard_socialism_drift = 0.25 
+                reactionism_drift = 0.1
+                stability_factor = -0.15
+                political_power_gain = -0.5
+			}
+		}
+		TER_great_awakening = {
+			picture = TER_awakening
+			removal_cost = -1
+			allowed = {
+				original_tag = TER
+			}
+			modifier = {
+				consumer_goods_expected_value = -0.10
+				industrial_capacity_factory = 0.15
+				trade_opinion_factor = 0.15
+				compliance_gain = -0.125
+				stability_factor = -0.05
+			}
+		}
+		MNO_punishment = {
+			picture = MNO_punishment
+			removal_cost = -1
+			allowed = {
+				original_tag = MNO
+			}
+			modifier = {
+				stability_factor = -0.15
+			}
+		}
+		URA_lesson = {
+			picture = URA_lesson
+			removal_cost = -1
+			allowed = {
+				original_tag = URA
+			}
+			modifier = {
+				stability_factor = -0.10
+				consumer_goods_expected_value = 0.25
+				industrial_capacity_factory = -0.30
+			}
+		}
+		NUK_brotherhood = {
+			picture = NUK_brotherhood
+			removal_cost = -1
+			allowed = {
+				original_tag = NUK
+			}
+			modifier = {
+				anarchism_drift = 0.001
+				stability_factor = -0.10
+			}
+		}
+		SIB_one = {
+			picture = SIB_one
+			removal_cost = -1
+			allowed = {
+				original_tag = SIB
+			}
+			modifier = {
+				stability_factor = -0.10
+				war_support_factor = 0.05
+				resistance_activity = 0.3
+			}
+		}
+		KLM_beginning = {
+			picture = KLM_beginning
+			removal_cost = -1
+			allowed = {
+				original_tag = KLM
+			}
+			modifier = {
+				stability_factor = 0.05
+				monthly_population = 0.1
+			}
+		}
+		ASK_spirit = {
+			picture = ASK_spirit
+			removal_cost = -1
+			allowed = {
+				original_tag = ASK
+			}
+			modifier = {
+				stability_factor = 0.1
+				revisionist_socialism_drift = 0.002
+			}
+		}
+		TER_unifer = {
+			removal_cost = -1
+			allowed = {
+				original_tag = TER
+			}
+			modifier = {
+				surrender_limit = -0.2
+				recruitable_population_factor = -0.7
+			}
+			picture = TER_unifier
+		}
+		DON_letter = {
+			removal_cost = -1
+			allowed = {
+				original_tag = DON
+			}
+			modifier = {
+				stability_factor = 0.1
+				war_support_factor = 0.1 
+				recruitable_population_factor = 0.05
+				despotism_drift = 0.002
+			}
+			picture = TER_unifier
+		}
+		STA_ark = {
+			removal_cost = -1
+			allowed = {
+				original_tag = STA
+			}
+			modifier = {
+				stability_factor = -0.1
+				war_support_factor = -0.1 
+				despotism_drift = -0.002
+				liberalism_drift = 0.001
+				progressivism_drift = 0.001
+				conservatism_drift = 0.001
+				reactionism_drift = 0.001
+			}
+			picture = STA_ark
+		}
+		KCK_dreamers = {
+			picture = KCK_dreamers
+			allowed = {
+				original_tag = KCK
+			}
+			modifier = {
+				monthly_population = -0.3
+				stability_factor = -0.1
+				war_support_factor = -0.2
+				global_building_slots_factor = -0.1
+				offence = -0.05
+				defence = -0.05
+				conscription = 0.03
+			}
+		}
+	}
+}

@@ -1,0 +1,11 @@
+
+air_wings = {
+	206 = {
+		small_plane_airframe_0 =  {
+			owner = "BLR" 
+			amount = 38
+			creator = "POL"
+			version_name = "PZL P.11"
+		}
+	}
+}

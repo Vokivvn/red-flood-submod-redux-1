@@ -1,0 +1,49 @@
+RML_national_liberation = {
+	RML_ceasefire = {
+		allowed = { tag = RML }
+		activation = {
+			has_global_flag = MAL_civil_war
+			MAL = {
+				surrender_progress > 0.60
+			}
+		}
+		available = {
+			NOT = {
+				MAL = {
+					surrender_progress > 0.60
+				}
+			}
+		}
+		is_good = yes
+		days_mission_timeout = 45
+		timeout_effect = {
+			hidden_effect = {
+				clr_global_flag = MAL_civil_war
+				set_global_flag = MAL_rml_win
+				every_state = {
+					limit = {
+						is_core_of = RML
+					}
+					RML = { transfer_state = PREV }
+				}
+				RML = {
+					white_peace = {
+						tag = MAL
+						message = MAL_REVOLT_RML_WIN_tt
+					}
+					set_capital = { state = 1208 }
+					country_event = {
+						id = rml.1
+						days = 105
+					}
+				}
+				MAL = {
+					country_event = {
+						id = mal.3
+						days = 1
+					}
+				}
+			}
+		}
+	}
+}

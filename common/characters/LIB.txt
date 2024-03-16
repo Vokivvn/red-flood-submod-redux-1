@@ -1,0 +1,532 @@
+characters = {
+	LIB_charles_d_b_king = {
+		name = "Charles D. B. King"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/LIB/Portrait_LIB_Charles_DB_King.png"
+			}
+		}
+		country_leader = {
+			ideology = national_conservatism
+			expire = "1965.1.1.1"
+		}
+	}
+	LIB_george_padmore = {
+		name = "George Padmore"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/LIB/Portrait_LIB_George_Padmore.png"
+			}
+		}
+		country_leader = {
+			ideology = folk_socialism
+			expire = "1965.1.1.1"
+			traits = { LIB_the_intellectual }
+		}
+	}
+	LIB_marcus_garvey = {
+		name = "Marcus Garvey"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/LIB/Portrait_LIB_Marcus_Garvey.png"
+			}
+		}
+		country_leader = {
+			ideology = national_rejuvenatism
+			expire = "1965.1.1.1"
+			traits = { LIB_the_liberator }
+		}
+	}
+	LIB_harvey_firestone_jr = {
+		name = "Harvey Firestone Jr."
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/LIB/Portrait_LIB_Harvey_Firestone.png"
+			}
+		}
+		country_leader = {
+			ideology = plutocracy
+			expire = "1965.1.1.1"
+			traits = { LIB_the_white_man }
+		}
+	}
+
+	LIB_allen_yancy = {
+		name = LIB_allen_yancy_hog
+		portraits = {
+			army = {
+				small = "GFX_idea_LIB_allen_yancy_hog"
+			}
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = LIB_allen_yancy_hog
+			allowed = {
+				original_tag = LIB
+			}
+			traits = {
+				head_of_government
+				hog_corporate_suit
+			}
+			available = {
+				has_government = conservatism
+			}
+		}
+	}
+	LIB_amy_jacques_garvey = {
+		name = LIB_amy_jacques_garvey_hog
+		portraits = {
+			army = {
+				small = "GFX_idea_LIB_amy_jacques_garvey_hog"
+			}
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = LIB_amy_jacques_garvey_hog
+			allowed = {
+				original_tag = LIB
+			}
+			traits = {
+				head_of_government
+				hog_flamboyant_tough_guy
+			}
+			available = {
+				has_government = accelerationism
+			}
+		}
+	}
+	LIB_george_westong = {
+		name = LIB_george_weston_hog
+		portraits = {
+			army = {
+				small = "GFX_idea_LIB_george_weston_hog"
+			}
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = LIB_george_weston_hog
+			allowed = {
+				original_tag = LIB
+			}
+			traits = {
+				head_of_government
+				hog_smiling_oilman
+			}
+			available = {
+				has_government = right_authoritarianism
+			}
+		}
+	}
+	LIB_cyril_briggs = {
+		name = LIB_cyril_briggs_hog
+		portraits = {
+			army = {
+				small = "GFX_idea_LIB_cyril_briggs_hog"
+			}
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = LIB_cyril_briggs_hog
+			allowed = {
+				original_tag = LIB
+			}
+			traits = {
+				head_of_government
+				hog_silent_workhorse
+			}
+			available = {
+				has_government = popular_socialism
+			}
+		}
+	}
+
+	LIB_william_henry_ferris = {
+		name = LIB_william_henry_ferris_eco
+		portraits = {
+			army = {
+				small = "GFX_idea_LIB_william_henry_ferris_eco"
+			}
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = LIB_william_henry_ferris_eco
+			allowed = {
+				original_tag = LIB
+			}
+			traits = {
+				economy_minister
+				eco_administrative_genius
+			}
+			available = {
+				has_government = accelerationism
+			}
+		}
+	}
+	LIB_william_tubman = {
+		name = LIB_william_tubman_eco
+		portraits = {
+			army = {
+				small = "GFX_idea_LIB_william_tubman_eco"
+			}
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = LIB_william_tubman_eco
+			allowed = {
+				original_tag = LIB
+			}
+			traits = {
+				economy_minister
+				eco_railway_magnate
+			}
+			available = {
+				has_government = conservatism
+			}
+		}
+	}
+	LIB_otto_huiswoud = {
+		name = LIB_otto_huiswoud_eco
+		portraits = {
+			army = {
+				small = "GFX_idea_LIB_otto_huiswoud_eco"
+			}
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = LIB_otto_huiswoud_eco
+			allowed = {
+				original_tag = LIB
+			}
+			traits = {
+				economy_minister
+				eco_planned_economy_proponent
+			}
+			available = {
+				has_government = popular_socialism
+			}
+		}
+	}
+
+	LIB_robert_lincoln_poston = {
+		name = LIB_robert_lincoln_poston_for
+		portraits = {
+			army = {
+				small = "GFX_idea_LIB_robert_lincoln_poston_for"
+			}
+		}
+		advisor = {
+			slot = foreign_minister
+			idea_token = LIB_robert_lincoln_poston_for
+			allowed = {
+				original_tag = LIB
+			}
+			traits = {
+				foreign_minister
+				for_ideological_crusader
+			}
+			available = {
+				has_government = accelerationism
+			}
+		}
+	}
+	LIB_martha_firestone_ford = {
+		name = LIB_martha_firestone_ford_for
+		portraits = {
+			army = {
+				small = "GFX_idea_LIB_martha_firestone_ford_for"
+			}
+		}
+		advisor = {
+			slot = foreign_minister
+			idea_token = LIB_martha_firestone_ford_for
+			allowed = {
+				original_tag = LIB
+			}
+			traits = {
+				foreign_minister
+				for_great_compromiser
+			}
+			available = {
+				has_government = right_authoritarianism
+			}
+		}
+	}
+	LIB_ralph_de_boisierre = {
+		name = LIB_ralph_de_boisierre_for
+		portraits = {
+			army = {
+				small = "GFX_iGFX_idea_LIB_ralph_de_boisierre_fordea_"
+			}
+		}
+		advisor = {
+			slot = foreign_minister
+			idea_token = LIB_ralph_de_boisierre_for
+			allowed = {
+				original_tag = LIB
+			}
+			traits = {
+				foreign_minister
+				for_the_cloak_n_dagger_schemer
+			}
+			available = {
+				has_government = popular_socialism
+			}
+		}
+	}
+	LIB_momolu_massaquoi = {
+		name = LIB_momolu_massaquoi_for
+		portraits = {
+			army = {
+				small = "GFX_idea_LIB_momolu_massaquoi_for"
+			}
+		}
+		advisor = {
+			slot = foreign_minister
+			idea_token = LIB_momolu_massaquoi_for
+			allowed = {
+				original_tag = LIB
+			}
+			traits = {
+				foreign_minister
+				for_biased_intellectual
+			}
+			available = {
+				has_government = conservatism
+			}
+		}
+	}
+
+	LIB_grand_lion = {
+		name = LIB_grand_lion_inter
+		portraits = {
+			army = {
+				small = "GFX_iGFX_idea_LIB_grand_liondea_"
+			}
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = LIB_grand_lion_inter
+			allowed = {
+				has_country_flag = LIB_grandlion
+				original_tag = LIB
+			}
+			traits = {
+				security_minister
+				sec_secret_police_chief
+			}
+			available = {
+				has_government = accelerationism
+			}
+		}
+	}
+	LIB_duse_mohammad_ali = {
+		name = LIB_duse_mohammad_ali_sec
+		portraits = {
+			army = {
+				small = "GFX_idea_LIB_duse_mohammad_ali_sec"
+			}
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = LIB_duse_mohammad_ali_sec
+			allowed = {
+				original_tag = LIB
+			}
+			traits = {
+				security_minister
+				sec_secret_police_chief
+			}
+			available = {
+				has_government = accelerationism
+			}
+
+		}
+	}
+	LIB_elizabeth_parke_firestone = {
+		name = LIB_elizabeth_parke_firestone_sec
+		portraits = {
+			army = {
+				small = "GFX_idea_LIB_elizabeth_parke_firestone_sec"
+			}
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = LIB_elizabeth_parke_firestone_sec
+			allowed = {
+				original_tag = LIB
+			}
+			traits = {
+				security_minister
+				sec_crime_fighter
+			}
+			available = {
+				has_government = right_authoritarianism
+			}
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = LIB_elizabeth_parke_firestone_eco
+			allowed = {
+				original_tag = LIB
+			}
+			traits = {
+				economy_minister
+				eco_laissez_faire_capitalist
+			}
+			available = {
+				has_government = right_authoritarianism
+			}
+		}
+	}
+	LIB_cyril_lionel_robert_james = {
+		name = LIB_cyril_lionel_robert_james_sec
+		portraits = {
+			army = {
+				small = "GFX_idea_LIB_cyril_lionel_robert_james_sec"
+			}
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = LIB_cyril_lionel_robert_james_sec
+			allowed = {
+				original_tag = LIB
+			}
+			traits = {
+				security_minister
+				sec_efficient_sociopath
+			}
+			available = {
+				has_government = popular_socialism
+			}
+
+		}
+	}
+	LIB_george_henry_andrews = {
+		name = LIB_george_henry_andrews_sec
+		portraits = {
+			army = {
+				small = "GFX_idea_LIB_george_henry_andrews_sec"
+			}
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = LIB_george_henry_andrews_sec
+			allowed = {
+				original_tag = LIB
+			}
+			traits = {
+				security_minister
+				sec_health_and_safety
+			}
+			available = {
+				has_government = conservatism
+			}
+		}
+	}
+
+	LIB_maymie_de_mena = {
+		name = LIB_maymie_de_mena_int
+		portraits = {
+			army = {
+				small = "GFX_idea_LIB_maymie_de_mena_int"
+			}
+		}
+		advisor = {
+			slot = head_of_intel
+			idea_token = LIB_maymie_de_mena_int
+			allowed = {
+				original_tag = LIB
+			}
+			traits = {
+				head_of_intel
+				int_political_specialist
+			}
+			available = {
+				has_government = accelerationism
+			}
+		}
+	}
+	LIB_benson_ford_sr = {
+		name = LIB_benson_ford_sr_int
+		portraits = {
+			army = {
+				small = "GFX_idea_LIB_benson_ford_sr_int"
+			}
+		}
+		advisor = {
+			slot = head_of_intel
+			idea_token = LIB_benson_ford_sr_int
+			allowed = {
+				original_tag = LIB
+			}
+			traits = {
+				head_of_intel
+				int_industrial_specialist
+			}
+			available = {
+				has_government = right_authoritarianism
+			}
+		}
+	}
+	LIB_claudia_jones = {
+		name = LIB_claudia_jones_int
+		portraits = {
+			army = {
+				small = "GFX_idea_LIB_claudia_jones_int"
+			}
+		}
+		advisor = {
+			slot = head_of_intel
+			idea_token = LIB_claudia_jones_int
+			allowed = {
+				original_tag = LIB
+			}
+			traits = {
+				head_of_intel
+				int_dismal_enigma
+			}
+			available = {
+				has_government = popular_socialism
+			}
+		}
+	}
+	LIB_james_skirving_smith_jr = {
+		name = LIB_james_skirving_smith_jr_int
+		portraits = {
+			army = {
+				small = "GFX_idea_LIB_james_skirving_smith_jr_int"
+			}
+		}
+		advisor = {
+			slot = head_of_intel
+			idea_token = LIB_james_skirving_smith_jr_int
+			allowed = {
+			original_tag = LIB
+			}
+			traits = {
+				head_of_intel
+				int_logistics_specialist
+			}
+			available = {
+				has_government = conservatism
+			}
+		}
+	}
+
+	LIB_alford_russ = {
+		name = "Alford Russ"
+		portraits = {
+			army = {
+				large = "gfx/leaders/LIB/Portrait_LIB_Alford_Russ.png"
+			}
+		}
+		corps_commander = {
+			traits = { trait_reckless commando }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+		}
+	}
+}

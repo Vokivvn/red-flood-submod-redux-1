@@ -1,0 +1,1373 @@
+ideas = {
+	
+	country = {
+
+		####### STARTER #######
+	
+		USA_land_of_the_free = {
+			removal_cost = -1
+			picture = generic_agrarian_society
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = 0.2
+				political_power_gain = 0.25 
+			}
+		}
+		
+	    USA_dustbowl = {
+			removal_cost = -1
+			picture = generic_intel_bonus
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = -0.1
+				consumer_goods_expected_value = 0.25
+			}
+		}
+
+		USA_dustbowl_improve_1 = {
+			picture = generic_intel_bonus
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = -0.05
+				consumer_goods_expected_value = 0.15
+			}
+		}
+
+		USA_dustbowl_improve_2 = {
+			picture = generic_intel_bonus
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = -0.03
+				consumer_goods_expected_value = 0.1
+			}
+		}
+
+		USA_forestry_corps = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = 0.05
+				attrition = -0.2
+			 	supply_consumption_factor = -0.20
+			}
+		}
+		
+	    USA_great_depression = {
+			removal_cost = -1 
+			picture = generic_idea_RF_idea_ladle
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				consumer_goods_expected_value = 0.2
+				industrial_capacity_factory = -0.3
+				#trade_laws_cost_factor = 0.25
+				production_speed_buildings_factor = -0.3
+			}
+		}
+
+		USA_great_depression_1 = {
+			removal_cost = -1 
+			picture = generic_idea_RF_idea_ladle
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				consumer_goods_expected_value = 0.1
+				industrial_capacity_factory = -0.1
+				#trade_laws_cost_factor = 0.25
+				production_speed_buildings_factor = -0.15
+			}
+		}
+		
+	    USA_under_budget_military = {
+			removal_cost = -1
+			picture = anti_soviet_pact
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				war_support_factor = -0.35
+				training_time_army_factor = 0.40
+				army_morale_factor = -0.1
+			}
+		}
+
+		USA_under_budget_military_1 = {
+			removal_cost = -1
+			picture = anti_soviet_pact
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				war_support_factor = -0.30
+				training_time_army_factor = 0.3
+				army_morale_factor = -0.1
+			}
+		}
+		
+	    USA_organized_crime = {
+			removal_cost = -1
+			picture = generic_idea_RF_idea_pistol
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = -0.25
+				production_speed_infrastructure_factor = -0.2
+			}
+		}
+
+		USA_organized_crime_1 = {
+			removal_cost = -1
+			picture = generic_idea_RF_idea_pistol
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = -0.2
+				production_speed_infrastructure_factor = -0.15
+			}
+		}
+
+		USA_organized_crime_2 = {
+			removal_cost = -1
+			picture = generic_idea_RF_idea_pistol
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = -0.15
+				production_speed_infrastructure_factor = -0.1
+			}
+		}
+
+		USA_war_on_gangsters = {
+			picture = generic_idea_RF_idea_pistol
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_weekly = 0.01
+				political_power_gain = -0.3	
+			}
+		}
+		
+		USA_prohibition = {
+			removal_cost = -1
+			picture = generic_research_bonus
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				consumer_goods_expected_value = 0.10
+			}
+		}
+
+		USA_prohibition_limited = {
+			removal_cost = -1
+			picture = generic_research_bonus
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				consumer_goods_expected_value = 0.05
+			}
+		}
+
+		USA_prohibition_enforced = {
+			removal_cost = -1
+			picture = generic_research_bonus
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				consumer_goods_expected_value = 0.05
+				stability_factor = 0.1
+			}
+		}
+
+		USA_police_raids = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_weekly = 0.02
+				progressivism_drift = -0.03
+				liberalism_drift = -0.03
+				conservatism_drift = -0.03
+				accelerationism_drift = -0.03
+			}
+		}
+
+		USA_restricted_immigration = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_weekly = 0.02
+				monthly_population = -0.3
+			}
+		}
+
+		USA_trade_interrogation = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				trade_opinion_factor = -0.15
+			}
+		}
+
+		USA_disjointed_government = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = -0.1
+				surrender_limit = -0.05
+				drift_defence_factor = -0.5
+			}
+		}
+
+		USA_disjointed_government_1 = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = -0.05
+				surrender_limit = -0.05
+				drift_defence_factor = -0.5
+			}
+		}
+
+		USA_disjointed_government_2 = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = -0.05
+			}
+		}
+
+		####### ARMY #######
+
+		USA_howitzerproductionlines = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				army_artillery_attack_factor = 0.2
+			}
+		}
+
+		USA_new_recruitment_methods = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				conscription_factor = 0.05
+			}
+		}
+
+		USA_wac = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				conscription = 0.01
+			}
+		}
+
+		USA_improved_training = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				army_infantry_attack_factor = 0.05
+				army_infantry_defence_factor = 0.05
+			}
+		}
+
+		USA_organized_staff = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				max_command_power = 20
+				command_power_gain_mult = 0.3
+			}
+		}
+		
+		USA_unionsdominance = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+			industrial_capacity_factory = 0.10
+			production_factory_efficiency_gain_factor = 0.15
+			}
+		}
+		USA_croprotations = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+			consumer_goods_expected_value = 0.05
+			attrition = -0.10
+			}
+		}
+		USA_soilconservation = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+			production_speed_infrastructure_factor = -0.15
+			stability_weekly = 0.03
+			}
+		}
+			USA_righttojob = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+			industrial_capacity_factory = 0.10
+			political_power_gain = -0.20
+			}
+		}
+			USA_right_to_information = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+			research_speed_factor = 0.07
+			political_power_gain = -0.20
+			}
+		}
+			USA_communityhelp = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+			popular_socialism_drift = 0.05
+			monthly_population = 0.20
+			}
+		}
+			USA_democracyinwork = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+			political_power_gain = 0.20
+			}
+		}
+			USA_librariestools = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+			research_speed_factor = 0.04
+			}
+		}
+			USA_nomoreprices = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+			political_power_gain = -0.20
+			war_support_factor = 0.10
+			stability_weekly = -0.02
+			}
+		}
+			USA_radicalcivilrights = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+			monthly_population = 0.20
+			stability_weekly = -0.01
+			}
+		}
+			USA_extremewelfare = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+			consumer_goods_expected_value = -0.10
+			political_power_gain = -0.25
+			}
+		}
+			USA_pensionforold = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+			consumer_goods_expected_value = 0.02
+			stability_factor = 0.15
+			}
+		}
+			USA_communalfood = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+			out_of_supply_factor = -0.25
+			stability_weekly = 0.02
+			}
+		}
+			USA_collapsingamericanvalues = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+			stability_weekly = -0.02
+			popular_socialism_drift = 0.10
+			}
+		}
+			USA_collapsedamericanvalues = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+			popular_socialism_drift = 0.10
+			}
+		}
+
+		####### NAVY #######
+
+		USA_two_ocean_act = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				naval_accidents_chance = -0.3
+				naval_coordination = 0.2
+			}
+		}
+		USA_island_hopping = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				invasion_preparation = -0.3
+				naval_invasion_capacity = 4
+			}
+		}
+		USA_newgeneration = {
+			cancel = { has_country_flag = remove_idea }
+			research_bonus = {
+				naval_equipment = 0.05
+			}
+		}
+		USA_naval_boom_idea = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				naval_morale_factor = 0.5
+				naval_coordination = 0.3
+				navy_intel_factor = 0.07
+			}
+		}
+		USA_naval_boom_idea1 = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				conscription_factor = 0.05
+				naval_morale_factor = 0.5
+				naval_coordination = 0.3
+				navy_intel_factor = 0.1
+			}
+		}
+
+		####### AIR #######
+
+		USA_skip_bombing = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				naval_strike_targetting_factor = 0.02
+				naval_strike_attack_factor = 0.02 
+			}
+		}
+
+		USA_engine_upgrades = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				air_air_superiority_agility_factor = 0.02
+			}
+		}
+
+		USA_airtoairrefueling = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				air_range_factor = 0.15
+			}
+		}
+
+		USA_reverse_technology = {
+			cancel = { has_country_flag = remove_idea }
+			research_bonus = {
+				light_fighter = 0.03
+				cat_heavy_fighter = 0.03
+				tactical_bomber = 0.03
+				cat_strategic_bomber = 0.03
+				naval_bomber = 0.03
+				cas_bomber = 0.03
+			}
+		}
+
+		USA_paratrooper_programs = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				special_forces_cap = 0.02
+			}
+		}
+
+		USA_expanded_air_force = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				experience_gain_air_factor = 0.25
+			}
+		}
+
+		####### DIPLOMACY #######
+
+		USA_monore_doctrine = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				guarantee_tension = -0.2
+				guarantee_cost = -0.3
+			}
+		}
+
+		USA_good_neighbor_policy = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				guarantee_tension = -0.5
+				guarantee_cost = -0.7
+			}
+		}
+
+		USA_american_aid = {
+			allowed = {
+				OR = {
+					original_tag = MEX
+					original_tag = VEN
+					original_tag = COL
+					original_tag = ECU
+				}
+			}
+			modifier = {
+				liberalism_acceptance = 70
+				conservatism_acceptance = 70
+				progressivism_acceptance = 70
+			}
+		}
+
+		USA_neutralityact = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				ai_focus_defense_factor = 0.5
+			}
+		}
+
+		USA_sabotage = {
+			removal_cost = 400
+			modifier = {
+				accelerationism_drift = -0.01
+				vanguard_socialism_drift = -0.01
+				popular_socialism_drift = -0.01
+				stability_factor = -0.07
+			}
+		}
+
+		USA_defending_america = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+			 	army_core_defence_factor = 0.3
+			}
+		}
+
+		USA_lendlease = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				lend_lease_tension = -1
+			}
+		}
+
+		USA_embargo_on_japan = {
+			modifier = {
+				trade_opinion_factor = -0.4
+			}
+		}
+
+		USA_montreal_conventions = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				guarantee_tension = -0.5
+				guarantee_cost = -0.25
+			}
+		}
+
+		####### CUTTING #######
+		
+	    USA_job_centres = {
+			removal_cost = -1 
+			picture = capital_outflow
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				production_speed_infrastructure_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+				political_power_factor = -0.01
+			}
+		}
+		
+	    USA_corp_reg_pro = {
+			removal_cost = -1
+			picture = anti_soviet_pact
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.15
+				production_speed_industrial_complex_factor = 0.15
+				political_power_factor = 0.03
+			}
+		}
+
+		USA_anti_lynching_bill_l = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_weekly = 0.02
+				monthly_population = 0.05 
+				political_power_factor = 0.03
+			}
+		}
+
+		USA_limited_welfare = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				political_power_gain = -0.2
+				consumer_goods_expected_value = -0.05
+			}
+		}
+
+		USA_no_welfare = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				political_power_gain = 0.2
+				consumer_goods_expected_value = 0.05
+			}
+		}
+
+		USA_limited_welfare_2 = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				political_power_gain = -0.3
+				consumer_goods_expected_value = -0.08
+			}
+		}
+
+		USA_balanced_budget = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				production_speed_buildings_factor = 0.1
+			}
+		}
+
+		USA_restrained_reserve = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				min_export = -0.1
+			}
+		}
+
+		USA_small_biz = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				production_speed_industrial_complex_factor = 0.3
+			}
+		}
+
+		USA_private_contractors = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				local_resources_factor = 0.15
+			}
+		}
+
+		USA_union_ties = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				industry_repair_factor = 0.4
+				industrial_capacity_factory = 0.1
+			}
+		}
+
+		####### MOODY #######
+
+		USA_SCC = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				out_of_supply_factor = -0.5
+				attrition = -0.3
+			}
+		}
+
+		USA_SCC_1 = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				out_of_supply_factor = -0.5
+				stability_factor = 0.03
+			}
+		}
+
+		USA_FC = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				army_core_defence_factor = 0.1
+				attrition = -0.5
+				stability_factor = 0.03
+			}
+		}
+
+		USA_SOW = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				local_building_slots_factor = 0.25
+				consumer_goods_expected_value = 0.03
+			}
+		}
+
+		USA_vet_pensions = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = 0.05
+			}
+		}
+
+		USA_beating_heart = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				local_resources_factor = 0.25
+				production_speed_buildings_factor = 0.15
+			}
+		}
+
+		USA_anti_lynching_bill_moody = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_weekly = 0.02
+				monthly_population = 0.02
+				political_power_factor = 0.05
+			}
+		}
+
+		USA_civil_rights_limited = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = 0.01
+				conscription_factor = 0.15
+			}
+		}
+
+		USA_klan_civil_war = {
+            picture = generic_idea_RF_idea_gas
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = -0.07
+				war_support_factor = -0.10
+			}
+		}
+
+		####### TECHNATE #######
+		
+		USA_crashed_price_system = {
+			removal_cost = -1
+			picture = chi_hyper_inflation5
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				consumer_goods_expected_value = 0.3
+				industrial_capacity_factory = -0.4
+				production_speed_buildings_factor = -0.4
+				stability_factor = -0.2
+			}
+		}
+		
+		USA_hyperinflation = {
+			removal_cost = -1 
+			picture = great_depression
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				consumer_goods_expected_value = 0.15
+				production_speed_buildings_factor = -0.15
+				stability_factor = -0.15
+			}
+		}
+		
+		ENG_technocratic_volunteers = {
+			removal_cost = -1
+			picture = generic_constitutional_guarantees
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				send_volunteers_tension = -0.50	
+				send_volunteer_size = 3
+			}
+		}
+		
+		USA_scientific_revolution = {
+			removal_cost = -1
+			picture = generic_constitutional_guarantees
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				research_speed_factor = 0.15
+			}
+		}
+		
+		USA_self_sustaining_technates = {
+			removal_cost = -1 
+			picture = triumphant_will
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				consumer_goods_expected_value = -0.1
+				production_speed_buildings_factor = 0.10
+				min_export = -0.05
+			}
+		}
+
+		USA_self_sustaining_technates_1 = {
+			removal_cost = -1 
+			picture = sisu
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				consumer_goods_expected_value = -0.2
+				production_speed_buildings_factor = 0.10
+				industrial_capacity_factory = 0.1
+				min_export = -0.2
+			}
+		}
+		
+		USA_soviet_corporatism = {
+			removal_cost = -1 
+			picture = generic_political_support
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				consumer_goods_expected_value = 0.10
+				production_speed_buildings_factor = 0.10
+				political_power_factor = 0.50
+				monthly_population = 1.2
+			}
+		}
+
+		USA_technate_calendar = {
+			removal_cost = -1 
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				local_resources_factor = 0.03
+				production_speed_buildings_factor = 0.05
+			}
+		}
+		
+		USA_24_hour_services = {
+			removal_cost = -1 
+			picture = generic_spy_intel
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				consumer_goods_expected_value = 0.10
+				political_power_gain = 0.10
+				stability_factor = 0.05
+			}
+		}
+		
+		USA_daily_news = {
+			removal_cost = -1 
+			picture = generic_democratic_drift_bonus
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				accelerationism_drift = 0.02	
+			}
+		}
+		
+		USA_house_subverted = {
+			removal_cost = -1 
+			picture = generic_research_bonus
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = -0.10
+				political_power_gain = 0.1
+			}
+		}
+			
+		USA_energy_credits = {
+			removal_cost = -1 
+			picture = generic_research_bonus
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				production_speed_infrastructure_factor = 0.10
+				production_speed_nuclear_reactor_factor = 0.25
+				research_speed_factor = 0.05
+			}
+		}
+		
+		USA_scientific_dominance = {
+			removal_cost = -1 
+			picture = generic_research_bonus
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				research_speed_factor = 0.1
+				production_factory_max_efficiency_factor = -0.1
+			}			
+		}
+
+		USA_technocratic_society = {
+			removal_cost = -1 
+			picture = generic_research_bonus
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+			}
+		}
+
+		USA_terror = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				attrition = 0.25
+				stability_weekly = -0.02
+			}	
+		}
+		
+		####### LA GUARDIAS #######
+
+		USA_nomorehunger = {
+			#picture = 
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				monthly_population = 0.15
+				stability_weekly = 0.02
+				consumer_goods_expected_value = 0.05
+				political_power_factor = -0.05
+			}
+		}
+		USA_nomorepoverty = {
+			removal_cost = -1
+			picture = generic_goods_red_bonus
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				monthly_population = 0.3
+				root_out_resistance_effectiveness_factor = -0.25
+				stability_weekly = 0.02
+				consumer_goods_expected_value = 0.05
+			}
+		}
+		
+		USA_civilrights = {
+			removal_cost = -1
+			picture = triumphant_will
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				conscription = 0.03
+				political_power_gain = 0.10
+				stability_weekly = 0.02		
+			}
+		}
+		
+		USA_NRA = {
+			removal_cost = -1
+			picture = generic_morale_bonus
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.15
+				political_power_gain = -0.08
+				stability_weekly = 0.01
+				research_speed_factor = 0.03
+			}
+		}
+		
+		USA_WPA = {
+			removal_cost = -1
+			picture = generic_research_bonus
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				 production_factory_efficiency_gain_factor = -0.05
+				 production_factory_start_efficiency_factor	= 0.10
+				 political_power_gain = -0.12
+				 stability_weekly = 0.01
+				research_speed_factor = 0.02
+				production_speed_arms_factory_factor = 0.10
+			}
+		}
+		
+		USA_corps = {
+			removal_cost = -1
+			picture = generic_infantry_bonus
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				production_speed_infrastructure_factor = 0.15
+				attrition = -0.10
+			}
+		}
+
+		USA_publicworksadministration = {
+			removal_cost = -1
+			picture = generic_infantry_bonus
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				production_speed_infrastructure_factor = 0.15
+				local_resources_factor = 0.1
+			}
+		}
+
+		USA_ccc = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				production_speed_buildings_factor = 0.12
+				consumer_goods_expected_value = 0.03
+			}
+		}
+
+		USA_infrastructurereform = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				production_speed_buildings_factor = 0.05
+			}
+		}
+
+		USA_anti_lynching_bill_sd = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_weekly = 0.01
+				monthly_population = 0.05
+				political_power_factor = 0.02
+			}
+		}
+	}
+
+	tank_manufacturer = { 
+	
+		designer = yes
+	
+		marmon_herrington = {
+			
+			
+			allowed = {
+				original_tag = USA
+			}			
+
+			
+			research_bonus = {
+				armor = 0.15
+			}
+			
+			traits = { fast_tank_manufacturer }
+			
+			modifier = {
+			}
+		}
+		
+		chrysler = {
+			
+			
+			allowed = {
+				original_tag = USA
+			}
+			
+
+			
+			research_bonus = {
+				armor = 0.15
+			}
+			
+			traits = { medium_tank_manufacturer }
+			
+			modifier = {
+			}
+		}
+		detroit_arsenal = {
+			
+			picture = generic_industrial_concern_1
+			allowed = {
+				original_tag = USA
+			}
+			
+			
+			research_bonus = {
+				armor = 0.15
+			}
+			
+			traits = { }
+			
+			equipment_bonus = {
+				medium_tank_chassis = {
+					build_cost_ic = -0.1
+				}
+				light_tank_chassis = {
+					build_cost_ic = -0.1
+				}
+			}
+
+			modifier = {
+
+			}
+		}
+		tank_destroyer_board = {
+			
+			picture = usa_tank_destroyer_board
+			allowed = {
+				original_tag = USA
+			}
+
+			
+			research_bonus = {
+				armor = 0.15
+			}
+			
+			traits = { }
+			
+			equipment_bonus = {
+				light_tank_destroyer_chassis = {
+					build_cost_ic = -0.1
+					ap_attack = 0.1
+					hard_attack = 0.25
+				}
+				medium_tank_destroyer_chassis = {
+					build_cost_ic = -0.1
+					ap_attack = 0.1
+					hard_attack = 0.25
+				}
+				heavy_tank_destroyer_chassis = {
+					build_cost_ic = -0.1
+					ap_attack = 0.1
+					hard_attack = 0.25
+				}
+			}
+
+			modifier = {
+
+			}
+		}
+		
+		army_ordnance_department = {
+			
+			
+			allowed = {
+				original_tag = USA
+			}
+			
+
+			
+			research_bonus = {
+				armor = 0.15
+			}
+			
+			traits = { heavy_tank_manufacturer }
+			
+			modifier = {
+			}
+		}	
+	}
+	
+	naval_manufacturer = { 
+	
+		designer = yes
+		
+		norfolk_naval_yard = {
+			
+			
+			allowed = {
+				original_tag = USA
+			}
+			
+
+			
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			traits = { coastal_defence_naval_manufacturer }
+			
+			modifier = {
+			}
+		}
+		
+		electric_boat_company = {
+			
+			
+			allowed = {
+				original_tag = USA
+			}
+			
+
+			
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			traits = { raiding_fleet_naval_manufacturer }
+			
+			modifier = {
+			}
+		}
+		
+		brooklyn_naval_yard = {
+			
+			
+			allowed = {
+				original_tag = USA
+			}
+			
+
+			
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			traits = { atlantic_fleet_naval_manufacturer }
+			
+			modifier = {
+			}
+		}
+		
+		newport_news_shipbuilding = {
+			
+			
+			allowed = {
+				original_tag = USA
+			}
+			
+
+			
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			traits = { pacific_fleet_naval_manufacturer }
+			
+			modifier = {
+			}
+		}
+	}
+	
+	aircraft_manufacturer = { 
+		
+		designer = yes
+		
+		north_american_aviation = {
+			
+			
+			allowed = {
+				original_tag = USA
+			}
+			
+
+			
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			
+			traits = { light_aircraft_manufacturer }
+			
+			modifier = {
+			}
+		}
+		
+		#bell = {
+		#	
+		#	
+		#	allowed = {
+		#		original_tag = USA
+		#	}
+		#	
+		#
+		#	
+		#	research_bonus = {
+		#		air_equipment = 0.15
+		#	}
+		#	
+		#	traits = { light_aircraft_manufacturer }	#TODO, make different from north american
+		#	
+		#	modifier = {
+		#	}
+		#}	
+		
+		lockheed = {
+			
+			
+			allowed = {
+				original_tag = USA
+			}
+			
+
+			
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			
+			traits = { medium_aircraft_manufacturer }
+			
+			modifier = {
+			}
+		}
+		
+		douglas_aircraft_company = {
+			
+			
+			allowed = {
+				original_tag = USA
+			}
+			
+
+			
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			
+			traits = { CAS_manufacturer }
+			
+			modifier = {
+			}
+		}
+
+		
+		boeing = {
+			
+			
+			allowed = {
+				original_tag = USA
+			}
+			
+
+			
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			
+			traits = { heavy_aircraft_manufacturer }
+			
+			modifier = {
+			}
+		}
+		
+		#consolidated_aircraft = {
+		#	
+		#	
+		#	allowed = {
+		#		original_tag = USA
+		#	}
+		#	
+		#
+		#	
+		#	research_bonus = {
+		#		air_equipment = 0.15
+		#	}
+		#	
+		#	traits = { heavy_aircraft_manufacturer } #TODO remove?
+		#	
+		#	modifier = {
+		#	}
+		#}
+		grumman = {
+			
+			
+			allowed = {
+				original_tag = USA
+			}
+			
+
+			
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			
+			traits = { naval_aircraft_manufacturer }
+			
+			modifier = {
+			}
+		}		
+	}
+	
+	
+	materiel_manufacturer = {
+			
+		designer = yes
+		
+		springfield_armory = {
+			
+			
+			allowed = {
+				original_tag = USA
+			}
+			
+
+			
+			research_bonus = {
+				infantry_weapons = 0.15
+			}
+			
+			traits = { infantry_equipment_manufacturer }
+			
+			modifier = {
+			}
+		}
+		
+		ford_motor_company = {
+			
+			
+			allowed = {
+				original_tag = USA
+			}
+			
+
+			
+			research_bonus = {
+				motorized_equipment = 0.15
+			}
+			
+			traits = { motorized_equipment_manufacturer }
+			
+			modifier = {
+			}
+		}
+		
+	
+		
+		rock_island_arsenal = {
+			
+			
+			allowed = {
+				original_tag = USA
+			}
+			
+
+			
+			research_bonus = {
+				artillery = 0.15
+			}
+			
+			traits = { artillery_manufacturer }
+			
+			modifier = {
+			}
+		}
+	}
+}

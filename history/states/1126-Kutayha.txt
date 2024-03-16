@@ -1,0 +1,26 @@
+state={
+	id = 1126
+	name = "STATE_1126" # Kutahya
+	manpower = 515763
+	
+	state_category = rural
+
+	history={
+		victory_points = {
+			11831 1
+		}
+		victory_points = {
+			785 1
+		}
+		owner = TUR
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = TUR
+		add_core_of = MAR
+	}
+
+	provinces={
+		785 856 981 11831
+	}
+}

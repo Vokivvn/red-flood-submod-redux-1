@@ -1,0 +1,27 @@
+
+state={
+	id=1078
+	name="STATE_1078"
+	manpower = 7174500
+
+	state_category = town
+
+	history={
+		owner = BIH
+		add_core_of = BIH
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 1
+		}
+		victory_points = {
+			12035 7
+		}
+		victory_points = {
+			1444 3
+		}
+	}
+
+	provinces={
+		1444 1637 7593 10358 10471 12035 12307 12452
+	}
+}

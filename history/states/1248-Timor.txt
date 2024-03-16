@@ -1,0 +1,25 @@
+state={
+	id=1248
+	name="STATE_1248"
+	manpower=470000
+
+	state_category=pastoral
+
+	history={
+		owner = DEI
+		victory_points = { #Koepang
+			1355 3
+		}
+		add_core_of = DEI
+		buildings = {
+			infrastructure = 2
+			1355 = {
+				naval_base = 1
+			}
+		}
+	}
+
+	provinces={
+		1355 4358 1339 10219
+	}
+}

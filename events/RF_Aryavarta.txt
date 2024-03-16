@@ -1,0 +1,311 @@
+add_namespace = bharat
+
+##Event: ABHM pursues new path to unification
+country_event = {
+	id = bharat.1
+	title = bharat.1.title
+	desc = bharat.1.desc
+	picture = GFX_report_event_spr_anarchist_uprising2
+
+	fire_only_once = yes
+	trigger = {
+        tag = ARY
+        owns_state = 439
+		OR = {
+			PNJ = {
+				exists = no
+			}
+			DIN = {
+				exists = no
+			}
+		}
+		has_war = no
+	}
+	
+	option = {
+		name = bharat.1.a
+		ai_chance = { factor = 1}
+		hidden_effect = {
+			country_event = {
+				id = bharat.2
+				days = 3
+			}
+		}
+    }
+}
+##Event: 
+country_event = {
+	id = bharat.2
+	title = bharat.2.title
+	desc = bharat.2.desc
+	picture = GFX_report_event_soviet_in_riga
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = bharat.2.a
+		ai_chance = { factor = 1}
+		add_stability = 0.02                                                                                                            
+        set_country_flag = congress_time
+		hidden_effect = {
+			country_event = {
+				id = bharat.3
+				days = 30
+			}
+		}
+	}
+}
+
+##Event: The Hindu Mahasabha extraordinary party congress
+country_event = {
+	id = bharat.3
+	title = bharat.3.title
+	desc = bharat.3.desc
+	picture = GFX_report_event_election_vote
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {	#hand the reigns to the moderates
+		name = bharat.3.a
+		ai_chance = { factor = 1}
+		add_popularity = { 
+            ideology = conservatism 
+            popularity = 0.2 
+		}
+        retire_country_leader = yes
+		set_politics = {
+			ruling_party = conservatism
+			elections_allowed = no			
+        }
+	}
+
+	option = {	#Savarkar's rule
+		name = bharat.3.b
+		ai_chance = { factor = 3 }
+		add_stability = 0.05
+        add_popularity = { 
+            ideology = right_authoritarianism
+            popularity = 0.1 
+		}
+		retire_country_leader = yes
+		#set_politics = {
+		#	ruling_party = right_authoritarianism
+		#	elections_allowed = no
+		#}
+	}
+
+	#option = {	#constitutionalists
+	#	name = bharat.3.c
+	#	ai_chance = { factor = 2}
+	#	add_stability = 0.02
+    #    add_popularity = { 
+    #        ideology = despotism 
+    #        popularity = 0.1 
+	#	}
+    #    retire_country_leader = yes
+	#	set_politics = {
+	#		ruling_party = despotism
+	#		elections_allowed = no
+    #   }
+	#}
+	option = {	#hardliners
+		name = bharat.3.d
+		ai_chance = { factor = 2 }
+		add_political_power = -100
+        add_popularity = { 
+            ideology = reactionism
+            popularity = 0.2 
+        }
+		retire_country_leader = yes
+		set_politics = {
+			ruling_party = reactionism
+			elections_allowed = no
+		}
+	}
+}
+
+##Event: Cons win - nice guy path
+country_event = {
+	id = bharat.4
+	title = bharat.4.title
+	desc = bharat.4.desc
+	picture = GFX_report_event_soviet_in_riga
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = bharat.4.a
+		ai_chance = { factor = 1}
+		hidden_effect = {
+			country_event = {
+				id = bharat.9
+				days = 35
+			}
+		}
+	}
+}
+##Event: Sav wins - mid path
+country_event = {
+	id = bharat.5
+	title = bharat.5.title
+	desc = bharat.5.desc
+	picture = GFX_report_event_soviet_in_riga
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = bharat.5.a
+		ai_chance = { factor = 1}
+		hidden_effect = {
+			country_event = {
+				id = bharat.10
+				days = 35
+			}
+		}
+	}
+}
+##Event: Despots win - bad guy path
+country_event = {
+	id = bharat.6
+	title = bharat.6.title
+	desc = bharat.6.desc
+	picture = GFX_report_event_soviet_in_riga
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = bharat.6.a
+		ai_chance = { factor = 1}
+		hidden_effect = {
+			country_event = {
+				id = bharat.11
+				days = 35
+			}
+		}
+	}
+}
+##Event: Reacts win - baddest guy path
+country_event = {
+	id = bharat.7
+	title = bharat.7.title
+	desc = bharat.7.desc
+	picture = GFX_report_event_soviet_in_riga
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = bharat.7.a
+		ai_chance = { factor = 1}
+		hidden_effect = {
+			country_event = {
+				id = bharat.12
+				days = 35
+			}
+		}
+	}
+}
+##Event:Pakistan shits itself
+country_event = {
+	id = bharat.8
+	title = bharat.8.title
+	desc = bharat.8.desc
+	picture = GFX_report_event_soviet_in_riga
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = bharat.8.a
+		ai_chance = { factor = 80 }
+	
+	}
+	option = {
+		name = bharat.8.b
+		ai_chance = { factor = 20 }
+		
+	}
+}
+
+country_event = {	#one nation solution
+	id = bharat.9
+	title = bharat.9.title
+	desc = bharat.9.desc
+	picture = GFX_report_event_soviet_in_riga
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {	#
+		name = bharat.9.a
+		ai_chance = { factor = 1}
+		
+	}
+	option = {	#
+		name = bharat.9.b
+		ai_chance = { factor = 1}
+		
+	}
+}
+
+country_event = {	#Akhand Bharat 1
+	id = bharat.10
+	title = bharat.10.title
+	desc = bharat.10.desc
+	picture = GFX_report_event_soviet_in_riga
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = bharat.10.a
+		ai_chance = { factor = 1}
+		
+	}
+}
+
+country_event = {	#Akhand Bharat 2
+	id = bharat.11
+	title = bharat.11.title
+	desc = bharat.11.desc
+	picture = GFX_report_event_soviet_in_riga
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = bharat.11.a
+		ai_chance = { factor = 1}
+		
+	}
+	option = {	#
+		name = bharat.11.b
+		ai_chance = { factor = 1}
+		
+	}
+}
+
+country_event = {	#Akhand Bharat 3
+	id = bharat.12
+	title = bharat.12.title
+	desc = bharat.12.desc
+	picture = GFX_report_event_soviet_in_riga
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = bharat.12.a
+		ai_chance = { factor = 1}
+		
+	}
+	option = {	#
+		name = bharat.12.b
+		ai_chance = { factor = 1}
+		
+	}
+}

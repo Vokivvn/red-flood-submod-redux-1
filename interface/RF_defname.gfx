@@ -1,0 +1,8 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_defname_box"
+		texturefile = "gfx/interface/GFX_boxer.png"
+	}
+}
+
+

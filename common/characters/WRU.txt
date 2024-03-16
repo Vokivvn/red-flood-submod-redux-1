@@ -1,0 +1,436 @@
+characters={
+	WRU_pavel_bermondtavalov={
+		name="Pavel Bermondt-Avalov"
+		portraits={
+			civilian={
+				large="gfx/leaders/WRU/Portrait_Baltic_Pavel_Bermondt_Avalov.png"
+			}
+
+			army={
+				large="gfx/leaders/WRU/Portrait_Baltic_Pavel_Bermondt_Avalov_general.png"
+			}
+		}
+		corps_commander={
+			traits={ career_officer }
+			skill=3
+			attack_skill=2
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=1
+			legacy_id=199
+		}
+		country_leader={
+			
+			ideology=oligarchy
+			expire="1965.1.1.1"
+			id=-1
+		}
+		country_leader={
+			
+			ideology=military_dictatorship
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	WRU_georgiy_leykhtenbergskiy={
+		name="Georgiy Leykhtenbergskiy"
+		portraits={
+			civilian={
+				large="gfx/leaders/WRU/Portrait_WRU_Georgiy_Leykhtenbergskiy.png"
+			}
+		}
+		country_leader={
+			ideology=religious_fundamentalism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	WRU_jaan_anvelt={
+		name="Jaan Anvelt"
+		portraits={
+			civilian={
+				large="gfx/leaders/WRU/Portrait_WRU_Jaan_Anvelt.png"
+			}
+		}
+		country_leader={
+			ideology=state_socialism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	WRU_council_of_baltic_lands = {
+		name="Council of Baltic Lands"
+		portraits={
+			civilian={
+				large="gfx/leaders/WRU/Portrait_Baltic_Council.png"
+			}
+		}
+		country_leader = {
+			expire = "1965.1.1"
+			ideology = anocracy
+			traits = {
+				#popular_figurehead
+			}
+		}
+	}
+	WRU_Erhard_Kroeger = {
+		name = "Erhard Kroeger"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/WRU/Portrait_WRU_Erhard_Kroeger.png"
+			}
+		}
+		country_leader = {
+			expire = "1965.1.1"
+			ideology = esoteric_reactionism
+		}
+	}
+	WRU_siegfried_kasche = {
+		name = "Siegfried Kasche"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/WRU/Portrait_WRU_Siegfried_Kasche.tga"
+			}
+		}
+		country_leader = {
+			expire = "1965.1.1"
+			ideology = reactionary_populism
+		}
+	}
+	WRU_hinrich_lohse = {
+		name = "Hinrich Lohse"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/WRU/Portrait_WRU_Hinrich_Lohse.tga"
+			}
+		}
+		country_leader = {
+			expire = "1965.1.1"
+			ideology = reactionary_populism
+		}
+	}
+	WRU_anatol_leonid_fürst_von_lieven={
+		name="Anatol Leonid Fürst von Lieven"
+		portraits={
+			army={
+				large="gfx/leaders/WRU/Portrait_Baltic_Anatol_von_Lieven.png"
+			}
+		}
+		corps_commander={
+			traits={ old_guard }
+			skill=3
+			attack_skill=3
+			defense_skill=1
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	WRU_paul_von_rennenkampff={
+		name="Paul von Rennenkampff"
+		portraits={
+			army={
+				large="gfx/leaders/WRU/Portrait_WRU_Paul_von_Rennenkampff.png"
+				small = "gfx/interface/ministers/WRU/paul_von_rennenkampf.dds"
+			}
+		}
+		corps_commander={
+			traits={ infantry_officer }
+			skill=3
+			attack_skill=1
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+		advisor = {
+			slot = high_command
+			idea_token = WRU_paul_von_rennenkampff
+			allowed = {
+				original_tag = WRU
+			}
+			traits = {
+				army_regrouping_2
+			}
+		}
+	}
+	WRU_aleksandr_rodzianko={
+		name="Aleksandr Rodzianko"
+		portraits={
+			army={
+				large="gfx/leaders/WRU/Portrait_WRU_Aleksandr_Rodzianko.png"
+				small = "gfx/interface/ministers/WRU/aleksandr_rodzianko.dds"
+			}
+		}
+		corps_commander={
+			traits={ brilliant_strategist }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=1
+			legacy_id=-1
+		}
+		advisor = {
+			slot = high_command
+			idea_token = WRU_cos_aleksandr_rodzianko
+			allowed = {
+				original_tag = WRU
+			}
+			traits = {
+				army_cavalry_2
+			}
+		}
+	}
+	WRU_pyotr_von_glazenap={
+		name="Pyotr von Glazenap"
+		portraits={
+			army={
+				large="gfx/leaders/WRU/Portrait_WRU_Pyotr_von_Glazenap.png"
+				small = "gfx/interface/ministers/WRU/pyotr_von_glazenap.dds"
+			}
+		}
+		corps_commander={
+			traits={ trait_cautious }
+			skill=2
+			attack_skill=1
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+		advisor = {
+			slot = theorist
+			idea_token = WRU_theo_pyotr_von_glazenap
+			allowed = {
+				original_tag = WRU
+			}
+			traits = {
+				military_theorist
+			}
+		}
+	}
+	WRU_alexis_friedrich_leonid_von_der_pahlen={
+		name="Alexis Friedrich Leonid von der Pahlen"
+		portraits={
+			army={
+				large="gfx/leaders/WRU/Portrait_WRU_Alexis_von_Pahlen.png"
+			}
+		}
+		corps_commander={
+			traits={ trait_reckless }
+			skill=2
+			attack_skill=2
+			defense_skill=1
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	WRU_aleksandr_razvozov={
+		name="Aleksandr Razvozov"
+		portraits={
+			army={
+				large="gfx/leaders/WRU/Portrait_WRU_Aleksandr_Razvozov.png"
+				small = "gfx/interface/ministers/WRU/aleksandr_razvozov.dds"
+			}
+		}
+		navy_leader={
+			traits={ ironside }
+			skill=3
+			attack_skill=3
+			defense_skill=2
+			maneuvering_skill=1
+			coordination_skill=1
+			legacy_id=-1
+		}
+		advisor = {
+			slot = theorist
+			idea_token = WRU_theo_aleksandr_razvozov
+			allowed = {
+				original_tag = WRU
+			}
+			traits = {
+				naval_theorist
+			}
+		}
+	}
+	WRU_aleksei_krylov={
+		name="Aleksei Krylov"
+		portraits={
+			army={
+				large="gfx/leaders/WRU/Portrait_WRU_Aleksei_Krylov.png"
+				small = "gfx/interface/ministers/WRU/aleksei_krylov.dds"
+			}
+		}
+		navy_leader={
+			traits={ superior_tactician }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			maneuvering_skill=1
+			coordination_skill=1
+			legacy_id=-1
+		}
+		advisor = {
+			slot = navy_chief
+			idea_token = WRU_aleksei_krylov
+			allowed = {
+				original_tag = WRU
+			}
+			traits = {
+				cnav_open_seas_doctrine
+			}
+		}
+	}
+	WRU_ivan_bubnov={
+		name="Ivan Bubnov"
+		portraits={
+			army={
+				large="gfx/leaders/WRU/Portrait_WRU_Ivan_Bubnov.png"
+			}
+		}
+		navy_leader={
+			traits={ seawolf }
+			skill=2
+			attack_skill=2
+			defense_skill=3
+			maneuvering_skill=1
+			coordination_skill=1
+			legacy_id=-1
+		}
+	}
+	
+	WRU_heinrich_eduard_von_stryk = {
+		name = WRU_heinrich_eduard_von_stryk
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/WRU/heinrich_eduard_von_stryk.dds"
+			}
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = WRU_heinrich_eduard_von_stryk
+			allowed = {
+				original_tag = WRU
+			}
+			traits = {
+				hog_local_tyrant
+			}
+		}
+	}
+
+	WRU_alexei_lobanov_rostovskiy = {
+		name = WRU_alexei_lobanov_rostovskiy
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/WRU/alexei_lobanov_rostovskiy.dds"
+			}
+		}
+		advisor = {
+			slot = foreign_minister
+			idea_token = WRU_alexei_lobanov_rostovskiy
+			allowed = {
+				original_tag = WRU
+			}
+			traits = {
+				for_apologetic_clerk
+			}
+		}
+	}
+
+	WRU_sergey_nabokov = {
+		name = WRU_sergey_nabokov
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/WRU/sergey_nabokov.dds"
+			}
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = WRU_sergey_nabokov
+			allowed = {
+				original_tag = WRU
+			}
+			traits = {
+				eco_administrative_genius
+			}
+		}
+	}
+
+	WRU_sergey_kelopovskiy = {
+		name = WRU_sergey_kelopovskiy
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/WRU/sergey_kelopovskiy.dds"
+			}
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = WRU_sergey_kelopovskiy
+			allowed = {
+				original_tag = WRU
+			}
+			traits = {
+				sec_man_of_the_people
+			}
+		}
+	}
+
+	WRU_sergey_shydlovskiy = {
+		name = WRU_sergey_shydlovskiy
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/WRU/sergey_shydlovskiy.dds"
+			}
+		}
+		advisor = {
+			slot = head_of_intel
+			idea_token = WRU_sergey_shydlovskiy
+			allowed = {
+				original_tag = WRU
+			}
+			traits = {
+				int_political_specialist
+			}
+		}
+	}
+
+	WRU_josef_bischoff = {
+		name = WRU_carm_josef_bischoff
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/WRU/josef_bischoff.dds"
+			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = WRU_carm_josef_bischoff
+			allowed = {
+				original_tag = WRU
+			}
+			traits = {
+				carm_guns_and_butter_doctrine
+			}
+		}
+	}
+
+	WRU_viktor_utgof = {
+		name = WRU_cair_viktor_utgof
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/WRU/viktor_utgof.dds"
+			}
+		}
+		advisor = {
+			slot = air_chief
+			idea_token = WRU_cair_viktor_utgof
+			allowed = {
+				original_tag = WRU
+			}
+			traits = {
+				cair_naval_aviation_doctrine
+			}
+		}
+	}
+}

@@ -1,0 +1,22 @@
+
+state={
+	id=883
+	name="STATE_883"
+	manpower = 191981
+
+	state_category = pastoral
+
+	history={
+		owner = NEP
+		add_core_of = NEP
+		add_claim_by = BIH
+		buildings = {
+			infrastructure = 1
+		}
+
+	}
+
+	provinces={
+		4435
+	}
+}

@@ -1,0 +1,33 @@
+
+state={
+	id=325
+	name="STATE_325"
+	manpower = 7456533
+
+	state_category = town
+
+	resources={
+		steel=2
+		rubber=2
+	}
+
+	history={
+		owner = YUN
+		add_core_of = YUN
+		victory_points = {
+			7446 10
+		}
+
+		buildings = {
+			infrastructure = 2
+			arms_factory = 2
+			industrial_complex = 1
+			air_base = 2
+		}
+
+	}
+
+	provinces={
+		1319 7446 7606 8023 10346 12282 12841 5072
+	}
+}

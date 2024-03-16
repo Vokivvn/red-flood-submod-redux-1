@@ -1,0 +1,364 @@
+characters = {
+	JPR_masaki_jinzaburo = {
+		name = "Masaki Jinzaburō"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/JPR/Portrait_jinzaburo_masaki_d.png"
+			}
+		}
+		country_leader = {
+			ideology = military_dictatorship
+			expire = "1965.1.1.1"
+		}
+	}
+	JPR_okawa_shumei = {
+		name = "Ōkawa Shūmei"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/JPR/Portrait_Okawa_Shumei.png"
+			}
+		}
+		country_leader = {
+			ideology = national_vanguardism
+			expire = "1965.1.1.1"
+		}
+	}
+	JPR_yamakawa_hitoshi = {
+		name = "Yamakawa Hitoshi"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/JPR/Portrait_Hitoshi_Yamakawa.png"
+			}
+		}
+		country_leader = {
+			ideology = spartakism
+			expire = "1965.1.1.1"
+		}
+	}
+	JPR_arahata_kanson = {
+		name = "Arahata Kanson"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/JPR/Portrait_Kanson_Arahata.png"
+			    small = "gfx/interface/ministers/JPR/arahata.png"
+			}
+		}
+		advisor = {
+		    slot = head_of_government
+			cost = 75
+			idea_token = JPR_arahata_kanson_hog
+			available = {
+				OR = {
+					has_government = revisionist_socialism
+					has_government = anarchism
+					has_government = popular_socialism
+				}
+			}
+			traits = { hog_silent_workhorse }
+		}
+		advisor = {
+		    slot = economy_minister
+			idea_token = JPR_arahata_kanson_eco
+			available = {
+				OR = {
+					has_government = revisionist_socialism
+					has_government = anarchism
+					has_government = popular_socialism
+				}
+			}
+			traits = { eco_planned_economy_proponent }
+		}
+	}
+	JPR_abe_isoo = {
+		name = "Abe Isoo"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/JPR/Portrait_Abe_Isoo.png"
+				small = "gfx/interface/ministers/JPR/abe.png"
+			}
+		}
+		country_leader = {
+			ideology = democratic_socialism
+			expire = "1965.1.1.1"
+		}
+		advisor = {
+		    slot = economy_minister
+			idea_token = JPR_isoo
+			available = {
+				OR = {
+					has_government = revisionist_socialism
+					has_government = progressivism
+					has_government = popular_socialism
+				}
+			}
+			traits = { eco_mixed_economy }
+		}
+	}
+	JPR_katayama_tetsu = {
+		name = "Katayama Tetsu"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/JPR/Portrait_Tetsu_Katayama.png"
+			}
+		}
+		country_leader = {
+			ideology = progressive_democracy
+			expire = "1965.1.1.1"
+		}
+	}
+	JPR_saito_takao = {
+		name = "Saitō Takao"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/JPR/Portrait_Saito_Takao.png"
+			}
+		}
+		country_leader = {
+			ideology = classical_liberalism
+			expire = "1965.1.1.1"
+		}
+	}
+	JPR_ito_noe = {
+		name = "Itō Noe"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/JPR/Portrait_Ito_Noe.png"
+			}
+		}
+		country_leader = {
+			ideology = social_anarchism
+			expire = "1965.1.1.1"
+		}
+	}
+	JPR_hatoyama_ichiro = {
+		name = "Hatoyama Ichirō"
+		country_leader = {
+			ideology = social_conservatism
+			expire = "1965.1.1.1"
+		}
+	}
+	JPR_shiga_yoshio = {
+		name = "Shiga Yoshio"
+		portraits = {
+			army = {
+				large = "gfx/leaders/JPR/Portrait_Yoshio_Shiga.png"
+				small = "gfx/interface/ministers/JPR/shiga.png"
+			}
+		}
+		advisor = {
+		    slot = head_of_intel
+			idea_token = JPR_shiga_yoshio
+			traits = { int_political_specialist }
+		}
+		corps_commander = {
+			traits = { thorough_planner politically_connected }
+			skill = 2
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
+	JPR_nosaka_sanzo = {
+		name = "Nosaka Sanzō"
+		portraits = {
+			army = {
+				large = "gfx/leaders/JPR/Portrait_Sanzō_Nosaka.png"
+			}
+			civilian = { 
+			    small = "gfx/interface/ministers/JPR/nosaka.png"
+			}	
+		}
+		advisor = {
+		    slot = head_of_government
+			idea_token = JPR_nosaka_hog
+			available = {
+				has_government = vanguard_socialism
+			}
+			traits = { hog_backroom_backstabber }
+		}
+		advisor = {
+		    slot = foreign_minister
+			idea_token = JPR_nosaka_for
+			available = {
+				has_government = vanguard_socialism
+			}
+			traits = { for_biased_intellectual }
+		}
+		advisor = {
+		    slot = security_minister
+			idea_token = JPR_nosaka_sec
+			available = {
+				has_government = vanguard_socialism
+			}
+			traits = { sec_back_stabber }
+		}
+		advisor = {
+		    slot = head_of_intel
+			idea_token = JPR_nosaka_intel
+			traits = { int_logistics_specialist }
+		}
+		corps_commander = {
+			traits = { politically_connected }
+			skill = 2
+			attack_skill = 3
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
+	JPR_tokuda_kyuichi = {
+		name = "Tokuda Kyuichi"
+		portraits = {
+			army = {
+				large = "gfx/leaders/JPR/Portrait_Kyuichi_Tokuda.png"
+				small = "gfx/interface/ministers/JPR/tokuda.png"
+			}
+		}
+		corps_commander = {
+			traits = { politically_connected }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 1
+		}
+		advisor = {
+		    slot = security_minister
+			idea_token = JPR_toshihiko
+			available = {
+				OR = {
+					has_government = revisionist_socialism
+					has_government = vanguard_socialism
+					has_government = popular_socialism
+				}
+			}
+			traits = { sec_silent_lawyer }
+		}
+	}
+	JPR_kim_chon_hae = {
+		name = "Kim Chon Hae"
+		portraits = {
+			army = {
+				large = "gfx/leaders/JPR/Portrait_Kim_Chon_hae.png"
+			}
+		}
+		corps_commander = {
+			traits = { }
+			skill = 1
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	JPR_sakai_toshihiko = {
+		name = "Sakai Toshihiko"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/JPR/sakai.png"
+			}
+		}
+		advisor = {
+		    slot = head_of_government
+			idea_token = JPR_toshihiko_hog
+			available = {
+				OR = {
+					has_government = revisionist_socialism
+					has_government = vanguard_socialism
+					has_government = popular_socialism
+				}
+			}
+			traits = { hog_naive_optimist }
+		}
+		advisor = {
+		    slot = security_minister
+			idea_token = JPR_toshihiko_sec
+			available = {
+				OR = {
+					has_government = revisionist_socialism
+					has_government = vanguard_socialism
+					has_government = popular_socialism
+				}
+			}
+			traits = { sec_man_of_the_people }
+		}
+	}
+	JPR_oyama = {
+		name = "Oyama Ikuo"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/JPR/oyama.png"
+			}
+		}
+		advisor = {
+		    slot = economy_minister
+			idea_token = JPR_oyama_eco
+			available = {
+				OR = {
+					has_government = revisionist_socialism
+					has_government = anarchism
+					has_government = popular_socialism
+				}
+			}
+			traits = { eco_reformer }
+		}
+	}
+	JPR_cos = {
+		name = "Cos"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/JPR/nishikawa.png"
+			}
+		}
+		advisor = {
+		    slot = high_command
+			idea_token = JPR_cos
+			traits = { cos_school_of_mass_combat }
+		}
+	}
+	JPR_cao = {
+		name = "CAO"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/JPR/kotoku.png"
+			}
+		}
+		advisor = {
+		    slot = army_chief
+			idea_token = JPR_cao
+			traits = { carm_guns_and_butter_doctrine }
+		}
+	}
+	JPR_con = {
+		name = "CON"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/JPR/ushikawa.png"
+			}
+		}
+		advisor = {
+		    slot = navy_chief
+			idea_token = JPR_con
+			traits = { cnav_power_projection_doctrine }
+		}
+	}
+	JPR_caof = {
+		name = "CAOF"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/JPR/abe.png"
+			}
+		}
+		advisor = {
+		    slot = air_chief
+			idea_token = JPR_caof
+			traits = { cair_naval_aviation_doctrine }
+		}
+	}
+	
+	
+	
+	
+	
+}

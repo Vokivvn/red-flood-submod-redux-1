@@ -1,0 +1,14 @@
+characters = {
+	ASK_Ayaz = {
+		name = "Ayaz İshaki"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/ASK/Portrait_ASK_Ishaki.png"
+			}
+		}
+		country_leader = {
+			ideology = democratic_socialism
+			expire = "1965.1.1.1"
+		}
+	}
+}

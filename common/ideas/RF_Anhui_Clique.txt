@@ -1,0 +1,248 @@
+ideas = {
+	country = {
+		
+		MON_humiliation = {
+			picture = generic_idea_RF_idea_letter
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = -0.10
+				trade_opinion_factor = -0.25
+				research_speed_factor = -0.10
+				political_power_factor = -0.25
+			}
+		}
+		
+		MON_recordcorrected = {
+			picture = generic_idea_RF_idea_resist
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = 0.10
+				trade_opinion_factor = 0.25
+				research_speed_factor = 0.10
+				political_power_factor = 0.25
+			}
+		}
+		
+		MON_brokenarmy = {
+			picture = generic_idea_RF_idea_skull_flame
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				conscription_factor = -0.1
+				war_support_factor = -0.2
+				generate_wargoal_tension = 0.90
+				#foreign_minister_cost_factor = 0.25
+				#economy_minister_cost_factor = 0.25
+				#security_minister_cost_factor = 0.25
+				#head_of_intel_cost_factor = 0.25
+			}
+		}
+		
+		MON_brokenarmy2 = {
+			picture = generic_idea_RF_idea_skull_flame
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				conscription_factor = -0.15
+				war_support_factor = -0.1
+				army_org_factor = -0.1
+				#foreign_minister_cost_factor = 0.15
+				#economy_minister_cost_factor = 0.15
+				#security_minister_cost_factor = 0.15
+				#head_of_intel_cost_factor = 0.15
+			}
+		}
+		
+		MON_newarmy = {
+			picture = generic_idea_RF_idea_soldier2
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				conscription_factor = 0.25
+				war_support_factor = 0.2
+				army_org_factor = 0.15
+				#foreign_minister_cost_factor = -0.25
+				#economy_minister_cost_factor = -0.25
+				#security_minister_cost_factor = -0.25
+				#head_of_intel_cost_factor = -0.25
+			}
+		}
+
+		MON_apolitical_officers = {
+			picture = generic_idea_RF_idea_officer_hat
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				experience_gain_army_factor = 0.15
+			}
+		}
+
+		MON_nomadshock = {
+			picture = generic_idea_RF_idea_cavalry
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				offence = 0.10
+				army_morale_factor = 0.05
+			}
+		}
+
+		MON_reclamation = {
+			picture = generic_idea_RF_idea_cavalry
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				out_of_supply_factor = -0.1
+				attrition = -0.1
+				no_supply_grace = 120
+			}
+		}
+
+		MON_reclamation_china = {
+			picture = generic_idea_RF_idea_cavalry
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				offence = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				industrial_capacity_factory = 0.1
+				local_manpower = 0.05
+			}
+		}
+		
+		MON_agrarianeconomy = {
+			picture = generic_idea_RF_idea_grain
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				research_speed_factor = -0.05
+				production_factory_max_efficiency_factor = -0.10
+				production_speed_buildings_factor  = -0.10
+			}
+		}
+		
+		MON_agrarianreform = {
+			picture = generic_idea_RF_idea_bezel_gear
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = 0.2
+				production_factory_max_efficiency_factor = 0.10
+				production_speed_buildings_factor  = 0.10
+			}
+		}
+		
+		MON_rapidindustrialisation = {
+			picture = generic_idea_RF_idea_industry_cog
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				research_speed_factor = 0.15
+				stability_factor = -0.40
+				production_factory_max_efficiency_factor = 0.20
+				production_speed_buildings_factor  = 0.25
+			}
+		}
+		
+		MON_progressiveindustry = {
+			picture = generic_idea_RF_idea_building
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				research_speed_factor = 0.07
+				stability_factor = -0.15
+				production_factory_max_efficiency_factor = 0.10
+				production_speed_buildings_factor  = 0.10
+			}
+		}
+		
+		MON_anhuirevival = {
+			picture = generic_idea_RF_idea_fire_rose
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				research_speed_factor = 0.07
+				production_factory_max_efficiency_factor = 0.1
+				political_power_factor = 0.25
+			}
+		}
+		
+		MON_militarygovt = {
+			picture = general_staff
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				conscription_factor = 0.2
+				mobilization_speed = 0.1
+				army_core_defence_factor = 0.1
+				army_core_attack_factor = 0.3
+				surrender_limit = 0.05
+			}
+		}
+		
+		MON_empire = {
+			picture = FRA_national_mobilization_focus
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				conscription_factor = 0.15
+				army_core_defence_factor = 0.2
+				army_core_attack_factor = 0.2
+				surrender_limit = -0.05
+			}
+		}
+		
+		MON_democracy = {
+			picture = generic_democratic_drift_bonus
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				conscription_factor = -0.1
+				mobilization_speed = -0.1
+				army_core_defence_factor = 0.3
+				army_core_attack_factor = 0.1
+				surrender_limit = 0.05
+			}
+		}
+		
+		MON_yuanshikai = {
+			picture = generic_idea_RF_idea_coins
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				consumer_goods_expected_value = -0.05
+			}
+		}
+		
+		MON_acespades = {
+			picture = generic_idea_RF_idea_light_foot
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				experience_gain_air_factor = 0.1
+				air_accidents_factor = -0.05
+			}
+		}
+		
+		MON_acehearts = {
+			picture = generic_idea_RF_idea_air_tech
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				air_ace_generation_chance_factor = 0.2
+				air_night_penalty = -0.15
+			}
+		}
+		
+		MON_conscription = {
+			picture = generic_idea_RF_idea_pistol
+			removal_cost = -1
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				conscription = 0.01
+			}
+		}
+	}
+}

@@ -1,0 +1,25 @@
+state={
+	id=1149
+	name="STATE_1149"
+	resources={
+			oil=2
+		}
+	history={
+		owner = MPA
+		add_core_of = MPA
+		add_core_of = MON
+		buildings = {
+			infrastructure = 1
+
+		}
+        victory_points={
+			1728 5
+		}
+	}
+	provinces={
+		1728 1798 1859 4697 7881 10623 12605 12675
+	}
+	manpower=115613
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

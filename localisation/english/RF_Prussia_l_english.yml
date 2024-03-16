@@ -1,0 +1,64 @@
+﻿l_english:
+#COUNTRY NAME#
+PRS_GER:0 "German Empire"
+PRS_GER_ADJ:0 "German"
+PRS_GER_DEF:0 "the German Empire"
+
+#PARTIES#
+PRS_vanguard_socialism_party:0 "SRGP"
+PRS_popular_socialism_party:0 "PPK"
+PRS_anarchism_party:0 "PFGB"
+PRS_revisionist_socialism_party:0 "APAV"
+PRS_progressivism_party:0 "PSPD"
+PRS_liberalism_party:0 "NLP"
+PRS_conservatism_party:0 "DRP"
+PRS_right_authoritarianism_party:0 "PStP"
+PRS_despotism_party:0 "DOB"
+PRS_reactionism_party:0 "DRNVP"
+PRS_accelerationism_party:0 "PSTB"
+PRS_vanguard_socialism_party_long:0 "Sozialrevolutionäre Gruppe Preußens"
+PRS_popular_socialism_party_long:0 "Partei Preußischer Kommunisten"
+PRS_anarchism_party_long:0 "Preußischer Freier Gewerkschaftsbund"
+PRS_revisionist_socialism_party_long:0 "Allgemeiner Preußischer Arbeiterverein"
+PRS_progressivism_party_long:0 "Patriotische Sozialdemokratische Partei Deutschlands"
+PRS_liberalism_party_long:0 "Nationalliberale Partei"
+PRS_conservatism_party_long:0 "Deutsche Reichspartei"
+PRS_right_authoritarianism_party_long:0 "Preußische Staatspartei"
+PRS_despotism_party_long:0 "Deutschordensbund"
+PRS_reactionism_party_long:0 "Deutschrevolutionäre Nationale Volkspartei"
+PRS_accelerationism_party_long:0 "Preußischer Schutz- und Trutzbund"
+
+#LEADER DESCRITIONS#
+POLITICS_Schleicher_DESC:0 "A true-born son of Prussia, von Schleicher was raised in the unified German Empire, growing to serve in its mighty armies as a young man. Schleicher gained some renown during the Great War, serving as the trusted assistant to Wilhelm Groener in the latter years of the conflict. It was von Schleicher who assisted in the formation of the Freikorps in the wake of the Kaiser's abdication and growing tension between the Ebert government and the revolutionary elements in German politics. When the Spartakus League finally struck in 1919, von Schleicher was ready with the Freikorps to assist the war-hero Paul von Hindenburg in saving the foolish Ebert from his own disaster. Yet it was not to be, the faithful soldiers of Old Germany were defeated and broken by the Reds, who pursued them into the seas. Arriving in Prussia, von Schleicher and Hindenburg sought to reorganise the surviving elements of the German Empire, only to find many former Officers had fled to Austria, taking solace in the mountains of their former ally. After serving under Hindenburg for over a decade, crushing the agents of the Communists and ensuring petty squabbles did not split the Freikorps, von Schleicher would succeed the old marshal in 1934, inheriting a government of loyal and dedicated associates. Though Prussia is small, Reichsmarschall von Schleicher is no brute and knows that Prussia's strength lies in its legacy and its legitimacy. With enough scheming, the Red Giant can be brought down, and the Freikorps, Reichswehr and von Schleicher himself shall revive that grand Germany that nearly claimed the world."  
+
+#FACTION
+#LEADER TRAITS#
+#IDEAS#
+PRS_the_castle_doctrine:0 "The Castle Doctrine"
+PRS_the_castle_doctrine_desc:0 "The old militrary doctrines of Moltke and Clausewitz are unfortunately not available to us in our current state with our current enemy. In its place we have established a new doctrine, the Castle Doctrine. All resources are devoted to the bolstering of defense, every level of army has shifted its mindset, and the physical landscape itself has been changed, earning us the name Festungs Preußen."
+PRS_help_from_the_bear:0 "Help From the Bear"
+PRS_help_from_the_bear_desc:0 "While we bitterly fought during the war, we have found a new friend in Russia. They share our hatred of the wretched reds and the pestilent poles. We have provided technical assistance and expertise for their industrialization and they have provided us with critical resources for our defense. We look to a future ruled by the Eagle and the Bear."
+PRS_auswanderer:0 "Die Auswanderer"
+PRS_auswanderer_desc:0 "Though our disloyal subjects may have thrown us out of Berlin on the Judeo-Spartakists demand, not all were happy with the Red Republic. Die Auswanderer, or the Émirgrés, flock to Königsberg. These exiles have bolstered our small territories population, increasing our legitimacy and power, though it has caused certain social ills, such as the \"60/40\" problem as some sexually abstinent men have pointed out, with the majority of émirgrés being male."
+PRS_calm_before_the_storm:0 "Calm Before the Storm"
+PRS_calm_before_the_storm_desc:0 "The future of Prussia hinges on one dying man, Erich Ludendorff. Everyone knows his days are numbered and all factions within Prussia are acutely aware of it. People whisper of what will happen on the day he breathes his last breath, but until then, all is quiet on the Eastern Front."
+PRS_our_patron_lost:0 "Our Patron Lost"
+PRS_our_patron_lost_desc:0 "Russia has fallen to civil war, clearing a significant gap in our defense. We should have known that these asiatics could not be trusted as a long term partner. Fortunately our defenses are that deeply fortified so we can survive the storm."
+PRS_the_storm:0 "The Storm"
+PRS_the_storm_desc:0 "Ludendorff has passed and all is in chaos. There are open battles in the streets, constant assassination attempts and omnipresent whispers of Putsch. It is uncertain how and when the violence will end but the situation cannot last long."
+PRS_patriots_in_power:0 "Patriots in Power"
+PRS_patriots_in_power_desc:0 "The years of degeneration and "democratization" have been squashed, and the Empire has been saved. Traitors have been arrested and executed, nobody stands in our way. Tomorrow belongs to us!"
+PRS_prussian_spring:0 "A Prussian Spring"
+PRS_prussian_spring_desc:0 "The forces of reaction have been routed and democracy rules in Königsberg today, and Berlin tomorrow. Now we can March triumphantly into the future, between reaction and revolution, into a bright future without either."
+
+
+
+#MINISTERS#
+#CUSTOM TOOLTIPS AND FLAGS#
+#DECISIONS (1.5 Update)#
+PRS_reunification:0 "Reclaiming our Homeland"
+reclaim_homeland:0 "Restoring True Germany"
+#EVENTS#
+prussia.1.t:0 "Ludendorff Died Lol"
+prussia.1.desc:0 "ERICH LUDENDORFF IS DEAD, DING DONG THE WICKED BITCH IS DEAD, IT'S A SHAME THE BITCH DIDN'T DIE 72 YEARS AGO, IT'S A SHAME THAT THE VOLKSARMEE DIDN'T KILL THE BITCH"
+prussia.1.a:0 "RIPBOZO REST IN PISS YOU WONT BE MISS RATWATCH"

@@ -1,0 +1,26 @@
+state={
+	id=1087
+	name="STATE_1087" #Lower Mespotamia
+	manpower = 302165
+	
+	state_category = town
+	
+	resources={
+		oil=9
+	}
+
+	history={
+		owner = IRQ
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = IRQ
+		victory_points = {
+			12726 1 #amarah
+		}
+	}
+
+	provinces={
+		78 2004 7977 12726
+	}
+}

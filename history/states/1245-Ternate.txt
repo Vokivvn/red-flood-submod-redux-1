@@ -1,0 +1,28 @@
+state={
+	id=1245
+	name="STATE_1245"
+	manpower = 189400
+
+	state_category = pastoral
+
+	history={
+		owner = DEI
+		victory_points = { #Weda
+			7413 1
+		}
+		victory_points = { #Laboeha
+			1437 1
+		}
+		add_core_of = DEI
+		buildings = {
+			infrastructure = 2
+			7413 = {
+				naval_base = 1
+			}
+		}
+	}
+
+	provinces={
+		1419 1437 7369 7413 10141 10342
+	}
+}

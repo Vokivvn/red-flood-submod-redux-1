@@ -1,0 +1,14 @@
+characters = {
+	ELS_maximiliano_hernández_martínez = {
+		name = "Maximiliano Hernández Martínez"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/ELS/Portrait_Maximiliano_Hernandez_Martinez.png"
+			}
+		}
+		country_leader = {
+			ideology = personalist_dictatorship
+			expire = "1965.1.1.1"
+		}
+	}
+}

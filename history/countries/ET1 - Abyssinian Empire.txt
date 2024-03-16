@@ -1,0 +1,52 @@
+﻿capital = 1020
+
+oob = "ET1"
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	gw_artillery = 1
+}
+
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+	set_technology = {
+		iw_small_airframe = 1
+		aa_lmg = 1
+		aa_cannon_1 = 1
+		early_bombs = 1
+		engines_1 = 1
+	}
+}
+if = {
+	limit = { NOT = { has_dlc = "By Blood Alone" } }
+	set_technology = {
+		early_fighter = 1
+		CAS1 = 1
+	}
+}
+
+set_convoys = 10
+
+set_popularities = {
+        accelerationism = 0
+        reactionism = 40
+        despotism = 40
+        right_authoritarianism = 20
+        conservatism = 0
+        liberalism = 0
+        progressivism = 0
+        popular_socialism = 0
+        vanguard_socialism = 0
+        anarchism = 0
+
+}
+
+set_politics = {
+	ruling_party = despotism
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+recruit_character = ET1_amha_selassie

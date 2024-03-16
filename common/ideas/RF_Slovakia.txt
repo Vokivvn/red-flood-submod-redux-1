@@ -1,0 +1,52 @@
+ideas = {
+	country = {
+		SLO_warschauer_vertrag = {
+			removal_cost = -1
+			picture = GER_warschauer_vertrag
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				trade_opinion_factor = 0.10
+			}
+			targeted_modifier = {
+				tag = PRS
+				attack_bonus_against = 0.1
+			}
+		}
+		SLO_ephemeral = {
+			removal_cost = -1
+			picture = SLO_ephemeral
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				political_power_gain = -0.1
+				stability_factor = -0.075
+			}
+		}
+		SLO_thunder = {
+			removal_cost = -1
+			picture = SLO_thunder
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				conservatism_drift = 0.1
+			    liberalism_drift = 0.1
+				despotism_drift = 0.1
+				war_support_factor = 0.25
+				army_org_factor = -0.1
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+			}
+		}
+		SLO_yard = {
+			removal_cost = -1
+			picture = SLO_yard
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				vanguard_socialism_drift = 0.3
+				stability_factor = 0.2
+				weekly_manpower = -5
+				political_power_gain = -0.5
+				cic_to_overlord_factor = 0.2
+				mic_to_overlord_factor = 0.2
+			}
+		}
+    }
+}

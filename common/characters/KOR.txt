@@ -1,0 +1,579 @@
+characters = {
+	KOR_ugaki_kazushige = {
+		name = "Ugaki Kazushige"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/KOR/Portrait_Ugaki_Kazushige.png"
+			}
+			army = {
+				large = "gfx/leaders/KOR/Portrait_Ugaki_Kazushige_general.png"
+			}
+		}
+		country_leader = {
+			ideology = military_dictatorship
+			expire = "1965.1.1.1"
+		}
+		field_marshal = {
+			traits = { career_officer JAP_samurai_lineage }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 3
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = KOR_ugaki_kazushige_hog
+			allowed = {
+				original_tag = IKR
+			}
+			traits = { 
+				head_of_government
+				hog_backroom_backstabber
+			}
+		}
+	}
+	KOR_syngman_rhee = {
+		name = "Syngman Rhee"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/KOR/Portrait_Syngman_Rhee.png"
+			}
+			army = {
+				small = "GFX_idea_Rhee_Syng_man"
+			}
+		}
+		country_leader = {
+			ideology = anocracy
+			expire = "1965.1.1.1"
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = KOR_rhee_hog
+			allowed = {
+				original_tag = KOR
+			}
+			available = {
+				OR = {
+					has_government = conservatism
+				}
+			}
+			visible = {
+				has_completed_focus = KOR_korean_revolution
+			}
+			traits = { 
+				head_of_government
+				dictator
+			}
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = KOR_syngman_rhee_sec
+			allowed = {
+				original_tag = KOR
+			}
+			available = {
+				OR = {
+					has_government = conservatism
+					has_government = liberalism
+					has_government = progressivism
+				}
+			}
+			visible = {
+				has_completed_focus = KOR_korean_revolution
+			}
+			traits = { 
+				security_minister
+				sec_secret_police_chief
+			}
+		}
+	}
+	KOR_ahn_changho = {
+		name = "Ahn Changho"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/KOR/Portrait_Ahn_Changho.png"
+			}
+		}
+		country_leader = {
+			ideology = national_conservatism
+			expire = "1965.1.1.1"
+		}
+	}
+	KOR_kim_koo = {
+		name = "Kim Koo"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/KOR/Portrait_Kim_Koo.png"
+			}
+			army = {
+				small = "GFX_idea_Kim_Gu"
+			}
+		}
+		country_leader = {
+			ideology = libertarian_capitalism
+			expire = "1965.1.1.1"
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = KOR_kim_koo_eco
+			allowed = {
+				original_tag = KOR
+			}
+			available = {
+				OR = {
+					has_government = conservatism
+					has_government = right_authoritarianism
+					has_government = progressivism
+				}
+			}
+			visible = {
+				has_completed_focus = KOR_korean_revolution
+			}
+			traits = { 
+				economy_minister
+				eco_mixed_economy
+			}
+		}
+	}
+	KOR_yuh_woon_hyung = {
+		name = "Yuh Woon-hyung"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/KOR/Portrait_Yuh_Woon_hyung.png"
+			}
+			army = {
+				small = "GFX_idea_Yuh_Woo_hyung"
+			}
+		}
+		country_leader = {
+			ideology = social_nationalism
+			expire = "1965.1.1.1"
+		}
+		advisor = {
+			slot = foreign_minister
+			idea_token = KOR_yuh_woon_hyung_for
+			allowed = {
+				original_tag = KOR
+			}
+			available = {
+				OR = {
+					has_government = liberalism
+					has_government = conservatism
+					has_government = right_authoritarianism
+				}
+			}
+			visible = {
+				has_completed_focus = KOR_korean_revolution
+			}
+			traits = { 
+				foreign_minister
+				for_great_compromiser
+			}
+		}
+	}
+	KOR_choe_chang_ik = {
+		name = "Choe Chang-ik"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/KOR/Portrait_Choe_Chiang_ik.png"
+			}
+		}
+		country_leader = {
+			ideology = spartakism
+			expire = "1965.1.1.1"
+		}
+	}
+	KOR_cho_man_sik = {
+		name = "Cho Man-sik"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/KOR/Portrait_Cho_Man_sik.png"
+			}
+		}
+		country_leader = {
+			ideology = agrarian_socialism
+			expire = "1965.1.1.1"
+		}
+	}
+	KOR_kim_chwa_chin = {
+		name = "Kim Chwa-chin"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/KOR/Portrait_Kim_Chwa_chin.png"
+			}
+		}
+		country_leader = {
+			ideology = social_anarchism
+			expire = "1965.1.1.1"
+		}
+	}
+	KOR_pak_hon_yong = {
+		name = "Pak Hon-yong"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/KOR/Portrait_Pak_Hon_Yong.png"
+			}
+			army = {
+				small = "GFX_idea_Pak_Hon_yong"
+			}
+		}
+		country_leader = {
+			ideology = leninism
+			expire = "1965.1.1.1"
+		}
+	}
+	KOR_sin_chaeho = {
+		name = "Sin Chaeho"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/KOR/Portrait_Sin_Chaeho_accel.png"
+			}
+		}
+		country_leader = {
+			ideology = national_rejuvenatism
+			expire = "1965.1.1.1"
+		}
+	}
+
+	KOR_yi_si_yeong = {
+		name = KOR_yi_si_yeong_hog
+		portraits = {
+			army = {
+				small = "GFX_idea_Yi_Si_yeong"
+			}
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = KOR_yi_si_yeong_hog
+			allowed = {
+				original_tag = KOR
+			}
+			available = {
+				OR = {
+					has_government = liberalism
+					has_government = conservatism
+					has_government = right_authoritarianism
+					has_government = progressivism
+				}
+			}
+			visible = {
+				has_completed_focus = KOR_korean_revolution
+			}
+			traits = { 
+				head_of_government
+				hog_spiritual_leader
+			}
+		}
+	}
+
+	KOR_kim_seong_su = {
+		name = KOR_kim_seong_su_hog
+		portraits = {
+			army = {
+				small = "GFX_idea_Kim_Seong_su"
+			}
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = KOR_kim_seong_su_hog
+			allowed = {
+				original_tag = KOR
+			}
+			available = {
+				OR = {
+					has_government = liberalism
+					has_government = conservatism
+					has_government = right_authoritarianism
+					has_government = progressivism
+				}
+			}
+			visible = {
+				has_completed_focus = KOR_korean_revolution
+			}
+			traits = { 
+				head_of_government
+				hog_naive_optimist
+			}
+		}
+	}
+	KOR_song_jin_woo = {
+		name = KOR_song_jin_woo_hog
+		portraits = {
+			army = {
+				small = "GFX_idea_Song_Jin_woo"
+			}
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = KOR_song_jin_woo_hog
+			allowed = {
+				original_tag = KOR
+			}
+			available = {
+				OR = {
+					has_government = liberalism
+					has_government = conservatism
+					has_government = right_authoritarianism
+					has_government = progressivism
+				}
+			}
+			visible = {
+				has_completed_focus = KOR_korean_revolution
+			}
+			traits = { 
+				head_of_government
+				hog_pragmatic_statesman
+			}
+		}
+	}
+	KOR_kim_kyu_sik = {
+		name = KOR_kim_kyu_sik_for
+		portraits = {
+			army = {
+				small = "GFX_idea_Kim_Kyu_sik"
+			}
+		}
+		advisor = {
+			slot = foreign_minister
+			idea_token = KOR_kim_kyu_sik_for
+			allowed = {
+				original_tag = KOR
+			}
+			available = {
+				OR = {
+					has_government = liberalism
+					has_government = conservatism
+					has_government = right_authoritarianism
+					has_government = progressivism
+				}
+			}
+			visible = {
+				has_completed_focus = KOR_korean_revolution
+			}
+			traits = { 
+				foreign_minister
+				for_apologetic_clerk
+			}
+		}
+	}
+
+
+	KOR_choe_yong_gon = {
+		name = "Choe Yong-gon"
+		portraits = {
+			army = {
+				small = "GFX_idea_Choe_Yong_gon"
+			}
+		}
+		corps_commander = {
+			traits = { politically_connected }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 3
+			logistics_skill = 3
+		}
+	}
+
+
+	KOR_x = {
+		name = KOR_x_int
+		advisor = {
+			slot = head_of_intel
+			idea_token = KOR_x_int
+			allowed = {
+				original_tag = KOR
+			}
+			traits = { 
+				head_of_intel
+				int_dismal_enigma
+			}
+		}
+	}
+	KOR_hong_beom_do = {
+		name = KOR_hong_beom_do_coa
+		portraits = {
+			army = {
+				small = "GFX_idea_Hong_Beom_do"
+				large = "gfx/leaders/KOR/Portrait_Hong_Beom_do.png"
+			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = KOR_hong_beom_do_coa
+			allowed = {
+				original_tag = KOR
+			}
+			available = {
+				has_completed_focus = KOR_korean_revolution
+			}
+			traits = {
+				carm_commando_doctrine
+			}
+		}
+	}
+	KOR_lee_beom_sok = {
+		name = KOR_lee_beom_sok_coa
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/KOR/Portrait_Lee_Beom_seok.png"
+			}
+			army = {
+				small = "GFX_idea_Lee_Beom_seok"
+				large = "gfx/leaders/KOR/Lee_Beom_seok_g.png"
+			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = KOR_lee_beom_sok_coa
+			allowed = {
+				original_tag = KOR
+			}
+			available = {
+				has_completed_focus = KOR_korean_revolution
+			}
+			traits = {
+				carm_guns_and_butter_doctrine
+			}
+		}
+	}
+	KOR_x_con = {
+		name = KOR_x_con
+		advisor = {
+			slot = navy_chief
+			idea_token = KOR_x_con
+			allowed = {
+				original_tag = KOR
+			}
+			traits = { 
+				cnav_indirect_approach_doctrine
+			}
+		}
+	}
+
+	KOR_x_coaf = {
+		name = KOR_x_coaf
+		advisor = {		
+			slot = air_chief
+			idea_token = KOR_x_coaf
+			allowed = {
+				original_tag = KOR
+			}
+			traits = { 
+				cair_air_superiority_doctrine
+			}
+		}
+	}
+	
+	KOR_minami_jiro = {
+		name = "Minami Jirō"
+		portraits = {
+			army = {
+				small = "GFX_idea_jiro"
+			}
+		}
+		corps_commander = {
+			traits = { trickster career_officer infantry_officer }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 3
+		}
+	}
+
+	KOR_ji_cheong_cheon = {
+		name = "Ji Cheong-cheon"
+		portraits = {
+			army = {
+				large = "gfx/leaders/KOR/Portrait_Ji_Cheong_cheon.png"
+			}
+		}
+		corps_commander = {
+			traits = { cavalry_officer }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 2
+			visible = { 
+				KOR = {
+					has_completed_focus = KOR_korean_revolution
+				}
+			}
+		}
+	}
+	
+	KOR_sohn_won_yil = {
+		name = "Sohn Won-yil"
+		portraits = {
+			army = {
+				large = "gfx/leaders/KOR/Portrait_Sohn_Won_yil.png"
+			}
+		}
+		navy_leader ={
+			traits = { navy_career_officer }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			maneuvering_skill = 3
+			coordination_skill = 2
+			visible = { 
+				KOR = {
+					has_completed_focus = KOR_korean_revolution
+				}
+			}
+		}
+	}
+	
+	KOR_koiso_kuniaki = {
+		name = "Koiso Kuniaki"
+		portraits = {
+			army = {
+				small = "GFX_idea_kuniaki"
+				large = "gfx/leaders/KOR/Portrait_Kuniaki_Koiso.png"
+			}
+		}
+		corps_commander = {
+			traits = { JAP_samurai_lineage old_guard politically_connected }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+		}
+	}
+	KOR_yamanashi_hanzo = {
+		name = "Yamanashi Hanzō"
+		portraits = {
+			army = {
+				large = "gfx/leaders/KOR/Portrait_Yamanashi_Hanzo_g.png"
+			}
+		}
+		corps_commander = {
+			traits = { JAP_samurai_lineage old_guard politically_connected }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+		}
+	}
+	KOR_teijiro_toyada = {
+		name = "Teijiro Toyada"
+		portraits = {
+			navy = {
+				large = "gfx/leaders/KOR/Portrait_Teijiro_Toyoda.png"
+			}
+		}
+		navy_leader = {
+			traits = { battleship_adherent naval_lineage }
+			skill = 3
+			attack_skill = 4
+			defense_skill = 2
+			maneuvering_skill = 2
+			coordination_skill = 2
+		}
+	}
+}

@@ -1,0 +1,76 @@
+﻿capital = 934
+
+oob = "XIA"
+
+set_research_slots = 3 
+set_country_flag = CHI_is_kmt
+set_convoys = 0
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	gw_artillery = 1
+	tech_trucks =1
+	motorised_infantry = 1
+	fuel_silos = 1
+}
+
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+	set_technology = {
+		iw_small_airframe = 1
+		aa_lmg = 1
+		aa_cannon_1 = 1
+		early_bombs = 1
+		engines_1 = 1
+	}
+}
+if = {
+	limit = { NOT = { has_dlc = "By Blood Alone" } }
+	set_technology = {
+		early_fighter = 1
+		CAS1 = 1
+	}
+}
+
+set_politics = {
+	ruling_party = progressivism
+	last_election = "1933.10.25"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	vanguard_socialism = 26
+	popular_socialism = 8
+	anarchism = 2
+	revisionist_socialism = 26
+	progressivism = 28
+	liberalism = 3
+	conservatism = 3
+	right_authoritarianism = 2
+	despotism = 2
+	reactionism = 0
+	accelerationism = 0
+}
+
+set_stability = 0.2
+
+add_ideas = { 
+	CHI_shared_economy
+	XIA_red_faction
+	XIA_communist_struggle
+	XIA_experimenal_land_reforms
+	CHI_kmt_dejure
+}
+
+set_country_flag = soc_dems_are_socialists
+
+recruit_character = XIA_chen_duxiu
+recruit_character = XIA_mao_zhedong
+#recruit_character = XIA_zhou_enlai
+recruit_character = XIA_cheng_qian
+recruit_character = XIA_peng_dehuai
+recruit_character = XIA_zhu_de
+recruit_character = XIA_nie_rongzhen
+recruit_character = XIA_deng_zhongxia
+recruit_character = XIA_li_jishen

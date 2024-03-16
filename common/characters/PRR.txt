@@ -1,0 +1,14 @@
+characters = {
+	PRR_wilhelm_III = {
+		name = "Wilhelm III"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/PRS/Portrait_PRS_Wilhelm_August.png"
+			}
+		}
+		country_leader = {
+			ideology = national_rejuvenatism
+			expire = "1965.1.1.1"
+		}
+	}
+}

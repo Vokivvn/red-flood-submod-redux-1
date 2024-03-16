@@ -1,0 +1,136 @@
+﻿capital = 111
+set_research_slots = 3 
+set_convoys = 175
+set_stability = 0.2
+set_war_support = 0.15
+
+oob = "FIN"
+set_naval_oob = "FIN_naval"
+
+add_ideas = {
+	RUS_warlord_indifference
+	
+	volunteer_only
+	export_focus
+	civilian_economy
+}
+
+set_cosmetic_tag = FIN_RUS
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	gw_artillery = 1			
+	interwar_antiair = 1
+	tech_support = 1		
+	tech_recon = 1
+	tech_engineers = 1
+	basic_train = 1
+}
+
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	set_technology = {
+		early_submarine = 1
+		early_heavy_cruiser = 1
+	}
+}
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		early_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		early_ship_hull_cruiser = 1
+		basic_battery = 1
+		coastal_defense_ships = 1
+	}
+}
+
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+	set_technology = {
+		iw_small_airframe = 1
+		aa_lmg = 1
+		aa_cannon_1 = 1
+		early_bombs = 1
+		engines_1 = 1
+	}
+}
+if = {
+	limit = { NOT = { has_dlc = "By Blood Alone" } }
+	set_technology = {
+		early_fighter = 1
+		CAS1 = 1
+	}
+}
+
+# Events
+country_event = { id = fin.1 days = 3 }
+
+# Politics
+set_politics = {
+	ruling_party = despotism
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+    vanguard_socialism = 8
+    popular_socialism = 13
+    anarchism = 01
+    revisionist_socialism = 01
+    progressivism = 15
+    liberalism = 9
+    conservatism = 15
+    right_authoritarianism = 10
+    despotism = 07
+    reactionism = 15
+    accelerationism = 06
+} 
+
+recruit_character = FIN_franz_albert_seyn
+recruit_character = FIN_urho_kekkonen
+recruit_character = FIN_sigurd_wettenhovi_aspa
+recruit_character = FIN_sihathor_wahneferhotep_ankhkhaf
+recruit_character = FIN_ragnar_furuhjelm
+recruit_character = FIN_juho_kusti_paasikivi
+recruit_character = FIN_vaino_tanner
+recruit_character = FIN_kyosti_kallio
+recruit_character = FIN_aarne_edward_juutilainen
+recruit_character = FIN_antero_svensson
+recruit_character = FIN_karl_walden
+recruit_character = FIN_aksel_airo
+recruit_character = FIN_hannu_hannuksela
+recruit_character = FIN_karl_oesch
+recruit_character = FIN_senate
+recruit_character = FIN_ragnarfuruhjelm
+recruit_character = FIN_jeansibelius
+recruit_character = FIN_karlfredrick
+recruit_character = FIN_ristoheikki
+recruit_character = FIN_vilhohelanen
+recruit_character = FIN_uunokalias
+recruit_character = FIN_juhokusti
+recruit_character = FIN_heikkiritavuori
+recruit_character = FIN_mattiaarnio
+recruit_character = FIN_jonathanwartuivaara
+recruit_character = FIN_ernstvonborn
+recruit_character = FIN_ernsttandefelt
+recruit_character = FIN_elmokaila
+recruit_character = FIN_miukawaltari
+recruit_character = FIN_ottobrandenstein
+recruit_character = FIN_anttitulenheimo
+recruit_character = FIN_raunogustafkallia
+recruit_character = FIN_edithsodergran
+recruit_character = FIN_hanskalm
+recruit_character = FIN_karlfredrik
+recruit_character = FIN_akselairo
+recruit_character = FIN_hannuhanuksela
+recruit_character = FIN_bainovalve
+recruit_character = FIN_vainomikkola
+recruit_character = FIN_arnesomersalo
+recruit_character = FIN_einarvihma
+recruit_character = FIN_eerorahola
+
+recruit_character = FIN_Ilmari_I

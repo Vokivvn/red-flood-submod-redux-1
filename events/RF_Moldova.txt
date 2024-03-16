@@ -1,0 +1,207 @@
+add_namespace = moldova
+
+country_event = { #elections
+	id = moldova.1
+	title = moldova.1.t
+	desc = moldova.1.desc
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = moldova.1.a
+		set_politics = {
+			ruling_party = progressivism
+		}
+		set_country_flag = soc_dems_are_socialists
+		add_popularity = {
+			ideology = progressivism
+			popularity = 0.1
+		}
+		news_event = {
+			id = news.143
+			days = 1
+		}
+		remove_ideas = {
+			MOL_legionnaire
+			MOL_provisional
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}
+	option = {
+		name = moldova.1.b
+		set_politics = {
+			ruling_party = conservatism
+		}
+		add_popularity = {
+			ideology = conservatism
+			popularity = 0.1
+		}
+		news_event = {
+			id = news.144
+			days = 1
+		}
+		remove_ideas = {
+			MOL_legionnaire
+			MOL_provisional
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}
+	option = {
+		name = moldova.1.c
+		set_politics = {
+			ruling_party = progressivism
+		}
+		add_popularity = {
+			ideology = progressivism
+			popularity = 0.1
+		}
+		add_country_leader_role = {
+			character = "MOL_crm_prog"
+			country_leader = {
+				ideology = social_nationalism
+				desc = "POLITICS_MOTRU_PRANK_DESC"
+				expire = "1965.1.1.1"
+			}
+			promote_leader = yes
+		}
+		set_party_name = {
+			ideology = progressivism
+			long_name = MOL_romanianist_party_long
+			name = MOL_romanianist_party
+		}
+		news_event = {
+			id = news.145
+			days = 1
+		}
+		country_event = {
+			id = moldova.2
+			days = 48
+		}	
+		remove_ideas = MOL_provisional
+		ai_chance = {
+			factor = 10
+		}
+	}
+	option = {
+		name = moldova.1.d
+		set_politics = {
+			ruling_party = reactionism
+		}
+		add_popularity = {
+			ideology = reactionism
+			popularity = 0.1
+		}
+		news_event = {
+			id = news.146
+			days = 1
+		}
+		country_event = {
+			id = moldova.3
+			days = 210
+		}
+		remove_ideas = {
+			MOL_legionnaire
+			MOL_provisional
+			MOL_our_republic
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}
+}
+
+country_event = { #crm trolling
+	id = moldova.2
+	title = moldova.2.t
+	desc = moldova.2.desc
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = moldova.2.a
+		news_event = {
+			id = news.147
+			days = 1
+		}
+		set_politics = {
+			ruling_party = despotism
+		}
+		add_popularity = {
+			ideology = despotism
+			popularity = 0.27
+		}
+		add_country_leader_role = {
+			character = "MOL_crm_des"
+			country_leader = {
+				ideology = constitutional_dictatorship
+				expire = "1965.1.1.1"
+				desc = "POLITICS_MOTRU_DESC"
+			}
+			promote_leader = yes
+		}
+		remove_ideas = MOL_legionnaire
+	}
+}
+country_event = { #o no codreanu ded :( (or not)
+	id = moldova.3
+	title = moldova.3.t
+	desc = moldova.3.desc
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = moldova.3.a
+		ai_chance = {
+			factor = 10
+		}
+		news_event = {
+			id = news.148
+			days = 1
+		}
+		retire_character = MOL_codreanu
+		add_country_leader_role = {
+			character = "MOL_eliade"
+			country_leader = {
+				ideology = reactionary_populism
+				expire = "1965.1.1.1"
+				desc = "POLITICS_ELIADE_DESC"
+			}
+			promote_leader = yes
+		}
+		set_country_flag = MOL_eliadeia
+		set_cosmetic_tag = MOL_eliade_ct
+		add_stability = -0.2
+	}
+	option = {
+		name = moldova.3.b
+		ai_chance = {
+			factor = 10
+		}
+		news_event = {
+			id = news.149
+			days = 1
+		}
+		retire_character = MOL_codreanu
+		set_politics = {
+			ruling_party = anarchism
+		}
+		add_popularity = {
+			ideology = anarchism
+			popularity = 0.25
+		}
+	}
+	option = {
+		name = moldova.3.c
+
+	}
+}
+
+
+#You know, sometimes I wonder if anyone actually looks in the funny files for countries that only have skeleton content. Probably not. If you're here, though, I'd like you to know that this obviously isn't everything we have planned for Romania and such. I don't want to spoil, but mmmmaybe I omitted some very interesting people for this skeleton.

@@ -1,0 +1,14 @@
+characters = {
+	DON_Ivan = {
+		name = "Ivan Poltavets-Ostryanitsa"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/DON/Portrait_DON_Ivan.png"
+			}
+		}
+		country_leader = {
+			ideology = military_dictatorship
+			expire = "1965.1.1.1"
+		}
+	}
+}

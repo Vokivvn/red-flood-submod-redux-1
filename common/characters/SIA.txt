@@ -1,0 +1,78 @@
+characters = {
+	SIA_Phraya_Phahon = {
+		name = "Phraya Phahon"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/SIA/Portrait_SIA_Phraya_Phahon.png"
+			}
+		}
+		country_leader = {
+			ideology = social_liberalism
+			expire = "1965.1.1.1"
+		}
+	}
+	SIA_Phibunsongkhram = {
+		name = "Plaek Phibunsongkhram"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/SIA/Portrait_SIA_Phibunsongkhram.png"
+			}
+		}
+		country_leader = {
+			ideology = national_rejuvenatism
+			expire = "1965.1.1.1"
+		}
+	}
+	SIA_Banomyong = {
+		name = "Pridi Banomyong"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/SIA/Portrait_SIA_Banomyong.png"
+			}
+		}
+		country_leader = {
+			ideology = religious_socialism
+			expire = "1965.1.1.1"
+		}
+	}
+	SIA_Songsuradet = {
+		name = "Phraya Songsuradet"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/SIA/Portrait_SIA_Songsuradet.png"
+			}
+		}
+		country_leader = {
+			ideology = social_conservatism
+			expire = "1965.1.1.1"
+		}
+	}
+	SIA_Boworadet = {
+		name = "Boworadet Kridakorn"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/SIA/Portrait_SIA_Boworadet.png"
+			}
+		}
+		country_leader = {
+			ideology = military_dictatorship
+			expire = "1965.1.1.1"
+		}
+	}
+	SIA_Prajadhipok = {
+		name = "Rama VII"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/SIA/Portrait_SIA_Prajadhipok.png"
+			}
+		}
+	}
+	SIA_Sukhumbandhu = {
+		name = "Rama VIII"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/SIA/Portrait_SIA_Sukhumbandhu.png"
+			}
+		}
+	}
+}

@@ -1,0 +1,24 @@
+state= {
+	id=935
+	name="STATE_935" # Khotan
+	manpower = 348983
+	resources={
+		oil=2.000
+	}
+	state_category = rural
+	history= {
+		owner = SIK
+		add_core_of = SIK
+		buildings = {
+			infrastructure = 1
+		}
+
+		victory_points = {
+			4973 5
+		}
+
+	}
+	provinces={
+		1970 8112 4973 10911 1943 5042 
+	}
+}

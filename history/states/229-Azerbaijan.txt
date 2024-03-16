@@ -1,0 +1,41 @@
+state={
+	id=229
+	name="STATE_229"
+	resources={
+		oil=70 # was: 126.000
+	}
+
+	history={
+		owner = KAV
+		victory_points = {
+			7661 20
+		}
+		victory_points = {
+			11674 3
+		}
+		victory_points = {
+			1536 3
+		}
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			arms_factory = 2
+			air_base = 5
+            synthetic_refinery = 1
+			7661 = {
+				naval_base = 2
+			}
+		}
+
+		add_core_of = AZR
+		add_core_of = KAV
+
+	}
+
+	provinces={
+		1536 1610  4477 4545 4614  7495 7661 11645 11674 11704 6763
+	}
+	manpower=4029979
+	buildings_max_level_factor=1.000
+	state_category=large_city
+}

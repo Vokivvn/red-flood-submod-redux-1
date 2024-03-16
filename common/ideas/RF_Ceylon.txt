@@ -1,0 +1,26 @@
+ideas = {
+
+	#################
+	# Country ideas #
+	#################
+
+	country = {
+		
+		CEY_theosophical_subversion = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = -0.05
+				political_power_factor = -0.1
+				foreign_subversive_activites = 0.20
+				subversive_activites_upkeep = 0.20
+			}
+			picture = ELS_religious_influence
+		}
+
+	} #END OF COUNTRY IDEAS
+
+	###########
+	#MINISTERS#
+	###########
+
+}

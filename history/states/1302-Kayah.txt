@@ -1,0 +1,23 @@
+state={
+	id=1302
+	name="STATE_1302"
+
+	history={
+		owner = SIA
+		add_core_of = BUR
+		add_core_of = SIA
+		buildings = {
+			infrastructure = 1
+		}
+		victory_points = {
+			4654 2
+		}
+	}
+
+	provinces={
+		7441 12317 4654
+	}
+	manpower=68900
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

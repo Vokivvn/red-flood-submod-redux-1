@@ -1,0 +1,13 @@
+characters = {
+	SCO_wendy_wood = {
+		name = "Wendy Wood"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SCO/Portrait_SCO_Wendy_Wood.png"
+			}
+		}
+		country_leader = {
+			ideology = national_rejuvenatism
+		}
+	}
+}

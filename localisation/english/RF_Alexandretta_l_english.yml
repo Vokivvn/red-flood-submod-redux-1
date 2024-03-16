@@ -1,0 +1,39 @@
+﻿l_english:
+
+#COUNTRY NAME#
+CCD:0 "Alexandretta"
+CCD_DEF:0 "the Free Arab State of Alexandretta"
+CCD_ADJ:0 "Arab"
+CCD_reuni:0 "Free Arab State of Shaam"
+CCD_reuni_DEF:0 "the Free Arab State of Shaam "
+CCD_reuni_ADJ:0 "Arab"
+#PARTIES#
+CCD_accelerationism_party:0 "HSQI"
+CCD_accelerationism_party_long:0 "Hizb al-Suri al-Qawmi al-Ijtima'i"
+CCD_vanguard_socialism_party:0 "NU"
+CCD_vanguard_socialism_party_long:0 "Nadi al-'Uruba"
+CCD_popular_socialism_party:0 "SSP"
+CCD_popular_socialism_party_long:0 "Syrian Social Party"
+CCD_anarchism_party:0 "SR"
+CCD_anarchism_party_long:0 "Syrian Revolutionary Union"
+CCD_revisionist_socialism_party:0 "HIA"
+CCD_revisionist_socialism_party_long:0 "Hizb al-Ishtirakiyeen al-'Arab"
+CCD_progressivism_party:0 "HSQI"
+CCD_progressivism_party_long:0 "Hizb al-Suri al-Qawmi al-Ijtima'i"
+CCD_liberalism_party:0 "SDP"
+CCD_liberalism_party_long:0 "Syrian Democratic Party"
+CCD_conservatism_party:0 "SFP"
+CCD_conservatism_party_long:0 "Syrian Fatherland Party"
+CCD_right_authoritarianism_party:0 "KW"
+CCD_right_authoritarianism_party_long:0 "Kutlah al-Wataniyah"
+CCD_reactionism_party:0 "IPFS"
+CCD_reactionism_party_long:0 "Syrian Islamic Protection Force"
+CCD_despotism_party:0 "HIA"
+CCD_despotism_party_long:0 "Harakat al-Ihya al-'Arabi"
+#LEADER DESCRITIONS#
+#IDEAS#
+#CUSTOM TOOLTIPS AND FLAGS#
+CCD_WIN_SYR_tt:0 "@CCD §YThe Free Arab State of Alexandretta§! has toppled the @SYR §YUnited Kingdom of Greater Syria§!."
+CCD_WIN_SNP_tt:0 "@CCD §YThe Free Arab State of Alexandretta§! has succeeded in revolution against the @SNP §YSyrian Republic§!."
+#DECISIONS (1.5 Update)#
+#FOCUSES#

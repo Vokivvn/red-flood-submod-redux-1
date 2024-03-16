@@ -1,0 +1,52 @@
+SIB_european_union = {
+	allowed = {
+		original_tag = SIB
+	}
+	priority = 100
+	visible = {
+		is_faction_leader = yes
+		OR = {
+			has_government = progressivism
+			has_government = liberalism
+			has_government = conservatism
+        }
+		is_subject = no
+	}
+}
+SIB_invite_refugees = {
+	allowed = {
+		original_tag = SIB
+	}
+	priority = 100
+	visible = {
+		is_faction_leader = yes
+		OR = {
+        has_government = progressivism
+		has_government = liberalism
+		has_government = conservatism
+        }		
+		has_country_flag = SIB_ratify_treaty
+	}
+}
+SIB_liberation = {
+	allowed = {
+		original_tag = SIB
+	}
+	priority = 100
+	visible = {
+		has_completed_focus = SIB_europe_of_our_own
+		is_subject = no
+	}
+}
+SIB_unification = {
+	allowed = {
+		original_tag = SIB
+	}
+	priority = 100
+	picture = GFX_decision_category_russian_reuni
+	icon = GFX_Russian_uni_nationalist
+	visible = {
+		has_completed_focus = SIB_making_our_move
+		is_subject = no
+	}
+}

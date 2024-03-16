@@ -1,0 +1,24 @@
+RAJ_fending_off_britain_white = {
+	allowed = {
+		OR = {
+			tag = BIH
+			tag = RSR
+			tag = INC
+			tag = ARY
+			tag = DIN
+			tag = HYD
+			tag = TRA
+			tag = BNG
+			tag = ASM
+			tag = ORS
+			tag = KSM
+			tag = PNJ
+			tag = UPI
+		}
+	}
+	visible = {
+		is_subject = no
+	}
+	priority = 100
+	icon = generic_political_actions
+}

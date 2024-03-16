@@ -1,0 +1,121 @@
+﻿capital = 111
+
+#oob = #
+
+set_research_slots = 3
+
+set_convoys = 175
+
+add_ideas = {
+	limited_conscription
+	export_focus
+	civilian_economy
+}
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1		
+	tech_recon = 1
+	tech_engineers = 1
+	tech_trucks =1
+	motorised_infantry = 1
+}
+
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	set_technology = {
+		early_submarine = 1
+		early_heavy_cruiser = 1
+	}
+}
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		early_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		early_ship_hull_cruiser = 1
+		basic_battery = 1
+		basic_light_battery = 1
+		coastal_defense_ships = 1
+	}
+}
+
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+	set_technology = {
+		iw_small_airframe = 1
+		aa_lmg = 1
+		aa_cannon_1 = 1
+		early_bombs = 1
+		engines_1 = 1
+	}
+}
+if = {
+	limit = { NOT = { has_dlc = "By Blood Alone" } }
+	set_technology = {
+		early_fighter = 1
+		CAS1 = 1
+	}
+}
+
+set_politics = {
+	ruling_party = popular_socialism
+	last_election = "1933.10.25"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	vanguard_socialism = 20
+	popular_socialism = 30
+	anarchism = 0
+	revisionist_socialism = 20
+	progressivism = 25
+	liberalism = 5
+	conservatism = 0
+	right_authoritarianism = 0
+	despotism = 0
+	reactionism = 0
+	accelerationism = 0
+}
+
+set_stability = 0.5
+
+recruit_character = FIR_yrjo_sirola
+recruit_character = FIR_oskari_tokoi
+recruit_character = FIR_karl_einar_paivio
+recruit_character = FIR_jukka_rahja
+recruit_character = FIR_akseli_anttila
+recruit_character = FIR_toivo_antikanen
+recruit_character = FIR_oskari_kumpu
+recruit_character = FIR_verner_lehtimäki
+recruit_character = FIR_harry_jarv
+recruit_character = FIR_arvo_tuminen
+recruit_character = FIR_waino_wuolijoki
+recruit_character = FIR_carl_paivio
+recruit_character = FIR_aimo_aaltonen
+recruit_character = FIR_hiski_salomaa
+recruit_character = FIR_gust_aakula
+recruit_character = FIR_ville_pessi
+recruit_character = FIR_johan_helo
+recruit_character = FIR_gust_alonen
+recruit_character = FIR_ere_kolu
+recruit_character = FIR_adolf_taimi
+recruit_character = FIR_julius_ailio
+recruit_character = FIR_jack_ujanen
+recruit_character = FIR_karl_gustaf_nyman
+recruit_character = FIR_eino_rahja
+recruit_character = FIR_matti_paasivuori
+recruit_character = FIR_fred_jaakkola
+recruit_character = FIR_juho_henrik_uoti
+recruit_character = FIR_otto_wille_kuusinen
+recruit_character = FIR_tuure_lehen
+recruit_character = FIR_armas_aikia
+recruit_character = FIR_paavo_prokkonen
+recruit_character = FIR_hugo_meurer
+recruit_character = FIR_adrian_nepenin
+recruit_character = FIR_otto_kalvitsa
+recruit_character = FIR_Helsinki_Veterans_Association
+

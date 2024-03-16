@@ -1,0 +1,27 @@
+
+state={
+	id=923
+	name="STATE_923"
+	manpower = 498345
+
+	state_category = town
+
+	history={
+		owner = HUN
+		victory_points = {
+			646 20
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+		}
+		add_core_of = HUN
+		add_core_of = TRS
+		add_claim_by = MOL
+		add_claim_by = ROM
+	}
+
+	provinces={
+		646 9606 11608
+	}
+}

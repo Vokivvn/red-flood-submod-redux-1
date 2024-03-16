@@ -1,0 +1,828 @@
+ideology_generic_category = {
+	stt_highlight_states = {
+		icon = hand_grab
+
+		highlight_states = {
+			highlight_states_trigger = { has_state_flag = marked_for_transfer }
+			highlight_color_while_active = 4
+		}
+
+		allowed = {
+			always = no
+		}
+
+		available = {
+			hidden_trigger = { always = no }
+		}
+
+		visible = {
+			hidden_trigger = {
+				is_ai = no
+				check_variable = { ROOT.marked_states^num > 0 }
+			}
+		}
+
+		fire_only_once = no
+		on_map_mode = map_only
+		cancel_if_not_visible = yes
+		days_mission_timeout = 7
+		is_good = yes
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision stt_highlight_states"
+		}
+		timeout_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision timeout stt_highlight_states"
+			hidden_effect = {
+				for_each_scope_loop = {
+					array = ROOT.marked_states
+					clr_state_flag = marked_for_transfer
+				}
+				clear_array = ROOT.marked_states
+				clear_variable = ROOT.update_stt_gui
+			}
+		}
+	}
+
+#Revolutionary Anarchist
+	anarchism_rally = {
+		cost = 50
+		available = {
+			has_government = anarchism
+		}
+		visible = {
+			has_government = anarchism
+		}
+		remove_effect  = {
+			add_timed_idea = {
+				idea = generic_held_rally_anarchist
+				days = 90
+			}
+			add_war_support = 0.05
+		}
+		days_remove = 14
+		days_re_enable = 90
+	}
+	anarchism_propaganda = {
+		cost = 25
+		available = {
+			has_government = anarchism
+			anarchism < 0.95
+		}
+		visible = {
+			has_government = anarchism
+		}
+		remove_effect = {
+			add_popularity = {
+				ideology = anarchism
+				popularity = 0.05
+			}
+		}
+		days_remove = 14
+		days_re_enable = 60
+	}
+	anarchism_conference = {
+		cost = 15
+		available = {
+			has_government = anarchism
+		}
+		visible = {
+			has_government = anarchism
+		}
+		remove_effect  = {
+			add_timed_idea = {
+				idea = generic_conference_anarchism
+				days = 35
+			}
+		}
+		days_remove = 7
+		days_re_enable = 210
+	}
+	anarchism_appeal = {
+		cost = 25
+		available = {
+			has_government = anarchism
+		}
+		visible = {
+			has_government = anarchism
+		}
+		remove_effect = {
+			add_timed_idea = {
+				idea = generic_appeal_anarchism
+				days = 30
+			}
+		}
+		days_remove = 60
+		days_re_enable = 60
+	}
+#Vanguard Socialist
+	vanguard_socialism_rally = {
+		cost = 50
+		available = {
+			has_government = vanguard_socialism
+		}
+		visible = {
+			has_government = vanguard_socialism
+		}
+		remove_effect  = {
+			add_timed_idea = {
+				idea = generic_held_rally_vanguard_socialism
+				days = 90
+			}
+			add_war_support = 0.05
+		}
+		days_remove = 14
+		days_re_enable = 90
+	}
+	vanguard_socialism_propaganda = {
+		cost = 25
+		available = {
+			has_government = vanguard_socialism
+			vanguard_socialism < 0.95
+		}
+		visible = {
+			has_government = vanguard_socialism
+		}
+		remove_effect = {
+			add_popularity = {
+				ideology = vanguard_socialism
+				popularity = 0.05
+			}
+		}
+		days_remove = 14
+		days_re_enable = 60
+	}
+	vanguard_socialism_conference = {
+		cost = 15
+		available = {
+			has_government = vanguard_socialism
+		}
+		visible = {
+			has_government = vanguard_socialism
+		}
+		remove_effect  = {
+			add_timed_idea = {
+				idea = generic_conference_vanguard_socialism
+				days = 35
+			}
+		}
+		days_remove = 7
+		days_re_enable = 210
+	}
+	vanguard_socialism_appeal = {
+		cost = 25
+		available = {
+			has_government = vanguard_socialism
+		}
+		visible = {
+			has_government = vanguard_socialism
+		}
+		remove_effect = {
+			add_timed_idea = {
+				idea = generic_appeal_vanguard_socialism
+				days = 30
+			}
+		}
+		days_remove = 60
+		days_re_enable = 60
+	}
+#Libertarian Marxist
+	popular_socialism_rally = {
+		cost = 50
+		available = {
+			has_government = popular_socialism
+		}
+		visible = {
+			has_government = popular_socialism
+		}
+		remove_effect  = {
+			add_timed_idea = {
+				idea = generic_held_rally_popular_socialism
+				days = 90
+			}
+			add_war_support = 0.05
+		}
+		days_remove = 14
+		days_re_enable = 90
+	}
+	popular_socialism_propaganda = {
+		cost = 25
+		available = {
+			has_government = popular_socialism
+			popular_socialism < 0.95
+		}
+		visible = {
+			has_government = popular_socialism
+		}
+		remove_effect = {
+			add_popularity = {
+				ideology = popular_socialism
+				popularity = 0.05
+			}
+		}
+		days_remove = 14
+		days_re_enable = 60
+	}
+	popular_socialism_conference = {
+		cost = 15
+		available = {
+			has_government = popular_socialism
+		}
+		visible = {
+			has_government = popular_socialism
+		}
+		remove_effect  = {
+			add_timed_idea = {
+				idea = generic_conference_popular_socialism
+				days = 35
+			}
+		}
+		days_remove = 7
+		days_re_enable = 210
+	}
+	popular_socialism_appeal = {
+		cost = 25
+		available = {
+			has_government = popular_socialism
+		}
+		visible = {
+			has_government = popular_socialism
+		}
+		remove_effect = {
+			add_timed_idea = {
+				idea = generic_appeal_popular_socialism
+				days = 30
+			}
+		}
+		days_remove = 60
+		days_re_enable = 60
+	}
+#Revisionist Socialist
+	revisionist_socialism_rally = {
+		cost = 50
+		available = {
+			has_government = revisionist_socialism
+		}
+		visible = {
+			has_government = revisionist_socialism
+		}
+		remove_effect  = {
+			add_timed_idea = {
+				idea = generic_held_rally_revisionist_socialism
+				days = 90
+			}
+			add_war_support = 0.05
+		}
+		days_remove = 14
+		days_re_enable = 90
+	}
+	revisionist_socialism_propaganda = {
+		cost = 25
+		available = {
+			has_government = revisionist_socialism
+			revisionist_socialism < 0.95
+		}
+		visible = {
+			has_government = revisionist_socialism
+		}
+		remove_effect = {
+			add_popularity = {
+				ideology = revisionist_socialism
+				popularity = 0.05
+			}
+		}
+		days_remove = 14
+		days_re_enable = 60
+	}
+	revisionist_socialism_conference = {
+		cost = 15
+		available = {
+			has_government = revisionist_socialism
+		}
+		visible = {
+			has_government = revisionist_socialism
+		}
+		remove_effect  = {
+			add_timed_idea = {
+				idea = generic_conference_revisionist_socialism
+				days = 35
+			}
+		}
+		days_remove = 7
+		days_re_enable = 210
+	}
+	revisionist_socialism_appeal = {
+		cost = 25
+		available = {
+			has_government = revisionist_socialism
+		}
+		visible = {
+			has_government = revisionist_socialism
+		}
+		remove_effect = {
+			add_timed_idea = {
+				idea = generic_appeal_revisionist_socialism
+				days = 30
+			}
+		}
+		days_remove = 60
+		days_re_enable = 60
+	}
+#Social Democrat
+	progressivism_rally = {
+		cost = 50
+		available = {
+			has_government = progressivism
+		}
+		visible = {
+			has_government = progressivism
+		}
+		remove_effect  = {
+			add_timed_idea = {
+				idea = generic_held_rally_progressivism
+				days = 90
+			}
+			add_war_support = 0.05
+		}
+		days_remove = 14
+		days_re_enable = 90
+	}
+	progressivism_propaganda = {
+		cost = 25
+		available = {
+			has_government = progressivism
+			progressivism < 0.95
+		}
+		visible = {
+			has_government = progressivism
+		}
+		remove_effect = {
+			add_popularity = {
+				ideology = progressivism
+				popularity = 0.05
+			}
+		}
+		days_remove = 14
+		days_re_enable = 60
+	}
+	progressivism_conference = {
+		cost = 15
+		available = {
+			has_government = progressivism
+		}
+		visible = {
+			has_government = progressivism
+		}
+		remove_effect  = {
+			add_timed_idea = {
+				idea = generic_conference_progressivism
+				days = 35
+			}
+		}
+		days_remove = 7
+		days_re_enable = 210
+	}
+	progressivism_appeal = {
+		cost = 25
+		available = {
+			has_government = progressivism
+		}
+		visible = {
+			has_government = progressivism
+		}
+		remove_effect = {
+			add_timed_idea = {
+				idea = generic_appeal_progressivism
+				days = 30
+			}
+		}
+		days_remove = 60
+		days_re_enable = 60
+	}
+#Liberal
+	liberalism_rally = {
+		cost = 50
+		available = {
+			has_government = liberalism
+		}
+		visible = {
+			has_government = liberalism
+		}
+		remove_effect  = {
+			add_timed_idea = {
+				idea = generic_held_rally_liberalism
+				days = 90
+			}
+			add_war_support = 0.05
+		}
+		days_remove = 14
+		days_re_enable = 90
+	}
+	liberalism_propaganda = {
+		cost = 25
+		available = {
+			has_government = liberalism
+			liberalism < 0.95
+		}
+		visible = {
+			has_government = liberalism
+		}
+		remove_effect = {
+			add_popularity = {
+				ideology = liberalism
+				popularity = 0.05
+			}
+		}
+		days_remove = 14
+		days_re_enable = 60
+	}
+	liberalism_conference = {
+		cost = 15
+		available = {
+			has_government = liberalism
+		}
+		visible = {
+			has_government = liberalism
+		}
+		remove_effect  = {
+			add_timed_idea = {
+				idea = generic_conference_liberalism
+				days = 35
+			}
+		}
+		days_remove = 7
+		days_re_enable = 210
+	}
+	liberalism_appeal = {
+		cost = 25
+		available = {
+			has_government = liberalism
+		}
+		visible = {
+			has_government = liberalism
+		}
+		remove_effect = {
+			add_timed_idea = {
+				idea = generic_appeal_liberalism
+				days = 30
+			}
+		}
+		days_remove = 60
+		days_re_enable = 60
+	}
+#Conservative
+	conservatism_rally = {
+		cost = 50
+		available = {
+			has_government = conservatism
+		}
+		visible = {
+			has_government = conservatism
+		}
+		remove_effect  = {
+			add_timed_idea = {
+				idea = generic_held_rally_conservatism
+				days = 90
+			}
+			add_war_support = 0.05
+		}
+		days_remove = 14
+		days_re_enable = 90
+	}
+	conservatism_propaganda = {
+		cost = 25
+		available = {
+			has_government = conservatism
+			conservatism < 0.95
+		}
+		visible = {
+			has_government = conservatism
+		}
+		remove_effect = {
+			add_popularity = {
+				ideology = conservatism
+				popularity = 0.05
+			}
+		}
+		days_remove = 14
+		days_re_enable = 60
+	}
+	conservatism_conference = {
+		cost = 15
+		available = {
+			has_government = conservatism
+		}
+		visible = {
+			has_government = conservatism
+		}
+		remove_effect  = {
+			add_timed_idea = {
+				idea = generic_conference_conservatism
+				days = 35
+			}
+		}
+		days_remove = 7
+		days_re_enable = 210
+	}
+	conservatism_appeal = {
+		cost = 25
+		available = {
+			has_government = conservatism
+		}
+		visible = {
+			has_government = conservatism
+		}
+		remove_effect = {
+			add_timed_idea = {
+				idea = generic_appeal_conservatism
+				days = 30
+			}
+		}
+		days_remove = 60
+		days_re_enable = 60
+	}
+#Right Authoritarian
+	right_authoritarianism_rally = {
+		cost = 50
+		available = {
+			has_government = right_authoritarianism
+		}
+		visible = {
+			has_government = right_authoritarianism
+		}
+		remove_effect  = {
+			add_timed_idea = {
+				idea = generic_held_rally_right_authoritarianism
+				days = 90
+			}
+			add_war_support = 0.05
+		}
+		days_remove = 14
+		days_re_enable = 90
+	}
+	right_authoritarianism_propaganda = {
+		cost = 25
+		available = {
+			has_government = right_authoritarianism
+			right_authoritarianism < 0.95
+		}
+		visible = {
+			has_government = right_authoritarianism
+		}
+		remove_effect = {
+			add_popularity = {
+				ideology = right_authoritarianism
+				popularity = 0.05
+			}
+		}
+		days_remove = 14
+		days_re_enable = 60
+	}
+	right_authoritarianism_conference = {
+		cost = 15
+		available = {
+			has_government = right_authoritarianism
+		}
+		visible = {
+			has_government = right_authoritarianism
+		}
+		remove_effect  = {
+			add_timed_idea = {
+				idea = generic_conference_right_authoritarianism
+				days = 35
+			}
+		}
+		days_remove = 7
+		days_re_enable = 210
+	}
+	right_authoritarianism_appeal = {
+		cost = 25
+		available = {
+			has_government = right_authoritarianism
+		}
+		visible = {
+			has_government = right_authoritarianism
+		}
+		remove_effect = {
+			add_timed_idea = {
+				idea = generic_appeal_right_authoritarianism
+				days = 30
+			}
+		}
+		days_remove = 60
+		days_re_enable = 60
+	}
+#Despotic
+	despotism_rally = {
+		cost = 50
+		available = {
+			has_government = despotism
+		}
+		visible = {
+			has_government = despotism
+		}
+		remove_effect  = {
+			add_timed_idea = {
+				idea = generic_held_rally_despotism
+				days = 90
+			}
+			add_war_support = 0.05
+		}
+		days_remove = 14
+		days_re_enable = 90
+	}
+	despotism_propaganda = {
+		cost = 25
+		available = {
+			has_government = despotism
+			despotism < 0.95
+		}
+		visible = {
+			has_government = despotism
+		}
+		remove_effect = {
+			add_popularity = {
+				ideology = despotism
+				popularity = 0.05
+			}
+		}
+		days_remove = 14
+		days_re_enable = 60
+	}
+	despotism_conference = {
+		cost = 15
+		available = {
+			has_government = despotism
+		}
+		visible = {
+			has_government = despotism
+		}
+		remove_effect  = {
+			add_timed_idea = {
+				idea = generic_conference_despotism
+				days = 35
+			}
+		}
+		days_remove = 7
+		days_re_enable = 210
+	}
+	despotism_appeal = {
+		cost = 25
+		available = {
+			has_government = despotism
+		}
+		visible = {
+			has_government = despotism
+		}
+		remove_effect = {
+			add_timed_idea = {
+				idea = generic_appeal_despotism
+				days = 30
+			}
+		}
+		days_remove = 60
+		days_re_enable = 60
+	}
+#Reactionary
+	reactionism_rally = {
+		cost = 50
+		available = {
+			has_government = reactionism
+		}
+		visible = {
+			has_government = reactionism
+		}
+		remove_effect  = {
+			add_timed_idea = {
+				idea = generic_held_rally_reactionism
+				days = 90
+			}
+			add_war_support = 0.05
+		}
+		days_remove = 14
+		days_re_enable = 90
+	}
+	reactionism_propaganda = {
+		cost = 25
+		available = {
+			has_government = reactionism
+			reactionism < 0.95
+		}
+		visible = {
+			has_government = reactionism
+		}
+		remove_effect = {
+			add_popularity = {
+				ideology = reactionism
+				popularity = 0.05
+			}
+		}
+		days_remove = 14
+		days_re_enable = 60
+	}
+	reactionism_conference = {
+		cost = 15
+		available = {
+			has_government = reactionism
+		}
+		visible = {
+			has_government = reactionism
+		}
+		remove_effect  = {
+			add_timed_idea = {
+				idea = generic_conference_reactionism
+				days = 35
+			}
+		}
+		days_remove = 7
+		days_re_enable = 210
+	}
+	reactionism_appeal = {
+		cost = 25
+		available = {
+			has_government = reactionism
+		}
+		visible = {
+			has_government = reactionism
+		}
+		remove_effect = {
+			add_timed_idea = {
+				idea = generic_appeal_reactionism
+				days = 30
+			}
+		}
+		days_remove = 60
+		days_re_enable = 60
+	}
+#Accelerationism
+	accelerationism_rally = {
+		cost = 50
+		available = {
+			has_government = accelerationism
+		}
+		visible = {
+			has_government = accelerationism
+		}
+		remove_effect  = {
+			add_timed_idea = {
+				idea = generic_held_rally_accelerationism
+				days = 90
+			}
+			add_war_support = 0.05
+		}
+		days_remove = 14
+		days_re_enable = 90
+	}
+	accelerationism_propaganda = {
+		cost = 25
+		available = {
+			has_government = accelerationism
+			accelerationism < 0.95
+		}
+		visible = {
+			has_government = accelerationism
+		}
+		remove_effect = {
+			add_popularity = {
+				ideology = accelerationism
+				popularity = 0.05
+			}
+		}
+		days_remove = 14
+		days_re_enable = 60
+	}
+	accelerationism_conference = {
+		cost = 15
+		available = {
+			has_government = accelerationism
+		}
+		visible = {
+			has_government = accelerationism
+		}
+		remove_effect  = {
+			add_timed_idea = {
+				idea = generic_conference_accelerationism
+				days = 35
+			}
+		}
+		days_remove = 7
+		days_re_enable = 210
+	}
+	accelerationism_appeal = {
+		cost = 25
+		available = {
+			has_government = accelerationism
+		}
+		visible = {
+			has_government = accelerationism
+		}
+		remove_effect = {
+			add_timed_idea = {
+				idea = generic_appeal_accelerationism
+				days = 30
+			}
+		}
+		days_remove = 60
+		days_re_enable = 60
+	}
+}

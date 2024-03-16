@@ -1,0 +1,27 @@
+
+state={
+	id=1080
+	name="STATE_1080"
+	manpower = 506143
+
+	state_category = rural
+
+	resources={
+		
+	}
+	history={
+		owner = ASM
+		add_core_of = ASM
+		add_claim_by = BNG
+		buildings = {
+			infrastructure = 2
+		}
+		victory_points = {
+			1075 3
+		}
+	}
+
+	provinces={
+		1075 7634
+	}
+}

@@ -1,0 +1,31 @@
+
+state={
+	id=1155
+	name="STATE_1155"
+	manpower = 1045092
+		resources={
+		chromium= 60
+		steel= 4
+	}
+	
+	state_category = rural
+	
+	history={
+		owner = MAG
+		add_core_of = MAG
+		add_core_of = MLG
+		victory_points = {
+			5128 10
+		}
+		victory_points = {
+			13471 5
+		}
+		buildings = {
+			infrastructure = 2
+		}
+	}
+
+	provinces={
+		13467 13472 13484 13470 13471 5128 10884
+	}
+}

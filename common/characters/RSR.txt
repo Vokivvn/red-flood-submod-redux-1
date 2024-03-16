@@ -1,0 +1,109 @@
+characters = {
+	RSR_shripad_dange = {
+		name = "Shripad Amrit Dange"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/RSR/Portrait_RSR_Dange.png"
+			}
+		}
+
+		country_leader = {
+			ideology = folk_socialism
+			expire = "1965.1.1.1"
+		}
+	}
+	RSR_M_N_Roy = {
+		name = "M.N. Roy"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/RSR/Portrait_RSR_M_N_Roy.png"
+			}
+		}
+		country_leader = {
+			ideology = folk_socialism
+			expire = "1965.1.1.1"
+		}
+	}
+	RSR_mandayam_parthasarathi_tirumal_acharya = {
+		name = "Mandayam Parthasarathi Tirumal Acharya"
+		country_leader = {
+			ideology = social_anarchism
+			expire = "1954.1.1.1"
+		}
+	}
+	RSR_nathuram_godse = {
+		name = "Nathuram Godse"
+		country_leader = {
+			ideology = reactionary_populism
+			expire = "1985.1.1.1"
+		}
+	}
+	RSR_Bhagat_Singh = {
+		name = "Bhagat Singh"
+	
+	}
+	RSR_Sachindranath_Sanyal = {
+		name = "Sachindranath Sanyal"
+	
+	}
+	RSR_Narayan_Malhar_Joshi = {
+		name = "Narayan Malhar Joshi"
+	
+	}
+	RSR_Surya_Sen = {
+		name = "Surya Sen"
+	
+	}
+	RSR_Gangadhar_Adhikari = {
+		name = "Gangadhar Adhikari"
+	
+	}
+	RSR_Puran_Chand_Joshi = {
+		name = "Puran Chand Joshi"
+	
+	}
+	RSR_Muzaffar_Ahmad = {
+		name = "Muzaffar Ahmad"
+	
+	}
+	RSR_Bankim_Mukherjee = {
+		name = "Bankim Mukherjee"
+	
+	}
+	RSR_Somnath_Lahriri = {
+		name = "Somnath Lahriri"
+	
+	}
+	RSR_Abdur_Rezzak_Khan = {
+		name = "Abdur Rezzak Khan"
+	
+	}
+	RSR_Abdul_Halim = {
+		name = "Abdul Halim"
+	
+	}
+	RSR_Bhupendranath_Datta = {
+		name = "Bhupendranath Datta"
+	
+	}
+	RSR_Sohan_Singh_Josh = {
+		name = "Sohan Singh Josh"
+	
+	}
+	RSR_Shantaram_Savlaram_Mirajkar = {
+		name = "Shantaram Savlaram Mirajkar"
+	
+	}
+	RSR_Sachchidanand_Vishnu_Ghate = {
+		name = "Sachchidanand Vishnu Ghate"
+	
+	}
+	RSR_Satya_Bhakta = {
+		name = "Satya Bhakta"
+	
+	}
+	RSR_Virendranath_Chattopadhyaya = {
+		name = "Virendranath Chattopadhyaya"
+	
+	}
+}

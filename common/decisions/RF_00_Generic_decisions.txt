@@ -1,0 +1,550 @@
+political_actions = {
+	return_cores_to_ally = {
+		icon = generic_agreement
+
+		available = {
+			if = {
+				limit = { has_war = yes }
+				surrender_progress < 0.20
+			}
+			else = {
+				has_war = no
+			}
+		}
+
+		target_array = faction_members
+		target_array = subjects
+
+		target_trigger = {
+			country_exists = FROM
+			is_ally_with = FROM
+			NOT = {
+				has_country_flag = RF_returning_land
+				has_country_flag = RF_checking_for_possible_annexations
+			}
+			any_owned_state = {
+				is_claim_or_core_of_FROM = yes
+				is_claim_or_core_of_ROOT = no
+
+				NOT = { #Don't hand over our direct colonial territory
+					AND = {
+						ROOT = { tag = ENG }
+						is_british_colonial_claim = yes
+					}
+					AND = {
+						ROOT = { tag = JAP }
+						is_japanese_colonial_claim = yes
+					}
+					AND = {
+						ROOT = { tag = ITA }
+						is_italian_colonial_claim = yes
+					}
+				}
+				#NOT = { has_variable = can_integrate_@ROOT }
+				#NOT = { any_country_with_core = { has_variable = ROOT.can_integrate_@THIS } }
+				NOT = { has_state_flag = RF_keeping_state@ROOT }
+				OR = {
+					is_coastal = yes
+					any_neighbor_state = { is_owned_by = FROM }
+				}
+			}
+		}
+
+		cost = 0
+		fire_only_once = no
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 0.1
+				FROM = {
+					is_subject = yes
+					NOT = { is_subject_of = ROOT }
+				}
+			}
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision return_cores_to_ally target: [From.GetName]"
+			set_country_flag = RF_returning_land
+			FROM = { save_event_target_as = return_to }
+			country_event = rf.political.1
+		}
+	}
+}
+peacetime_decisions = {
+	generic_develop_civil_industry = {
+		cost = 60
+		available = {
+			
+		}
+		visible = {
+			
+		}
+		
+		cancel_trigger = {
+			has_war = yes
+		}
+		
+		remove_effect  = {
+			add_timed_idea = {
+				idea = generic_develop_civ_industry_idea
+				days = 60
+			}
+		}
+		days_remove = 60
+		days_re_enable = 30
+	}
+	
+	generic_appeal_to_neighbours = {
+		cost = 30
+		available = {
+			
+		}
+		visible = {
+			
+		}
+		
+		cancel_trigger = {
+			has_war = yes
+		}
+		
+		remove_effect  = {
+			every_neighbor_country = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = small_increase
+				}
+			}		
+		}
+		days_remove = 30
+		days_re_enable = 15
+	}
+	
+	generic_build_up_surplus = {
+		cost = 15
+		available = {
+			
+		}
+		visible = {
+			
+		}
+		
+		cancel_trigger = {
+			has_war = yes
+		}
+		
+		remove_effect  = {
+			add_timed_idea = {
+				idea = generic_build_up_surplus_idea
+				days = 60
+			}
+		}
+		days_remove = 30
+		days_re_enable = 30
+	}
+	
+	generic_neutral_posture = {
+		cost = 30
+		available = {
+			
+		}
+		visible = {
+			
+		}
+		
+		complete_effect  = {
+			add_stability = 0.05
+			add_war_support = -0.05
+		}
+		
+		days_re_enable = 90
+	}
+	
+	generic_training_programmes_army = {
+		cost = 0
+		custom_cost_text = generic_army_training_decision_text
+		custom_cost_trigger = {
+			command_power > 35
+		}
+		available = {
+			
+		}
+		
+		cancel_trigger = {
+			has_war = yes
+		}
+		
+		visible = {
+			
+		}
+		complete_effect  = {
+			hidden_effect = {
+				add_command_power = -35
+			}
+			add_timed_idea = {
+				idea = generic_army_training_programmes_idea
+				days = 30
+			}
+		}
+		days_remove = 30
+		days_re_enable = 90
+	}
+	
+	generic_training_programmes_air = {
+		cost = 0
+		custom_cost_text = generic_air_training_decision_text
+		custom_cost_trigger = {
+			command_power > 35
+		}
+		available = {
+			
+		}
+		visible = {
+			
+		}
+		
+		cancel_trigger = {
+			has_war = yes
+		}
+		
+		complete_effect  = {
+			hidden_effect = {
+				add_command_power = -35
+			}
+			add_timed_idea = {
+				idea = generic_air_training_programmes_idea
+				days = 30
+			}
+		}
+		days_remove = 30
+		days_re_enable = 90
+	}
+	
+	generic_training_programmes_navy = {
+		cost = 0
+		custom_cost_text = generic_navy_training_decision_text
+		custom_cost_trigger = {
+			command_power > 35
+		}
+		available = {
+			any_state = {
+				is_coastal = yes
+				is_controlled_by = ROOT
+			}
+		}
+		visible = {
+			
+		}
+		
+		cancel_trigger = {
+			has_war = yes
+		}
+		
+		complete_effect  = {
+			hidden_effect = {
+				add_command_power = -35
+			}
+			add_timed_idea = {
+				idea = generic_navy_training_programmes_idea
+				days = 30
+			}
+		}
+		days_remove = 30
+		days_re_enable = 90
+	}
+}
+wartime_decisions = {
+
+	generic_emergency_production_measures = {
+		cost = 0
+		custom_cost_text = generic_epm_text
+		custom_cost_trigger = {
+			command_power > 49
+		}
+		available = {
+			any_owned_state = {
+				industrial_complex > 0
+			}
+		}
+		
+		cancel_trigger = {
+			has_war = no
+		}
+		
+		visible = {
+			has_war = yes
+		}
+		complete_effect  = {
+			hidden_effect = {
+				add_command_power = -50
+			}
+		}
+		remove_effect = {
+			add_ideas = {
+				generic_emergency_production_idea
+			}
+			random_owned_state = {
+				if = {
+					limit = {
+						industrial_complex > 0
+					}
+					remove_building = {
+						type = industrial_complex
+						level = 1
+					}
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+		days_remove = 30
+		days_re_enable = 90
+	}
+	
+	generic_expand_wartime_effort = {
+		cost = 0
+		custom_cost_text = generic_ewe_text
+		custom_cost_trigger = {
+			command_power > 49
+		}
+		available = {
+		
+		}
+		
+		cancel_trigger = {
+			has_war = no
+		}
+		
+		visible = {
+			has_war = yes
+		}
+		complete_effect  = {
+			hidden_effect = {
+				add_command_power = -50
+			}
+		}
+		remove_effect = {
+			add_timed_idea = {
+				idea = generic_increased_war_effort_idea
+				days = 90
+			}
+		}
+		days_remove = 30
+		days_re_enable = 90
+	}
+	
+	generic_war_propaganda = {
+		cost = 0
+		custom_cost_text = generic_war_propaganda_text
+		custom_cost_trigger = {
+			command_power > 24
+		}
+		available = {
+			OR = {
+				has_war_support < 0.8
+				has_stability < 0.8
+			}
+		}
+		
+		cancel_trigger = {
+			has_war = no
+		}
+		
+		visible = {
+			has_war = yes
+		}
+		complete_effect  = {
+			hidden_effect = {
+				add_command_power = -25
+			}
+		}
+		remove_effect = {
+			if = {
+				limit = {
+					has_war_support < 0.8
+				}
+				add_war_support = 0.05
+			}
+			if = {
+				limit = {
+					has_stability < 0.8
+				}
+				add_stability = 0.05
+			}
+		}
+		days_remove = 14
+		days_re_enable = 90
+	}
+	
+	war_propaganda_casualties = { 
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			has_casualties_war_support < 0
+		}
+
+		visible = {
+			has_war = yes
+		}
+
+		fire_only_once = no
+
+		days_remove = 180
+		
+		remove_trigger = {
+			has_war = no
+        }
+		
+		cost = 100
+
+		modifier = {
+			weekly_casualties_war_support = 0.006
+		}
+
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 10 #AI should probably just choose this one for general purposes.
+				has_war = yes
+				has_war_support < 0.7
+			}
+			modifier = {
+				add = 20
+				has_war = yes
+				has_war_support < 0.5
+			}
+			modifier = {
+				add = 30
+				has_war = yes
+				has_war_support < 0.3
+			}
+			modifier = {
+				add = 201 #ie; consider prio idea
+				has_war = yes
+				has_casualties_war_support < -0.25
+			}
+			modifier = {
+				factor = 0
+				has_manpower < 100000
+				has_political_power < 250
+				OR = {
+					has_idea = volunteer_only
+					has_idea = limited_conscription
+					has_idea = extensive_conscription
+				}
+			}
+		}
+	}
+	
+	war_propaganda_convoys = { 
+
+		icon = GFX_decision_generic_naval
+
+		available = {
+			has_convoys_war_support < 0
+		}
+
+		visible = {
+			has_war = yes
+		}
+
+		fire_only_once = no
+
+		days_remove = 180
+		
+		remove_trigger = {
+			has_war = no
+        }
+		
+		cost = 100
+
+		modifier = {
+			weekly_convoys_war_support = 0.006
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 201 #ie; consider prio idea
+				has_war = yes
+				has_convoys_war_support < -0.29
+			}
+			modifier = {
+				factor = 0
+				has_manpower < 100000
+				has_political_power < 250
+				OR = {
+					has_idea = volunteer_only
+					has_idea = limited_conscription
+					has_idea = extensive_conscription
+				}
+			}
+		}
+	}
+	
+	war_propaganda_bombing = { 
+
+		icon = GFX_decision_generic_air
+
+		available = {
+			has_bombing_war_support < 0
+		}
+
+		visible = {
+			has_war = yes
+		}
+
+		fire_only_once = no
+
+		days_remove = 180
+		
+		remove_trigger = {
+			has_war = no
+        }
+		
+		cost = 100
+
+		modifier = {
+			weekly_bombing_war_support = 0.006
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 10 #AI should probably just choose this one for general purposes.
+				has_war = yes
+				has_war_support < 0.65
+			}
+			modifier = {
+				add = 20
+				has_war = yes
+				has_war_support < 0.50
+			}
+			modifier = {
+				add = 30
+				has_war = yes
+				has_war_support < 0.35
+			}
+			modifier = {
+				add = 201 #ie; consider prio idea
+				has_war = yes
+				has_bombing_war_support < -0.20
+			}
+			modifier = {
+				factor = 0
+				has_manpower < 100000
+				has_political_power < 250
+				OR = {
+					has_idea = volunteer_only
+					has_idea = limited_conscription
+					has_idea = extensive_conscription
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,41 @@
+ideas = {
+	country = {
+		SZC_divided_rule = {
+			removal_cost = -1
+			picture = SZC_divided_rule
+			allowed = {
+				original_tag = SZC
+			}
+			modifier = {
+				political_power_gain = -0.1
+				stability_factor = -0.05
+				conservatism_drift = 0.01
+				right_authoritarianism_drift = 0.01
+				despotism_drift = 0.01
+				accelerationism_drift = 0.01
+			}
+		}
+		SZC_YCP_influence = {
+			removal_cost = -1
+			picture = SZC_YCP_influence
+			allowed = {
+				original_tag = SZC
+			}
+			modifier = {
+				accelerationism_drift = 0.03
+				research_speed_factor = 0.03
+			}
+		}
+		SZC_divided_loyalties = {
+			removal_cost = -1
+			picture = SZC_divided_loyalties
+			allowed = {
+				original_tag = SZC
+			}
+			modifier = {
+				stability_factor = -0.02
+				political_power_gain = -0.05
+			}
+		}
+	}
+}

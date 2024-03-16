@@ -1,0 +1,55 @@
+characters={
+	TUA_Actually_Existing_Socialism ={
+		name="Tuareg Statelessness"
+		portraits={
+			civilian={
+				large="gfx/leaders/TUA/Portrait_Tuareg.png"
+			}
+		}
+		country_leader={
+			ideology=stateless_anarchy
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	TUA_the_reactionary = {
+		name = "Ag Mohammed Wau Teguidda Kaocen"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/TUA/Portrait_Tuareg_Ag_Mohammed.png"
+			}
+		}
+		country_leader = {
+			ideology = religious_fundamentalism
+			desc = "POLITICS_AG_MOHAMMED_DESC"
+			expire="1965.1.1.1"
+		}
+	}
+	TUA_the_corruption_guy = {
+		name = "Hamani Diori"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/TUA/Portrait_Tuareg_Hamani_Diori.png"
+			}
+		}
+		country_leader = {
+			ideology = national_conservatism
+			desc=  "POLITICS_HAMANI_DIORI_DESC"
+			expire= "1965.1.1.1"
+		}
+	}
+	TUA_coochie = {
+		name = "Raymond Coche"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/TUA/Portrait_Tuareg_Raymond_Coche.png"
+			}
+		}
+		country_leader = {
+			ideology = futurism
+			desc = "POLITICS_RAYMOND_COCHE_DESC"
+			expire="1965.1.1.1"
+		}
+	}
+	
+}

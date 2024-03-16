@@ -1,0 +1,26 @@
+
+state={
+	id=108
+	name="STATE_108"
+	resources={
+		steel=3.000
+	}
+
+	history={
+		owner = YUG
+		buildings = {
+			infrastructure = 2
+
+		}
+		add_core_of = YUG
+
+	}
+
+	provinces={
+		937 3922 3939 6970 6998 6953
+	}
+	manpower=1042380
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

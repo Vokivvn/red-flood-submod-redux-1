@@ -1,0 +1,26 @@
+characters = {
+	NGA_bernard_henry_bourdillon = {
+		name = "Bernard Henry Bourdillon"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/NGA/Portrait_NGA_Bernard_Henry_Bourdillon.png"
+			}
+		}
+		country_leader = {
+			ideology = constitutional_dictatorship
+			expire = "1965.1.1.1"
+		}
+	}
+	NGA_benjamin_azikiwe = {
+		name = "Benjamin Azikiwe"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/NGA/Portrait_Benjamin_Azikiwe.png"
+			}
+		}
+		country_leader = {
+			ideology = anocracy
+			expire = "1965.1.1.1"
+		}
+	}
+}

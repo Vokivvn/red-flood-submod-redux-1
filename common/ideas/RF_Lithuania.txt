@@ -1,0 +1,43 @@
+ideas = {
+	country = {
+		LIT_warschauer_vertrag = {
+			removal_cost = -1
+			picture = GER_warschauer_vertrag
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				trade_opinion_factor = 0.10
+			}
+			targeted_modifier = {
+				tag = PRS
+				attack_bonus_against = 0.1
+			}
+		}
+		LIT_thoughts_modern = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				reactionism_drift = 0.01
+				despotism_drift = 0.01
+				right_authoritarianism_drift = 0.01
+				conservatism_drift = 0.01
+			}
+			targeted_modifier = {
+				tag = POL
+				attack_bonus_against = 0.1
+				defense_bonus_against = -0.1
+				cic_to_target_factor = 0.1
+			}
+		}
+		LIT_prophecy = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				progressivism_drift = 0.01
+				liberalism_drift = 0.01
+				popular_socialism_drift = 0.01
+				production_speed_buildings_factor = 0.1
+				army_morale_factor = 0.05
+				stability_factor = -0.15
+			}
+		
+		}
+    }
+}

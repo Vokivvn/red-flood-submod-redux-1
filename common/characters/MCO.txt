@@ -1,0 +1,14 @@
+characters = {
+	MCO_omar_bradley = {
+		name = "Omar Bradley"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MCO/Portrait_Omar_Bradley.png"
+			}
+		}
+		country_leader = {
+			ideology = praetorian_oligarchy
+			expire = "1965.1.1.1"
+		}
+	}
+}

@@ -1,0 +1,33 @@
+﻿l_english:
+#COUNTRY NAME#
+
+#PARTIES#
+
+XSM_vanguard_socialism_party:0 "CPC - R"
+XSM_popular_socialism_party:0 "CPC - L"
+XSM_anarchism_party:0 "Gansu People's Revolutionary Party"
+XSM_revisionist_socialism_party:0 "GMD - MinSheng"
+XSM_progressivism_party:0 "GMD - MinQuan"
+XSM_liberalism_party:0 "GMD - Moderates"
+XSM_conservatism_party:0 "GMD - MinZu"
+XSM_right_authoritarianism_party:0 "Ma Clique"
+XSM_despotism_party:0 "Ma Clique"
+XSM_reactionism_party:0 "Gansu Islamists"
+XSM_accelerationism_party:0 "YCP - Gansu"
+XSM_vanguard_socialism_party_long:0 "Communist Party of China - Right"
+XSM_popular_socialism_party_long:0 "Communist Party of China - Left"
+XSM_anarchism_party_long:0 "Gansu People's Revolutionary Party"
+XSM_revisionist_socialism_party_long:0 "Guomindang - MinSheng Faction"
+XSM_progressivism_party_long:0 "Guomindang - MinQuan Faction"
+XSM_liberalism_party_long:0 "Guomindang - Moderate Faction"
+XSM_conservatism_party_long:0 "Guomindang - MinZu Faction"
+XSM_right_authoritarianism_party_long:0 "Ma Clique"
+XSM_despotism_party_long:0 "Ma Clique"
+XSM_reactionism_party_long:0 "Gansu Islamists"
+XSM_accelerationism_party_long:0 "Young China Party - Gansu"
+
+#LEADER DESCRITIONS#
+#IDEAS#
+#CUSTOM TOOLTIPS AND FLAGS#
+#DECISIONS (1.5 Update)#
+#FOCUSES#

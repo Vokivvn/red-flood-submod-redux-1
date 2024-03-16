@@ -1,0 +1,18 @@
+ORE_path_1 = {
+	name = "Orenburg"
+	desc = "Placeholder"
+	enable = {
+        original_tag = ORE
+	}
+	ai_national_focuses = {
+        Orenburg_leading_selection
+        ORE_rasputins_conspiracy
+	Orenburg_the_demotic_state
+        ORE_return_to_myth
+        Orenburg_news_from_the_homeland
+        Orenburg_eurasian_geopolitics
+        ORE_smite_zhmey
+        Orenburg_protective_belt_against_atlanticism
+        ORE_peace_holy_rus
+	}
+}

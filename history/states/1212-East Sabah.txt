@@ -1,0 +1,23 @@
+
+state={
+	id=1212
+	name="STATE_1212"
+	manpower = 74430
+
+	state_category = rural
+
+	history={
+		owner = MAL
+		victory_points = {
+			10199 1
+		}
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = MAL
+	}
+
+	provinces={
+		1306 4282 10143 10199 10240 12228
+	}
+}

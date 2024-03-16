@@ -1,0 +1,20 @@
+add_namespace = TUN
+
+country_event = { #The last opportunity	
+	id = TUN.1
+	title = TUN.1.t
+	desc = TUN.1.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { 
+		name = TUN.1.a
+		set_politics = { 
+			ruling_party = popular_socialism
+		}
+		add_popularity = {
+			ideology = popular_socialism
+			popularity = 0.23
+		}
+	}
+}

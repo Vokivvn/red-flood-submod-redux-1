@@ -1,0 +1,14 @@
+units= {
+	fleet = {
+		name = "Tikhookeanskaya Flotiliya"		
+		naval_base = 4728
+		task_force = {
+			name = "Kamchatskaya Eskadra IV"			
+			location = 4728
+			ship = { name = "Volk I" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = KCK version_name = "Delfin Class"} } }
+			ship = { name = "Volk II" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = KCK version_name = "Delfin Class"} } }
+			ship = { name = "Volk III" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = KCK version_name = "Delfin Class"} } }	
+			ship = { name = "Volk IV" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = KCK version_name = "Delfin Class"} } }	
+		}	
+	}
+}

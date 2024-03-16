@@ -1,0 +1,185 @@
+﻿###########################
+# Britain Events
+###########################
+
+add_namespace = uganda
+
+country_event = { #The uganda Revolt
+	id = uganda.1
+	title = uganda.1.t
+	desc = uganda.1.desc
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = { # Disaster!
+		name = uganda.1.a
+		769 = {
+			add_core_of = UGD
+		}
+		UGD = {
+			set_state_owner = 769
+			set_state_controller = 769
+			declare_war_on = {
+				target = KEN
+				type = annex_everything
+			}
+			set_country_flag = {
+				flag = UGD_recently_revolted
+				days = 60
+				value = 1
+			}
+		}
+		hidden_effect = {
+			UGD = {
+				load_oob = UGD_revolt
+			}
+			ENG = {
+				add_timed_idea = {
+					idea = we_fight_alone
+					days = 90
+				}
+			}
+		}
+	}
+	option = { #Uganda will be free!
+		name = uganda.1.b
+		hidden_effect = {
+			769 = {
+				add_core_of = UGD
+			}
+		}
+		UGD = {
+			set_state_owner = 769
+			set_state_controller = 769
+			declare_war_on = {
+				target = KEN
+				type = annex_everything
+			}
+			change_tag_from = ENG
+			set_country_flag = {
+				flag = UGD_recently_revolted
+				days = 60
+				value = 1
+			}
+		}
+		hidden_effect = {
+			UGD = {
+				load_oob = UGD_revolt
+			}
+			ENG = {
+				add_timed_idea = {
+					idea = we_fight_alone
+					days = 90
+				}
+			}
+		}
+	}
+}
+country_event = { #African rebels make massive gains
+	id = uganda.3
+	title = uganda.3.t
+	desc = uganda.3.desc
+	#picture = 
+	fire_only_once = yes
+	trigger = {
+		AND = {
+			tag = ENG
+			UGD = {
+				AND = {
+					controls_state = 1196
+					controls_state = 546
+					controls_state = 1197
+					NOT = {
+						has_country_flag = UGD_recently_revolted
+					}
+				}
+			}
+		}
+	}
+	
+	option = { #This war is not worth fighting, make peace
+		name = uganda.3.a
+		ai_chance = { factor = 100 }
+		UGD = {
+			country_event = {
+				id = uganda.4
+				days = 2
+			}
+		}
+	}
+	option = { #keep fighting
+		name = uganda.3.b
+		ai_chance = { factor = 0 }
+		add_stability = -0.20
+		country_event = {
+			id = uganda.4
+			days = 100
+		}
+	}
+}
+
+country_event = { #the ugandan war for independence is over
+	id = uganda.4
+	title = uganda.4.t
+	desc = uganda.4.desc
+	#picture = 
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = uganda.4.a
+		white_peace = ENG
+		ENG = { give_military_access = UGD }
+		hidden_effect = {
+			country_event = { 
+				id = uganda.5
+				days = 30
+			}
+			1196 = {
+				add_core_of = UGD
+			}
+			1197 = {
+				add_core_of = UGD
+			}
+			546 = { 
+				add_core_of = UGD
+			}
+			768 = {
+				add_core_of = UGD
+			}
+			548 = { 
+				add_core_of = UGD
+			}
+			547 = { 
+				add_core_of = UGD
+			}
+			1005 = {
+				add_core_of = UGD
+			}
+			UGD = {
+				set_state_owner = 1196
+				set_state_controller = 1196
+				set_state_owner = 1197
+				set_state_controller = 1197
+				set_state_owner = 546
+				set_state_controller = 546
+				set_cosmetic_tag = UGD_tanzania_popular_socialism
+			}
+		}
+	}
+}
+
+country_event = { #piss ass event just to remove Military access into british empire
+					#if someone else can intergrate this better please do
+	id = uganda.5
+	is_triggered_only = yes
+	fire_only_once = yes
+	hidden = yes
+	immediate = {
+		diplomatic_relation = {
+			country = ENG
+			relation = military_access
+			active = no
+		}
+	}
+}

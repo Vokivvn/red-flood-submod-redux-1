@@ -1,0 +1,28 @@
+ideas = {
+
+#################
+# Country ideas #
+#################
+
+	country = {
+		ELS_theosophy_med = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				despotism_drift = 0.01
+				political_power_cost = 0.05
+			}
+			picture = ELS_religious_influence
+		}
+		ELS_brutal_history = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				war_support_factor = -0.15
+				political_power_cost = 0.05
+			}
+			picture = ELS_violent_history
+		}
+	}
+###########
+#MINISTERS#
+###########
+}

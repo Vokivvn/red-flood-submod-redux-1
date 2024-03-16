@@ -1,0 +1,769 @@
+###-Bulgaria Ideas-###
+ideas = {
+	country = {
+		#Starting
+
+		BUL_watchful_eye = {
+			picture = BUL_watchful_eye
+			cancel = {
+				OR = {
+					NOT = { is_subject_of = YUG }
+					has_country_flag = remove_idea
+				}
+			}
+			modifier = { 
+				cic_to_overlord_factor = 0.2
+				mic_to_overlord_factor = 0.2
+				extra_trade_to_overlord_factor = 0.2
+				political_power_factor = -0.05
+				stability_factor = 0.1
+				production_speed_buildings_factor = 0.1
+				consumer_goods_expected_value = -0.05
+			}
+		}
+		BUL_lucky_clover = {
+			picture = BUL_lucky_clover
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				revisionist_socialism_drift = 0.05 
+				political_power_factor = 0.1
+				stability_factor = 0.1
+			}
+		}
+		BUL_purges_of_unloyal = {
+			picture = BUL_purges_of_unloyal
+			cancel = { has_country_flag = remove_idea }
+			modifier = { 
+				experience_gain_army_factor = -0.05
+				army_org_factor = -0.15
+				command_power_gain_mult = -0.15
+				political_power_factor = -0.1
+			}
+		}
+		BUL_worn_luck = {
+			picture = BUL_worn_luck
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = -0.1
+				political_power_factor = -0.15
+			}
+		}
+		BUL_small_cloud_big_rain = {
+			picture = BUL_small_cloud_big_rain
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = -0.3
+				accelerationism_drift = 0.05
+				despotism_drift = 0.05
+				reactionism_drift = 0.05
+				autonomy_gain = -0.5
+			}
+		}
+
+		#Agrarians
+
+		BUL_scythe_sickle = {
+			picture = BUL_scythe_sickle
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				political_power_factor = 0.05
+				army_attack_factor = 0.05
+				army_org_factor = -0.05
+			}
+		}
+		BUL_scythe_sickle2 = {
+			picture = BUL_scythe_sickle
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				political_power_factor = 0.1
+				army_attack_factor = 0.05
+				army_org_factor = -0.05
+				consumer_goods_expected_value = -0.05
+			}
+		}
+		BUL_scythe_sickle3 = {
+			picture = BUL_scythe_sickle
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				political_power_factor = 0.1
+				army_attack_factor = 0.1
+				army_org_factor = -0.1
+				consumer_goods_expected_value = -0.05
+			}
+		}
+		BUL_scythe_sickle4 = {
+			picture = BUL_scythe_sickle
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				political_power_factor = 0.15
+				army_attack_factor = 0.1
+				army_org_factor = -0.1
+				army_morale_factor = 0.05
+				consumer_goods_expected_value = -0.05
+			}
+		}
+		BUL_scythe_sickle5 = {
+			picture = BUL_scythe_sickle
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				political_power_factor = 0.05
+				army_attack_factor = 0.1
+				army_org_factor = -0.1
+			}
+		}
+		BUL_scythe_sickle6 = {
+			picture = BUL_scythe_sickle
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				political_power_factor = 0.1
+				army_attack_factor = 0.1
+				army_org_factor = -0.1
+				army_morale_factor = 0.05
+			}
+		}
+		BUL_lucky_clover2 = {
+			picture = BUL_lucky_clover
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				revisionist_socialism_drift = 0.05 
+				political_power_factor = 0.1
+				stability_factor = 0.1
+				industrial_capacity_factory = 0.1
+				local_resources_factor = -0.1
+				army_speed_factor = 0.1
+			}
+			equipment_bonus = {
+				armor = {
+					build_cost_ic = -0.1
+				}
+			}
+		}
+		BUL_watchful_eye2 = {
+			picture = BUL_watchful_eye
+			cancel = {
+				OR = {
+					NOT = { is_subject_of = YUG }
+					has_country_flag = remove_idea
+				}
+			}
+			modifier = { 
+				cic_to_overlord_factor = 0.1
+				mic_to_overlord_factor = 0.1
+				extra_trade_to_overlord_factor = 0.1
+				stability_factor = 0.1
+				production_speed_buildings_factor = 0.1
+				consumer_goods_expected_value = -0.05
+			}
+		}
+		BUL_watchful_eye3 = {
+			picture = BUL_watchful_eye
+			cancel = {
+				OR = {
+					NOT = { is_subject_of = YUG }
+					has_country_flag = remove_idea
+				}
+			}
+			modifier = { 
+				cic_to_overlord_factor = 0.2
+				mic_to_overlord_factor = 0.2
+				extra_trade_to_overlord_factor = 0.2
+				political_power_gain = -0.5
+				stability_factor = 0.1
+				production_speed_buildings_factor = 0.1
+				consumer_goods_expected_value = -0.05
+			}
+		}
+		BUL_better_than_belgrade = {
+			picture = BUL_better_than_belgrade
+			cancel = { has_country_flag = remove_idea }
+			modifier = { 
+				weekly_manpower = 250
+				production_speed_buildings_factor = 0.1
+				production_factory_max_efficiency_factor = 0.05
+				production_factory_start_efficiency_factor = 0.05
+				line_change_production_efficiency_factor = -0.1
+			}
+		}
+		BUL_better_than_belgrade2 = {
+			picture = BUL_better_than_belgrade
+			cancel = { has_country_flag = remove_idea }
+			modifier = { 
+				weekly_manpower = 500
+				production_speed_buildings_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_start_efficiency_factor = 0.1
+				line_change_production_efficiency_factor = -0.1
+			}
+		}
+
+		#Yugoslav mechanic
+
+		BUL_pork_barrel = {
+			picture = generic_idea_RF_idea_empty_safe
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				political_power_gain = -0.5 
+				consumer_goods_expected_value = 0.25
+			}
+		}
+		BUL_propaganda_campaign = {
+			picture = generic_idea_RF_idea_speeches
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				political_power_gain = -0.25
+				stability_weekly = -0.03
+				war_support_weekly = -0.03
+			}
+		}
+
+		#Tankies
+
+		BUL_one_fire = {
+			picture = BUL_one_fire
+			cancel = { has_country_flag = remove_idea }
+			modifier = { 
+				stability_factor = 0.15
+				war_support_factor = 0.15
+			}
+		}
+		BUL_authentic_balkan_revolution = {
+			picture = BUL_authentic_balkan_revolution
+			cancel = { has_country_flag = remove_idea }
+			modifier = { 
+				vanguard_socialism_drift = 0.05
+				local_resources_factor = 0.1
+				consumer_goods_expected_value = 0.05
+				army_org_factor = 0.1
+			}
+		}
+		BUL_authentic_balkan_revolution2 = {
+			picture = BUL_authentic_balkan_revolution
+			cancel = { has_country_flag = remove_idea }
+			modifier = { 
+				vanguard_socialism_drift = 0.05
+				local_resources_factor = 0.1
+				consumer_goods_expected_value = 0.1
+				army_org_factor = 0.15
+			}
+		}
+		BUL_authentic_balkan_revolution3 = {
+			picture = BUL_authentic_balkan_revolution
+			cancel = { has_country_flag = remove_idea }
+			modifier = { 
+				vanguard_socialism_drift = 0.05
+				local_resources_factor = 0.1
+				consumer_goods_expected_value = 0.1
+				army_org_factor = 0.15
+				conscription_factor = 0.15
+				training_time_factor = -0.10
+			}
+		}
+		BUL_authentic_balkan_revolution4 = {
+			picture = BUL_authentic_balkan_revolution
+			cancel = { has_country_flag = remove_idea }
+			modifier = { 
+				vanguard_socialism_drift = 0.1
+				local_resources_factor = 0.1
+				consumer_goods_expected_value = 0.1
+				army_org_factor = 0.15
+				conscription_factor = 0.15
+				training_time_factor = -0.10
+				political_power_factor = 0.1
+				production_speed_buildings_factor = 0.1
+			}
+		}
+		BUL_authentic_balkan_revolution5 = {
+			picture = BUL_authentic_balkan_revolution
+			cancel = { has_country_flag = remove_idea }
+			modifier = { 
+				vanguard_socialism_drift = 0.1
+				local_resources_factor = 0.1
+				consumer_goods_expected_value = 0.1
+				army_org_factor = 0.15
+				political_power_factor = 0.1
+				production_speed_buildings_factor = 0.1
+			}
+		}
+		BUL_harmonious_choir = {
+			picture = BUL_harmonious_choir
+			cancel = { has_country_flag = remove_idea }
+			modifier = { 
+				industrial_capacity_factory = 0.1
+				research_speed_factor = 0.05
+			}
+		}
+		BUL_harmonious_choir2 = {
+			picture = BUL_harmonious_choir
+			cancel = { has_country_flag = remove_idea }
+			modifier = { 
+				industrial_capacity_factory = 0.2
+				research_speed_factor = 0.1
+				fuel_gain_factor = 0.2
+			}
+		}
+
+		#Anarchoids
+
+		BUL_endless_liberation_wars = {
+			picture = BUL_endless_liberation_wars
+			cancel = { has_country_flag = remove_idea }
+			modifier = { 
+				industrial_capacity_factory = 0.1
+				production_speed_arms_factory_factor = 0.1
+			}
+		}
+		BUL_skulls_and_bones = {
+			picture = BUL_skulls_and_bones
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				anarchism_drift = 0.05  
+				army_speed_factor = 0.05
+				army_org_factor = -0.05
+			}
+		}
+		BUL_skulls_and_bones2 = {
+			picture = BUL_skulls_and_bones
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				anarchism_drift = 0.05  
+				army_speed_factor = 0.05
+				army_org_factor = -0.15
+				army_attack_factor = 0.1
+			}
+		}
+		BUL_skulls_and_bones3 = {
+			picture = BUL_skulls_and_bones
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				anarchism_drift = 0.05  
+				army_speed_factor = 0.05
+				army_org_factor = -0.15
+				army_attack_factor = 0.1
+				consumer_goods_expected_value = -0.1
+			}
+		}
+		BUL_skulls_and_bones4 = {
+			picture = BUL_skulls_and_bones
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				anarchism_drift = 0.05  
+				army_speed_factor = 0.15
+				army_org_factor = -0.15
+				army_attack_factor = 0.1
+				army_morale_factor = -0.1
+				consumer_goods_expected_value = -0.1
+				cat_mobile_warfare_cost_factor = -0.1
+			}
+		}
+		BUL_skulls_and_bones5 = {
+			picture = BUL_skulls_and_bones
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				anarchism_drift = 0.05  
+				army_speed_factor = 0.05
+				army_org_factor = -0.05
+				consumer_goods_expected_value = -0.1
+			}
+		}
+		BUL_skulls_and_bones6 = {
+			picture = BUL_skulls_and_bones
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				anarchism_drift = 0.05  
+				army_speed_factor = 0.15
+				army_org_factor = -0.05
+				army_morale_factor = -0.1
+				consumer_goods_expected_value = -0.1
+				cat_mobile_warfare_cost_factor = -0.1
+			}
+		}
+		BUL_awakening_the_giant = {
+			picture = BUL_awakening_the_giant
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				research_speed_factor = -0.1
+				production_speed_buildings_factor = 0.1
+				political_power_factor = 0.1
+				industrial_capacity_factory = 0.1
+			}
+		}
+		BUL_awakening_the_giant2 = {
+			picture = BUL_awakening_the_giant
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				research_speed_factor = -0.1
+				production_speed_buildings_factor = 0.1
+				political_power_factor = 0.1
+				industrial_capacity_factory = 0.1
+				local_resources_factor = 0.1
+				conscription_factor = 0.2
+			}
+		}
+
+		#Zlatarog
+
+		BUL_titans_amogus = {
+			picture = BUL_titans_amogus
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				acclimatization_cold_climate_gain_factor = 0.1
+				no_supply_grace = 24
+			}
+		}
+		BUL_when_golden_horn_sounds = {
+			picture = BUL_when_golden_horn_sounds
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				special_forces_cap = 0.1
+				army_attack_factor = 0.05
+				army_org_factor = -0.05
+			}
+		}
+		BUL_small_cloud_big_rain2 = {
+			picture = BUL_small_cloud_big_rain
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = -0.15
+				accelerationism_drift = 0.05
+				despotism_drift = 0.05
+				reactionism_drift = 0.05
+			}
+		}
+		BUL_when_golden_horn_sounds2 = {
+			picture = BUL_when_golden_horn_sounds
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				special_forces_cap = 0.1
+				army_attack_factor = 0.05
+				army_org_factor = -0.05
+				consumer_goods_expected_value = -0.05
+				local_resources_factor = -0.1
+				stability_factor = 0.05
+			}
+		}
+		BUL_when_golden_horn_sounds3 = {
+			picture = BUL_when_golden_horn_sounds
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				special_forces_cap = 0.1
+				army_attack_factor = 0.05
+				army_org_factor = -0.05
+				consumer_goods_expected_value = -0.05
+				local_resources_factor = -0.1
+				stability_factor = 0.1
+				research_speed_factor = 0.075
+			}
+		}
+		BUL_when_golden_horn_sounds4 = {
+			picture = BUL_when_golden_horn_sounds
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				special_forces_cap = 0.1
+				army_attack_factor = 0.15
+				army_defence_factor = 0.1
+				army_org_factor = -0.1
+				army_morale_factor = -0.1
+				consumer_goods_expected_value = -0.05
+				local_resources_factor = -0.1
+				stability_factor = 0.1
+				research_speed_factor = 0.075
+			}
+		}
+		BUL_when_golden_horn_sounds5 = {
+			picture = BUL_when_golden_horn_sounds
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				special_forces_cap = 0.1
+				army_attack_factor = 0.15
+				army_defence_factor = 0.1
+				army_org_factor = -0.1
+				army_morale_factor = -0.1
+				consumer_goods_expected_value = -0.05
+				local_resources_factor = -0.1
+				stability_factor = 0.05
+			}
+		}
+		BUL_when_golden_horn_sounds6 = {
+			picture = BUL_when_golden_horn_sounds
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				special_forces_cap = 0.1
+				army_attack_factor = 0.15
+				army_defence_factor = 0.1
+				army_org_factor = -0.1
+				army_morale_factor = -0.1
+				consumer_goods_expected_value = -0.1
+				local_resources_factor = -0.1
+				stability_factor = 0.1
+				research_speed_factor = 0.15
+			}
+		}
+		BUL_when_golden_horn_sounds7 = {
+			picture = BUL_when_golden_horn_sounds
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				special_forces_cap = 0.1
+				army_attack_factor = 0.05
+				army_org_factor = -0.05
+				consumer_goods_expected_value = 0.1
+				war_support_factor = 0.05
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					reliability = 0.1
+				}
+			}
+			equipment_bonus = {
+				armor = {
+					reliability = 0.1
+				}
+			}
+		}
+		BUL_when_golden_horn_sounds8 = {
+			picture = BUL_when_golden_horn_sounds
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				special_forces_cap = 0.1
+				army_attack_factor = 0.05
+				army_org_factor = -0.15
+				army_morale = 0.1
+				equipment_capture_factor = 0.15
+				consumer_goods_expected_value = 0.1
+				war_support_factor = 0.05
+				stability_factor = -0.1
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					reliability = 0.1
+				}
+			}
+			equipment_bonus = {
+				artillery_equipment = {
+					reliability = 0.1
+				}
+			}
+		}
+		BUL_when_golden_horn_sounds9 = {
+			picture = BUL_when_golden_horn_sounds
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				special_forces_cap = 0.1
+				army_attack_factor = 0.05
+				army_org_factor = -0.15
+				army_morale = 0.1
+				equipment_capture_factor = 0.15
+				consumer_goods_expected_value = 0.15
+				industrial_capacity_factory = 0.1
+				war_support_factor = 0.05
+				stability_factor = -0.1
+				accelerationism_drift = 0.05
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					reliability = 0.1
+				}
+			}
+			equipment_bonus = {
+				artillery_equipment = {
+					reliability = 0.1
+				}
+			}
+		}
+		BUL_when_golden_horn_sounds10 = {
+			picture = BUL_when_golden_horn_sounds
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				special_forces_cap = 0.1
+				army_attack_factor = 0.05
+				army_org_factor = -0.05
+				consumer_goods_expected_value = 0.15
+				industrial_capacity_factory = 0.1
+				war_support_factor = 0.05
+				accelerationism_drift = 0.05
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					reliability = 0.1
+				}
+			}
+			equipment_bonus = {
+				artillery_equipment = {
+					reliability = 0.1
+				}
+			}
+		}
+		BUL_new_titanomachy = {
+			picture = BUL_new_titanomachy
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				breakthrough_factor = 0.1
+				army_speed_factor = 0.05
+			}
+		}
+		BUL_new_titanomachy2 = {
+			picture = BUL_new_titanomachy
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				breakthrough_factor = 0.1
+				army_speed_factor = 0.05
+			}
+			targeted_modifier = {
+				tag = FRA
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = FIU
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = ITA
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+			}
+		}
+
+		#Deunov
+
+		BUL_dance_with_world = {
+			picture = BUL_dance_with_world
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				army_attack_factor = -0.4
+				army_defence_factor = 0.1
+				army_org_factor = 0.05
+				consumer_goods_expected_value = -0.05
+			}
+		}
+
+		#2
+		BUL_dance_with_world2 = { #1-2
+			picture = BUL_dance_with_world
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				army_attack_factor = -0.4
+				army_defence_factor = 0.1
+				army_org_factor = 0.05
+				consumer_goods_expected_value = -0.05
+				stability_factor = 0.1
+				political_power_factor = 0.1
+			}
+		}
+		BUL_dance_with_world3 = { #1-2-3
+			picture = BUL_dance_with_world
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				army_attack_factor = -0.25
+				army_defence_factor = 0.1
+				army_org_factor = 0.1
+				consumer_goods_expected_value = -0.05
+				stability_factor = 0.1
+				political_power_factor = 0.1
+			}
+		}
+		BUL_dance_with_world4 = { #1-2-3-4
+			picture = BUL_dance_with_world
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				army_attack_factor = -0.1
+				army_defence_factor = 0.1
+				army_org_factor = 0.1
+				consumer_goods_expected_value = -0.1
+				stability_factor = 0.1
+				political_power_factor = 0.1
+			}
+		}
+
+		#3
+		BUL_dance_with_world5 = { #1-3
+			picture = BUL_dance_with_world
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				army_attack_factor = -0.25
+				army_defence_factor = 0.1
+				army_org_factor = 0.1
+				consumer_goods_expected_value = -0.05
+			}
+		}
+		BUL_dance_with_world6 = { #1-3-4
+			picture = BUL_dance_with_world
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				army_attack_factor = -0.1
+				army_defence_factor = 0.1
+				army_org_factor = 0.1
+				consumer_goods_expected_value = -0.1
+			}
+		}
+
+		#4
+		BUL_dance_with_world7 = { #1-4
+			picture = BUL_dance_with_world
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				army_attack_factor = -0.25
+				army_defence_factor = 0.1
+				army_org_factor = 0.05
+				consumer_goods_expected_value = -0.1
+			}
+		}
+		BUL_dance_with_world8 = { #1-2-4
+			picture = BUL_dance_with_world
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				army_attack_factor = -0.25
+				army_defence_factor = 0.1
+				army_org_factor = 0.05
+				consumer_goods_expected_value = -0.1
+				stability_factor = 0.1
+				political_power_factor = 0.1
+			}
+		}
+
+		BUL_opening_the_eyes = {
+			picture = BUL_opening_the_eyes
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				research_speed_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.05
+				production_factory_max_efficiency_factor = 0.05
+				production_factory_start_efficiency_factor = 0.05
+			}
+		}
+		BUL_opening_the_eyes2 = {
+			picture = BUL_opening_the_eyes
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				research_speed_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_start_efficiency_factor = 0.1
+			}
+		}
+		BUL_opening_the_eyes3 = {
+			picture = BUL_opening_the_eyes
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				research_speed_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.2
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_start_efficiency_factor = 0.1
+				reactionism_drift = 0.05
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					reliability = 0.1
+				}
+			}
+		}
+		BUL_mission_of_peace = {
+			picture = BUL_mission_of_peace
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				army_morale_factor = 0.1
+			}
+		}
+	}
+}

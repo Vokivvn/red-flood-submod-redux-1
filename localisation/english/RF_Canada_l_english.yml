@@ -1,0 +1,26 @@
+﻿l_english:
+#COUNTRY NAME#
+CAN_britain_progressivism:0 "Dominion of Canada"
+CAN_britain_progressivism_DEF:0 "the Dominion of Canada"
+CAN_britain_progressivism_ADJ:0 "Canadian"
+CAN_britain_conservatism:0 "Dominion of Canada"
+CAN_britain_conservatism_DEF:0 "the Dominion of Canada"
+CAN_britain_conservatism_ADJ:0 "Canadian"
+
+#PARTIES#
+CAN_vanguard_socialism_party:0 "Communist Party of Canada"
+CAN_popular_socialism_party:0 "Socialist Labour Party"
+CAN_anarchism_party:0 "One Big Union Association"
+CAN_revisionist_socialism_party:0 "Independent Socialist League"
+CAN_progressivism_party:0 "Co-operative Commonwealth"
+CAN_liberalism_party:0 "Liberal party"
+CAN_conservatism_party:0 "Liberal Conservative"
+CAN_right_authoritarianism_party:0 "Social Credit"
+CAN_despotism_party:0 "Military Government"
+CAN_reactionism_party:0 "Canadian Union of Frontists"
+CAN_accelerationism_party:0 "Technocracy Incorporated"
+#LEADER DESCRITIONS#
+#IDEAS#
+#CUSTOM TOOLTIPS AND FLAGS#
+#DECISIONS (1.5 Update)#
+#FOCUSES#

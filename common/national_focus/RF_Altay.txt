@@ -1,0 +1,1315 @@
+focus_tree = {
+	id = ALT
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = ALT
+		}
+	}
+
+	continuous_focus_position = { x = 100 y = 2000 }
+
+	focus = {
+		id = ALT_the_danger
+		icon = GFX_focus_ALT_the_danger
+		x = 14
+		y = 1
+		cost = 4
+		available_if_capitulated = yes
+		prerequisite = { focus = ALT_greataltaicrevolution }
+		ai_will_do = {
+			factor = 30
+		}
+		available = { 
+			is_subject = no
+		}
+		completion_reward = {
+			custom_effect_tooltip = "The snow on Beluka looks different today..."
+			hidden_effect = {
+				country_event = {
+					days = 1
+					id = alt.4
+				}			
+			}
+		}
+	}
+
+	focus = {
+		id = ALT_greataltaicrevolution
+		icon = GFX_focus_ALT_greataltaicrevolution
+		x = 14
+		y = 0
+		cost = 4
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 30
+		}
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+
+	focus = {
+		id = ALT_gurkhin_prevails
+		icon = GFX_focus_ALT_gurkhin_prevails
+		x = -7
+		y = 1
+		relative_position_id = ALT_the_danger
+		cost = 4
+		available_if_capitulated = yes
+		prerequisite = { focus = ALT_the_danger }
+		ai_will_do = {
+			factor = 30
+		}
+		available = { 
+			has_country_flag = ALT_gurkhin_win
+		}
+		completion_reward = {
+			add_political_power = 75
+			remove_dynamic_modifier = { modifier = second_smuta }
+		}
+	}
+
+	focus = {
+		id = ALT_deal_with_sukhbaatar
+		icon = GFX_focus_ALT_deal_with_sukhbaatar
+		x = 0
+		y = 1
+		relative_position_id = ALT_gurkhin_prevails
+		cost = 4
+		available_if_capitulated = yes
+		prerequisite = { focus = ALT_gurkhin_prevails }
+		ai_will_do = {
+			factor = 40
+		}
+		available = { 
+			is_subject = no
+		}
+		bypass = {
+			NOT = { country_exists = MPA }
+		}
+		will_lead_to_war_with = MON
+		completion_reward = {
+			MPA = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_1
+					amount = 2000
+					producer = MPA
+				}
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_1
+				amount = 2000
+				producer = ALT
+			}
+			add_popularity = {
+				ideology = popular_socialism
+				popularity = 0.15
+			}
+			create_faction = ALT_PAN_MONGOLIAN_FEDERATION
+			MPA = {
+				add_state_core = 1151
+				add_state_core = 612
+				add_state_core = 1150
+			}
+			every_state = {
+				limit = {
+					OR = {
+						is_owned_by = MO2
+						is_owned_by = KHU
+						is_owned_by = MON
+					}
+				}
+				add_core_of = MPA
+			}
+			declare_war_on = {
+				type = annex_everything
+				target = MON
+			}
+			add_to_faction = MPA
+		}
+	}
+
+	focus = {
+		id = ALT_banish_the_invaders
+		icon = GFX_focus_ALT_banish_the_invaders
+		x = 0
+		y = 1
+		relative_position_id = ALT_deal_with_sukhbaatar
+		cost = 4
+		available_if_capitulated = yes
+		prerequisite = { focus = ALT_deal_with_sukhbaatar }
+		ai_will_do = {
+			factor = 30
+		}
+		available = { 
+			is_subject = no
+			has_war=no
+		}
+		will_lead_to_war_with = TAN
+		will_lead_to_war_with = KHU
+		will_lead_to_war_with = MO2
+		completion_reward = {
+			unlock_decision_category_tooltip = ALT_mongolian_unification
+			army_experience = 20
+			MPA = {
+				army_experience = 20
+			}
+		}
+	}
+
+	focus = {
+		id = ALT_pan_oirot_state
+		icon = GFX_focus_ALT_pan_oirot_state
+		x = 0
+		y = 1
+		relative_position_id = ALT_banish_the_invaders
+		cost = 4
+		available_if_capitulated = yes
+		prerequisite = { focus = ALT_banish_the_invaders }
+		ai_will_do = {
+			factor = 30
+		}
+		available = { 
+			is_subject = no
+			has_war = no
+			MPA = {
+				owns_state = 330
+				owns_state = 612
+				owns_state = 563
+			}
+			ALT = {
+				owns_state = 962
+			}
+			TAN = {
+				exists = no
+			}
+			MON = {
+				exists = no
+			}
+			KHU = {
+				exists = no
+			}
+			MO2 = {
+				exists = no
+			}
+
+		}
+		completion_reward = {
+			hidden_effect = {
+				every_state = {
+					remove_claim_by = MON 
+					remove_claim_by = MO2 
+					remove_claim_by = TAN 
+					remove_claim_by = KHU
+					remove_core_of = MON
+					remove_core_of = MO2 
+					remove_core_of = TAN 
+					remove_core_of = KHU
+				}
+			}
+			MPA = {
+				set_capital = { state = 330 }
+			}
+			news_event = {
+			id = news.336
+			days = 1
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = SIK
+			}
+			every_state = {
+				limit = {
+					is_owned_by = SIK
+				}
+				add_core_of = ALT
+			}
+		}
+	}
+
+	focus = {
+		id = ALT_aid_the_russian_brothers
+		icon = GFX_focus_ALT_aid_the_russian_brothers
+		x = 0
+		y = 1
+		relative_position_id = ALT_pan_oirot_state
+		cost = 4
+		available_if_capitulated = yes
+		prerequisite = { focus = ALT_pan_oirot_state }
+		ai_will_do = {
+			factor = 30
+		}
+		available = { 
+			MPA = {
+				is_neighbor_of = ZHR
+				owns_state = 564
+				owns_state = 563
+			}
+			ALT = {
+				owns_state = 1213
+			}
+		}
+		completion_reward = {
+			ZHR = {
+				give_guarantee = MPA
+				give_guarantee = ALT
+			}
+			give_military_access = ZHR
+			diplomatic_relation = {
+				country = ZHR
+				relation = non_aggression_pact
+				active = yes
+			}
+			MPA = { 
+				give_military_access = ZHR
+				diplomatic_relation = {
+					country = ZHR
+					relation = non_aggression_pact
+					active = yes
+				}
+				every_state = {
+					limit = {
+						OR = {
+							state = 564
+							state = 563
+							state = 1213
+						}
+					}
+					add_core_of = ZHR
+				}
+				every_state = {
+					limit = {
+						OR = {
+							state = 564
+							state = 563
+							state = 1213
+						}
+						owner = { OR = { tag = ALT is_ally_with = ALT } }
+					}
+					ZHR = { transfer_state = PREV }
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ALT_milk_white_faith
+		icon = GFX_focus_ALT_milk_white_faith
+		x = -3
+		y = 1
+		relative_position_id = ALT_gurkhin_prevails
+		cost = 4
+		available_if_capitulated = yes
+		prerequisite = { focus = ALT_gurkhin_prevails }
+		ai_will_do = {
+			factor = 30
+		}
+		available = { 
+			is_subject = no
+		}
+		completion_reward = {
+			add_war_support = 0.15
+			add_popularity = {
+				ideology = conservatism
+				popularity = 0.3
+			}
+		}
+	}
+
+	focus = {
+		id = ALT_destroy_superstition
+		icon = GFX_focus_ALT_destroy_superstition
+		x = -1
+		y = 1
+		relative_position_id = ALT_milk_white_faith
+		cost = 4
+		available_if_capitulated = yes
+		prerequisite = { focus = ALT_milk_white_faith }
+		ai_will_do = {
+			factor = 30
+		}
+		available = { 
+			is_subject = no
+		}
+		completion_reward = {
+			add_ideas = ALT_destroy_superstition
+		}
+	}
+
+	focus = {
+		id = ALT_fulfill_the_prophecies
+		icon = GFX_focus_ALT_fulfill_the_prophecies
+		x = 1
+		y = 1
+		relative_position_id = ALT_milk_white_faith
+		cost = 4
+		available_if_capitulated = yes
+		prerequisite = { focus = ALT_milk_white_faith }
+		ai_will_do = {
+			factor = 30
+		}
+		available = { 
+			is_subject = no
+		}
+		completion_reward = {
+			add_political_power = 60
+			add_ideas = ALT_prophecies
+		}
+	}
+
+	focus = {
+		id = ALT_reform_the_priesthood
+		icon = GFX_focus_ALT_reform_the_priesthood
+		x = 1
+		y = 1
+		relative_position_id = ALT_destroy_superstition
+		cost = 4
+		available_if_capitulated = yes
+		prerequisite = { focus = ALT_destroy_superstition }
+		prerequisite = { focus = ALT_fulfill_the_prophecies }
+		ai_will_do = {
+			factor = 30
+		}
+		available = { 
+			is_subject = no
+		}
+		completion_reward = {
+			add_political_power = 75
+			add_stability = 0.1
+		}
+	}
+
+	focus = {
+		id = ALT_oirot_national_church
+		icon = GFX_focus_ALT_oirot_national_church
+		x = 0
+		y = 1
+		relative_position_id = ALT_reform_the_priesthood
+		cost = 4
+		available_if_capitulated = yes
+		prerequisite = { focus = ALT_reform_the_priesthood }
+		ai_will_do = {
+			factor = 30
+		}
+		available = { 
+			is_subject = no
+		}
+		completion_reward = {
+			add_ideas = ALT_national_church
+		}
+	}
+
+	focus = {
+		id = ALT_conservative_socialism
+		icon = GFX_focus_ALT_conservative_socialism
+		x = 3
+		y = 1
+		relative_position_id = ALT_gurkhin_prevails
+		cost = 4
+		available_if_capitulated = yes
+		prerequisite = { focus = ALT_gurkhin_prevails }
+		ai_will_do = {
+			factor = 30
+		}
+		available = { 
+			is_subject = no
+		}
+		completion_reward = {
+			add_ideas = ALT_conservativesocialism
+		    add_offsite_building = { 
+			    type = arms_factory 
+				level = 1
+			}
+			add_offsite_building = { 
+			    type = industrial_complex 
+				level = 1 
+			}
+		}
+	}
+
+	focus = {
+		id = ALT_protect_our_way_of_life
+		icon = GFX_focus_ALT_protect_our_way_of_life
+		x = -1
+		y = 1
+		relative_position_id = ALT_conservative_socialism
+		cost = 4
+		available_if_capitulated = yes
+		prerequisite = { focus = ALT_conservative_socialism }
+		ai_will_do = {
+			factor = 30
+		}
+		available = { 
+			is_subject = no
+		}
+		completion_reward = {
+			swap_ideas = { 
+  				remove_idea = ALT_conservativesocialism 
+ 			 	add_idea = ALT_conservativesocialism_1
+			}	
+		}
+	}
+
+	focus = {
+		id = ALT_general_land_reform
+		icon = GFX_focus_ALT_general_land_reform
+		x = 1
+		y = 1
+		relative_position_id = ALT_conservative_socialism
+		cost = 4
+		available_if_capitulated = yes
+		prerequisite = { focus = ALT_conservative_socialism }
+		ai_will_do = {
+			factor = 30
+		}
+		available = { 
+			is_subject = no
+		}
+		completion_reward = {
+			add_ideas = ALT_landreform
+			add_offsite_building = { 
+			    type = arms_factory 
+				level = 1
+			}
+			add_offsite_building = { 
+			    type = industrial_complex 
+				level = 1 
+			}
+		}
+	}
+
+	focus = {
+		id = ALT_build_national_identity
+		icon = GFX_focus_ALT_build_national_identity
+		x = 1
+		y = 1
+		relative_position_id = ALT_protect_our_way_of_life
+		cost = 4
+		available_if_capitulated = yes
+		prerequisite = { focus = ALT_protect_our_way_of_life }
+		prerequisite = { focus = ALT_general_land_reform }
+		ai_will_do = {
+			factor = 30
+		}
+		available = { 
+			is_subject = no
+		}
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+
+	focus = {
+		id = ALT_democracy_and_tradition
+		icon = GFX_focus_ALT_democracy_and_tradition
+		x = 0
+		y = 1
+		relative_position_id = ALT_build_national_identity
+		cost = 4
+		available_if_capitulated = yes
+		prerequisite = { focus = ALT_build_national_identity }
+		ai_will_do = {
+			factor = 30
+		}
+		available = { 
+			is_subject = no
+		}
+		completion_reward = {
+			add_war_support = 0.10
+			add_ideas = ALT_democracytradition
+		}
+	}
+
+	focus = {
+		id = ALT_harmony_in_karakorum
+		icon = GFX_focus_ALT_harmony_in_karakorum
+		x = 0
+		y = 1
+		relative_position_id = ALT_aid_the_russian_brothers
+		cost = 4
+		available_if_capitulated = yes
+		prerequisite = { focus = ALT_oirot_national_church }
+		prerequisite = { focus = ALT_democracy_and_tradition }
+		ai_will_do = {
+			factor = 30
+		}
+		available = { 
+			is_subject = no
+			has_war = no
+		}
+		completion_reward = {
+			add_ideas = ALT_harmony_karakorum
+			set_cosmetic_tag = ALT_oirot
+			MPA = {
+				set_cosmetic_tag = MPA_uni
+			}
+		}
+	}
+
+	focus = {
+		id = ALT_OTB_putsch
+		icon = GFX_focus_ALT_OTB_putsch 
+		x = 8
+		y = 1
+		relative_position_id = ALT_the_danger
+		cost = 0
+		available_if_capitulated = yes
+		prerequisite = { focus = ALT_the_danger }
+		ai_will_do = {
+			factor = 30
+		}
+		available = { 
+			has_country_flag = ALT_stopgap
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = ALT_the_red_merlin
+		icon = GFX_focus_ALT_the_red_merlin
+		x = -6
+		y = 1
+		relative_position_id = ALT_OTB_putsch
+		cost = 1
+		available_if_capitulated = yes
+		prerequisite = { focus = ALT_OTB_putsch }
+		mutually_exclusive = { 
+			focus = ALT_the_red_faust
+		}
+		ai_will_do = {
+			factor = 30
+		}
+		available = { 
+			has_country_flag = ALT_barchenko_win
+		}
+		completion_reward = {
+			add_stability = 0.10
+			add_popularity = { ideology = revisionist_socialism
+				popularity = 0.30
+			}
+		}
+	}
+
+	focus = {
+		id = ALT_the_red_faust
+		icon = GFX_focus_ALT_the_red_faust
+		x = 6
+		y = 1
+		relative_position_id = ALT_OTB_putsch
+		cost = 1
+		available_if_capitulated = yes
+		prerequisite = { focus = ALT_OTB_putsch }
+		mutually_exclusive = { 
+			focus = ALT_the_red_merlin
+		}
+		ai_will_do = {
+			factor = 30
+		}
+		available = { 
+			has_country_flag = ALT_bokii_win
+		}
+		completion_reward = {
+			add_stability = 0.30
+			add_popularity = { ideology = vanguard_socialism
+				popularity = 0.30
+			}
+		}
+	}
+
+	focus = {
+		id = ALT_socialist_synarchy
+		icon = GFX_focus_ALT_socialist_synarchy
+		x = 0
+		y = 1
+		relative_position_id = ALT_the_red_merlin
+		cost = 4
+		available_if_capitulated = yes
+		prerequisite = { focus = ALT_the_red_merlin }
+		ai_will_do = {
+			factor = 30
+		}
+		available = { 
+			is_subject = no
+		}
+		completion_reward = {
+			add_ideas = ALT_socialist_synarchy
+		    add_offsite_building = { 
+			    type = arms_factory 
+				level = 1
+			}
+			add_offsite_building = { 
+			    type = industrial_complex 
+				level = 1 
+			}
+		}
+	}
+
+	focus = {
+		id = ALT_secret_priesthood
+		icon = GFX_focus_ALT_secret_priesthood
+		x = 0
+		y = 1
+		relative_position_id = ALT_socialist_synarchy
+		cost = 4
+		available_if_capitulated = yes
+		prerequisite = { focus = ALT_socialist_synarchy }
+		ai_will_do = {
+			factor = 30
+		}
+		available = { 
+			is_subject = no
+		}
+		completion_reward = {
+			army_experience = 20
+			swap_ideas = {
+				remove_idea = ALT_socialist_synarchy
+				add_idea = ALT_secret_priests
+			}
+			country_event = alt.18
+		}
+	}
+
+	focus = {
+		id = ALT_universal_rythm
+		icon = GFX_focus_ALT_universal_rythm
+		x = -3
+		y = 1
+		relative_position_id = ALT_the_red_merlin
+		cost = 4
+		available_if_capitulated = yes
+		prerequisite = { focus = ALT_the_red_merlin }
+		ai_will_do = {
+			factor = 30
+		}
+		available = { 
+			is_subject = no
+		}
+		completion_reward = {
+			add_ideas = ALT_universal_rythm
+		}
+	}
+	
+	focus = {
+		id = ALT_new_hyperborea
+		icon = GFX_focus_ALT_new_hyperborea
+		x = -2
+		y = 1
+		relative_position_id = ALT_secret_priesthood
+		cost = 4
+		available_if_capitulated = yes
+		prerequisite = { focus = ALT_universal_rythm }
+		prerequisite = { focus = ALT_secret_priesthood }
+		ai_will_do = {
+			factor = 30
+		}
+		available = { 
+			is_subject = no
+		}
+		completion_reward = {
+			add_ideas = ALT_hyperborea
+			add_offsite_building = { 
+			    type = arms_factory 
+				level = 1
+			}
+			add_offsite_building = { 
+			    type = industrial_complex 
+				level = 1 
+			}
+		}
+	}
+
+	focus = {
+		id = ALT_embrace_shamanism
+		icon = GFX_focus_ALT_embrace_shamanism
+		x = 3
+		y = 1
+		relative_position_id = ALT_the_red_merlin
+		cost = 4
+		available_if_capitulated = yes
+		prerequisite = { focus = ALT_the_red_merlin }
+		ai_will_do = {
+			factor = 30
+		}
+		available = { 
+			is_subject = no
+		}
+		completion_reward = {
+			add_stability = 0.05
+			add_ideas = ALT_shamanism
+			country_event = alt.17
+		}
+	}
+
+	focus = {
+		id = ALT_red_star_tantra
+		icon = GFX_focus_ALT_red_star_tantra
+		x = 0
+		y = 1
+		relative_position_id = ALT_embrace_shamanism
+		cost = 4
+		available_if_capitulated = yes
+		prerequisite = { focus = ALT_embrace_shamanism }
+		ai_will_do = {
+			factor = 30
+		}
+		available = { 
+			is_subject = no
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ALT_shamanism
+				add_idea = ALT_red_star_tantra
+			}
+		}
+	}
+
+	focus = {
+		id = ALT_unite_with_our_comrades
+		icon = GFX_focus_ALT_unite_with_our_comrades
+		x = 0
+		y = 2
+		relative_position_id = ALT_OTB_putsch
+		cost = 4
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = ALT_the_red_merlin
+			focus = ALT_the_red_faust
+		}
+		ai_will_do = {
+			factor = 40
+		}
+		available = { 
+			OR = {
+				owns_state = 915
+				MPA = {
+					OR = {
+						owns_state = 915
+						exists = no
+					}
+				}
+			}
+		}
+		completion_reward = {
+			if = {
+				limit = { country_exists = MPA }
+				annex_country = {
+					target = MPA
+					transfer_troops = yes
+				}
+			}
+			MPA = {
+				every_unit_leader = {
+					set_nationality = ALT
+				}
+			}
+			hidden_effect = {
+				add_state_core = 915
+				add_state_core = 1149
+			}
+			set_cosmetic_tag = ALT_mongolia
+		}
+	}
+
+	focus = {
+		id = ALT_lift_barons_curse
+		icon = GFX_focus_ALT_lift_barons_curse
+		x = 0
+		y = 1
+		relative_position_id = ALT_unite_with_our_comrades
+		cost = 4
+		available_if_capitulated = yes
+		prerequisite = { focus = ALT_unite_with_our_comrades }
+		ai_will_do = {
+			factor = 40
+		}
+		available = { 
+			is_subject = no
+			has_war = no
+			NOT = {
+				TAN = {
+					is_in_faction_with = RUS
+				}
+			}
+		}
+		bypass = {
+			NOT = { country_exists = TAN }
+		}
+		will_lead_to_war_with = TAN
+		completion_reward = {
+			declare_war_on = {
+				type = annex_everything
+				target = TAN
+			}
+			hidden_effect = {
+				country_event = {
+					days = 15
+					id = alt.16
+				}
+			}
+		}
+	}
+
+
+	focus = {
+		id = ALT_convert_the_mongols
+		icon = GFX_focus_ALT_convert_the_mongols
+		x = 0
+		y = 1
+		relative_position_id = ALT_lift_barons_curse
+		cost = 4
+		available_if_capitulated = yes
+		prerequisite = { focus = ALT_lift_barons_curse }
+		ai_will_do = {
+			factor = 40
+		}
+		available = { 
+			is_subject = no
+			has_war = no
+		}
+		will_lead_to_war_with = MO2
+		will_lead_to_war_with = MON
+		will_lead_to_war_with = KHU
+		completion_reward = {
+			every_country = {
+				limit = {
+					OR = {
+						tag = MO2
+						tag = MON
+						tag = KHU
+					}
+				}
+				ALT = {
+					create_wargoal = {
+						type = annex_everything
+						target = PREV
+					}
+				}
+			}
+			every_state = {
+				limit = {
+					OR = {
+						is_core_of = MO2
+						is_core_of = MON
+						is_core_of = KHU
+					}
+				}
+				add_core_of = ALT
+			}
+		}
+	}
+
+	focus = {
+		id = ALT_retrieve_golden_science
+		icon = GFX_focus_ALT_retrieve_golden_science
+		x = 3
+		y = 0
+		relative_position_id = ALT_unite_with_our_comrades
+		cost = 4
+		available_if_capitulated = yes
+		prerequisite = { focus = ALT_the_red_faust }
+		ai_will_do = {
+			factor = 30
+		}
+		available = { 
+			is_subject = no
+		}
+		completion_reward = {
+			add_ideas = ALT_gold_science
+			add_offsite_building = { 
+			    type = arms_factory 
+				level = 1
+			}
+			add_offsite_building = { 
+			    type = industrial_complex 
+				level = 1 
+			}
+		}
+	}
+
+	focus = {
+		id = ALT_land_of_new_harmony
+		icon = GFX_focus_ALT_land_of_new_harmony
+		x = 0
+		y = 1
+		relative_position_id = ALT_retrieve_golden_science
+		cost = 4
+		available_if_capitulated = yes
+		prerequisite = { focus = ALT_retrieve_golden_science }
+		ai_will_do = {
+			factor = 30
+		}
+		available = { 
+			is_subject = no
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ALT_gold_science
+				add_idea = ALT_gold_science_1
+			}
+			add_offsite_building = { 
+			    type = arms_factory 
+				level = 1
+			}
+			add_offsite_building = { 
+			    type = industrial_complex 
+				level = 1 
+			}
+		}
+	}
+
+	focus = {
+		id = ALT_occult_research
+		icon = GFX_focus_ALT_occult_research
+		x = 0
+		y = 1
+		relative_position_id = ALT_the_red_faust
+		cost = 4
+		available_if_capitulated = yes
+		prerequisite = { focus = ALT_the_red_faust }
+		ai_will_do = {
+			factor = 30
+		}
+		available = { 
+			is_subject = no
+		}
+		completion_reward = {
+			add_ideas = ALT_occult
+		}
+	}
+
+	focus = {
+		id = ALT_arcane_technologies
+		icon = GFX_focus_ALT_arcane_technologies
+		x = 0
+		y = 1
+		relative_position_id = ALT_occult_research
+		cost = 4
+		available_if_capitulated = yes
+		prerequisite = { focus = ALT_occult_research }
+		ai_will_do = {
+			factor = 30
+		}
+		available = { 
+			is_subject = no
+		}
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	focus = {
+		id = ALT_engineering_of_souls
+		icon = GFX_focus_ALT_engineering_of_souls
+		x = 2
+		y = 1
+		relative_position_id = ALT_arcane_technologies
+		cost = 4
+		available_if_capitulated = yes
+		prerequisite = { focus = ALT_OGPU_special_division }
+		prerequisite = { focus = ALT_arcane_technologies }
+		ai_will_do = {
+			factor = 30
+		}
+		available = { 
+			is_subject = no
+		}
+		completion_reward = {
+			swap_ideas = {
+      			remove_idea = ALT_OGPU
+			    add_idea = ALT_soul_engineer
+			}
+		}
+	}
+	focus = {
+		id = ALT_OGPU_special_division
+		icon = GFX_focus_ALT_OGPU_special_division
+		x = 3
+		y = 1
+		relative_position_id = ALT_the_red_faust
+		cost = 4
+		available_if_capitulated = yes
+		prerequisite = { focus = ALT_the_red_faust }
+		ai_will_do = {
+			factor = 30
+		}
+		available = { 
+			is_subject = no
+		}
+		completion_reward = {
+ 			add_ideas = ALT_OGPU
+            army_experience = 20	
+			country_event = alt.19			
+		}
+	}
+
+	focus = {
+		id = ALT_agartha_calling
+		icon = GFX_focus_ALT_agartha_calling
+		x = 0
+		y = 1
+		relative_position_id = ALT_convert_the_mongols
+		cost = 1
+		available_if_capitulated = yes
+		prerequisite = { focus = ALT_convert_the_mongols }
+		prerequisite = { 
+			focus = ALT_engineering_of_souls
+			focus = ALT_new_hyperborea
+		}
+		ai_will_do = {
+			factor = 30
+		}
+		available = { 
+			is_subject = no
+			owns_state = 612
+			owns_state = 329
+			owns_state = 330
+			owns_state = 563
+			TAN = { exists = no }
+			MON = { exists = no }
+			KHU = { exists = no }
+			MO2 = { exists = no }
+		}
+		completion_reward = {
+			hidden_effect = {
+				every_state = { 
+					remove_claim_by = MPA 
+					remove_claim_by = MO2 
+					remove_claim_by = TAN 
+					remove_claim_by = KHU
+                    remove_claim_by = MON
+					remove_core_of = MON 
+					remove_core_of = MPA 
+					remove_core_of = MO2 
+					remove_core_of = TAN 
+					remove_core_of = KHU
+				}
+			}
+			add_ideas = ALT_agartha_calling
+			add_research_slot = 1
+			news_event = {
+				id = news.337
+				days = 1
+			}
+			set_capital = {
+				state = 330
+			}
+		}
+	}
+
+	focus = {
+		id = ALT_join_the_revolution
+		icon = GFX_focus_ALT_join_the_revolution
+		x = 2
+		y = 1
+		relative_position_id = ALT_agartha_calling
+		cost = 1
+		available_if_capitulated = yes
+		prerequisite = { focus = ALT_agartha_calling }
+		mutually_exclusive = { 
+			focus = ALT_our_own_revolution
+		}
+		ai_will_do = {
+			factor = 40
+		}
+		available = { 
+			ALT_ZHR_peaceful_uni = yes
+			is_neighbor_of = ZHR
+			is_subject = no
+			ZHR = {
+				is_ai = yes
+			}
+		}
+		completion_reward = {
+			if ={
+				limit ={
+					ALT = {
+						is_ai = no
+					}
+				}
+				ALT = {
+					ZHR = {
+						PREV_annex_CURRENT_warlord = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					ZHR = {
+						is_ai = no
+					}
+				}
+				ZHR = {
+					ALT = {
+						PREV_annex_CURRENT_warlord = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					ZHR = {
+						is_ai = yes
+					}
+					ALT = {
+						is_ai = yes
+					}
+				}
+				country_event = russia.202
+			}
+		}
+	}
+
+
+	focus = {
+		id = ALT_adventure_on_roof_of_world
+		icon = GFX_focus_ALT_adventure_on_roof_of_world
+		x = -2
+		y = 1
+		relative_position_id = ALT_agartha_calling
+		cost = 1
+		available_if_capitulated = yes
+		prerequisite = { focus = ALT_agartha_calling }
+		ai_will_do = {
+			factor = 30
+		}
+		available = { 
+			is_subject = no
+			has_war = no
+			has_completed_focus = ALT_kings_of_shambala
+		}
+		will_lead_to_war_with = SIK
+		will_lead_to_war_with = TIB
+		completion_reward = {
+			every_country = {
+				limit = {
+					OR = {
+						tag = SIK
+						tag = TIB
+					}
+				}
+				ALT = {
+					create_wargoal = {
+						type = annex_everything
+						target = PREV
+					}
+				}
+			}
+			every_state = {
+				limit = {
+					OR = {
+						is_core_of = SIK
+						is_core_of = TIB
+					}
+				}
+				add_claim_by = ALT
+			}
+		}
+	}
+
+	focus = {
+		id = ALT_our_own_revolution
+		icon = GFX_focus_ALT_our_own_revolution
+		x = 0
+		y = 1
+		relative_position_id = ALT_agartha_calling
+		cost = 1
+		available_if_capitulated = yes
+		prerequisite = { focus = ALT_agartha_calling }
+		mutually_exclusive = { 
+			focus = ALT_join_the_revolution
+		}
+		ai_will_do = {
+			factor = 30
+		}
+		available = { 
+			is_subject = no
+			has_war = no
+		}
+		will_lead_to_war_with = ZHR
+		will_lead_to_war_with = ARC
+		will_lead_to_war_with = PRI
+		will_lead_to_war_with = MNS
+		will_lead_to_war_with = PSL
+		will_lead_to_war_with = GUK
+		will_lead_to_war_with = FCR
+		completion_reward = {
+			every_country = {
+				limit = {
+					OR = {
+						tag = ZHR
+						tag = MNS
+						tag = FCR
+						tag = PSL
+						tag = ARC
+						tag = HAR
+						tag = PRI
+						tag = GUK
+					}
+				}
+				ALT = {
+					declare_war_on = {
+						type = annex_everything
+						target = PREV
+					}
+				}
+			}
+			every_state = {
+				limit = {
+					is_core_of = ZHR
+					is_not_claim_or_core_of_ROOT = yes
+				}
+				add_core_of = ALT
+			}
+		}
+	}
+
+
+	focus = {
+		id = ALT_quest_to_hyperborea
+		icon = GFX_focus_ALT_quest_to_hyperborea
+		x = 0
+		y = 1
+		relative_position_id = ALT_our_own_revolution
+		cost = 1
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = ALT_our_own_revolution
+			focus = ALT_join_the_revolution
+		}
+		ai_will_do = {
+			factor = 35
+		}
+		available = { 
+			is_subject = no
+			has_war = no
+		}
+		completion_reward = {
+			unlock_decision_category_tooltip = ALT_diplomatic_decisions
+		}
+	}
+
+	focus = {
+		id = ALT_kings_of_shambala
+		icon = GFX_focus_ALT_kings_of_shambala
+		x = 0
+		y = 1
+		relative_position_id = ALT_quest_to_hyperborea
+		cost = 1
+		available_if_capitulated = yes
+		prerequisite = { focus = ALT_quest_to_hyperborea }
+		ai_will_do = {
+			factor = 30
+		}
+		available = { 
+			is_subject = no
+			has_war = no
+			owns_state = 219
+		}
+		completion_reward = {
+			custom_effect_tooltip = "ALT_SHAMBALA_TT"
+		}
+	}
+}

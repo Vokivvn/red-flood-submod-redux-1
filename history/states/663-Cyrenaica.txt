@@ -1,0 +1,22 @@
+state={
+	id=663
+	name="STATE_663"
+	manpower = 38233
+	
+	state_category = wasteland
+
+	history={
+	    set_demilitarized_zone = yes
+		owner = ITA
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = LBA
+		add_core_of = SOK
+		set_demilitarized_zone = yes
+	}
+
+	provinces={
+		1062 1186 4060 4063 4133 4200 7063 7076 7139 7206 9977 10049 12025 12079 13078 
+	}
+}

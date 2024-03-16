@@ -1,0 +1,33 @@
+
+state={
+	id=438
+	name="STATE_438"
+	manpower = 27491000
+
+	state_category = large_city
+
+	history={
+		owner = UPI
+		add_core_of = UPI
+		victory_points = {
+			12137 20
+		}
+		victory_points = {
+			4299 25
+		}
+		victory_points = {
+			5055 10
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 4
+			arms_factory = 1
+			air_base = 2
+		}
+
+	}
+
+	provinces={
+		1377 1983 4299 5055 5086 7064 7334 8082 8114 9951 9973 10751 10794 12137 12777 12786
+	}
+}

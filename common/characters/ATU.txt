@@ -1,0 +1,595 @@
+characters = {
+	ATU_backwards_text = {
+		name = "Backwards Text"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/ATU/Backwards.png"
+			}
+		}
+		country_leader = {
+			ideology = technocracy
+			expire = "1965.1.1.1"
+			traits = {
+				armaments_organizer
+			}
+		}
+	}
+	ATU_ozmandiaz = {
+		name = "Ozmandiaz"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/ATU/Ozmandiaz.png"
+			}
+		}
+		country_leader = {
+			ideology = social_anarchism
+			expire = "1965.1.1.1"
+		}
+	}
+	ATU_fireizzle = {
+		name = "Fireizzle"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/ATU/Izzle.png"
+			}
+		}
+		country_leader = {
+			ideology = leninism
+			expire = "1965.1.1.1"
+			traits = {
+				LAT_dragonslayer
+			}
+		}
+	}
+	ATU_oza = {
+		name = "Ozajasz"
+		portraits = {
+				civilian = {
+				large="gfx/leaders/ATU/Ozajasz.png"
+			}
+		}
+		country_leader = {
+			ideology = syndicalism
+			expire = "1965.1.1.1"
+			traits = {
+				rocket_scientist
+			}
+		}
+	}
+	ATU_holy_baba = {
+		name = "Baba"
+		portraits = {
+				civilian = {
+				large="gfx/leaders/ATU/Baba.png"
+			}
+		}
+		country_leader = {
+			ideology = utopian_socialism
+			expire = "1965.1.1.1"
+			traits = {
+				british_bulldog
+			}
+		}
+	}
+	ATU_florian = {
+		name = "Florian"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/ATU/Florian.png"
+			}
+		}
+		country_leader = {
+			ideology = left_populism
+			expire = "1965.1.1.1"
+			traits = {
+				silent_workhorse
+			}
+		}
+	}
+	ATU_multi = {
+		name = "Multi"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/ATU/Bougainville.png"
+			}
+		}
+		country_leader = {
+			ideology = libertarian_capitalism
+			expire = "1965.1.1.1"
+			traits = {
+				ATU_multi_trait
+			}
+		}
+	}
+	ATU_teutonic = {
+		name = "Teutonic"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/ATU/Deutsche_Katze.png"
+			}
+		}
+		country_leader = {
+			ideology = national_conservatism
+			expire = "1965.1.1.1"
+			traits = {
+				for_biased_intellectual
+			}
+		}
+	}
+	ATU_any = {
+		name = "Any XIII"
+		portraits = {
+		civilian = {
+				large="gfx/leaders/ATU/any.png"
+			}
+		}
+		country_leader = {
+			ideology = praetorian_oligarchy
+			expire = "1965.1.1.1"
+			traits = {
+				ATU_any_trait
+			}
+		}
+	}
+	ATU_red_flood_dev_team = {
+		name = "Red Flood Dev Team"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/ATU/RedFlood.png"
+			}
+		}
+		country_leader = {
+			ideology = military_dictatorship
+			expire = "1965.1.1.1"
+			traits = {
+				cabinet_crisis
+			}
+		}
+	}
+	ATU_sparrow = {
+		name = "Sparrow"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/ATU/Sparrow.png"
+			}
+		}
+		country_leader = {
+			ideology = esoteric_reactionism
+			expire = "1965.1.1.1"
+			traits = {
+				
+			}
+		}
+	}
+
+
+
+
+#### April Fools Characters
+	AUS_Sigmund_Freud = {
+		name = "Sigmund Freud"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/AUS/Portrait_Sigmund_Freud.png"
+			}
+		}
+	}
+
+	SAN_Batko_Epstein = {
+		name = "Bat'ko Epstein"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/EPS/Portrait_Epstein_revan.png"
+			}
+		}
+		country_leader = {
+			expire = "1965.1.1"
+			ideology = social_anarchism
+		}
+	}
+	SAN_Glorious_Leader_Epstein = {
+		name = "Glorious Leader Epstein"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/EPS/Portrait_Epstein_vansoc.png"
+			}
+		}
+		country_leader = {
+			expire = "1965.1.1"
+			ideology = state_socialism
+		}
+	}
+	SAN_Comrade_Epstein = {
+		name = "Comrade Epstein"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/EPS/Portrait_Epstein_libmarx.png"
+			}
+		}
+		country_leader = {
+			expire = "1965.1.1"
+			ideology = spartakism
+		}
+	}
+	SAN_Chairman_Epstein = {
+		name = "Chairman Epstein"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/EPS/Portrait_Epstein_revsoc.png"
+			}
+		}
+		country_leader = {
+			expire = "1965.1.1"
+			ideology = democratic_socialism
+		}
+	}
+	SAN_Senator_Epstein = {
+		name = "Senator Epstein"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/EPS/Portrait_Epstein_socdem.png"
+			}
+		}
+		country_leader = {
+			expire = "1965.1.1"
+			ideology = progressive_democracy
+		}
+	}
+	SAN_CEO_Jeffery_Epstein = {
+		name = "CEO Jeffery Epstein"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/EPS/Portrait_Epstein_lib.png"
+			}
+		}
+		country_leader = {
+			expire = "1965.1.1"
+			ideology = libertarian_capitalism
+		}
+	}
+	SAN_Father_Epstein = {
+		name = "Father Epstein"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/EPS/Portrait_Epstein_con.png"
+			}
+		}
+		country_leader = {
+			expire = "1965.1.1"
+			ideology = national_conservatism
+		}
+	}
+	SAN_El_Presidente_Epstein = {
+		name = "El Presidente Epstein"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/EPS/Portrait_Epstein_rwauth.png"
+			}
+		}
+		country_leader = {
+			expire = "1965.1.1"
+			ideology = oligarchy
+		}
+	}
+	SAN_General_Epstein = {
+		name = "General Epstein"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/EPS/Portrait_Epstein_desp.png"
+			}
+		}
+		country_leader = {
+			expire = "1965.1.1"
+			ideology = military_dictatorship
+		}
+	}
+	SAN_King_Jeffery_I = {
+		name = "King Jeffery I"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/EPS/Portrait_Epstein_reac.png"
+			}
+		}
+		country_leader = {
+			expire = "1965.1.1"
+			ideology = reactionary_populism
+		}
+	}
+	SAN_Marquis_de_Epstein = {
+		name = "Marquis de Epstein"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/EPS/Portrait_Epstein_accel.png"
+			}
+		}
+		country_leader = {
+			expire = "1965.1.1"
+			ideology = futurism
+		}
+	}
+	PRU_Ena = {
+		name = "Ena"
+		portraits = {
+			
+		}
+	}
+	XIA_Chairman_Meow = {
+		name = "Chairman Meow"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/XIA/Portrait_Chairman_Meow.png"
+			}
+		}
+	}
+	FRA_Fernand_Léger = {
+		name = "Fernand Léger"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/FRA/Portrait_FRA_Fernand_Leger.png"
+			}
+		}
+	}
+	IRE_William_Butler_Yeats = {
+		name = "William Butler Yeats"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/IRE/Portrait_IRE_Yeats_Stage_One.png"
+			}
+		}
+	}
+	IRE_Dark_Lord_Yeats = {
+		name = "Dark Lord Yeats"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/IRE/Portrait_IRE_Yeats_Stage_Three.png"
+			}
+		}
+		country_leader = {
+			expire = "1965.1.1"
+			ideology = futurism
+		}
+	}
+	SYR_Bashar_al_Assad = {
+		name = "Bashar al-Assad"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SYR/Portrait_SYR_Bashar_Al_Assad.png"
+			}
+		}
+	}
+	SZC_Deng_Xiaoping = {
+		name = "Deng Xiaoping"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SZC/Portrait_SZC_Deng_Xiaoping.png"
+			}
+		}
+	}
+	CZE_Pat_Mat = {
+		name = "Pat & Mat"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/CZE/Portrait_CZE_Pat_and_Mat.png"
+			}
+		}
+	}
+	MAG_Big_Man_Tyrone = {
+		name = "Big Man Tyrone"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MAG/Portraits_MAG_big_man_tyrone.png"
+			}
+		}
+	}
+	JKR_Trixie = {
+		name = "Trixie"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/JKR/Portrait_JKR_Trixie.png"
+			}
+		}
+	}
+	CAL_Kanye_West = {
+		name = "Kanye West"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/CAL/Portrait_CAL_Kanye.png"
+			}
+		}
+	}
+	FRA_Antonin_Artaud_troll = {
+		name = "Antonin Artroll'd"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/FRA/Portriat_FRA_Antonin_Trolltaud.png"
+			}
+		}
+	}
+	FIU_Filippo_Tomaso_Marinetti_socdem = {
+		name = "Filippo Tomaso Marinetti"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/FIU/Portrait_Fiume_Filippo_Marinetti.png"
+			}
+		}
+	}
+	FIU_Guido_Keller_revsoc = {
+		name = "Guido Keller"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/FIU/Portrait_Fiume_Guido_Keller_C.png"
+			}
+		}
+	}
+	FIU_Harukichi_Shimoi_desp = {
+		name = "Harukichi Shimoi"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/FIU/Portrait_Fiume_Harukichi_Shimoi.png"
+			}
+		}
+	}
+	FIU_Gabriele_D_Annunzio_rightauth = {
+		name = "Gabriele D'Annunzio"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/FIU/Portrait_Fiume_Gabriele_Dannunzio.png"
+			}
+		}
+	}
+	FIU_Mario_Carli_vansoc = {
+		name = "Mario Carli"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/FIU/Portrait_FIU_Mario_Carli_C.png"
+			}
+		}
+	}
+	FIU_Alceste_De_Ambris_popsoc = {
+		name = "Alceste De Ambris"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/FIU/Portrait_Alceste_De_Ambris.png"
+			}
+		}
+	}
+	FIU_Renzo_Novatore_anarch = {
+		name = "Renzo Novatore"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/FIU/Portrait_FIU_Renzo_Novatore.png"
+			}
+		}
+	}
+	FIU_Giovanni_Papini_con = {
+		name = "Giovanni Papini"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/FIU/Portrait_FIU_Giovanni_Papini.png"
+			}
+		}
+	}
+	FIU_The_Tyrantslayer = {
+		name = "The Tyrantslayer"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/FIU/Portrait_FIU_Tyrantslayer.png"
+			}
+		}
+	}
+	FIU_Amogus_Augustus = {
+		name = "Amogus Augustus"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/FIU/Portrait_FIU_Amogus_Augustus.png"
+			}
+		}
+	}
+	ITA_Biggus_Dickus = {
+		name = "Biggus Dickus"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ITA/Portrait_ITA_Biggus_Dickus.png"
+			}
+		}
+	}
+	PCN_Hyena = {
+		name = "Hyena"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/PCN/Portrait_Hyena.png"
+			}
+		}
+	}
+	FRA_L_Imposteur = {
+		name = "L'Imposteur"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/FRA/Portrait_FRA_L_Impsoteur.png"
+			}
+		}
+	}
+	USA_Max = {
+		name = "Max"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/USA/Portrait_USA_Max.png"
+			}
+		}
+	}
+	USA_Nestor_Makhno = {
+		name = "Nestor Makhno"
+		portraits = {
+		}
+	}
+	GOE_Hermann_Goring = {
+		name = "Hermann Göring"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GOE/Portrait_Hermann_Goering.png"
+			}
+		}
+	}
+	HIM_Heinrich_Himmler = {
+		name = "Heinrich Himmler"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/HIM/Portrait_Heinrich_Himmler.png"
+			}
+			army = {
+				large = "gfx/leaders/HIM/Portrait_Heinrich_Himmler.png"
+			}
+		}
+		country_leader = {
+			ideology = esoteric_reactionism
+			expire = "1965.1.1.1"
+		}
+		corps_commander = {
+			traits = { }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 1
+			logistics_skill = 3
+		}
+	}
+	USA_Andrew_Melon = {
+		name = "Andrew Melon"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/USA/Portrait_USA_Andrew_Melon.png"
+			}
+		}
+	}
+	PUR_Sneed = {
+		name = "Sneed"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/PUR/Portrait_PUR_Sneed.png"
+			}
+		}
+	}
+	PUR_Chuck = {
+		name = "Chuck"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/PUR/Portrait_PUR_Chuck.png"
+			}
+		}
+	}
+	PUR_Homer_Simpson = {
+		name = "Homer Simpson"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/PUR/Portrait_PUR_Homer.png"
+			}
+		}
+	}
+
+
+
+
+
+
+
+}

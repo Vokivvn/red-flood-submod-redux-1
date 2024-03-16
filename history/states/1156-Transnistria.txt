@@ -1,0 +1,25 @@
+state={
+	id=1156
+	name="STATE_1156"
+	manpower = 582138
+
+	
+	state_category = large_town
+	
+	history={
+		owner = UKR
+		add_core_of = UKR
+		add_core_of = MOL
+		add_claim_by = ROM
+        victory_points = {
+			754 3
+		}
+		buildings = {
+			infrastructure = 1
+		}
+	}
+
+	provinces={
+		9576 13490 754
+	}
+}

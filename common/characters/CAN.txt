@@ -1,0 +1,122 @@
+characters = {
+	CAN_richard_bennet = {
+		name = "Richard Bennet"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/CAN/Portrait_CAN_Richard_Bennet.png"
+			}
+		}
+		country_leader = {
+			ideology = social_conservatism
+			expire = "1965.1.1.1"
+		}
+	}
+	CAN_mackenzie_king = {
+		name = "Mackenzie King"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/CAN/Portrait_CAN_Mackenzie King.png"
+			}
+		}
+		country_leader = {
+			ideology = classical_liberalism
+			expire = "1965.1.1.1"
+		}
+	}
+	CAN_andrew_mcnaughton = {
+		name = "Andrew McNaughton"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/CAN/Portrait_Andrew_McNaughton.png"
+			}
+		}
+		field_marshal = {
+			traits = { organisational_leader }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 4
+		}
+	}
+	CAN_arthur_currie = {
+		name = "Arthur Currie"
+		portraits = {
+			army = {
+				large="gfx/leaders/CAN/Portrait_CAN_Arthur_Currie.png"
+			}
+		}
+		corps_commander = {
+			traits = { trait_engineer }
+			skill = 3
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	CAN_charles_foulkes = {
+		name = "Charles Foulkes"
+		portraits = {
+			army = {
+				large="gfx/leaders/CAN/Portrait_CAN_Charles_Foulkes.png"
+			}
+		}
+		corps_commander = {
+			traits = { career_officer infantry_leader }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 3
+		}
+	}
+	CAN_george_pearkes = {
+		name = "George Pearkes"
+		portraits = {
+			army = {
+				large="gfx/leaders/CAN/Portrait_CAN_George_Pearkes.png"
+			}
+		}
+		corps_commander = {
+			traits = { war_hero career_officer }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 4
+			planning_skill = 2
+			logistics_skill = 3
+		}
+	}
+	CAN_harry_crerar = {
+		name = "Harry Crerar"
+		portraits = {
+			army = {
+				large="gfx/leaders/CAN/Portrait_CAN_Harry_Crerar.png"
+			}
+		}
+		corps_commander = {
+			traits = { panzer_leader }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 2
+		}
+	}
+	CAN_guy_simonds = {
+		name = "Guy Simonds"
+		portraits = {
+			army = {
+				large="gfx/leaders/CAN/Portrait_CAN_Guy_Simonds.png"
+			}
+		}
+		corps_commander = {
+			traits = { commando }
+			skill = 2
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+}

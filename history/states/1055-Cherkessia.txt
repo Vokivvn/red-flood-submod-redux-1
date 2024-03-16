@@ -1,0 +1,22 @@
+state={
+	id=1055
+	name="STATE_1055"
+	resources={
+	
+	}
+
+	history={
+		owner = DKB
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = DKB
+	}
+
+	provinces={
+		6692 11664 9691 9674 9649
+	}
+	manpower=214482
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

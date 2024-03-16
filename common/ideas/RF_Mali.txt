@@ -1,0 +1,26 @@
+ideas = {
+
+#################
+# Country ideas #
+#################
+
+	country = {
+		MLI_minuscule_ruling_minority = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = -0.45
+				war_support_factor = -0.4
+				political_power_gain = -0.8
+			}
+			picture = MLI_miniscule_ruling_minority
+		}
+		MLI_a_mans_vision = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				army_org = 0.05
+				army_attack_factor = 0.03
+			}
+			picture = MLI_one_mans_vision
+		}
+	}
+}

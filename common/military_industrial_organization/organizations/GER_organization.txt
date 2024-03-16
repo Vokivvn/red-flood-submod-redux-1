@@ -1,0 +1,24 @@
+################################
+#materiel_manufacturer##############
+################################
+GER_wiesa_organization = {
+	include = generic_support_equipment_organization
+	icon = GFX_idea_wiesa
+	allowed = {
+		original_tag = GER 
+	}
+}
+GER_mauser_organization = {
+	include = generic_infantry_equipment_organization
+	icon = GFX_idea_mauser
+	allowed = {
+		original_tag = GER 
+	}
+}
+GER_breslau_organization = {
+	include = generic_motorized_mechanized_organization
+	icon = GFX_idea_breslau
+	allowed = {
+		original_tag = GER 
+	}
+}

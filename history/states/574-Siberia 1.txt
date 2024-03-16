@@ -1,0 +1,37 @@
+
+state={
+	id=574
+	name="STATE_574" # Yakutsk
+	manpower = 1437866
+
+	state_category = town
+
+	history={
+		owner = KCK
+		add_core_of = KCK
+		victory_points = {
+			10641 15 # this is to make KCK capitulate after you take yakutsk - to avoid CBT
+		}
+		victory_points = {
+			4810 3
+		}
+		victory_points = {
+			12611 3
+		}
+		buildings = {
+			infrastructure = 1
+			arms_factory = 1
+			industrial_complex = 1
+			air_base = 1
+			4810={
+				naval_base = 2
+			}
+		}
+
+	}
+
+	provinces={
+		1666 1795 1878 4675 4726 4762 4798 4821 4855 7765 7817 7889 10641 10701 10714 12565 12611 12623
+		4810 10572 1805 4881 10598 10557 10589 13059 1852
+	}
+}

@@ -1,0 +1,425 @@
+ideas = {
+
+	#################
+	# Country ideas #
+	#################
+
+	country = {
+		BRA_oligarchic_madness = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				political_power_factor = -0.1
+				stability_factor = -0.1
+			}
+			picture = BRA_rich_madness
+		}
+		BRA_local_army = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				max_planning = -0.1
+				army_morale_factor = -0.05
+			}
+			picture = BRA_local_armies_structures
+		}
+		BRA_revolutionary_scars = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = -0.1
+				vanguard_socialism_drift = -0.05
+				popular_socialism_drift = -0.05
+				revisionist_socialism_drift = -0.05
+			}
+			picture = BRA_scars_of_revolutions
+		}
+		BRA_famine = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				MONTHLY_POPULATION = -0.1
+			}
+			picture = BRA_deadly_famines
+		}
+		BRA_state_authority_collapse = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				industrial_capacity_factory = -0.9
+				research_speed_factor = -0.7
+				stability_factor = -0.8
+			}
+			picture = BRA_terror
+		}
+		BRA_German_Socialist_symapthies = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea BRA_German_Socialist_symapthies"}
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = -0.03
+				conscription_factor = -0.01 
+				consumer_goods_expected_value = -0.05 			
+			}
+			picture = BRA_german_commies
+		}
+		
+		BRA_Agrarian_problems = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea BRA_Agrarian_problems"}
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+			    stability_factor = -0.03	
+			}
+			picture = BRA_deadly_famines
+		}
+		
+		BRA_london_market_crash = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea BRA_london_market_crash"}
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				consumer_goods_expected_value = 0.4
+				production_factory_max_efficiency_factor = -0.2
+				industrial_capacity_factory = -0.3
+				production_speed_buildings_factor = -0.15	
+			}
+			picture = RF_idea_bear
+		}
+		BRA_christian_socialism = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea BRA_christian_socialism"}
+			picture = BRA_catholic_socialism
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				conscription_factor = 0.1
+				stability_factor = 0.05
+				consumer_goods_expected_value = 0.05
+			}
+		}
+		BRA_catholic_egalitarianism  = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea BRA_catholic_egalitarianism"}
+			picture = BRA_christian_equality
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				MONTHLY_POPULATION = 0.1
+				production_speed_buildings_factor = 0.15
+				consumer_goods_expected_value = 0.15
+				political_power_gain = -0.1
+			}
+		}
+		BRA_catholic_egalitarianism_1 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea BRA_catholic_egalitarianism_1"}
+			picture = BRA_christian_equality
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				MONTHLY_POPULATION = 0.1
+				production_speed_buildings_factor = 0.15
+				consumer_goods_expected_value = 0.15
+				research_speed_factor = 0.05
+			}
+		}
+		BRA_religious_militias = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea BRA_religious_militias"}
+			picture = BRA_legion_of_jesus
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				conscription = 0.05
+				offence = 0.05
+				defence = 0.1
+				army_org_factor = -0.05
+			}
+		}
+		BRA_social_housing = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea BRA_social_housing"}
+			picture = BRA_christian_housing
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = -0.1
+				consumer_goods_expected_value = -0.15
+				MONTHLY_POPULATION = 0.15
+			}
+		}
+		BRA_social_housing_1 = {
+			picture = BRA_christian_housing
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = -0.1
+				consumer_goods_expected_value = -0.25
+				MONTHLY_POPULATION = 0.15
+				political_power_gain = 0.05
+				production_factory_max_efficiency_factor = -0.1
+			}
+		}
+		BRA_germanic_communism = {
+			picture = BRA_german_commies
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				production_factory_max_efficiency_factor = -0.2
+			}
+		}
+		BRA_municipal_socialism = {
+			picture = BRA_local_city_socialism
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				production_factory_max_efficiency_factor = -0.2
+				stability_factor = 0.1
+			}
+		}
+		BRA_cooperativism_idea = {
+			picture = BRA_coop
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				production_speed_buildings_factor = 0.2
+				production_factory_efficiency_gain_factor = 0.15
+				production_factory_start_efficiency_factor = -0.10
+			}
+		}
+		BRA_culture = {
+			picture = BRA_brazilian_culture
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				consumer_goods_expected_value = 0.05
+				production_factory_efficiency_gain_factor = -0.03
+				production_factory_start_efficiency_factor = -0.03
+				production_speed_arms_factory_factor = -0.03
+				stability_factor = 0.25
+				surrender_limit = 0.25
+			}
+		}
+		MOG_feudalism = {
+			picture = imperial_glory_idea
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				consumer_goods_expected_value = -0.07
+				production_factory_efficiency_gain_factor = 0.03
+				stability_factor = 0.05
+				war_support_factor = 0.10
+				monthly_population	= 0.30
+				research_speed_factor = -0.07
+			}
+		}
+		BRA_civil_war = {
+			picture = BRA_resistancebourgeois
+			cancel = { OR = { BRR = { exists = no } has_country_flag = remove_idea } }
+			modifier = {
+				ai_get_ally_desire_factor = -1000
+				war_support_factor = -0.1
+				surrender_limit = -0.1
+			}
+		}
+		BRA_internal_terror_idea = {
+			picture = BRA_terror
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = -0.15
+				research_speed_factor = 0.10
+				root_out_resistance_effectiveness_factor = 0.30
+				foreign_subversive_activites = -0.20
+				production_factory_start_efficiency_factor = 0.25
+				production_factory_efficiency_gain_factor = 0.20
+				production_speed_buildings_factor = 0.20
+			}
+		}
+		BRA_hardlinemarxism = {
+			picture = BRA_marxists
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				vanguard_socialism_drift = 0.10
+				stability_factor = 0.15
+				army_attack_factor = 0.15
+				root_out_resistance_effectiveness_factor = 0.60
+			}
+		}
+		BRA_permanent_scars = {
+			picture = BRA_deep_scars
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = -0.05
+				vanguard_socialism_drift = -0.01
+			}
+		}
+		BRA_state_collectives = {
+			cancel = { has_country_flag = remove_idea }
+			picture = BRA_collectives
+			modifier = {
+				production_speed_buildings_factor = 0.10
+				production_factory_efficiency_gain_factor = 0.10
+				stability_factor = -0.05
+				vanguard_socialism_drift = 0.01
+			}
+		}
+		BRA_mass_industry = {
+			picture = BRA_mass_industrial_investments
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				global_building_slots_factor = 0.20
+			}
+			equipment_bonus = {
+				fighter = {
+					reliability = 0.10
+				}
+				armor = {
+					reliability = 0.10
+				}
+				infantry_equipment = {
+					reliability = 0.10
+				}
+			}
+		}
+		BRA_urban_culture_idea = {
+			picture = BRA_urban_culture
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = 0.10
+				war_support_factor = 0.20
+				industry_air_damage_factor = -0.20
+				decryption_factor = 0.20
+				encryption_factor = 0.2
+				monthly_population = 0.3
+			}
+		}
+		BRA_local_militias = {
+			picture = BRA_personal_milities
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = 0.10
+				conscription_factor = 0.10
+			}
+		}
+		BRA_red_army_idea = {
+			picture = BRA_great_red_army
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = 0.15
+				command_power_gain = 0.20
+				vanguard_socialism_drift = 0.05
+				subversive_activites_upkeep = -0.30
+			}
+		}
+		BRA_indestructible_wave_idea = {
+			picture = BRA_wave_soldiers
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				conscription = 0.05
+			}
+		}
+		BRA_militarised_society_idea = {
+			picture = BRA_baby_artillery
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				industrial_capacity_factory = 0.30
+				production_speed_arms_factory_factor = 0.30
+			}
+		}
+		BRA_asian_insurgencies = {
+			picture = BRA_learn_from_asians
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				heat_attrition_factor = -0.40
+			}
+		}
+		BRA_pacifism = {
+			picture = BRA_non_aligned
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				ai_join_ally_desire_factor = -1000
+				ai_call_ally_desire_factor = -1000
+			}
+		}
+		BRA_beacon_of_socialism_idea = {
+			picture = BRA_beacon_socialism
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = 0.20
+				revisionist_socialism_drift = 0.05
+				popular_socialism_drift = 0.05
+				vanguard_socialism_drift = 0.01
+			}
+		}
+		BRA_volunteer_army_idea = {
+			picture = BRA_volunteers
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				send_volunteer_divisions_required = -10
+				send_volunteer_size = 24
+			}
+		}
+		BRA_special_forces = {
+			picture = BRA_special
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				amphibious_invasion = 0.10
+				army_attack_factor = 0.10
+				army_org_factor = 0.10
+				attrition = -0.20
+			}
+		}
+		BRA_germanophillia = {
+			picture = BRA_we_love_germans
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				training_time_army_factor = 0.05
+				army_attack_factor = 0.05
+			}
+		}
+		BRA_embargo = {
+			picture = BRA_embargo_ja
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				army_attack_factor = -0.05
+				attrition = 0.15
+				army_org_factor = -0.15
+			}
+		}
+		BRA_maxlanguageissues = {
+			picture = BRA_languages_issues
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				vanguard_socialism_drift = -0.01
+				stability_factor = -0.05
+				war_support_factor = -0.20
+				surrender_limit = -0.10
+			}
+		}
+		BRA_kill_the_poor_plan = {
+			picture = BRA_emergency_plan
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				army_org_factor = -0.05
+				conscription = 0.10
+				stability_factor = -0.15
+			}
+		}
+		BRA_klinger_plan = {
+			picture = BRA_plan_k
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				army_org_factor = 0.05
+			}
+		}
+		
+		BRA_order_and_progress = {
+			picture = BRR_progressorder
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = 0.10
+				training_time_army_factor = -0.1
+			}
+		}
+
+		BRA_black_hole = {
+			picture = BRA_blackhole_newworld.png
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				encryption_factor = 2.50
+			}
+		}
+		
+		BRA_bourgieresistance = {
+			picture = BRA_resistancebourgeois
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				right_authoritarianism_drift = 0.01
+				liberalism_drift = 0.01
+				conservatism_drift = 0.01
+				reactionism_drift = 0.01
+				despotism_drift = 0.01
+			}
+		}
+	}
+
+}

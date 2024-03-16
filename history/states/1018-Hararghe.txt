@@ -1,0 +1,32 @@
+state=
+{
+	id=1018
+	name="STATE_1018"
+	manpower = 468941
+	resources={
+		rubber=5
+		steel=5
+	}
+	
+	state_category = town
+
+	history = {
+		owner = ITA
+		buildings = {
+			infrastructure = 2
+			arms_factory = 0
+			industrial_complex = 1
+		}
+		add_claim_by = ITA
+		add_core_of = SML
+		add_core_of = ETH
+		add_core_of = ET2
+		victory_points = {
+			4995 1
+		}
+	}
+
+	provinces = {
+		4995 12714 12757 12812 
+	}
+}

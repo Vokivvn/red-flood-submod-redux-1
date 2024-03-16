@@ -1,0 +1,58 @@
+characters = {
+	FCQ_landry_sales_gonçalves = {
+		name = "Landry Sales Gonçalves"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/FCQ/Portrait_Landry_Sales.png"
+			}
+		}
+		country_leader = {
+			ideology = praetorian_oligarchy
+			expire = "1965.1.1.1"
+		}
+	}
+	FCQ_landry_sales_gonçalves_dem = {
+		name = "Landry Sales Gonçalves"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/FCQ/Portrait_Landry_Sales_Dem.png"
+			}
+		}
+		country_leader = {
+			ideology = right_populism
+			expire = "1965.1.1.1"
+		}
+	}
+	FCQ_júlio_caetano_horta_barbosa = {
+		name = "Júlio Caetano Horta Barbosa"
+		portraits = {
+			army = {
+				large="gfx/leaders/FCQ/Portrait_Julio_Caetano.png"
+			}
+		}
+		corps_commander = {
+			traits = { trickster career_officer infantry_officer }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 3
+		}
+	}
+	FCQ_euler_bentes_monteiro = {
+		name = "Euler Bentes Monteiro"
+		portraits = {
+			army = {
+				large="gfx/leaders/FCQ/Portrait_Euler_Bentes_Monteiro.png"
+			}
+		}
+		corps_commander = {
+			traits = { infantry_officer }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 4
+		}
+	}
+}

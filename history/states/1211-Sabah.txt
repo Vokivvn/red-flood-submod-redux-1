@@ -1,0 +1,28 @@
+
+state={
+	id=1211
+	name="STATE_1211"
+	manpower = 210160
+
+	resources={
+		rubber=30
+		oil=3
+	}
+
+	state_category = rural
+
+	history={
+		owner = MAL
+		victory_points = {
+			10212 1
+		}
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = MAL
+	}
+
+	provinces={
+		1335 4338 7358 10212 12171 12186 13542
+	}
+}

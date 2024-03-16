@@ -1,0 +1,38 @@
+state= {
+	id=926
+	name="STATE_926"
+	manpower = 10985709
+	state_category = large_city
+	resources={
+		steel= 6
+	}
+
+	history= {
+		owner = GDP
+		add_core_of = GDP
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 3
+			arms_factory = 3
+			dockyard = 2
+			1047 = {
+				naval_base = 5
+				coastal_bunker = 1
+				bunker = 1
+			}
+			air_base = 1
+		} 
+		victory_points = {
+			1047 25
+		}
+		victory_points = {
+			7152 5
+		}
+		victory_points = {
+			7108 3
+		}
+	}
+	provinces={
+		1047 1202 7108 7152 12095 13621
+	}
+}

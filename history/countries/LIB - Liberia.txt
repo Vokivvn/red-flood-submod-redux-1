@@ -1,0 +1,84 @@
+﻿capital = 298
+
+oob = "LIB"
+
+set_research_slots = 3 
+
+set_convoys = 175
+
+add_ideas = {
+	LIB_african_migration
+}
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1		
+	tech_recon = 1
+	tech_engineers = 1
+	tech_trucks =1
+	motorised_infantry = 1
+}
+
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+	set_technology = {
+		iw_small_airframe = 1
+		aa_lmg = 1
+		engines_1 = 1
+	}
+}
+if = {
+	limit = { NOT = { has_dlc = "By Blood Alone" } }
+	set_technology = {
+		early_fighter = 1
+	}
+}
+
+set_politics = {
+	ruling_party = conservatism
+	last_election = "1933.10.25"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	vanguard_socialism = 0
+	popular_socialism = 30
+	anarchism = 0
+	revisionist_socialism = 0
+	progressivism = 10
+	liberalism = 0
+	conservatism = 30
+	right_authoritarianism = 10
+	despotism = 0
+	reactionism = 0
+	accelerationism = 20
+}
+
+set_stability = 0.2
+
+recruit_character = LIB_charles_d_b_king
+recruit_character = LIB_george_padmore
+recruit_character = LIB_marcus_garvey
+recruit_character = LIB_harvey_firestone_jr
+recruit_character = LIB_alford_russ
+recruit_character = LIB_allen_yancy
+recruit_character = LIB_amy_jacques_garvey
+recruit_character = LIB_george_westong
+recruit_character = LIB_cyril_briggs
+recruit_character = LIB_william_henry_ferris
+recruit_character = LIB_william_tubman
+recruit_character = LIB_otto_huiswoud
+recruit_character = LIB_robert_lincoln_poston
+recruit_character = LIB_martha_firestone_ford
+recruit_character = LIB_ralph_de_boisierre
+recruit_character = LIB_momolu_massaquoi
+recruit_character = LIB_grand_lion
+recruit_character = LIB_duse_mohammad_ali
+recruit_character = LIB_elizabeth_parke_firestone
+recruit_character = LIB_cyril_lionel_robert_james
+recruit_character = LIB_george_henry_andrews
+recruit_character = LIB_maymie_de_mena
+recruit_character = LIB_benson_ford_sr
+recruit_character = LIB_claudia_jones
+recruit_character = LIB_james_skirving_smith_jr

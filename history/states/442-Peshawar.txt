@@ -1,0 +1,25 @@
+
+state={
+	id=442
+	name="STATE_442"
+	manpower = 4684400
+
+	state_category = rural
+
+	history={
+		owner = AFG
+		buildings = {
+			infrastructure = 1
+			air_base = 3
+		}
+		add_core_of = AFG
+		add_claim_by = DIN
+		victory_points = {
+			12717 2
+		}
+	}
+
+	provinces={
+		1978 2084 4558 4998 12717 12763
+	}
+}

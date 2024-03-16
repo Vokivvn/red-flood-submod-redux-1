@@ -1,0 +1,27 @@
+state={
+	id=1166
+	name="STATE_1166"
+	resources={
+	
+	}
+
+	history={
+		owner = BUR
+		add_core_of = BUR
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			air_base = 1
+		}
+		victory_points = {
+			7034 1
+		}
+	}
+
+	provinces={
+		1650 4059 7534 7163 4541 7190 4019 7034 12449 4202
+	}
+	manpower=1022500
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

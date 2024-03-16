@@ -1,0 +1,71 @@
+﻿capital = 849
+
+oob = "KHW"
+
+set_research_slots = 3
+
+#set_country_flag = is_russian_warlord
+
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1
+	tech_recon = 1
+	tech_engineers = 1
+	tech_trucks =1
+	motorised_infantry = 1
+	gw_artillery = 1
+}
+
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+	set_technology = {
+		iw_small_airframe = 1
+		aa_lmg = 1
+		engines_1 = 1
+	}
+}
+if = {
+	limit = { NOT = { has_dlc = "By Blood Alone" } }
+	set_technology = {
+		early_fighter = 1
+	}
+}
+
+
+set_politics = {
+	ruling_party = vanguard_socialism
+	last_election = "1933.10.25"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	vanguard_socialism = 42
+	popular_socialism = 23
+	anarchism = 0
+	revisionist_socialism = 0
+	anarchism = 0
+	revisionist_socialism = 2
+	progressivism = 1
+	liberalism = 4
+	conservatism = 2
+	right_authoritarianism = 0
+	despotism = 0
+	reactionism = 12
+	accelerationism = 14
+}
+
+add_ideas = {
+	limited_conscription
+	limited_exports
+	civilian_economy
+	KHW_front
+	KHW_army
+	KHW_hiddenbuff
+}
+
+set_stability = 0.5
+
+recruit_character = KHW_mirsaid_sultan_galiev

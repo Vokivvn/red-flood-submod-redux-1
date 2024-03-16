@@ -1,0 +1,204 @@
+characters = {
+	PCN_Karl_Ebermaier = {
+		name = "Karl Ebermaier"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/PCN/Karl_Ebermaier.png"
+			}
+			army = {
+				small = "gfx/interface/ministers/PCN/PCN_Karl_Ebermaier.tga"
+			}
+		}
+		country_leader = {
+			ideology = colonial_government
+			expire = "1965.1.1.1"
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = PCN_Karl_Ebermaier_hog
+			allowed = { original_tag = PCN }
+			traits = {
+				head_of_government
+			}
+		}
+	}
+	PCN_louis_brody = {
+		name = "Louis Brody"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/PCN/Portrait_PCN_Louis_Brody.png"
+			}
+			army = {
+				small = "gfx/interface/ministers/PCN/PCN_louis_brody.png"
+			}
+		}
+		country_leader = {
+			ideology = progressive_democracy
+			expire = "1965.1.1.1"
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = PCN_louis_brody_hog
+			allowed = { original_tag = PCN }
+			available = { has_country_flag = PCN_appointbrody }
+			traits = {
+				head_of_government
+				hog_ambitious_union_boss
+			}
+		}
+	}
+	PCN_hans_huttig = {
+		name = "Hans Hüttig"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/PCN/Portrait_PCN_Hans_Huttig.png"
+			}
+			army = {
+				small = "gfx/interface/ministers/PCN/PCN_hans_huttig.png"
+			}
+		}
+		country_leader = {
+			ideology = reactionary_populism
+			expire = "1965.1.1.1"
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = PCN_hans_huttig_hog
+			allowed = { original_tag = PCN }
+			available = { has_country_flag = PCN_appointhuttig }
+			traits = {
+				head_of_government
+				hog_flamboyant_tough_guy
+			}
+		}
+	}
+	PCN_siegfried_muller = {
+		name = "Siegfried Müller"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/PCN/Portrait_PCN_Siegfried_Muller.png"
+			}
+		}
+		country_leader = {
+			ideology = agrarian_socialism
+			expire = "1965.1.1.1"
+		}
+	}
+	PCN_Theodor_von_Hippel = {
+		name = PCN_Theodor_von_Hippel_fom
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/PCN/PCN_theodor_von_hippel.png"
+			}
+		}
+		advisor = {
+			slot = foreign_minister
+			idea_token = PCN_Theodor_von_Hippel_fom
+			allowed = { original_tag = PCN }
+			traits = {
+				foreign_minister
+				for_biased_intellectual
+			}
+		}
+	}
+	PCN_Paul_Von_Lettow = {
+		name = PCN_Paul_Von_Lettow_eco
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/PCN/PCN_paul_von_lettow.png"
+			}
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = PCN_Paul_Von_Lettow_eco
+			allowed = { original_tag = PCN }
+			traits = {
+				economy_minister
+				eco_laissez_faire_capitalist
+			}
+		}
+	}
+	PCN_Heinrich_Kirchheim = {
+		name = PCN_Heinrich_Kirchheim_sec
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/PCN/PCN_heinrich_kirchheim.png"
+			}
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = PCN_Heinrich_Kirchheim_sec
+			allowed = { original_tag = PCN }
+			traits = {
+				security_minister
+				sec_silent_lawyer
+			}
+		}
+	}
+	PCN_Julian_Scherner = {
+		name = PCN_Julian_Scherner_int
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/PCN/PCN_julian_scherner.png"
+			}
+		}
+		advisor = {
+			slot = head_of_intel
+			idea_token = PCN_Julian_Scherner_int
+			allowed = { original_tag = PCN }
+			traits = {
+				head_of_intel
+				int_logistics_specialist
+			}
+		}
+	}
+	PCN_Muhammed_Husan = {
+		name = PCN_Muhammed_Husan_cof
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/PCN/PCN_muhammed_husan.png"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = PCN_Muhammed_Husan_cof
+			allowed = { original_tag = PCN }
+			traits = {
+				high_command
+				cos_school_of_psychology
+			}
+		}
+	}
+	PCN_paul_ogorzow = {
+		name = "Paul Ogorzow"
+		portraits = {
+			army = {
+				large = "gfx/leaders/PCN/Portrait_PCN_Paul_Ogorzow.png"
+			}
+		}
+		field_marshal = {
+			traits = { offensive_doctrine logistics_wizard }
+			skill = 5
+			attack_skill = 4
+			defense_skill = 4
+			planning_skill = 2
+			logistics_skill = 3
+		}
+	}
+	PCN_franz_ritter_von_epp = {
+		name = "Franz Ritter Von Epp"
+		portraits = {
+			army = {
+				large = "gfx/leaders/PCN/Portrait_PCN_Franz_Ritter_von_Epp.png"
+			}
+		}
+		corps_commander = {
+			traits = { jungle_rat }
+			skill = 4
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 3
+		}
+	}
+}

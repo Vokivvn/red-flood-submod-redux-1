@@ -1,0 +1,40 @@
+Russian_unification_decisions_nationalist = {
+	priority = 200
+	allowed = {
+		OR = {
+			original_tag = KCK
+			original_tag = DKB
+			original_tag = ORE
+			original_tag = SIB
+			original_tag = ARC
+			original_tag = PRI
+			#original_tag = RUS 
+			#original_tag = SRU
+		}
+	}
+	visible = {
+		is_subject = no
+		Russian_unification_decisions_nationalist_triggers = yes
+	}
+	icon = GFX_Russian_uni_nationalist
+	picture = GFX_decision_category_russian_reuni
+}
+Russian_unification_decisions_socialist = {
+	priority = 200
+	icon = GFX_Russian_uni_socialist
+	picture = GFX_decision_category_russian_reuni
+	allowed = {
+		OR = {
+			original_tag = KAV
+			original_tag = ZHR
+			original_tag = ALT
+			original_tag = HAR
+			original_tag = FCR
+			original_tag = PSL
+		}
+	}
+	visible = {
+		is_subject = no
+		Russian_unification_decisions_socialist_triggers = yes
+	}
+}

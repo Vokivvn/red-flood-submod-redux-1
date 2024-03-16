@@ -1,0 +1,22 @@
+ideas = {
+	country = {
+		SWI_fanatic_antisocialism = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				anarchism_acceptance = -10000
+				vanguard_socialism_acceptance = -10000
+				popular_socialism_acceptance = -10000
+				revisionist_socialism_acceptance = -10000
+				progressivism_acceptance = -1000
+				anarchism_drift = -0.01
+				vanguard_socialism_drift = -0.01
+				popular_socialism_drift = -0.01
+				revisionist_socialism_drift = -0.01
+				progressivism_drift = -0.01
+			}
+			picture = UPI_brutal_putdowns
+		}
+
+	} 
+
+}	

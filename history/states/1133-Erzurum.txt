@@ -1,0 +1,27 @@
+state={
+	id = 1133
+	name = "STATE_1133"
+	resources={
+		chromium = 3
+	}
+	history={
+		owner = ARM
+		buildings = {
+			infrastructure = 2
+			arms_factory = 1
+		}
+		add_core_of = ARM
+		add_core_of = MAR
+		add_claim_by = TUR
+		victory_points = {
+			11853 3
+		}
+	}
+
+	provinces={
+		11853 6976 6991
+	}
+	manpower=253120
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

@@ -1,0 +1,25 @@
+ideas = {
+
+#################
+# Country ideas #
+#################
+
+	country = {
+		GUN_protector_of_islam = {
+			picture = GUN_protectors_of_islam
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				reactionism_drift = 0.02
+				army_org = 0.05
+				army_defence_factor = 0.08
+			}
+		}
+		GUN_no_infrastructure = {
+			picture = GUN_terrible_infrastructure
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				attrition = 0.20
+			}
+		}
+	}
+}

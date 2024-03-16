@@ -1,0 +1,477 @@
+characters = {
+	ARM_aram_manukian = {
+		name = "Hovhannes Kajaznuni"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ARM/Portrait_ARM_Hovhannes_Kajaznuni.png"
+			}
+		}
+		country_leader = {
+			ideology = democratic_socialism
+			expire = "1965.1.1.1"
+		}
+	}
+	ARM_garegin_nzhdeh = {
+		name = "Garegin Nzhdeh"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ARM/Portrait_Garegin.png"
+				small = "gfx/interface/ministers/ARM/ARM_garegin_hog.tga"
+			}
+			army = {
+				large = "gfx/leaders/ARM/Portrait_Garegin_General.png"
+				small = "gfx/interface/ministers/ARM/ARM_garegin_hog.tga"
+			}
+		}
+		country_leader = {
+			ideology = reactionary_populism
+			expire = "1965.1.1.1"
+		}
+		corps_commander = {
+			traits = { harsh_leader old_guard }
+			skill = 4
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 3
+		}
+		advisor = {
+			slot = head_of_government
+			allowed = {
+				original_tag = ARM
+			}
+			traits = {
+				hog_local_tyrant
+			}
+			idea_token = ARM_garegin_nzhdeh_hog
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = ARM_garegin_nzhdeh
+			allowed = {
+				original_tag = ARM
+			}
+			available = {
+				has_government = reactionism
+			}
+			traits = {
+				carm_doctrine_of_autonomy
+			}
+		}
+	}
+	ARM_mikayel_varandian = {
+		name = "Mikayel Varandian"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ARM/Portrait_Mikayel.png"
+			}
+		}
+		country_leader = {
+			ideology = agrarian_socialism
+			expire = "1965.1.1.1"
+		}
+	}
+	ARM_andranik_ozanyan = {
+		name = "Andranik O'zanyan"
+		portraits = {
+			army = {
+				large = "gfx/leaders/ARM/Portrait_Andranik.png"
+				small = "gfx/interface/ministers/ARM/ARM_andranik_ozanyan.png"
+			}
+		}
+		corps_commander = {
+			traits = {
+				commando
+			}
+			skill = 3
+			attack_skill = 4
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 3
+		}
+		advisor = {
+			slot = high_command
+			idea_token = ARM_andranik_ozanyan
+			allowed = {
+				original_tag = ARM
+			}
+			traits = {
+				cos_school_of_commando_operations
+			}
+		}
+	}
+	ARM_daniel_bek_pirowmyan = {
+		name = "Daniel bek-P'irowmyan"
+		portraits = {
+			army = {
+				large = "gfx/leaders/ARM/Portrait_Daniel_bek.png"
+				small = "gfx/interface/ministers/ARM/ARM_daniel_bek_pirowmyan.png"
+			}
+		}
+		corps_commander = {
+			traits = {
+				old_guard
+				trait_mountaineer
+			}
+			skill = 3
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 4
+			logistics_skill = 3	
+		}
+		advisor = {
+			slot = high_command
+			idea_token = ARM_daniel_bek_pirowmyan
+			allowed = {
+				original_tag = ARM
+			}
+			traits = {
+				cos_school_of_defence
+			}
+		}
+	}
+	ARM_drastmat_kanayan = {
+		name = "Drastmat Kanayan"
+		portraits = {
+			army = {
+				large = "gfx/leaders/ARM/Portrait_Drastmat.png"
+				small = "gfx/interface/ministers/ARM/ARM_drastmat_kanayan.png"
+			}
+		}
+		corps_commander = {
+			traits = {
+				brilliant_strategist
+			}
+			skill = 2
+			attack_skill = 3
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 3		
+		}
+	}
+	ARM_movses_silikyan = {
+		name = "Movses Silikyan"
+		portraits = {
+			army = {
+				large = "gfx/leaders/ARM/Portrait_Movses.png"
+				small = "gfx/interface/ministers/ARM/ARM_movses_silikyan.png"
+			}
+		}
+		corps_commander = {
+			traits = {
+				#mountaineer
+				#cautious
+				winter_specialist
+			}
+			skill = 2
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 2		
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = ARM_movses_silikyan
+			allowed = {
+				original_tag = ARM
+			}
+			traits = {
+				army_chief
+				carm_guns_and_butter_doctrine
+			}
+		}
+	}
+	ARM_tvomas_nazarbekyan = {
+		name = "T'vomas Nazarbekyan"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ARM/Portrait_Tvomas_Nazarbekyan.png"
+				small = "gfx/interface/ministers/ARM/ARM_tvomas_nazarbekyan.png"
+			}
+		}
+		corps_commander = {
+			traits = {
+				brilliant_strategist
+				#reckless
+				old_guard
+				winter_specialist
+			}
+			skill = 1
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2		
+		}
+	}
+	ARM_avetis_nazarbekian = {
+		name = "Avetis Nazarbekian"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/ARM/ARM_avetis_hog.tga"
+			}
+		}
+		advisor = {
+			allowed = {
+				original_tag = ARM
+			}
+			slot = head_of_government
+			traits = {
+				hog_silent_workhorse
+			}
+			idea_token = ARM_avetis_nazarbekian_hog
+		}
+	}
+	ARM_hamo_ohanjanyan = {
+		name = "Hamo Ohanjanyan"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/ARM/ARM_hamo_hog.tga"
+			}
+		}
+		advisor = {
+			allowed = {
+				original_tag = ARM
+			}
+			slot = head_of_government
+			traits = {
+				hog_flamboyant_tough_guy
+			}
+			idea_token = ARM_hamo_ohanjanyan_hog
+		}
+	}
+	ARM_alexandr_khatisian = {
+		name = "Alexandr Khatisian"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/ARM/ARM_alexandr_eco.tga"
+			}
+		}
+		advisor = {
+			allowed = {
+				original_tag = ARM
+			}
+			slot = economy_minister
+			traits = {
+				eco_mixed_economy
+			}
+			idea_token = ARM_alexandr_khatisian_eco
+		}
+	}
+	ARM_sarkis_dkhrouni = {
+		name = "Sarkis Dkhrouni"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/ARM/ARM_sarkis_eco.tga"
+			}
+		}
+		advisor = {
+			allowed = {
+				original_tag = ARM
+			}
+			slot = economy_minister
+			traits = {
+				eco_planned_economy_proponent
+			}
+			idea_token = ARM_sarkis_dkhrouni_eco
+		}
+	}
+	ARM_vahan_papazin = {
+		name = "Vahan Papazin"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/ARM/ARM_vahan_eco.tga"
+			}
+		}
+		advisor = {
+			allowed = {
+				original_tag = ARM
+			}
+			slot = economy_minister
+			traits = {
+				eco_administrative_genius
+			}
+			idea_token = ARM_vahan_papazin_eco
+		}
+	}
+	ARM_sirakn_tigranyan = {
+		name = "Sirakn Tigranyan"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ARM/Portrait_Sirakn.png"
+				small = "gfx/interface/ministers/ARM/ARM_sirakn_for.tga"
+			}
+		}
+		country_leader = {
+			ideology = left_populism
+			expire = "1965.1.1.1"
+		}
+		advisor = {
+			allowed = {
+				original_tag = ARM
+			}
+			slot = foreign_minister
+			traits = {
+				for_biased_intellectual
+			}
+			idea_token = ARM_sirakn_tigranyan_for
+		}
+	}
+	ARM_harutiun_jangulian = {
+		name = "Harutium Jangulian"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/ARM/ARM_harutiun_for.tga"
+			}
+		}
+		advisor = {
+			allowed = {
+				original_tag = ARM
+			}
+			slot = foreign_minister
+			traits = {
+				for_great_compromiser
+			}
+			idea_token = ARM_harutiun_jangulian_for
+		}
+	}
+	ARM_hayk_asatryan = {
+		name = "Hayk Asatryan"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/ARM/ARM_hayk_for.tga"
+			}
+		}
+		advisor = {
+			allowed = {
+				original_tag = ARM
+			}
+			slot = foreign_minister
+			traits = {
+				for_ideological_crusader
+			}
+			idea_token = ARM_hayk_asatryan_for
+		}
+	}
+	ARM_abraham_gyulkhandayan = {
+		name = "Abraham Gyulkhandayan"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/ARM/ARM_abraham_sec.tga"
+			}
+		}
+		advisor = {
+			allowed = {
+				original_tag = ARM
+			}
+			slot = security_minister 
+			traits = {
+				sec_man_of_the_people
+			}
+			idea_token = ARM_abraham_gyulkhandayan_sec
+		}
+	}
+	ARM_mihram_damadian = {
+		name = "Mihram Damadian"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/ARM/ARM_mihram_sec.tga"
+			}
+		}
+		advisor = {
+			allowed = {
+				original_tag = ARM
+			}
+			slot = security_minister 
+			traits = {
+				sec_compassionate_gentleman
+			}
+			idea_token = ARM_mihram_damadian_sec
+		}
+	}
+	ARM_drastamat_kanayan = {
+		name = "Drastamat Kanayan"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/ARM/ARM_drastamat_sec.tga"
+			}
+			army = {
+				small = "gfx/interface/ministers/ARM/ARM_drastamat_sec.tga"
+			}
+		}
+		advisor = {
+			allowed = {
+				original_tag = ARM
+			}
+			slot = security_minister 
+			traits = {
+				sec_prince_of_terror
+			}
+			idea_token = ARM_drastamat_kanayan_sec
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = ARM_drastamat_kanayan
+			allowed = {
+				original_tag = ARM
+			}
+			traits = {
+				carm_decisive_battle_doctrine
+			}
+		}
+	}
+	ARM_arsham_khondkaryan = {
+		name = "Arsham Khondkaryan"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/ARM/ARM_arsham_int.tga"
+			}
+		}
+		advisor = {
+			allowed = {
+				original_tag = ARM
+			}
+			slot = head_of_intel 
+			traits = {
+				int_political_specialist
+			}
+			idea_token = ARM_arsham_khondkaryan_int
+		}
+	}	
+	ARM_stepan_sapah_guliann = {
+		name = "Stepan Sapah Guliann"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/ARM/ARM_stepan_int.tga"
+			}
+		}
+		advisor = {
+			allowed = {
+				original_tag = ARM
+			}
+			slot = head_of_intel 
+			traits = {
+				int_technical_specialist
+			}
+			idea_token = ARM_stepan_sapah_guliann_int
+		}
+	}	
+	ARM_khachadur_amirin = {
+		name = "Khachadur Amirin"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/ARM/ARM_khachadur_int.tga"
+			}
+		}
+		advisor = {
+			allowed = {
+				original_tag = ARM
+			}
+			slot = head_of_intel 
+			traits = {
+				int_dismal_enigma
+			}
+			idea_token = ARM_khachadur_amirin_int
+		}
+	}
+
+}

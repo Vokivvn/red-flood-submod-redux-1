@@ -1,0 +1,566 @@
+add_namespace = romania
+
+country_event = { # frn or not
+	id = romania.1
+	title = romania.1.t
+	desc = romania.1.desc
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = romania.1.a
+		retire_character = ROM_chadrol
+		retire_character = ROM_tatarescu
+		add_country_leader_role = {
+			character = "ROM_mihai"
+			country_leader = {
+				ideology = absolute_monarchy
+				expire = "1965.1.1.1"
+			}
+			promote_leader = yes
+		}
+		add_country_leader_role = {
+			character = "ROM_bratianu"
+			country_leader = {
+				ideology = classical_liberalism
+				expire = "1965.1.1.1"
+				desc = "POLITICS_BRATIANU_DESC"
+			}
+			promote_leader = yes
+		}
+		country_event = {
+			id = romania.2
+			days = 40
+		}
+		news_event = {
+			id = news.122
+			days = 1
+		}
+		add_popularity = {
+			ideology = despotism
+			popularity = -0.35
+		}
+		remove_ideas = {
+			ROM_frn_idea
+			ROM_hedonist_king
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}
+	option = {
+		name = romania.1.b
+		country_event = {
+			id = romania.3
+			days = 365
+		}
+		add_popularity = {
+			ideology = despotism
+			popularity = 0.1
+		}
+		remove_ideas = {
+			ROM_hedonist_king
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}
+
+}
+
+country_event = { # elect who lol
+	id = romania.2
+	title = romania.2.t
+	desc = romania.2.desc
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = romania.2.a
+		set_politics = {
+			ruling_party = liberalism
+		}
+		add_popularity = {
+			ideology = liberalism
+			popularity = 0.15
+		}
+		country_event = {
+			id = romania.4
+			days = 690
+		}
+		news_event = {
+			id = news.123
+			days = 1
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}
+	option = {
+		name = romania.2.b
+		set_politics = {
+			ruling_party = conservatism
+		}
+		add_popularity = {
+			ideology = conservatism
+			popularity = 0.15
+		}
+		country_event = {
+			id = romania.4
+			days = 690
+		}
+		news_event = {
+			id = news.124
+			days = 1
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}
+	option = {
+		name = romania.2.c
+		set_politics = {
+			ruling_party = right_authoritarianism
+		}
+		add_popularity = {
+			ideology = right_authoritarianism
+			popularity = 0.15
+		}
+		add_popularity = {
+			ideology = accelerationism
+			popularity = 0.05
+		}
+		country_event = {
+			id = romania.4
+			days = 690
+		}
+		news_event = {
+			id = news.125
+			days = 1
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}
+
+}
+
+country_event = { # carol emperor or no
+	id = romania.3
+	title = romania.3.t
+	desc = romania.3.desc
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = romania.3.a
+		set_country_flag = ROM_carol_emperor
+		country_event = {
+			id = romania.4
+			days = 365
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}
+	option = {
+		name = romania.3.b
+		set_country_flag = ROM_frn_supreme
+		country_event = {
+			id = romania.4
+			days = 365
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}
+
+}
+
+country_event = { # attack moldova
+	id = romania.4
+	title = romania.4.t
+	desc = romania.4.desc
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = romania.4.a
+		declare_war_on = {
+			target = MOL
+			type = annex_everything
+		}
+		news_event = {
+			id = news.140
+		}
+		trigger = {
+			is_puppet = no
+		}
+	}
+
+}
+
+
+country_event = { # attack transylvania
+	id = romania.5
+	title = romania.5.t
+	desc = romania.5.desc
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = romania.5.a
+		if = {
+			limit = {
+				tag = ROM
+			}
+			news_event = {
+				id = news.141
+			}
+			MOL = {
+				every_core_state = {
+					add_core_of = ROM
+					remove_core_of = MOL
+				}
+			}
+		
+		}
+		else_if = {
+			limit = {
+				tag = MOL
+			}
+			news_event = {
+				id = news.142
+			}
+			set_capital = {
+				state = 46
+			}
+			ROM = {
+				every_core_state = {
+					add_core_of = MOL
+					remove_core_of = ROM
+				}
+			}
+			remove_ideas = MOL_slavic_separatism
+			
+			
+		}
+		TRS = {
+			leave_faction = yes	
+		}
+		declare_war_on = {
+			target = TRS
+			type = annex_everything
+		}
+	}
+
+}
+
+
+country_event = { # scary unification code
+	id = romania.6
+	title = romania.6.t
+	desc = romania.6.desc
+
+	is_triggered_only = yes	
+	fire_only_once = yes
+	immediate = {
+		remove_ideas = {
+			ROM_divide
+		}
+	}
+
+	
+	#libs, frn
+	option = { 
+		trigger = {
+			OR = {
+				has_government = liberalism
+				AND = {
+					has_government = despotism
+					has_country_flag = ROM_frn_supreme
+				}
+			}
+		}
+		TRS = {
+			every_core_state = {
+				add_core_of = ROM
+				remove_core_of = TRS
+			}
+		}
+		name = romania.6.a
+		set_cosmetic_tag = ROM_united
+		if = {
+			limit = {
+				has_government = liberalism
+			}
+			news_event = {
+				id = news.126
+				days = 1
+			}
+		}
+		else = {
+			news_event = {
+				id = news.127
+				days = 1
+			}
+		}
+		
+	}
+	#iorga
+	option = { 
+		trigger = {
+			has_government = conservatism
+			has_country_leader = {
+				name = "Nicolae Iorga"
+				ruling_only = yes
+			}
+		}
+		TRS = {
+			every_core_state = {
+				add_core_of = ROM
+				remove_core_of = TRS
+			}
+		}
+		name = romania.6.b
+		set_cosmetic_tag = ROM_united_uk
+		news_event = {
+			id = news.128
+			days = 1
+		}
+		
+	}
+	#cantacuzino
+	option = { 
+		trigger = {
+			has_government = right_authoritarianism
+		}
+		TRS = {
+			every_core_state = {
+				add_core_of = ROM
+				remove_core_of = TRS
+			}
+		}
+		name = romania.6.c
+		set_cosmetic_tag = ROM_united_cantacuzino
+		news_event = {
+			id = news.129
+			days = 1
+		}
+		
+	}
+	#empire
+	option = { 
+		trigger = {
+			has_government = despotism
+			has_country_flag = ROM_carol_emperor
+		}
+		TRS = {
+			every_core_state = {
+				add_core_of = ROM
+				remove_core_of = TRS
+			}
+		}
+		name = romania.6.d
+		set_cosmetic_tag = ROM_united_carol
+		news_event = {
+			id = news.130
+			days = 1
+		}
+		add_country_leader_role = {
+			character = "ROM_chadderol"
+			country_leader = {
+				ideology = absolute_monarchy
+				desc = "POLITICS_CAROL_II_DESC"
+				expire = "1965.1.1.1"
+				}
+			promote_leader = yes
+		}
+		
+		
+	}
+	#moldova
+	option = { 
+		trigger = {
+			OR = {
+				has_government = conservatism
+				has_government = progressivism
+				has_government = despotism
+				AND = {
+					has_government = reactionism
+					NOT = {
+						has_country_flag = MOL_eliadeia
+					}
+				}
+				has_government = anarchism
+			}
+			NOT = {
+				has_country_leader = {
+					name = "Nicolae Iorga"
+				}
+			}
+			NOT = {
+				has_country_leader = {
+					name = "Carol II"
+				}
+			}
+		}
+		TRS = {
+			every_core_state = {
+				add_core_of = MOL
+				remove_core_of = TRS
+			}
+		}
+		name = romania.6.e
+		if = {
+			limit = {
+				has_government = conservatism
+			}
+			news_event = {
+				id = news.131
+				days = 1
+			}
+		}
+		else_if = {
+			limit = {
+				has_government = progressivism
+			}
+			news_event = {
+				id = news.132
+				days = 1
+			}
+		}
+		else_if = {
+			limit = {
+				has_government = despotism
+			}
+			news_event = {
+				id = news.133
+				days = 1
+			}
+		}
+		else_if = {
+			limit = {
+				has_government = reactionism
+			}
+			news_event = {
+				id = news.134
+				days = 1
+			}
+			
+		}
+		else = {
+			news_event = {
+				id = news.135
+				days = 1
+			}
+		}
+	}	
+	#eliade xd
+	option = { 
+		trigger = {
+			has_government = reactionism
+			has_country_flag = MOL_eliadeia
+		}
+		TRS = {
+			every_core_state = {
+				add_core_of = MOL
+				remove_core_of = TRS
+			}
+		}
+		name = romania.6.f
+		news_event = {
+			id = news.136
+			days = 1
+		}
+		
+	} 
+	#transylvania
+	option = {
+		trigger = {
+			OR = {
+				has_government = vanguard_socialism
+				has_government = revisionist_socialism
+				has_government = accelerationism
+			}
+		}
+		name = romania.6.g
+		set_cosmetic_tag = TRS_united
+		set_capital = { state = 46 }
+		ROM = {
+			every_core_state = {
+				add_core_of = TRS
+				remove_core_of = ROM
+			}
+		}
+		MOL = {
+			every_core_state = {
+				add_core_of = TRS
+				remove_core_of = MOL
+			}
+		}
+		
+		set_party_name = {
+			ideology = vanguard_socialism
+			long_name = TRS_party_pcr_long
+			name = TRS_party_pcr
+		}
+		set_party_name = {
+			ideology = popular_socialism
+			long_name = TRS_party_popsoc_long
+			name = TRS_party_popsoc
+		}
+		set_party_name = {
+			ideology = revisionist_socialism
+			long_name = TRS_party_psdr_long
+			name = TRS_party_psdr
+		}
+		set_party_name = {
+			ideology = accelerationism
+			long_name = TRS_party_crusade_long
+			name = TRS_party_crusade
+		}
+		if = {
+			limit = {
+				has_government = vanguard_socialism
+			}
+			news_event = {
+				id = news.137
+				days = 1
+			}
+			set_province_name = {
+				id = 9617
+				name = ROM_event_romania_6_g_province_9617 #placeholder name
+			}
+			GER = {
+				add_to_faction = TRS
+			}
+			remove_ideas = TRS_white_eagles
+		}
+		else_if = {
+			limit = { 
+				has_government = revisionist_socialism
+			}
+			news_event = {
+				id = news.138
+				days = 1
+			}
+			GER = {
+				add_to_faction = TRS
+			}
+		}
+		else = {
+			news_event = {
+				id = news.139
+				days = 1
+			}
+		}
+		
+		
+	}
+}

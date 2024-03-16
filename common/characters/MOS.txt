@@ -1,0 +1,14 @@
+characters = {
+	MOS_lloyd_c_stark = {
+		name = "Lloyd C. Stark"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MOS/portrait_lloyd.png"
+			}
+		}
+		country_leader = {
+			ideology = social_conservatism
+			expire = "1965.1.1.1"
+		}
+	}
+}

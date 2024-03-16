@@ -1,0 +1,63 @@
+﻿l_english:
+
+## Indochina
+endo_state_875:0 "Hoang Sa Island"
+endo_state_981:0 "Truong Sa Island"
+
+## AUS
+AUS_NF_AUS_handling_half_germans_State_102:0 "Krain"
+AUS_NF_AUS_handling_half_germans_State_9:0 "Böhmen"
+AUS_NF_AUS_handling_half_germans_State_75:0 "Mähren"
+
+## DAN
+DAN_event_danzig_4_a_state_848:0 "Gedanum"
+DAN_event_danzig_4_b_state_848:0 "Gdańsk"
+DAN_event_danzig_7_a_state_848:0 "Danzig"
+
+## ISR
+ISR_decision_ISR_jabo_settle_bank_state_1003:0 "Yerushalayim"
+ISR_decision_ISR_jabo_settle_jordan_state_455:0 "Ever HaYarden"
+ISR_decision_ISR_jabo_settle_jordan_state_1089:0 "Jabbok"
+ISR_decision_ISR_stern_cores_palestine_state_1003:0 "Yerushalayim"
+ISR_decision_ISR_stern_cores_jordan_state_455:0 "Ever HaYarden"
+ISR_decision_ISR_stern_cores_jordan_state_1089:0 "Jabbok"
+
+ISR_event_ISR_victory_state_1004:0 "Negev"
+
+## LEB
+LEB_event_leb_1_a_state_454:0 "Japhet"
+LEB_event_leb_1_a_state_1086:0 "Ramitha"
+
+## POL
+POL_decision_POL_russia_and_nevsk_1_state_195:0 "Nevsk"
+POL_decision_POL_russia_and_nevsk_1_state_401:0 "Engels"
+POL_decision_POL_russia_and_nevsk_state_195:0 "Nevsk"
+POL_decision_POL_russia_and_nevsk_state_401:0 "Engels"
+
+POL_NF_POL_migration_wilno_state_189:0 "Szawle"
+POL_NF_POL_migration_wilno_state_96:0 "Wilno"
+POL_NF_POL_migration_wilno_state_11:0 "Kowno"
+POL_NF_POL_belarus_integration_state_1299:0 "Brześć"
+
+## RUS
+RUS_decision_integrate_ukraine_state_202:0 "Kiev"
+
+RUS_scripted_effect_state_234_Krasnodar:0 "Krasnodar"
+RUS_scripted_effect_state_217_Volgograd:0 "Volgograd"
+RUS_scripted_effect_state_570_Novosibirsk:0 "Novosibirsk"
+RUS_scripted_effect_state_195_Krasnograd_1:0 "Krasnograd"
+RUS_scripted_effect_state_195_Severyanin:0 "Severyanin"
+RUS_scripted_effect_state_217_Stalingrad_1:0 "Stalingrad"
+RUS_scripted_effect_state_195_Krasnograd_2:0 "Krasnograd"
+RUS_scripted_effect_state_217_Stalingrad_2:0 "Stalingrad"
+RUS_scripted_effect_state_195_Mayakovsk:0 "Mayakovsk"
+
+## UKR
+UKR_event_ukraine_41_a_202:0 "Lazarodar"
+
+## on actions Middle East
+ISR_on_action_state_1004_Negev_1:0 "Negev"
+ISR_on_action_state_454_Japhet:0 "Japhet"
+ISR_on_action_state_1086_Ramitha:0 "Ramitha"
+ISR_on_action_state_1004_Negev_2:0 "Negev"
+ISR_on_action_state_454_Yafa:0 "Yafa"

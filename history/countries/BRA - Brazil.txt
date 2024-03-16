@@ -1,0 +1,139 @@
+﻿capital = 500
+set_research_slots = 3
+set_convoys = 175
+set_stability = 0.2
+
+oob = "BRA"
+set_naval_oob = "BRA_naval"
+if = { limit = { has_dlc = "By Blood Alone" } set_air_oob = "BRA_air" }
+if = { limit = {  NOT = { has_dlc = "By Blood Alone" } }  set_air_oob = "BRA_air_legacy" }
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	tech_support = 1		
+	tech_engineers = 1
+	gw_artillery = 1
+	interwar_antiair = 1
+	basic_train = 1	
+}
+
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+	set_technology = {
+		iw_small_airframe = 1
+		aa_lmg = 1
+		aa_cannon_1 = 1
+		early_bombs = 1
+		engines_1 = 1
+	}
+}
+if = {
+	limit = { NOT = { has_dlc = "By Blood Alone" } }
+	set_technology = {
+		early_fighter = 1
+		CAS1 = 1
+	}
+}
+
+if = {
+	limit = { has_dlc = "No Step Back" }
+	set_technology = {
+		gwtank_chassis = 1
+	}
+}
+if = {
+	limit = { NOT = { has_dlc = "No Step Back" } }
+	set_technology = {
+		gwtank = 1
+	}
+}
+if = {
+	limit = { not = { has_dlc = "Man the Guns"} }
+	set_technology = {
+		early_submarine = 1
+		early_destroyer = 1
+		early_light_cruiser = 1
+		early_heavy_cruiser = 1
+		early_battleship = 1
+		transport = 1
+	}
+}
+if = {
+	limit = { has_dlc = "Man the Guns"}
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		early_ship_hull_light = 1
+		early_ship_hull_cruiser = 1
+		early_ship_hull_heavy = 1
+		basic_battery = 1
+		basic_torpedo = 1
+		mtg_transport = 1
+	}
+}
+
+add_ideas = {
+	BRA_oligarchic_madness
+	BRA_local_army
+	BRA_revolutionary_scars
+	BRA_famine
+}
+
+country_event = { id = brazil.1 days = 1 }
+
+
+set_politics = {
+	ruling_party = vanguard_socialism
+	last_election = "1933.10.25"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	vanguard_socialism = 12
+	popular_socialism = 28
+	anarchism = 12
+	revisionist_socialism = 4
+	progressivism = 5
+	liberalism = 12
+	conservatism = 2
+	right_authoritarianism = 13
+	despotism = 1
+	reactionism = 7
+	accelerationism = 4
+}
+
+recruit_character = BRA_luís_carlos_prestes
+recruit_character = BRA_filinto_müller
+recruit_character = BRA_Carlos_Duarte_Costa
+recruit_character = BRA_dom_francisco_de_aquino_correia
+recruit_character = BRA_chamber_of_deputies
+recruit_character = BRA_isidoro_dias_lopes
+recruit_character = BRA_joao_cabanas
+recruit_character = BRA_henrique_cordeiro_oest
+recruit_character = BRA_agildo_barat
+recruit_character = BRA_kardiac_lemme
+recruit_character = BRA_eugenio_pinto
+recruit_character = BRA_jefferson_cardim_de_alencar_osório
+recruit_character = BRA_vladimir_herzog
+recruit_character = BRA_lila_ripoll
+recruit_character = BRA_heitor_ferreira_lima
+recruit_character = BRA_alberto_pasqualini
+recruit_character = BRA_otto_alcides_ohlweiler
+recruit_character = BRA_oswald_de_andrade
+recruit_character = BRA_pedro_ventura_pomar
+recruit_character = BRA_djalma_maranhao
+recruit_character = BRA_apolonio_de_carvalho
+recruit_character = BRA_cristiano_cordeiro
+recruit_character = BRA_carlos_drumond_de_andrade
+recruit_character = BRA_carlos_marighella
+recruit_character = BRA_maria_werneck_de_castro
+recruit_character = BRA_joao_amazonas
+recruit_character = BRA_jose_linhares
+recruit_character = BRA_elza_monnerat
+recruit_character = BRA_mauricio_grabois
+recruit_character = BRA_angelo_arroyo
+recruit_character = BRA_osvaldo_orlando_da_costa

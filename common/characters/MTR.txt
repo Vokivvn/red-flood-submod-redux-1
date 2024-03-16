@@ -1,0 +1,16 @@
+characters = {
+	MTR_Imam={
+		name="Hitsos Nazhmudin"
+		portraits={
+			civilian={
+				large="gfx/leaders/MTR/Portrait_MTR_Imam.png"
+			}
+		}
+		country_leader={
+			desc=""
+			ideology=religious_fundamentalism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+}

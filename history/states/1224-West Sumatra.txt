@@ -1,0 +1,27 @@
+state={
+	id=1224
+	name="STATE_1224"
+	manpower = 2027300
+
+	state_category = town
+
+	history = {
+		owner = DEI
+		victory_points = { #Padang
+			10354 3
+		}
+		victory_points = { #Fort de Kock
+			1460 1
+		}
+		add_core_of = DEI
+		buildings = {
+			infrastructure = 2
+			10354 = {
+				naval_base = 2
+			}
+		}
+	}
+	provinces={
+		1428 1460 10354 10382 13557 7368 13609
+	}
+}

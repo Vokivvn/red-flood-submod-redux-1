@@ -1,0 +1,10 @@
+SWE_birkeneid = {
+	picture = generic_political_actions
+	priority = 1000
+	allowed = {
+		original_tag = SWE
+	}
+	visible = {
+		is_subject = no
+	}
+} 

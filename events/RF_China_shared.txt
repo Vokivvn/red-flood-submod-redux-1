@@ -1,0 +1,2792 @@
+add_namespace = china
+
+country_event = {	#TAG joins TAG
+	id = china.1
+	title = china.1.title
+	desc = china.1.desc
+	picture = GFX_exiles_MAN
+
+	fire_only_once = yes
+	trigger = {
+		tag = KMT
+		OR = {
+			has_government = right_authoritarianism
+			has_government = reactionism
+			has_government = conservatism
+		}
+		is_subject = no
+		has_full_control_of_state = 927
+		is_neighbor_of = GDP
+		GDP = {
+			has_government = despotism
+			is_subject = no
+		}
+	}
+
+	option = {	#
+		name = china.1.a
+		ai_chance = { factor = 1 }
+		KMT = {
+			annex_country = {
+				target = GDP
+				transfer_troops = yes
+			}
+			#set_nationality = {
+			#	target_country = KMT
+			#}
+			change_tag_from = GDP
+			add_ideas = GDP_whampoa_military_academy
+		}
+		GDP = {
+			every_unit_leader = {
+				set_nationality = KMT
+			}
+		}
+		hidden_effect = {
+			every_state = {
+				limit = { is_core_of = GDP }
+				add_core_of = KMT
+				remove_core_of = GDP
+			}
+		}
+	}
+}
+country_event = {	#TAG joins TAG
+	id = china.2
+	title = china.2.title
+	desc = china.2.desc
+	picture = GFX_exiles_MAN
+
+	fire_only_once = yes
+	trigger = {
+		tag = KMT
+		OR = {
+			has_government = right_authoritarianism
+			has_government = reactionism
+			has_government = conservatism
+		}
+		is_subject = no
+		has_full_control_of_state = 927
+		is_neighbor_of = SZC
+		SZC = {
+			has_government = despotism
+			is_subject = no
+		}
+	}
+	option = {	#
+		name = china.2.a
+		ai_chance = { factor = 1 }
+		KMT = {
+			annex_country = {
+				target = SZC
+				transfer_troops = yes
+			}
+			#set_nationality = {
+			#	target_country = KMT
+			#}
+			change_tag_from = SZC
+		}
+		SZC = {
+			every_unit_leader = {
+				set_nationality = KMT
+			}
+		}
+		hidden_effect = {
+			every_state = {
+				limit = { is_core_of = SZC }
+				add_core_of = KMT
+				remove_core_of = SZC
+			}
+		}
+	}
+}
+country_event = {	#TAG joins TAG
+	id = china.3
+	title = china.3.title
+	desc = china.3.desc
+	picture = GFX_exiles_MAN
+
+	fire_only_once = yes
+	trigger = {
+		tag = KMT
+		OR = {
+			has_government = right_authoritarianism
+			has_government = reactionism
+			has_government = conservatism
+		}
+		is_subject = no
+		has_full_control_of_state = 927
+		is_neighbor_of = YUN
+		YUN = {
+			has_government = despotism
+			is_subject = no
+		}
+	}
+
+	option = {	#
+		name = china.3.a
+		ai_chance = { factor = 1 }
+		KMT = {
+			annex_country = {
+				target = YUN
+				transfer_troops = yes
+			}
+			#set_nationality = {
+			#	target_country = KMT
+			#}
+			change_tag_from = YUN
+		}
+		YUN = {
+			every_unit_leader = {
+				set_nationality = KMT
+			}
+		}
+		hidden_effect = {
+			every_state = {
+				limit = { is_core_of = YUN }
+				add_core_of = KMT
+				remove_core_of = YUN
+			}
+		}
+	}
+}
+country_event = {	#TAG joins TAG
+	id = china.4
+	title = china.4.title
+	desc = china.4.desc
+	picture = GFX_exiles_MAN
+
+	fire_only_once = yes
+	trigger = {
+		tag = FJN
+		OR = {
+			has_government = progressivism
+			has_government = revisionist_socialism
+		}
+		is_subject = no
+		has_full_control_of_state = 613
+		is_neighbor_of = XIA
+		
+		XIA = { has_government = progressivism }
+		KMT = { exists = no }
+	}
+
+	option = {	#
+		name = china.4.a
+		ai_chance = { factor = 1 }
+		FJN = {
+			annex_country = {
+				target = XIA
+				transfer_troops = yes
+			}
+			#set_nationality = {
+			#	target_country = FJN
+			#}
+			change_tag_from = XIA
+		}
+		XIA = {
+			every_unit_leader = {
+				set_nationality = FJN
+			}
+		}
+		hidden_effect = {
+			every_state = {
+				limit = { is_core_of = XIA }
+				add_core_of = FJN
+				remove_core_of = XIA
+			}
+		}
+	}
+}
+country_event = {	#TAG joins TAG
+	id = china.5
+	title = china.5.title
+	desc = china.5.desc
+	picture = GFX_exiles_MAN
+
+	fire_only_once = yes
+	trigger = {
+		tag = FJN
+		OR = {
+			has_government = progressivism
+			has_government = revisionist_socialism
+		}
+		is_subject = no
+		has_full_control_of_state = 613
+		is_neighbor_of = JGJ
+		JGJ = {
+			NOT = { has_war_with = BYJ }
+			OR = {
+				has_government = progressivism
+				has_government = revisionist_socialism
+			}
+			is_subject = no
+		}
+	}
+
+	option = {	#
+		name = china.5.a
+		ai_chance = { factor = 1 }
+		FJN = {
+			annex_country = {
+				target = JGJ
+				transfer_troops = yes
+			}
+			#set_nationality = {
+			#	target_country = FJN
+			#}
+			change_tag_from = JGJ
+		}
+		JGJ = {
+			every_unit_leader = {
+				set_nationality = FJN
+			}
+		}
+		hidden_effect = {
+			every_state = {
+				limit = { is_core_of = JGJ }
+				add_core_of = FJN
+				remove_core_of = JGJ
+			}
+		}
+	}
+}
+country_event = {	#TAG joins TAG
+	id = china.6
+	title = china.6.title
+	desc = china.6.desc
+	picture = GFX_exiles_MAN
+
+	fire_only_once = yes
+	trigger = {
+		tag = FJN
+		OR = {
+			has_government = progressivism
+			has_government = revisionist_socialism
+		}
+		is_subject = no
+		has_full_control_of_state = 613
+		is_neighbor_of = YUN
+		
+		YUN = {
+			has_government = progressivism
+			is_subject = no
+		}
+		KMT = { exists = no }
+		XIA = { exists = no }
+	}
+
+	option = {	#
+		name = china.6.a
+		ai_chance = { factor = 1 }
+		FJN = {
+			annex_country = {
+				target = YUN
+				transfer_troops = yes
+			}
+			#set_nationality = {
+			#	target_country = FJN
+			#}
+			change_tag_from = YUN
+		}
+		YUN = {
+			every_unit_leader = {
+				set_nationality = FJN
+			}
+		}
+		hidden_effect = {
+			every_state = {
+				limit = { is_core_of = YUN }
+				add_core_of = FJN
+				remove_core_of = YUN
+			}
+		}
+	}
+}
+country_event = {	#TAG joins TAG
+	id = china.65
+	title = china.65.title
+	desc = china.65.desc
+	picture = GFX_exiles_MAN
+
+	fire_only_once = yes
+	trigger = {
+		tag = FJN
+		has_government = progressivism
+		is_subject = no
+		has_full_control_of_state = 613
+		has_full_control_of_state = 325
+		has_full_control_of_state = 744
+		is_neighbor_of = FJN
+		
+		SZC = {
+			NOT = { has_war_with = BYJ }
+			OR = {
+				has_government = despotism
+				has_government = right_authoritarianism
+			}
+			is_subject = no
+		}
+		KMT = { exists = no }
+		YUN = { exists = no }
+		JGJ = { exists = no }
+	}
+
+	option = {	#
+		name = china.65.a
+		ai_chance = { factor = 1 }
+		FJN = {
+			annex_country = {
+				target = SZC
+				transfer_troops = yes
+			}
+			#set_nationality = {
+			#	target_country = FJN
+			#}
+			change_tag_from = SZC
+		}
+		SZC = {
+			every_unit_leader = {
+				set_nationality = FJN
+			}
+		}
+		hidden_effect = {
+			every_state = {
+				limit = { is_core_of = SZC }
+				add_core_of = FJN
+				remove_core_of = SZC
+			}
+		}
+	}
+}
+country_event = {	#TAG joins TAG
+	id = china.7
+	title = china.7.title
+	desc = china.7.desc
+	picture = GFX_exiles_MAN
+
+	fire_only_once = yes
+	trigger = {
+		tag = FJN
+		has_government = progressivism
+		is_subject = no
+		has_full_control_of_state = 613
+		is_neighbor_of = FJN
+		
+		GDP = { is_subject = no }
+		KMT = { exists = no }
+	}
+
+	option = {	#
+		name = china.7.a
+		ai_chance = { factor = 1 }
+		FJN = {
+			annex_country = {
+				target = GDP
+				transfer_troops = yes
+			}
+			#set_nationality = {
+			#	target_country = FJN
+			#}
+			change_tag_from = GDP
+		}
+		FJN = {
+			add_ideas = GDP_whampoa_military_academy
+		}
+		GDP = {
+			every_unit_leader = {
+				set_nationality = FJN
+			}
+		}
+		hidden_effect = {
+			every_state = {
+				limit = { is_core_of = GDP }
+				add_core_of = FJN
+				remove_core_of = GDP
+			}
+		}
+	}
+}
+country_event = {	#TAG joins TAG
+	id = china.8
+	title = china.8.title
+	desc = china.8.desc
+	picture = GFX_exiles_MAN
+
+	fire_only_once = yes
+	trigger = {
+		tag = XIA
+		OR = {
+			has_government = vanguard_socialism
+			has_government = popular_socialism
+		}
+		is_subject = no
+		has_full_control_of_state = 613
+		is_neighbor_of = XIA
+
+		YUN = {
+			has_government = progressivism
+			is_subject = no
+		}
+		KMT = { exists = no }
+	}
+
+	option = {	#
+		name = china.8.a
+		ai_chance = { factor = 1 }
+		XIA = {
+			annex_country = {
+				target = YUN
+				transfer_troops = yes
+			}
+			#set_nationality = {
+			#	target_country = XIA
+			#}
+			change_tag_from = YUN
+		}
+		YUN = {
+			every_unit_leader = {
+				set_nationality = XIA
+			}
+		}
+		hidden_effect = {
+			every_state = {
+				limit = { is_core_of = YUN }
+				add_core_of = XIA
+				remove_core_of = YUN
+			}
+		}
+	}
+}
+country_event = {	#TAG joins TAG
+	id = china.9
+	title = china.9.title
+	desc = china.9.desc
+	picture = GFX_exiles_MAN
+
+	fire_only_once = yes
+	trigger = {
+		tag = XIA
+		JGJ = {
+			is_neighbor_of = XIA
+			OR = {
+				has_government = progressivism
+				has_government = revisionist_socialism
+			}
+			is_subject = no
+		}
+		XIA = {
+			OR = {
+				has_government = vanguard_socialism
+				has_government = popular_socialism
+			}
+			is_subject = no
+			has_full_control_of_state = 613
+			KMT = {
+				exists = no
+			}
+		}
+	}
+
+	option = {	#
+		name = china.9.a
+		ai_chance = { factor = 1 }
+		XIA = {
+			annex_country = {
+				target = JGJ
+				transfer_troops = yes
+			}
+			#set_nationality = {
+			#	target_country = XIA
+			#}
+			change_tag_from = JGJ
+		}
+		JGJ = {
+			every_unit_leader = {
+				set_nationality = XIA
+			}
+		}
+		hidden_effect = {
+			every_state = {
+				limit = { is_core_of = JGJ }
+				add_core_of = XIA
+				remove_core_of = JGJ
+			}
+		}
+	}
+}
+country_event = {	#TAG joins TAG
+	id = china.99
+	title = china.99.title
+	desc = china.99.desc
+	picture = GFX_exiles_MAN
+
+	fire_only_once = yes
+	trigger = {
+		tag = BYJ
+		BYJ = {
+			is_neighbor_of = XSM
+			OR = {
+				has_government = right_authoritarianism
+				has_government = despotism
+			}
+			is_subject = no
+			has_war = no
+			has_full_control_of_state = 608
+			has_full_control_of_state = 613
+			has_full_control_of_state = 927
+			has_full_control_of_state = 926
+			has_full_control_of_state = 325
+			has_full_control_of_state = 934
+			has_full_control_of_state = 744
+		}
+		XSM = {
+			OR = {
+				has_government = right_authoritarianism
+				has_government = despotism
+			}
+			is_subject = no
+			exists = yes
+			has_full_control_of_state = 283
+		}
+	}
+
+	option = {	#
+		name = china.99.a
+		ai_chance = { factor = 1 }
+		BYJ = {
+			annex_country = {
+				target = XSM
+				transfer_troops = yes
+			}
+			#set_nationality = {
+			#	target_country = XIA
+			#}
+			change_tag_from = XSM
+		}
+		XSM = {
+			every_unit_leader = {
+				set_nationality = BYJ
+			}
+		}
+		hidden_effect = {
+			every_state = {
+				limit = {
+					is_core_of = XSM
+				}
+				add_core_of = BYJ
+				remove_core_of = XSM
+			}
+		}
+	}
+}
+country_event = {	#Sichuan - negotiations with the YCP
+	id = china.10
+	title = china.10.title
+	desc = china.10.desc
+	picture = GFX_exiles_MAN
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {	#YCP prevails in civil government
+		name = china.10.a
+		ai_chance = { factor = 1 }
+		add_political_power = -50
+		add_stability = -0.05
+		set_politics = {
+			ruling_party = accelerationism
+		}
+		remove_ideas = SZC_divided_loyalties
+		remove_ideas = SZC_divided_rule
+		hidden_effect = {
+			country_event = {
+				id = china.18
+				days = 49
+			}
+		}
+	}
+	option = {	#negotiations break down - GMD prevails
+		name = china.10.b
+		ai_chance = { factor = 1 }
+		add_political_power = -25
+		add_stability = -0.1
+		add_country_leader_role = {
+			character = SZC_tian_songyao
+			promote_leader = yes
+			country_leader = {
+				ideology = military_dictatorship
+				expire = "1965.1.1.1"
+				traits = {  }
+			}
+		}
+		set_politics = {
+			ruling_party = despotism
+		}
+		add_ideas = {
+			CHI_kmt_dejure
+		}
+		remove_ideas = SZC_YCP_influence
+		remove_ideas = SZC_divided_loyalties
+		remove_ideas = SZC_divided_rule
+		hidden_effect = {
+			601 = {
+				add_core_of = SZC
+			}
+			country_event = {
+				id = china.18
+				days = 49
+			}
+		}
+	}
+}
+country_event = {	#Hanmin dies
+	id = china.100
+	title = china.100.title
+	desc = china.100.desc
+	picture = GFX_exiles_MAN
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {	#
+		name = china.100.a
+		ai_chance = { factor = 1 }
+		every_country = {
+			limit = { is_han_chinese_tag = yes }
+			country_event = china.101
+		}
+		KMT = { dismantle_faction = yes }
+		
+		retire_character = GDP_hu_hanmin
+		add_stability = -0.03
+		add_political_power = -5
+		hidden_effect = {
+			#news_event = {			#news event too basic
+			#	id = news.297
+			#}
+			XIA = {
+				country_event = {
+					id = china.201
+					days = 35
+				}
+			}
+			YUN = {
+				country_event = {
+					id = china.11
+					days = 28
+				}
+			}
+			SZC = {
+				country_event = {
+					id = china.10
+					days = 14
+				}
+			}
+		}
+	}
+}
+country_event = {	#Hanmin dies
+	id = china.101
+	title = china.101.title
+	desc = china.101.desc
+	picture = GFX_exiles_MAN
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {	#
+		name = china.101.a
+		ai_chance = { factor = 1 }
+		trigger = {
+			OR = {
+				tag = GDP
+				tag = KMT
+				tag = YUN
+			}
+		}
+	}
+	option = {	#
+		name = china.101.b
+		ai_chance = { factor = 1 }
+		trigger = {
+			OR = {
+				tag = FJN
+				tag = XIA
+				tag = JGJ
+			}
+		}
+	}
+	option = {	#
+		name = china.101.c
+		ai_chance = { factor = 1 }
+		trigger = {
+			OR = {
+				tag = BYJ
+				tag = SZC
+				tag = SHA
+				tag = MON
+			}
+		}
+	}
+	option = {	#
+		name = china.101.d
+		ai_chance = { factor = 1 }
+		trigger = {
+			OR = {
+				tag = XSM
+				tag = SIK
+				tag = ETS
+				tag = MNG
+			}
+		}
+	}
+}
+country_event = {	#YUN chain - Tang fucks up or does not fuck up
+	id = china.11
+	title = china.11.title
+	desc = china.11.desc
+	picture = GFX_report_event_gunner_china2
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {	#does
+		name = china.11.a
+		ai_chance = { factor = 2 }
+		country_event = {
+			id = china.12
+			days = 21
+		}
+	}
+	option = {	#does not
+		name = china.11.b
+		ai_chance = { factor = 1 }
+		hidden_effect = {
+			if = {
+				limit = {
+					SZC = {
+						has_government = accelerationism
+					}
+				}
+				SZC = {
+					every_state = {
+						limit = {
+							is_core_of = YUN
+						}
+						add_claim_by = SZC
+					}
+					create_wargoal = {
+						type = annex_everything
+						target = YUN
+					}
+				}
+			}
+		}
+	}
+}
+country_event = {	#rebels
+	id = china.12
+	title = china.12.title
+	desc = china.12.desc
+	picture = GFX_report_event_gunner_china2
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {	#
+		name = china.12.a
+		ai_chance = { factor = 1 }
+		924 = { 
+			remove_core_of = YUN
+			set_demilitarized_zone = yes
+		}
+		add_stability = -0.1
+		country_event = {
+			id = china.13
+		}
+	}
+}
+country_event = {	#YUN chain - Tang deposed
+	id = china.13
+	title = china.13.title
+	desc = china.13.desc
+	picture = GFX_report_event_gunner_china2
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {	#Long Yun time
+		name = china.13.a
+		ai_chance = { factor = 1 }
+		set_politics = {
+			ruling_party = progressivism
+		}
+		remove_ideas = YUN_ethno_linguistic_nightmare
+		924 = { 
+			add_core_of = YUN
+			set_demilitarized_zone = no
+		}
+	}
+}
+country_event = {	#jiangxi chain
+	id = china.201
+	title = china.201.title
+	desc = china.201.desc
+	picture = GFX_report_event_gunner_china2
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {	#
+		name = china.201.a
+		ai_chance = { factor = 1 }
+		country_event = {
+			id = china.202
+			days = 3
+		}
+	}
+}
+country_event = {	#Jiangxi raid
+	id = china.202
+	title = china.202.title
+	desc = china.202.desc
+	picture = GFX_report_event_gunner_china2
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {	#commies win
+		name = china.202.a
+		ai_chance = { factor = 2 }
+		600 = {
+			set_demilitarized_zone = yes
+		}
+		931 = {
+			set_demilitarized_zone = yes
+		}
+		hidden_effect = {
+			XIA = {
+				country_event = {
+					id = china.203
+					days = 7
+				}
+			}
+			FJN = {
+				country_event = {
+					id = china.204
+					days = 7
+				}
+			}
+			KMT = {
+				country_event = {
+					id = china.209
+					days = 7
+				}
+			}
+		}
+	}
+	option = {	#commies lose
+		name = china.202.b
+		ai_chance = { factor = 3 }
+		896 = {
+			set_demilitarized_zone = yes
+		}
+		932 = {
+			set_demilitarized_zone = yes
+		}
+		hidden_effect = {
+			XIA = {
+				country_event = {
+					id = china.205
+				}
+			}
+			FJN = {
+				country_event = {
+					id = china.206
+				}
+			}
+		}
+	}
+}
+country_event = {	#begin commie takeover chain
+	id = china.203
+	title = china.203.title
+	desc = china.203.desc
+	picture = GFX_report_event_gunner_china2
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {	#
+		name = china.203.a
+		ai_chance = { factor = 1 }
+		country_event = {
+			id = china.207
+		}
+	}
+}
+country_event = {	#XIA leadership challenge
+	id = china.207
+	title = china.207.title
+	desc = china.207.desc
+	picture = GFX_exiles_MAN
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {	#Commie time
+		name = china.207.a
+		ai_chance = { factor = 1 }
+		#promote_character = yes
+		set_politics = {
+			ruling_party = vanguard_socialism
+		}
+		remove_ideas = CHI_kmt_dejure
+		add_popularity = {
+			ideology = vanguard_socialism
+			popularity = 0.1
+		}
+		add_popularity = {
+			ideology = popular_socialism
+			popularity = 0.1
+		}
+		transfer_state = 600
+		transfer_state = 931
+		add_state_core = 600
+		add_state_core = 931
+		600 = {
+			set_demilitarized_zone = no
+		}
+		931 = {
+			set_demilitarized_zone = no
+		}
+		load_oob = XIA_commies_army
+		hidden_effect = {
+			country_event = {
+				id = china.208
+				days = 31
+			}
+		}
+	}
+}
+country_event = {	#XIA party conference
+	id = china.208
+	title = china.208.title
+	desc = china.208.desc
+	picture = GFX_exiles_MAN
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {	#Duxiu
+		name = china.208.a
+		ai_chance = { factor = 3 }
+		add_popularity = {
+			ideology = vanguard_socialism
+			popularity = 0.2
+		}
+		remove_ideas = XIA_communist_struggle
+	}
+	option = {	#Mao
+		name = china.208.b
+		ai_chance = { factor = 2 }
+		#promote_character = yes
+		add_popularity = {
+			ideology = popular_socialism
+			popularity = 0.1
+		}
+		set_politics = {
+			ruling_party = popular_socialism
+		}
+		remove_ideas = XIA_communist_struggle
+	}
+}
+country_event = {	#commies begin the long march
+	id = china.205
+	title = china.205.title
+	desc = china.205.desc
+	picture = GFX_exiles_MAN
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	immediate = {
+		country_event = {
+			id = china.19
+			days = 14
+		}
+	}
+	option = {	#North?/Taiwan?
+		name = china.205.a
+		ai_chance = { factor = 1 }
+		896 = {
+			set_demilitarized_zone = no
+			add_core_of = FJN
+			remove_core_of = XIA
+		}
+		932 = {
+			set_demilitarized_zone = no
+			add_core_of = KMT
+			remove_core_of = XIA
+		}
+		FJN = {
+			transfer_state = 896
+		}
+		KMT = {
+			transfer_state = 932
+		}
+	}
+	option = {	#South - Indochina
+		name = china.205.b
+		ai_chance = { factor = 1 }
+		896 = {
+			set_demilitarized_zone = no
+			add_core_of = FJN
+			remove_core_of = XIA
+		}
+		932 = {
+			set_demilitarized_zone = no
+			add_core_of = KMT
+			remove_core_of = XIA
+		}
+		FJN = {
+			transfer_state = 896
+		}
+		KMT = {
+			transfer_state = 932
+		}
+	}
+}
+country_event = {	#FJN leadership challenge
+	id = china.206
+	title = china.206.title
+	desc = china.206.desc
+	picture = GFX_exiles_MAN
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {	#Guangnai - MinQuan
+		name = china.206.a
+		ai_chance = { factor = 1 }
+		add_country_leader_role = {
+			character = FJN_jiang_guangnai
+			promote_leader = yes
+			country_leader = {
+			  ideology = left_populism
+			  expire = "1965.1.1"
+			  traits = {  }
+			}
+		}
+		set_politics = {
+			ruling_party = progressivism
+		}
+		set_country_flag = soc_dems_are_socialists
+	}
+	option = {	#Mingshu - MinSheng
+		name = china.206.b
+		ai_chance = { factor = 2 }
+		retire_country_leader = yes
+		add_country_leader_role = {
+			character = FJN_chen_mingshu
+			promote_leader = yes
+			country_leader = {
+			  ideology = democratic_socialism
+			  expire = "1965.1.1"
+			  traits = {  }
+			}
+		}
+	}
+}
+country_event = {	#Zhenbing retires
+	id = china.204
+	title = china.204.title
+	desc = china.204.desc
+	picture = GFX_exiles_MAN
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {	#Jingwei bby
+		name = china.204.a
+		ai_chance = { factor = 1 }
+		set_politics = {
+			ruling_party = progressivism
+		}
+		hidden_effect = {
+			KMT = {
+				country_event = {
+					id = china.20
+					days = 90
+				}
+			}
+		}
+	}
+}
+country_event = {	#KMT party conference
+	id = china.209
+	title = china.209.title
+	desc = china.209.desc
+	picture = GFX_exiles_MAN
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {	#Renjie
+		name = china.209.a
+		ai_chance = { factor = 3 }
+		add_popularity = {
+			ideology = right_authoritarianism
+			popularity = 0.1
+		}
+	}
+	option = {	#Jihua
+		name = china.209.b
+		ai_chance = { factor = 2 }
+		retire_country_leader = yes
+		add_country_leader_role = {
+			character = KMT_zhang_jiahua
+			promote_leader = yes
+			country_leader = {
+			  ideology = national_democracy
+			  expire = "1963.5.30"
+			  traits = {  }
+			}
+		}
+		add_popularity = {
+			ideology = right_authoritarianism
+			popularity = 0.2
+		}
+	}
+	option = {	#Zheng
+		name = china.209.c
+		ai_chance = { factor = 2 }
+		#promote_character = yes
+		add_popularity = {
+			ideology = conservatism
+			popularity = 0.2
+		}
+		set_politics = {
+			ruling_party = conservatism
+		}
+	}
+	option = {	#Jitao
+		name = china.209.d
+		ai_chance = { factor = 2 }
+		retire_country_leader = yes
+		add_country_leader_role = {
+			character = KMT_dai_jitao
+			promote_leader = yes
+			country_leader = {
+			  ideology = national_democracy
+			  expire = "1949.2.21"
+			  traits = {  }
+			}
+		}
+		add_popularity = {
+			ideology = right_authoritarianism
+			popularity = 0.2
+		}
+	}
+}
+country_event = {	#Yellow Sands
+	id = china.14
+	title = china.14.title
+	desc = china.14.desc
+	picture = GFX_exiles_MAN
+
+	fire_only_once = yes
+	trigger = {
+		tag = MNG
+		has_full_control_of_state = 608
+		has_war = no
+	}
+
+	option = {	#Taken Beijing
+		name = china.14.a
+		ai_chance = { factor = 1 }
+		
+	}
+}
+country_event = {	#Gemingjun
+	id = china.15
+	title = china.15.title
+	desc = china.15.desc
+	picture = GFX_exiles_MAN
+
+	fire_only_once = yes
+	trigger = {
+		tag = JGJ
+		has_full_control_of_state = 608
+		has_war = no
+	}
+
+	option = {	#Taken Beijing
+		name = china.15.a
+		ai_chance = { factor = 1 }
+		
+	}
+}
+country_event = {	#Shanxi re-annexes Zhili
+	id = china.16
+	title = china.16.title
+	desc = china.16.desc
+	picture = GFX_exiles_MAN
+
+	fire_only_once = yes
+	trigger = {
+		tag = SHA
+		is_subject = no
+		is_neighbor_of = BYJ
+		has_war = no
+		BYJ = { has_war = no }
+	}
+
+	option = {	#
+		name = china.16.a
+		ai_chance = { factor = 1 }
+		BYJ = {
+			annex_country = {
+				target = SHA
+				transfer_troops = yes
+			}
+			#set_nationality = {
+			#	target_country = BYJ
+			#}
+			change_tag_from = SHA
+		}
+		SHA = {
+			every_unit_leader = {
+				set_nationality = BYJ
+			}
+		}
+		BYJ = {
+			drop_cosmetic_tag = yes
+		}
+		hidden_effect = {
+			every_state = {
+				limit = { is_core_of = SHA }
+				remove_core_of = SHA
+			}
+		}
+		hidden_effect = {
+			BYJ = {
+				country_event = {
+					id = china.31
+					days = 90
+				}
+			}
+		}
+	}
+}
+country_event = {	#Zhili gets invaded lmao
+	id = china.17
+	title = china.17.title
+	desc = china.17.desc
+	picture = GFX_report_event_gunner_china2
+
+	fire_only_once = yes
+	trigger = {
+		tag = KMT
+		has_full_control_of_state = 927
+		has_war = no
+		
+		SHA = {
+			is_subject = no
+			is_neighbor_of = KMT
+		}
+	}
+
+	option = {	#
+		name = china.17.a
+		ai_chance = { factor = 1 }
+		hidden_effect = {
+			every_state = {
+				limit = { is_core_of = SHA }
+				add_claim_by = KMT
+			}
+		}
+		declare_war_on = {
+			target = SHA
+			type = annex_everything
+		}
+	}
+}
+country_event = {	#Guizhou rebels
+	id = china.18
+	title = china.18.title
+	desc = china.18.desc
+	picture = GFX_report_event_gunner_china2
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {	#XIA gets it
+		name = china.18.a
+		ai_chance = { factor = 1 }
+		trigger = {
+			AND = {
+				XIA = {
+					exists = yes
+					has_government = progressivism
+				}
+				SZC = {
+					has_government = accelerationism
+				}
+				YUN = {
+					has_government = despotism
+				}
+			}
+		}
+		XIA = {
+			transfer_state = 603
+			transfer_state = 748
+			load_oob = CHI_guizhou
+		}
+		603 = {
+			remove_core_of = YUN
+			add_core_of = XIA
+		}
+		748 = {
+			remove_core_of = SZC
+			add_core_of = XIA
+		}
+	}
+	option = {	#YUN gets it
+		name = china.18.b
+		ai_chance = { factor = 1 }
+		trigger = {
+			AND = {
+				XIA = {
+					OR = {
+						has_government = vanguard_socialism
+						has_government = popular_socialism
+						has_government = progressivism
+					}
+				}
+				SZC = {
+					OR = {
+						has_government = accelerationism
+						has_government = despotism
+					}
+				}
+				YUN = {
+					exists = yes
+					has_government = progressivism
+				}
+			}			
+		}
+		YUN = {
+			transfer_state = 874
+			transfer_state = 748
+			load_oob = CHI_guizhou
+		}
+		874 = {
+			remove_core_of = XIA
+			add_core_of = YUN
+		}
+		748 = {
+			remove_core_of = SZC
+			add_core_of = YUN
+		}
+	}
+	option = {	#SZC gets it
+		name = china.18.c
+		ai_chance = { factor = 1 }
+		trigger = {
+			AND = {
+				XIA = {
+					OR = {
+						has_government = vanguard_socialism
+						has_government = popular_socialism
+						has_government = progressivism
+					}
+				}
+				SZC = {
+					exists = yes
+					has_government = despotism
+				}
+				YUN = {
+					has_government = despotism
+				}
+			}			
+		}
+		SZC = {
+			transfer_state = 874
+			transfer_state = 603
+			load_oob = CHI_guizhou
+		}
+		874 = {
+			remove_core_of = XIA
+			add_core_of = SZC
+		}
+		603 = {
+			remove_core_of = YUN
+			add_core_of = SZC
+		}
+	}
+}
+country_event = {	#left GMD unites?
+	id = china.19
+	title = china.19.title
+	desc = china.19.desc
+	picture = GFX_exiles_MAN
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {	#
+		name = china.19.a
+		ai_chance = { factor = 1 }
+		FJN = {
+			annex_country = {
+				target = XIA
+				transfer_troops = yes
+			}
+			change_tag_from = XIA
+			#set_nationality = {
+			#	target_country = FJN
+			#}
+		}
+		FJN = {
+			create_wargoal = {
+				type = annex_everything
+				target = KMT
+			}
+		}
+		hidden_effect = {
+			every_state = {
+				limit = { is_core_of = XIA }
+				add_core_of = FJN
+				remove_core_of = XIA
+			}
+		}
+	}
+	option = {	#
+		name = china.19.b
+		ai_chance = { factor = 1 }
+		KMT = {
+			annex_country = {
+				target = XIA
+				transfer_troops = yes
+			}
+			#set_nationality = {
+			#	target_country = KMT
+			#}
+			change_tag_from = XIA
+		}
+		KMT = {
+			create_wargoal = {
+				type = annex_everything
+				target = FJN
+			}
+		}
+		hidden_effect = {
+			every_state = {
+				limit = { is_core_of = XIA }
+				add_core_of = KMT
+				remove_core_of = XIA
+			}
+		}
+	}
+}
+country_event = {	#Jingwei's unity proposal aka #fuckcommies
+	id = china.20
+	title = china.20.title
+	desc = china.20.desc
+	picture = GFX_exiles_MAN
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {	#ok, fuck commies
+		name = china.20.a
+		ai_chance = { factor = 2 }
+		trigger = {
+			KMT = {
+				has_government = conservatism
+			}
+		}
+		FJN = {
+			annex_country = {
+				target = KMT
+				transfer_troops = yes
+			}
+			#set_nationality = {
+			#	target_country = FJN
+			#}
+			change_tag_from = KMT
+		}
+		KMT = {
+			every_unit_leader = {
+				set_nationality = FJN
+			}
+		}
+		FJN = {
+			country_event = {
+				id = china.21
+				days = 21
+			}
+		}
+		hidden_effect = {
+			every_state = {
+				limit = { is_core_of = KMT }
+				add_core_of = FJN
+				remove_core_of = KMT
+			}
+		}
+	}
+	option = {
+		name = china.20.b #no, fuck you
+		ai_chance = { factor = 1 }
+		trigger = {
+			KMT = {
+				has_government = right_authoritarianism
+			}
+		}
+		create_faction = right_GMD_faction
+		add_to_faction = GDP
+		every_country = {
+			limit = {
+				OR = {
+					tag = YUN
+					tag = SZC
+				}
+				has_government = despotism
+			}
+			add_to_faction = PREV
+		}
+		create_wargoal = {
+			type = annex_everything
+			target = FJN
+		}
+		hidden_effect = {
+			every_state = {
+				limit = { is_core_of = FJN }
+				add_core_of = KMT
+				remove_core_of = FJN
+			}
+		}
+	}
+}
+country_event = {	#waow we united the GMD, how about that!
+	id = china.21
+	title = china.21.title
+	desc = china.21.desc
+	picture = GFX_exiles_MAN
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {	#
+		name = china.21.a
+		ai_chance = { factor = 1 }
+		FJN = {
+			set_capital = { state = 613 }
+			remove_ideas = FJN_rival_government
+			set_cosmetic_tag = FJN_united_guomindang_costag
+			set_country_flag = FJN_jingwei_bby
+			create_faction = united_guomindang_faction
+			add_to_faction = GDP
+			if = {
+				limit = {
+					YUN = {
+						OR = {
+							has_government = progressivism
+							has_government = right_authoritarianism
+						}
+					}
+				}
+				add_to_faction = YUN
+			}
+			if = {
+				limit = {
+					SZC = {
+						has_government = despotism
+					}
+				}
+				add_to_faction = SZC
+			}
+			hidden_effect = {
+				every_state = {
+					limit = { is_core_of = XIA }
+					add_core_of = FJN
+				}
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = XIA
+			}
+			if = {
+				limit = {
+					SZC = { has_government = accelerationism }
+				}
+				hidden_effect = {
+					every_state = {
+						limit = { is_core_of = SZC }
+						add_core_of = FJN
+					}
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = SZC
+				}
+			}
+			if = {
+				limit = {
+					YUN = { has_government = despotism }
+				}
+				hidden_effect = {
+					every_state = {
+						limit = { is_core_of = YUN }
+						add_core_of = FJN
+					}
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = YUN
+				}
+			}
+		}
+	}
+}
+country_event = {	#the south marches north
+	id = china.22
+	title = china.22.title
+	desc = china.22.desc
+	picture = GFX_report_event_gunner_china2
+
+	fire_only_once = yes
+	trigger = {
+		OR = {
+			tag = KMT
+			tag = FJN
+			tag = SZC
+		}
+		date > 1939.01.01
+		has_full_control_of_state = 613
+		has_full_control_of_state = 927
+		has_full_control_of_state = 926
+		has_full_control_of_state = 934
+		OR = {
+			has_full_control_of_state = 325
+			has_full_control_of_state = 791
+		}
+	}
+	option = {
+		name = china.22.a
+		ai_chance = { factor = 1 }
+		trigger = {
+			tag = KMT
+			is_subject = no
+		}
+		if = {
+			limit = {
+				BYJ = {
+					OR = {
+						has_full_control_of_state = 866
+						has_full_control_of_state = 608
+					}
+				}
+			}
+			every_state = {
+				limit = { is_core_of = BYJ }
+				add_core_of = KMT
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = BYJ
+			}
+		}
+		if = {
+			limit = {
+				MNG = {
+					OR = {
+						has_full_control_of_state = 870
+						has_full_control_of_state = 608
+					}
+				}
+			}
+			every_state = {
+				limit = { is_core_of = MNG }
+				add_core_of = KMT
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = MNG
+			}
+		}
+		if = {
+			limit = {
+				MAN = {
+					has_full_control_of_state = 608
+				}
+			}
+			every_state = {
+				limit = { is_core_of = MAN }
+				add_core_of = KMT
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = MAN
+			}
+		}
+	}
+	option = {
+		name = china.22.b
+		ai_chance = { factor = 1 }
+		trigger = {
+			tag = FJN
+			is_subject = no
+		}
+		if = {
+			limit = {
+				BYJ = {
+					OR = {
+						has_full_control_of_state = 866
+						has_full_control_of_state = 608
+					}
+				}
+			}
+			every_state = {
+				limit = { is_core_of = BYJ }
+				add_core_of = FJN
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = BYJ
+			}
+		}
+		if = {
+			limit = {
+				MNG = {
+					OR = {
+						has_full_control_of_state = 870
+						has_full_control_of_state = 608
+					}
+				}
+			}
+			every_state = {
+				limit = { is_core_of = MNG }
+				add_core_of = FJN
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = MNG
+			}
+		}
+		if = {
+			limit = {
+				MAN = {
+					has_full_control_of_state = 608
+				}
+			}
+			every_state = {
+				limit = { is_core_of = MAN }
+				add_core_of = FJN
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = MAN
+			}
+		}
+	}
+	option = {
+		name = china.22.c
+		ai_chance = { factor = 1 }
+		trigger = {
+			tag = SZC
+			is_subject = no
+		}
+		if = {
+			limit = {
+				BYJ = {
+					OR = {
+						has_full_control_of_state = 866
+						has_full_control_of_state = 608
+					}
+				}
+			}
+			every_state = {
+				limit = { is_core_of = BYJ }
+				add_core_of = SZC
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = BYJ
+			}
+		}
+		if = {
+			limit = {
+				MNG = {
+					OR = {
+						has_full_control_of_state = 870
+						has_full_control_of_state = 608
+					}
+				}
+			}
+			every_state = {
+				limit = { is_core_of = MNG }
+				add_core_of = SZC
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = MNG
+			}
+		}
+		if = {
+			limit = {
+				MAN = {
+					has_full_control_of_state = 608
+				}
+			}
+			every_state = {
+				limit = { is_core_of = MAN }
+				add_core_of = SZC
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = MAN
+			}
+		}
+	}
+}
+country_event = {	#FJN x GDP
+	id = china.23
+	title = china.23.title
+	desc = china.23.desc
+	picture = GFX_report_event_gunner_china2
+
+	fire_only_once = yes
+	trigger = {
+		tag = FJN
+		has_war = no
+		has_full_control_of_state = 927
+		has_full_control_of_state = 613
+		KMT = { exists = no }
+		GDP = { exists  = yes }
+	}
+
+	option = {	
+		name = china.23.a
+		ai_chance = { factor = 1 }
+		hidden_effect = {
+			every_state = {
+				limit = { is_core_of = KMT }
+				add_core_of = FJN
+				remove_core_of = KMT
+			}
+		}
+		set_capital = { state = 613 }
+		remove_ideas = FJN_rival_government
+		set_cosmetic_tag = FJN_left_guomindang_costag
+		create_faction = left_GMD_faction
+		create_wargoal = {
+			type = annex_everything
+			target = GDP
+		}
+	}
+}
+country_event = {	#SZC x XSM
+	id = china.24
+	title = china.24.title
+	desc = china.24.desc
+	picture = GFX_report_event_gunner_china2
+
+	fire_only_once = yes
+	trigger = {
+		tag = SZC
+		has_war = no
+		has_government = accelerationism
+		YUN = { exists = no }
+		XSM = { exists  = yes }
+	}
+
+	option = {	
+		name = china.24.a
+		ai_chance = { factor = 1 }
+		every_state = {
+			limit = { is_core_of = XSM }
+			add_claim_by = SZC
+		}
+		create_wargoal = {
+			type = annex_everything
+			target = XSM
+		}
+	}
+}
+country_event = {	#BYJ unification march
+	id = china.25
+	title = china.25.title
+	desc = china.25.desc
+	picture = GFX_report_event_gunner_china2
+
+	fire_only_once = yes
+	trigger = {
+		tag = BYJ
+		has_war = no
+		has_full_control_of_state = 866
+		has_full_control_of_state = 597
+		has_full_control_of_state = 613
+		has_full_control_of_state = 927
+		has_full_control_of_state = 926
+		has_full_control_of_state = 325
+		has_full_control_of_state = 934
+		has_full_control_of_state = 744
+	}
+
+	option = {
+		name = china.25.a
+		ai_chance = { factor = 1 }
+		set_cosmetic_tag = BYJ_CHI
+		every_country = {
+			limit = {
+				OR = {
+					tag = TAI
+					tag = XSM
+					tag = SIK
+					tag = TIB
+					tag = SZC
+					tag = MAN
+					tag = MON
+				}
+				is_subject = no
+				NOT = { is_in_faction_with = ROOT }
+			}
+			ROOT = {
+				create_wargoal = {
+					type = annex_everything
+					target = PREV
+				}
+			}
+		}
+		every_country = {
+			limit = {
+				OR = {
+					tag = TAI
+					tag = XSM
+					tag = SIK
+					tag = TIB
+					tag = SZC
+					tag = MAN
+					tag = MON
+				}
+				OR = {
+					is_subject = yes
+					is_in_faction_with = ROOT
+				}
+			}
+			ROOT = {
+				annex_country = {
+					target = PREV
+					transfer_troops = yes
+				}
+			}
+		}
+		hidden_effect = {
+			every_state = {
+				limit = {
+					OR = {
+						#cities
+						state = 745
+						state = 326
+						state = 729
+						state = 839
+						state = 743
+						state = 862
+						state = 927
+						state = 928
+						#Taiwan
+						state = 524
+						state = 1023
+						#Mongolia
+						state = 962
+						state = 1149
+						state = 915
+						state = 330
+						state = 914
+						state = 1150
+						state = 1151
+						state = 612
+						state = 329
+						state = 898
+						#South Manchuria
+						state = 610
+						state = 789
+						state = 716
+						state = 809
+						state = 328
+						state = 715
+						#japanese canton
+						state = 1118
+						state = 877
+						state = 728
+						state = 591
+						#cores on Mao/hunan
+						state = 896
+						state = 932
+						state = 795
+						state = 897
+						state = 867
+						state = 750
+						state = 874
+						state = 602
+						state = 892
+						state = 934
+						#cores on KMT
+						state = 600
+						state = 749
+						state = 613
+						state = 929
+						state = 861
+						state = 863
+						state = 596
+						#cores on FJN
+						state = 869
+						state = 595
+						state = 864
+						state = 931
+						#cores on TIB
+						state = 322
+						state = 758
+						state = 757
+						state = 601
+						state = 604
+						#cores on ETS
+						state = 935
+						state = 843
+						state = 287
+						state = 619
+						#cores on SIK
+						state = 617
+						state = 760
+						state = 793
+						state = 618
+						state = 794
+						#cores on XSM
+						state = 755
+						state = 759
+						state = 756
+						state = 616
+						state = 283
+						state = 754
+						#cores on SZC
+						state = 605
+						state = 753
+						state = 752
+						state = 751
+						state = 791
+						state = 790
+						state = 748
+						#cores on YUN
+						state = 603
+						state = 325
+						state = 924
+						state = 747
+						#cores on GDP
+						state = 876
+						state = 594
+						state = 599
+						state = 836
+						state = 925
+						state = 593
+						state = 926
+						state = 592
+					}
+				}
+				add_core_of = ROOT
+			}
+			#claims
+			add_state_claim = 434
+			add_state_claim = 798
+		}
+	}
+}
+country_event = {	#SZC x YUN
+	id = china.26
+	title = china.26.title
+	desc = china.26.desc
+	picture = GFX_report_event_gunner_china2
+
+	fire_only_once = yes
+	trigger = {
+		tag = SZC
+		has_war = no
+		has_government = accelerationism
+		YUN = { 
+			exists = yes
+			has_government = progressivism
+		}
+		FJN = { exists  = no }
+	}
+
+	option = {	
+		name = china.26.a
+		ai_chance = { factor = 1 }
+		SZC = {
+			every_state = {
+				limit = {
+					is_core_of = YUN
+				}
+				add_claim_by = SZC
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = YUN
+			}
+		}
+	}
+}
+country_event = {	#SZC x KMT/FJN
+	id = china.27
+	title = china.27.title
+	desc = china.27.desc
+	picture = GFX_report_event_gunner_china2
+
+	fire_only_once = yes
+	trigger = {
+		tag = SZC
+		has_war = no
+		has_government = accelerationism
+		YUN = { exists  = no }
+		has_full_control_of_state = 325
+		XSM = { exists  = no }
+		has_full_control_of_state = 283
+		GDP = { exists  = no }
+		OR = {
+			FJN = {
+				has_full_control_of_state = 613
+			}
+			KMT = {
+				has_full_control_of_state = 927
+			}
+		}
+	}
+
+	option = {	
+		name = china.27.a
+		ai_chance = { factor = 1 }
+		trigger = {
+			KMT = {
+				has_full_control_of_state = 927
+			}
+		}
+		SZC = {
+			every_state = {
+				limit = { is_core_of = KMT }
+				add_core_of = SZC
+				remove_core_of = KMT
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = KMT
+			}
+		}
+	}
+	option = {	
+		name = china.27.b
+		ai_chance = { factor = 1 }
+		trigger = {
+			FJN = {
+				has_full_control_of_state = 613
+			}
+		}
+		SZC = {
+			every_state = {
+				limit = { is_core_of = FJN }
+				add_core_of = SZC
+				remove_core_of = SZC
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = FJN
+			}
+		}
+	}
+}
+country_event = {	#GMD unification march
+	id = china.28
+	title = china.28.title
+	desc = china.28.desc
+	picture = GFX_report_event_gunner_china2
+
+	fire_only_once = yes
+	trigger = {
+		OR = {
+			tag = KMT
+			tag = FJN
+		}
+		has_war = no
+		has_full_control_of_state = 608
+		has_full_control_of_state = 613
+		has_full_control_of_state = 927
+		has_full_control_of_state = 926
+		has_full_control_of_state = 325
+		has_full_control_of_state = 934
+		has_full_control_of_state = 744
+	}
+
+	option = {	
+		name = china.28.a
+		ai_chance = { factor = 1 }
+		if = {
+			limit = {
+				tag = KMT
+			}
+			set_cosmetic_tag = KMT_CHI
+		}
+		else_if = {
+			limit = {
+				tag = FJN
+				has_country_flag = FJN_jingwei_bby
+			}
+			set_cosmetic_tag = FJN_united_CHI
+		}
+		else_if = {
+			limit = {
+				tag = FJN
+				NOT = {
+					has_country_flag = FJN_jingwei_bby
+				}
+			}
+			set_cosmetic_tag = FJN_left_CHI
+		}
+		every_country = {
+			limit = {
+				OR = {
+					tag = TAI
+					tag = XSM
+					tag = SIK
+					tag = TIB
+					tag = SZC
+					tag = MAN
+					tag = MON
+				}
+				is_subject = no
+				NOT = { is_in_faction_with = ROOT }
+			}
+			ROOT = {
+				create_wargoal = {
+					type = annex_everything
+					target = PREV
+				}
+			}
+		}
+		every_country = {
+			limit = {
+				OR = {
+					tag = TAI
+					tag = XSM
+					tag = SIK
+					tag = TIB
+					tag = SZC
+					tag = MAN
+					tag = MON
+				}
+				OR = {
+					is_subject = yes
+					is_in_faction_with = ROOT
+				}
+			}
+			ROOT = {
+				annex_country = {
+					target = PREV
+					transfer_troops = yes
+				}
+			}
+		}
+		hidden_effect = {
+			every_state = {
+				limit = {
+					OR = {
+						#cities
+						state = 745
+						state = 326
+						state = 729
+						state = 839
+						state = 743
+						state = 862
+						state = 927
+						state = 928
+						#Taiwan
+						state = 524
+						state = 1023
+						#Mongolia
+						state = 962
+						state = 1149
+						state = 915
+						state = 330
+						state = 914
+						state = 1150
+						state = 1151
+						state = 612
+						state = 329
+						state = 898
+						#South Manchuria
+						state = 610
+						state = 789
+						state = 716
+						state = 809
+						state = 328
+						state = 715
+						#japanese canton
+						state = 1118
+						state = 877
+						state = 728
+						state = 591
+						#cores on Mao/hunan
+						state = 896
+						state = 932
+						state = 795
+						state = 897
+						state = 867
+						state = 750
+						state = 874
+						state = 602
+						state = 892
+						state = 934
+						#cores on KMT
+						state = 600
+						state = 749
+						state = 613
+						state = 929
+						state = 861
+						state = 863
+						state = 596
+						#cores on FJN
+						state = 869
+						state = 595
+						state = 864
+						state = 931
+						#cores on TIB
+						state = 322
+						state = 758
+						state = 757
+						state = 601
+						state = 604
+						#cores on ETS
+						state = 935
+						state = 843
+						state = 287
+						state = 619
+						#cores on SIK
+						state = 617
+						state = 760
+						state = 793
+						state = 618
+						state = 794
+						#cores on XSM
+						state = 755
+						state = 759
+						state = 756
+						state = 616
+						state = 283
+						state = 754
+						#cores on SZC
+						state = 605
+						state = 753
+						state = 752
+						state = 751
+						state = 791
+						state = 790
+						state = 748
+						#cores on YUN
+						state = 603
+						state = 325
+						state = 924
+						state = 747
+						#cores on GDP
+						state = 876
+						state = 594
+						state = 599
+						state = 836
+						state = 925
+						state = 593
+						state = 926
+						state = 592
+					}
+				}
+				add_core_of = ROOT
+			}
+			#claims
+			add_state_claim = 434
+			add_state_claim = 798
+		}
+	}
+}
+country_event = {	#XIA defeated the GMD - ruh roh
+	id = china.29
+	title = china.29.title
+	desc = china.29.desc
+	picture = GFX_report_event_gunner_china2
+
+	fire_only_once = yes
+	trigger = {
+		tag = XIA
+		has_war = no
+		OR = {
+			has_government = vanguard_socialism
+			has_government = popular_socialism
+		}
+		FJN = { exists  = no }
+		KMT = { exists  = no }
+		has_full_control_of_state = 797
+	}
+
+	option = {	
+		name = china.29.a
+		ai_chance = { factor = 1 }
+		set_capital = { state = 797 }
+		set_cosmetic_tag = XIA_PROC
+		hidden_effect = {
+			every_state = {
+				limit = {
+					OR = {
+						is_core_of = YUN
+						is_core_of = XSM
+						is_core_of = FJN
+						is_core_of = GDP
+						is_core_of = SZC
+					}
+				}
+				add_core_of = XIA
+			}
+		}
+		every_country = {
+			limit = {
+				OR = {
+					AND = {
+						tag = TAI
+						NOT = { has_government = vanguard_socialism }
+					}
+					tag = XSM
+					tag = SIK
+					tag = TIB
+					tag = SZC
+					tag = MAN
+					tag = MON
+				}
+				is_subject = no
+				NOT = { is_in_faction_with = ROOT }
+			}
+			ROOT = {
+				create_wargoal = {
+					type = annex_everything
+					target = PREV
+				}
+			}
+		}
+		every_country = {
+			limit = {
+				OR = {
+					AND = {
+						tag = TAI
+						NOT = { has_government = vanguard_socialism }
+					}
+					tag = XSM
+					tag = SIK
+					tag = TIB
+					tag = SZC
+					tag = MAN
+					tag = MON
+				}
+				OR = {
+					is_subject = yes
+					is_in_faction_with = ROOT
+				}
+			}
+			ROOT = {
+				annex_country = {
+					target = PREV
+					transfer_troops = yes
+				}
+			}
+		}
+	}
+}
+country_event = {	#XIA x KMT
+	id = china.30
+	title = china.30.title
+	desc = china.30.desc
+	picture = GFX_report_event_gunner_china2
+
+	fire_only_once = yes
+	trigger = {
+		tag = XIA
+		has_war = no
+		OR = {
+			has_government = vanguard_socialism
+			has_government = popular_socialism
+		}
+		OR = {
+			AND = {
+				FJN = { exists = no }
+				KMT = {
+					has_war = no
+					is_subject = no
+					has_full_control_of_state = 927
+					has_full_control_of_state = 613
+					has_full_control_of_state = 926
+				}
+			}
+			AND = {
+				KMT = { exists = no }
+				FJN = {
+					has_war = no
+					is_subject = no
+					has_full_control_of_state = 927
+					has_full_control_of_state = 613
+					has_full_control_of_state = 926
+				}
+			}
+		}
+	}
+
+	option = {	
+		name = china.30.a
+		ai_chance = { factor = 1 }
+		trigger = {
+			FJN = { exists = no }
+			KMT = { exists = yes }
+		}
+		create_wargoal = {
+			type = annex_everything
+			target = KMT
+		}
+	}
+	option = {	
+		name = china.30.a
+		ai_chance = { factor = 1 }
+		trigger = {
+			KMT = { exists = no }
+			FJN = { exists = yes }
+		}
+		create_wargoal = {
+			type = annex_everything
+			target = FJN
+		}
+	}
+}
+country_event = {	#BYJ flips to wholesome?
+	id = china.31
+	title = china.31.title
+	desc = china.31.desc
+	picture = GFX_report_event_gunner_china2
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {	
+		name = china.31.a
+		ai_chance = { factor = 9 }
+		add_popularity = {
+			ideology = progressivism
+			popularity = 0.3
+		}
+		set_politics = {
+			ruling_party = progressivism
+		}
+	}
+	option = {	
+		name = china.31.b
+		ai_chance = { factor = 1 }
+		add_popularity = {
+			ideology = accelerationism
+			popularity = 0.3
+		}
+		set_politics = {
+			ruling_party = accelerationism
+		}
+	}
+	option = {	
+		name = china.31.c
+		ai_chance = { factor = 3 }
+		add_popularity = {
+			ideology = despotism
+			popularity = 0.2
+		}
+	}
+}
+country_event = {	#SZC unification march
+	id = china.32
+	title = china.32.title
+	desc = china.32.desc
+	picture = GFX_report_event_gunner_china2
+
+	fire_only_once = yes
+	trigger = {
+		tag = SZC
+		has_war = no
+		has_full_control_of_state = 608
+		has_full_control_of_state = 613
+		has_full_control_of_state = 927
+		has_full_control_of_state = 926
+		has_full_control_of_state = 325
+		has_full_control_of_state = 934
+		has_full_control_of_state = 744
+	}
+
+	option = {	
+		name = china.32.a
+		ai_chance = { factor = 1 }
+		set_cosmetic_tag = SZC_accelerationism_united
+		every_country = {
+			limit = {
+				OR = {
+					tag = TAI
+					tag = XSM
+					tag = SIK
+					tag = TIB
+					tag = MAN
+					tag = MON
+				}
+				is_subject = no
+				NOT = { is_in_faction_with = ROOT }
+			}
+			ROOT = {
+				create_wargoal = {
+					type = annex_everything
+					target = PREV
+				}
+			}
+		}
+		every_country = {
+			limit = {
+				OR = {
+					tag = TAI
+					tag = XSM
+					tag = SIK
+					tag = TIB
+					tag = MAN
+					tag = MON
+				}
+				OR = {
+					is_subject = yes
+					is_in_faction_with = ROOT
+				}
+			}
+			ROOT = {
+				annex_country = {
+					target = PREV
+					transfer_troops = yes
+				}
+			}
+		}
+		hidden_effect = {
+			every_state = {
+				limit = {
+					OR = {
+						#cities
+						state = 745
+						state = 326
+						state = 729
+						state = 839
+						state = 743
+						state = 862
+						state = 927
+						state = 928
+						#Taiwan
+						state = 524
+						state = 1023
+						#Mongolia
+						state = 962
+						state = 1149
+						state = 915
+						state = 330
+						state = 914
+						state = 1150
+						state = 1151
+						state = 612
+						state = 329
+						state = 898
+						#South Manchuria
+						state = 610
+						state = 789
+						state = 716
+						state = 809
+						state = 328
+						state = 715
+						#japanese canton
+						state = 1118
+						state = 877
+						state = 728
+						state = 591
+						#cores on Mao/hunan
+						state = 896
+						state = 932
+						state = 795
+						state = 897
+						state = 867
+						state = 750
+						state = 874
+						state = 602
+						state = 892
+						state = 934
+						#cores on KMT
+						state = 600
+						state = 749
+						state = 613
+						state = 929
+						state = 861
+						state = 863
+						state = 596
+						#cores on FJN
+						state = 869
+						state = 595
+						state = 864
+						state = 931
+						#cores on TIB
+						state = 322
+						state = 758
+						state = 757
+						state = 601
+						state = 604
+						#cores on ETS
+						state = 935
+						state = 843
+						state = 287
+						state = 619
+						#cores on SIK
+						state = 617
+						state = 760
+						state = 793
+						state = 618
+						state = 794
+						#cores on XSM
+						state = 755
+						state = 759
+						state = 756
+						state = 616
+						state = 283
+						state = 754
+						#cores on SZC
+						state = 605
+						state = 753
+						state = 752
+						state = 751
+						state = 791
+						state = 790
+						state = 748
+						#cores on YUN
+						state = 603
+						state = 325
+						state = 924
+						state = 747
+						#cores on GDP
+						state = 876
+						state = 594
+						state = 599
+						state = 836
+						state = 925
+						state = 593
+						state = 926
+						state = 592
+					}
+				}
+				add_core_of = ROOT
+			}
+			#claims
+			add_state_claim = 434
+			add_state_claim = 798
+		}
+	}
+}

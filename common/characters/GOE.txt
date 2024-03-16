@@ -1,0 +1,25 @@
+characters = {
+	GOE_hermann_göring = {
+		name = "Hermann Göring"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/GOE/Portrait_Hermann_Goering.png"
+			}
+			army = {
+				large="gfx/leaders/GOE/Portrait_Hermann_Goering.png"
+			}
+		}
+		country_leader = {
+			ideology = reactionary_populism
+			expire = "1965.1.1.1"
+		}
+		corps_commander = {
+			traits = { }
+			skill = 3
+			attack_skill = 4
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 3
+		}
+	}
+}

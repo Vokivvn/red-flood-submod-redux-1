@@ -1,0 +1,70 @@
+﻿capital = 1068
+
+oob = "MLG"
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	gw_artillery = 1
+}
+
+add_ideas = {
+	mlg_republican_to_our_bones
+	mlg_broad_popular_front
+	mlg_pallbearers_of_prrrs
+	mlg_our_personal_babel
+	MAG_getfucked
+}
+
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+	set_technology = {
+		iw_small_airframe = 1
+		aa_lmg = 1
+		engines_1 = 1
+	}
+}
+if = {
+	limit = { NOT = { has_dlc = "By Blood Alone" } }
+	set_technology = {
+		early_fighter = 1
+	}
+}
+
+set_convoys = 25
+set_stability = 0.40
+
+# Events
+
+# Politics
+set_popularities = {
+	vanguard_socialism = 7
+	popular_socialism = 36
+	anarchism = 2
+	revisionist_socialism = 5
+	progressivism = 22
+	liberalism = 11
+	conservatism = 6
+	right_authoritarianism = 2
+	despotism = 2
+	reactionism = 4
+	accelerationism = 3
+}
+set_politics = {
+	ruling_party = popular_socialism
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+recruit_character = MLG_VVS
+
+recruit_character = MLG_jean_ralaimongo
+recruit_character = MLG_paul_dussac
+recruit_character = MLG_joseph_raseta
+recruit_character = MLG_joseph_ravoahangy
+recruit_character = MLG_monja_jaona
+
+declare_war_on = {
+    target = MAG
+    type = annex_everything
+}

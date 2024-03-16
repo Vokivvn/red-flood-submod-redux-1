@@ -1,0 +1,33 @@
+﻿capital = 1005
+
+#oob = "ZAN"
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	gw_artillery = 1
+}
+
+set_convoys = 10
+
+set_popularities = {
+	accelerationism = 0
+	reactionism = 13
+	despotism = 69
+	right_authoritarianism = 14
+	conservatism = 0
+	liberalism = 0
+	progressivism = 0
+	popular_socialism = 1
+	vanguard_socialism = 3
+	anarchism = 0
+}
+
+set_politics = {
+	ruling_party = despotism
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+#recruit_character = ZAN_sayyid_sir_khalifa_ii_bin_harub_alsaid

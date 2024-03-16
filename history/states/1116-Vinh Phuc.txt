@@ -1,0 +1,27 @@
+state = {
+	id = 1116
+	name = "STATE_1116"
+
+	resources={
+		tungsten=3.000
+	}
+
+	history = {
+		owner = DAI
+		add_core_of = DAI
+		buildings = {
+			infrastructure = 2
+		}
+		victory_points = {
+			12048 4 # Bac Ninh
+		}
+	}
+
+	provinces = {
+		12048 1073 7015
+	}
+
+	manpower = 20000
+	buildings_max_level_factor = 1
+	state_category = large_town
+}

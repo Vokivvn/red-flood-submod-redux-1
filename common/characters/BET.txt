@@ -1,0 +1,14 @@
+characters = {
+	BET_jacques_faitlovitch = {
+		name = "Jacques Faitlovitch"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/BET/Portrait_Faitlovitch.png"
+			}
+		}
+		country_leader = {
+			ideology = reactionary_populism
+			expire = "1965.1.1.1"
+		}
+	}
+}

@@ -1,0 +1,143 @@
+﻿capital = 500
+
+set_research_slots = 3
+
+set_convoys = 50
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	support_weapons = 1
+	tech_support = 1
+	tech_recon = 1
+	tech_engineers = 1
+	tech_trucks =1
+	motorised_infantry = 1
+}
+
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+	set_technology = {
+		iw_small_airframe = 1
+		aa_lmg = 1
+		aa_cannon_1 = 1
+		early_bombs = 1
+		engines_1 = 1
+	}
+}
+if = {
+	limit = { NOT = { has_dlc = "By Blood Alone" } }
+	set_technology = {
+		early_fighter = 1
+		CAS1 = 1
+	}
+}
+
+
+if = {
+	limit = {
+		not = { has_dlc = "Man the Guns"}
+	}
+	set_technology = {
+		early_submarine = 1
+		early_destroyer = 1
+		basic_destroyer = 1
+		early_light_cruiser = 1
+		basic_light_cruiser = 1
+		early_heavy_cruiser = 1
+		early_battleship = 1
+		transport = 1
+	}
+}
+if = {
+	limit = { has_dlc = "Man the Guns"}
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		early_ship_hull_light = 1
+		basic_ship_hull_light = 1
+		early_ship_hull_cruiser = 1
+		basic_ship_hull_cruiser = 1
+		early_ship_hull_heavy = 1
+		basic_battery = 1
+		basic_light_battery = 1
+		basic_torpedo = 1
+		submarine_mine_laying = 1
+		mtg_transport = 1
+	}
+}
+
+set_politics = {
+	ruling_party = right_authoritarianism
+	last_election = "1933.10.25"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	vanguard_socialism = 2
+	popular_socialism = 2
+	anarchism = 2
+	revisionist_socialism = 1
+	progressivism = 5
+	liberalism = 12
+	conservatism = 16
+	right_authoritarianism = 42
+	despotism = 1
+	reactionism = 13
+	accelerationism = 4
+}
+
+set_stability = 0.15
+set_war_support = 0.5
+
+recruit_character = BRR_antonio_carlos_de_andrada
+recruit_character = BRR_getúlio_vargas
+recruit_character = BRR_francisco_prestes_maia
+recruit_character = BRR_oswald_de_andrade
+recruit_character = BRR_gustavo_dodt_barroso
+recruit_character = BRR_miguel_costa
+recruit_character = BRR_olímpio_mourão_filho
+recruit_character = BRR_newton_estillac_leal
+recruit_character = BRR_flores_da_cuhna
+recruit_character = BRR_bertoldo_klinger
+recruit_character = BRR_jose_antonio_netto
+recruit_character = BRR_osvaldo_aranha
+recruit_character = BRR_assis_brasil
+recruit_character = BRR_nereu_ramos
+recruit_character = BRR_anita_malfatti
+recruit_character = BRR_waldir_bouhid
+recruit_character = BRR_julio_prestes
+recruit_character = BRR_leonidas_de_antero_matos
+recruit_character = BRR_pedro_ludovico_teixeira
+recruit_character = BRR_janio_quadros
+recruit_character = BRR_lauro_sodre
+recruit_character = BRR_joaquim_barata
+recruit_character = BRR_vital_soares
+recruit_character = BRR_antonio_ramos_caiado
+recruit_character = BRR_luis_viana_vilho
+recruit_character = BRR_alvaro_botelho_maia
+recruit_character = BRR_tarsila_do_amaral
+recruit_character = BRR_artur_neiva
+recruit_character = BRR_zuleika_alambert
+recruit_character = BRR_joao_filho
+recruit_character = BRR_menotti_del_picchia
+recruit_character = BRR_jurandir_bizarria_mamede
+recruit_character = BRR_newton_cavalcanti
+recruit_character = BRR_julio_marcondes_salgado
+recruit_character = BRR_candido_rondon
+recruit_character = BRR_euclides_zenobio_da_costa
+recruit_character = BRR_tertuliano_potiguara
+recruit_character = BRR_benjamin_de_almeida_sodre
+recruit_character = BRR_alexandre_busse
+recruit_character = BRR_marcio_de_sousa_melo
+recruit_character = BRR_anisio_botelho
+recruit_character = BRR_nero_moura
+
+recruit_character = BRR_anarchy
+recruit_character = BRR_góis_monteiro
+
+
+
+

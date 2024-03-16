@@ -1,0 +1,33 @@
+
+state={
+	id=82
+	name="STATE_82"
+	manpower = 391500
+	resources={
+		aluminium=6
+	}
+
+	state_category = rural
+
+	history={
+		owner = TRS
+		victory_points = {
+			11592 20
+		}
+		victory_points = {
+			662 1 
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 1
+		}
+		add_claim_by = ROM
+		add_claim_by = MOL
+		add_core_of = TRS
+	}
+
+	provinces={
+		662 3649 11592
+	}
+}

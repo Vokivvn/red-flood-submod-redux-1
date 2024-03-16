@@ -1,0 +1,711 @@
+ASY_pansyrianism_category = {
+
+	#PANSYRIANISM
+
+	syrianise_deirazzur = {
+		icon = decision_generic_nationalism
+		available = {
+			has_completed_focus = ASY_pansyrianism
+			has_full_control_of_state = 1052
+		}
+		cost = 30
+		days_remove = 30
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 20
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 1052
+			}
+		}
+		remove_effect = {
+			1052 = {
+				add_compliance = 20
+				add_dynamic_modifier = {
+					modifier = ASY_pansyrianism_dynamic
+					scope = ASY
+				}
+			}
+		}
+	}
+	syrianise_aleppo = {
+		icon = decision_generic_nationalism
+		available = {
+			has_completed_focus = ASY_pansyrianism
+			has_full_control_of_state = 677
+		}
+		cost = 50
+		days_remove = 50
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 50
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 677
+			}
+		}
+		remove_effect = {
+			677 = {
+				add_compliance = 20
+				add_dynamic_modifier = {
+					modifier = ASY_pansyrianism_dynamic
+					scope = ASY
+				}
+			}
+		}
+	}
+	syrianise_latakia = {
+		icon = decision_generic_nationalism
+		available = {
+			has_completed_focus = ASY_pansyrianism
+			has_full_control_of_state = 1086
+		}
+		cost = 30
+		days_remove = 30
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 20
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 1086
+			}
+		}
+		remove_effect = {
+			1086 = {
+				add_compliance = 20
+				add_dynamic_modifier = {
+					modifier = ASY_pansyrianism_dynamic
+					scope = ASY
+				}
+			}
+		}
+	}
+	syrianise_aliskandarun = {
+		icon = decision_generic_nationalism
+		available = {
+			has_completed_focus = ASY_pansyrianism
+			has_full_control_of_state = 1085
+		}
+		cost = 30
+		days_remove = 30
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 20
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 1085
+			}
+		}
+		remove_effect = {
+			1085 = {
+				add_compliance = 20
+				add_dynamic_modifier = {
+					modifier = ASY_pansyrianism_dynamic
+					scope = ASY
+				}
+			}
+		}
+	}
+	syrianise_damascus = {
+		icon = decision_generic_nationalism
+		available = {
+			has_completed_focus = ASY_pansyrianism
+			has_full_control_of_state = 554
+		}
+		cost = 50
+		days_remove = 50
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 50
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 554
+			}
+		}
+		remove_effect = {
+			554 = {
+				add_compliance = 20
+				add_dynamic_modifier = {
+					modifier = ASY_pansyrianism_dynamic
+					scope = ASY
+				}
+			}
+		}
+	}
+	syrianise_druze = {
+		icon = decision_generic_nationalism
+		available = {
+			has_completed_focus = ASY_pansyrianism
+			has_full_control_of_state = 1091
+		}
+		cost = 15
+		days_remove = 15
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 10
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 1091
+			}
+		}
+		remove_effect = {
+			1091 = {
+				add_compliance = 20
+				add_dynamic_modifier = {
+					modifier = ASY_pansyrianism_dynamic
+					scope = ASY
+				}
+			}
+		}
+	}
+	syrianise_zarqa = {
+		icon = decision_generic_nationalism
+		available = {
+			has_completed_focus = ASY_pansyrianism
+			has_full_control_of_state = 1089
+		}
+		cost = 15
+		days_remove = 15
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 10
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 1089
+			}
+		}
+		remove_effect = {
+			1089 = {
+				add_compliance = 20
+				add_dynamic_modifier = {
+					modifier = ASY_pansyrianism_dynamic
+					scope = ASY
+				}
+			}
+		}
+	}
+	syrianise_transjordan = {
+		icon = decision_generic_nationalism
+		available = {
+			has_completed_focus = ASY_pansyrianism
+			has_full_control_of_state = 455
+		}
+		cost = 30
+		days_remove = 30
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 20
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 455
+			}
+		}
+		remove_effect = {
+			455 = {
+				add_compliance = 20
+				add_dynamic_modifier = {
+					modifier = ASY_pansyrianism_dynamic
+					scope = ASY
+				}
+			}
+		}
+	}
+	syrianise_cisjordan = {
+		icon = decision_generic_nationalism
+		available = {
+			has_completed_focus = ASY_pansyrianism
+			has_full_control_of_state = 1003
+		}
+		cost = 30
+		days_remove = 30
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 20
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 1003
+			}
+		}
+		remove_effect = {
+			1003 = {
+				add_compliance = 20
+				add_dynamic_modifier = {
+					modifier = ASY_pansyrianism_dynamic
+					scope = ASY
+				}
+			}
+		}
+	}
+	syrianise_negev = {
+		icon = decision_generic_nationalism
+		available = {
+			has_completed_focus = ASY_pansyrianism
+			has_full_control_of_state = 1004
+		}
+		cost = 30
+		days_remove = 30
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 20
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 1004
+			}
+		}
+		remove_effect = {
+			1004 = {
+				add_compliance = 20
+				add_dynamic_modifier = {
+					modifier = ASY_pansyrianism_dynamic
+					scope = ASY
+				}
+			}
+		}
+	}
+	syrianise_jaffa = {
+		icon = decision_generic_nationalism
+		available = {
+			has_completed_focus = ASY_pansyrianism
+			has_full_control_of_state = 454
+		}
+		cost = 50
+		days_remove = 50
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 20
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 454
+			}
+		}
+		remove_effect = {
+			454 = {
+				add_compliance = 20
+				add_dynamic_modifier = {
+					modifier = ASY_pansyrianism_dynamic
+					scope = ASY
+				}
+			}
+		}
+	}
+	syrianise_lebanon = {
+		icon = decision_generic_nationalism
+		available = {
+			has_completed_focus = ASY_pansyrianism
+			has_full_control_of_state = 553
+		}
+		cost = 50
+		days_remove = 50
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 50
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 553
+			}
+		}
+		remove_effect = {
+			553 = {
+				add_compliance = 20
+				add_dynamic_modifier = {
+					modifier = ASY_pansyrianism_dynamic
+					scope = ASY
+				}
+			}
+		}
+	}
+	syrianise_golan = {
+		icon = decision_generic_nationalism
+		available = {
+			has_completed_focus = ASY_pansyrianism
+			has_full_control_of_state = 1092
+		}
+		cost = 15
+		days_remove = 15
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 10
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 1092
+			}
+		}
+		remove_effect = {
+			1092 = {
+				add_compliance = 20
+				add_dynamic_modifier = {
+					modifier = ASY_pansyrianism_dynamic
+					scope = ASY
+				}
+			}
+		}
+	}
+}
+	
+ASY_reashurisation_category = {	
+
+	reashurise_deirazzur = {
+		icon = decision_generic_nationalism
+		available = {
+			has_completed_focus = ASY_reashurisation
+			has_full_control_of_state = 1052
+		}
+		cost = 30
+		days_remove = 30
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 20
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 1052
+			}
+		}
+		remove_effect = {
+			1052 = {
+				add_compliance = 20
+				add_dynamic_modifier = {
+					modifier = ASY_reashurisation_dynamic
+					scope = ASY
+				}
+			}
+		}
+	}
+	reashurise_aleppo = {
+		icon = decision_generic_nationalism
+		available = {
+			has_completed_focus = ASY_reashurisation
+			has_full_control_of_state = 677
+		}
+		cost = 50
+		days_remove = 50
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 50
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 677
+			}
+		}
+		remove_effect = {
+			677 = {
+				add_compliance = 20
+				add_dynamic_modifier = {
+					modifier = ASY_reashurisation_dynamic
+					scope = ASY
+				}
+			}
+		}
+	}
+	reashurise_latakia = {
+		icon = decision_generic_nationalism
+		available = {
+			has_completed_focus = ASY_reashurisation
+			has_full_control_of_state = 1086
+		}
+		cost = 30
+		days_remove = 30
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 20
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 1086
+			}
+		}
+		remove_effect = {
+			1086 = {
+				add_compliance = 20
+				add_dynamic_modifier = {
+					modifier = ASY_reashurisation_dynamic
+					scope = ASY
+				}
+			}
+		}
+	}
+	reashurise_aliskandarun = {
+		icon = decision_generic_nationalism
+		available = {
+			has_completed_focus = ASY_reashurisation
+			has_full_control_of_state = 1085
+		}
+		cost = 30
+		days_remove = 30
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 20
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 1085
+			}
+		}
+		remove_effect = {
+			1085 = {
+				add_compliance = 20
+				add_dynamic_modifier = {
+					modifier = ASY_reashurisation_dynamic
+					scope = ASY
+				}
+			}
+		}
+	}
+	reashurise_damascus = {
+		icon = decision_generic_nationalism
+		available = {
+			has_completed_focus = ASY_reashurisation
+			has_full_control_of_state = 554
+		}
+		cost = 50
+		days_remove = 50
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 50
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 554
+			}
+		}
+		remove_effect = {
+			554 = {
+				add_compliance = 20
+				add_dynamic_modifier = {
+					modifier = ASY_reashurisation_dynamic
+					scope = ASY
+				}
+			}
+		}
+	}
+	reashurise_druze = {
+		icon = decision_generic_nationalism
+		available = {
+			has_completed_focus = ASY_reashurisation
+			has_full_control_of_state = 1091
+		}
+		cost = 15
+		days_remove = 15
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 10
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 1091
+			}
+		}
+		remove_effect = {
+			1091 = {
+				add_compliance = 20
+				add_dynamic_modifier = {
+					modifier = ASY_reashurisation_dynamic
+					scope = ASY
+				}
+			}
+		}
+	}
+	reashurise_zarqa = {
+		icon = decision_generic_nationalism
+		available = {
+			has_completed_focus = ASY_reashurisation
+			has_full_control_of_state = 1089
+		}
+		cost = 15
+		days_remove = 15
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 10
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 1089
+			}
+		}
+		remove_effect = {
+			1089 = {
+				add_compliance = 20
+				add_dynamic_modifier = {
+					modifier = ASY_reashurisation_dynamic
+					scope = ASY
+				}
+			}
+		}
+	}
+	reashurise_transjordan = {
+		icon = decision_generic_nationalism
+		available = {
+			has_completed_focus = ASY_reashurisation
+			has_full_control_of_state = 455
+		}
+		cost = 30
+		days_remove = 30
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 20
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 455
+			}
+		}
+		remove_effect = {
+			455 = {
+				add_compliance = 20
+				add_dynamic_modifier = {
+					modifier = ASY_reashurisation_dynamic
+					scope = ASY
+				}
+			}
+		}
+	}
+	reashurise_cisjordan = {
+		icon = decision_generic_nationalism
+		available = {
+			has_completed_focus = ASY_reashurisation
+			has_full_control_of_state = 1003
+		}
+		cost = 30
+		days_remove = 30
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 20
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 1003
+			}
+		}
+		remove_effect = {
+			1003 = {
+				add_compliance = 20
+				add_dynamic_modifier = {
+					modifier = ASY_reashurisation_dynamic
+					scope = ASY
+				}
+			}
+		}
+	}
+	reashurise_negev = {
+		icon = decision_generic_nationalism
+		available = {
+			has_completed_focus = ASY_reashurisation
+			has_full_control_of_state = 1004
+		}
+		cost = 30
+		days_remove = 30
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 20
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 1004
+			}
+		}
+		remove_effect = {
+			1004 = {
+				add_compliance = 20
+				add_dynamic_modifier = {
+					modifier = ASY_reashurisation_dynamic
+					scope = ASY
+				}
+			}
+		}
+	}
+	reashurise_jaffa = {
+		icon = decision_generic_nationalism
+		available = {
+			has_completed_focus = ASY_reashurisation
+			has_full_control_of_state = 454
+		}
+		cost = 50
+		days_remove = 50
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 20
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 454
+			}
+		}
+		remove_effect = {
+			454 = {
+				add_compliance = 20
+				add_dynamic_modifier = {
+					modifier = ASY_reashurisation_dynamic
+					scope = ASY
+				}
+			}
+		}
+	}
+	reashurise_lebanon = {
+		icon = decision_generic_nationalism
+		available = {
+			has_completed_focus = ASY_reashurisation
+			has_full_control_of_state = 553
+		}
+		cost = 50
+		days_remove = 50
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 50
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 554
+			}
+		}
+		remove_effect = {
+			554 = {
+				add_compliance = 20
+				add_dynamic_modifier = {
+					modifier = ASY_reashurisation_dynamic
+					scope = ASY
+				}
+			}
+		}
+	}
+	reashurise_golan = {
+		icon = decision_generic_nationalism
+		available = {
+			has_completed_focus = ASY_reashurisation
+			has_full_control_of_state = 554
+		}
+		cost = 15
+		days_remove = 15
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 10
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 1092
+			}
+		}
+		remove_effect = {
+			1092 = {
+				add_compliance = 20
+				add_dynamic_modifier = {
+					modifier = ASY_reashurisation_dynamic
+					scope = ASY
+				}
+			}
+		}
+	}
+}

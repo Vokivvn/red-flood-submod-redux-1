@@ -1,0 +1,14 @@
+characters = {
+	ETS_muhammad_amin_bughra = {
+		name = "Muhammad Amin Bughra"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/ETS/Portrait_Muhammad_Amin_Bughr.png"
+			}
+		}
+		country_leader = {
+			ideology = national_conservatism
+			expire = "1965.1.1.1"
+		}
+	}
+}

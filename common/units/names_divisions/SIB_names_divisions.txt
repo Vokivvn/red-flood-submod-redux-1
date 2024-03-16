@@ -1,0 +1,213 @@
+# Division template historical names system. Is a new method of naming the divisions based on the names-group assigned to it's template.
+# If we run out of all historical names, the names will be assigned in the old way.
+#
+# Each group has a made up tag. Use it if you want to append more, or replace existing names with the extra txt files (modding).
+#
+# for_countries - lists all countries that can use it. If empty, or entire tag is missing, all countries in the world can use it.
+#
+# can_use - is a trigger that locks/unlocks the group under specific circumstances. The trigger is in a country scope.
+#
+# division_types - is a list of tokens to corresponding unit types. A player can in fact use any group of names for a div.template
+#                  however this tag is a helper for an automated choice (for AI, or if the group must switch on it's own, because
+#                  for example the current one is no longer available due to the can_use trigger saying so).
+#                  In automated choice, the division template must have at least 1 of the following types for it to be chosen.
+#
+# fallback_name - Is going to be used if we run out of the scripted historical names. If you want to use the old division naming
+#                 mechanics to be used for fallbacks, then just skip this option.
+#
+# unordered - It's a list of historical division names that did not have a number. Regardless if such names happened in history or not
+#             this option is available here mainly for a mods.
+#
+# ordered - Is a list of all historical names. 
+#           Numbers must start from 1 and up. 
+#           Numbers can't repeat in one scope.
+#           If you script the name for this group, at the same number (for example in a mod in another file), the name will be override.
+#           All arguments between the brackets must be separated by spaces. Each argument is wrapped in "quotas".
+#           1st argument = The name. It must contain either: 
+#                          %d (for decimal number placement)
+#                          %s (for string number placement - ROMAN numbers like XIV).
+#           2nd argument is optional = A localizable text describing this historical division. The text will be visible in the tooltip
+#                                      where you choose the historical division name.
+#           3rd argument is optional = An URL preferably pointing to the WIKI. It's a future feature that is not currently working in
+#                                      the current game version.
+
+SIB_INF_01 = {
+	name = "Rifle Division"
+
+	for_countries = { SIB }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { SIB_GAR_01 }
+
+	fallback_name = "%d. Strelkovaya Diviziya"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "%d. Sibirskaya Strelkovaya Diviziya" }
+		2 = { "%d. Sibirskaya Strelkovaya Diviziya" }
+		3 = { "%d. Vostochno-Sibirskaya Strelkovaya Diviziya" }
+		4 = { "%d. Sibirskaya Strelkovaya Diviziya" }
+		5 = { "%d. Sibirskaya Strelkovaya Diviziya" }
+		6 = { "%d. Sibirskaya Strelkovaya Diviziya" }
+		7 = { "%d. Sibirskaya Strelkovaya Diviziya" }
+		8 = { "%d. Sibirskaya Strelkovaya Diviziya" }
+		9 = { "%d. Sibirskaya Strelkovaya Diviziya" }
+		10 = { "%d. Sibirskaya Strelkovaya Diviziya" }
+		11 = { "%d. Sibirskaya Strelkovaya Diviziya" }
+		12 = { "%d. Sibirskaya Strelkovaya Diviziya" }
+		13 = { "%d. Sibirskaya Strelkovaya Diviziya" }
+		14 = { "%d. Sibirskaya Strelkovaya Diviziya" }
+		15 = { "%d. Sibirskaya Strelkovaya Diviziya" }
+		16 = { "%d. Sibirskaya Strelkovaya Diviziya" }
+		17 = { "%d. Sibirskaya Strelkovaya Diviziya" }
+		18 = { "%d. Sibirskaya Strelkovaya Diviziya" }
+		19 = { "%d. Sibirskaya Strelkovaya Diviziya" }
+		20 = { "%d. Sibirskaya Strelkovaya Diviziya" }
+		21 = { "%d. Sibirskaya Strelkovaya Diviziya" }
+		22 = { "%d. Sibirskaya Strelkovaya Diviziya" }
+		23 = { "%d. Sibirskaya Strelkovaya Diviziya" }
+		24 = { "%d. Sibirskaya Strelkovaya Diviziya" }
+		25 = { "%d. Sibirskaya Strelkovaya Diviziya" }
+		26 = { "%d. Sibirskaya Strelkovaya Diviziya" }
+		27 = { "%d. Sibirskaya Strelkovaya Diviziya" }
+		28 = { "%d. Sibirskaya Strelkovaya Diviziya" }
+		29 = { "%d. Sibirskaya Strelkovaya Diviziya" }
+		30 = { "%d. Sibirskaya Strelkovaya Diviziya" }
+        31 = { "%d. Sibirskaya Strelkovaya Diviziya" }
+        32 = { "%d. Sibirskaya Strelkovaya Diviziya" }
+        33 = { "%d. Sibirskaya Strelkovaya Diviziya" }
+        34 = { "%d. Sibirskaya Strelkovaya Diviziya" }
+        35 = { "%d. Sibirskaya Strelkovaya Diviziya" }
+        36 = { "%d. Sibirskaya Strelkovaya Diviziya" }
+        37 = { "%d. Sibirskaya Strelkovaya Diviziya" }
+        38 = { "%d. Sibirskaya Strelkovaya Diviziya" }
+        39 = { "%d. Sibirskaya Strelkovaya Diviziya" }
+        40 = { "%d. Sibirskaya Strelkovaya Diviziya" }
+        41 = { "%d. Sibirskaya Strelkovaya Diviziya" }
+        42 = { "%d. Sibirskaya Strelkovaya Diviziya" }
+        43 = { "%d. Sibirskaya Strelkovaya Diviziya" }
+        44 = { "%d. Sibirskaya Strelkovaya Diviziya" }
+        45 = { "%d. Sibirskaya Strelkovaya Diviziya" }
+        46 = { "%d. Sibirskaya Strelkovaya Diviziya" }
+        47 = { "%d. Sibirskaya Strelkovaya Diviziya" }
+        48 = { "%d. Sibirskaya Strelkovaya Diviziya" }
+        49 = { "%d. Sibirskaya Strelkovaya Diviziya" }
+        50 = { "%d. Sibirskaya Strelkovaya Diviziya" }
+        51 = { "%d. Sibirskaya Strelkovaya Diviziya" }
+        52 = { "%d. Sibirskaya Strelkovaya Diviziya" }
+        53 = { "%d. Sibirskaya Strelkovaya Diviziya" }
+        54 = { "%d. Sibirskaya Strelkovaya Diviziya" }
+        55 = { "%d. Sibirskaya Strelkovaya Diviziya" }
+        56 = { "%d. Sibirskaya Strelkovaya Diviziya" }
+        57 = { "%d. Sibirskaya Strelkovaya Diviziya" }
+        58 = { "%d. Sibirskaya Strelkovaya Diviziya" }
+        59 = { "%d. Sibirskaya Strelkovaya Diviziya" }
+        60 = { "%d. Sibirskaya Strelkovaya Diviziya" }
+	}
+}
+SIB_CAV_01 = {
+	name = "Kavaleriyskaya Diviziya"
+
+	for_countries = { SIB }
+
+	can_use = { always = yes }
+
+	division_types = { "cavalry" }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { SIB_INF_01 }
+
+	fallback_name = "%d. Kavaleriyskaya Diviziya"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "%d. Kavaleriyskaya Diviziya" }
+		2 = { "%d. Kavaleriyskaya Diviziya" }
+		3 = { "%d. Kavaleriyskaya Diviziya" }
+		4 = { "%d. Kavaleriyskaya Diviziya" }
+		5 = { "%d. Kavaleriyskaya Diviziya" }
+		6 = { "%d. Kavaleriyskaya Diviziya" }
+		7 = { "%d. Kavaleriyskaya Diviziya" }
+		8 = { "%d. Kavaleriyskaya Diviziya" }
+		9 = { "%d. Kavaleriyskaya Diviziya" }
+		10 = { "%d. Kavaleriyskaya Diviziya" }
+		11 = { "%d. Kavaleriyskaya Diviziya" }
+		12 = { "%d. Kavaleriyskaya Diviziya" }
+		13 = { "%d. Kavaleriyskaya Diviziya" }
+		14 = { "%d. Kavaleriyskaya Diviziya" }
+		15 = { "%d. Kavaleriyskaya Diviziya" }
+		16 = { "%d. Kavaleriyskaya Diviziya" }
+		17 = { "%d. Kavaleriyskaya Diviziya" }
+		18 = { "%d. Kavaleriyskaya Diviziya" }
+		19 = { "%d. Kavaleriyskaya Diviziya" }
+		20 = { "%d. Kavaleriyskaya Diviziya" }
+		21 = { "%d. Kavaleriyskaya Diviziya" }
+		22 = { "%d. Kavaleriyskaya Diviziya" }
+		23 = { "%d. Kavaleriyskaya Diviziya" }
+		24 = { "%d. Kavaleriyskaya Diviziya" }
+		25 = { "%d. Kavaleriyskaya Diviziya" }
+		26 = { "%d. Kavaleriyskaya Diviziya" }
+		27 = { "%d. Kavaleriyskaya Diviziya" }
+		28 = { "%d. Kavaleriyskaya Diviziya" }
+		29 = { "%d. Kavaleriyskaya Diviziya" }
+		30 = { "%d. Kavaleriyskaya Diviziya" }
+	}
+}
+
+SIB_MOT_01 = {
+	name = "Motostrelkovaya Diviziya"
+
+	for_countries = { SIB }
+
+	can_use = { always = yes }
+
+	division_types = { "motorized" }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { SIB_INF_01 }
+
+	fallback_name = "%dya Motostrelkovaya Diviziya"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "%dya Motostrelkovaya Diviziya" }
+		36 = { "%dya 'Zabajkaľskaya' Motostrelkovaya Diviziya" }
+		57 = { "%dya Motostrelkovaya Diviziya" }
+		15 = { "%dya 'Motostrelkovaya Diviziya" }
+		81 = { "%dya Motostrelkovaya Diviziya" }
+		82 = { "%dya Motostrelkovaya Diviziya" }
+		84 = { "%dya Motostrelkovaya Diviziya" }
+		7 = { "%dya Motostrelkovaya Diviziya" }
+		29 = { "%dya Motostrelkovaya Diviziya" }
+		69 = { "%dya Motostrelkovaya Diviziya" }
+		103 = { "%dya Motostrelkovaya Diviziya" }
+		109 = { "%dya Motostrelkovaya Diviziya" }
+		131 = { "%dya Motostrelkovaya Diviziya" }
+		163 = { "%dya Motostrelkovaya Diviziya" }
+		185 = { "%dya Motostrelkovaya Diviziya" }
+		198 = { "%dya Motostrelkovaya Diviziya" }
+		202 = { "%dya Motostrelkovaya Diviziya" }
+		204 = { "%dya Motostrelkovaya Diviziya" }
+		205 = { "%dya Motostrelkovaya Diviziya" }
+		208 = { "%dya Motostrelkovaya Diviziya" }
+		209 = { "%dya Motostrelkovaya Diviziya" }
+		210 = { "%dya Motostrelkovaya Diviziya" }
+		212 = { "%dya Motostrelkovaya Diviziya" }
+		213 = { "%dya Motostrelkovaya Diviziya" }
+		215 = { "%dya Motostrelkovaya Diviziya" }
+		216 = { "%dya Motostrelkovaya Diviziya" }
+		218 = { "%dya Motostrelkovaya Diviziya" }
+		219 = { "%dya Motostrelkovaya Diviziya" }
+		220 = { "%dya Motostrelkovaya Diviziya" }
+		221 = { "%dya Motostrelkovaya Diviziya" }
+		236 = { "%dya Motostrelkovaya Diviziya" }
+		239 = { "%dya Motostrelkovaya Diviziya" }
+	}
+}

@@ -1,0 +1,14 @@
+characters = {
+	FAC_filinto_müller = {
+		name = "Filinto Müller"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/FAC/Portrait_FAC_filinto_muller.png"
+			}
+		}
+		country_leader = {
+			ideology = oligarchy
+			expire = "1965.1.1.1"
+		}
+	}
+}

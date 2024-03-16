@@ -1,0 +1,27 @@
+ideas = {
+	country = {
+		LEO_boniface = {
+			removal_cost = -1
+			allowed = {
+				original_tag = LEO
+			}
+			modifier = {
+				stability_factor = -0.05
+				political_power_factor = 0.5
+				reactionism_acceptance = -25
+			}
+			picture = LEO_boniface
+		}
+		LEO_walls = {
+			removal_cost = -1
+			allowed = {
+				original_tag = LEO
+			}
+			modifier = {
+				drift_defence_factor = 0.2
+				army_core_defence_factor = 0.5
+			}
+			picture = LEO_walls
+		}
+	}
+}

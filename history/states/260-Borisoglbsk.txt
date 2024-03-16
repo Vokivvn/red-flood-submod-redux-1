@@ -1,0 +1,26 @@
+
+state={
+	id=260
+	name="STATE_260" # Voronezh
+	manpower = 2567983
+
+	state_category = town
+
+	history={
+		owner = SRU
+		buildings = {
+			infrastructure = 3
+			arms_factory = 1
+			air_base = 5
+		}
+		victory_points = {
+			413 15
+		}
+		add_core_of = SRU
+	}
+
+	provinces={
+		413 437 510 3504 3527 3566 6428 6494 6553 6587 9448 9529 11540
+		9339 6317 6341 6398 
+	}
+}

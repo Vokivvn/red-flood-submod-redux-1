@@ -1,0 +1,204 @@
+characters = {
+	SAF_Roos = {
+		name = "Tielman Roos"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/SAF/Portrait_Tielman_Roos.png"
+			}
+		}
+		country_leader = {
+			ideology = social_liberalism
+			expire = "1965.1.1.1"
+		}
+	}
+	SAF_Smuts = {
+		name = "Jan Smuts"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SAF/Portrait_Jan_Smuts.png"
+			}
+		}
+		country_leader = {
+			ideology = national_conservatism
+			expire = "1965.1.1.1"
+		}
+	}
+	SAF_Madeley = {
+		name = "Walter Madeley"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/SAF/Portrait_Walter_Madeley.png"
+			}
+		}
+		country_leader = {
+			ideology = progressive_democracy
+			expire = "1965.1.1.1"
+		}
+	}
+	SAF_Havenga = {
+		name = "Nicolaas Havenga"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/SAF/Portrait_Nicolaas_Havenga.png"
+			}
+		}
+		country_leader = {
+			ideology = anocracy
+			expire = "1965.1.1.1"
+		}
+	}
+	SAF_Edwin = {
+		name = "Edwin Mofutsanyana"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/SAF/Portrait_Edwin_Mofutsanyana.png"
+			}
+		}
+		country_leader = {
+			ideology = folk_socialism
+			expire = "1965.1.1.1"
+		}
+	}
+	SAF_Kotane = {
+		name = "Moses Kotane"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/SAF/Portrait_Moses_Kotane.png"
+			}
+		}
+		country_leader = {
+			ideology = leninism
+			expire = "1965.1.1.1"
+		}
+	}
+	SAF_Eddie = {
+		name = "Edward “Eddie” Roux"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/SAF/Portrait_Edward_Roux.png"
+			}
+		}
+		country_leader = {
+			ideology = democratic_socialism
+			expire = "1965.1.1.1"
+		}
+	}
+	SAF_Kadalie = {
+		name = "Clements Kadalie"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/SAF/Portrait_Clements_Kadalie.png"
+			}
+		}
+		country_leader = {
+			ideology = social_anarchism
+			expire = "1965.1.1.1"
+		}
+	}
+	SAF_Sobhuza = {
+		name = "Sobhuza II"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/SAF/Portrait_Sobhuza_II.png"
+			}
+		}
+		country_leader = {
+			ideology = absolute_monarchy
+			expire = "1965.1.1.1"
+		}
+	}
+	SAF_George = {
+		name = "George Villiers, 6th Earl of Clarendon"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/SAF/Portrait_George_Villiers_T.png"
+			}
+		}
+		country_leader = {
+			ideology = technocracy
+			expire = "1965.1.1.1"
+		}
+	}
+	SAF_Brink ={
+		name="Andries Brink"
+		portraits={
+			army={
+				large="gfx/leaders/SAF/Portrait_SAF_Andries_Brink.png"
+			}
+		}
+		field_marshal={
+			traits = { old_guard inflexible_strategist }
+	        skill = 4
+			attack_skill = 3
+			defense_skill = 4
+			planning_skill = 4
+			logistics_skill = 2
+		}
+	}
+	SAF_Ryneveld ={
+		name="Pierre van Ryneveld"
+		portraits={
+			army={
+				large="gfx/leaders/SAF/Portrait_SAF_Pierre_van_Ryneveld.png"
+			}
+		}
+		corps_commander={
+			traits = { skilled_staffer}
+			skill = 3
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 4
+			logistics_skill = 3
+		}
+	}
+	SAF_Byers ={
+		name="Leonard Byers"
+		portraits={
+			army={
+				large="gfx/leaders/SAF/Portrait_SAF_Leonard_Byers.png"
+			}
+		}
+		corps_commander={
+			traits = {  career_officer commando }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 3
+		}
+	}
+	SAF_Klopper ={
+		name="Hendrik Klopper"
+		portraits={
+			army={
+				large="gfx/leaders/SAF/Portrait_SAF_Hendrik_Klopper.png"
+			}
+		}
+		corps_commander={
+			traits = { trickster infantry_leader }
+			skill = 2
+			attack_skill = 4
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 3
+		}
+	}
+	SAF_du_Toit ={
+		name="Christiaan du Toit"
+		portraits={
+			army={
+				large="gfx/leaders/SAF/Portrait_SAF_Christiaan_du_Toit.png"
+			}
+		}
+		corps_commander={
+			traits = { career_officer trait_engineer }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 3
+		}
+	}
+	
+	
+}

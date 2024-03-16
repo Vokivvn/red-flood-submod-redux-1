@@ -1,0 +1,26 @@
+characters = {
+	MOR_muhammad_V = {
+		name = "Muhammad V"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MOR/Portrait_Muhammad_V.png"
+			}
+		}
+		country_leader = {
+			ideology = oligarchy
+			expire = "1965.1.1.1"
+		}
+	}
+	MOR_mulai_ahmed_er_raisuni = {
+		name = "Mulai Ahmed er Raisuni"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MOR/MOR_Mulai_Ahmed_er_Raisuni.png"
+			}
+		}
+		country_leader = {
+			ideology = oligarchy
+			expire = "1965.1.1.1"
+		}
+	}
+}

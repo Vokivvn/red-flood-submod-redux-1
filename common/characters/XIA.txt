@@ -1,0 +1,161 @@
+characters={
+	XIA_chen_duxiu={
+		name="Chen Duxiu"
+		portraits={
+			civilian={
+				large="gfx/leaders/XIA/Portrait_Chen_Duxiu.png"
+			}
+			army={
+				large = "gfx/leaders/XIA/Portrait_Chen_Duxiu_g.png"
+			}
+		}
+		corps_commander={
+			skill=2
+			attack_skill=2
+			defense_skill=1
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+		country_leader={
+			desc="POLITICS_CHEN_DUXIU_DESC"
+			ideology=leninism
+			expire="1965.1.1.1"
+			desc = POLITICS_DUXIU_DESC
+			id=-1
+		}
+	}
+	XIA_mao_zhedong={
+		name="Mao Zedong"
+		portraits={
+			civilian={
+				large="gfx/leaders/XIA/Mao_Zedong.png"
+			}
+			army={
+				large = "gfx/leaders/XIA/Portrait_Mao_Zedong.png"
+			}
+		}
+		corps_commander={
+			skill=3
+			attack_skill=3
+			defense_skill=2
+			planning_skill=3
+			logistics_skill=2
+			legacy_id=-1
+		}
+		country_leader={
+			desc="POLITICS_MAO_DESC"
+			ideology=folk_socialism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	XIA_cheng_qian={
+		name="Cheng Qian"
+		portraits={
+			civilian={
+				large="gfx/leaders/XIA/Portrait_XIA_Cheng_Qian.png"
+			}
+			army={
+				large = "gfx/leaders/XIA/Portrait_Cheng_Qian_g.png"
+			}
+		}
+		corps_commander={
+			skill=3
+			attack_skill=3
+			defense_skill=2
+			planning_skill=3
+			logistics_skill=3
+			legacy_id=-1
+		}
+		country_leader={
+			desc="POLITICS_QIAN_DESC"
+			ideology=left_populism
+			traits={ popular_figurehead }
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	XIA_peng_dehuai={
+		name="Peng Dehuai"
+		portraits={
+			army={
+				large="gfx/leaders/XIA/Portrait_Peng_Dehuai.png"
+			}
+		}
+		corps_commander={
+			skill=3
+			attack_skill=2
+			defense_skill=3
+			planning_skill=3
+			logistics_skill=3
+			legacy_id=-1
+		}
+	}
+	XIA_zhu_de={
+		name="Zhu De"
+		portraits={
+			army={
+				large="gfx/leaders/XIA/Portrait_Zhu_De.png"
+			}
+		}
+		corps_commander={
+			skill=3
+			attack_skill=3
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=4
+			legacy_id=-1
+		}
+	}
+	XIA_nie_rongzhen={
+		name="Nie Rongzhen"
+		portraits={
+			army={
+				large="gfx/leaders/XIA/Portrait_Nie_Rongzhen.png"
+			}
+		}
+		corps_commander={
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=1
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	XIA_deng_zhongxia = {
+		name = "Deng Zhongxia"
+		portraits={
+			army={
+				large="gfx/leaders/XIA/Portrait_Deng_Zhongxia_g.png"
+			}
+		}
+		corps_commander = {
+			traits = { politically_connected }
+			skill = 1
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
+	XIA_li_jishen = {
+		name = "Li Jishen"
+		portraits={
+			army={
+				large="gfx/leaders/XIA/Portrait_Li_Jishen.png"
+			}
+		}
+		corps_commander = {
+			traits = {
+				trickster	politically_connected
+			}
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+		}
+	}
+}

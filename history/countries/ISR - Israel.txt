@@ -1,0 +1,114 @@
+﻿capital = 454
+
+oob = ISR
+
+set_research_slots = 3
+
+set_convoys = 35
+
+add_ideas = {
+	SYR_syrian_circlejerk_war
+	ISR_minority_revolt_1
+}
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1
+	tech_engineers = 1
+	tech_trucks =1
+	motorised_infantry = 1
+	early_fighter = 1
+	early_bomber = 1
+	gw_artillery = 1
+	interwar_antiair = 1
+	fuel_silos = 1
+}
+#NSB
+if = {
+	limit = { NOT = { has_dlc = "No Step Back" } }
+	set_technology = { gwtank = 1 }
+}
+if = {
+	limit = { has_dlc = "No Step Back" }
+	set_technology = { gwtank_chassis = 1 }
+}
+
+declare_war_on = {
+	target = SYR
+	type = take_state_focus
+	generator = { 1003 1004 }
+}
+declare_war_on = {
+	target = SNP
+	type = take_state_focus
+	generator = { 1003 1004 }
+}
+declare_war_on = {
+	target = CCD
+	type = take_state_focus
+	generator = { 1003 1004 }
+}
+
+set_cosmetic_tag = ISR_revolt
+
+set_politics = {
+	ruling_party = right_authoritarianism
+	last_election = "1933.10.25"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	vanguard_socialism = 3
+	popular_socialism = 2
+	anarchism = 0
+	revisionist_socialism = 11
+	progressivism = 24
+	liberalism = 3
+	conservatism = 2
+	right_authoritarianism = 30
+	despotism = 10
+	reactionism = 5
+	accelerationism = 10
+
+}
+
+set_stability = 0.3
+
+recruit_character = ISR_avraham_stern
+recruit_character = ISR_zeev_jabotinsky
+recruit_character = ISR_david_ben_gurion
+recruit_character = ISR_abba_gordin
+recruit_character = ISR_moshe_dayan
+recruit_character = ISR_yigal_yadin
+#recruit_character = ISR_yitzhak_rabin
+recruit_character = ISR_sadeh
+recruit_character = ISR_wizman
+recruit_character = ISR_einstein
+recruit_character = ISR_katznelson
+recruit_character = ISR_tabenkin
+recruit_character = ISR_begin
+recruit_character = ISR_rothschild
+recruit_character = ISR_allon
+recruit_character = ISR_shamir
+recruit_character = ISR_meir
+recruit_character = ISR_hilferding
+recruit_character = ISR_bernstein
+recruit_character = ISR_kaplan
+recruit_character = ISR_yosef
+recruit_character = ISR_bohm
+recruit_character = ISR_gruenbaum
+recruit_character = ISR_bar_yehuda
+recruit_character = ISR_rokach
+recruit_character = ISR_yellin_mor
+recruit_character = ISR_shiloah
+recruit_character = ISR_dori
+recruit_character = ISR_meridor
+recruit_character = ISR_monash
+recruit_character = ISR_tehom
+recruit_character = ISR_shulman
+recruit_character = ISR_beckhardt
+recruit_character = ISR_lenart
+recruit_character = ISR_teller
+recruit_character = ISR_magnes
+recruit_character = ISR_baerwald
