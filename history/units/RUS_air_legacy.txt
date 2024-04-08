@@ -1,6 +1,4 @@
-﻿
-
-### Air Wings
+﻿### Air Wings
 air_wings = {
 	# LVO Aviatsya Komandovaniya -- Leningrad
 	195 = { 

@@ -8,11 +8,13 @@ air_wings = {
 		fighter_equipment_0 =  {
 			owner = "SIA" 
 			amount = 60
+			creator = "USA"
 		}
 		# 3rd Air Wing -- Vought V-93Ss
 		CAS_equipment_1 =  {
 			owner = "SIA" 
 			amount = 12
+			creator = "USA"
 		}
 	}
 }

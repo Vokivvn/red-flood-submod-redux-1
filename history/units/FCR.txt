@@ -56,19 +56,19 @@ division_template = {
 
 units = {
 	division = {
-		name = "1ya Pekhotnaya Diviziya "Smertobortsy""
+		name = "1ya Pekhotnaya Diviziya 'Smertobortsy'"
 		location = 7582
 		division_template = "Pekhotnaya Diviziya Kreatoriya"
 		start_experience_factor = 0.45
 	}
 	division = {
-		name = "2ya Pekhotnaya Diviziya "Poborniki""
+		name = "2ya Pekhotnaya Diviziya 'Poborniki'"
 		location = 7582
 		division_template = "Pekhotnaya Diviziya Kreatoriya"
 		start_experience_factor = 0.4
 	}
 	division = {
-		name = "1ya Motostrelkovaya Diviziya "Kometa""
+		name = "1ya Motostrelkovaya Diviziya 'Kometa'"
 		location = 7582
 		division_template = "Motostrelkovaya Diviziya Kreatoriya"
 		start_experience_factor = 0.8

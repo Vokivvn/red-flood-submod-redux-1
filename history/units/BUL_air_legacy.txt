@@ -6,8 +6,8 @@ air_wings = {
 		# Vuzdushnite voiski na Negovo Velichestvo
 		fighter_equipment_0 =  {
 			owner = "BUL"
-			creator = "GER" 
 			amount = 48
+			creator = "GER"
 		}
 	}
 }

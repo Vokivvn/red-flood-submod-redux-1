@@ -1,0 +1,11 @@
+﻿air_wings = {
+	195 = {
+		# 1st Squadron
+		fighter_equipment_0 =  {
+			owner = "ORE" 
+			amount = 25
+			creator = "RUS"
+		}
+		name = "Orenburgskiy Aviaotrayd Istrebiteley"
+	}
+}

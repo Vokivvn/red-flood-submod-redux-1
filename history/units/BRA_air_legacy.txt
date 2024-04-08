@@ -4,8 +4,9 @@ air_wings = {
 	500 = {
 		# Fighter Air Group -- Boeing 256s
 		fighter_equipment_0 =  {
-			owner = "BRA" 
-			amount = 24
+			owner = "BRA"
+			amount = 30
+			creator = "USA"
 		}
 	}
 }

@@ -2190,7 +2190,7 @@ shared_focus = {
 	}
 
 	completion_reward = {
-		add_ideas = USA_reverse_technology
+		add_ideas = USA_reverse_technology_ideas
 	}
 
 	cancel_if_invalid = yes
@@ -2292,11 +2292,11 @@ shared_focus = {
 
 	completion_reward = {
 		add_tech_bonus = {
-				name = special_forces_bonus
-				bonus = 1.0
-				uses = 1
-				technology = paratroopers2
-			}
+			name = special_forces_bonus
+			bonus = 1.0
+			uses = 1
+			technology = paratroopers2
+		}
 	}
 
 	cancel_if_invalid = yes

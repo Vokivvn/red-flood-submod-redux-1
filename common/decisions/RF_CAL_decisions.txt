@@ -296,7 +296,7 @@ CAL_foreign_policy = {
 		}
 		visible = {
 			has_country_flag = CAL_gofurther
-			has_government = accelerationism
+			has_government = despotism
 		}
 		available = {
 			owns_state = 395

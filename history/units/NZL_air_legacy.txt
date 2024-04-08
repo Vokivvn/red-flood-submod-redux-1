@@ -7,6 +7,7 @@ air_wings = {
 		nav_bomber_equipment_1 =  {
 			owner = "NZL" 
 			amount = 12
+			creator = "ENG"
 		}
 	}
 }

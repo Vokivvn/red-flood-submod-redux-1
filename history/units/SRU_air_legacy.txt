@@ -1,0 +1,29 @@
+﻿air_wings = {
+	221 = { 
+		# 15ya Istrebitel'nye Aviabrigada
+		fighter_equipment_0 = {
+			owner = "SRU"
+			creator = "RUS"
+			amount = 94
+		}
+		name = "Novorossiyskiy Aviaotrayd Istrebiteley"
+	}
+	221 = {
+		# 18ya Bombardirovochnye Aviabrigada
+		tac_bomber_equipment_0 =  {
+			owner = "SRU"
+			creator = "RUS"
+			amount = 60
+		}
+		name = "Novorossiyskiy Aviaotrayd Bombardirovshchikov"
+	}
+	137 = {
+		# 15ya Istrebitel'nye Aviabrigada
+		fighter_equipment_0 = {
+			owner = "SRU"
+			creator = "RUS"
+			amount = 26
+		}
+		name = "Tavricheskiy Aviaotrayd Istrebiteley"
+	}
+}

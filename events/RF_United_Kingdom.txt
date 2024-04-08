@@ -1006,7 +1006,7 @@ country_event = {	#Protect the straits, support the Greeks
 
 	option = {	#yeah Proly should if I don't have to get up 
 		name = eng.49.a
-		ai_chance = {	factor = 0}
+		ai_chance = { base = 0}
 		add_political_power = 25
 		GRE = {
 			country_event = {
@@ -1192,7 +1192,7 @@ country_event = {	#Protect the straits, support the Greeks
 	
 	option = {  #Fuck the turks
 		name = eng.49.c
-		ai_chance = {	factor = 30 }
+		ai_chance = { base = 30 }
 		add_political_power = -50
 		GRE = {
 			country_event = {
@@ -1221,11 +1221,23 @@ country_event = {	#Protect the straits, support the Greeks
 				amount = 350
 				producer = ENG
 			}
-			add_equipment_to_stockpile = {
-				type = light_tank_chassis_1
-				amount = 350
-				variant_name = "Light Tank Mk. IV"
-				producer = ENG
+			if = {
+				limit = {
+					has_dlc = "No Step Back"
+				}
+				add_equipment_to_stockpile = {
+					type = light_tank_chassis_1
+					amount = 350
+					variant_name = "Light Tank Mk. IV"
+					producer = ENG
+				}
+				else = {
+					add_equipment_to_stockpile = {
+						type = light_tank_equipment_1
+						amount = 350
+						producer = ENG
+					}
+				}
 			}
 		}
 		ARM = {
@@ -1255,11 +1267,23 @@ country_event = {	#Protect the straits, support the Greeks
 				amount = 350
 				producer = ENG
 			}
-			add_equipment_to_stockpile = {
-				type = light_tank_chassis_1
-				amount = 350
-				variant_name = "Light Tank Mk. IV"
-				producer = ENG
+			if = {
+				limit = {
+					has_dlc = "No Step Back"
+				}
+				add_equipment_to_stockpile = {
+					type = light_tank_chassis_1
+					amount = 350
+					variant_name = "Light Tank Mk. IV"
+					producer = ENG
+				}
+				else = {
+					add_equipment_to_stockpile = {
+						type = light_tank_equipment_1
+						amount = 350
+						producer = ENG
+					}
+				}
 			}
 		}
 		hidden_effect = {
@@ -1291,11 +1315,23 @@ country_event = {	#Protect the straits, support the Greeks
 					amount = 350
 					producer = ENG
 				}
-				add_equipment_to_stockpile = {
-					type = light_tank_chassis_1
-					amount = 350
-					variant_name = "Light Tank Mk. IV"
-					producer = ENG
+				if = {
+					limit = {
+						has_dlc = "No Step Back"
+					}
+					add_equipment_to_stockpile = {
+						type = light_tank_chassis_1
+						amount = 350
+						variant_name = "Light Tank Mk. IV"
+						producer = ENG
+					}
+					else = {
+						add_equipment_to_stockpile = {
+							type = light_tank_equipment_1
+							amount = 350
+							producer = ENG
+						}
+					}
 				}
 			}
 			ASY ={
@@ -1325,18 +1361,30 @@ country_event = {	#Protect the straits, support the Greeks
 					amount = 350
 					producer = ENG
 				}
-				add_equipment_to_stockpile = {
-					type = light_tank_chassis_1
-					amount = 350
-					variant_name = "Light Tank Mk. IV"
-					producer = ENG
+				if = {
+					limit = {
+						has_dlc = "No Step Back"
+					}
+					add_equipment_to_stockpile = {
+						type = light_tank_chassis_1
+						amount = 350
+						variant_name = "Light Tank Mk. IV"
+						producer = ENG
+					}
+					else = {
+						add_equipment_to_stockpile = {
+							type = light_tank_equipment_1
+							amount = 350
+							producer = ENG
+						}
+					}
 				}
 			}
 		}
 	}
 	option = {  #Deus Vult, fellow Christians 
 		name = eng.49.e
-		ai_chance = {	factor = 20	}
+		ai_chance = { base = 20	}
 		add_political_power = -100
 		
 		GRE = {
@@ -1366,11 +1414,23 @@ country_event = {	#Protect the straits, support the Greeks
 				amount = 500
 				producer = ENG
 			}
-			add_equipment_to_stockpile = {
-				type = light_tank_chassis_1
-				amount = 350
-				variant_name = "Light Tank Mk. IV"
-				producer = ENG
+			if = {
+				limit = {
+					has_dlc = "No Step Back"
+				}
+				add_equipment_to_stockpile = {
+					type = light_tank_chassis_1
+					amount = 350
+					variant_name = "Light Tank Mk. IV"
+					producer = ENG
+				}
+				else = {
+					add_equipment_to_stockpile = {
+						type = light_tank_equipment_1
+						amount = 350
+						producer = ENG
+					}
+				}
 			}
 		}
 		ARM = {
@@ -1400,11 +1460,23 @@ country_event = {	#Protect the straits, support the Greeks
 				amount = 500
 				producer = ENG
 			}
-			add_equipment_to_stockpile = {
-				type = light_tank_chassis_1
-				amount = 350
-				variant_name = "Light Tank Mk. IV"
-				producer = ENG
+			if = {
+				limit = {
+					has_dlc = "No Step Back"
+				}
+				add_equipment_to_stockpile = {
+					type = light_tank_chassis_1
+					amount = 350
+					variant_name = "Light Tank Mk. IV"
+					producer = ENG
+				}
+				else = {
+					add_equipment_to_stockpile = {
+						type = light_tank_equipment_1
+						amount = 350
+						producer = ENG
+					}
+				}
 			}
 		}
 		hidden_effect ={
@@ -1436,11 +1508,23 @@ country_event = {	#Protect the straits, support the Greeks
 					amount = 500
 					producer = ENG
 				}
-				add_equipment_to_stockpile = {
-					type = light_tank_chassis_1
-					amount = 350
-					variant_name = "Light Tank Mk. IV"
-					producer = ENG
+				if = {
+					limit = {
+						has_dlc = "No Step Back"
+					}
+					add_equipment_to_stockpile = {
+						type = light_tank_chassis_1
+						amount = 350
+						variant_name = "Light Tank Mk. IV"
+						producer = ENG
+					}
+					else = {
+						add_equipment_to_stockpile = {
+							type = light_tank_equipment_1
+							amount = 350
+							producer = ENG
+						}
+					}
 				}
 			}
 			ASY = {
@@ -1470,11 +1554,23 @@ country_event = {	#Protect the straits, support the Greeks
 					amount = 500
 					producer = ENG
 				}
-				add_equipment_to_stockpile = {
-					type = light_tank_chassis_1
-					amount = 350
-					variant_name = "Light Tank Mk. IV"
-					producer = ENG
+				if = {
+					limit = {
+						has_dlc = "No Step Back"
+					}
+					add_equipment_to_stockpile = {
+						type = light_tank_chassis_1
+						amount = 350
+						variant_name = "Light Tank Mk. IV"
+						producer = ENG
+					}
+					else = {
+						add_equipment_to_stockpile = {
+							type = light_tank_equipment_1
+							amount = 350
+							producer = ENG
+						}
+					}
 				}
 			}
 		}

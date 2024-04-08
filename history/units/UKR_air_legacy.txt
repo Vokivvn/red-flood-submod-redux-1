@@ -1,0 +1,9 @@
+air_wings = {
+	192 = { 
+		fighter_equipment_0 =  {
+			owner = "UKR" 
+			amount = 54
+			creator = "POL"
+		}
+	}
+}

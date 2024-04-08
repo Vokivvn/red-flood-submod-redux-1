@@ -1,0 +1,11 @@
+﻿air_wings = {
+	570 = {
+		# 1st Squadron
+		fighter_equipment_0 =  {
+			owner = "SIB" 
+			creator = "RUS"
+			amount = 25
+		}
+		name = "Sibirskiy Aviaotrayd Istrebiteley"
+	}
+}

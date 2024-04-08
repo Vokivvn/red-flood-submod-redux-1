@@ -765,7 +765,7 @@ kor.400.b:0 "The Red Flag shall fly high."
 kor.400.c:0 "Freedom shall ring."
 
 kor.500.t:0 "Preparing for the Worst"
-kor.500.d:0 "Extensive measures shall be taken to secure our position."
+kor.500.desc:0 "Extensive measures shall be taken to secure our position."
 kor.500.a:0 "Reinforce the Garrisons"
 kor.500.b:0 "Prepare the Cadres"
 kor.500.c:0 "Rally People to our Cause"

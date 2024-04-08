@@ -190,8 +190,7 @@ ideas = {
 		ARM_airways = {
 			cancel = { has_country_flag = remove_idea }
 			modifier = {
-				air_air_superiority_attack_factor = 0.15
-				air_air_superiority_defence_factor = 0.15
+				air_superiority_efficiency = 0.15
 			}
 			picture = generic_idea_RF_idea_peace
 		}

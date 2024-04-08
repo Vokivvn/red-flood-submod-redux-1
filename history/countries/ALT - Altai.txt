@@ -83,7 +83,7 @@ recruit_character = ALT_togtokho
 
 promote_character = ALT_grigorii_choros_gurkhin
 
-activate_advisor = ALT_oyogostur_omogoyovich_makhcharov_hog
+#activate_advisor = ALT_oyogostur_omogoyovich_makhcharov_hog
 
 add_equipment_to_stockpile = {
 	type = infantry_equipment_1

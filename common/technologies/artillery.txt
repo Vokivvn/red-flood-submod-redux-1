@@ -973,7 +973,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			base = 1
 
 			modifier = {
 				factor = 0.2
@@ -992,7 +992,7 @@ technologies = {
 				tag = JAP
 				not = {
 					OR = {
-						has_War_with = SOV
+						has_war_with = RUS
 						has_war_with = USA
 					}
 				}

@@ -1,24 +1,12 @@
-﻿instant_effect = {
-	create_equipment_variant = {
-		name = "WM-16"
-		type = small_plane_cas_airframe_0
-		modules = {
-			fixed_main_weapon_slot = bomb_locks
-			engine_type_slot = engine_1_1x
-			special_type_slot_1 = empty
-		}
-	}
-}
-
-### Magyar Légiero ###
+﻿### Magyar Légiero ###
 air_wings = {
 	43 = {
 		# 1. Légi Ezred -- Fiat CR.32 fighters
 		# 2. Légi Ezred -- Fiat CR.32 fighters
 		small_plane_airframe_0 = {
 			owner = "HUN" 
-			creator = "ITA"
 			amount = 72
+			creator = "ITA"
 			version_name = "CR.32"
 		}
 
@@ -32,8 +20,8 @@ air_wings = {
 		}
 		medium_plane_airframe_0 = {
 			owner = "HUN" 
-			creator = "ITA"
 			amount = 12
+			creator = "ITA"
 			version_name = "Ca.101"
 		}
 	}

@@ -1,6 +1,4 @@
-﻿
-
-air_wings = {
+﻿air_wings = {
 	### Royal Iranian Air Force ###
 	266 = {
 		# 1st Air Group -- Hawker Furys

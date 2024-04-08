@@ -1,6 +1,4 @@
-﻿
-
-### Air Wings
+﻿### Air Wings
 air_wings = {
 	# Luchtvaartafdeling -- NONE
 	# Note: All European aircraft were built by Fokker or ordered from USA starting in 1938
@@ -9,7 +7,17 @@ air_wings = {
 	# Note: ML-KNIL would increase in size during 1937-40 with USA models:
 	#	Curtis P-36 Hawks (H-75), CW-21 Interceptors, Brewster Buffaloes, Martin B-10s (WH-1--WH-3s)
 	673 = {
-		fighter_equipment_0 = {		# Curtis P-6
+		fighter_equipment_0 = {		# Fokker C.X
+			owner = "HOL" 
+			amount = 12
+		}
+		tac_bomber_equipment_0 = {		# Fokker T.IV
+			owner = "HOL" 
+			amount = 24
+		}
+	}
+	7 = {
+		CAS_equipment_1 = {		# Fokker C.X
 			owner = "HOL" 
 			amount = 12
 		}

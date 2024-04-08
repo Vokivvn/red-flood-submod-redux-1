@@ -1,5 +1,4 @@
-﻿
-air_wings = {
+﻿air_wings = {
 	231 = {
 		# 1st Squadron
 		small_plane_airframe_0 =  {

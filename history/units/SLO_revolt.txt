@@ -18,12 +18,10 @@ division_template = {
 
 units = {
 	division = {
+		name = "Hlinková Garda"
 		location = 6586
-		division_name = {
-			name = "Hlinková Garda"
-		}
 		division_template = "Brigáda Rodobrany"
-		start_equipment_factor = 0.4
+		start_experience_factor = 0.4
 	}
 	division = {
 		location = 9692

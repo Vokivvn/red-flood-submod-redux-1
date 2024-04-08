@@ -3,7 +3,7 @@ areas = {
 	suez = {
         strategic_regions = {
             128
-            453
+            232
         }
     }
 

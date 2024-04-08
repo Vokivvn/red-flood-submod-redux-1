@@ -1,9 +1,4 @@
-﻿
-
-
-
-
-#AIRCRAFT
+﻿#AIRCRAFT
 air_wings = {
 	### IJA Air Forces ###
 	# 1 Hikodan -- Tokyo
@@ -130,10 +125,7 @@ air_wings = {
 #########################
 ## STARTING PRODUCTION ##
 #########################
-instant_effect = 
-{
-	
-
+instant_effect = {
 	add_equipment_production = {
 		equipment = {
 			type = fighter_equipment_0

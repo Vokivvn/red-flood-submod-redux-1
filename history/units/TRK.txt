@@ -70,5 +70,5 @@ units = {
 		division_template = "Strelkovaya Diviziya"
 		start_experience_factor = 0.3
 	}
-	}
+}
 	

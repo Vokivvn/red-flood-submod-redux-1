@@ -2,9 +2,10 @@
 air_wings = {
 	230 = {
 		# 1st Squadron -- Hawker Audax
-		fighter_equipment_1 =  {
+		fighter_equipment_0 =  {
 			owner = "ARM" 
 			amount = 50
+			creator = "RUS"
 		}
 	}
 }

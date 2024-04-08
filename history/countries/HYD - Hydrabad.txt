@@ -3,7 +3,8 @@ set_research_slots = 3
 set_stability = 0.5
 
 oob = "HYD"
-set_air_oob = "HYD_air"
+if = { limit = { has_dlc = "By Blood Alone" } set_air_oob = "HYD_air" }
+if = { limit = {  NOT = { has_dlc = "By Blood Alone" } }  set_air_oob = "HYD_air_legacy" }
 
 add_ideas = {
 	RAJ_shared_economy

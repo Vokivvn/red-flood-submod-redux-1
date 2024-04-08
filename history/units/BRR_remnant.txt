@@ -40,3 +40,4 @@ units = {
 		division_template = "Milícia Regional"
 		start_experience_factor = 0.20
 	}
+}

@@ -6,7 +6,8 @@ set_country_flag = is_russian_warlord
 set_country_flag = ZHR_good
 
 oob = "ZHR"
-set_air_oob = "ZHR_air"
+if = { limit = { has_dlc = "By Blood Alone" } set_air_oob = "ZHR_air" }
+if = { limit = {  NOT = { has_dlc = "By Blood Alone" } }  set_air_oob = "ZHR_air_legacy" }
 set_naval_oob = "ZHR_naval"
 
 set_technology = {

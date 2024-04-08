@@ -1015,7 +1015,7 @@ ideas = {
 			picture = generic_air_research
 			cancel = { has_country_flag = remove_idea }
 			modifier = {
-				air_air_superiority_agility_factor = 0.1
+				air_superiority_efficiency = 0.1
 			}
 			removal_cost = -1
 		}

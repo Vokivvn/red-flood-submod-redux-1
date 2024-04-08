@@ -30,7 +30,7 @@ create_ambition_areas = {
 				#Middle East
 				region = 232 #Levant
 				region = 28 #Middle East
-				region = 679 #Hejaz
+				region = 237 #Hejaz
 				region = 236 #South Arabia
 				region = 238 #East Arabia
 				

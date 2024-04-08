@@ -182,8 +182,6 @@ technologies = {
 		coordination_bonus = 0.01
 		enable_equipment_modules = { 
 			ship_radar_2
-			air_ground_radar_1
-			air_air_radar_1
 		}
 
 		path = {
@@ -230,6 +228,7 @@ technologies = {
 		coordination_bonus = 0.01
 		enable_equipment_modules = { 
 			ship_radar_3
+			air_air_radar_1
 			tank_radio_3
 		}
 
@@ -278,8 +277,7 @@ technologies = {
 		}
 		coordination_bonus = 0.01
 		enable_equipment_modules = {
-			air_ground_radar_2
-			air_air_radar_2
+			air_ground_radar_1
 		}
 
 		static_anti_air_hit_chance_factor = 0.2
@@ -328,6 +326,8 @@ technologies = {
 		coordination_bonus = 0.01
 		enable_equipment_modules = { 
 			ship_radar_4
+			air_ground_radar_2
+			air_air_radar_2
 		}
 		
 		static_anti_air_hit_chance_factor = 0.2
@@ -383,7 +383,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 7
+			factor = 10
 		}
 		
 		categories = {
@@ -578,6 +578,11 @@ technologies = {
 
 				tag = GER
 			}
+			modifier = {
+				factor = 3
+
+				tag = RUS
+			}
 		}
 		
 		categories = {
@@ -615,6 +620,11 @@ technologies = {
 				factor = 3
 
 				tag = GER
+			}
+			modifier = {
+				factor = 3
+
+				tag = RUS
 			}
 		}
 		
@@ -654,6 +664,11 @@ technologies = {
 
 				tag = GER
 			}
+			modifier = {
+				factor = 3
+
+				tag = RUS
+			}
 		}
 		
 		categories = {
@@ -687,6 +702,11 @@ technologies = {
 				factor = 3
 
 				tag = GER
+			}
+			modifier = {
+				factor = 3
+
+				tag = RUS
 			}
 		}
 		
@@ -722,6 +742,11 @@ technologies = {
 
 				tag = GER
 			}
+			modifier = {
+				factor = 3
+
+				tag = RUS
+			}
 		}
 		
 		categories = {
@@ -755,6 +780,11 @@ technologies = {
 				factor = 3
 
 				tag = GER
+			}
+			modifier = {
+				factor = 3
+
+				tag = RUS
 			}
 		}
 		
@@ -1050,6 +1080,7 @@ technologies = {
 
 		enable_equipment_modules = {
 			rocket_engine_3
+			guided_anti_ship_missile
 		}
 		
 		rocket_artillery = {
@@ -1143,25 +1174,31 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 1
+			base = 1
 			
 			modifier = {
 				factor = 1.2
-				date > "1941.1.1"
+				date > 1941.1.1
 			}
 			
 			modifier = {
 				factor = 1.2
-				date > "1942.1.1"
+				date > 1942.1.1
 			}
 			
 			modifier = {
 				factor = 1.2
-				date > "1943.1.1"
+				date > 1943.1.1
 			}
-			
+
 			modifier = {
 				factor = 2
+				is_major = yes
+				date > 1943.1.1
+			}
+
+			modifier = {
+				factor = 4
 				tag = USA
 			}
 		}

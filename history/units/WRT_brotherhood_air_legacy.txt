@@ -1,0 +1,11 @@
+air_wings = {
+	12 = {
+		# 1st Squadron
+		fighter_equipment_0 =  {
+			owner = "WRR" 
+			creator = "RUS"
+			amount = 25
+		}
+		name = "Pribaltiyskiy Aviaotryad Istrebiteley"
+	}
+}

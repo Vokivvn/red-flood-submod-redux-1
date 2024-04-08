@@ -1,7 +1,4 @@
-﻿
-
-
-air_wings = {
+﻿air_wings = {
 	### RAF Fighter Command ###
 	129 = { 
 		### No. 11 Fighter Command, Middlesex area -- Hawker Demons, Furys, Gloster Gauntlets
@@ -55,7 +52,7 @@ air_wings = {
 	}
 	125 = { 
 		### No. 2 Bomber Command, East Anglia area -- HP Heyford, Harrows, AW Whitleys
-		tac_bomber_equipment_0 = {
+		CAS_equipment_1 = {
 			owner = "ENG" 
 			amount = 48
 		}

@@ -1,0 +1,11 @@
+﻿
+air_wings = {
+	443 = { 
+		### AHQ India -- Fairey Gordons, Battles
+		CAS_equipment_1 = {
+			owner = "DIN" 
+			amount = 12
+			creator = "ENG"
+		}
+	}
+}

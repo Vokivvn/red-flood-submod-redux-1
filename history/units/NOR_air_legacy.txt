@@ -9,6 +9,7 @@ air_wings = {
 		tac_bomber_equipment_0 =  {
 			owner = "NOR" 
 			amount = 18
+			creator = "HOL"
 		}
 	}
 }

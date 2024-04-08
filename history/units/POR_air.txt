@@ -1,5 +1,4 @@
-﻿
-### Aeronáutica Militar ###
+﻿### Aeronáutica Militar ###
 air_wings = {
 	112 = {
 		# Noite Esquadrão de Bombardeiro  -- Ju 52/3m bombers
@@ -15,24 +14,6 @@ air_wings = {
 			amount = 12
 			creator = "ENG"
 			version_name = "Fairey Gordon"
-		}
-	}
-}
-
-instant_effect = {
-	if = {
-		limit = { NOT = { has_dlc = "By Blood Alone" } }
-		add_equipment_to_stockpile = {
-			type = fighter_equipment_0
-			amount = 25
-		}
-		add_equipment_to_stockpile = {
-			type = CAS_equipment_1
-			amount = 10
-		}
-		add_equipment_to_stockpile = {
-			type = nav_bomber_equipment_1
-			amount = 10
 		}
 	}
 }

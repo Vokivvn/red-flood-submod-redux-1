@@ -1,0 +1,11 @@
+
+air_wings = {
+	439 = { 
+		# Consisted of 12 Hawker Nimrods
+		cv_fighter_equipment_0 = {
+			owner = "ARY" 
+			amount = 26
+			creator = "ENG"
+		}
+	}
+}

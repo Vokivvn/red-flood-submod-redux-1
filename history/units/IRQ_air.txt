@@ -1,7 +1,4 @@
-﻿
-
-
-air_wings = {
+﻿air_wings = {
 	### Royal Iraqi Air Force (RIrAF)
 	291 = {
 		# 1st Squadron -- Hawker Audax

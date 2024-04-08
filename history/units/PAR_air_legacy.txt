@@ -1,13 +1,11 @@
-﻿
-
-
-air_wings = {
+﻿air_wings = {
 	### Arma Aérea Paraguay -- Asuncion
 	301 = {
 		# Fighter Air Group -- Fiat CR.20s, Dewotine D.21s, Wibault 73s
 		fighter_equipment_0 =  {
 			owner = "PAR" 
 			amount = 12
+			creator = "ITA"
 		}
 	}
 }

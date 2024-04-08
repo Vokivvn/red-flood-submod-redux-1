@@ -276,7 +276,7 @@ ideas = {
 			}
 			modifier = {
 				cas_damage_reduction = 0.2
-				air_interception_defence_factor = 0.15
+				air_intercept_efficiency = 0.15
 			}
 		}
 		JKR_turtle = {
@@ -297,10 +297,7 @@ ideas = {
 				original_tag = JKR
 			}
 			modifier = {
-				air_interception_attack_factor = 0.05
-				air_interception_defence_factor = 0.05
-				air_interception_agility_factor = 0.05
-				air_interception_detect_factor = 0.05
+				air_intercept_efficiency = 0.05
 			}
 		}
 		JKR_dogfighting = {
@@ -310,9 +307,7 @@ ideas = {
 				original_tag = JKR
 			}
 			modifier = {
-				air_air_superiority_attack_factor = 0.05
-				air_air_superiority_defence_factor = 0.05
-				air_air_superiority_agility_factor = 0.05
+				air_superiority_efficiency = 0.05
 				air_superiority_detect_factor = 0.05
 			}
 		}
@@ -669,7 +664,7 @@ ideas = {
 			}
 			modifier = {
 				cas_damage_reduction = 0.2
-				air_interception_defence_factor = 0.15
+				air_intercept_efficiency = 0.15
 			}
 		}
 		IKR_turtle = {
@@ -690,10 +685,7 @@ ideas = {
 				original_tag = IKR
 			}
 			modifier = {
-				air_interception_attack_factor = 0.05
-				air_interception_defence_factor = 0.05
-				air_interception_agility_factor = 0.05
-				air_interception_detect_factor = 0.05
+				air_intercept_efficiency = 0.05
 			}
 		}
 		IKR_dogfighting = {
@@ -703,9 +695,7 @@ ideas = {
 				original_tag = IKR
 			}
 			modifier = {
-				air_air_superiority_attack_factor = 0.05
-				air_air_superiority_defence_factor = 0.05
-				air_air_superiority_agility_factor = 0.05
+				air_superiority_efficiency = 0.05
 				air_superiority_detect_factor = 0.05
 			}
 		}
@@ -949,7 +939,7 @@ ideas = {
 			cancel = { has_country_flag = remove_idea }
 			modifier = {
 				cas_damage_reduction = 0.2
-				air_interception_defence_factor = 0.15
+				air_intercept_efficiency = 0.15
 			}
 		}
 		KOR_turtle = {
@@ -966,10 +956,7 @@ ideas = {
 			removal_cost = -1
 			cancel = { has_country_flag = remove_idea }
 			modifier = {
-				air_interception_attack_factor = 0.05
-				air_interception_defence_factor = 0.05
-				air_interception_agility_factor = 0.05
-				air_interception_detect_factor = 0.05
+				air_intercept_efficiency = 0.05
 			}
 		}
 		KOR_dogfighting = {
@@ -979,9 +966,7 @@ ideas = {
 				original_tag = JKR
 			}
 			modifier = {
-				air_air_superiority_attack_factor = 0.05
-				air_air_superiority_defence_factor = 0.05
-				air_air_superiority_agility_factor = 0.05
+				air_superiority_efficiency = 0.05
 				air_superiority_detect_factor = 0.05
 			}
 		}

@@ -6,7 +6,8 @@ set_stability = 0.5
 set_country_flag = is_russian_warlord
 
 oob = "KAV"
-set_air_oob = "KAV_air"
+if = { limit = { has_dlc = "By Blood Alone" } set_air_oob = "KAV_air" }
+if = { limit = {  NOT = { has_dlc = "By Blood Alone" } }  set_air_oob = "KAV_air_legacy" }
 
 set_technology = {
 	infantry_weapons = 1

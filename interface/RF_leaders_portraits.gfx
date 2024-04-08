@@ -931,18 +931,18 @@ spriteTypes = {
 		name = "GFX_Portrait_Generic_Asia_army_1"
 		texturefile = "gfx/leaders/Asia/Portrait_Generic_Asia_army_1.png"
 	}
-	#spriteType = {
-	#	name = "GFX_Portrait_Generic_Asia_army_1_small"
-	#	texturefile = "gfx/interface/ministers/Asia/Idea_Generic_Asia_1.png"
-	#}
+	spriteType = {
+		name = "GFX_Portrait_Generic_Asia_army_1_small"
+		texturefile = "gfx/interface/ministers/Asia/Idea_Generic_Asia_army_1.png"
+	}
 	spriteType = {
 		name = "GFX_Portrait_Generic_Asia_army_2"
 		texturefile = "gfx/leaders/Asia/Portrait_Generic_Asia_army_2.png"
 	}
-	#spriteType = {
-	#	name = "GFX_Portrait_Generic_Asia_army_2_small"
-	#	texturefile = "gfx/interface/ministers/Asia/Idea_Generic_Asia_2.png"
-	#}
+	spriteType = {
+		name = "GFX_Portrait_Generic_Asia_army_2_small"
+		texturefile = "gfx/interface/ministers/Asia/Idea_Generic_Asia_army_2.png"
+	}
 
 	#Navy
 	spriteType = {

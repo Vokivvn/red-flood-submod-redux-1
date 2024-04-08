@@ -1,5 +1,5 @@
 ﻿air_wings = {
-	454 = {
+	1003 = {
 		# 1st Squadron -- Hawker Audax
 		small_plane_cas_airframe_0 =  {
 			owner = "SYR" 

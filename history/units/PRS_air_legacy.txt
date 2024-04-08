@@ -1,0 +1,35 @@
+﻿### Air oob
+air_wings = {
+
+	### II. Luftkreiskommando -- Berlin ###
+	763 = {
+		# Jagdgeschwader 132 'Richtofen'		
+		fighter_equipment_0 =  {		# Ar 68
+			owner = "PRS" 
+			amount = 40
+		}
+		name = "Jagdgeschwader 132"
+		# TODO: REMOVE THIS LATER ???
+		transport_plane_equipment_1 = {
+			owner = "PRS" 
+			amount = 4
+		}
+		# Kampfgeschwader 153		
+		tac_bomber_equipment_0 = {		# Do 23
+			owner = "PRS" 
+			amount = 80
+		}
+	}
+	5 = {
+		# Jagdgeschwader 132 'Richtofen'		
+		fighter_equipment_0 =  {		# Ar 68
+			owner = "PRS" 
+			amount = 40
+		}
+		tac_bomber_equipment_0 = {		# Ju 86
+			owner = "PRS" 
+			amount = 40
+		}
+		name = "Kampfgeschwader 153"
+	}
+}

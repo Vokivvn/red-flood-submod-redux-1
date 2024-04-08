@@ -1,0 +1,11 @@
+﻿air_wings = {
+	235 = {
+		# 1st Squadron
+		fighter_equipment_0 =  {
+			owner = "DKB" 
+			amount = 40
+			creator = "RUS"
+		}
+		name = "Kavkazskiy Aviaotryad Istrebiteley"
+	}
+}

@@ -4,7 +4,8 @@ set_convoys = 15
 set_stability = 0.5
 
 oob = "DIN"
-set_air_oob = "DIN_air"
+if = { limit = { has_dlc = "By Blood Alone" } set_air_oob = "DIN_air" }
+if = { limit = {  NOT = { has_dlc = "By Blood Alone" } }  set_air_oob = "DIN_air_legacy" }
 
 add_ideas = {
 	RAJ_shared_economy

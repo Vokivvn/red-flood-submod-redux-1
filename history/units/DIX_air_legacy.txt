@@ -1,0 +1,43 @@
+air_wings = {
+
+	### USN Atlantic Naval Patrol Division -- Norfolk
+	362 = { 
+		# Naval Patrol Wing 3 
+		tac_bomber_equipment_0 =  {
+			owner = "USA" 
+			amount = 36
+		}
+	}
+	### 19th Composite Wing -- Panama Canal
+	685 = { 
+		# 16th Pursuit Group 
+		fighter_equipment_0 =  {
+			owner = "USA" 
+			amount = 96
+		}
+		# 6th Composite Group 
+		tac_bomber_equipment_1 = {
+			owner = "USA" 
+			amount = 12
+		}
+	}
+	### 2 USAAF Wing -- Norfolk
+	362 = { 
+		# 1st Pursuit Group 
+		# 8th Pursuit Group 
+		fighter_equipment_0 =  {
+			owner = "USA" 
+			amount = 72
+		}
+		fighter_equipment_0 =  {
+			owner = "USA" 
+			amount = 72
+		}
+		# 2nd Bombardment Group 
+		# 9th Bombardment Group 
+		tac_bomber_equipment_1 = {
+			owner = "USA" 
+			amount = 96
+		}
+	}
+}

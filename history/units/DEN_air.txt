@@ -23,17 +23,3 @@ air_wings = {
 		}
 	}
 }
-
-instant_effect = {
-	if = {
-		limit = { NOT = { has_dlc = "By Blood Alone"} }
-		add_equipment_to_stockpile = {
-			type = fighter_equipment_0
-			amount = 15
-		}
-		add_equipment_to_stockpile = {
-			type = nav_bomber_equipment_1
-			amount = 10
-		}
-	}
-}

@@ -1,12 +1,11 @@
-﻿
-
-air_wings = {
+﻿air_wings = {
 	### Philippine Army Air Corps ###
 	327 = {
 		# Fighter Squadron -- Curtis P-26A's
 		fighter_equipment_0 =  {
 			owner = "PHI" 
 			amount = 12
+			creator = "USA"
 			create_if_missing = yes
 		}
 	}

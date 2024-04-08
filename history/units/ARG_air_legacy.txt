@@ -11,6 +11,7 @@ air_wings = {
 		CAS_equipment_1 =  {
 			owner = "ARG" 
 			amount = 12
+			creator = "FRA"
 		}
 	}
 }

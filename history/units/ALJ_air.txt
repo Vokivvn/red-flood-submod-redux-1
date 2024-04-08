@@ -1,6 +1,5 @@
-﻿
-air_wings = {
-	807 = {
+﻿air_wings = {
+	1204 = {
 		small_plane_cas_airframe_0 =  {
 			owner = "ALJ" 
 			amount = 35

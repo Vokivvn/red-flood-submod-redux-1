@@ -1,0 +1,10 @@
+﻿air_wings = {
+	1003 = {
+		# 1st Squadron -- Hawker Audax
+		CAS_equipment_1 =  {
+			owner = "SYR" 
+			amount = 25
+			creator = "ENG"
+		}
+	}
+}

@@ -8,6 +8,7 @@ air_wings = {
 		fighter_equipment_0 = {
 			owner = "SPR" 
 			amount = 36
+			creator = "FRA"
 		}
 	}
 	# Arma de Aviación -- Sevilla (and Barcelona)
@@ -16,6 +17,7 @@ air_wings = {
 		fighter_equipment_0 = {
 			owner = "SPR" 
 			amount = 24
+			creator = "FRA"
 		}
 	}
 	# Aeronáutica Naval -- Murcia
@@ -23,6 +25,7 @@ air_wings = {
 		nav_bomber_equipment_1 = {
 			owner = "SPR" 
 			amount = 27
+			creator = "ENG"
 		}
 	}
 }

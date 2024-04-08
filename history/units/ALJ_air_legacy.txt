@@ -1,11 +1,11 @@
-﻿
-air_wings = {
+﻿air_wings = {
 	### Royal Iraqi Air Force (RIrAF)
-	807 = {
+	1204 = {
 		# 1st Squadron -- Hawker Audax
 		CAS_equipment_1 = {
 			owner = "ALJ" 
 			amount = 35
+			creator = "ENG"
 		}
 	}
 }

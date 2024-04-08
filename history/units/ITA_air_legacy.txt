@@ -1,8 +1,4 @@
-﻿
-
-
-
-##### AIR WINGS #####
+﻿##### AIR WINGS #####
 air_wings = { 
 	### ITALY ###
 	# 1a Squadra Aerea - SQA1 (Milan)
@@ -53,7 +49,7 @@ air_wings = {
 	} 
 
 	# 4a Squadra Aerea - SQA4 (Bari)
-	849 = { 
+	156 = { 
 		# 9a Divisione Aerea 'Leone'
 		nav_bomber_equipment_1 = { 
 			amount = 48 

@@ -4,7 +4,8 @@ set_convoys = 175
 
 oob = "SWE"
 set_naval_oob = "SWE_naval"
-set_air_oob = "SWE_air"
+if = { limit = { has_dlc = "By Blood Alone" } set_air_oob = "SWE_air" }
+if = { limit = {  NOT = { has_dlc = "By Blood Alone" } }  set_air_oob = "SWE_air_legacy" }
 
 add_ideas = {
 	#SWE_london_market_crash

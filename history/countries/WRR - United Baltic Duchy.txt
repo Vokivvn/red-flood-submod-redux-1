@@ -4,7 +4,8 @@ set_convoys = 175
 set_stability = 0.5
 
 oob = "WRR"
-set_air_oob = "WRR_air"
+if = { limit = { has_dlc = "By Blood Alone" } set_air_oob = "WRR_air" }
+if = { limit = {  NOT = { has_dlc = "By Blood Alone" } }  set_air_oob = "WRR_air_legacy" }
 
 set_country_flag = is_russian_warlord
 

@@ -411,7 +411,7 @@ ideas = {
 		USA_engine_upgrades = {
 			cancel = { has_country_flag = remove_idea }
 			modifier = {
-				air_air_superiority_agility_factor = 0.02
+				air_agility_factor = 0.02
 			}
 		}
 
@@ -422,7 +422,7 @@ ideas = {
 			}
 		}
 
-		USA_reverse_technology = {
+		USA_reverse_technology_ideas = {
 			cancel = { has_country_flag = remove_idea }
 			research_bonus = {
 				light_fighter = 0.03
@@ -431,13 +431,6 @@ ideas = {
 				cat_strategic_bomber = 0.03
 				naval_bomber = 0.03
 				cas_bomber = 0.03
-			}
-		}
-
-		USA_paratrooper_programs = {
-			cancel = { has_country_flag = remove_idea }
-			modifier = {
-				special_forces_cap = 0.02
 			}
 		}
 

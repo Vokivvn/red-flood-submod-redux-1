@@ -1,5 +1,4 @@
-﻿
-air_wings = {
+﻿air_wings = {
 	425 = { 
 		### AHQ India -- Fairey Gordons, Battles
 		small_plane_cas_airframe_0 = {

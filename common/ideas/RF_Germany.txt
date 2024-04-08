@@ -761,7 +761,8 @@ ideas = {
 			#picture = GER_raterepublick
 			cancel = { has_country_flag = remove_idea }
 			modifier = {
-				air_paradrop_attack_factor = 0.5
+				paradrop_organization_factor = 0.05
+				paratrooper_aa_defense = 0.05
 			}
 			research_bonus = {
 				para_tech = 0.1

@@ -1,0 +1,10 @@
+﻿air_wings = {
+	231 = {
+		# 1st Squadron
+		fighter_equipment_0 =  {
+			owner = "KAV" 
+			amount = 40
+			creator = "RUS"
+		}
+	}
+}

@@ -1,6 +1,4 @@
-﻿
-
-air_wings = {
+﻿air_wings = {
 	### AHQ India
 	439 = { 
 		### AHQ India -- Fairey Gordons, Battles

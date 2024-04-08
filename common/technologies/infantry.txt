@@ -80,14 +80,14 @@ technologies = {
 				tag = CHI
 				
 				OR = {
-					date > "1937.1.1"
+					date > 1937.1.1
 					JAP = { is_ai = no }
 				}
 			}
 			
 			modifier = {
 				factor = 10
-				date > "1936.1.3"
+				date > 1936.1.3
 			}
 		}
 	}	
@@ -130,7 +130,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 2
+			base = 2
 			
 			modifier = {
 				factor = 5
@@ -241,11 +241,11 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 1
+			factor = 2
 			
 			modifier = {
 				factor = 2
-				date > "1940.1.6"
+				date > "1940.1.1"
 			}
 			
 			modifier = {
@@ -364,7 +364,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 0.8
+			base = 1
 			
 			
 			modifier = {
@@ -1208,7 +1208,7 @@ technologies = {
 		}
 	}
 	
-	support_weapons = {
+		support_weapons = {
 
 		infantry = {
 			defense = 0.05
@@ -1595,6 +1595,7 @@ technologies = {
 		
 		categories = {
 			motorized_equipment
+			mio_cat_tech_all_motorized_mechanized
 			infantry_tech
 		}
 		
@@ -1675,6 +1676,7 @@ technologies = {
 		
 		categories = {
 			motorized_equipment
+			mio_cat_tech_all_motorized_mechanized
 			infantry_tech
 		}
 		
@@ -1727,6 +1729,7 @@ technologies = {
 		
 		categories = {
 			mot_rockets
+			mio_cat_tech_all_motorized_mechanized
 		}
 	}
 	
@@ -1960,7 +1963,7 @@ technologies = {
 			#hardness = 1
 			forest = {
 		    	attack = 0.05
-				movement = 0.1
+				movement = 0.05
 			}
 			desert = {
 		    	attack = -0.15
@@ -1968,13 +1971,17 @@ technologies = {
 			}
 
 			snow = {
-				attack = 0.2
-				movement = 0.25
+				attack = 0.05
+				movement = 0.08
 			}
 		}
 	}
 
 	mechanised_infantry = {
+
+		enable_subunits = {
+			mechanized
+		}
 
 		enable_equipments = {
 			mechanized_equipment_1
@@ -2019,6 +2026,7 @@ technologies = {
 		
 		categories = {
 			motorized_equipment
+			mio_cat_tech_all_motorized_mechanized
 			infantry_tech
 			cat_mechanized_equipment
 		}
@@ -2067,6 +2075,7 @@ technologies = {
 		
 		categories = {
 			motorized_equipment
+			mio_cat_tech_all_motorized_mechanized
 			infantry_tech
 			cat_mechanized_equipment
 			tp_tech
@@ -2098,6 +2107,7 @@ technologies = {
 		
 		categories = {
 			motorized_equipment
+			mio_cat_tech_all_motorized_mechanized
 			infantry_tech
 			cat_mechanized_equipment
 			tp_tech
@@ -2128,6 +2138,7 @@ technologies = {
 		
 		categories = {
 			motorized_equipment
+			mio_cat_tech_all_motorized_mechanized
 			infantry_tech
 			cat_mechanized_equipment
 		}
@@ -2157,6 +2168,7 @@ technologies = {
 		
 		categories = {
 			motorized_equipment
+			mio_cat_tech_all_motorized_mechanized
 			infantry_tech
 			cat_mechanized_equipment
 		}
@@ -2379,6 +2391,20 @@ technologies = {
 			mountain = {
 				movement = 0.05
 			}
+		}
+	}
+
+	TOA_jungle_pioneers_support_tech = {
+		
+		allow = {
+			always = no
+		}
+
+		research_cost = 1
+		start_year = 1936
+
+		enable_subunits = {
+			jungle_pioneers_support
 		}
 	}
 	

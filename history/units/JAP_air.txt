@@ -1,89 +1,4 @@
-﻿instant_effect = {
-	create_equipment_variant = {
-		name = "Ki-10"
-		type = small_plane_airframe_0
-		modules = {
-			fixed_main_weapon_slot = light_mg_2x
-			engine_type_slot = engine_1_1x
-			special_type_slot_1 = empty
-		}
-	}
-	create_equipment_variant = {
-		name = "Ki-2"
-		type = small_plane_cas_airframe_0
-		modules = {
-			fixed_main_weapon_slot = small_bomb_bay
-			engine_type_slot = engine_1_2x
-			special_type_slot_1 = lmg_defense_turret
-		}
-		icon = "GFX_JAP_CAS1_medium"
-	}
-	create_equipment_variant = {
-		name = "Ki-1"
-		type = medium_plane_airframe_0
-		modules = {
-			fixed_main_weapon_slot = medium_bomb_bay
-			engine_type_slot = engine_1_2x
-			special_type_slot_1 = lmg_defense_turret
-		}
-	}
-	create_equipment_variant = {
-		name = "Ki-3"
-		type = small_plane_cas_airframe_0
-		modules = {
-			fixed_main_weapon_slot = bomb_locks
-			engine_type_slot = engine_1_1x
-			special_type_slot_1 = lmg_defense_turret
-		}
-		icon = "GFX_JAP_CAS1_medium"
-	}
-	create_equipment_variant = {
-		name = "Aichi D1A2"
-		type = cv_small_plane_cas_airframe_0
-		modules = {
-			fixed_main_weapon_slot = bomb_locks
-			engine_type_slot = engine_1_1x
-			special_type_slot_1 = dive_brakes_small
-		}
-		icon = "GFX_JAP_CAS1_medium"
-	}
-	create_equipment_variant = {
-		name = "A4N"
-		type = cv_small_plane_airframe_0
-		modules = {
-			fixed_main_weapon_slot = light_mg_2x
-			engine_type_slot = engine_1_1x
-			special_type_slot_1 = empty
-		}
-	}
-	create_equipment_variant = {
-		name = "B2M"
-		type = cv_small_plane_naval_bomber_airframe_0
-		modules = {
-			fixed_main_weapon_slot = torpedo_mounting
-			engine_type_slot = engine_1_1x
-			special_type_slot_1 = empty
-		}
-		obsolete = yes
-		icon = "GFX_JAP_cv_naval_bomber1_medium"
-	}
-	create_equipment_variant = {
-		name = "B4Y"
-		type = cv_small_plane_naval_bomber_airframe_1
-		modules = {
-			fixed_main_weapon_slot = torpedo_mounting
-			fixed_auxiliary_weapon_slot_1 = bomb_locks
-			engine_type_slot = engine_2_1x
-			special_type_slot_1 = empty
-		}
-		icon = "GFX_JAP_cv_naval_bomber1_medium"
-	}
-}
-
-
-
-
-#AIRCRAFT
+﻿#AIRCRAFT
 air_wings = {
 	### IJA Air Forces ###
 	# 1 Hikodan -- Tokyo
@@ -221,50 +136,25 @@ air_wings = {
 ## STARTING PRODUCTION ##
 #########################
 instant_effect = {
-	if = {
-		limit = { NOT = { has_dlc = "By Blood Alone" } }
-		add_equipment_to_stockpile = {
-			type = fighter_equipment_0
-			amount = 350
+	add_equipment_production = {
+		equipment = {
+			type = small_plane_airframe_0
+			creator = "JAP" 
+			version_name = "Ki-10"
 		}
-		add_equipment_to_stockpile = {
-			type = fighter_equipment_1 
-			amount = 150
-		}
-		add_equipment_to_stockpile = {
-			type = cv_fighter_equipment_0 
-			amount = 50
-		}
-		add_equipment_to_stockpile = {
-			type = CAS_equipment_1
-			amount = 200
-		}
-		add_equipment_to_stockpile = {
-			type = nav_bomber_equipment_1
-			amount = 100
-		}
+		requested_factories = 1
+		progress = 0.15
+		efficiency = 50
 	}
-	else = {
-		add_equipment_production = {
-			equipment = {
-				type = small_plane_airframe_0
-				creator = "JAP" 
-				version_name = "Ki-10"
-			}
-			requested_factories = 1
-			progress = 0.15
-			efficiency = 50
-		}
 
-		add_equipment_production = {
-			equipment = {
-				type = cv_small_plane_naval_bomber_airframe_1
-				creator = "JAP" 
-				version_name = "B4Y"
-			}
-			requested_factories = 1
-			progress = 0.2
-			efficiency = 50
+	add_equipment_production = {
+		equipment = {
+			type = cv_small_plane_naval_bomber_airframe_1
+			creator = "JAP" 
+			version_name = "B4Y"
 		}
+		requested_factories = 1
+		progress = 0.2
+		efficiency = 50
 	}
 }

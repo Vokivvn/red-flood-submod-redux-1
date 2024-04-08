@@ -1,0 +1,10 @@
+
+air_wings = {
+	206 = {
+		fighter_equipment_0 =  {
+			owner = "BLR" 
+			amount = 38
+			creator = "POL"
+		}
+	}
+}

@@ -1,0 +1,10 @@
+﻿
+air_wings = {
+	816 = {
+		CAS_equipment_1 = {
+			owner = "DAI" 
+			amount = 50
+			creator = "JAP"
+		}
+	}
+}

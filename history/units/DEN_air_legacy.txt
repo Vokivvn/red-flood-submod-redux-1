@@ -8,6 +8,7 @@ air_wings = {
 		fighter_equipment_0 =  {
 			owner = "DEN" 
 			amount = 22
+			creator = "ENG"
 		}
 	}
 	# Søværnets Flyvetjeneste -- Jutland
@@ -16,6 +17,7 @@ air_wings = {
 		fighter_equipment_0 = {
 			owner = "DEN" 
 			amount = 12
+			creator = "ENG"
 		}
 	}
 }

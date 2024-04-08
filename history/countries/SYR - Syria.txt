@@ -5,7 +5,8 @@ set_stability = 0.4
 set_war_support = 0.6
 
 oob = "SYR"
-set_air_oob = "SYR_air"
+if = { limit = { has_dlc = "By Blood Alone" } set_air_oob = "SYR_air" }
+if = { limit = {  NOT = { has_dlc = "By Blood Alone" } }  set_air_oob = "SYR_air_legacy" }
 
 set_technology = {
 	infantry_weapons = 1

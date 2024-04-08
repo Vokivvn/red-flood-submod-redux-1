@@ -8,12 +8,20 @@ air_wings = {
 		fighter_equipment_0 = {
 			owner = "GRE" 
 			amount = 26
+			creator = "ENG"
 			create_if_missing = yes
 		}
 		# Moíra vomvistón
 		tac_bomber_equipment_0 = {
 			owner = "GRE" 
 			amount = 71
+			creator = "FRA"
+			create_if_missing = yes
+		}
+		nav_bomber_equipment_1 = {
+			owner = "GRE" 
+			amount = 71
+			creator = "ENG"
 			create_if_missing = yes
 		}
 	}

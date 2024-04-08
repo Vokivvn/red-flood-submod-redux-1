@@ -168,16 +168,20 @@ Unification_unify_russia_nationalist_effects = {
 		if = { 
 			limit = { 
 				has_completed_focus = ORE_rasputins_conspiracy
-				#MNS = { owns_state = 978 }
+				NOT = {
+					has_completed_focus = ORE_peace_holy_rus
+				}
 		 	} 
 		 	complete_national_focus = ORE_peace_holy_rus
 		}	
 
 		
-		else_if = { 
+		if = { 
 			limit = { 
-				tag = ORE
-				#MNS = { owns_state = 978 }
+				has_completed_focus = Orenburg_eurasian_ideocracy
+				NOT = {
+					has_completed_focus = Orenburg_protective_belt_against_atlanticism
+				}
 			}	
 			complete_national_focus = Orenburg_protective_belt_against_atlanticism
 		}

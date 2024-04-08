@@ -1040,8 +1040,16 @@ country_event = {
 				transfer_state = 210
 				transfer_state = 1058
 				load_oob = WRT_socialists
-				load_oob = WRT_socialists_air
 				inherit_technology = WRU
+				if = {
+					limit = {
+						has_dlc = "No Step Back"
+					}
+					load_oob = WRT_socialists_air
+					else = {
+						load_oob = WRT_socialists_air_legacy
+					}
+				}
 			}
 			transfer_ship = {
 				type = destroyer
@@ -1220,8 +1228,16 @@ country_event = {
 				transfer_state = 210
 				transfer_state = 1058
 				load_oob = WRT_brotherhood
-				load_oob = WRT_brotherhood_air
 				inherit_technology = WRU
+				if = {
+					limit = {
+						has_dlc = "By Blood Alone"
+					}
+					load_oob = WRT_brotherhood_air
+					else = {
+						load_oob = WRT_brotherhood_air_legacy
+					}
+				}
 			}
 			transfer_ship = {
 				type = destroyer

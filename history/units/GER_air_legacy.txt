@@ -48,4 +48,24 @@ instant_effect = {
 		progress = 0.1
 		efficiency = 50
 	}
+
+	add_equipment_to_stockpile = {
+		type = strat_bomber_equipment_1
+		amount = 50
+	}
+	
+	add_equipment_to_stockpile = {
+		type = fighter_equipment_1
+		amount = 300
+	}
+	
+	add_equipment_to_stockpile = {
+		type = CAS_equipment_1
+		amount = 250
+	}
+	
+	add_equipment_to_stockpile = {
+		type = nav_bomber_equipment_1
+		amount = 100
+	}
 }

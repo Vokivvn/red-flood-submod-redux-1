@@ -1,8 +1,4 @@
-﻿
-
-
-
-### Flygvapnet ###
+﻿### Flygvapnet ###
 air_wings = {
 	141 = {
 		# 1. Bombflyggruppen -- Hawker Harts
